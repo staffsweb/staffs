@@ -1,0 +1,242 @@
+button,
+[type='submit'] {
+  border: 0;
+}
+
+fieldset {
+  padding: $spacing-sm;
+  margin: 0 0 $layout-md;
+  border: 1px solid #eee;
+}
+
+.webform-term-checkboxes-scroll .fieldset-wrapper {
+  padding: $spacing-sm $spacing-sm $spacing-2xs $spacing-sm;
+}
+
+legend {
+  //@include font-secondary;
+  //@include typescale('epsilon', 'em');
+  //color: $base;
+  margin-bottom: $spacing-xs;
+}
+
+label {
+  display: block;
+  margin-bottom: $spacing-2xs;
+
+  input[type='checkbox'],
+  input[type='radio'] {
+    margin-right: $spacing-xs;
+  }
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  margin-right: $spacing-xs;
+
+  + label {
+    display: inline-block;
+    max-width: calc(100% - 2em);
+    vertical-align: middle;
+  }
+}
+
+input[type=text],
+input[type=password],
+input[type=number],
+input[type=email],
+input[type=tel],
+input[type=search],
+input[type=date],
+textarea,
+select {
+  max-width: 100%;
+  padding: 0.75em;
+  background: #fff;
+  border: 1px solid rgba(50,50,50, 0.25);
+  box-sizing: border-box;
+  border-radius: 0;
+
+  &:focus {
+    outline: none;
+    border-color: rgba($primary, 0.7);
+  }
+}
+
+select {
+  appearance: none;
+  background: #fff url('../img/icon-arrow-down-black.svg') no-repeat right 0.75em center;
+  background-size: 0.75em;
+  padding-right: 3em;
+
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+input[type=search] {
+  appearance: textfield;
+  border-radius: 0;
+}
+
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=tel] {
+  width: 25em;
+  box-sizing: border-box;
+}
+
+.form-item {
+  margin: 0 0 $layout-md;
+}
+
+.form-checkboxes,
+.js-webform-radios {
+  .form-item {
+    margin: 0 0 $spacing-xs;
+  }
+}
+
+.button.webform-button--previous {
+  @include button--outline-grey;
+}
+
+.webform-progress {
+  .webform-progress-tracker {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(4.5em, 1fr));
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
+    //display: flex;
+    //flex-wrap: wrap;
+    //justify-items: flex-start;
+    //justify-content: space-around;
+
+    .progress-step {
+      flex: 1 1 4.5em;
+      background: $offwhite;
+      padding: 0.5em 0;
+
+      &:after {
+        display: none;
+      }
+
+      .progress-marker {
+        // this is nested so much to override the module's default specificity
+        background: none;
+        border-radius: 0;
+        color: $primary;
+        font-weight: bold;
+        height: auto;
+      }
+
+      &.is-active {
+        background: $grey-light;
+        font-weight: bold;
+
+        .progress-marker {
+          background: none;
+        }
+      }
+
+      &.is-complete:hover {
+        // override defaults
+        .progress-marker {
+          background: none;
+        }
+      }
+
+      .progress-text {
+        color: $text-color;
+        padding: 0 0.2em 0.5em;
+        @include typescale('caption');
+        @include line-height('compact');
+      }
+    }
+  }
+}
+
+.webform-preview {
+  .webform-container { // <details>
+    background: $offwhite;
+    padding: calc(#{$spacing-md} + 2.5%);
+    margin: 0 0 $layout-md;
+
+    summary {
+      @include h3;
+
+      + .webform-element {
+        // just target the first adjacent field group, there's no container round these to add margin when open
+        margin-top: $spacing-lg;
+      }
+    }
+
+    .webform-element {
+      // all of them
+      label {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.inline-optionbuttons {
+  margin: $layout-sm auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  label {
+    cursor: pointer;
+  }
+
+  input[type='checkbox'],
+  input[type='radio'] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    //visibility: hidden;
+
+    &:checked {
+      + label {
+        .button {
+          background-position: 0% bottom; // the hover state of any button, see _buttons.scss
+        }
+
+        .button--outline-black {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.grid-card-optionbuttons {
+
+  label {
+    cursor: pointer;
+  }
+
+  input[type='checkbox'],
+  input[type='radio'] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    top: auto;
+    //visibility: hidden;
+
+    &:checked {
+      + label {
+        .card {
+          outline: $border-accent-width solid black;
+          outline-offset: $border-accent-width;
+        }
+      }
+    }
+
+    + label {
+      max-width: 100%;
+    }
+  }
+}

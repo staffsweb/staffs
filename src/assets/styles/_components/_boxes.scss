@@ -1,0 +1,12 @@
+.box {
+  background: $offwhite;
+  padding: calc(#{$spacing-md} + 2.5%);
+  margin: 0 0 $layout-md;
+
+  > *:first-child { margin-top: 0; }
+  > *:last-child { margin-bottom: 0; }
+
+  &--white {
+    background: #fff;
+  }
+}

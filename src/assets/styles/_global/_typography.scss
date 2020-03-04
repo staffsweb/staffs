@@ -1,0 +1,298 @@
+@import "../__vars/_all";
+
+@include font-face;
+
+html {
+  position: relative;
+  font-size: 85%;
+  text-decoration-skip-ink: auto;
+
+  @media (min-width: 47.5em) and (min-height: 40em) {
+    font-size: 90%;
+  }
+
+  @media (min-width: 90em) and (min-height: 55em) {
+    font-size: 100%;
+  }
+
+  @media (min-width: 120em) and (min-height: 60em) {
+    font-size: 115%;
+  }
+
+  @supports (font: -apple-system-body) {
+    font: -apple-system-body;
+    text-size-adjust: 85%;
+  }
+}
+
+body {
+  @include body;
+}
+
+::selection {
+  background: rgba($primary, 0.15);
+}
+
+//:focus {
+//  outline-color: $primary;
+//  outline-style: solid;
+//  outline-width: 0.15rem;
+//  outline-offset: 0.15rem;
+//}
+
+@include base-elements;
+
+@each $name, $size in $typescale-map {
+  .font-#{$name} {
+    @include typescale($name, $important: true);
+  }
+}
+
+.font-primary {
+  @include font-primary;
+}
+
+.font-secondary {
+  @include font-secondary;
+}
+
+main,
+article {
+  p:not([class]) {
+    max-width: $line-length-max-rem;
+  }
+
+  li:not([class]) {
+    max-width: calc(#{$line-length-max-rem} - 1.5em); // subtract base ul left hand padding to match p width
+  }
+}
+
+.article-content {
+  ul,
+  ol {
+    &:not([class]) {
+      max-width: $line-length-max-rem;
+    }
+  } 
+}
+
+hgroup,
+.hgroup {
+  margin: 0 0 $spacing-lg;
+
+  #{headings()} {
+    margin: 0 0 $spacing-xs;
+  }
+}
+
+.meta {
+
+}
+
+.meta--inline {
+  .meta-item {
+    margin-bottom: $spacing-2xs;
+  }
+
+  dt, dd {
+    display: inline-block;
+  }
+
+  dd {
+    margin-bottom: 0;
+  }
+}
+
+.meta--tags {
+  margin-left: -#{$spacing-2xs};
+  margin-right: -#{$spacing-2xs};
+
+  .meta__item {
+    margin: 0 $spacing-2xs $spacing-2xs;
+    display: inline-block;
+    background: #fff;
+    padding: $spacing-2xs $spacing-xs;
+
+    dd {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.page-title {
+  $border-width: $border-accent-width;
+
+  border-left: $border-width solid $primary;
+  padding-left: $spacing-md;
+  margin-bottom: $layout-lg;
+  box-sizing: border-box;
+
+  @media (min-width: $wrap-large-gutter-width) {
+    margin-left: -#{$spacing-md + $border-width};
+  }
+
+  h1 + * {
+    margin-top: -#{$spacing-sm};
+  }
+
+  h1, p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+h1.page-title,
+.page-title h1 {
+  line-height: 1;
+  text-transform: uppercase;
+
+  @include typescale('beta', 'em');
+
+  @media (min-width: 22.5em) {
+    @include typescale('alpha', 'em');
+  }
+
+  @media (min-width: 40em) {
+    @include typescale('mega', 'em');
+  }
+}
+
+.caps {
+  @include caps;
+}
+
+//time,
+//.time,
+//.date {
+//  @include typescale('omega', 'em');
+//  color: lighten($text-color, 25%);
+//  display: block;
+//}
+
+.list-inline {
+  margin-left: 0;
+  padding-left: 0;
+
+  li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 0.25em;
+  }
+}
+
+.tag {
+  @include tag;
+}
+
+a.tag {
+  &:hover {
+    @include tag--hover;
+  }
+}
+
+.list-bullets {
+  list-style: none;
+  padding-left: 1.25em;
+  max-width: $line-length-max-rem;
+  box-sizing: border-box;
+
+  li {
+    margin-bottom: $spacing-md;
+
+    &:before {
+      content: '■';
+      position: relative;
+      display: inline-block;
+      float: left;
+      line-height: 1;
+      margin-left: -1.25em;
+      width: 1em;
+      color: $primary;
+    }
+  }
+}
+
+.list-unbulleted,
+.list-unstyled {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list-bordered-items {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    padding: $spacing-sm 0;
+    border-bottom: 1px solid $grey-light;
+  }
+}
+
+.list-columns {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 $layout-md;
+  columns: 25em;
+  column-gap: $grid-gutter;
+
+  li {
+    break-inside: avoid;
+  }
+
+  &--compact {
+    columns: 20em;
+  }
+}
+
+.list-links {
+  a {
+    color: $text-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.link-pointy {
+  @include link-pointy;
+
+  &:hover,
+  &:focus {
+    @include link-pointy--hover;
+  }
+}
+
+.link-cta {
+  @include font-secondary;
+  @include typescale('delta');
+  @include line-height('normal');
+  font-weight: 800;
+  @include link-pointy;
+
+  &:hover,
+  &:focus {
+    @include link-pointy--hover;
+  }
+}
+
+.link-icon {
+  text-decoration: none;
+}
+
+.link-access,
+.visually-hidden,
+.screen-reader-text {
+  display: block;
+  position: absolute;
+  left: -9999em;
+  clip: rect(0 0 0 0);
+
+  &:focus {
+    position: static;
+    left: auto;
+    clip: none;
+  }
+}

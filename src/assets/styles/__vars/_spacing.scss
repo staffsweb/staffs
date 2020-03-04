@@ -1,0 +1,34 @@
+$spacing-baseline: 1rem !default;
+
+$spacing-4xs: $spacing-baseline * 0.0625 !default;
+$spacing-3xs: $spacing-baseline * 0.125 !default;
+$spacing-2xs: $spacing-baseline * 0.25 !default;
+$spacing-xs: $spacing-baseline * 0.5 !default;
+$spacing-sm: $spacing-baseline * 0.75 !default;
+$spacing-md: $spacing-baseline !default;
+$spacing-lg: $spacing-baseline * 1.5 !default;
+$spacing-xl: $spacing-baseline * 2 !default;
+$spacing-2xl: $spacing-baseline * 2.5 !default;
+$spacing-3xl: $spacing-baseline * 3 !default;
+
+$layout-4xs: $spacing-baseline * 0.25 !default;
+$layout-3xs: $spacing-baseline * 0.5 !default;
+$layout-2xs: $spacing-baseline * 0.75 !default;
+$layout-xs: $spacing-baseline * 1 !default;
+$layout-sm: $spacing-baseline * 1.5 !default;
+$layout-md: $spacing-baseline * 2 !default;
+$layout-lg: $spacing-baseline * 4 !default;
+$layout-xl: $spacing-baseline * 6 !default;
+$layout-2xl: $spacing-baseline * 8 !default;
+
+$utils-margin-sizes: (
+  '4xs': $layout-4xs,
+  '3xs': $layout-3xs,
+  '2xs': $layout-2xs,
+  'xs': $layout-xs,
+  'sm': $layout-sm,
+  'md': $layout-md,
+  'lg': $layout-lg,
+  'xl': $layout-xl,
+  '2xl': $layout-2xl,
+)

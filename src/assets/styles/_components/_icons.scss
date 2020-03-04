@@ -1,0 +1,56 @@
+$icons: (
+    'menu-pink': 'svg',
+    'search-pink': 'svg',
+    'basket': 'svg',
+    'user': 'svg',
+    'heart': 'svg',
+    'phone': 'svg',
+    'facebook': 'svg',
+    'facebook-pink-circle': 'svg',
+    'twitter': 'svg',
+    'twitter-pink-circle': 'svg',
+    'youtube': 'svg',
+    'youtube-pink-circle': 'svg',
+    //'linkedin': 'svg',
+    'linkedin-pink-circle': 'svg',
+);
+
+.icon {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  vertical-align: baseline;
+  top: 0.1em;
+  margin: 0;
+
+  svg,
+  img {
+    width: 100%;
+  }
+
+  svg {
+    height: 100%;
+    //fill: #000;
+  }
+
+  &:before {
+    font-size: 1em;
+    display: inline-block;
+  }
+
+  @each $name, $extension in $icons {
+    &-#{$name} {
+      background-image: url('../img/icon-#{$name}.#{$extension}');
+    }
+  }
+
+  &--bg-primary {
+    background-color: $primary;
+    padding: 0.25em;
+  }
+}

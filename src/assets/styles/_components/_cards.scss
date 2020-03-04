@@ -1,0 +1,89 @@
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -#{$grid-gutter/2} $layout-lg;
+  text-decoration: none;
+
+  &__figure {
+    flex: 1 1 100%;
+    margin: 0 $grid-gutter/2 $spacing-lg;
+
+    &--cover {
+      display: flex;
+      flex: 1 1 calc(33.333% - #{$grid-gutter});
+
+      .field,
+      div:not([class]){
+        display: contents; // fix for crappy superfluous Drupal markup and flex / object-fit
+      }
+
+      a {
+        display: flex;
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        align-self: stretch;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__content {
+    flex: 9999 1 17.5em;
+    margin: 0 $grid-gutter/2;
+    box-sizing: border-box;
+  }
+
+  &__stat {
+    flex: 1 1 100%;
+    margin: 0 $grid-gutter/2;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: $spacing-md;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+a.card {
+  &:hover {
+    color: $text-color;
+
+    figure {
+      opacity: 0.9;
+    }
+
+    .link-cta {
+      @include link-pointy--hover;
+    }
+  }
+}
+
+.card--boxed {
+  margin: 0 0 $layout-lg;
+  background: $offwhite;
+
+  .card__figure {
+    flex: 1 1 calc(33.3333% - 1rem);
+    margin: 0;
+  }
+
+  .card__content {
+    margin: 0;
+    flex: 9999 1 17.25em;
+    padding: $spacing-lg;
+    box-sizing: border-box;
+  }
+}

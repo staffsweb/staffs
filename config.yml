@@ -1,0 +1,29 @@
+# The host (mamp or otherwise) this project will be running as, for our browsersync proxy
+HOST_URL: 'project_name.dev'
+
+# Autoprefixer will make sure your CSS works with these browsers
+COMPATIBILITY:
+    - "last 2 versions"
+
+# Gulp will reference these paths when it copies files
+PATHS:
+    assets:
+        dev:
+            css: 'src/assets/dev/css'
+            js: 'src/assets/dev/js'
+        dist:
+            css: 'src/assets/dist/css'
+            js: 'src/assets/dist/js'
+    watch:
+        php:
+            - '**/*.php'
+            - '!vendor/**/*.*'
+        sass:   'scss/**/*.scss'
+        js:   'js/**/*.js'
+    js:
+        - 'src/assets/js/app.js'
+
+    # Paths to Sass libraries
+    sass:
+#        - 'node_modules/foundation-sites/scss'
+#        - 'node_modules/motion-ui/src'
