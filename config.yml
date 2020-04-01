@@ -9,17 +9,17 @@ COMPATIBILITY:
 PATHS:
     assets:
         dev:
-            css: 'src/assets/dev/css'
+            css: 'src/assets/dev/styles'
             js: 'src/assets/dev/js'
         dist:
-            css: 'src/assets/dist/css'
+            css: 'src/assets/dist/styles'
             js: 'src/assets/dist/js'
     watch:
         php:
             - '**/*.php'
             - '!vendor/**/*.*'
-        sass:   'scss/**/*.scss'
-        js:   'js/**/*.js'
+        sass:   'src/assets/styles/**/*.scss'
+        js:   'src/assets/js/**/*.js'
     js:
         - 'src/assets/js/app.js'
 

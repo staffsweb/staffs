@@ -2,70 +2,8 @@
   background: #fff;
   clear: both;
   position: relative;
-  //margin-top: $layout-md;
   padding: $layout-xl 0 $layout-lg;
   text-align: center;
-
-  a:not(.button) {
-    color: black;
-
-    &:hover {
-      color: $primary;
-    }
-  }
-
-  nav {
-    a {
-      text-decoration: underline;
-    }
-  }
-
-  &__nav-primary {
-    margin-bottom: $layout-lg;
-
-    li {
-      margin: 0 $spacing-xs;
-      display: inline-block;
-    }
-  }
-
-  &__contact {
-    .icon {
-      margin: 0 $spacing-3xs $spacing-sm;
-      font-size: 3em;
-    }
-
-    h5 {
-      margin-bottom: $spacing-sm;
-    }
-
-    @media (min-width: $half-breakpoint) {
-      margin-top: $spacing-md;
-      text-align: right;
-      border-right: 1px solid $grey-light;
-
-      h5 {
-        margin-top: 0;
-      }
-    }
-  }
-
-  &__newsletter {
-    @media (min-width: $half-breakpoint) {
-      margin-top: $spacing-md;
-      text-align: left;
-
-      h5 {
-        margin-top: 0;
-      }
-    }
-  }
-
-  &__tel,
-  &__email {
-    display: inline-block;
-    margin: 0 0 0 $spacing-xs;
-  }
 
   &__logo {
     display: inline-block;
@@ -82,33 +20,7 @@
 
   &__legal {
     margin: 0 0 $spacing-2xs;
-    @include typescale('caption');
+    @include typescale('xs');
     @include line-height('compact');
-  }
-
-  &__legal-links {
-    margin: $spacing-sm 0;
-    @include typescale('caption');
-
-    li {
-      margin: 0 0.35em;
-      display: inline-block;
-    }
-  }
-}
-
-.subfooter-site {
-  text-align: center;
-  padding: $spacing-lg;
-  color: white;
-  background: black;
-  background: radial-gradient(ellipse at center, rgba(49,27,50,1) 0%, rgba(0,0,0,1) 100%);
-
-  &__title {
-    margin-top: 0;
-  }
-
-  + .footer-site {
-    margin-top: 0;
   }
 }

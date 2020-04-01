@@ -1,5 +1,9 @@
 @import "colours";
 
+// at the moment this is used for 'anything we want to repeat'
+// it could probably use separating out into more specifically named/categorised files
+
+
 @mixin button {
   position: relative;
   display: inline-block;
@@ -30,11 +34,11 @@
 }
 
 @mixin button--big {
-  @include typescale('delta', 'em');
+  @include typescale('lg', 'em');
 }
 
 @mixin button--small {
-  @include typescale('omega', 'em');
+  @include typescale('sm', 'em');
 }
 
 @mixin button--block {

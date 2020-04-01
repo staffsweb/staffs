@@ -34,7 +34,7 @@ if (process.env.NODE_ENV === 'production') {
   config.optimization = {
     minimize: true
   },
-      config.devtool = false;
+  config.devtool = false;
   config.mode = 'production';
 };
 

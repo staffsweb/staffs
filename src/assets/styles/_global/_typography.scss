@@ -147,15 +147,7 @@ h1.page-title,
   line-height: 1;
   text-transform: uppercase;
 
-  @include typescale('beta', 'em');
-
-  @media (min-width: 22.5em) {
-    @include typescale('alpha', 'em');
-  }
-
-  @media (min-width: 40em) {
-    @include typescale('mega', 'em');
-  }
+  @include typescale('3xl', 'em');
 }
 
 .caps {
@@ -267,7 +259,7 @@ a.tag {
 
 .link-cta {
   @include font-secondary;
-  @include typescale('delta');
+  @include typescale('lg');
   @include line-height('normal');
   font-weight: 800;
   @include link-pointy;

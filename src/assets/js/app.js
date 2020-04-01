@@ -16,6 +16,8 @@
       $('#toggle-site-search').toggleClass('is-active');
       $('#site-search').toggle().toggleClass('is-active');
     });
+
+    alert('a thing');
   };
 
   let initTabs = function(){

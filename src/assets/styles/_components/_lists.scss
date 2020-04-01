@@ -9,7 +9,7 @@
 
   a {
     @include font-secondary;
-    @include typescale('epsilon');
+    @include typescale('md');
     display: block;
     text-decoration: none;
     text-decoration-color: black;

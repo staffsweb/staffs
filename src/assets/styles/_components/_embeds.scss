@@ -1,44 +1,10 @@
-
 .figure--bordered {
   img {
-    border: 1em solid $base;
+    border: 1em solid $primary;
     box-sizing: border-box;
   }
 }
 
-.figure-credit {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: $spacing-3xs $spacing-xs;
-  background: rgba(black, 0.35);
-  color: rgba(white, 0.9);
-  @include typescale('caption');
-  text-shadow: 0 0 0.2em rgba(black, 0.25);
-}
-
-.figure--connected {
-  blockquote {
-    background: white;
-    margin: -2rem $spacing-xl 0 $spacing-xs;
-    max-width: $line-length-max-rem;
-    box-sizing: border-box;
-
-    @media (min-width: 40em) {
-      margin-top: -4rem;
-      margin-left: calc(#{$spacing-xs} + 2.5%);
-    }
-  }
-}
-
-.google-map {
-}
-
-.geolocation-map-container {
-  height: 75vmin !important; // overrides inline style
-
-
-}
 
 .video-container {
   clear: both; // needed because child is pos:abs

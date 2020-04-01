@@ -13,11 +13,6 @@
       display: flex;
       flex: 1 1 calc(33.333% - #{$grid-gutter});
 
-      .field,
-      div:not([class]){
-        display: contents; // fix for crappy superfluous Drupal markup and flex / object-fit
-      }
-
       a {
         display: flex;
         width: 100%;
@@ -36,15 +31,6 @@
     flex: 9999 1 17.5em;
     margin: 0 $grid-gutter/2;
     box-sizing: border-box;
-  }
-
-  &__stat {
-    flex: 1 1 100%;
-    margin: 0 $grid-gutter/2;
-
-    a {
-      text-decoration: none;
-    }
   }
 
   &__title {
@@ -72,18 +58,18 @@ a.card {
 }
 
 .card--boxed {
-  margin: 0 0 $layout-lg;
-  background: $offwhite;
-
-  .card__figure {
-    flex: 1 1 calc(33.3333% - 1rem);
-    margin: 0;
-  }
-
-  .card__content {
-    margin: 0;
-    flex: 9999 1 17.25em;
-    padding: $spacing-lg;
-    box-sizing: border-box;
-  }
+  //margin: 0 0 $layout-lg;
+  //background: $offwhite;
+  //
+  //.card__figure {
+  //  flex: 1 1 calc(33.3333% - 1rem);
+  //  margin: 0;
+  //}
+  //
+  //.card__content {
+  //  margin: 0;
+  //  flex: 9999 1 17.25em;
+  //  padding: $spacing-lg;
+  //  box-sizing: border-box;
+  //}
 }

@@ -37,26 +37,26 @@
 }
 
 $typescale-map: (
-  'giga': 4,
-  'mega': 3,
-  'alpha': 2.5,
-  'beta': 2,
-  'gamma': 1.5,
-  'delta': 1.25,
-  'epsilon': 1.125,
-  'zeta': 1,
+  '6xl': 4,
+  '5xl': 3,
+  '4xl': 2.5,
+  '3xl': 2,
+  '2xl': 1.5,
+  'xl': 1.25,
+  'lg': 1.125,
+  'md': 1,
   'omega': 0.875,
   'caption': 0.75,
   'legal': 0.6875,
 );
 
 $headings-map: (
-  'h1': 'mega',
-  'h2': 'alpha',
-  'h3': 'beta',
-  'h4': 'gamma',
-  'h5': 'delta',
-  'h6': 'epsilon',
+  'h1': '5xl',
+  'h2': '4xl',
+  'h3': '3xl',
+  'h4': '2xl',
+  'h5': 'xl',
+  'h6': 'lg',
 );
 
 $line-height-map: (
@@ -311,7 +311,7 @@ $border-accent-width: $spacing-2xs;
 
   pre {
     clear: both;
-    @include typescale('zeta', 'em');
+    @include typescale('sm', 'em');
     margin: $spacing-lg 0;
     padding: 1em;
     tab-size: 2;
@@ -323,10 +323,10 @@ $border-accent-width: $spacing-2xs;
 
   code {
     display: inline-block;
-    @include typescale('omega', 'em');
+    @include typescale('sm', 'em');
     background: rgba($primary, 0.05);
     padding: 0 0.2em;
-    color: $base;
+    color: $primary;
     border: 1px rgba($primary, 0.25) solid;
     border-radius: 0.2em;
   }
@@ -386,17 +386,17 @@ $border-accent-width: $spacing-2xs;
 
   .intro,
   .is-style-intro {
-    @include typescale('delta');
+    @include typescale('lg');
     max-width: $line-length-max-rem;
 
     @media (min-width: 40em) {
-      @include typescale('gamma', 'em');
+      @include typescale('xl', 'em');
     }
   }
 
   .stat {
     @include font-secondary;
-    @include typescale('gamma', 'em');
+    @include typescale('2xl', 'em');
     font-weight: bold;
     color: $primary;
     text-decoration: none;
@@ -405,19 +405,6 @@ $border-accent-width: $spacing-2xs;
       color: $primary;
       text-decoration: none;
     }
-  }
-
-  .stat--giga {
-    @include typescale('giga', 'em');
-  }
-
-  .stat--block {
-    display: block !important;
-  }
-
-  p .stat {
-    display: inline-block;
-    vertical-align: middle;
   }
 }
 
@@ -509,28 +496,11 @@ $border-accent-width: $spacing-2xs;
       display: none;
     }
   }
-
-  &.size-small {
-    padding: 1em calc(1.65em + 2.5%);
-    box-sizing: content-box; // reset this to stop the width being too small when aligned
-
-    @media (min-width: 40em) {
-      font-size: 1.1em; // don't increase font-size like other blockquotes
-    }
-
-    @media (min-width: $align-min-breakpoint + 7.5rem) {
-      box-sizing: border-box;
-    }
-
-    &.align-right {
-      padding-right: $spacing-xs;
-    }
-  }
 }
 
 @mixin cite {
   @include font-primary;
-  @include typescale('omega');
+  @include typescale('xs');
   font-style: normal;
   font-weight: bold;
   display: block;
@@ -540,14 +510,14 @@ $border-accent-width: $spacing-2xs;
 @mixin figcaption {
   margin: 0;
   padding: $spacing-sm 0;
-  @include typescale('caption');
+  @include typescale('xs');
   background: #fff;
   color: $text-color;
   border-bottom: 1px solid $grey-light;
 }
 
 @mixin tag {
-  @include typescale('caption');
+  @include typescale('xs');
   color: $text-color;
   padding: 0.35em 1em;
   line-height: 1;

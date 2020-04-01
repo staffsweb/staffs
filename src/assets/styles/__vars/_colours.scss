@@ -1,5 +1,5 @@
 
-// VSO Palette
+// Staffs Palette
 
 $purple:					              #AD0075;
 $orange:					              #E6650A;
@@ -19,10 +19,7 @@ $tertiary:                      $blue-light;
 $primary-lightened:             lighten($primary, 5%);
 $primary-darkened:              darken($primary, 5%);
 
-/// Assign for use
-
-$base:                          $purple;
-$base-alt:                      $orange;
+/// Referencable colours
 
 $page-bg:                       white;
 $text-color:                    black;
@@ -31,7 +28,8 @@ $link-hover-color:              $primary;
 $heading-color:                 black;
 
 
-// Utilities Setup
+// Utilities Classes Setup
+// these are output by the loops in _utils/utils.scss (included by main)
 
 $utils-bg-colors: (
   'primary': $primary,

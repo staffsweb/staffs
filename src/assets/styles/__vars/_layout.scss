@@ -31,21 +31,6 @@ $align-right-offset-breakpoint: $wrap-width + 10rem;
   }
 }
 
-@mixin wrap-bleed {
-  margin-left: -#{$grid-gutter};
-  margin-right: -#{$grid-gutter};
-
-  //@media (min-width: $wrap-large-gutter-width) {
-  //  margin-left: -#{$grid-gutter-large};
-  //  margin-right: -#{$grid-gutter-large};
-  //}
-
-  @media (min-width: $wrap-full-gutter-width) {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-
 @mixin wrap-content {
   @include clearfix;
   max-width: $line-length-max;
@@ -85,14 +70,6 @@ $align-right-offset-breakpoint: $wrap-width + 10rem;
 
   @media (min-width: $third-breakpoint) {
     width: calc(#{$align-leftright-size-small} - #{$grid-gutter/2});
-  }
-}
-
-@mixin align-right-offset {
-  //margin-right: calc(100% - (#{$line-length-max-rem}) + #{$grid-gutter/2});
-
-  @media (min-width: $align-right-offset-breakpoint) {
-    margin-right: calc((33% + #{$grid-gutter/2}));
   }
 }
 

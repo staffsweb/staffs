@@ -1,3 +1,6 @@
+// add icons to this array with their filename and type,
+// the loop at the bottom of the file will create classes for them
+
 $icons: (
     'menu-pink': 'svg',
     'search-pink': 'svg',
@@ -47,10 +50,5 @@ $icons: (
     &-#{$name} {
       background-image: url('../img/icon-#{$name}.#{$extension}');
     }
-  }
-
-  &--bg-primary {
-    background-color: $primary;
-    padding: 0.25em;
   }
 }
