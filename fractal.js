@@ -17,7 +17,7 @@ fractal.components.set('ext', '.twig');
 fractal.components.set('path', __dirname + '/src/components');
 fractal.docs.set('path', __dirname + '/src/docs');
 fractal.web.set('static.path', __dirname + '/src/assets');
-fractal.web.set('builder.dest', __dirname + '/static');
+fractal.web.set('builder.dest', __dirname + '/design-system');
 
 // Set the default status of components to Work In Progress, and add some custom
 fractal.components.set('default.status', 'wip');
