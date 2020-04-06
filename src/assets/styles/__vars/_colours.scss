@@ -1,9 +1,9 @@
 
 // Staffs Palette
 
-$purple:					              #AD0075;
-$orange:					              #E6650A;
-$blue-light:                    #A3C2D1;
+$red:                           #D70A26;
+$maroon:					              #970048;
+$slate:					                #394851;
 $offblack:                      #222;
 $grey-dark:                     #444;
 $grey-shadow:                   #C4C4C4;
@@ -12,9 +12,9 @@ $offwhite:                      #EEEEEE;
 
 // Theme Colours:
 
-$primary:                       $purple;
-$secondary:                     $orange;
-$tertiary:                      $blue-light;
+$primary:                       $red;
+$secondary:                     $slate;
+$tertiary:                      $maroon;
 
 $primary-lightened:             lighten($primary, 5%);
 $primary-darkened:              darken($primary, 5%);
