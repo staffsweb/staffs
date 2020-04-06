@@ -1,8 +1,8 @@
 @import 'spacing';
 
-$grid-gutter: $layout-md;
-$grid-gutter-small: $layout-xs;
-$grid-gutter-large: $layout-lg;
+$grid-gutter: $spacing-md;
+$grid-gutter-small: $spacing-sm;
+$grid-gutter-large: $spacing-2xl;
 
 $page-gutter-small: $grid-gutter/1.25;
 $page-gutter-large: $grid-gutter-large/2;

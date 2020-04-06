@@ -2,12 +2,12 @@
   background: #fff;
   clear: both;
   position: relative;
-  padding: $layout-xl 0 $layout-lg;
+  padding: $spacing-4xl 0 $spacing-xl;
   text-align: center;
 
   &__logo {
     display: inline-block;
-    margin: $layout-md auto $layout-xs;
+    margin: $spacing-lg auto $spacing-sm;
     padding: $spacing-md;
 
     img {
