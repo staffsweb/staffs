@@ -4,7 +4,7 @@
 $red:                           #D70A26;
 $maroon:					              #970048;
 $slate:					                #394851;
-$offblack:                      #222;
+$offblack:                      #1D1D1B;
 $grey-dark:                     #444;
 $grey-shadow:                   #C4C4C4;
 $grey-light:                    #DDDDDD;
@@ -15,9 +15,6 @@ $offwhite:                      #EEEEEE;
 $primary:                       $red;
 $secondary:                     $slate;
 $tertiary:                      $maroon;
-
-$primary-lightened:             lighten($primary, 5%);
-$primary-darkened:              darken($primary, 5%);
 
 /// Referencable colours
 

@@ -744,7 +744,7 @@ section:first-child { margin-top: 0; }
 
 .bg-offwhite { background: #EEEEEE !important; }
 
-.bg-offblack { background: #222 !important; }
+.bg-offblack { background: #1D1D1B !important; }
 
 .bg-white { background: white !important; }
 
@@ -758,7 +758,7 @@ section:first-child { margin-top: 0; }
 
 .text-color-offwhite { color: #EEEEEE !important; }
 
-.text-color-offblack { color: #222 !important; }
+.text-color-offblack { color: #1D1D1B !important; }
 
 .text-center { margin-left: auto; margin-right: auto; text-align: center !important; }
 
