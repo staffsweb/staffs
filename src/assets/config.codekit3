@@ -335,19 +335,6 @@
 		"oS": 2,
 		"uL": 1
 		},
-	"/styles/_global/_hacks.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 4,
-		"dS": 0,
-		"ft": 4,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "/styles/_global/_hacks.css",
-		"oF": 0,
-		"oS": 2,
-		"uL": 1
-		},
 	"/styles/_global/_layout.scss": {
 		"aP": 1,
 		"bl": 0,
