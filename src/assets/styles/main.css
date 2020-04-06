@@ -784,59 +784,83 @@ section:first-child { margin-top: 0; }
 
 .text-columns p { -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; break-inside: avoid; }
 
-.margin-y-4xs { margin-top: 0.25rem !important; margin-bottom: 0.25rem !important; }
+.margin-y-4xs { margin-top: 0.0625rem !important; margin-bottom: 0.0625rem !important; }
 
-.margin-top-4xs { margin-top: 0.25rem !important; }
+.margin-top-4xs { margin-top: 0.0625rem !important; }
 
-.margin-bottom-4xs { margin-bottom: 0.25rem !important; }
+.margin-bottom-4xs { margin-bottom: 0.0625rem !important; }
 
-.margin-y-3xs { margin-top: 0.5rem !important; margin-bottom: 0.5rem !important; }
+.margin-y-3xs { margin-top: 0.125rem !important; margin-bottom: 0.125rem !important; }
 
-.margin-top-3xs { margin-top: 0.5rem !important; }
+.margin-top-3xs { margin-top: 0.125rem !important; }
 
-.margin-bottom-3xs { margin-bottom: 0.5rem !important; }
+.margin-bottom-3xs { margin-bottom: 0.125rem !important; }
 
-.margin-y-2xs { margin-top: 0.75rem !important; margin-bottom: 0.75rem !important; }
+.margin-y-2xs { margin-top: 0.25rem !important; margin-bottom: 0.25rem !important; }
 
-.margin-top-2xs { margin-top: 0.75rem !important; }
+.margin-top-2xs { margin-top: 0.25rem !important; }
 
-.margin-bottom-2xs { margin-bottom: 0.75rem !important; }
+.margin-bottom-2xs { margin-bottom: 0.25rem !important; }
 
-.margin-y-xs { margin-top: 1rem !important; margin-bottom: 1rem !important; }
+.margin-y-xs { margin-top: 0.5rem !important; margin-bottom: 0.5rem !important; }
 
-.margin-top-xs { margin-top: 1rem !important; }
+.margin-top-xs { margin-top: 0.5rem !important; }
 
-.margin-bottom-xs { margin-bottom: 1rem !important; }
+.margin-bottom-xs { margin-bottom: 0.5rem !important; }
 
-.margin-y-sm { margin-top: 1.5rem !important; margin-bottom: 1.5rem !important; }
+.margin-y-sm { margin-top: 0.75rem !important; margin-bottom: 0.75rem !important; }
 
-.margin-top-sm { margin-top: 1.5rem !important; }
+.margin-top-sm { margin-top: 0.75rem !important; }
 
-.margin-bottom-sm { margin-bottom: 1.5rem !important; }
+.margin-bottom-sm { margin-bottom: 0.75rem !important; }
 
-.margin-y-md { margin-top: 2rem !important; margin-bottom: 2rem !important; }
+.margin-y-md { margin-top: 1rem !important; margin-bottom: 1rem !important; }
 
-.margin-top-md { margin-top: 2rem !important; }
+.margin-top-md { margin-top: 1rem !important; }
 
-.margin-bottom-md { margin-bottom: 2rem !important; }
+.margin-bottom-md { margin-bottom: 1rem !important; }
 
-.margin-y-lg { margin-top: 4rem !important; margin-bottom: 4rem !important; }
+.margin-y-lg { margin-top: 1.5rem !important; margin-bottom: 1.5rem !important; }
 
-.margin-top-lg { margin-top: 4rem !important; }
+.margin-top-lg { margin-top: 1.5rem !important; }
 
-.margin-bottom-lg { margin-bottom: 4rem !important; }
+.margin-bottom-lg { margin-bottom: 1.5rem !important; }
 
-.margin-y-xl { margin-top: 6rem !important; margin-bottom: 6rem !important; }
+.margin-y-xl { margin-top: 2rem !important; margin-bottom: 2rem !important; }
 
-.margin-top-xl { margin-top: 6rem !important; }
+.margin-top-xl { margin-top: 2rem !important; }
 
-.margin-bottom-xl { margin-bottom: 6rem !important; }
+.margin-bottom-xl { margin-bottom: 2rem !important; }
 
-.margin-y-2xl { margin-top: 8rem !important; margin-bottom: 8rem !important; }
+.margin-y-2xl { margin-top: 2.5rem !important; margin-bottom: 2.5rem !important; }
 
-.margin-top-2xl { margin-top: 8rem !important; }
+.margin-top-2xl { margin-top: 2.5rem !important; }
 
-.margin-bottom-2xl { margin-bottom: 8rem !important; }
+.margin-bottom-2xl { margin-bottom: 2.5rem !important; }
+
+.margin-y-3xl { margin-top: 3rem !important; margin-bottom: 3rem !important; }
+
+.margin-top-3xl { margin-top: 3rem !important; }
+
+.margin-bottom-3xl { margin-bottom: 3rem !important; }
+
+.margin-y-4xl { margin-top: 4rem !important; margin-bottom: 4rem !important; }
+
+.margin-top-4xl { margin-top: 4rem !important; }
+
+.margin-bottom-4xl { margin-bottom: 4rem !important; }
+
+.margin-y-5xl { margin-top: 6rem !important; margin-bottom: 6rem !important; }
+
+.margin-top-5xl { margin-top: 6rem !important; }
+
+.margin-bottom-5xl { margin-bottom: 6rem !important; }
+
+.margin-y-6xl { margin-top: 8rem !important; margin-bottom: 8rem !important; }
+
+.margin-top-6xl { margin-top: 8rem !important; }
+
+.margin-bottom-6xl { margin-bottom: 8rem !important; }
 
 .margin-top-none, .margin-y-none { margin-top: 0 !important; }
 
