@@ -1,24 +1,22 @@
 @mixin font-face ($prefix: '..') {
 
-/*
-  @font-face {
-    font-family: 'Museo Sans';
-    src: url('#{$prefix}/fonts/MuseoSans_500-webfont.woff2') format('woff2'),
-         url('#{$prefix}/fonts/MuseoSans_500-webfont.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'Museo Sans';
-    src: url('#{$prefix}/fonts/MuseoSans_100-webfont.woff2') format('woff2'),
-         url('#{$prefix}/fonts/Roboto-Light.ttf') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-  }
- */
+  //@font-face {
+  //  font-family: 'Museo Sans';
+  //  src: url('#{$prefix}/fonts/MuseoSans_500-webfont.woff2') format('woff2'),
+  //       url('#{$prefix}/fonts/MuseoSans_500-webfont.woff') format('woff');
+  //  font-weight: 500;
+  //  font-style: normal;
+  //  font-display: swap;
+  //}
+  //
+  //@font-face {
+  //  font-family: 'Museo Sans';
+  //  src: url('#{$prefix}/fonts/MuseoSans_100-webfont.woff2') format('woff2'),
+  //       url('#{$prefix}/fonts/Roboto-Light.ttf') format('woff');
+  //  font-weight: 300;
+  //  font-style: normal;
+  //  font-display: swap;
+  //}
 
 }
 
@@ -145,7 +143,7 @@ $border-accent-width: $spacing-2xs;
   #{headings()} {
     @include line-height('headings');
     font-weight: 900;
-    margin: $layout-lg 0 $spacing-lg;
+    margin: $spacing-4xl 0 $spacing-lg;
 
     a, a & {
       color: black;
@@ -240,14 +238,14 @@ $border-accent-width: $spacing-2xs;
     height: 0px;
     border: 0;
     border-top: 1px solid $grey-light;
-    margin: $layout-lg auto;
+    margin: $spacing-4xl auto;
 
     &.compact {
-      margin: $layout-md auto;
+      margin: $spacing-xl auto;
     }
 
     &.spaced {
-      margin: $layout-2xl auto;
+      margin: $spacing-5xl auto;
     }
 
     &.invisible {
@@ -268,7 +266,7 @@ $border-accent-width: $spacing-2xs;
 
   figure {
     position: relative;
-    margin: 0 0 $layout-lg;
+    margin: 0 0 $spacing-xl;
 
     img {
       width: 100%;
@@ -319,7 +317,7 @@ $border-accent-width: $spacing-2xs;
   table {
     font-size: 0.9em;
     width: 100%;
-    margin: 0 0 $layout-md;
+    margin: 0 0 $spacing-xl;
     border: 1px solid #ddd;
     border-spacing: 0;
     border-collapse: collapse;
@@ -463,7 +461,7 @@ $border-accent-width: $spacing-2xs;
 
   @media (min-width: 40em) {
     font-size: 1.35em;
-    margin: $layout-lg 0;
+    margin: $spacing-xl 0;
     padding: 1em calc(2em + 2.5%);
   }
 
