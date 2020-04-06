@@ -26,7 +26,7 @@ fractal.components.set('statuses', {
   not_started: {
     label: "Not started",
     description: "Placeholder",
-    color: "#f33"
+    color: "#D70A26"
   },
   wip: {
     label: "WIP",
