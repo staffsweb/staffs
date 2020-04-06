@@ -1,0 +1,52 @@
+
+
+<h2>Brand colours</h2>
+
+<p>Colours can be found in <code>__vars/_colours.scss</code>. Refer to it for available colours when making components, and maintain the pallette there.</p>
+<p>Colours should be stored as solid hexes or rgb (not rgba), and given a <strong>name unique to their appearance</strong> - consistent with their naming in brand guidelines, if possible, and <em>then</em> assigned for use within the design system, it is encouraged to abstract as much as possible.</p>
+<p>If multiple shades of a colour exist, give them BEM-like modifier names.</p>
+<p>If allowed by brand guidelines, use Sass rgba() to create transparent variants.</p>
+<p>For example:</p>
+
+<pre>
+  // Pallette
+  $purple:                        #ad0075;
+  $purple--light:                 #ad0075;
+  $purple--vibrant:               #ad0075;
+  $orange:                        #e6650a;
+
+  // Theme colours
+  $primary:                       $purple;
+  $secondary:                     $orange;
+
+  // References
+  $main-link-color:               $primary;
+  $main-link-color--hover:        rgba($main-link-color, 0.9)
+</pre>
+
+Sass can then pick up <code>$main-link-color</code>, eg.
+
+<pre>
+  a {
+    color: $main-link-color;
+
+    &:hover {
+      color: $main-link-color--hover;
+    }
+  }
+</pre>
+
+<h2>Colour variants</h2>
+<p>If the brand guidelines allow, colour variants/derivatives should be named and added to the main colour variables file so they are traceable. Avoid adding hexes to components, or just lightening/darkening in Sass (these functions are just weird in their operation and produce weird results to what you'd expect, don't use them).</p>
+
+<h2>Colour tints</h2>
+
+<p>'Tints' from print brand guidelines are acheived best by using the Sass <code>mix()</code> function, with white. Something like:</p>
+
+<pre>
+  $green-lime:                    #a2aa1f;
+  $green-lime--tint-10:           mix($green-lime, white, 10%);
+  $green-lime--tint-20:           mix($green-lime, white, 20%);
+  $green-lime--tint-30:           mix($green-lime, white, 30%);
+  $green-lime--tint-50:           mix($green-lime, white, 50%);
+</pre>

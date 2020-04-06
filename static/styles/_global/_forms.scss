@@ -1,0 +1,81 @@
+//button,
+//[type='submit'] {
+//  border: 0;
+//}
+//
+//fieldset {
+//  padding: $spacing-sm;
+//  margin: 0 0 $layout-md;
+//  border: 1px solid #eee;
+//}
+//
+//legend {
+//  //@include font-secondary;
+//  //@include typescale('sm', 'em');
+//  //color: $base;
+//  margin-bottom: $spacing-xs;
+//}
+//
+//label {
+//  display: block;
+//  margin-bottom: $spacing-2xs;
+//
+//  input[type='checkbox'],
+//  input[type='radio'] {
+//    margin-right: $spacing-xs;
+//  }
+//}
+//
+//input[type='checkbox'],
+//input[type='radio'] {
+//  margin-right: $spacing-xs;
+//
+//  + label {
+//    display: inline-block;
+//    max-width: calc(100% - 2em);
+//    vertical-align: middle;
+//  }
+//}
+//
+//input[type=text],
+//input[type=password],
+//input[type=number],
+//input[type=email],
+//input[type=tel],
+//input[type=search],
+//input[type=date],
+//textarea,
+//select {
+//  max-width: 100%;
+//  padding: 0.75em;
+//  background: #fff;
+//  border: 1px solid rgba(50, 50, 50, 0.25);
+//  box-sizing: border-box;
+//  border-radius: 0;
+//
+//  &:focus {
+//    outline: none;
+//    border-color: rgba($primary, 0.7);
+//  }
+//}
+//
+//select {
+//  appearance: none;
+//  background: #fff url('../img/icon-arrow-down-black.svg') no-repeat right 0.75em center;
+//  background-size: 0.75em;
+//  padding-right: 3em;
+//
+//  &::-ms-expand {
+//    display: none;
+//  }
+//}
+//
+//input[type=search] {
+//  appearance: textfield;
+//  border-radius: 0;
+//}
+//
+//.form-item {
+//  margin: 0 0 $layout-md;
+//}
+

@@ -1,0 +1,208 @@
+@import "colours";
+
+// at the moment this is used for 'anything we want to repeat'
+// it could probably use separating out into more specifically named/categorised files
+
+
+@mixin button {
+  position: relative;
+  display: inline-block;
+  @include font-secondary;
+  font-size: inherit; // overrides WP Block
+  margin: 0 0.25rem 1rem 0;
+  padding: 0.75em 2em;
+  line-height: 1.15; // matches normalized inputs
+  vertical-align: middle;
+  text-decoration: none;
+  text-align: center;
+  transition: background 150ms ease-out, color 150ms ease-out;
+  box-sizing: border-box;
+  border-radius: 0; // explicitly set this for inputs on iOS
+
+  background-color: $secondary;
+  background-image: linear-gradient(to left, $secondary 50%, black 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  color: rgba(white, 0.9);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: rgba(white, 1);
+    background-position: 0% bottom;
+  }
+}
+
+@mixin button--big {
+  @include typescale('lg', 'em');
+}
+
+@mixin button--small {
+  @include typescale('sm', 'em');
+}
+
+@mixin button--block {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+@mixin button--primary {
+  background-image: linear-gradient(to left, $primary 50%, black 50%);
+}
+
+@mixin button--secondary {
+  background-image: linear-gradient(to left, $secondary 50%, black 50%);
+}
+
+@mixin button--offwhite {
+  background-image: linear-gradient(to left, $offwhite 50%, darken($offwhite, 10%) 50%);
+  color: black;
+
+  &:hover,
+  &:focus {
+    color: black;
+  }
+}
+
+@mixin button--grey {
+  background-image: linear-gradient(to left, $grey-light 50%, darken($grey-light, 5%) 50%);
+  color: black;
+
+  &:hover
+  &:focus, {
+    color: black;
+  }
+}
+
+@mixin button--black {
+  background-image: linear-gradient(to left, black 50%, #666 50%);
+}
+
+@mixin button--white {
+  background-image: linear-gradient(to left, white 50%, $grey-light 50%);
+  color: black;
+
+  &:hover,
+  &:focus,
+  &:active {
+
+  }
+}
+
+@mixin button--outline-white {
+  color: white;
+  border: 0.2em solid white;
+  padding: 0.6em 2em;
+  background-color: transparent;
+  background-image: linear-gradient(to left, rgba(white, 0) 50%, rgba(white, 0.25) 50%);
+
+  &:hover,
+  &:focus,
+  &:active, {
+    color: rgba(white, 1);
+  }
+}
+
+@mixin button--outline-grey {
+  color: black;
+  border: 0.2em solid $grey-light;
+  padding: 0.6em 2em;
+  background-image: linear-gradient(to left, white 50%, $grey-light 50%);
+
+  &:hover,
+  &:focus,
+  &:active, {
+    color: black;
+  }
+}
+
+@mixin button--outline-black {
+  color: black;
+  border: 0.2em solid black;
+  padding: 0.6em 2em;
+  background-image: linear-gradient(to left, white 50%, black 50%);
+
+  &:hover,
+  &:focus,
+  &:active, {
+    color: white;
+  }
+}
+
+// ----
+
+
+@mixin boxed {
+  background: $secondary-tint-10;
+  border-left: 0.75em solid $secondary-tint-30;
+}
+
+@mixin boxed__padding {
+  padding: calc(1em + 2.5%);
+}
+
+@mixin boxed__radius {
+  border-radius: 0.5em 2em;
+}
+
+@mixin boxed--rounded {
+  background: $secondary-tint-10;
+  @include boxed__radius;
+}
+
+@mixin boxed--strong {
+  background: $secondary-tint-20;
+  border-left: 0.75em solid $secondary-tint-30;
+}
+
+@mixin boxed--strong-alt {
+  background: $blue-sky;
+  border-left: 0.75em solid $blue-sky-darkened;
+}
+
+// --
+
+@mixin panel__gradient($direction: 'top', $zindex: '-1') {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: $layout-lg;
+  background: linear-gradient(to #{$direction}, rgba($offwhite,0) 0%, rgba($offwhite,1) 100%);
+  z-index: #{$zindex};
+}
+
+// --
+
+@mixin link-pointy {
+  position: relative;
+  display: table;
+  padding-right: 1em;
+  color: black;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-color: black;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0.1em;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-left: 0.35em;
+    background: url('../img/arrow-right-orange.svg') center center no-repeat;
+    background-size: contain;
+    vertical-align: text-bottom;
+    transition: transform 75ms ease-out;
+  }
+}
+
+@mixin link-pointy--hover {
+  color: black;
+
+  &:after {
+    transform: translateX(0.15em);
+  }
+}

@@ -1,0 +1,18 @@
+$panel__padding: $layout-lg;
+
+.panel {
+  position: relative;
+  margin: $layout-lg 0 $layout-xl;
+  //padding: $panel__padding 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__title {
+    margin-top: $layout-xs;
+  }
+}
