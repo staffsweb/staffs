@@ -84,6 +84,22 @@
 		"oAP": "/fonts/MuseoSans_900-webfont.woff2",
 		"oF": 0
 		},
+	"/fonts/Roboto-Light.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/fonts/Roboto-Light.ttf",
+		"oF": 0
+		},
+	"/fonts/Roboto-Medium.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/fonts/Roboto-Medium.ttf",
+		"oF": 0
+		},
 	"/img/icon-arrow-down-black.svg": {
 		"ft": 2097152,
 		"miP": 0,
