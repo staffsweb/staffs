@@ -10,25 +10,22 @@ $spacing-lg: $spacing-baseline * 1.5 !default;
 $spacing-xl: $spacing-baseline * 2 !default;
 $spacing-2xl: $spacing-baseline * 2.5 !default;
 $spacing-3xl: $spacing-baseline * 3 !default;
-
-$layout-4xs: $spacing-baseline * 0.25 !default;
-$layout-3xs: $spacing-baseline * 0.5 !default;
-$layout-2xs: $spacing-baseline * 0.75 !default;
-$layout-xs: $spacing-baseline * 1 !default;
-$layout-sm: $spacing-baseline * 1.5 !default;
-$layout-md: $spacing-baseline * 2 !default;
-$layout-lg: $spacing-baseline * 4 !default;
-$layout-xl: $spacing-baseline * 6 !default;
-$layout-2xl: $spacing-baseline * 8 !default;
+$spacing-4xl: $spacing-baseline * 4 !default;
+$spacing-5xl: $spacing-baseline * 6 !default;
+$spacing-6xl: $spacing-baseline * 8 !default;
 
 $utils-margin-sizes: (
-  '4xs': $layout-4xs,
-  '3xs': $layout-3xs,
-  '2xs': $layout-2xs,
-  'xs': $layout-xs,
-  'sm': $layout-sm,
-  'md': $layout-md,
-  'lg': $layout-lg,
-  'xl': $layout-xl,
-  '2xl': $layout-2xl,
+  '4xs':  $spacing-4xs,
+  '3xs':  $spacing-3xs,
+  '2xs':  $spacing-2xs,
+  'xs':   $spacing-xs,
+  'sm':   $spacing-sm,
+  'md':   $spacing-md,
+  'lg':   $spacing-lg,
+  'xl':   $spacing-xl,
+  '2xl':  $spacing-2xl,
+  '3xl':  $spacing-3xl,
+  '4xl':  $spacing-4xl,
+  '5xl':  $spacing-5xl,
+  '6xl':  $spacing-6xl,
 )

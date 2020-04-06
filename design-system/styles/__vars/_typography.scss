@@ -1,39 +1,23 @@
 @mixin font-face ($prefix: '..') {
-  @font-face {
-    font-family: 'Museo Sans';
-    src: url('#{$prefix}/fonts/MuseoSans_900-webfont.woff2') format('woff2'),
-         url('#{$prefix}/fonts/MuseoSans_900-webfont.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-  }
 
-  @font-face {
-    font-family: 'Museo Sans';
-    src: url('#{$prefix}/fonts/MuseoSans_500-webfont.woff2') format('woff2'),
-         url('#{$prefix}/fonts/MuseoSans_500-webfont.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-  }
+  //@font-face {
+  //  font-family: 'Museo Sans';
+  //  src: url('#{$prefix}/fonts/MuseoSans_500-webfont.woff2') format('woff2'),
+  //       url('#{$prefix}/fonts/MuseoSans_500-webfont.woff') format('woff');
+  //  font-weight: 500;
+  //  font-style: normal;
+  //  font-display: swap;
+  //}
+  //
+  //@font-face {
+  //  font-family: 'Museo Sans';
+  //  src: url('#{$prefix}/fonts/MuseoSans_100-webfont.woff2') format('woff2'),
+  //       url('#{$prefix}/fonts/Roboto-Light.ttf') format('woff');
+  //  font-weight: 300;
+  //  font-style: normal;
+  //  font-display: swap;
+  //}
 
-  @font-face {
-    font-family: 'Museo Sans';
-    src: url('#{$prefix}/fonts/MuseoSans_100-webfont.woff2') format('woff2'),
-         url('#{$prefix}/fonts/MuseoSans_100-webfont.woff') format('woff');
-    font-weight: 100;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'Ashbury';
-    src: url('../fonts/AshburyMed-webfont.woff2') format('woff2'),
-    url('../fonts/AshburyMed-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
 }
 
 $typescale-map: (
@@ -69,28 +53,28 @@ $line-height-map: (
 $border-accent-width: $spacing-2xs;
 
 @mixin font-sans {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
-@mixin font-sans-secondary {
-  font-family: 'Museo Sans', 'Tahoma', sans-serif;
-}
-
-@mixin font-serif {
-  font-family: 'Ashbury', serif;
-}
+//@mixin font-sans-secondary {
+//  font-family: 'Museo Sans', 'Tahoma', sans-serif;
+//}
+//
+//@mixin font-serif {
+//  font-family: 'Ashbury', serif;
+//}
 
 @mixin font-primary {
   @include font-sans;
 }
 
-@mixin font-secondary {
-  @include font-sans-secondary;
-}
-
-@mixin font-tertiary {
-  @include font-serif;
-}
+//@mixin font-secondary {
+//  @include font-sans-secondary;
+//}
+//
+//@mixin font-tertiary {
+//  @include font-serif;
+//}
 
 
 @mixin line-height($size) {
@@ -129,7 +113,7 @@ $border-accent-width: $spacing-2xs;
   @include line-height('normal');
   color: $text-color;
   background: #fff;
-  font-weight: 400;
+  font-weight: 300;
   tap-highlight-color: transparentize($primary, 0.75);
 }
 
@@ -157,23 +141,13 @@ $border-accent-width: $spacing-2xs;
   }
 
   #{headings()} {
-    @include font-secondary;
     @include line-height('headings');
     font-weight: 900;
-    margin: $layout-lg 0 $spacing-lg;
+    margin: $spacing-4xl 0 $spacing-lg;
 
     a, a & {
       color: black;
     }
-  }
-
-  h2, .h2 {
-    color: $primary;
-  }
-
-  h5, .h5,
-  h6, .h6 {
-    font-weight: 500;
   }
 
   h1 + h2,
@@ -255,14 +229,14 @@ $border-accent-width: $spacing-2xs;
     height: 0px;
     border: 0;
     border-top: 1px solid $grey-light;
-    margin: $layout-lg auto;
+    margin: $spacing-4xl auto;
 
     &.compact {
-      margin: $layout-md auto;
+      margin: $spacing-xl auto;
     }
 
     &.spaced {
-      margin: $layout-2xl auto;
+      margin: $spacing-5xl auto;
     }
 
     &.invisible {
@@ -283,7 +257,7 @@ $border-accent-width: $spacing-2xs;
 
   figure {
     position: relative;
-    margin: 0 0 $layout-lg;
+    margin: 0 0 $spacing-xl;
 
     img {
       width: 100%;
@@ -334,7 +308,7 @@ $border-accent-width: $spacing-2xs;
   table {
     font-size: 0.9em;
     width: 100%;
-    margin: 0 0 $layout-md;
+    margin: 0 0 $spacing-xl;
     border: 1px solid #ddd;
     border-spacing: 0;
     border-collapse: collapse;
@@ -395,7 +369,6 @@ $border-accent-width: $spacing-2xs;
   }
 
   .stat {
-    @include font-secondary;
     @include typescale('2xl', 'em');
     font-weight: bold;
     color: $primary;
@@ -409,42 +382,36 @@ $border-accent-width: $spacing-2xs;
 }
 
 @mixin h1 {
-  @include font-secondary;
   @include line-height('headings');
   @include typescale(map-get($headings-map, 'h1'));
-  font-weight: 900;
+  font-weight: 500;
 }
 
 @mixin h2 {
-  @include font-secondary;
   @include line-height('headings');
   @include typescale(map-get($headings-map, 'h2'));
-  font-weight: 900;
+  font-weight: 500;
 }
 
 @mixin h3 {
-  @include font-secondary;
   @include line-height('headings');
   @include typescale(map-get($headings-map, 'h3'));
-  font-weight: 900;
+  font-weight: 500;
 }
 
 @mixin h4 {
-  @include font-secondary;
   @include line-height('headings');
   @include typescale(map-get($headings-map, 'h4'));
-  font-weight: 900;
+  font-weight: 500;
 }
 
 @mixin h5 {
-  @include font-secondary;
   @include line-height('headings');
   @include typescale(map-get($headings-map, 'h5'));
   font-weight: 500;
 }
 
 @mixin h6 {
-  @include font-secondary;
   @include line-height('headings');
   @include typescale(map-get($headings-map, 'h6'));
   font-weight: 500;
@@ -452,7 +419,6 @@ $border-accent-width: $spacing-2xs;
 
 @mixin blockquote {
   display: table;
-  @include font-tertiary;
   font-size: 1.1em;
   @include line-height('spaced');
   position: relative;
@@ -478,7 +444,7 @@ $border-accent-width: $spacing-2xs;
 
   @media (min-width: 40em) {
     font-size: 1.35em;
-    margin: $layout-lg 0;
+    margin: $spacing-xl 0;
     padding: 1em calc(2em + 2.5%);
   }
 

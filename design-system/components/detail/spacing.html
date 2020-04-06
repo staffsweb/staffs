@@ -71,7 +71,7 @@
 
 <div class="Status Status--tag">
 
-<label class="Status-label" style="background-color: #ff9233; border-color: #ff9233;">WIP</label>
+<label class="Status-label" style="background-color: #f33; border-color: #f33;">Not started</label>
 
 </div>
 
@@ -151,6 +151,24 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>These can be found for reference in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>__vars/_spacing.scss<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, and <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>should not be changed<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>, they define the spacing across the entire site.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>The map for the utilities classes is also defined here.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
+<span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>
+  $spacing-baseline: 1rem !default;
+
+  $spacing-4xs: $spacing-baseline * 0.0625 !default;
+  $spacing-3xs: $spacing-baseline * 0.125 !default;
+  $spacing-2xs: $spacing-baseline * 0.25 !default;
+  $spacing-xs: $spacing-baseline * 0.5 !default;
+  $spacing-sm: $spacing-baseline * 0.75 !default;
+  $spacing-md: $spacing-baseline !default;
+  $spacing-lg: $spacing-baseline * 1.5 !default;
+  $spacing-xl: $spacing-baseline * 2 !default;
+  $spacing-2xl: $spacing-baseline * 2.5 !default;
+  $spacing-3xl: $spacing-baseline * 3 !default;
+  $spacing-4xl: $spacing-baseline * 4 !default;
+  $spacing-5xl: $spacing-baseline * 6 !default;
+  $spacing-6xl: $spacing-baseline * 8 !default;
+<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
+
 <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Spacing utilities<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>We generate utility classes for layout-level spacing to help with vertical rhythm in content. Use sparingly, only where it isn't really possible to add margins in CSS.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>To add margin <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>top and bottom<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>, use: <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>margin-y-[size]<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, eg. <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>margin-y-md<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> for medium spacing, <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>.margin-y-lg<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> for large spacing.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -158,15 +176,19 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>To add margin to <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>top only<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>, use: <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>margin-top-[size]<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, eg. <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>margin-top-md<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> for medium spacing. This is normally an unlikely use case. Consider adding bottom margin to the layout block above instead.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>$utils-margin-sizes: (
-  '4xs': $layout-4xs,
-  '3xs': $layout-3xs,
-  '2xs': $layout-2xs,
-  'xs': $layout-xs,
-  'sm': $layout-sm,
-  'md': $layout-md,
-  'lg': $layout-lg,
-  'xl': $layout-xl,
-  '2xl': $layout-2xl,
+  '4xs':  $spacing-4xs,
+  '3xs':  $spacing-3xs,
+  '2xs':  $spacing-2xs,
+  'xs':   $spacing-xs,
+  'sm':   $spacing-sm,
+  'md':   $spacing-md,
+  'lg':   $spacing-lg,
+  'xl':   $spacing-xl,
+  '2xl':  $spacing-2xl,
+  '3xl':  $spacing-3xl,
+  '4xl':  $spacing-4xl,
+  '5xl':  $spacing-5xl,
+  '6xl':  $spacing-6xl,
 )<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span></pre>
         
     </code>
@@ -179,6 +201,24 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>These can be found for reference in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>__vars/_spacing.scss<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, and <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>should not be changed<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>, they define the spacing across the entire site.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>The map for the utilities classes is also defined here.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
+<span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>
+  $spacing-baseline: 1rem !default;
+
+  $spacing-4xs: $spacing-baseline * 0.0625 !default;
+  $spacing-3xs: $spacing-baseline * 0.125 !default;
+  $spacing-2xs: $spacing-baseline * 0.25 !default;
+  $spacing-xs: $spacing-baseline * 0.5 !default;
+  $spacing-sm: $spacing-baseline * 0.75 !default;
+  $spacing-md: $spacing-baseline !default;
+  $spacing-lg: $spacing-baseline * 1.5 !default;
+  $spacing-xl: $spacing-baseline * 2 !default;
+  $spacing-2xl: $spacing-baseline * 2.5 !default;
+  $spacing-3xl: $spacing-baseline * 3 !default;
+  $spacing-4xl: $spacing-baseline * 4 !default;
+  $spacing-5xl: $spacing-baseline * 6 !default;
+  $spacing-6xl: $spacing-baseline * 8 !default;
+<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
+
 <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Spacing utilities<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>We generate utility classes for layout-level spacing to help with vertical rhythm in content. Use sparingly, only where it isn't really possible to add margins in CSS.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>To add margin <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>top and bottom<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>, use: <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>margin-y-[size]<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, eg. <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>margin-y-md<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> for medium spacing, <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>.margin-y-lg<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> for large spacing.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -186,15 +226,19 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>To add margin to <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>top only<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>, use: <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>margin-top-[size]<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, eg. <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>margin-top-md<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> for medium spacing. This is normally an unlikely use case. Consider adding bottom margin to the layout block above instead.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>$utils-margin-sizes: (
-  '4xs': $layout-4xs,
-  '3xs': $layout-3xs,
-  '2xs': $layout-2xs,
-  'xs': $layout-xs,
-  'sm': $layout-sm,
-  'md': $layout-md,
-  'lg': $layout-lg,
-  'xl': $layout-xl,
-  '2xl': $layout-2xl,
+  '4xs':  $spacing-4xs,
+  '3xs':  $spacing-3xs,
+  '2xs':  $spacing-2xs,
+  'xs':   $spacing-xs,
+  'sm':   $spacing-sm,
+  'md':   $spacing-md,
+  'lg':   $spacing-lg,
+  'xl':   $spacing-xl,
+  '2xl':  $spacing-2xl,
+  '3xl':  $spacing-3xl,
+  '4xl':  $spacing-4xl,
+  '5xl':  $spacing-5xl,
+  '6xl':  $spacing-6xl,
 )<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span></span></pre>
     </code>
 </div>
@@ -306,7 +350,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #f33;" title="Not started"></span>
 
 
 </div>
@@ -330,7 +374,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #f33;" title="Not started"></span>
 
 
 </div>
@@ -354,7 +398,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #f33;" title="Not started"></span>
 
 
 </div>
@@ -368,6 +412,118 @@
     
 
             </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-page">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Page</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="page-footer.html" data-pjax>
+                <span>Page Footer</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #f33;" title="Not started"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="page-header.html" data-pjax>
+                <span>Page Header</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #f33;" title="Not started"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="accordion.html" data-pjax>
+                <span>Accordion</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #f33;" title="Not started"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="button.html" data-pjax>
+                <span>Button</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
         </li>
         
     

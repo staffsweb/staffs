@@ -117,7 +117,7 @@ html { position: relative; font-size: 85%; -webkit-text-decoration-skip: ink; te
 
 @supports (font: -apple-system-body) { html { font: -apple-system-body; -webkit-text-size-adjust: 85%; -moz-text-size-adjust: 85%; -ms-text-size-adjust: 85%; text-size-adjust: 85%; } }
 
-body { font-family: 'Roboto', sans-serif; line-height: 1.4; color: black; background: #fff; font-weight: 400; tap-highlight-color: rgba(173, 0, 117, 0.25); }
+body { font-family: 'Roboto', sans-serif; line-height: 1.4; color: black; background: #fff; font-weight: 300; tap-highlight-color: rgba(173, 0, 117, 0.25); }
 
 ::-moz-selection { background: rgba(173, 0, 117, 0.15); }
 
@@ -201,7 +201,7 @@ figcaption p:last-child { margin-bottom: 0; }
 
 cite, .cite { font-family: 'Roboto', sans-serif; font-size: 0.75rem; font-style: normal; font-weight: bold; display: block; margin: 1.5rem 0 0; }
 
-blockquote { display: table; font-family: 'Ashbury', serif; font-size: 1.1em; line-height: 1.6; position: relative; margin: 1.5rem 0 1.5rem; padding: 1em 2em; border: none; border-left: 0.25rem solid #AD0075; }
+blockquote { display: table; font-size: 1.1em; line-height: 1.6; position: relative; margin: 1.5rem 0 1.5rem; padding: 1em 2em; border: none; border-left: 0.25rem solid #AD0075; }
 
 blockquote:before { content: open-quote; position: relative; display: inline-block; float: left; font-size: 2em; line-height: 1; margin-left: -0.65em; width: 0.65em; }
 
@@ -243,7 +243,7 @@ details .accordion-toggle { margin: 0; display: inline-block; vertical-align: mi
 
 @media (min-width: 40em) { .intro, .is-style-intro { font-size: 1.25em; } }
 
-.stat { font-family: 'Museo Sans', 'Tahoma', sans-serif; font-size: 1.5em; font-weight: bold; color: #AD0075; text-decoration: none; }
+.stat { font-size: 1.5em; font-weight: bold; color: #AD0075; text-decoration: none; }
 
 .stat a { color: #AD0075; text-decoration: none; }
 
@@ -270,8 +270,6 @@ details .accordion-toggle { margin: 0; display: inline-block; vertical-align: mi
 .font-2xs { font-size: 0.6875rem !important; }
 
 .font-primary { font-family: 'Roboto', sans-serif; }
-
-.font-secondary { font-family: 'Museo Sans', 'Tahoma', sans-serif; }
 
 main p:not([class]), article p:not([class]) { max-width: 50rem; }
 
@@ -311,7 +309,7 @@ a.tag:hover:hover { text-decoration: underline; color: black; }
 
 .link-pointy:hover:after, .link-pointy:focus:after { -webkit-transform: translateX(0.15em); transform: translateX(0.15em); }
 
-.link-cta { font-family: 'Museo Sans', 'Tahoma', sans-serif; font-size: 1.125rem; line-height: 1.4; font-weight: 800; position: relative; display: table; padding-right: 1em; color: black; text-decoration: underline; -webkit-text-decoration-style: solid; text-decoration-style: solid; -webkit-text-decoration-color: black; text-decoration-color: black; }
+.link-cta { font-size: 1.125rem; line-height: 1.4; font-weight: 800; position: relative; display: table; padding-right: 1em; color: black; text-decoration: underline; -webkit-text-decoration-style: solid; text-decoration-style: solid; -webkit-text-decoration-color: black; text-decoration-color: black; }
 
 .link-cta:after { content: ''; position: absolute; bottom: 0.1em; display: inline-block; width: 1em; height: 1em; margin-left: 0.35em; background: url("../img/arrow-right-orange.svg") center center no-repeat; background-size: contain; vertical-align: text-bottom; -webkit-transition: -webkit-transform 75ms ease-out; transition: -webkit-transform 75ms ease-out; transition: transform 75ms ease-out; transition: transform 75ms ease-out, -webkit-transform 75ms ease-out; }
 
@@ -560,7 +558,7 @@ a.tag:hover:hover { text-decoration: underline; color: black; }
 
 .box--white { background: #fff; }
 
-.button { position: relative; display: inline-block; font-family: 'Museo Sans', 'Tahoma', sans-serif; font-size: inherit; margin: 0 0.25rem 1rem 0; padding: 0.75em 2em; line-height: 1.15; vertical-align: middle; text-decoration: none; text-align: center; -webkit-transition: background 150ms ease-out, color 150ms ease-out; transition: background 150ms ease-out, color 150ms ease-out; box-sizing: border-box; border-radius: 0; background-color: #E6650A; background-image: -webkit-gradient(linear, right top, left top, color-stop(50%, #E6650A), color-stop(50%, black)); background-image: linear-gradient(to left, #E6650A 50%, black 50%); background-size: 200% 100%; background-position: right bottom; color: rgba(255, 255, 255, 0.9); }
+.button { position: relative; display: inline-block; font-size: inherit; margin: 0 0.25rem 1rem 0; padding: 0.75em 2em; line-height: 1.15; vertical-align: middle; text-decoration: none; text-align: center; -webkit-transition: background 150ms ease-out, color 150ms ease-out; transition: background 150ms ease-out, color 150ms ease-out; box-sizing: border-box; border-radius: 0; background-color: #E6650A; background-image: -webkit-gradient(linear, right top, left top, color-stop(50%, #E6650A), color-stop(50%, black)); background-image: linear-gradient(to left, #E6650A 50%, black 50%); background-size: 200% 100%; background-position: right bottom; color: rgba(255, 255, 255, 0.9); }
 
 .button:hover, .button:focus, .button:active { color: white; background-position: 0% bottom; }
 
@@ -660,7 +658,7 @@ a.card:hover .link-cta:after { -webkit-transform: translateX(0.15em); transform:
 
 .list-icon-bullets li:after { content: ''; display: table; clear: both; }
 
-.list-icon-bullets a { font-family: 'Museo Sans', 'Tahoma', sans-serif; font-size: 1rem; display: block; text-decoration: none; -webkit-text-decoration-color: black; text-decoration-color: black; padding: 1rem 1rem 1rem 3.5rem; }
+.list-icon-bullets a { font-size: 1rem; display: block; text-decoration: none; -webkit-text-decoration-color: black; text-decoration-color: black; padding: 1rem 1rem 1rem 3.5rem; }
 
 .list-icon-bullets a:after { bottom: 1.2rem; }
 

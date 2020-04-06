@@ -45,9 +45,9 @@ body {
   @include font-primary;
 }
 
-.font-secondary {
-  @include font-secondary;
-}
+//.font-secondary {
+//  @include font-secondary;
+//}
 
 main,
 article {
@@ -137,7 +137,6 @@ a.tag {
 }
 
 .link-cta {
-  @include font-secondary;
   @include typescale('lg');
   @include line-height('normal');
   font-weight: 800;

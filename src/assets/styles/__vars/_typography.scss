@@ -56,25 +56,25 @@ $border-accent-width: $spacing-2xs;
   font-family: 'Roboto', sans-serif;
 }
 
-@mixin font-sans-secondary {
-  font-family: 'Museo Sans', 'Tahoma', sans-serif;
-}
-
-@mixin font-serif {
-  font-family: 'Ashbury', serif;
-}
+//@mixin font-sans-secondary {
+//  font-family: 'Museo Sans', 'Tahoma', sans-serif;
+//}
+//
+//@mixin font-serif {
+//  font-family: 'Ashbury', serif;
+//}
 
 @mixin font-primary {
   @include font-sans;
 }
 
-@mixin font-secondary {
-  @include font-sans-secondary;
-}
-
-@mixin font-tertiary {
-  @include font-serif;
-}
+//@mixin font-secondary {
+//  @include font-sans-secondary;
+//}
+//
+//@mixin font-tertiary {
+//  @include font-serif;
+//}
 
 
 @mixin line-height($size) {
@@ -113,7 +113,7 @@ $border-accent-width: $spacing-2xs;
   @include line-height('normal');
   color: $text-color;
   background: #fff;
-  font-weight: 400;
+  font-weight: 300;
   tap-highlight-color: transparentize($primary, 0.75);
 }
 
@@ -369,7 +369,6 @@ $border-accent-width: $spacing-2xs;
   }
 
   .stat {
-    @include font-secondary;
     @include typescale('2xl', 'em');
     font-weight: bold;
     color: $primary;
@@ -383,42 +382,36 @@ $border-accent-width: $spacing-2xs;
 }
 
 @mixin h1 {
-  @include font-secondary;
   @include line-height('headings');
   @include typescale(map-get($headings-map, 'h1'));
-  font-weight: 900;
+  font-weight: 500;
 }
 
 @mixin h2 {
-  @include font-secondary;
   @include line-height('headings');
   @include typescale(map-get($headings-map, 'h2'));
-  font-weight: 900;
+  font-weight: 500;
 }
 
 @mixin h3 {
-  @include font-secondary;
   @include line-height('headings');
   @include typescale(map-get($headings-map, 'h3'));
-  font-weight: 900;
+  font-weight: 500;
 }
 
 @mixin h4 {
-  @include font-secondary;
   @include line-height('headings');
   @include typescale(map-get($headings-map, 'h4'));
-  font-weight: 900;
+  font-weight: 500;
 }
 
 @mixin h5 {
-  @include font-secondary;
   @include line-height('headings');
   @include typescale(map-get($headings-map, 'h5'));
   font-weight: 500;
 }
 
 @mixin h6 {
-  @include font-secondary;
   @include line-height('headings');
   @include typescale(map-get($headings-map, 'h6'));
   font-weight: 500;
@@ -426,7 +419,6 @@ $border-accent-width: $spacing-2xs;
 
 @mixin blockquote {
   display: table;
-  @include font-tertiary;
   font-size: 1.1em;
   @include line-height('spaced');
   position: relative;
