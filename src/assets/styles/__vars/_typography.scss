@@ -142,7 +142,7 @@ $border-accent-width: $spacing-2xs;
 
   #{headings()} {
     @include line-height('headings');
-    font-weight: 900;
+    font-weight: 500;
     margin: $spacing-4xl 0 $spacing-lg;
 
     a, a & {
@@ -178,7 +178,7 @@ $border-accent-width: $spacing-2xs;
 
   strong,
   .strong {
-    font-weight: 600;
+    font-weight: 500;
   }
 
   em {

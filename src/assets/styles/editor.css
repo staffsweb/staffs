@@ -26,7 +26,7 @@ a[href^="mailto"], .url { word-break: break-word; }
 
 @supports (text-decoration-thickness: 0.125em) { nav a, ul a, ol a, table a { -webkit-text-decoration-color: revert; text-decoration-color: revert; text-decoration-thickness: revert; } }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { line-height: 1.2; font-weight: 900; margin: 4rem 0 1.5rem; }
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { line-height: 1.2; font-weight: 500; margin: 4rem 0 1.5rem; }
 
 h1 a, a h1, .h1 a, a .h1, h2 a, a h2, .h2 a, a .h2, h3 a, a h3, .h3 a, a .h3, h4 a, a h4, .h4 a, a .h4, h5 a, a h5, .h5 a, a .h5, h6 a, a h6, .h6 a, a .h6 { color: black; }
 
@@ -50,7 +50,7 @@ p:empty { margin: 0; }
 
 acronym, abbr { border-bottom: 1px dotted #333; }
 
-strong, .strong { font-weight: 600; }
+strong, .strong { font-weight: 500; }
 
 em { font-style: italic; }
 
