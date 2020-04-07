@@ -8,11 +8,11 @@ html { position: relative; font-size: 85%; -webkit-text-decoration-skip: ink; te
 
 @supports (font: -apple-system-body) { html { font: -apple-system-body; -webkit-text-size-adjust: 85%; -moz-text-size-adjust: 85%; -ms-text-size-adjust: 85%; text-size-adjust: 85%; } }
 
-body { font-family: 'Roboto', sans-serif; line-height: 1.4; color: black; background: #fff; font-weight: 300; tap-highlight-color: rgba(215, 10, 38, 0.25); }
+body { font-family: 'Roboto', sans-serif; line-height: 2; color: black; background: #fff; font-weight: 300; tap-highlight-color: rgba(215, 10, 38, 0.25); }
 
-::-moz-selection { background: rgba(215, 10, 38, 0.15); }
+::-moz-selection { background: rgba(215, 10, 38, 0.2); }
 
-::selection { background: rgba(215, 10, 38, 0.15); }
+::selection { background: rgba(215, 10, 38, 0.2); }
 
 a { color: black; cursor: pointer; text-decoration: underline; }
 
@@ -30,11 +30,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { line-height: 1.2; font-we
 
 h1 a, a h1, .h1 a, a .h1, h2 a, a h2, .h2 a, a .h2, h3 a, a h3, .h3 a, a .h3, h4 a, a h4, .h4 a, a .h4, h5 a, a h5, .h5 a, a .h5, h6 a, a h6, .h6 a, a .h6 { color: black; }
 
-h1 + h2, h2 + h3, h3 + h4, h4 + h5, h5 + h6 { margin-top: -0.5rem; }
+h1 + h2, h2 + h3, h3 + h4, h4 + h5, h5 + h6 { margin-top: 0; }
 
-h1, .h1 { font-size: 3rem; line-height: 1.2; }
+h1, .h1 { font-size: 3rem; }
 
-h2, .h2 { font-size: 2.5rem; line-height: 1.2; }
+h2, .h2 { font-size: 2.5rem; }
 
 h3, .h3 { font-size: 2rem; }
 
@@ -92,7 +92,7 @@ figcaption p:last-child { margin-bottom: 0; }
 
 cite, .cite { font-family: 'Roboto', sans-serif; font-size: 0.75rem; font-style: normal; font-weight: bold; display: block; margin: 1.5rem 0 0; }
 
-blockquote { display: table; font-size: 1.1em; line-height: 1.6; position: relative; margin: 1.5rem 0 1.5rem; padding: 1em 2em; border: none; border-left: 0.25rem solid #D70A26; }
+blockquote { display: table; font-size: 1.1em; line-height: 2; position: relative; margin: 1.5rem 0 1.5rem; padding: 1em 2em; border: none; border-left: 0.25rem solid #D70A26; }
 
 blockquote:before { content: open-quote; position: relative; display: inline-block; float: left; font-size: 2em; line-height: 1; margin-left: -0.65em; width: 0.65em; }
 
@@ -108,7 +108,7 @@ blockquote q:before { display: none; }
 
 pre { clear: both; font-size: 0.875em; margin: 1.5rem 0; padding: 1em; -moz-tab-size: 2; -o-tab-size: 2; tab-size: 2; background: black; color: #fff; max-width: 100%; overflow: auto; }
 
-code { display: inline-block; font-size: 0.875em; background: rgba(215, 10, 38, 0.05); padding: 0 0.2em; color: #D70A26; border: 1px rgba(215, 10, 38, 0.25) solid; border-radius: 0.2em; }
+code { display: inline-block; line-height: 1.5; font-size: 0.75em; background: rgba(215, 10, 38, 0.05); padding: 0 0.2em; color: #D70A26; border: 1px rgba(215, 10, 38, 0.25) solid; border-radius: 0.2em; }
 
 table { font-size: 0.9em; width: 100%; margin: 0 0 2rem; border: 1px solid #ddd; border-spacing: 0; border-collapse: collapse; }
 
@@ -138,11 +138,11 @@ details .accordion-toggle { margin: 0; display: inline-block; vertical-align: mi
 
 .stat a { color: #D70A26; text-decoration: none; }
 
-.font-6xl { font-size: 4rem !important; line-height: 1.2; }
+.font-6xl { font-size: 4rem !important; }
 
-.font-5xl { font-size: 3rem !important; line-height: 1.2; }
+.font-5xl { font-size: 3rem !important; }
 
-.font-4xl { font-size: 2.5rem !important; line-height: 1.2; }
+.font-4xl { font-size: 2.5rem !important; }
 
 .font-3xl { font-size: 2rem !important; }
 
@@ -200,7 +200,7 @@ a.tag:hover:hover { text-decoration: underline; color: black; }
 
 .link-pointy:hover:after, .link-pointy:focus:after { -webkit-transform: translateX(0.15em); transform: translateX(0.15em); }
 
-.link-cta { font-size: 1.125rem; line-height: 1.4; font-weight: 800; position: relative; display: table; padding-right: 1em; color: black; text-decoration: underline; -webkit-text-decoration-style: solid; text-decoration-style: solid; -webkit-text-decoration-color: black; text-decoration-color: black; }
+.link-cta { font-size: 1.125rem; line-height: 1.5; font-weight: 800; position: relative; display: table; padding-right: 1em; color: black; text-decoration: underline; -webkit-text-decoration-style: solid; text-decoration-style: solid; -webkit-text-decoration-color: black; text-decoration-color: black; }
 
 .link-cta:after { content: ''; position: absolute; bottom: 0.1em; display: inline-block; width: 1em; height: 1em; margin-left: 0.35em; background: url("../img/arrow-right-orange.svg") center center no-repeat; background-size: contain; vertical-align: text-bottom; -webkit-transition: -webkit-transform 75ms ease-out; transition: -webkit-transform 75ms ease-out; transition: transform 75ms ease-out; transition: transform 75ms ease-out, -webkit-transform 75ms ease-out; }
 

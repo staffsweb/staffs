@@ -44,10 +44,10 @@ $headings-map: (
 );
 
 $line-height-map: (
-  'spaced': 1.6,
-  'normal': 1.4,
+  'spaced': 2,
+  'normal': 1.5,
   'headings': 1.2,
-  'compact': 1.2,
+  'compact': 0.8,
 );
 
 $border-accent-width: $spacing-2xs;
@@ -92,9 +92,9 @@ $border-accent-width: $spacing-2xs;
     } @else {
       font-size: map-get($typescale-map, $size)+unquote($unit);
     }
-    @if (map-get($typescale-map, $size) > 2) {
-      @include line-height('compact');
-    }
+    //@if (map-get($typescale-map, $size) > 2) {
+    //  @include line-height('compact');
+    //}
   } @else {
     @warn 'This is not a step of the Type Scale!';
   }
@@ -110,7 +110,7 @@ $border-accent-width: $spacing-2xs;
 
 @mixin body {
   @include font-primary;
-  @include line-height('normal');
+  @include line-height('spaced');
   color: $text-color;
   background: #fff;
   font-weight: 300;
@@ -155,7 +155,7 @@ $border-accent-width: $spacing-2xs;
   h3 + h4,
   h4 + h5,
   h5 + h6 {
-    margin-top: -#{$spacing-xs};
+    margin-top: 0;
   }
 
   @each $name, $size in $headings-map {
@@ -297,7 +297,8 @@ $border-accent-width: $spacing-2xs;
 
   code {
     display: inline-block;
-    @include typescale('sm', 'em');
+    @include line-height('normal')
+    @include typescale('xs', 'em');
     background: rgba($primary, 0.05);
     padding: 0 0.2em;
     color: $primary;

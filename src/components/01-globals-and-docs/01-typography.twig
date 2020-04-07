@@ -2,14 +2,13 @@
 <h1 class="title">Typography</h1>
 
 <h2>Typeface</h2>
-<p>Two typefaces are used for the web</p>
+<p>One typeface is used for the web, there is no secondary typeface:</p>
 <ul>
-    <li><span class="font-primary">Arial - Primary typeface</span>: is the default for body copy</li>
-    <li><span class="font-secondary">Museo Sans - Secondary typeface</span>: for headings and other 'decorative' copy.</li>
+    <li><span class="font-primary">Roboto - Primary typeface</span>: is the default for body copy and headings</li>
+{#    <li><span class="font-secondary">Museo Sans - Secondary typeface</span>: for headings and other 'decorative' copy.</li>#}
 </ul>
 
-<p>They can be used using a class of <code>font-primary</code> or <code>font-secondary</code><br/>
-    or in Sass using <code>@include font-primary;</code> or <code>@include font-secondary;</code></p>
+{#<p>They can be used using a class of <code>font-primary</code> or <code>font-secondary</code><br/> or in Sass using <code>@include font-primary;</code> or <code>@include font-secondary;</code></p>#}
 
 <h2>Typescale</h2>
 
@@ -59,16 +58,15 @@
 
 <hr/>
 
-<p class="intro">The London Marathon needs no introduction. It's the most exciting day of London's sporting calendar and for anyone who runs it, it is a day they'll never forget. It's the biggest annual single-day fundraising event in the world and you can be part of it with Team VSO.</p>
-<p>If you live in the UK, VSO can help you contact and meet your political representatives. You can help increase political will to tackle poverty by sharing your experiences and concerns with them.</p>
+<p class="intro">{{ placeholderPara1 }}</p>
+<p>{{ placeholderPara2 }}</p>
 
-<h2>How are they making an impact?</h2>
-<p><strong>You’ll be running for an amazing cause: for a world without poverty. This is an emboldened paragraph.</strong></p>
-<p>Our volunteers work in 24 countries to help people live healthy, dignified lives. Some of our volunteers include teachers, doctors, business experts, nurses... the list goes on.</p>
-<p>These <a href="">volunteers share skills</a> where it's needed the most, in the world's poorest and most marginalised communities.</p>
-<p><strong>£2600</strong> could cover the cost of a volunteer for over <strong>4 weeks</strong> – in that time a single volunteer could conduct a training session for teachers to showcase new teaching methods, hold meetings with head teachers from across a remote region to discuss existing challenges and possible solutions, <strong>and so much more</strong>.</p>
-<p><a class="link-pointy" href="">Find out how links are made pointy now</a></p>
-<p><a class="link-cta" href="">Find out how calls to action are made now</a></p>
+<h2>{{ placeholderHeadline }}</h2>
+<p><strong>{{ placeholderPara1 }} This is an emboldened paragraph.</strong></p>
+<p>{{ placeholderPara3 }}</p>
+<p>This <a href="">link goes somewhere</a>, but this sentence doesn't, it only exists to show how a link works. {{ loremShort }}.</p>
+<p><strong>£2600</strong> is an amount of money that I've wrapped some <code>&lt;strong&gt;</code> tags around, while <strong>4 weeks</strong> – a length of time – also has had the same treatment for the purposes of just <em>testing</em> how typography appears on the page. {{ loremLong }}</p>
+<p><a class="button" href="">Find out how links are made into buttons</a></p>
 
 <h2>Header Level 2</h2>
 <p>If you live in the UK, VSO can help you contact and meet your political representatives. You can help increase political will to tackle poverty by sharing your experiences and concerns with them.</p>
