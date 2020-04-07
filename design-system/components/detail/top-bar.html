@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    window.frctl = {
+        env: 'static'
+    };
+    </script>
+    <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
+    <link rel="shortcut icon" href="../../themes/mandelbrot/favicon.ico" type="image/ico">
+
+<link rel="stylesheet" href="../../themes/mandelbrot/css/white.css?cachebust=1.2.1" type="text/css">
+
+
+<title>Top Bar | Staffordshire University Components</title>
+
+</head>
+<body>
+
+
+
+<div class="Frame" id="frame">
+
+    <div class="Frame-header">
+        <div class="Header">
+    <button class="Header-button Header-navToggle" data-action="toggle-sidebar">
+        <svg class="Header-navToggleIcon Header-navToggleIcon--open" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/>
+</svg>
+
+        <svg class="Header-navToggleIcon Header-navToggleIcon--closed" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+</svg>
+
+    </button>
+    <a href="../../index.html" class="Header-title" data-pjax>Staffordshire University Components</a>
+</div>
+
+    </div>
+
+    <div class="Frame-body" data-role="body">
+
+        <div class="Frame-panel Frame-panel--main" data-role="main">
+            <div class="Frame-inner" id="pjax-container">
+            
+
+
+    
+    
+
+<div class="Pen" data-behaviour="pen" id="pen-afce1a49c12979865abeb04159547661">
+
+    
+
+    <div class="Pen-panel Pen-header">
+    <h1 class="Pen-title">
+        <a class="Pen-previewLink" href="../preview/top-bar.html" title="Component preview">
+            Top Bar
+            <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
+</svg>
+
+        </a>
+    </h1>
+    
+
+<div class="Status Status--tag">
+
+<label class="Status-label" style="background-color: #29cc29; border-color: #29cc29;">Ready</label>
+
+</div>
+
+
+</div>
+
+
+    <div class="Pen-panel Pen-preview Preview" data-behaviour="preview" id="preview-afce1a49c12979865abeb04159547661">
+    <div class="Preview-wrapper" data-role="resizer">
+        <div class="Preview-resizer">
+            
+             <iframe
+                class="Preview-iframe"
+                data-role="window"
+                src="../preview/top-bar.html"
+                sandbox="allow-same-origin allow-scripts allow-forms allow-modals"
+                 style=""
+                marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
+            </iframe>
+        </div>
+        <div class="Preview-handle" data-role="resize-handle"></div>
+        <div class="Preview-overlay"></div>
+    </div>
+</div>
+
+
+    <div class="Pen-handle Pen-handle--browser" data-role="resize-handle"></div>
+
+    <div class="Pen-panel Pen-info" data-role="info">
+    <div class="Browser" data-behaviour="browser" id="browser-afce1a49c12979865abeb04159547661">
+
+    
+
+<div class="Browser-controls">
+    <ul class="Browser-tabs">
+        
+        
+        <li class="Browser-tab Browser-tab--html is-active " data-role="tab">
+            <a href="#browser-afce1a49c12979865abeb04159547661-panel-html">HTML</a>
+        </li>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--view" data-role="tab">
+            <a href="#browser-afce1a49c12979865abeb04159547661-panel-view">View</a>
+        </li>
+        
+        
+        
+        
+        
+        <li class="Browser-tab Browser-tab--resources" data-role="tab">
+            <a href="#browser-afce1a49c12979865abeb04159547661-panel-assets">Assets</a>
+        </li>
+        
+        
+        
+        
+        
+        <li class="Browser-tab Browser-tab--info" data-role="tab">
+            <a href="#browser-afce1a49c12979865abeb04159547661-panel-info">Info</a>
+        </li>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--notes" data-role="tab">
+            <a href="#browser-afce1a49c12979865abeb04159547661-panel-notes">Notes</a>
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+    
+    
+<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-afce1a49c12979865abeb04159547661-panel-html">
+    <code class="Code Code--lang-html">
+        
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-primary-container"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"wrap"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-container"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"site-logo"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Home"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../img/logo.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Staffordshire University Logo"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"no-lazy-load"</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-primary-toggle  button is-style-small is-style-outline-white"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"nav-primary-toggle"</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"nav-primary"</span>&gt;</span>Menu<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-primary"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"nav-primary"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"navigation"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Courses<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Student life<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>International<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Research<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Business<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>About us<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+        
+    </code>
+</div>
+
+    
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-afce1a49c12979865abeb04159547661-panel-view">
+    <code class="Code Code--lang-twig">
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-primary-container"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"wrap"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-container"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"site-logo"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Home"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../img/logo.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Staffordshire University Logo"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"no-lazy-load"</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-primary-toggle  button is-style-small is-style-outline-white"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"nav-primary-toggle"</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"nav-primary"</span>&gt;</span>Menu<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-primary"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"nav-primary"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"navigation"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Courses<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Student life<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>International<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Research<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Business<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>About us<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></pre>
+    </code>
+</div>
+
+    
+    
+
+
+<div class="Browser-panel Browser-resources" data-role="tab-panel" id="browser-afce1a49c12979865abeb04159547661-panel-assets">
+    <div class="FileBrowser">
+
+        <div class="FileBrowser-selectWrapper">
+            <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
+            <select class="FileBrowser-select" id="filebrowser-select">
+                
+                <option value="file-49c429e604c3bc445e29d542080df6fe">_top-bar.scss</option>
+                
+            </select>
+        </div>
+
+        
+        <div class="FileBrowser-item is-active" id="file-49c429e604c3bc445e29d542080df6fe" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-SCSS FileBrowser-code">
+                                <pre><span class="hljs-selector-class">.button</span> {
+  <span class="hljs-keyword">@include</span> button;
+
+  <span class="hljs-comment">// Sizes</span>
+
+  &amp;--<span class="hljs-selector-tag">big</span> {
+    <span class="hljs-keyword">@include</span> button--big;
+  }
+
+  &amp;--<span class="hljs-selector-tag">small</span> {
+    <span class="hljs-keyword">@include</span> button--small;
+  }
+
+  <span class="hljs-comment">// Layout</span>
+
+  &amp;--block {
+    <span class="hljs-keyword">@include</span> button--block;
+  }
+
+  <span class="hljs-comment">// Colours</span>
+
+  &amp;--primary {
+    <span class="hljs-keyword">@include</span> button--primary;
+  }
+
+  &amp;--offwhite {
+    <span class="hljs-keyword">@include</span> button--offwhite;
+  }
+
+  &amp;--white {
+    <span class="hljs-keyword">@include</span> button--white;
+  }
+
+  &amp;--<span class="hljs-attribute">outline</span>-grey {
+    <span class="hljs-keyword">@include</span> button--outline-grey;
+  }
+
+  &amp;--<span class="hljs-attribute">outline</span>-black {
+    <span class="hljs-keyword">@include</span> button--outline-black;
+  }
+
+  &amp;--<span class="hljs-attribute">outline</span>-white {
+    <span class="hljs-keyword">@include</span> button--outline-white;
+  }
+}</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/top-bar/_top-bar.scss"><span>/components/raw/top-bar/_top-bar.scss</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/components/top-bar/_top-bar.scss</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">535 Bytes</span>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+</div>
+
+
+
+    
+    <div class="Browser-panel" data-role="tab-panel" id="browser-afce1a49c12979865abeb04159547661-panel-info">
+    <ul class="Meta">
+        <li class="Meta-item">
+            <strong class="Meta-key">Handle:</strong>
+            <span class="Meta-value">@top-bar</span>
+        </li>
+        
+        
+        
+        
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">Preview:</strong>
+            <span class="Meta-value">
+                <ul>
+                    <li><a data-no-pjax href="../preview/top-bar.html"><span>With layout</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
+</svg>
+</a></li>
+                    <li><a data-no-pjax href="../render/top-bar.html"><span>Component only</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
+</svg>
+</a></li>
+                </ul>
+            </span>
+        </li>
+        <li class="Meta-item">
+            <strong class="Meta-key">Filesystem Path:</strong>
+            <span class="Meta-value">src/components/top-bar/top-bar.twig</span>
+        </li>
+        
+        
+    </ul>
+</div>
+
+    
+    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-afce1a49c12979865abeb04159547661-panel-notes">
+    <div class="Prose Prose--condensed">
+        
+        <p class="Browser-isEmptyNote">There are no notes for this item.</p>
+        
+    </div>
+</div>
+
+    
+
+</div>
+
+</div>
+
+
+    
+
+</div>
+
+
+            </div>
+        </div>
+
+        <div class="Frame-handle" data-role="frame-resize-handle"></div>
+        
+        <div class="Frame-panel Frame-panel--sidebar" data-role="sidebar">
+            <nav class="Navigation">
+
+    
+
+
+    
+<div class="Navigation-group">
+
+<div class="Tree" data-behaviour="tree" id="tree-components">
+    <h3 class="Tree-title">components</h3>
+    <ul class="Tree-items Tree-depth-1">
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-globals-and-docs">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Globals And Docs</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="typography.html" data-pjax>
+                <span>Typography</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="spacing.html" data-pjax>
+                <span>Spacing</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="colour.html" data-pjax>
+                <span>Colour</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-page">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Page</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="page-footer.html" data-pjax>
+                <span>Page Footer</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="page-header.html" data-pjax>
+                <span>Page Header</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-templates">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Templates</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="homepage.html" data-pjax>
+                <span>Homepage</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="accordion.html" data-pjax>
+                <span>Accordion</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="button.html" data-pjax>
+                <span>Button</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
+            <a class="Tree-entityLink" href="" data-pjax>
+                <span>Top Bar</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+    </ul>
+</div>
+
+</div>
+
+
+
+</nav>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.2.1"></script>
+
+
+
+</body>
+</html>

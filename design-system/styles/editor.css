@@ -8,11 +8,11 @@ html { position: relative; font-size: 85%; -webkit-text-decoration-skip: ink; te
 
 @supports (font: -apple-system-body) { html { font: -apple-system-body; -webkit-text-size-adjust: 85%; -moz-text-size-adjust: 85%; -ms-text-size-adjust: 85%; text-size-adjust: 85%; } }
 
-body { font-family: 'Roboto', sans-serif; line-height: 1.4; color: black; background: #fff; font-weight: 300; tap-highlight-color: rgba(215, 10, 38, 0.25); }
+body { font-family: 'Roboto', sans-serif; line-height: 2; color: black; background: #fff; font-weight: 300; tap-highlight-color: rgba(215, 10, 38, 0.25); }
 
-::-moz-selection { background: rgba(215, 10, 38, 0.15); }
+::-moz-selection { background: rgba(215, 10, 38, 0.2); }
 
-::selection { background: rgba(215, 10, 38, 0.15); }
+::selection { background: rgba(215, 10, 38, 0.2); }
 
 a { color: black; cursor: pointer; text-decoration: underline; }
 
@@ -26,15 +26,15 @@ a[href^="mailto"], .url { word-break: break-word; }
 
 @supports (text-decoration-thickness: 0.125em) { nav a, ul a, ol a, table a { -webkit-text-decoration-color: revert; text-decoration-color: revert; text-decoration-thickness: revert; } }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { line-height: 1.2; font-weight: 900; margin: 4rem 0 1.5rem; }
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { line-height: 1.2; font-weight: 500; margin: 4rem 0 1.5rem; }
 
 h1 a, a h1, .h1 a, a .h1, h2 a, a h2, .h2 a, a .h2, h3 a, a h3, .h3 a, a .h3, h4 a, a h4, .h4 a, a .h4, h5 a, a h5, .h5 a, a .h5, h6 a, a h6, .h6 a, a .h6 { color: black; }
 
-h1 + h2, h2 + h3, h3 + h4, h4 + h5, h5 + h6 { margin-top: -0.5rem; }
+h1 + h2, h2 + h3, h3 + h4, h4 + h5, h5 + h6 { margin-top: 0; }
 
-h1, .h1 { font-size: 3rem; line-height: 1.2; }
+h1, .h1 { font-size: 3rem; }
 
-h2, .h2 { font-size: 2.5rem; line-height: 1.2; }
+h2, .h2 { font-size: 2.5rem; }
 
 h3, .h3 { font-size: 2rem; }
 
@@ -50,7 +50,7 @@ p:empty { margin: 0; }
 
 acronym, abbr { border-bottom: 1px dotted #333; }
 
-strong, .strong { font-weight: 600; }
+strong, .strong { font-weight: 500; }
 
 em { font-style: italic; }
 
@@ -92,7 +92,7 @@ figcaption p:last-child { margin-bottom: 0; }
 
 cite, .cite { font-family: 'Roboto', sans-serif; font-size: 0.75rem; font-style: normal; font-weight: bold; display: block; margin: 1.5rem 0 0; }
 
-blockquote { display: table; font-size: 1.1em; line-height: 1.6; position: relative; margin: 1.5rem 0 1.5rem; padding: 1em 2em; border: none; border-left: 0.25rem solid #D70A26; }
+blockquote { display: table; font-size: 1.1em; line-height: 2; position: relative; margin: 1.5rem 0 1.5rem; padding: 1em 2em; border: none; border-left: 0.25rem solid #D70A26; }
 
 blockquote:before { content: open-quote; position: relative; display: inline-block; float: left; font-size: 2em; line-height: 1; margin-left: -0.65em; width: 0.65em; }
 
@@ -106,9 +106,9 @@ blockquote p:only-child { margin-bottom: 0; }
 
 blockquote q:before { display: none; }
 
-pre { clear: both; font-size: 0.875em; margin: 1.5rem 0; padding: 1em; -moz-tab-size: 2; -o-tab-size: 2; tab-size: 2; background: black; color: #fff; max-width: 100%; overflow: auto; }
+pre { clear: both; font-size: 0.875em; line-height: 1.5; margin: 1.5rem 0; padding: 1em; -moz-tab-size: 2; -o-tab-size: 2; tab-size: 2; background: black; color: #fff; max-width: 100%; overflow: auto; }
 
-code { display: inline-block; font-size: 0.875em; background: rgba(215, 10, 38, 0.05); padding: 0 0.2em; color: #D70A26; border: 1px rgba(215, 10, 38, 0.25) solid; border-radius: 0.2em; }
+code { display: inline-block; line-height: 1.5; font-size: 0.75em; background: rgba(215, 10, 38, 0.05); padding: 0 0.2em; color: #D70A26; border: 1px rgba(215, 10, 38, 0.25) solid; border-radius: 0.2em; }
 
 table { font-size: 0.9em; width: 100%; margin: 0 0 2rem; border: 1px solid #ddd; border-spacing: 0; border-collapse: collapse; }
 
@@ -138,11 +138,11 @@ details .accordion-toggle { margin: 0; display: inline-block; vertical-align: mi
 
 .stat a { color: #D70A26; text-decoration: none; }
 
-.font-6xl { font-size: 4rem !important; line-height: 1.2; }
+.font-6xl { font-size: 4rem !important; }
 
-.font-5xl { font-size: 3rem !important; line-height: 1.2; }
+.font-5xl { font-size: 3rem !important; }
 
-.font-4xl { font-size: 2.5rem !important; line-height: 1.2; }
+.font-4xl { font-size: 2.5rem !important; }
 
 .font-3xl { font-size: 2rem !important; }
 
@@ -200,7 +200,7 @@ a.tag:hover:hover { text-decoration: underline; color: black; }
 
 .link-pointy:hover:after, .link-pointy:focus:after { -webkit-transform: translateX(0.15em); transform: translateX(0.15em); }
 
-.link-cta { font-size: 1.125rem; line-height: 1.4; font-weight: 800; position: relative; display: table; padding-right: 1em; color: black; text-decoration: underline; -webkit-text-decoration-style: solid; text-decoration-style: solid; -webkit-text-decoration-color: black; text-decoration-color: black; }
+.link-cta { font-size: 1.125rem; line-height: 1.5; font-weight: 800; position: relative; display: table; padding-right: 1em; color: black; text-decoration: underline; -webkit-text-decoration-style: solid; text-decoration-style: solid; -webkit-text-decoration-color: black; text-decoration-color: black; }
 
 .link-cta:after { content: ''; position: absolute; bottom: 0.1em; display: inline-block; width: 1em; height: 1em; margin-left: 0.35em; background: url("../img/arrow-right-orange.svg") center center no-repeat; background-size: contain; vertical-align: text-bottom; -webkit-transition: -webkit-transform 75ms ease-out; transition: -webkit-transform 75ms ease-out; transition: transform 75ms ease-out; transition: transform 75ms ease-out, -webkit-transform 75ms ease-out; }
 
@@ -212,7 +212,7 @@ a.tag:hover:hover { text-decoration: underline; color: black; }
 
 .link-access:focus, .visually-hidden:focus, .screen-reader-text:focus { position: static; left: auto; clip: none; }
 
-.button { position: relative; display: inline-block; font-size: inherit; margin: 0 0.25rem 1rem 0; padding: 0.75em 2em; line-height: 1.15; vertical-align: middle; text-decoration: none; text-align: center; -webkit-transition: background 150ms ease-out, color 150ms ease-out; transition: background 150ms ease-out, color 150ms ease-out; box-sizing: border-box; border-radius: 0; background-color: #394851; background-image: -webkit-gradient(linear, right top, left top, color-stop(50%, #394851), color-stop(50%, black)); background-image: linear-gradient(to left, #394851 50%, black 50%); background-size: 200% 100%; background-position: right bottom; color: rgba(255, 255, 255, 0.9); }
+.button { position: relative; display: inline-block; font-size: inherit; margin: 0 0.25rem 1rem 0; padding: 0.75em 2em; line-height: 1.15; vertical-align: middle; text-decoration: none; text-align: center; -webkit-transition: background 150ms ease-out, color 150ms ease-out; transition: background 150ms ease-out, color 150ms ease-out; -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 0; background-color: #394851; background-image: -webkit-gradient(linear, right top, left top, color-stop(50%, #394851), color-stop(50%, black)); background-image: linear-gradient(to left, #394851 50%, black 50%); background-size: 200% 100%; background-position: right bottom; color: rgba(255, 255, 255, 0.9); }
 
 .button:hover, .button:focus, .button:active { color: white; background-position: 0% bottom; }
 
@@ -220,7 +220,7 @@ a.tag:hover:hover { text-decoration: underline; color: black; }
 
 .button--small { font-size: 0.875em; }
 
-.button--block { display: block; width: 100%; box-sizing: border-box; text-align: center; }
+.button--block { display: block; width: 100%; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: center; }
 
 .button--primary { background-image: -webkit-gradient(linear, right top, left top, color-stop(50%, #D70A26), color-stop(50%, black)); background-image: linear-gradient(to left, #D70A26 50%, black 50%); }
 

@@ -147,17 +147,15 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-78726ea5d6d7e166855afb065478f204-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span>&gt;</span>Typography<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span>&gt;</span>
+    Typography<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Typeface<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Two typefaces are used for the web<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>One typeface is used for the web, there is no secondary typeface:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"font-primary"</span>&gt;</span>Arial - Primary typeface<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>: is the default for body copy<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"font-secondary"</span>&gt;</span>Museo Sans - Secondary typeface<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>: for headings and other 'decorative' copy.<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"font-primary"</span>&gt;</span>Roboto - Primary typeface<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>: is the default for body copy and headings<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>They can be used using a class of <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>font-primary<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> or <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>font-secondary<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-    or in Sass using <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>@include font-primary;<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> or <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>@include font-secondary;<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Typescale<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 
@@ -178,10 +176,9 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"font-2xs"</span>&gt;</span>2xs: The quick brown fox jumps over the lazy dog <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"font-caption"</span>&gt;</span>0.6875 (rem)<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>They can be used using a class of <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>font-<span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>[sizename]<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, eg. <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>font-2xl<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-    or in Sass using <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>@include typescale('<span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>[sizename]<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span>');<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, eg. <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>@include typescale('xs');<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>They can be used using a class of <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>font-<span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>[sizename]<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, eg. <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>font-2xl<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>/&gt;</span> or in Sass using <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>@include typescale('<span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>[sizename]<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span>');<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, eg. <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>@include typescale('xs');<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">hr</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">hr</span>/&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Heading Levels<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 
@@ -204,46 +201,54 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">h5</span>&gt;</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">h6</span>&gt;</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry<span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">hr</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">hr</span>/&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"intro"</span>&gt;</span>The London Marathon needs no introduction. It's the most exciting day of London's sporting calendar and for anyone who runs it, it is a day they'll never forget. It's the biggest annual single-day fundraising event in the world and you can be part of it with Team VSO.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>If you live in the UK, VSO can help you contact and meet your political representatives. You can help increase political will to tackle poverty by sharing your experiences and concerns with them.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"intro"</span>&gt;</span>At VSO, we believe progress is only possible when we work together. Partnerships lie at the root of all the positive change we create.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Over the last 60 years VSO has worked in over 90 countries with more than 80,000 volunteers, and supported 50,000,000 people.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>How are they making an impact?<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>You’ll be running for an amazing cause: for a world without poverty. This is an emboldened paragraph.<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Our volunteers work in 24 countries to help people live healthy, dignified lives. Some of our volunteers include teachers, doctors, business experts, nurses... the list goes on.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>These <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>volunteers share skills<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> where it's needed the most, in the world's poorest and most marginalised communities.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>£2600<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> could cover the cost of a volunteer for over <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>4 weeks<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> – in that time a single volunteer could conduct a training session for teachers to showcase new teaching methods, hold meetings with head teachers from across a remote region to discuss existing challenges and possible solutions, <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>and so much more<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"link-pointy"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Find out how links are made pointy now<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"link-cta"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Find out how calls to action are made now<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Fighting poverty through volunteering<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>At VSO, we believe progress is only possible when we work together. Partnerships lie at the root of all the positive change we create. This is an emboldened paragraph.<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Hundreds of VSO volunteers and supporters contact their representatives about international development issues. For example, in the build-up to Parliamentary debates on the 0.7% foreign aid expenditure target. They also strengthened VSO’s Women in Power
+    campaign, fighting for women's empowerment.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>link goes somewhere<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>, but this sentence doesn't, it only exists to show how a link works. Lorem Ipsum is simply dummy text of the printing and typesetting industry.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>£2600<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> is an amount of money that I've wrapped some <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span><span class="hljs-symbol">&amp;lt;</span>strong<span class="hljs-symbol">&amp;gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> tags around, while <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>4 weeks<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> – a length of time – also has had the same treatment for the purposes of just <span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>testing<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span> how typography appears
+    on the page. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+    book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+    desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Find out how links are made into buttons<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Header Level 2<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>If you live in the UK, VSO can help you contact and meet your political representatives. You can help increase political will to tackle poverty by sharing your experiences and concerns with them.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Hundreds of VSO volunteers and supporters contact their representatives about international development issues. For example, in the build-up to Parliamentary debates on the 0.7% foreign aid expenditure target. They also strengthened VSO’s Women in Power campaign, fighting for women's empowerment.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Hundreds of VSO volunteers and supporters contact their representatives about international development issues. For example, in the build-up to Parliamentary debates on the 0.7% foreign aid expenditure target. They also strengthened VSO’s Women in Power
+    campaign, fighting for women's empowerment.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Header Level 3<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>You’ll be running for an amazing cause: for a world without poverty. This is an emboldened paragraph.<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Our volunteers work in 24 countries to help people live healthy, dignified lives. Some of our volunteers include teachers, doctors, business experts, nurses... the list goes on.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>These <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>volunteers share skills<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> where it's needed the most, in the world's poorest and most marginalised communities.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>£2600<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> could cover the cost of a volunteer for over <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>4 weeks<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> – in that time a single volunteer could conduct a training session for teachers to showcase new teaching methods, hold meetings with head teachers from across a remote region to discuss existing challenges and possible solutions, <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>and so much more<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>£2600<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> could cover the cost of a volunteer for over <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>4 weeks<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> – in that time a single volunteer could conduct a training session for teachers to showcase new teaching methods, hold meetings with head teachers from across
+    a remote region to discuss existing challenges and possible solutions, <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>and so much more<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>Header Level 4<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>You’ll be running for an amazing cause: for a world without poverty. This is an emboldened paragraph.<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Our volunteers work in 24 countries to help people live healthy, dignified lives. Some of our volunteers include teachers, doctors, business experts, nurses... the list goes on.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>These <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>volunteers share skills<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> where it's needed the most, in the world's poorest and most marginalised communities.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>£2600<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> could cover the cost of a volunteer for over <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>4 weeks<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> – in that time a single volunteer could conduct a training session for teachers to showcase new teaching methods, hold meetings with head teachers from across a remote region to discuss existing challenges and possible solutions, <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>and so much more<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>£2600<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> could cover the cost of a volunteer for over <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>4 weeks<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> – in that time a single volunteer could conduct a training session for teachers to showcase new teaching methods, hold meetings with head teachers from across
+    a remote region to discuss existing challenges and possible solutions, <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>and so much more<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">h5</span>&gt;</span>Header Level 5<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>You’ll be running for an amazing cause: for a world without poverty. This is an emboldened paragraph.<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Our volunteers work in 24 countries to help people live healthy, dignified lives. Some of our volunteers include teachers, doctors, business experts, nurses... the list goes on.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>These <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>volunteers share skills<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> where it's needed the most, in the world's poorest and most marginalised communities.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>£2600<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> could cover the cost of a volunteer for over <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>4 weeks<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> – in that time a single volunteer could conduct a training session for teachers to showcase new teaching methods, hold meetings with head teachers from across a remote region to discuss existing challenges and possible solutions, <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>and so much more<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>£2600<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> could cover the cost of a volunteer for over <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>4 weeks<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> – in that time a single volunteer could conduct a training session for teachers to showcase new teaching methods, hold meetings with head teachers from across
+    a remote region to discuss existing challenges and possible solutions, <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>and so much more<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">h6</span>&gt;</span>Header Level 6<span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>You’ll be running for an amazing cause: for a world without poverty. This is an emboldened paragraph.<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Our volunteers work in 24 countries to help people live healthy, dignified lives. Some of our volunteers include teachers, doctors, business experts, nurses... the list goes on.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>These <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>volunteers share skills<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> where it's needed the most, in the world's poorest and most marginalised communities.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>£2600<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> could cover the cost of a volunteer for over <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>4 weeks<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> – in that time a single volunteer could conduct a training session for teachers to showcase new teaching methods, hold meetings with head teachers from across a remote region to discuss existing challenges and possible solutions, <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>and so much more<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>£2600<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> could cover the cost of a volunteer for over <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>4 weeks<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> – in that time a single volunteer could conduct a training session for teachers to showcase new teaching methods, hold meetings with head teachers from across
+    a remote region to discuss existing challenges and possible solutions, <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>and so much more<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -254,14 +259,13 @@
         <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span>&gt;</span>Typography<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Typeface<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Two typefaces are used for the web<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>One typeface is used for the web, there is no secondary typeface:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"font-primary"</span>&gt;</span>Arial - Primary typeface<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>: is the default for body copy<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"font-secondary"</span>&gt;</span>Museo Sans - Secondary typeface<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>: for headings and other 'decorative' copy.<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"font-primary"</span>&gt;</span>Roboto - Primary typeface<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>: is the default for body copy and headings<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+</span><span class="hljs-comment">{#    &lt;li&gt;&lt;span class="font-secondary"&gt;Museo Sans - Secondary typeface&lt;/span&gt;: for headings and other 'decorative' copy.&lt;/li&gt;#}</span><span class="xml">
 <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>They can be used using a class of <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>font-primary<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> or <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>font-secondary<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>/&gt;</span>
-    or in Sass using <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>@include font-primary;<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> or <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>@include font-secondary;<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</span><span class="hljs-comment">{#&lt;p&gt;They can be used using a class of &lt;code&gt;font-primary&lt;/code&gt; or &lt;code&gt;font-secondary&lt;/code&gt;&lt;br/&gt; or in Sass using &lt;code&gt;@include font-primary;&lt;/code&gt; or &lt;code&gt;@include font-secondary;&lt;/code&gt;&lt;/p&gt;#}</span><span class="xml">
 
 <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Typescale<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 
@@ -311,16 +315,15 @@
 
 <span class="hljs-tag">&lt;<span class="hljs-name">hr</span>/&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"intro"</span>&gt;</span>The London Marathon needs no introduction. It's the most exciting day of London's sporting calendar and for anyone who runs it, it is a day they'll never forget. It's the biggest annual single-day fundraising event in the world and you can be part of it with Team VSO.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>If you live in the UK, VSO can help you contact and meet your political representatives. You can help increase political will to tackle poverty by sharing your experiences and concerns with them.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"intro"</span>&gt;</span></span><span class="hljs-template-variable">{{ placeholderPara1 }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span></span><span class="hljs-template-variable">{{ placeholderPara2 }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>How are they making an impact?<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>You’ll be running for an amazing cause: for a world without poverty. This is an emboldened paragraph.<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Our volunteers work in 24 countries to help people live healthy, dignified lives. Some of our volunteers include teachers, doctors, business experts, nurses... the list goes on.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>These <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>volunteers share skills<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> where it's needed the most, in the world's poorest and most marginalised communities.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>£2600<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> could cover the cost of a volunteer for over <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>4 weeks<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> – in that time a single volunteer could conduct a training session for teachers to showcase new teaching methods, hold meetings with head teachers from across a remote region to discuss existing challenges and possible solutions, <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>and so much more<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"link-pointy"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Find out how links are made pointy now<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"link-cta"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Find out how calls to action are made now<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span></span><span class="hljs-template-variable">{{ placeholderHeadline }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span></span><span class="hljs-template-variable">{{ placeholderPara1 }}</span><span class="xml"> This is an emboldened paragraph.<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span></span><span class="hljs-template-variable">{{ placeholderPara3 }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>link goes somewhere<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>, but this sentence doesn't, it only exists to show how a link works. </span><span class="hljs-template-variable">{{ loremShort }}</span><span class="xml">.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>£2600<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> is an amount of money that I've wrapped some <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span><span class="hljs-symbol">&amp;lt;</span>strong<span class="hljs-symbol">&amp;gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> tags around, while <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>4 weeks<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> – a length of time – also has had the same treatment for the purposes of just <span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>testing<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span> how typography appears on the page. </span><span class="hljs-template-variable">{{ loremLong }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Find out how links are made into buttons<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Header Level 2<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>If you live in the UK, VSO can help you contact and meet your political representatives. You can help increase political will to tackle poverty by sharing your experiences and concerns with them.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -589,6 +592,46 @@
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-templates">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Templates</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="homepage.html" data-pjax>
+                <span>Homepage</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="accordion.html" data-pjax>
@@ -617,6 +660,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="button.html" data-pjax>
                 <span>Button</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="top-bar.html" data-pjax>
+                <span>Top Bar</span>
                 
 
 <div class="Status Status--unlabelled">
