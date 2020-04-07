@@ -286,6 +286,7 @@ $border-accent-width: $spacing-2xs;
   pre {
     clear: both;
     @include typescale('sm', 'em');
+    @include line-height('normal')
     margin: $spacing-lg 0;
     padding: 1em;
     tab-size: 2;

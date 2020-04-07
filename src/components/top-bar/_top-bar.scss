@@ -1,0 +1,45 @@
+.button {
+  @include button;
+
+  // Sizes
+
+  &--big {
+    @include button--big;
+  }
+
+  &--small {
+    @include button--small;
+  }
+
+  // Layout
+
+  &--block {
+    @include button--block;
+  }
+
+  // Colours
+
+  &--primary {
+    @include button--primary;
+  }
+
+  &--offwhite {
+    @include button--offwhite;
+  }
+
+  &--white {
+    @include button--white;
+  }
+
+  &--outline-grey {
+    @include button--outline-grey;
+  }
+
+  &--outline-black {
+    @include button--outline-black;
+  }
+
+  &--outline-white {
+    @include button--outline-white;
+  }
+}

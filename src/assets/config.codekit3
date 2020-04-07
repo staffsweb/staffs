@@ -7,7 +7,7 @@
 		"uuidString": "009D710E-07FC-47DF-A834-ED680750A27A"
 		}
 	],
-"creatorBuild": "31934",
+"creatorBuild": "32001",
 "files": {
 	"/apple-touch-icon-precomposed.png": {
 		"ft": 32768,
@@ -84,6 +84,22 @@
 		"oAP": "/fonts/MuseoSans_900-webfont.woff2",
 		"oF": 0
 		},
+	"/fonts/Roboto-Light.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/fonts/Roboto-Light.ttf",
+		"oF": 0
+		},
+	"/fonts/Roboto-Medium.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/fonts/Roboto-Medium.ttf",
+		"oF": 0
+		},
 	"/img/icon-arrow-down-black.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -93,6 +109,17 @@
 		"opt": 0,
 		"plM": 52780316221407,
 		"prP": 0
+		},
+	"/img/logo.png": {
+		"ft": 32768,
+		"iS": 33392,
+		"oA": 0,
+		"oAP": "/img/logo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"/img/placeholder/0.jpg": {
 		"ft": 16384,
@@ -112,6 +139,17 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/js/app.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/js/app.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/app.min.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 1
@@ -240,19 +278,6 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/styles/_components/_boxes.css",
-		"oF": 0,
-		"oS": 2,
-		"uL": 1
-		},
-	"/styles/_components/_buttons.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 4,
-		"dS": 0,
-		"ft": 4,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "/styles/_components/_buttons.css",
 		"oF": 0,
 		"oS": 2,
 		"uL": 1
@@ -528,6 +553,19 @@
 		"ma": 1,
 		"oA": 0,
 		"oAP": "/styles/print.css",
+		"oF": 0,
+		"oS": 2,
+		"uL": 1
+		},
+	"/Users/ed/All/Git/staffs/src/components/button/_buttons.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 4,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/Users/ed/All/Git/staffs/src/components/button/_buttons.css",
 		"oF": 0,
 		"oS": 2,
 		"uL": 1
@@ -1138,6 +1176,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"grouped-accessor-pairs": {
+			"active": 0,
+			"optionString": "'anyOrder'"
+			},
 		"guard-for-in": {
 			"active": 0,
 			"optionString": ""
@@ -1314,6 +1356,10 @@
 			"active": 1,
 			"optionString": "{'checkLoops': true}"
 			},
+		"no-constructor-return": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-continue": {
 			"active": 0,
 			"optionString": ""
@@ -1339,6 +1385,10 @@
 			"optionString": ""
 			},
 		"no-dupe-class-members": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-dupe-else-if": {
 			"active": 1,
 			"optionString": ""
 			},
@@ -1642,6 +1692,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-setter-return": {
+			"active": 1,
+			"optionString": ""
+			},
 		"no-shadow": {
 			"active": 0,
 			"optionString": "{'builtinGlobals': false, 'hoist': 'functions', 'allow': []}"
@@ -1845,6 +1899,10 @@
 		"prefer-destructuring": {
 			"active": 0,
 			"optionString": "{'array': true, 'object': true}, {'enforceForRenamedProperties': false}"
+			},
+		"prefer-exponentiation-operator": {
+			"active": 0,
+			"optionString": ""
 			},
 		"prefer-named-capture-group": {
 			"active": 0,
