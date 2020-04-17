@@ -16,13 +16,11 @@
   text-align: center;
   transition: background 150ms ease-out, color 150ms ease-out;
   box-sizing: border-box;
-  border-radius: 0; // explicitly set this for inputs on iOS
+  border-radius: 0.25rem; // explicitly set this for inputs on iOS
+  font-weight: 500;
 
-  background-color: $secondary;
-  background-image: linear-gradient(to left, $secondary 50%, black 50%);
-  background-size: 200% 100%;
-  background-position: right bottom;
-  color: rgba(white, 0.9);
+  background-color: $yellow;
+  color: #000;
 
   &:hover,
   &:focus,

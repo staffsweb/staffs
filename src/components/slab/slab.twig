@@ -1,0 +1,15 @@
+{{ spaceless }}
+{% set classString = '' %}
+{% for class in classes %}
+    {% set classString = classString ~ '  ' ~ class %}
+{% endfor %}
+
+<div class="slab{% if classString %}{{ classString }}{% endif %}">
+    <div class="wrap">
+        {{ text }}
+    </div>
+</div>
+{{ endspaceless }}
+
+
+

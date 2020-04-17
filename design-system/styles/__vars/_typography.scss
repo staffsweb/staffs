@@ -35,6 +35,14 @@ $typescale-map: (
 );
 
 $headings-map: (
+  'h1': '6xl',
+  'h2': '5xl',
+  'h3': '4xl',
+  'h4': '3xl',
+  'h5': '2xl',
+  'h6': 'xl',
+);
+$headings-mobile-map: (
   'h1': '5xl',
   'h2': '4xl',
   'h3': '3xl',
@@ -158,9 +166,20 @@ $border-accent-width: $spacing-2xs;
     margin-top: 0;
   }
 
-  @each $name, $size in $headings-map {
+
+
+
+
+  @each $name, $size in $headings-mobile-map {
     #{$name}, .#{$name} {
       @include typescale($size);
+    }
+  }
+  @each $name, $size in $headings-map {
+    #{$name}, .#{$name} {
+      @media (min-width: 47.5em) and (min-height: 30em) {
+        @include typescale($size);
+      }
     }
   }
 
@@ -364,6 +383,7 @@ $border-accent-width: $spacing-2xs;
   .is-style-intro {
     @include typescale('lg');
     max-width: $line-length-max-rem;
+    color: $maroon;
 
     @media (min-width: 40em) {
       @include typescale('xl', 'em');

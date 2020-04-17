@@ -1,8 +1,16 @@
 
 .header-site {
-  position: relative;
-  z-index: 2;
-  padding: $spacing-sm 0;
-  margin: 0 0 $spacing-lg;
-  background: #fff;
+
+  background: rgba(0,0,0,0.6);
+  position: fixed;
+  top: 0;
+  left: 0.5rem;
+  right: 0;
+  z-index: 10;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: 47.5em) and (min-height: 30em) {
+    left: 1rem;
+  }
 }

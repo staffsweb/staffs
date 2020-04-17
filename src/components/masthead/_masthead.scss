@@ -1,0 +1,22 @@
+.masthead {
+  min-height: 60vh;
+  background-size: cover;
+  background-position: 50% 0;
+  float: left;
+  width: 100%;
+  display: flex;
+
+  padding: 9em 0 2em;
+
+  @media (min-width: 47.5em) and (min-height: 30em) {
+    padding-top: 12em;
+  }
+  @media (min-width: 60em) and (min-height: 40em) {
+    padding-top: 14em;
+  }
+
+  .wrap {
+    align-self: flex-end;
+  }
+
+}
