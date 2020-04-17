@@ -1,0 +1,21 @@
+name: Slab
+status: ready
+collated: false
+context:
+  text: 'This is a slab'
+  styles: []
+  classes: []
+handle: slab
+
+variants:
+  - name: grey
+    label: "Shade: Light"
+    context:
+      classes: ['slab--light']
+      text: 'This is a light slab'
+
+  - name: dark
+    label: "Shade: Dark"
+    context:
+      classes: ['slab--dark']
+      text: 'This is a dark slab'

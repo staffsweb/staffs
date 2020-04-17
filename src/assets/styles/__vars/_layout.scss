@@ -17,10 +17,11 @@ $align-right-offset-breakpoint: $wrap-width + 10rem;
 }
 
 @mixin wrap {
+  width: 100%;
   margin: 0 auto;
   padding: 0 $page-gutter-small;
   max-width: $wrap-width;
-  box-sizing: content-box;
+  box-sizing: border-box;
 
   @media (min-width: $wrap-large-gutter-width) { // these are currently the same, but leave both in case one changes.
     padding: 0 $page-gutter-large;

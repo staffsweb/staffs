@@ -569,6 +569,19 @@
 		"oF": 0,
 		"oS": 2,
 		"uL": 1
+		},
+	"/Users/ed/All/Git/staffs/src/components/top-bar/_top-bar.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 4,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/Users/ed/All/Git/staffs/src/components/top-bar/_top-bar.css",
+		"oF": 0,
+		"oS": 2,
+		"uL": 1
 		}
 	},
 "hooks": [

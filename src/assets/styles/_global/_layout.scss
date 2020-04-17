@@ -1,5 +1,27 @@
 @import "../__vars/layout";
 
+body {
+  border-left: 0.5rem solid black;
+
+  @media (min-width: 47.5em) and (min-height: 30em) {
+    border-left: 1rem solid black;
+  }
+
+  &:after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 0.5rem;
+    background: $red;
+
+    @media (min-width: 47.5em) and (min-height: 30em) {
+      width: 1rem;
+    }
+  }
+}
+
 main {
   position: relative;
   z-index: 0;

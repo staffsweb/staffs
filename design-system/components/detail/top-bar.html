@@ -151,9 +151,9 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-afce1a49c12979865abeb04159547661-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-primary-container"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"wrap"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-container"</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header-site"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"header-site"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-primary-container"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"wrap"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"site-logo"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Home"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../img/logo.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Staffordshire University Logo"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"no-lazy-load"</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
@@ -170,7 +170,7 @@
             <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -178,9 +178,9 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-afce1a49c12979865abeb04159547661-panel-view">
     <code class="Code Code--lang-twig">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-primary-container"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"wrap"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-container"</span>&gt;</span>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header-site"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"header-site"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-primary-container"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"wrap"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"site-logo"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Home"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../img/logo.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Staffordshire University Logo"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"no-lazy-load"</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
@@ -197,7 +197,7 @@
             <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></span></pre>
     </code>
 </div>
 
@@ -226,49 +226,69 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-SCSS FileBrowser-code">
-                                <pre><span class="hljs-selector-class">.button</span> {
-  <span class="hljs-keyword">@include</span> button;
+                                <pre><span class="hljs-selector-class">.nav-primary-container</span> {
 
-  <span class="hljs-comment">// Sizes</span>
+  <span class="hljs-selector-class">.wrap</span> {
+    <span class="hljs-attribute">width</span>: auto;
+  }
+}
 
-  &amp;--<span class="hljs-selector-tag">big</span> {
-    <span class="hljs-keyword">@include</span> button--big;
+<span class="hljs-selector-class">.site-logo</span> {
+  <span class="hljs-attribute">position</span>: absolute;
+
+  <span class="hljs-selector-tag">img</span> {
+    <span class="hljs-attribute">max-width</span>: <span class="hljs-number">8em</span>;
+    <span class="hljs-attribute">transition</span>: all <span class="hljs-number">0.3s</span>;
+
+    <span class="hljs-keyword">@media</span> (min-width: <span class="hljs-number">55em</span>) <span class="hljs-keyword">and</span> (min-height: <span class="hljs-number">30em</span>) {
+      <span class="hljs-attribute">max-width</span>: <span class="hljs-number">10em</span>;
+    }
+    <span class="hljs-keyword">@media</span> (min-width: <span class="hljs-number">60em</span>) <span class="hljs-keyword">and</span> (min-height: <span class="hljs-number">40em</span>) {
+      <span class="hljs-attribute">max-width</span>: <span class="hljs-number">12em</span>;
+    }
+  }
+}
+
+<span class="hljs-selector-class">.nav-primary-toggle</span> {
+  <span class="hljs-attribute">display</span>: none;
+}
+
+<span class="hljs-selector-class">.nav-primary</span> {
+  <span class="hljs-attribute">text-align</span>: right;
+  <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">8em</span>;
+
+
+  <span class="hljs-keyword">@media</span> (min-width: <span class="hljs-number">47.5em</span>) <span class="hljs-keyword">and</span> (min-height: <span class="hljs-number">30em</span>) {
+    <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">10em</span>;
+  }
+  <span class="hljs-keyword">@media</span> (min-width: <span class="hljs-number">60em</span>) <span class="hljs-keyword">and</span> (min-height: <span class="hljs-number">40em</span>) {
+    <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">12em</span>;
+  }
+  <span class="hljs-selector-tag">ul</span> {
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
   }
 
-  &amp;--<span class="hljs-selector-tag">small</span> {
-    <span class="hljs-keyword">@include</span> button--small;
-  }
+  <span class="hljs-selector-tag">li</span> {
+    <span class="hljs-attribute">display</span>: inline;
 
-  <span class="hljs-comment">// Layout</span>
+    <span class="hljs-selector-tag">a</span>, <span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:visited</span> {
+      <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">500</span>;
+      <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+      <span class="hljs-attribute">display</span>: inline-block;
+      <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.5em</span>;
+      <span class="hljs-attribute">background</span>: transparent;
+      <span class="hljs-attribute">transition</span>: all <span class="hljs-number">0.2s</span>;
 
-  &amp;--block {
-    <span class="hljs-keyword">@include</span> button--block;
-  }
+      <span class="hljs-keyword">@media</span> (min-width: <span class="hljs-number">60em</span>) <span class="hljs-keyword">and</span> (min-height: <span class="hljs-number">30em</span>) {
+        <span class="hljs-keyword">@include</span> typescale(<span class="hljs-string">'lg'</span>);
+        <span class="hljs-attribute">padding</span>: <span class="hljs-number">1em</span>;
+      }
 
-  <span class="hljs-comment">// Colours</span>
-
-  &amp;--primary {
-    <span class="hljs-keyword">@include</span> button--primary;
-  }
-
-  &amp;--offwhite {
-    <span class="hljs-keyword">@include</span> button--offwhite;
-  }
-
-  &amp;--white {
-    <span class="hljs-keyword">@include</span> button--white;
-  }
-
-  &amp;--<span class="hljs-attribute">outline</span>-grey {
-    <span class="hljs-keyword">@include</span> button--outline-grey;
-  }
-
-  &amp;--<span class="hljs-attribute">outline</span>-black {
-    <span class="hljs-keyword">@include</span> button--outline-black;
-  }
-
-  &amp;--<span class="hljs-attribute">outline</span>-white {
-    <span class="hljs-keyword">@include</span> button--outline-white;
+      &amp;<span class="hljs-selector-pseudo">:hover</span> {
+        <span class="hljs-attribute">box-shadow</span>: inset <span class="hljs-number">0</span> <span class="hljs-number">3px</span> <span class="hljs-number">0</span> <span class="hljs-variable">$red</span>;
+        <span class="hljs-attribute">background</span>: black;
+      }
+    }
   }
 }</pre>
                             </code>
@@ -286,7 +306,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">535 Bytes</span>
+                    <span class="Meta-value">1 KB</span>
                 </li>
             </ul>
         </div>
@@ -330,6 +350,19 @@
             <span class="Meta-value">src/components/top-bar/top-bar.twig</span>
         </li>
         
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">Referenced by <em class="Meta-count">(3)</em>:</strong>
+            <span class="Meta-value Meta-value--linkList">
+            
+                <a href="everything.html">@<span>everything</span></a>, 
+            
+                <a href="homepage.html">@<span>homepage</span></a>, 
+            
+                <a href="text.html">@<span>text</span></a>
+            
+            </span>
+        </li>
         
     </ul>
 </div>
@@ -540,8 +573,56 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="everything.html" data-pjax>
+                <span>Everything</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="homepage.html" data-pjax>
                 <span>Homepage</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="text.html" data-pjax>
+                <span>Text</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -593,6 +674,30 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="breadcrumb.html" data-pjax>
+                <span>Breadcrumb</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="button.html" data-pjax>
                 <span>Button</span>
                 
@@ -611,6 +716,142 @@
 
 
             </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="masthead.html" data-pjax>
+                <span>Masthead</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-slab">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Slab</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="slab--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="slab--grey.html" data-pjax>
+                <span>Shade: Light</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="slab--dark.html" data-pjax>
+                <span>Shade: Dark</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="slab--examples.html" data-pjax>
+                <span>Examples</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
         </li>
         
     

@@ -1,0 +1,12 @@
+.slab {
+  padding: $spacing-xl 0;
+}
+
+.slab--light {
+  background-color: $offwhite;
+}
+
+.slab--dark {
+  background-color: $slate;
+  color: #fff;
+}
