@@ -1,0 +1,20 @@
+{% set textElement = textElement ?: 'h3' %}
+
+{% set classString = '' %}
+{% for class in classes %}
+    {% set classString = classString ~ '  ' ~ class %}
+{% endfor %}
+
+<div class="title">
+    <{{ textElement }} class="title__highlight{% if classString %}{{ classString }}{% endif %}">
+        {{ text }}
+    </{{ textElement }}>
+</div>
+
+
+
+
+
+
+
+

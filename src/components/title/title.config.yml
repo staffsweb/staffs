@@ -1,0 +1,56 @@
+name: Title
+status: wip
+collated: false
+context:
+  text: 'This is a title'
+  styles: []
+  classes: []
+handle: title
+
+variants:
+  - name: default with tail
+    label: "Variant: Default with tail"
+    context:
+      classes: ['title__highlight--tail']
+      text: 'This is a highlighted title with a tail'
+  - name: white
+    label: "Variant: White"
+    context:
+      classes: ['title__highlight--white']
+      text: 'This is a white highlighted title'
+  - name: white with tail
+    label: "Variant: White with tail"
+    context:
+      classes: ['title__highlight--white title__highlight--tail']
+      text: 'This is a white highlighted title with a tail'
+  - name: slate
+    label: "Variant: Slate"
+    context:
+      classes: ['title__highlight--slate']
+      text: 'This is a slate highlighted title'
+  - name: slate with tail
+    label: "Variant: Slate with tail"
+    context:
+      classes: ['title__highlight--slate title__highlight--tail']
+      text: 'This is a slate highlighted title with a tail'
+  - name: maroon
+    label: "Variant: Maroon"
+    context:
+      classes: ['title__highlight--maroon']
+      text: 'This is a maroon highlighted title'
+  - name: maroon with tail
+    label: "Variant: Maroon with tail"
+    context:
+      classes: ['title__highlight--maroon title__highlight--tail']
+      text: 'This is a maroon highlighted title with a tail'
+  - name: pink
+    label: "Variant: Pink"
+    context:
+      classes: ['title__highlight--pink']
+      text: 'This is a pink highlighted title'
+  - name: pink with tail
+    label: "Variant: Pink with tail"
+    context:
+      classes: ['title__highlight--pink title__highlight--tail']
+      text: 'This is a pink highlighted title with a tail'
+

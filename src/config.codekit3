@@ -702,12 +702,28 @@
 		"oAP": "/components/_preview.twig",
 		"oF": 0
 		},
+	"/components/accolade/accolade.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/accolade/accolade.twig",
+		"oF": 0
+		},
 	"/components/accordion/accordion.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/components/accordion/accordion.twig",
+		"oF": 0
+		},
+	"/components/blockquote/blockquote.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/blockquote/blockquote.twig",
 		"oF": 0
 		},
 	"/components/breadcrumb/_breadcrumb.scss": {
@@ -768,6 +784,86 @@
 		"oAP": "/components/button/button.twig",
 		"oF": 0
 		},
+	"/components/card-course/card-course.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/card-course/card-course.twig",
+		"oF": 0
+		},
+	"/components/card-listing/card-listing.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/card-listing/card-listing.twig",
+		"oF": 0
+		},
+	"/components/card-social/card-social.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/card-social/card-social.twig",
+		"oF": 0
+		},
+	"/components/card-staff-profile/card-staff-profile.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/card-staff-profile/card-staff-profile.twig",
+		"oF": 0
+		},
+	"/components/card-testimonial/card-testimonial.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/card-testimonial/card-testimonial.twig",
+		"oF": 0
+		},
+	"/components/country-selector/country-selector.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/country-selector/country-selector.twig",
+		"oF": 0
+		},
+	"/components/course-search/course-search.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/course-search/course-search.twig",
+		"oF": 0
+		},
+	"/components/featured-link/featured-link.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/featured-link/featured-link.twig",
+		"oF": 0
+		},
+	"/components/gallery/gallery.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/gallery/gallery.twig",
+		"oF": 0
+		},
+	"/components/icon-list/icon-list.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/icon-list/icon-list.twig",
+		"oF": 0
+		},
 	"/components/masthead/_masthead.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -795,6 +891,22 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/components/masthead/masthead.twig",
+		"oF": 0
+		},
+	"/components/module-slider/module-slider.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/module-slider/module-slider.twig",
+		"oF": 0
+		},
+	"/components/panel/panel.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/panel/panel.twig",
 		"oF": 0
 		},
 	"/components/slab/_slab.scss": {
@@ -832,6 +944,136 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/components/slab/slab.twig",
+		"oF": 0
+		},
+	"/components/slider/slider.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/slider/slider.twig",
+		"oF": 0
+		},
+	"/components/sub-nav/sub-nav.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/sub-nav/sub-nav.twig",
+		"oF": 0
+		},
+	"/components/tabs/tabs.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/tabs/tabs.twig",
+		"oF": 0
+		},
+	"/components/tile-image/tile-image.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/tile-image/tile-image.twig",
+		"oF": 0
+		},
+	"/components/tile/_tile.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 4,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/components/tile/_tile.css",
+		"oF": 0,
+		"oS": 2,
+		"uL": 1
+		},
+	"/components/tile/tile--examples.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/tile/tile--examples.twig",
+		"oF": 0
+		},
+	"/components/tile/tile.config.yml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/tile/tile.config.yml",
+		"oF": 0
+		},
+	"/components/tile/tile.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/tile/tile.twig",
+		"oF": 0
+		},
+	"/components/title-group/title-group.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/title-group/title-group.twig",
+		"oF": 0
+		},
+	"/components/title-row/title-row.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/title-row/title-row.twig",
+		"oF": 0
+		},
+	"/components/title/_preview-test.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/components/title/_preview-test.twig",
+		"oF": 0
+		},
+	"/components/title/_title.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 4,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/components/title/_title.css",
+		"oF": 0,
+		"oS": 2,
+		"uL": 1
+		},
+	"/components/title/title--examples.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/title/title--examples.twig",
+		"oF": 0
+		},
+	"/components/title/title.config.yml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/title/title.config.yml",
+		"oF": 0
+		},
+	"/components/title/title.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/title/title.twig",
 		"oF": 0
 		},
 	"/components/top-bar/_top-bar.scss": {
