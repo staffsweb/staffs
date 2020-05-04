@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html class="no-js no-touch" lang="en">
 <head>
-  {% include '_preview-head.twig' %}
+    {% include '_preview-head.twig' %}
 </head>
 
 <body>
 
 <main>
-    {{ yield }}
+    <div class="wrap">
+        {{ yield }}
+    </div>
 </main>
 
 {% include '_preview-footer.twig' %}

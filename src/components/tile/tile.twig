@@ -1,0 +1,27 @@
+{% set headingElement = headingElement ?: 'h3' %}
+
+{% set classString = '' %}
+{% for class in classes %}
+    {% set classString = classString ~ '  ' ~ class %}
+{% endfor %}
+
+<div class="tile{% if classString %}{{ classString }}{% endif %}">
+
+    {% if image %}
+        <figure class="card__figure card__figure--cover">
+            <img src="../../img/{{ image }}" alt="" />
+        </figure>
+    {% endif %}
+
+    <div class="tile__content">
+        <{{ headingElement }} class="tile__title">{% if link %}<a href="{{ link }}" class="link-cta">{% endif %}{{ title }}{% if link %}</a>{% endif %}</{{ headingElement }}>
+        {% if date %}
+            <p class="date">{{ date }}</p>
+        {% endif %}
+        {{ content }}
+        {% if button %}
+            <a href="#" class="button">{{ button }}</a>
+        {% endif %}
+    </div>
+
+</div>
