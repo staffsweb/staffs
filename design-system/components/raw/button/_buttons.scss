@@ -1,4 +1,6 @@
 .button {
+  // For the moment, these are defined as little mixins over in __vars/mixins so they can be included elsewhere
+
   @include button;
 
   // Sizes
@@ -17,29 +19,25 @@
     @include button--block;
   }
 
+  &--pointy {
+    @include button--pointy;
+  }
+
+  &--caps {
+    @include button--caps;
+  }
+
   // Colours
 
-  &--primary {
-    @include button--primary;
+  &--slate {
+    @include button--slate;
   }
 
-  &--offwhite {
-    @include button--offwhite;
+  &--outline {
+    @include button--outline;
   }
 
-  &--white {
-    @include button--white;
-  }
-
-  &--outline-grey {
-    @include button--outline-grey;
-  }
-
-  &--outline-black {
-    @include button--outline-black;
-  }
-
-  &--outline-white {
-    @include button--outline-white;
+  &--outline-slate {
+    @include button--outline-slate;
   }
 }

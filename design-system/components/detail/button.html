@@ -151,7 +151,9 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-aca48ed0674093007280d80fa28384a4-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button"</span>&gt;</span>Click me<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></pre>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button"</span>&gt;</span>
+    Regular button
+<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -159,7 +161,19 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-aca48ed0674093007280d80fa28384a4-panel-view">
     <code class="Code Code--lang-twig">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button"</span>&gt;</span></span><span class="hljs-template-variable">{{ text }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></span></pre>
+        <pre><span class="hljs-template-variable">{{ spaceless }}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> classString = '' %}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">for</span></span> class in classes %}</span><span class="xml">
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> classString = classString ~ '  ' ~ class %}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endfor</span></span> %}</span><span class="xml">
+
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ link }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button</span></span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> classString %}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-variable">{{ classString }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> icon %}</span><span class="xml">
+    <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon | icon-</span></span></span><span class="hljs-template-variable">{{ icon }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+  </span><span class="hljs-template-variable">{{ text }}</span><span class="xml">
+<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+</span><span class="hljs-template-variable">{{ endspaceless }}</span></pre>
     </code>
 </div>
 
@@ -174,13 +188,13 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-0df5266c721795b3aec73830257ba7ed">_buttons.scss</option>
+                <option value="file-c654cac4556e2d76813df7e3abe7f203">_buttons.scss</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-0df5266c721795b3aec73830257ba7ed" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-c654cac4556e2d76813df7e3abe7f203" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -189,6 +203,8 @@
                             
                             <code class="Code Code--lang-SCSS FileBrowser-code">
                                 <pre><span class="hljs-selector-class">.button</span> {
+  <span class="hljs-comment">// For the moment, these are defined as little mixins over in __vars/mixins so they can be included elsewhere</span>
+
   <span class="hljs-keyword">@include</span> button;
 
   <span class="hljs-comment">// Sizes</span>
@@ -207,30 +223,26 @@
     <span class="hljs-keyword">@include</span> button--block;
   }
 
+  &amp;--pointy {
+    <span class="hljs-keyword">@include</span> button--pointy;
+  }
+
+  &amp;--caps {
+    <span class="hljs-keyword">@include</span> button--caps;
+  }
+
   <span class="hljs-comment">// Colours</span>
 
-  &amp;--primary {
-    <span class="hljs-keyword">@include</span> button--primary;
+  &amp;--slate {
+    <span class="hljs-keyword">@include</span> button--slate;
   }
 
-  &amp;--offwhite {
-    <span class="hljs-keyword">@include</span> button--offwhite;
+  &amp;--<span class="hljs-attribute">outline</span> {
+    <span class="hljs-keyword">@include</span> button--outline;
   }
 
-  &amp;--white {
-    <span class="hljs-keyword">@include</span> button--white;
-  }
-
-  &amp;--<span class="hljs-attribute">outline</span>-grey {
-    <span class="hljs-keyword">@include</span> button--outline-grey;
-  }
-
-  &amp;--<span class="hljs-attribute">outline</span>-black {
-    <span class="hljs-keyword">@include</span> button--outline-black;
-  }
-
-  &amp;--<span class="hljs-attribute">outline</span>-white {
-    <span class="hljs-keyword">@include</span> button--outline-white;
+  &amp;--<span class="hljs-attribute">outline</span>-slate {
+    <span class="hljs-keyword">@include</span> button--outline-slate;
   }
 }</pre>
                             </code>
@@ -248,7 +260,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">535 Bytes</span>
+                    <span class="Meta-value">566 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -269,6 +281,45 @@
         
         
         
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">Variants <em class="Meta-count">(8)</em>:</strong>
+            <span class="Meta-value Meta-value--linkList">
+            
+                <a href="button--default.html">
+                    <span>Default</span>
+                </a>, 
+            
+                <a href="button--big.html">
+                    <span>Size: Big</span>
+                </a>, 
+            
+                <a href="button--small.html">
+                    <span>Size: Small</span>
+                </a>, 
+            
+                <a href="button--pointy.html">
+                    <span>Style: Pointy</span>
+                </a>, 
+            
+                <a href="button--caps.html">
+                    <span>Style: Caps</span>
+                </a>, 
+            
+                <a href="button--slate.html">
+                    <span>Color: Slate</span>
+                </a>, 
+            
+                <a href="button--outline.html">
+                    <span>Style: Outline</span>
+                </a>, 
+            
+                <a href="button--outline-slate.html">
+                    <span>Style: Outline Slate</span>
+                </a>
+            
+            </span>
+        </li>
         
         <li class="Meta-item">
             <strong class="Meta-key">Preview:</strong>
@@ -684,10 +735,21 @@
         
     
         
-        
-        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
-            <a class="Tree-entityLink" href="" data-pjax>
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-button">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
                 <span>Button</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="button--default.html" data-pjax>
+                <span>Default</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -704,6 +766,179 @@
 
 
             </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="button--big.html" data-pjax>
+                <span>Size: Big</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="button--small.html" data-pjax>
+                <span>Size: Small</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="button--pointy.html" data-pjax>
+                <span>Style: Pointy</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="button--caps.html" data-pjax>
+                <span>Style: Caps</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="button--slate.html" data-pjax>
+                <span>Color: Slate</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="button--outline.html" data-pjax>
+                <span>Style: Outline</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="button--outline-slate.html" data-pjax>
+                <span>Style: Outline Slate</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
         </li>
         
     
