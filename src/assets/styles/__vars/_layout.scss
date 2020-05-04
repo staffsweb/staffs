@@ -8,6 +8,10 @@ $align-leftright-size-large: 66%;
 $align-min-breakpoint: 27.5rem;
 $align-right-offset-breakpoint: $wrap-width + 10rem;
 
+$body-border-width: 0.5rem;
+$body-border-width--wide: 1rem;
+$body-border-breakpoint: 47.5rem;
+
 @mixin clearfix {
   &:after {
     content: '';

@@ -1,10 +1,10 @@
 @import "../__vars/layout";
 
 body {
-  border-left: 0.5rem solid black;
+  border-left: $body-border-width solid $red;
 
   @media (min-width: 47.5em) and (min-height: 30em) {
-    border-left: 1rem solid black;
+    border-left: $body-border-width--wide solid $red;
   }
 
   &:after {
@@ -13,11 +13,12 @@ body {
     top: 0;
     left: 0;
     bottom: 0;
-    width: 0.5rem;
+    width: $body-border-width;
     background: $red;
+    z-index: 0;
 
     @media (min-width: 47.5em) and (min-height: 30em) {
-      width: 1rem;
+      width: $body-border-width--wide;
     }
   }
 }

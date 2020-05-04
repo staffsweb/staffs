@@ -1,16 +1,15 @@
 
 .header-site {
-
   background: rgba(0,0,0,0.6);
-  position: fixed;
+  position: absolute;
   top: 0;
-  left: 0.5rem;
+  left: $body-border-width;
   right: 0;
   z-index: 10;
   padding: 0;
   margin: 0;
 
   @media (min-width: 47.5em) and (min-height: 30em) {
-    left: 1rem;
+    left: $body-border-width--wide;
   }
 }

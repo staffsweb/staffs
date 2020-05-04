@@ -153,7 +153,7 @@
         
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"masthead"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background-image: url('../../img/masthead.jpg');"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"wrap"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breadcrumb"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breadcrumbs"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
@@ -193,7 +193,7 @@
     <code class="Code Code--lang-twig">
         <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"masthead"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background-image: url('../../img/masthead.jpg');"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"wrap"</span>&gt;</span>
-        </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '<a href="breadcrumb.html">@breadcrumb</a>' %}</span><span class="xml">
+        </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '<a href="breadcrumbs.html">@breadcrumbs</a>' %}</span><span class="xml">
         </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '<a href="title.html">@title</a>' with {
             text: 'Shortlisted for "University of the year"',
             classes: ['title__highlight--tail'],
@@ -241,8 +241,8 @@
   <span class="hljs-attribute">min-height</span>: <span class="hljs-number">60vh</span>;
   <span class="hljs-attribute">background-size</span>: cover;
   <span class="hljs-attribute">background-position</span>: <span class="hljs-number">50%</span> <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">float</span>: left;
-  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-comment">//float: left;</span>
+  <span class="hljs-comment">//width: 100%;</span>
   <span class="hljs-attribute">display</span>: flex;
 
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">9em</span> <span class="hljs-number">0</span> <span class="hljs-number">2em</span>;
@@ -274,7 +274,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">362 Bytes</span>
+                    <span class="Meta-value">366 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -322,7 +322,7 @@
             <strong class="Meta-key">References <em class="Meta-count">(3)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
-                <a href="breadcrumb.html">@<span>breadcrumb</span></a>, 
+                <a href="breadcrumbs.html">@<span>breadcrumbs</span></a>, 
             
                 <a href="title.html">@<span>title</span></a>, 
             
@@ -703,8 +703,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="breadcrumb.html" data-pjax>
-                <span>Breadcrumb</span>
+            <a class="Tree-entityLink" href="breadcrumbs.html" data-pjax>
+                <span>Breadcrumbs</span>
                 
 
 <div class="Status Status--unlabelled">

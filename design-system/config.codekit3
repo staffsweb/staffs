@@ -603,6 +603,19 @@
 		"oS": 2,
 		"sct": 1
 		},
+	"/Users/shm00n/Web/staffs/src/components/breadcrumbs/_breadcrumbs.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 4,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/Users/shm00n/Web/staffs/src/components/breadcrumbs/_breadcrumbs.css",
+		"oF": 0,
+		"oS": 2,
+		"sct": 1
+		},
 	"/Users/shm00n/Web/staffs/src/components/button/_buttons.scss": {
 		"aP": 1,
 		"bl": 0,

@@ -167,13 +167,13 @@
 
 </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> classString = '' %}</span><span class="xml">
 </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">for</span></span> class in classes %}</span><span class="xml">
-    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> classString = classString ~ '  ' ~ class %}</span><span class="xml">
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> classString = classString ~ '  ' ~ class %}</span><span class="xml">
 </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endfor</span></span> %}</span><span class="xml">
 
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span>&gt;</span>
-    <span class="hljs-tag">&lt;</span></span><span class="hljs-template-variable">{{ textElement }}</span><span class="xml"><span class="hljs-tag"> <span class="hljs-attr">class</span>=<span class="hljs-string">"title__highlight</span></span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> classString %}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-variable">{{ classString }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
-        </span><span class="hljs-template-variable">{{ text }}</span><span class="xml">
-    <span class="hljs-tag">&lt;/</span></span><span class="hljs-template-variable">{{ textElement }}</span><span class="xml"><span class="hljs-tag">&gt;</span>
+  <span class="hljs-tag">&lt;</span></span><span class="hljs-template-variable">{{ textElement }}</span><span class="xml"><span class="hljs-tag"> <span class="hljs-attr">class</span>=<span class="hljs-string">"title__highlight</span></span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> classString %}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-variable">{{ classString }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+  </span><span class="hljs-template-variable">{{ text }}</span><span class="xml">
+<span class="hljs-tag">&lt;/</span></span><span class="hljs-template-variable">{{ textElement }}</span><span class="xml"><span class="hljs-tag">&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></pre>
     </code>
 </div>
@@ -205,27 +205,20 @@
                             <code class="Code Code--lang-SCSS FileBrowser-code">
                                 <pre><span class="hljs-selector-class">.title</span> {
   <span class="hljs-attribute">max-width</span>: <span class="hljs-number">42em</span>;
-
-  &amp;<span class="hljs-selector-pseudo">:after</span> {
-    <span class="hljs-attribute">content</span>: <span class="hljs-string">''</span>;
-    <span class="hljs-attribute">display</span>: table;
-    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
-    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0.5rem</span>;
-  }
+  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-variable">$spacing-xs</span>;
 }
 
 <span class="hljs-selector-class">.title__highlight</span> {
   <span class="hljs-attribute">position</span>: relative;
   <span class="hljs-attribute">display</span>: inline;
   <span class="hljs-attribute">left</span>: <span class="hljs-variable">$spacing-xs</span>;
-  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-variable">$spacing-xs</span>;
-  <span class="hljs-attribute">background</span>: <span class="hljs-variable">$red</span>;
-  <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
-  <span class="hljs-attribute">box-shadow</span>: -<span class="hljs-variable">$spacing-xs</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-variable">$red</span>,<span class="hljs-variable">$spacing-xs</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-variable">$red</span>;
-  <span class="hljs-attribute">box-decoration-break</span>: clone;
   <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.25rem</span>;
   <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.4</span>;
+  <span class="hljs-attribute">background</span>: <span class="hljs-variable">$red</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+  <span class="hljs-attribute">box-shadow</span>: -<span class="hljs-variable">$spacing-xs</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-variable">$red</span>, <span class="hljs-variable">$spacing-xs</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-variable">$red</span>;
+  <span class="hljs-attribute">box-decoration-break</span>: clone;
   <span class="hljs-comment">//border-top: 0.25rem solid transparent;</span>
   <span class="hljs-comment">//border-bottom: 0.25rem solid transparent;</span>
 
@@ -234,21 +227,22 @@
 <span class="hljs-selector-class">.title__highlight--white</span> {
   <span class="hljs-attribute">background</span>: <span class="hljs-number">#fff</span>;
   <span class="hljs-attribute">color</span>: <span class="hljs-number">#000</span>;
-  <span class="hljs-attribute">box-shadow</span>: -<span class="hljs-variable">$spacing-xs</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">#fff</span>,<span class="hljs-variable">$spacing-xs</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">#fff</span>;
+  <span class="hljs-attribute">box-shadow</span>: -<span class="hljs-variable">$spacing-xs</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">#fff</span>, <span class="hljs-variable">$spacing-xs</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">#fff</span>;
 }
 
 <span class="hljs-selector-class">.title__highlight--slate</span> {
   <span class="hljs-attribute">background</span>: <span class="hljs-variable">$slate</span>;
-  <span class="hljs-attribute">box-shadow</span>: -<span class="hljs-variable">$spacing-xs</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-variable">$slate</span>,<span class="hljs-variable">$spacing-xs</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-variable">$slate</span>;
+  <span class="hljs-attribute">box-shadow</span>: -<span class="hljs-variable">$spacing-xs</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-variable">$slate</span>, <span class="hljs-variable">$spacing-xs</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-variable">$slate</span>;
 }
 
 <span class="hljs-selector-class">.title__highlight--maroon</span> {
   <span class="hljs-attribute">background</span>: <span class="hljs-variable">$maroon</span>;
-  <span class="hljs-attribute">box-shadow</span>: -<span class="hljs-variable">$spacing-xs</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-variable">$maroon</span>,<span class="hljs-variable">$spacing-xs</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-variable">$maroon</span>;
+  <span class="hljs-attribute">box-shadow</span>: -<span class="hljs-variable">$spacing-xs</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-variable">$maroon</span>, <span class="hljs-variable">$spacing-xs</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-variable">$maroon</span>;
 }
+
 <span class="hljs-selector-class">.title__highlight--pink</span> {
   <span class="hljs-attribute">background</span>: <span class="hljs-variable">$pink</span>;
-  <span class="hljs-attribute">box-shadow</span>: -<span class="hljs-variable">$spacing-xs</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-variable">$pink</span>,<span class="hljs-variable">$spacing-xs</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-variable">$pink</span>;
+  <span class="hljs-attribute">box-shadow</span>: -<span class="hljs-variable">$spacing-xs</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-variable">$pink</span>, <span class="hljs-variable">$spacing-xs</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-variable">$pink</span>;
 }
 
 <span class="hljs-selector-class">.title__highlight--tail</span> {
@@ -265,15 +259,19 @@
     <span class="hljs-attribute">transform-origin</span>: top left;
     <span class="hljs-attribute">background</span>: <span class="hljs-variable">$red</span>;
   }
+
   &amp;<span class="hljs-selector-class">.title__highlight--white</span><span class="hljs-selector-pseudo">:before</span> {
     <span class="hljs-attribute">background</span>: <span class="hljs-number">#fff</span>;
   }
+
   &amp;<span class="hljs-selector-class">.title__highlight--slate</span><span class="hljs-selector-pseudo">:before</span> {
     <span class="hljs-attribute">background</span>: <span class="hljs-variable">$slate</span>;
   }
+
   &amp;<span class="hljs-selector-class">.title__highlight--maroon</span><span class="hljs-selector-pseudo">:before</span> {
     <span class="hljs-attribute">background</span>: <span class="hljs-variable">$maroon</span>;
   }
+
   &amp;<span class="hljs-selector-class">.title__highlight--pink</span><span class="hljs-selector-pseudo">:before</span> {
     <span class="hljs-attribute">background</span>: <span class="hljs-variable">$pink</span>;
   }
@@ -299,7 +297,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.5 KB</span>
+                    <span class="Meta-value">1.4 KB</span>
                 </li>
             </ul>
         </div>
@@ -766,8 +764,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="breadcrumb.html" data-pjax>
-                <span>Breadcrumb</span>
+            <a class="Tree-entityLink" href="breadcrumbs.html" data-pjax>
+                <span>Breadcrumbs</span>
                 
 
 <div class="Status Status--unlabelled">
