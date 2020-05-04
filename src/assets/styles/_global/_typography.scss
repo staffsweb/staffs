@@ -127,27 +127,6 @@ a.tag {
   }
 }
 
-.link-pointy {
-  @include link-pointy;
-
-  &:hover,
-  &:focus {
-    @include link-pointy--hover;
-  }
-}
-
-.link-cta {
-  @include typescale('lg');
-  @include line-height('normal');
-  font-weight: 800;
-  @include link-pointy;
-
-  &:hover,
-  &:focus {
-    @include link-pointy--hover;
-  }
-}
-
 .link-access,
 .visually-hidden,
 .screen-reader-text {

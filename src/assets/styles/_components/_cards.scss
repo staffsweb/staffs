@@ -45,15 +45,6 @@
 
 a.card {
   &:hover {
-    color: $text-color;
-
-    figure {
-      opacity: 0.9;
-    }
-
-    .link-cta {
-      @include link-pointy--hover;
-    }
   }
 }
 

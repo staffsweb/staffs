@@ -1,3 +1,53 @@
+name: Button
 status: wip
+collated: false
 context:
-  text: 'Click me'
+  text: 'Regular button'
+  icon: null
+  link: '#'
+  classes: []
+handle: button
+
+variants:
+  - name: big
+    label: "Size: Big"
+    context:
+      classes: ['button--big']
+      text: 'A big button'
+
+  - name: small
+    label: "Size: Small"
+    context:
+      classes: ['button--small']
+      text: 'Smol button'
+
+  - name: pointy
+    label: "Style: Pointy"
+    context:
+      classes: ['button--pointy']
+      text: 'Button with pointy arrow'
+
+  - name: caps
+    label: "Style: Caps"
+    context:
+      classes: ['button--caps']
+      text: 'Button with uppercase/caps: note this poses accessibility concerns - avoid long copy'
+
+
+  - name: slate
+    label: "Color: Slate"
+    context:
+      classes: ['button--slate']
+      text: 'Slate Coloured Button'
+
+  - name: outline
+    label: "Style: Outline"
+    context:
+      classes: ['button--outline']
+      text: 'Outline Style Button'
+
+  - name: outline-slate
+    label: "Style: Outline Slate"
+    context:
+      classes: ['button--outline-slate']
+      text: 'Slate Outline Style Button'
