@@ -11,54 +11,54 @@ variants:
   - name: default with tail
     label: "Default with tail"
     context:
-      modifiers: ['title--has-tail']
+      modifiers: ['has-tail']
       text: 'This is a highlighted title with a tail'
 
   - name: white
     label: "White"
     context:
-      modifiers: ['title--bg-white']
+      modifiers: ['bg-white']
       text: 'This is a white highlighted title'
 
   - name: white with tail
     label: "White with tail"
     context:
-      modifiers: ['title--bg-white', 'title--has-tail']
+      modifiers: ['bg-white', 'has-tail']
       text: 'This is a white highlighted title with a tail'
 
   - name: slate
     label: "Slate"
     context:
-      modifiers: ['title--bg-slate']
+      modifiers: ['bg-slate']
       text: 'This is a slate highlighted title'
 
   - name: slate with tail
     label: "Slate with tail"
     context:
-      modifiers: ['title--bg-slate', 'title--has-tail']
+      modifiers: ['bg-slate', 'has-tail']
       text: 'This is a slate highlighted title with a tail'
 
   - name: maroon
     label: "Maroon"
     context:
-      modifiers: ['title--bg-maroon']
+      modifiers: ['bg-maroon']
       text: 'This is a maroon highlighted title'
 
   - name: maroon with tail
     label: "Maroon with tail"
     context:
-      modifiers: ['title--bg-maroon', 'title--has-tail']
+      modifiers: ['bg-maroon', 'has-tail']
       text: 'This is a maroon highlighted title with a tail'
 
   - name: pink
     label: "Pink"
     context:
-      modifiers: ['title--bg-pink']
+      modifiers: ['bg-pink']
       text: 'This is a pink highlighted title'
 
   - name: pink with tail
     label: "Pink with tail"
     context:
-      modifiers: ['title--bg-pink', 'title--has-tail']
+      modifiers: ['bg-pink', 'has-tail']
       text: 'This is a pink highlighted title with a tail'
 
