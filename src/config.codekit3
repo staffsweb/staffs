@@ -7,7 +7,7 @@
 		"uuidString": "AB57FC88-0E0D-4B1F-96FD-88284F4798D9"
 		}
 	],
-"creatorBuild": "32001",
+"creatorBuild": "32137",
 "files": {
 	"/assets/apple-touch-icon-precomposed.png": {
 		"ft": 32768,
@@ -202,300 +202,300 @@
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/assets/styles/__vars/__all.css",
 		"oF": 0,
 		"oS": 2,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/styles/__vars/_breakpoints.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/assets/styles/__vars/_breakpoints.css",
 		"oF": 0,
 		"oS": 2,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/styles/__vars/_colours.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/assets/styles/__vars/_colours.css",
 		"oF": 0,
 		"oS": 2,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/styles/__vars/_grid.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/assets/styles/__vars/_grid.css",
 		"oF": 0,
 		"oS": 2,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/styles/__vars/_layout.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/assets/styles/__vars/_layout.css",
 		"oF": 0,
 		"oS": 2,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/styles/__vars/_mixins.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/assets/styles/__vars/_mixins.css",
 		"oF": 0,
 		"oS": 2,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/styles/__vars/_spacing.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/assets/styles/__vars/_spacing.css",
 		"oF": 0,
 		"oS": 2,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/styles/__vars/_typography.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/assets/styles/__vars/_typography.css",
 		"oF": 0,
 		"oS": 2,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/styles/_components/_boxes.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/assets/styles/_components/_boxes.css",
 		"oF": 0,
 		"oS": 2,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/styles/_components/_cards.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/assets/styles/_components/_cards.css",
 		"oF": 0,
 		"oS": 2,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/styles/_components/_embeds.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/assets/styles/_components/_embeds.css",
 		"oF": 0,
 		"oS": 2,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/styles/_components/_icons.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/assets/styles/_components/_icons.css",
 		"oF": 0,
 		"oS": 2,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/styles/_components/_lists.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/assets/styles/_components/_lists.css",
 		"oF": 0,
 		"oS": 2,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/styles/_components/_panels.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/assets/styles/_components/_panels.css",
 		"oF": 0,
 		"oS": 2,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/styles/_global/_forms.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/assets/styles/_global/_forms.css",
 		"oF": 0,
 		"oS": 2,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/styles/_global/_layout.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/assets/styles/_global/_layout.css",
 		"oF": 0,
 		"oS": 2,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/styles/_global/_nav.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/assets/styles/_global/_nav.css",
 		"oF": 0,
 		"oS": 2,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/styles/_global/_site-footer.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/assets/styles/_global/_site-footer.css",
 		"oF": 0,
 		"oS": 2,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/styles/_global/_site-header.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/assets/styles/_global/_site-header.css",
 		"oF": 0,
 		"oS": 2,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/styles/_global/_typography.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/assets/styles/_global/_typography.css",
 		"oF": 0,
 		"oS": 2,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/styles/_grid/_grid.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/assets/styles/_grid/_grid.css",
 		"oF": 0,
 		"oS": 2,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/styles/_utils/_utils.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/assets/styles/_utils/_utils.css",
 		"oF": 0,
 		"oS": 2,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/styles/_vendor/_normalize.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/assets/styles/_vendor/_normalize.css",
 		"oF": 0,
 		"oS": 2,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/styles/editor.css": {
 		"aP": 1,
@@ -519,14 +519,14 @@
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 0,
 		"oAP": "/assets/styles/editor.css",
 		"oF": 0,
 		"oS": 2,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/styles/main.css": {
 		"aP": 1,
@@ -550,14 +550,14 @@
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 0,
 		"oAP": "/assets/styles/main.css",
 		"oF": 0,
 		"oS": 2,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/styles/print.css": {
 		"aP": 1,
@@ -581,14 +581,14 @@
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 0,
 		"oAP": "/assets/styles/print.css",
 		"oF": 0,
 		"oS": 2,
-		"uL": 1
+		"sct": 1
 		},
 	"/components/01-globals-and-docs/01-typography.twig": {
 		"cB": 0,
@@ -726,47 +726,47 @@
 		"oAP": "/components/blockquote/blockquote.twig",
 		"oF": 0
 		},
-	"/components/breadcrumb/_breadcrumb.scss": {
+	"/components/breadcrumbs/_breadcrumbs.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/components/breadcrumb/_breadcrumb.css",
+		"oAP": "/components/breadcrumbs/_breadcrumbs.css",
 		"oF": 0,
 		"oS": 2,
-		"uL": 1
+		"sct": 1
 		},
-	"/components/breadcrumb/breadcrumb.config.yml": {
+	"/components/breadcrumbs/breadcrumbs.config.yml": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/components/breadcrumb/breadcrumb.config.yml",
+		"oAP": "/components/breadcrumbs/breadcrumbs.config.yml",
 		"oF": 0
 		},
-	"/components/breadcrumb/breadcrumb.twig": {
+	"/components/breadcrumbs/breadcrumbs.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/components/breadcrumb/breadcrumb.twig",
+		"oAP": "/components/breadcrumbs/breadcrumbs.twig",
 		"oF": 0
 		},
 	"/components/button/_buttons.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/components/button/_buttons.css",
 		"oF": 0,
 		"oS": 2,
-		"uL": 1
+		"sct": 1
 		},
 	"/components/button/button.config.yml": {
 		"cB": 0,
@@ -868,14 +868,14 @@
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/components/masthead/_masthead.css",
 		"oF": 0,
 		"oS": 2,
-		"uL": 1
+		"sct": 1
 		},
 	"/components/masthead/masthead.config.yml": {
 		"cB": 0,
@@ -913,14 +913,14 @@
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/components/slab/_slab.css",
 		"oF": 0,
 		"oS": 2,
-		"uL": 1
+		"sct": 1
 		},
 	"/components/slab/slab--examples.twig": {
 		"cB": 0,
@@ -982,14 +982,14 @@
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/components/tile/_tile.css",
 		"oF": 0,
 		"oS": 2,
-		"uL": 1
+		"sct": 1
 		},
 	"/components/tile/tile--examples.twig": {
 		"cB": 0,
@@ -1043,14 +1043,14 @@
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/components/title/_title.css",
 		"oF": 0,
 		"oS": 2,
-		"uL": 1
+		"sct": 1
 		},
 	"/components/title/title--examples.twig": {
 		"cB": 0,
@@ -1080,14 +1080,14 @@
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/components/top-bar/_top-bar.css",
 		"oF": 0,
 		"oS": 2,
-		"uL": 1
+		"sct": 1
 		},
 	"/components/top-bar/top-bar.config.yml": {
 		"cB": 0,
@@ -3135,13 +3135,13 @@
 		"autoOutputPathReplace1": "sass",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 0,
+		"compilerType": 1,
 		"createSourceMap": 1,
-		"debugStyle": 0,
 		"decimalPrecision": 4,
+		"emitCharset": 1,
 		"outputStyle": 2,
 		"shouldRunAutoprefixer": 1,
-		"shouldRunBless": 0,
-		"useLibsass": 1
+		"shouldRunBless": 0
 		},
 	"languageDefaultsSLIM": {
 		"autoOutputAction": 0,

@@ -1,5 +1,8 @@
 .title {
-  max-width: 42em;
+  position: relative;
+  --color: white;
+  --background: #{$red};
+  max-width: 42em; // @TODO: why? what does this relate to? make a variable
   margin-bottom: $spacing-xs;
 }
 
@@ -10,66 +13,47 @@
   margin: 0;
   padding: 0.25rem;
   line-height: 1.4;
-  background: $red;
-  color: #fff;
-  box-shadow: -$spacing-xs 0 0 0 $red, $spacing-xs 0 0 0 $red;
+  background: var(--background);
+  color: var(--color);
+  box-shadow: -$spacing-xs 0 0 0 var(--background), $spacing-xs 0 0 0 var(--background);
   box-decoration-break: clone;
   //border-top: 0.25rem solid transparent;
   //border-bottom: 0.25rem solid transparent;
-
 }
 
-.title__highlight--white {
-  background: #fff;
-  color: #000;
-  box-shadow: -$spacing-xs 0 0 0 #fff, $spacing-xs 0 0 0 #fff;
+.title--has-tail {
+  .title__highlight { // @TODO: Consider refactoring onto parent to reduce specificity further
+    &:before {
+      position: absolute;
+      content: '';
+      margin-top: 2px;
+      top: 0;
+      left: -0.5rem;
+      display: block;
+      width: 1000px;
+      height: 2px;
+      transform: rotate(225deg);
+      transform-origin: top left;
+      background: var(--background);
+    }
+  }
 }
 
-.title__highlight--slate {
-  background: $slate;
-  box-shadow: -$spacing-xs 0 0 0 $slate, $spacing-xs 0 0 0 $slate;
+.title--bg-white {
+  --background: white;
+  --color: black;
 }
 
-.title__highlight--maroon {
-  background: $maroon;
-  box-shadow: -$spacing-xs 0 0 0 $maroon, $spacing-xs 0 0 0 $maroon;
+.title--bg-slate {
+  --background: #{$slate};
 }
 
-.title__highlight--pink {
-  background: $pink;
-  box-shadow: -$spacing-xs 0 0 0 $pink, $spacing-xs 0 0 0 $pink;
+.title--bg-maroon {
+  --background: #{$maroon};
 }
 
-.title__highlight--tail {
-  &:before {
-    position: absolute;
-    content: '';
-    margin-top: 2px;
-    top: 0;
-    left: -0.5rem;
-    display: block;
-    width: 1000px;
-    height: 2px;
-    transform: rotate(225deg);
-    transform-origin: top left;
-    background: $red;
-  }
-
-  &.title__highlight--white:before {
-    background: #fff;
-  }
-
-  &.title__highlight--slate:before {
-    background: $slate;
-  }
-
-  &.title__highlight--maroon:before {
-    background: $maroon;
-  }
-
-  &.title__highlight--pink:before {
-    background: $pink;
-  }
+.title--bg-pink {
+  --background: #{$maroon};
 }
 
 

@@ -1,12 +1,12 @@
 {% set textElement = textElement ?: 'h3' %}
 
 {% set classString = '' %}
-{% for class in classes %}
-  {% set classString = classString ~ '  ' ~ class %}
+{% for modifier in modifiers %}
+  {% set classString = classString ~ '  title--' ~ modifier %}
 {% endfor %}
 
-<div class="title">
-  <{{ textElement }} class="title__highlight{% if classString %}{{ classString }}{% endif %}">
+<div class="title{{ classString ? classString }}">
+  <{{ textElement }} class="title__highlight">
   {{ text }}
 </{{ textElement }}>
 </div>

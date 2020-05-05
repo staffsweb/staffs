@@ -1,8 +1,8 @@
-<div class="slab slab--dark">
+<div class="slab  slab--dark">
 
   {% include '@title' with {
     text: 'This is an H1 with a tail',
-    classes: ['title__highlight--tail'],
+    modifiers: ['has-tail'],
     textElement: 'h1'
   } %}
 
@@ -13,28 +13,28 @@
 
   {% include '@title' with {
     text: 'This is a paragraph on white with a tail',
-    classes: ['title__highlight--white'],
+    modifiers: ['bg-white', 'has-tail'],
     textElement: 'p'
   } %}
 
   {% include '@title' with {
     text: 'This is an H1 on pink',
-    classes: ['title__highlight--pink'],
+    modifiers: ['bg-pink'],
     textElement: 'h2'
   } %}
 
   {% include '@title' with {
-    classes: ['title__highlight--slate'],
     text: 'This is an H4 on slate',
+    modifiers: ['bg-slate'],
     textElement: 'h4'
   } %}
 
   {% include '@title' with {
     text: 'This is a paragraph on maroon with a tail',
-    classes: ['title__highlight--maroon', 'title__highlight--tail'],
+    modifiers: ['bg-maroon', 'has-tail'],
     textElement: 'p'
   } %}
-  
+
 </div>
 
 

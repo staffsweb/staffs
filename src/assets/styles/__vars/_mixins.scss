@@ -107,21 +107,11 @@
 }
 
 @mixin boxed__padding {
-  padding: calc(1em + 2.5%);
+  padding: $spacing-md;
 }
 
 @mixin boxed__radius {
   border-radius: 0.5em 2em;
-}
-
-@mixin boxed--strong {
-  background: $secondary-tint-20;
-  border-left: 0.75em solid $secondary-tint-30;
-}
-
-@mixin boxed--strong-alt {
-  background: $blue-sky;
-  border-left: 0.75em solid $blue-sky-darkened;
 }
 
 // --
