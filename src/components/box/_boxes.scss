@@ -1,0 +1,28 @@
+.box {
+  margin: 0 0 $spacing-xl;
+
+  &__content {
+    padding: calc(#{$spacing-sm} + 2.5%);
+
+    > :first-child {
+      margin-top: 0;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+}
+
+.box--bg-offwhite {
+  background-color: $offwhite;
+}
+
+.box--bg-slate {
+  background-color: $slate;
+  color: #fff;
+}

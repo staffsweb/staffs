@@ -1,24 +1,8 @@
-.nav-primary-container {
-
-  .wrap {
-    width: auto;
-  }
-}
 
 .site-logo {
   position: absolute;
-
-  img {
-    max-width: 8em;
-    transition: all 0.3s;
-
-    @media (min-width: 55em) and (min-height: 30em) {
-      max-width: 10em;
-    }
-    @media (min-width: 60em) and (min-height: 40em) {
-      max-width: 12em;
-    }
-  }
+  width: 15%;
+  max-width: 12em;
 }
 
 .nav-primary-toggle {
@@ -27,15 +11,7 @@
 
 .nav-primary {
   text-align: right;
-  margin-left: 8em;
-
-
-  @media (min-width: 47.5em) and (min-height: 30em) {
-    margin-left: 10em;
-  }
-  @media (min-width: 60em) and (min-height: 40em) {
-    margin-left: 12em;
-  }
+  margin-left: 15%;
 
   ul {
     margin: 0;

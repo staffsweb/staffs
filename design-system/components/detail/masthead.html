@@ -167,13 +167,13 @@
             <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
 
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title  title--has-tail"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title__highlight"</span>&gt;</span>
                 Shortlisted for "University of the year"
             <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title  title--bg-white  title--has-tail"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">h6</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title__highlight"</span>&gt;</span>
                 - The Times and The Sunday Times Good University Guide 2020
             <span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
@@ -196,12 +196,12 @@
         </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '<a href="breadcrumbs.html">@breadcrumbs</a>' %}</span><span class="xml">
         </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '<a href="title.html">@title</a>' with {
             text: 'Shortlisted for "University of the year"',
-            classes: ['title__highlight--tail'],
+            modifiers: ['has-tail'],
             textElement: 'h1'
         } %}</span><span class="xml">
         </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '<a href="title.html">@title</a>' with {
             text: '- The Times and The Sunday Times Good University Guide 2020',
-            classes: ['title__highlight--white title__highlight--tail'],
+            modifiers: ['bg-white', 'has-tail'],
             textElement: 'h6'
         } %}</span><span class="xml">
         </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '<a href="button.html">@button</a>' with {
@@ -629,10 +629,21 @@
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-box">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Box</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="accolade.html" data-pjax>
-                <span>Accolade</span>
+            <a class="Tree-entityLink" href="box--default.html" data-pjax>
+                <span>Default</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -640,7 +651,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
 
 
 </div>
@@ -655,8 +666,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="accordion.html" data-pjax>
-                <span>Accordion</span>
+            <a class="Tree-entityLink" href="box--offwhite.html" data-pjax>
+                <span>Background: Offwhite</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -664,7 +675,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
 
 
 </div>
@@ -679,8 +690,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="blockquote.html" data-pjax>
-                <span>Blockquote</span>
+            <a class="Tree-entityLink" href="box--slate.html" data-pjax>
+                <span>Background: Slate</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -688,7 +699,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
 
 
 </div>
@@ -697,6 +708,11 @@
 
 
             </a>
+        </li>
+        
+    
+
+            </ul>
         </li>
         
     
@@ -934,246 +950,6 @@
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="card-course.html" data-pjax>
-                <span>Card Course</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="card-listing.html" data-pjax>
-                <span>Card Listing</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="card-social.html" data-pjax>
-                <span>Card Social</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="card-staff-profile.html" data-pjax>
-                <span>Card Staff Profile</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="card-testimonial.html" data-pjax>
-                <span>Card Testimonial</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="country-selector.html" data-pjax>
-                <span>Country Selector</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="course-search.html" data-pjax>
-                <span>Course Search</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="featured-link.html" data-pjax>
-                <span>Featured Link</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="gallery.html" data-pjax>
-                <span>Gallery</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="icon-list.html" data-pjax>
-                <span>Icon List</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
         <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
             <a class="Tree-entityLink" href="" data-pjax>
                 <span>Masthead</span>
@@ -1185,54 +961,6 @@
 
 
 <span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="module-slider.html" data-pjax>
-                <span>Module Slider</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="panel.html" data-pjax>
-                <span>Panel</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
 
 
 </div>
@@ -1282,8 +1010,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="slab--grey.html" data-pjax>
-                <span>Shade: Light</span>
+            <a class="Tree-entityLink" href="slab--offwhite.html" data-pjax>
+                <span>Background: Offwhite</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1306,8 +1034,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="slab--dark.html" data-pjax>
-                <span>Shade: Dark</span>
+            <a class="Tree-entityLink" href="slab--slate.html" data-pjax>
+                <span>Background: Slate</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1353,78 +1081,6 @@
     
 
             </ul>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="slider.html" data-pjax>
-                <span>Slider</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="sub-nav.html" data-pjax>
-                <span>Sub Nav</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="tabs.html" data-pjax>
-                <span>Tabs</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
         </li>
         
     
@@ -1493,30 +1149,6 @@
         
     
         
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="tile-image.html" data-pjax>
-                <span>Tile Image</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-title">
             <h4 class="Tree-collectionLabel" data-role="toggle">
                 <span>Title</span>
@@ -1555,7 +1187,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="title--default-with-tail.html" data-pjax>
-                <span>Default with tail</span>
+                <span>Default (with tail)</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1603,7 +1235,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="title--white-with-tail.html" data-pjax>
-                <span>White with tail</span>
+                <span>White (with tail)</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1651,7 +1283,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="title--slate-with-tail.html" data-pjax>
-                <span>Slate with tail</span>
+                <span>Slate (with tail)</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1699,7 +1331,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="title--maroon-with-tail.html" data-pjax>
-                <span>Maroon with tail</span>
+                <span>Maroon (with tail)</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1747,7 +1379,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="title--pink-with-tail.html" data-pjax>
-                <span>Pink with tail</span>
+                <span>Pink (with tail)</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1793,54 +1425,6 @@
     
 
             </ul>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="title-group.html" data-pjax>
-                <span>Title Group</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="title-row.html" data-pjax>
-                <span>Title Row</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
         </li>
         
     

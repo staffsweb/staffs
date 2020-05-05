@@ -1,0 +1,21 @@
+name: Box
+status: wip
+collated: false
+context:
+  text: 'This is a box'
+  background: []
+  modifiers: []
+handle: box
+
+variants:
+  - name: offwhite
+    label: "Background: Offwhite"
+    context:
+      background: offwhite
+      text: 'This is an offwhite box'
+
+  - name: slate
+    label: "Background: Slate"
+    context:
+      background: slate
+      text: 'This is a slate box'

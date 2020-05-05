@@ -3,14 +3,18 @@
   --color: white;
   --background: #{$red};
   max-width: 42em; // @TODO: why? what does this relate to? make a variable
-  margin-bottom: $spacing-xs;
+  margin-bottom: $spacing-lg;
+  margin-right: $spacing-md;
+
+  + .title {
+    margin-top: -$spacing-md;
+  }
 }
 
 .title__highlight {
   position: relative;
   display: inline;
   left: $spacing-xs;
-  margin: 0;
   padding: 0.25rem;
   line-height: 1.4;
   background: var(--background);
