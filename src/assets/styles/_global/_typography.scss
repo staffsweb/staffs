@@ -4,7 +4,7 @@
 
 html {
   position: relative;
-  font-size: 85%;
+  font-size: 80%;
   text-decoration-skip-ink: auto;
 
   @media (min-width: 47.5em) and (min-height: 40em) {
@@ -21,7 +21,7 @@ html {
 
   @supports (font: -apple-system-body) {
     font: -apple-system-body;
-    text-size-adjust: 85%;
+    text-size-adjust: 80%;
   }
 }
 
@@ -62,7 +62,7 @@ article {
 
 hgroup,
 .hgroup {
-  margin: 0 0 $spacing-lg;
+  margin: 0 0 $spacing-xl;
 
   #{headings()} {
     margin: 0 0 $spacing-xs;

@@ -3,12 +3,12 @@
         {% include '@breadcrumbs' %}
         {% include '@title' with {
             text: 'Shortlisted for "University of the year"',
-            classes: ['title__highlight--tail'],
+            modifiers: ['has-tail'],
             textElement: 'h1'
         } %}
         {% include '@title' with {
             text: '- The Times and The Sunday Times Good University Guide 2020',
-            classes: ['title__highlight--white title__highlight--tail'],
+            modifiers: ['bg-white', 'has-tail'],
             textElement: 'h6'
         } %}
         {% include '@button' with {

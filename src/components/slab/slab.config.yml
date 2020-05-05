@@ -3,19 +3,19 @@ status: wip
 collated: false
 context:
   text: 'This is a slab'
-  styles: []
-  classes: []
+  background: []
+  modifiers: []
 handle: slab
 
 variants:
-  - name: grey
-    label: "Shade: Light"
+  - name: offwhite
+    label: "Background: Offwhite"
     context:
-      classes: ['slab--light']
-      text: 'This is a light slab'
+      background: offwhite
+      text: 'This is an offwhite slab'
 
-  - name: dark
-    label: "Shade: Dark"
+  - name: slate
+    label: "Background: Slate"
     context:
-      classes: ['slab--dark']
-      text: 'This is a dark slab'
+      background: slate
+      text: 'This is a slate slab'

@@ -1,12 +1,16 @@
 .slab {
-  padding: $spacing-xl 0;
+  padding: $spacing-4xl 0;
+
+  &__title {
+    margin-top: $spacing-md;
+  }
 }
 
-.slab--light {
+.slab--bg-offwhite {
   background-color: $offwhite;
 }
 
-.slab--dark {
+.slab--bg-slate {
   background-color: $slate;
   color: #fff;
 }

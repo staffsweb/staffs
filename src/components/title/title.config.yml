@@ -3,13 +3,14 @@ status: wip
 collated: false
 context:
   text: 'This is a title'
-  styles: []
+  background: []
   modifiers: []
 handle: title
 
 variants:
+
   - name: default with tail
-    label: "Default with tail"
+    label: "Default (with tail)"
     context:
       modifiers: ['has-tail']
       text: 'This is a highlighted title with a tail'
@@ -17,48 +18,52 @@ variants:
   - name: white
     label: "White"
     context:
-      modifiers: ['bg-white']
+      background: white
       text: 'This is a white highlighted title'
 
   - name: white with tail
-    label: "White with tail"
+    label: "White (with tail)"
     context:
-      modifiers: ['bg-white', 'has-tail']
+      tail: true
+      background: white
       text: 'This is a white highlighted title with a tail'
 
   - name: slate
     label: "Slate"
     context:
-      modifiers: ['bg-slate']
+      background: slate
       text: 'This is a slate highlighted title'
 
   - name: slate with tail
-    label: "Slate with tail"
+    label: "Slate (with tail)"
     context:
-      modifiers: ['bg-slate', 'has-tail']
+      tail: true
+      background: slate
       text: 'This is a slate highlighted title with a tail'
 
   - name: maroon
     label: "Maroon"
     context:
-      modifiers: ['bg-maroon']
+      background: maroon
       text: 'This is a maroon highlighted title'
 
   - name: maroon with tail
-    label: "Maroon with tail"
+    label: "Maroon (with tail)"
     context:
-      modifiers: ['bg-maroon', 'has-tail']
+      tail: true
+      background: maroon
       text: 'This is a maroon highlighted title with a tail'
 
   - name: pink
     label: "Pink"
     context:
-      modifiers: ['bg-pink']
+      background: pink
       text: 'This is a pink highlighted title'
 
   - name: pink with tail
-    label: "Pink with tail"
+    label: "Pink (with tail)"
     context:
-      modifiers: ['bg-pink', 'has-tail']
+      tail: true
+      background: pink
       text: 'This is a pink highlighted title with a tail'
 

@@ -3,26 +3,26 @@
 {% include '@masthead' %}
 
 <main id="main-content" role="main" class="">
-    <div class="slab">
-        <div class="wrap">
-            {% include '@title' with {
-                text: 'Open days',
-                classes: ['title__highlight--tail'],
-                textElement: 'h3'
-            } %}
+  <div class="slab">
+    <div class="wrap">
+      {% include '@title' with {
+        text: 'Open days',
+        classes: ['title__highlight--tail'],
+        textElement: 'h3'
+      } %}
 
-            {% include '@tile' %}
-        </div>
+      {% include '@tile' %}
     </div>
-    <div class="slab slab--light">
-        <div class="wrap">
-            {% include '@title' with {
-                text: 'Features and highlights',
-                classes: ['title__highlight--tail'],
-                textElement: 'h3'
-            } %}
-        </div>
+  </div>
+  <div class="slab slab--light">
+    <div class="wrap">
+      {% include '@title' with {
+        text: 'Features and highlights',
+        classes: ['title__highlight--tail'],
+        textElement: 'h3'
+      } %}
     </div>
+  </div>
 </main>
 
 {% include '@page-footer' %}

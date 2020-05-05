@@ -1,13 +1,17 @@
 {{ spaceless }}
 {% set classString = '' %}
-{% for class in classes %}
-    {% set classString = classString ~ '  ' ~ class %}
+{% for modifier in modifiers %}
+  {% set classString = classString ~ '  slab--' ~ modifier %}
 {% endfor %}
+{% if background %}
+  {% set classString = classString ~ '  slab--bg-' ~ background %}
+{% endif %}
 
-<div class="slab{% if classString %}{{ classString }}{% endif %}">
-    <div class="wrap">
-        {{ text }}
-    </div>
+<div class="slab{{ classString }}">
+  <div class="wrap">
+    <h2 class="slab__title">{{ text }}</h2>
+    <p>{{ loremLong }}</p>
+  </h2>
 </div>
 {{ endspaceless }}
 
