@@ -3,7 +3,7 @@
 body {
   border-left: $body-border-width solid $red;
 
-  @media (min-width: 47.5em) and (min-height: 30em) {
+  @media (min-width: $breakpoint-largescreen-typography) and (min-height: $breakpoint-largescreen-typography-height) {
     border-left: $body-border-width--wide solid $red;
   }
 
@@ -17,7 +17,7 @@ body {
     background: $red;
     z-index: 0;
 
-    @media (min-width: 47.5em) and (min-height: 30em) {
+    @media (min-width: $breakpoint-largescreen-typography) and (min-height: $breakpoint-largescreen-typography-height) {
       width: $body-border-width--wide;
     }
   }

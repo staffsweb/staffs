@@ -5,7 +5,7 @@ $line-length-max-rem: 50rem;
 $align-leftright-size-small: 33%;
 $align-leftright-size-medium: 50%;
 $align-leftright-size-large: 66%;
-$align-min-breakpoint: 27.5rem;
+$align-min-breakpoint: 32.5rem;
 $align-right-offset-breakpoint: $wrap-width + 10rem;
 
 $body-border-width: $spacing-2xs;
@@ -50,7 +50,7 @@ $body-border-breakpoint: $wrap-full-gutter-width;
     box-sizing: border-box;
     margin-left: 0;
     margin-top: $spacing-2xs;
-    margin-right: $grid-gutter;
+    margin-right: $grid-gutter-large;
     margin-bottom: $spacing-lg;
   }
 
@@ -69,7 +69,7 @@ $body-border-breakpoint: $wrap-full-gutter-width;
     box-sizing: border-box;
     margin-right: 0;
     margin-top: $spacing-2xs;
-    margin-left: $grid-gutter;
+    margin-left: $grid-gutter-large;
     margin-bottom: $spacing-lg;
   }
 

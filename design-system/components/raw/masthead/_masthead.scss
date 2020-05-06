@@ -8,10 +8,10 @@
 
   padding: 9em 0 2em;
 
-  @media (min-width: 47.5em) and (min-height: 30em) {
+  @media (min-width: 47.5em) and (min-height: 30em) { // @TODO: USE VARIABLES!
     padding-top: 12em;
   }
-  @media (min-width: 60em) and (min-height: 40em) {
+  @media (min-width: 60em) and (min-height: 40em) { // @TODO: USE VARIABLES!
     padding-top: 14em;
   }
 

@@ -1,0 +1,41 @@
+.card {
+  position: relative;
+  --accent-color: #{$maroon};
+  margin-bottom: $spacing-xl;
+  border-left: $spacing-2xs solid var(--accent-color);
+
+  a {
+    color: var(--accent-color);
+    text-decoration-color: var(--accent-color);
+  }
+
+  &__content {
+    padding: 0 calc(#{$spacing-sm} + 2.5%);
+
+    > :first-child {
+      margin-top: 0;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+
+  }
+}
+
+
+.card--testimonial {
+  padding-bottom: $spacing-sm;
+
+  .blockquote__title {
+    color: var(--accent-color);
+  }
+}
+
+
+.card--course {
+
+}

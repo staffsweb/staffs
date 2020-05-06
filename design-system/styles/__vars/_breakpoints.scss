@@ -14,8 +14,8 @@ $breakpoint-stages: (
 
 $half-breakpoint: 35rem;
 $third-breakpoint: 50rem;
-$quart-breakpoint: 60rem;          //    1/2  ->  1/4
-$fifth-breakpoint: 60rem;
+$quart-breakpoint: 70rem;          //    1/2  ->  1/4
+$fifth-breakpoint: 80rem;
 $sixth-breakpoint: 80rem;         //    1/2  ->  1/3  ->  1/4  ->  1/6
 $seventh-breakpoint: false;
 $eighth-breakpoint: false;        //    1/2  ->  1/4  ->  1/8
@@ -31,3 +31,6 @@ $site-header-nav-visible-rem: 50rem;
 
 $wrap-large-gutter-width: 40rem;
 $wrap-full-gutter-width: 40rem;
+
+$breakpoint-largescreen-typography: 45rem;
+$breakpoint-largescreen-typography-height: 30rem;
