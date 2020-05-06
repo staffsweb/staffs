@@ -1,0 +1,8 @@
+label: Meta
+
+variants:
+  - name: inline-dd
+    label: "Inline Definition Items"
+
+  - name: inline
+    label: "Inline"

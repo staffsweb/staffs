@@ -23,6 +23,10 @@
   box-decoration-break: clone;
   //border-top: 0.25rem solid transparent;
   //border-bottom: 0.25rem solid transparent;
+
+  a {
+    color: var(--color);
+  }
 }
 
 .title--has-tail {

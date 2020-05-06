@@ -1,0 +1,49 @@
+.meta {
+  &__item {
+    margin-bottom: $spacing-sm;
+  }
+}
+
+.meta--inline {
+  dt, dd {
+    display: inline-block;
+    margin-right: $spacing-xs;
+  }
+
+  dd {
+    display: inline;
+
+    &:before {
+      content: '•';
+      margin-right: $spacing-xs;
+      font-weight: bold;
+      color: $maroon;
+    }
+
+    &:first-of-type {
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+.meta--inline-dd {
+  dd {
+    display: inline;
+    margin-right: $spacing-xs;
+
+    &:before {
+      content: '•';
+      margin-right: $spacing-xs;
+      font-weight: bold;
+      color: $maroon;
+    }
+
+    &:first-of-type {
+      &:before {
+        display: none;
+      }
+    }
+  }
+}

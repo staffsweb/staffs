@@ -25,24 +25,16 @@ $typescale-map: (
   '5xl': 3,
   '4xl': 2.5,
   '3xl': 2,
-  '2xl': 1.5,
-  'xl': 1.25,
-  'lg': 1.125,
+  '2xl': 1.75,
+  'xl': 1.5,
+  'lg': 1.2,
   'md': 1,
   'sm': 0.875,
   'xs': 0.75,
   '2xs': 0.6875,
 );
 
-$headings-map: (
-  'h1': '6xl',
-  'h2': '5xl',
-  'h3': '4xl',
-  'h4': '3xl',
-  'h5': '2xl',
-  'h6': 'xl',
-);
-$headings-mobile-map: (
+$headings-smallscreen-map: (
   'h1': '4xl',
   'h2': '3xl',
   'h3': '2xl',
@@ -50,10 +42,18 @@ $headings-mobile-map: (
   'h5': 'lg',
   'h6': 'md',
 );
+$headings-map: (
+  'h1': '6xl',
+  'h2': '5xl',
+  'h3': '4xl',
+  'h4': '2xl',
+  'h5': 'xl',
+  'h6': 'lg',
+);
 
 $line-height-map: (
   'spaced': 2,
-  'normal': 1.5,
+  'normal': 1.4,
   'headings': 1.2,
   'compact': 0.8,
 );
@@ -143,7 +143,6 @@ $border-accent-width: $spacing-2xs;
       @supports (text-decoration-thickness: 0.125em) {
         text-decoration-color: revert;
         text-decoration-thickness: revert;
-
       }
     }
   }
@@ -151,11 +150,14 @@ $border-accent-width: $spacing-2xs;
   #{headings()} {
     @include line-height('headings');
     font-weight: 500;
-    margin: $spacing-4xl 0 $spacing-lg;
 
     a, a & {
       color: black;
     }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: $spacing-4xl 0 $spacing-lg;
   }
 
   h1 + h2,
@@ -166,11 +168,7 @@ $border-accent-width: $spacing-2xs;
     margin-top: 0;
   }
 
-
-
-
-
-  @each $name, $size in $headings-mobile-map {
+  @each $name, $size in $headings-smallscreen-map {
     #{$name}, .#{$name} {
       @include typescale($size);
     }
@@ -235,12 +233,11 @@ $border-accent-width: $spacing-2xs;
   }
 
   dt {
-    //color: $secondary;
-    font-weight: bold;
+    font-weight: 500;
   }
 
   dd {
-    margin: 0 0 $spacing-md;
+    margin: 0;
   }
 
   hr {
@@ -291,15 +288,6 @@ $border-accent-width: $spacing-2xs;
         margin-bottom: 0;
       }
     }
-  }
-
-  cite,
-  .cite {
-    @include cite;
-  }
-
-  blockquote {
-    @include blockquote;
   }
 
   pre {
@@ -405,92 +393,92 @@ $border-accent-width: $spacing-2xs;
 
 @mixin h1 {
   @include line-height('headings');
-  @include typescale(map-get($headings-map, 'h1'));
+  @include typescale(map-get($headings-smallscreen-map, 'h1'));
   font-weight: 500;
+
+  @media (min-width: $breakpoint-largescreen-typography) and (min-height: $breakpoint-largescreen-typography-height) {
+    @include map-get($headings-map, 'h1');
+  }
 }
 
 @mixin h2 {
   @include line-height('headings');
-  @include typescale(map-get($headings-map, 'h2'));
+  @include typescale(map-get($headings-smallscreen-map, 'h2'));
   font-weight: 500;
+
+  @media (min-width: $breakpoint-largescreen-typography) and (min-height: $breakpoint-largescreen-typography-height) {
+    @include map-get($headings-map, 'h2');
+  }
 }
 
 @mixin h3 {
   @include line-height('headings');
-  @include typescale(map-get($headings-map, 'h3'));
+  @include typescale(map-get($headings-smallscreen-map, 'h3'));
   font-weight: 500;
+
+  @media (min-width: $breakpoint-largescreen-typography) and (min-height: $breakpoint-largescreen-typography-height) {
+    @include map-get($headings-map, 'h3');
+  }
 }
 
 @mixin h4 {
   @include line-height('headings');
-  @include typescale(map-get($headings-map, 'h4'));
+  @include typescale(map-get($headings-smallscreen-map, 'h4'));
   font-weight: 500;
+
+  @media (min-width: $breakpoint-largescreen-typography) and (min-height: $breakpoint-largescreen-typography-height) {
+    @include map-get($headings-map, 'h4');
+  }
 }
 
 @mixin h5 {
   @include line-height('headings');
-  @include typescale(map-get($headings-map, 'h5'));
+  @include typescale(map-get($headings-smallscreen-map, 'h5'));
   font-weight: 500;
+
+  @media (min-width: $breakpoint-largescreen-typography) and (min-height: $breakpoint-largescreen-typography-height) {
+    @include map-get($headings-map, 'h5');
+  }
 }
 
 @mixin h6 {
   @include line-height('headings');
-  @include typescale(map-get($headings-map, 'h6'));
+  @include typescale(map-get($headings-smallscreen-map, 'h6'));
   font-weight: 500;
+
+  @media (min-width: $breakpoint-largescreen-typography) and (min-height: $breakpoint-largescreen-typography-height) {
+    @include map-get($headings-map, 'h6');
+  }
 }
 
 @mixin blockquote {
-  display: table;
-  font-size: 1.1em;
-  @include line-height('spaced');
   position: relative;
-  margin: $spacing-lg 0 $spacing-lg;
-  padding: 1em 2em;
-  border: none;
-  border-left: $border-accent-width solid $primary;
+  display: table;
+  margin: $spacing-xl 0;
+  padding: 0;
+  @include typescale('xl', 'em');
+  @include line-height('normal');
 
-  &:before {
-    content: open-quote;
-    position: relative;
-    display: inline-block;
-    float: left;
-    font-size: 2em;
-    line-height: 1;
-    margin-left: -0.65em;
-    width: 0.65em;
-  }
-
-  &:after {
-    content: no-close-quote; // this is required for reasons: https://stackoverflow.com/questions/25588665/css-open-quote-shows-1-quotation-mark
-  }
-
-  @media (min-width: 40em) {
-    font-size: 1.35em;
-    margin: $spacing-xl 0;
-    padding: 1em calc(2em + 2.5%);
+  @media (min-width: $breakpoint-largescreen-typography) {
+    @include typescale('2xl', 'em');
+    margin-bottom: $spacing-xl;
   }
 
   p {
     font-size: 1em;
-    margin: 0 0 0.5em;
+    margin: 0 0 1em;
 
-    &:only-child {
+    &:last-child {
       margin-bottom: 0;
-    }
-  }
-
-  q {
-    &:before {
-      display: none;
     }
   }
 }
 
 @mixin cite {
   @include font-primary;
-  @include typescale('xs');
+  @include typescale('sm');
   font-style: normal;
-  font-weight: bold;
+  font-weight: 500;
   display: block;
   margin: $spacing-lg 0 0;
 }
@@ -505,19 +493,21 @@ $border-accent-width: $spacing-2xs;
 }
 
 @mixin tag {
-  @include typescale('xs');
+  display: inline-block;
+  @include typescale('xs', 'em');
   color: $text-color;
-  padding: 0.35em 1em;
+  background: $offwhite;
+  padding: 0.35em 1.5em;
   line-height: 1;
-  border-radius: 1em;
+  border-radius: 0.35em;
   text-decoration: none;
+  text-decoration-color: revert;
+  text-decoration-thickness: revert;
 }
 
 @mixin tag--hover {
-  &:hover {
-    text-decoration: underline;
-    color: $text-color;
-  }
+  text-decoration: underline;
+  color: $text-color;
 }
 
 @mixin caps {

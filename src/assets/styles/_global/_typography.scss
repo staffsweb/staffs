@@ -8,10 +8,10 @@ html {
   text-decoration-skip-ink: auto;
 
   @media (min-width: 47.5em) and (min-height: 40em) {
-    font-size: 90%;
+    font-size: 85%;
   }
 
-  @media (min-width: 90em) and (min-height: 55em) {
+  @media (min-width: 90em) and (min-height: 50em) {
     font-size: 100%;
   }
 
@@ -69,36 +69,9 @@ hgroup,
   }
 }
 
-.meta {
-}
-
-.meta--inline {
-  .meta-item {
-    margin-bottom: $spacing-2xs;
-  }
-
-  dt, dd {
-    display: inline-block;
-  }
-
-  dd {
-    margin-bottom: 0;
-  }
-}
 
 .caps {
   @include caps;
-}
-
-.list-inline {
-  margin-left: 0;
-  padding-left: 0;
-
-  li {
-    list-style-type: none;
-    display: inline-block;
-    margin-right: 0.25em;
-  }
 }
 
 .tag {
@@ -108,22 +81,6 @@ hgroup,
 a.tag {
   &:hover {
     @include tag--hover;
-  }
-}
-
-.list-unbulleted,
-.list-unstyled {
-  list-style: none;
-  padding-left: 0;
-}
-
-.list-bordered-items {
-  list-style: none;
-  padding-left: 0;
-
-  li {
-    padding: $spacing-sm 0;
-    border-bottom: 1px solid $grey-light;
   }
 }
 

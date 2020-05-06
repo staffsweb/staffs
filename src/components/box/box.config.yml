@@ -8,6 +8,13 @@ context:
 handle: box
 
 variants:
+
+  - name: has-shadow
+    label: "Style: Has Shadow"
+    context:
+      modifiers: ['has-shadow']
+      text: 'This is a box with a shadow'
+
   - name: offwhite
     label: "Background: Offwhite"
     context:

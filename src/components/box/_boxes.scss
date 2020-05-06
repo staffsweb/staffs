@@ -16,6 +16,24 @@
   &__title {
     margin-top: 0;
   }
+
+  &__footer {
+    padding: $spacing-md calc(#{$spacing-sm} + 2.5%);
+    background: rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.05);
+
+    > :first-child {
+      margin-top: 0;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.box--has-shadow {
+  box-shadow: 0 0.1em 0.25em rgba(0, 0, 0, 0.15);
 }
 
 .box--bg-offwhite {

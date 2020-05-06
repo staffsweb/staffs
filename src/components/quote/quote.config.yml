@@ -1,0 +1,11 @@
+label: Quotes
+
+variants:
+  - name: long
+    label: "Long (/Small)"
+
+  - name: short
+    label: "Short (/Large)"
+
+  - name: multiline
+    label: "Multiple Paragraphs"
