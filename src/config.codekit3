@@ -7,7 +7,7 @@
 		"uuidString": "AB57FC88-0E0D-4B1F-96FD-88284F4798D9"
 		}
 	],
-"creatorBuild": "32137",
+"creatorBuild": "32147",
 "files": {
 	"/assets/apple-touch-icon-precomposed.png": {
 		"ft": 32768,
@@ -772,6 +772,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/components/card/card--testimonial.twig",
+		"oF": 0
+		},
+	"/components/card/card.config.yml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/card/card.config.yml",
 		"oF": 0
 		},
 	"/components/card/card.twig": {
