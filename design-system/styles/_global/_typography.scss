@@ -4,11 +4,11 @@
 
 html {
   position: relative;
-  font-size: 80%;
+  font-size: 75%;
   text-decoration-skip-ink: auto;
 
   @media (min-width: 47.5em) and (min-height: 40em) {
-    font-size: 85%;
+    font-size: 82.5%;
   }
 
   @media (min-width: 90em) and (min-height: 50em) {
@@ -21,7 +21,7 @@ html {
 
   @supports (font: -apple-system-body) {
     font: -apple-system-body;
-    text-size-adjust: 80%;
+    text-size-adjust: 75%;
   }
 }
 

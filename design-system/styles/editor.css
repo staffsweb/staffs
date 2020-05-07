@@ -1,13 +1,13 @@
 @charset "UTF-8";
-html { position: relative; font-size: 80%; -webkit-text-decoration-skip: ink; text-decoration-skip-ink: auto; }
+html { position: relative; font-size: 75%; -webkit-text-decoration-skip: ink; text-decoration-skip-ink: auto; }
 
-@media (min-width: 47.5em) and (min-height: 40em) { html { font-size: 85%; } }
+@media (min-width: 47.5em) and (min-height: 40em) { html { font-size: 82.5%; } }
 
 @media (min-width: 90em) and (min-height: 50em) { html { font-size: 100%; } }
 
 @media (min-width: 120em) and (min-height: 60em) { html { font-size: 115%; } }
 
-@supports (font: -apple-system-body) { html { font: -apple-system-body; -webkit-text-size-adjust: 80%; -moz-text-size-adjust: 80%; -ms-text-size-adjust: 80%; text-size-adjust: 80%; } }
+@supports (font: -apple-system-body) { html { font: -apple-system-body; -webkit-text-size-adjust: 75%; -moz-text-size-adjust: 75%; -ms-text-size-adjust: 75%; text-size-adjust: 75%; } }
 
 body { font-family: 'Roboto', sans-serif; line-height: 2; color: black; background: #fff; font-weight: 300; tap-highlight-color: rgba(215, 10, 38, 0.25); }
 
