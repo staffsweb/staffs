@@ -528,6 +528,8 @@ section:first-child { margin-top: 0; }
 
 .card__content > :last-child { margin-bottom: 0; }
 
+.card__title { margin-top: 0; }
+
 .card--testimonial { padding-bottom: 0.75rem; }
 
 .card--testimonial .blockquote__title { color: var(--accent-color); }
