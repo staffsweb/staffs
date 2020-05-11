@@ -774,6 +774,14 @@
 		"oAP": "/components/card/card--course.twig",
 		"oF": 0
 		},
+	"/components/card/card--result.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/card/card--result.twig",
+		"oF": 0
+		},
 	"/components/card/card--testimonial.twig": {
 		"cB": 0,
 		"ft": 8192,

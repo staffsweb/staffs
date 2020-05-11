@@ -55,7 +55,7 @@ article {
     max-width: $line-length-max-rem;
   }
 
-  li:not([class]) {
+  ul:not([class]) {
     max-width: calc(#{$line-length-max-rem} - 1.5em); // subtract base ul left hand padding to match p width
   }
 }
@@ -82,6 +82,12 @@ a.tag {
   &:hover {
     @include tag--hover;
   }
+}
+
+.url {
+  // has break-word in @mixin base-elements
+  color: $text-color;
+  text-decoration: underline;
 }
 
 .link-access,
