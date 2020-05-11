@@ -1,3 +1,5 @@
+$card__internal-spacing: $spacing-sm;
+
 .card {
   position: relative;
   --accent-color: #{$maroon};
@@ -7,10 +9,19 @@
   a {
     color: var(--accent-color);
     text-decoration-color: var(--accent-color);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  p {
+    margin-bottom: $card__internal-spacing;
   }
 
   &__content {
-    padding: 0 calc(#{$spacing-sm} + 2.5%);
+    padding: 0 calc(#{$card__internal-spacing} + 2.5%);
 
     > :first-child {
       margin-top: 0;
@@ -22,13 +33,14 @@
   }
 
   &__title {
-
+    margin-top: 0;
+    margin-bottom: $spacing-md;
   }
 }
 
 
 .card--testimonial {
-  padding-bottom: $spacing-sm;
+  padding-bottom: $card__internal-spacing;
 
   .blockquote__title {
     color: var(--accent-color);
@@ -37,5 +49,9 @@
 
 
 .card--course {
+
+}
+
+.card--result {
 
 }

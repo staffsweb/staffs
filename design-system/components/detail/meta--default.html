@@ -227,19 +227,21 @@
                             
                             <code class="Code Code--lang-SCSS FileBrowser-code">
                                 <pre><span class="hljs-selector-class">.meta</span> {
+  <span class="hljs-keyword">@include</span> line-height(<span class="hljs-string">'normal'</span>);
+
+  <span class="hljs-selector-tag">dt</span> {
+    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-variable">$spacing-2xs</span>;
+  }
+
   &amp;__item {
-    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-variable">$spacing-sm</span>;
+    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-variable">$spacing-md</span>;
   }
 }
 
-<span class="hljs-selector-class">.meta--inline</span> {
-  <span class="hljs-selector-tag">dt</span>, <span class="hljs-selector-tag">dd</span> {
-    <span class="hljs-attribute">display</span>: inline-block;
-    <span class="hljs-attribute">margin-right</span>: <span class="hljs-variable">$spacing-xs</span>;
-  }
-
+<span class="hljs-selector-class">.meta--inline-dd</span> {
   <span class="hljs-selector-tag">dd</span> {
     <span class="hljs-attribute">display</span>: inline;
+    <span class="hljs-attribute">margin-right</span>: <span class="hljs-variable">$spacing-xs</span>;
 
     &amp;<span class="hljs-selector-pseudo">:before</span> {
       <span class="hljs-attribute">content</span>: <span class="hljs-string">'•'</span>;
@@ -256,10 +258,18 @@
   }
 }
 
-<span class="hljs-selector-class">.meta--inline-dd</span> {
+<span class="hljs-selector-class">.meta--inline</span> {
+  <span class="hljs-selector-class">.meta__item</span> {
+    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-variable">$spacing-xs</span>;
+  }
+
+  <span class="hljs-selector-tag">dt</span>, <span class="hljs-selector-tag">dd</span> {
+    <span class="hljs-attribute">display</span>: inline-block;
+    <span class="hljs-attribute">margin-right</span>: <span class="hljs-variable">$spacing-xs</span>;
+  }
+
   <span class="hljs-selector-tag">dd</span> {
     <span class="hljs-attribute">display</span>: inline;
-    <span class="hljs-attribute">margin-right</span>: <span class="hljs-variable">$spacing-xs</span>;
 
     &amp;<span class="hljs-selector-pseudo">:before</span> {
       <span class="hljs-attribute">content</span>: <span class="hljs-string">'•'</span>;
@@ -290,7 +300,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">669 Bytes</span>
+                    <span class="Meta-value">802 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -1021,6 +1031,54 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="card--course.html" data-pjax>
                 <span>Course</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="card--course-result.html" data-pjax>
+                <span>Course Result</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="card--result.html" data-pjax>
+                <span>Result</span>
                 
 
 <div class="Status Status--unlabelled">

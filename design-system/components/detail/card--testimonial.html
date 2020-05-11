@@ -230,7 +230,9 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-SCSS FileBrowser-code">
-                                <pre><span class="hljs-selector-class">.card</span> {
+                                <pre><span class="hljs-variable">$card__internal-spacing</span>: <span class="hljs-variable">$spacing-sm</span>;
+
+<span class="hljs-selector-class">.card</span> {
   <span class="hljs-attribute">position</span>: relative;
   --accent-<span class="hljs-attribute">color</span>: #{<span class="hljs-variable">$maroon</span>};
   <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-variable">$spacing-xl</span>;
@@ -239,10 +241,19 @@
   <span class="hljs-selector-tag">a</span> {
     <span class="hljs-attribute">color</span>: var(--accent-color);
     <span class="hljs-attribute">text-decoration-color</span>: var(--accent-color);
+    <span class="hljs-attribute">text-decoration</span>: none;
+
+    &amp;<span class="hljs-selector-pseudo">:hover</span> {
+      <span class="hljs-attribute">text-decoration</span>: underline;
+    }
+  }
+
+  <span class="hljs-selector-tag">p</span> {
+    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-variable">$card__internal-spacing</span>;
   }
 
   &amp;__content {
-    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> calc(#{<span class="hljs-variable">$spacing-sm</span>} + <span class="hljs-number">2.5%</span>);
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> calc(#{<span class="hljs-variable">$card__internal-spacing</span>} + <span class="hljs-number">2.5%</span>);
 
     &gt; <span class="hljs-selector-pseudo">:first-child</span> {
       <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">0</span>;
@@ -254,13 +265,14 @@
   }
 
   &amp;__title {
-
+    <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-variable">$spacing-md</span>;
   }
 }
 
 
 <span class="hljs-selector-class">.card--testimonial</span> {
-  <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-variable">$spacing-sm</span>;
+  <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-variable">$card__internal-spacing</span>;
 
   <span class="hljs-selector-class">.blockquote__title</span> {
     <span class="hljs-attribute">color</span>: var(--accent-color);
@@ -269,6 +281,10 @@
 
 
 <span class="hljs-selector-class">.card--course</span> {
+
+}
+
+<span class="hljs-selector-class">.card--result</span> {
 
 }</pre>
                             </code>
@@ -286,7 +302,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">557 Bytes</span>
+                    <span class="Meta-value">827 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -309,7 +325,7 @@
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Variants <em class="Meta-count">(3)</em>:</strong>
+            <strong class="Meta-key">Variants <em class="Meta-count">(5)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="card--default.html">
@@ -318,6 +334,14 @@
             
                 <a href="card--course.html">
                     <span>Course</span>
+                </a>, 
+            
+                <a href="card--course-result.html">
+                    <span>Course Result</span>
+                </a>, 
+            
+                <a href="card--result.html">
+                    <span>Result</span>
                 </a>, 
             
                 <a href="">
@@ -1017,6 +1041,54 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="card--course.html" data-pjax>
                 <span>Course</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="card--course-result.html" data-pjax>
+                <span>Course Result</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="card--result.html" data-pjax>
+                <span>Result</span>
                 
 
 <div class="Status Status--unlabelled">
