@@ -562,6 +562,14 @@
 		"oAP": "/components/01-globals-and-docs/03-colour.twig",
 		"oF": 0
 		},
+	"/components/01-globals-and-docs/04-alignments.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/01-globals-and-docs/04-alignments.twig",
+		"oF": 0
+		},
 	"/components/02-page/_preview.twig": {
 		"cB": 0,
 		"ft": 8192,
@@ -772,6 +780,22 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/components/card/card--course.twig",
+		"oF": 0
+		},
+	"/components/card/card--pink.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/card/card--pink.twig",
+		"oF": 0
+		},
+	"/components/card/card--red.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/card/card--red.twig",
 		"oF": 0
 		},
 	"/components/card/card--result.twig": {
@@ -1029,6 +1053,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/components/slab/slab.twig",
+		"oF": 0
+		},
+	"/components/tabs/tabs.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/tabs/tabs.twig",
 		"oF": 0
 		},
 	"/components/tag/tag.twig": {

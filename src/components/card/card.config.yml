@@ -1,1 +1,7 @@
 label: Cards
+
+variants:
+  - name: pink
+    label: "Theme: Pink"
+  - name: red
+    label: "Theme: Red"
