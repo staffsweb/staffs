@@ -1,24 +1,5 @@
-@mixin font-face ($prefix: '..') {
-
-  //@font-face {
-  //  font-family: 'Museo Sans';
-  //  src: url('#{$prefix}/fonts/MuseoSans_500-webfont.woff2') format('woff2'),
-  //       url('#{$prefix}/fonts/MuseoSans_500-webfont.woff') format('woff');
-  //  font-weight: 500;
-  //  font-style: normal;
-  //  font-display: swap;
-  //}
-  //
-  //@font-face {
-  //  font-family: 'Museo Sans';
-  //  src: url('#{$prefix}/fonts/MuseoSans_100-webfont.woff2') format('woff2'),
-  //       url('#{$prefix}/fonts/Roboto-Light.ttf') format('woff');
-  //  font-weight: 300;
-  //  font-style: normal;
-  //  font-display: swap;
-  //}
-
-}
+//@mixin font-face ($prefix: '..') {
+//}
 
 $typescale-map: (
   '6xl': 4,

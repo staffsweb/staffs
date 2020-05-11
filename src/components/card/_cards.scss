@@ -4,7 +4,7 @@ $card__internal-spacing: $spacing-sm;
   position: relative;
   --accent-color: #{$maroon};
   margin-bottom: $spacing-xl;
-  border-left: $spacing-2xs solid var(--accent-color);
+  border-left: $border-accent-width solid var(--accent-color);
 
   a {
     color: var(--accent-color);
