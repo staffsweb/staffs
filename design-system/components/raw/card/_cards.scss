@@ -38,6 +38,17 @@ $card__internal-spacing: $spacing-sm;
   }
 }
 
+//--
+
+.card--pink {
+  --accent-color: #{$pink};
+}
+
+.card--red {
+  --accent-color: #{$red};
+}
+
+//--
 
 .card--testimonial {
   padding-bottom: $card__internal-spacing;
@@ -47,11 +58,8 @@ $card__internal-spacing: $spacing-sm;
   }
 }
 
-
 .card--course {
-
 }
 
 .card--result {
-
 }
