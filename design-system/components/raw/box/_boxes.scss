@@ -30,6 +30,10 @@
       margin-bottom: 0;
     }
   }
+
+  &--padded {
+    padding: calc(#{$spacing-sm} + 2.5%);
+  }
 }
 
 .box--has-shadow {

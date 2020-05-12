@@ -48,6 +48,10 @@ $card__internal-spacing: $spacing-sm;
   --accent-color: #{$red};
 }
 
+.card--purple {
+  --accent-color: #{$maroon};
+}
+
 //--
 
 .card--testimonial {
@@ -62,4 +66,12 @@ $card__internal-spacing: $spacing-sm;
 }
 
 .card--result {
+}
+
+.card--ksp {
+  color: $slate;
+
+  &__icon {
+    //margin-bottom: $card__internal-spacing;
+  }
 }

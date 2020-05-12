@@ -378,7 +378,7 @@ $border-accent-width: $spacing-2xs;
   font-weight: 500;
 
   @media (min-width: $breakpoint-largescreen-typography) and (min-height: $breakpoint-largescreen-typography-height) {
-    @include map-get($headings-map, 'h1');
+    @include typescale(map-get($headings-map, 'h1'));
   }
 }
 
@@ -388,7 +388,7 @@ $border-accent-width: $spacing-2xs;
   font-weight: 500;
 
   @media (min-width: $breakpoint-largescreen-typography) and (min-height: $breakpoint-largescreen-typography-height) {
-    @include map-get($headings-map, 'h2');
+    @include typescale(map-get($headings-map, 'h2'));
   }
 }
 
@@ -398,7 +398,7 @@ $border-accent-width: $spacing-2xs;
   font-weight: 500;
 
   @media (min-width: $breakpoint-largescreen-typography) and (min-height: $breakpoint-largescreen-typography-height) {
-    @include map-get($headings-map, 'h3');
+    @include typescale(map-get($headings-map, 'h3'));
   }
 }
 
@@ -408,7 +408,7 @@ $border-accent-width: $spacing-2xs;
   font-weight: 500;
 
   @media (min-width: $breakpoint-largescreen-typography) and (min-height: $breakpoint-largescreen-typography-height) {
-    @include map-get($headings-map, 'h4');
+    @include typescale(map-get($headings-map, 'h4'));
   }
 }
 
@@ -418,7 +418,7 @@ $border-accent-width: $spacing-2xs;
   font-weight: 500;
 
   @media (min-width: $breakpoint-largescreen-typography) and (min-height: $breakpoint-largescreen-typography-height) {
-    @include map-get($headings-map, 'h5');
+    @include typescale(map-get($headings-map, 'h5'));
   }
 }
 
