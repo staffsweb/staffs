@@ -5,3 +5,6 @@ variants:
     label: "Theme: Pink"
   - name: red
     label: "Theme: Red"
+
+  - name: ksp
+    label: "KSP (Key Selling Points)"

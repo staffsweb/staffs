@@ -121,6 +121,36 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/assets/img/icon-circle-padlock-purple.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/icon-circle-padlock-purple.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/img/icon-moneybag-pink.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/icon-moneybag-pink.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/img/icon-threepeople-red.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/icon-threepeople-red.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/assets/img/logo.png": {
 		"ft": 32768,
 		"iS": 33392,
@@ -311,19 +341,6 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/assets/styles/_components/_embeds.css",
-		"oF": 0,
-		"oS": 2,
-		"sct": 1
-		},
-	"/assets/styles/_components/_icons.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 4,
-		"ec": 1,
-		"ft": 4,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "/assets/styles/_components/_icons.css",
 		"oF": 0,
 		"oS": 2,
 		"sct": 1
@@ -570,6 +587,14 @@
 		"oAP": "/components/01-globals-and-docs/04-alignments.twig",
 		"oF": 0
 		},
+	"/components/01-globals-and-docs/05-grid.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/01-globals-and-docs/05-grid.twig",
+		"oF": 0
+		},
 	"/components/02-page/_preview.twig": {
 		"cB": 0,
 		"ft": 8192,
@@ -782,6 +807,14 @@
 		"oAP": "/components/card/card--course.twig",
 		"oF": 0
 		},
+	"/components/card/card--ksp.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/card/card--ksp.twig",
+		"oF": 0
+		},
 	"/components/card/card--pink.twig": {
 		"cB": 0,
 		"ft": 8192,
@@ -829,6 +862,19 @@
 		"oA": 0,
 		"oAP": "/components/card/card.twig",
 		"oF": 0
+		},
+	"/components/icons/_icons.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 4,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/components/icons/_icons.css",
+		"oF": 0,
+		"oS": 2,
+		"sct": 1
 		},
 	"/components/list/_lists.scss": {
 		"aP": 1,
@@ -979,6 +1025,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/components/quote/quote--short.twig",
+		"oF": 0
+		},
+	"/components/quote/quote--with-figure.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/quote/quote--with-figure.twig",
 		"oF": 0
 		},
 	"/components/quote/quote.config.yml": {
