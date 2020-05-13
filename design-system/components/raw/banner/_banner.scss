@@ -1,0 +1,53 @@
+.banner {
+  position: relative;
+  display: flex;
+  min-height: 35vmin;
+  margin-bottom: $spacing-xl;
+  background: radial-gradient(45% 660% at 50% 50%, mix(#e3e3e3, white, 30%) 0%, mix(#ccc, white, 30%) 100%);
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-position: center center;
+      object-fit: cover;
+      transform: scale(1.1);
+      filter: blur(0.5em);
+
+      @media (min-width: map-get($breakpoint-stages, 'tablet')) {
+        transform: none;
+        filter: none;
+      }
+    }
+
+    &--blurred {
+      @media (min-width: map-get($breakpoint-stages, 'tablet')) {
+        img {
+          transform: scale(1.1);
+          filter: blur(0.5em);
+        }
+      }
+    }
+  }
+
+  &__body {
+    align-self: flex-end;
+    box-sizing: border-box;
+    width: 100%;
+    padding: calc(#{$spacing-sm} + 15%) calc(#{$spacing-sm} + 2.5%) calc(#{$spacing-sm} + 2.5%);
+  }
+
+  .wrap {
+    .banner__body {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

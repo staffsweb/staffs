@@ -41,7 +41,7 @@
 <p>The following sizes are defined in <code>__vars/_typography.scss</code> to set a typescale.</p>
 <p>This will <strong>only</strong> change the <strong>font-size</strong>, and will change it at <strong>all breakpoints</strong>.</p>
 <div class="title">
-  <p class="title__highlight"><strong>Important:</strong> Sizes above 3xl should not be used as classes in HTML, only use these in Sass at larger screen widths, they are too big for mobile!</p>
+  <p class="title__highlight"><strong>VERY IMPORTANT:</strong> Sizes above 3xl should not be used as classes in HTML, only use these in Sass at larger screen widths, they are too big for mobile! (Example below)</p>
 </div>
 
 <ul class="list--unbulleted">
@@ -61,6 +61,27 @@
 <p>They can be used using a class of <code>font-<em>[sizename]</em></code>, eg. <code>font-sm</code><br/>
   or in Sass using <code>@include typescale('<em>[sizename]</em>');</code>, eg. <code>@include typescale('4xl');</code></p>
 
+<p>As mentioned, headings have two set sizes to utilise 4xl+ at larger screen widths, in <code>__vars/typography</code> you'll see something like:</p>
+
+<pre>@mixin h3 {
+  @include line-height('headings');
+  @include typescale(map-get($headings-smallscreen-map, 'h3'));
+  font-weight: 500;
+
+  @media (min-width: $breakpoint-largescreen-typography) and (min-height: $breakpoint-largescreen-typography-height) {
+    @include typescale(map-get($headings-map, 'h3'));
+  }
+}</pre>
+
+<p>If for example you wanted to create a ludicrously large text element utilising 5xl at desktop, you should do this in Sass, not using HTML classes. Consider something like:</p>
+
+<pre>.ludicrously-large-text-element {
+  @include typescale('3xl');
+
+  @media (min-width: $breakpoint-largescreen-typography) and (min-height: $breakpoint-largescreen-typography-height) {
+    @include typescale('5xl');
+  }
+}</pre>
 
 <hr/>
 
