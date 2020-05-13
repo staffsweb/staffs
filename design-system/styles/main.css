@@ -400,11 +400,11 @@ a.tag:hover { text-decoration: underline; color: black; }
 
 body { border-left: 0.25rem solid #d70a26; }
 
-@media (min-width: 50rem) and (min-height: 30rem) { body { border-left: 1rem solid #d70a26; } }
+@media (min-width: 55rem) and (min-height: 30rem) { body { border-left: 1rem solid #d70a26; } }
 
 body:after { content: ''; position: fixed; top: 0; left: 0; bottom: 0; width: 0.25rem; background: #d70a26; z-index: 0; }
 
-@media (min-width: 50rem) and (min-height: 30rem) { body:after { width: 1rem; } }
+@media (min-width: 55rem) and (min-height: 30rem) { body:after { width: 1rem; } }
 
 main { position: relative; z-index: 0; clear: both; overflow-x: hidden; }
 
@@ -646,7 +646,7 @@ section:first-child { margin-top: 0; }
 
 blockquote, .blockquote { position: relative; display: table; margin: 2rem 0; padding: 0; font-size: 1.5em; line-height: 1.4; }
 
-@media (min-width: 50rem) { blockquote, .blockquote { font-size: 1.75em; margin-bottom: 2rem; } }
+@media (min-width: 55rem) { blockquote, .blockquote { font-size: 1.75em; margin-bottom: 2rem; } }
 
 blockquote p, .blockquote p { font-size: 1em; margin: 0 0 1em; }
 
@@ -658,15 +658,15 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 0.875rem; font-style
 
 .blockquote--large, .blockquote--short { font-size: 1.75em; }
 
-@media (min-width: 50rem) { .blockquote--large, .blockquote--short { font-size: 2.5em; } }
+@media (min-width: 55rem) { .blockquote--large, .blockquote--short { font-size: 2.5em; } }
 
 .blockquote--small, .blockquote--long { font-size: 1.2em; }
 
-@media (min-width: 50rem) { .blockquote--small, .blockquote--long { font-size: 1.5em; } }
+@media (min-width: 55rem) { .blockquote--small, .blockquote--long { font-size: 1.5em; } }
 
 .blockquote__title { color: #d70a26; font-size: 1.75rem; }
 
-@media (min-width: 50rem) { .blockquote__title { font-size: 2rem; } }
+@media (min-width: 55rem) { .blockquote__title { font-size: 2rem; } }
 
 .blockquote__footer { margin-top: 1.5rem; font-size: 0.875rem; }
 

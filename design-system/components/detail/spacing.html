@@ -173,6 +173,28 @@
   $spacing-6xl: $spacing-baseline * 8 !default;
 <span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
 
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>You'll see them used liberally in Sass to keep consistency in spacing accross the site, for example, something like:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>.element {
+  margin: 0 0 $spacing-xl;
+  padding: $spacing-md;
+}
+<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>If helpful, don't be afraid to assign variables to variables to give them more meaning, for example:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>$card__internal-spacing: $spacing-sm;
+
+.card {
+  margin: 0 0 $spacing-xl;
+  padding: $card__internal-spacing;
+
+  &amp;__title {
+    margin-bottom: $card__internal-spacing;
+  }
+}
+<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
+
 <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Spacing utilities<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>We generate utility classes for layout-level spacing to help with vertical rhythm in content. Use sparingly, only where it isn't really possible to add margins in CSS.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>To add margin <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>top and bottom<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>, use: <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>margin-y-[size]<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, eg. <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>margin-y-md<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> for medium spacing, <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>.margin-y-lg<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> for large spacing.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -225,6 +247,28 @@
   $spacing-4xl: $spacing-baseline * 4 !default;
   $spacing-5xl: $spacing-baseline * 6 !default;
   $spacing-6xl: $spacing-baseline * 8 !default;
+<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>You'll see them used liberally in Sass to keep consistency in spacing accross the site, for example, something like:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>.element {
+  margin: 0 0 $spacing-xl;
+  padding: $spacing-md;
+}
+<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>If helpful, don't be afraid to assign variables to variables to give them more meaning, for example:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>$card__internal-spacing: $spacing-sm;
+
+.card {
+  margin: 0 0 $spacing-xl;
+  padding: $card__internal-spacing;
+
+  &amp;__title {
+    margin-bottom: $card__internal-spacing;
+  }
+}
 <span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Spacing utilities<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>

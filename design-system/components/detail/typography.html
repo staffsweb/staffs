@@ -220,7 +220,7 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>They can be used using a class of <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>font-<span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>[sizename]<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, eg. <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>font-sm<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
     or in Sass using <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>@include typescale('<span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>[sizename]<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span>');<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, eg. <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>@include typescale('4xl');<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>As mentioned, headings have two set sizes to utilise 4xl+ at larger screen widths, in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>__vars/typography<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> you'll see something like:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>As mentioned, headings have two set sizes to utilise 4xl+ at larger screen widths, in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>__vars/typography<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> you'll see a <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$headings-smallscreen-map<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, a <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$headings-map<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> (for large screens), and something like:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>@mixin h3 {
   @include line-height('headings');
@@ -237,7 +237,7 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>.ludicrously-large-text-element {
   @include typescale('3xl');
 
-  @media (min-width: $breakpoint-largescreen-typography) and (min-height: $breakpoint-largescreen-typography-height) {
+  @media (min-width: $breakpoint-largescreen-typography) {
     @include typescale('5xl');
   }
 }<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
@@ -359,7 +359,7 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>They can be used using a class of <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>font-<span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>[sizename]<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, eg. <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>font-sm<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>/&gt;</span>
   or in Sass using <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>@include typescale('<span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>[sizename]<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span>');<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, eg. <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>@include typescale('4xl');<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>As mentioned, headings have two set sizes to utilise 4xl+ at larger screen widths, in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>__vars/typography<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> you'll see something like:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>As mentioned, headings have two set sizes to utilise 4xl+ at larger screen widths, in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>__vars/typography<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> you'll see a <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$headings-smallscreen-map<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, a <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$headings-map<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> (for large screens), and something like:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>@mixin h3 {
   @include line-height('headings');
@@ -376,7 +376,7 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>.ludicrously-large-text-element {
   @include typescale('3xl');
 
-  @media (min-width: $breakpoint-largescreen-typography) and (min-height: $breakpoint-largescreen-typography-height) {
+  @media (min-width: $breakpoint-largescreen-typography) {
     @include typescale('5xl');
   }
 }<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
