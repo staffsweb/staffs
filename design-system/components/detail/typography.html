@@ -200,7 +200,7 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>The following sizes are defined in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>__vars/_typography.scss<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> to set a typescale.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This will <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>only<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> change the <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>font-size<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>, and will change it at <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>all breakpoints<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title__highlight"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>Important:<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> Sizes above 3xl should not be used as classes in HTML, only use these in Sass at larger screen widths, they are too big for mobile!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title__highlight"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>VERY IMPORTANT:<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> Sizes above 3xl should not be used as classes in HTML, only use these in Sass at larger screen widths, they are too big for mobile! (Example below)<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list--unbulleted"</span>&gt;</span>
@@ -219,6 +219,28 @@
 
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>They can be used using a class of <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>font-<span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>[sizename]<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, eg. <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>font-sm<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
     or in Sass using <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>@include typescale('<span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>[sizename]<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span>');<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, eg. <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>@include typescale('4xl');<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>As mentioned, headings have two set sizes to utilise 4xl+ at larger screen widths, in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>__vars/typography<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> you'll see something like:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>@mixin h3 {
+  @include line-height('headings');
+  @include typescale(map-get($headings-smallscreen-map, 'h3'));
+  font-weight: 500;
+
+  @media (min-width: $breakpoint-largescreen-typography) and (min-height: $breakpoint-largescreen-typography-height) {
+    @include typescale(map-get($headings-map, 'h3'));
+  }
+}<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>If for example you wanted to create a ludicrously large text element utilising 5xl at desktop, you should do this in Sass, not using HTML classes. Consider something like:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>.ludicrously-large-text-element {
+  @include typescale('3xl');
+
+  @media (min-width: $breakpoint-largescreen-typography) and (min-height: $breakpoint-largescreen-typography-height) {
+    @include typescale('5xl');
+  }
+}<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">hr</span> /&gt;</span>
 
@@ -317,7 +339,7 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>The following sizes are defined in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>__vars/_typography.scss<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> to set a typescale.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This will <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>only<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> change the <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>font-size<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>, and will change it at <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>all breakpoints<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title__highlight"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>Important:<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> Sizes above 3xl should not be used as classes in HTML, only use these in Sass at larger screen widths, they are too big for mobile!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title__highlight"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>VERY IMPORTANT:<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> Sizes above 3xl should not be used as classes in HTML, only use these in Sass at larger screen widths, they are too big for mobile! (Example below)<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list--unbulleted"</span>&gt;</span>
@@ -337,6 +359,27 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>They can be used using a class of <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>font-<span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>[sizename]<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, eg. <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>font-sm<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>/&gt;</span>
   or in Sass using <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>@include typescale('<span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>[sizename]<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span>');<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, eg. <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>@include typescale('4xl');<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>As mentioned, headings have two set sizes to utilise 4xl+ at larger screen widths, in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>__vars/typography<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> you'll see something like:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>@mixin h3 {
+  @include line-height('headings');
+  @include typescale(map-get($headings-smallscreen-map, 'h3'));
+  font-weight: 500;
+
+  @media (min-width: $breakpoint-largescreen-typography) and (min-height: $breakpoint-largescreen-typography-height) {
+    @include typescale(map-get($headings-map, 'h3'));
+  }
+}<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>If for example you wanted to create a ludicrously large text element utilising 5xl at desktop, you should do this in Sass, not using HTML classes. Consider something like:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>.ludicrously-large-text-element {
+  @include typescale('3xl');
+
+  @media (min-width: $breakpoint-largescreen-typography) and (min-height: $breakpoint-largescreen-typography-height) {
+    @include typescale('5xl');
+  }
+}<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">hr</span>/&gt;</span>
 
