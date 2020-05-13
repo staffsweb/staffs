@@ -56,11 +56,6 @@
   }
 }
 
-@mixin button--caps {
-  text-transform: uppercase;
-}
-
-
 @mixin button--slate {
   background-image: linear-gradient(to left, $slate 50%, black 50%);
   color: white;

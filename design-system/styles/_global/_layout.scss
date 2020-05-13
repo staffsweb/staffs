@@ -27,7 +27,7 @@ main {
   position: relative;
   z-index: 0;
   clear: both;
-  //overflow-x: hidden; // this is set to stop page horizontal scrollbar when using align-wide with 100vw, see https://caniuse.com/#feat=viewport-units (known issues)
+  overflow-x: hidden; // this is set to stop page horizontal scrollbar when using align-wide with 100vw, see https://caniuse.com/#feat=viewport-units (known issues)
 }
 
 section {

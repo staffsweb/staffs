@@ -48,3 +48,7 @@
   background-color: $slate;
   color: #fff;
 }
+
+.box--bg-offwhite-gradient {
+  background: radial-gradient(45% 660% at 50% 50%, mix(#e3e3e3, white, 30%) 0%, mix(#ccc, white, 30%) 100%);
+}
