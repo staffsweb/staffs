@@ -26,11 +26,3 @@ $twelfth-breakpoint: false;       //    1/2  ->  1/4  ->  1/6  ->  1/12
 
 // ----
 
-$site-header-nav-visible: 600px; // this is in px not rem because we're using SuperFish, and it must match the setting in the CMS config
-$site-header-nav-visible-rem: 50rem;
-
-$wrap-large-gutter-width: 40rem;
-$wrap-full-gutter-width: 40rem;
-
-$breakpoint-largescreen-typography: 50rem;
-$breakpoint-largescreen-typography-height: 30rem;

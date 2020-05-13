@@ -24,6 +24,28 @@
   $spacing-6xl: $spacing-baseline * 8 !default;
 </pre>
 
+<p>You'll see them used liberally in Sass to keep consistency in spacing accross the site, for example, something like:</p>
+
+<pre>.element {
+  margin: 0 0 $spacing-xl;
+  padding: $spacing-md;
+}
+</pre>
+
+<p>If helpful, don't be afraid to assign variables to variables to give them more meaning, for example:</p>
+
+<pre>$card__internal-spacing: $spacing-sm;
+
+.card {
+  margin: 0 0 $spacing-xl;
+  padding: $card__internal-spacing;
+
+  &__title {
+    margin-bottom: $card__internal-spacing;
+  }
+}
+</pre>
+
 <h2>Spacing utilities</h2>
 <p>We generate utility classes for layout-level spacing to help with vertical rhythm in content. Use sparingly, only where it isn't really possible to add margins in CSS.</p>
 <p>To add margin <strong>top and bottom</strong>, use: <code>margin-y-[size]</code>, eg. <code>margin-y-md</code> for medium spacing, <code>.margin-y-lg</code> for large spacing.</p>

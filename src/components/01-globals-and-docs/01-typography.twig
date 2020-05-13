@@ -61,7 +61,7 @@
 <p>They can be used using a class of <code>font-<em>[sizename]</em></code>, eg. <code>font-sm</code><br/>
   or in Sass using <code>@include typescale('<em>[sizename]</em>');</code>, eg. <code>@include typescale('4xl');</code></p>
 
-<p>As mentioned, headings have two set sizes to utilise 4xl+ at larger screen widths, in <code>__vars/typography</code> you'll see something like:</p>
+<p>As mentioned, headings have two set sizes to utilise 4xl+ at larger screen widths, in <code>__vars/typography</code> you'll see a <code>$headings-smallscreen-map</code>, a <code>$headings-map</code> (for large screens), and something like:</p>
 
 <pre>@mixin h3 {
   @include line-height('headings');
@@ -78,7 +78,7 @@
 <pre>.ludicrously-large-text-element {
   @include typescale('3xl');
 
-  @media (min-width: $breakpoint-largescreen-typography) and (min-height: $breakpoint-largescreen-typography-height) {
+  @media (min-width: $breakpoint-largescreen-typography) {
     @include typescale('5xl');
   }
 }</pre>
