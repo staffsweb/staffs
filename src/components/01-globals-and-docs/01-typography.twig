@@ -11,36 +11,11 @@
 
 {#<p>They can be used using a class of <code>font-primary</code> or <code>font-secondary</code><br/> or in Sass using <code>@include font-primary;</code> or <code>@include font-secondary;</code></p>#}
 
-<h2>Typescale</h2>
-
-<p>The following sizes are defined in <code>__vars/_typography.scss</code> to set a typescale.</p>
-<p>This will <strong>only</strong> change the <strong>font-size</strong>, and will change it at <strong>all breakpoints</strong>.</p>
-
-<ul class="list--unbulleted">
-  <li class="font-6xl">6xl: The biggest font-size <span class="font-caption">4 (rem)</span></li>
-  <li class="font-5xl">5xl: The second biggest size <span class="font-caption">3 (rem)</span></li>
-  <li class="font-4xl">4xl: {{ pangram }} <span class="font-caption">2.5 (rem)</span></li>
-  <li class="font-3xl">3xl: {{ pangram }} <span class="font-caption">2 (rem)</span></li>
-  <li class="font-2xl">2xl: {{ pangram }} <span class="font-caption">1.75 (rem)</span></li>
-  <li class="font-xl">xl: {{ pangram }} <span class="font-caption">1.5 (rem)</span></li>
-  <li class="font-lg">lg: {{ pangram }} <span class="font-caption">1.2 (rem)</span></li>
-  <li class="font-md">md: {{ pangram }} <span class="font-caption">1 (rem)</span></li>
-  <li class="font-sm">sm: {{ pangram }} <span class="font-caption">0.875 (rem)</span></li>
-  <li class="font-xs">xs: {{ pangram }} <span class="font-caption">0.75 (rem)</span></li>
-  <li class="font-2xs">2xs: {{ pangram }} <span class="font-caption">0.6875 (rem)</span></li>
-</ul>
-
-<p>They can be used using a class of <code>font-<em>[sizename]</em></code>, eg. <code>font-2xl</code><br/>
-  or in Sass using <code>@include typescale('<em>[sizename]</em>');</code>, eg. <code>@include typescale('xs');</code></p>
-
-
-<hr/>
-
 <h2>Heading Levels</h2>
 
 <p>Use semantic heading level elements (<code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>) for content, do <strong>not</strong> use these elements for their visual appearance.</p>
-<p>They can be sized by applying a class above, eg. <code>&lt;h2 class="font-xl"&gt;</code>.</p>
 <p>To make a non-heading element appear in a heading style (including font-family), a class of <code>h1</code>-<code>h6</code> can be applied. eg. <code>&lt;div class="h3"&gt;</code></p>
+<p>Semantic heading elements can be sized by applying these classes, eg. <code>&lt;h2 class="h1"&gt;</code>.</p>
 <p>Headings are assigned <strong>two</strong> Typescale sizes in <code>__vars/_typography.scss</code>, one for smallscreen, and one for larger screens.</p>
 
 <ul class="list--unbulleted">
@@ -58,6 +33,34 @@
 <h4>{{ loremShort }}</h4>
 <h5>{{ loremShort }}</h5>
 <h6>{{ loremShort }}</h6>
+
+<hr/>
+
+<h2>Typescale</h2>
+
+<p>The following sizes are defined in <code>__vars/_typography.scss</code> to set a typescale.</p>
+<p>This will <strong>only</strong> change the <strong>font-size</strong>, and will change it at <strong>all breakpoints</strong>.</p>
+<div class="title">
+  <p class="title__highlight"><strong>Important:</strong> Sizes above 3xl should not be used as classes in HTML, only use these in Sass at larger screen widths, they are too big for mobile!</p>
+</div>
+
+<ul class="list--unbulleted">
+  <li class="font-6xl">6xl: The biggest font-size <span class="font-caption">4 (rem)</span></li>
+  <li class="font-5xl">5xl: The second biggest size <span class="font-caption">3 (rem)</span></li>
+  <li class="font-4xl">4xl: {{ pangram }} <span class="font-caption">2.5 (rem)</span></li>
+  <li class="font-3xl">3xl: {{ pangram }} <span class="font-caption">2 (rem)</span></li>
+  <li class="font-2xl">2xl: {{ pangram }} <span class="font-caption">1.75 (rem)</span></li>
+  <li class="font-xl">xl: {{ pangram }} <span class="font-caption">1.5 (rem)</span></li>
+  <li class="font-lg">lg: {{ pangram }} <span class="font-caption">1.2 (rem)</span></li>
+  <li class="font-md">md: {{ pangram }} <span class="font-caption">1 (rem)</span></li>
+  <li class="font-sm">sm: {{ pangram }} <span class="font-caption">0.875 (rem)</span></li>
+  <li class="font-xs">xs: {{ pangram }} <span class="font-caption">0.75 (rem)</span></li>
+  <li class="font-2xs">2xs: {{ pangram }} <span class="font-caption">0.6875 (rem)</span></li>
+</ul>
+
+<p>They can be used using a class of <code>font-<em>[sizename]</em></code>, eg. <code>font-sm</code><br/>
+  or in Sass using <code>@include typescale('<em>[sizename]</em>');</code>, eg. <code>@include typescale('4xl');</code></p>
+
 
 <hr/>
 

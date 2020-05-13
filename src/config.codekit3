@@ -691,6 +691,51 @@
 		"oAP": "/components/_preview.twig",
 		"oF": 0
 		},
+	"/components/banner/_banner.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 4,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/components/banner/_banner.css",
+		"oF": 0,
+		"oS": 2,
+		"sct": 1
+		},
+	"/components/banner/banner--align-full.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/banner/banner--align-full.twig",
+		"oF": 0
+		},
+	"/components/banner/banner--examples.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/banner/banner--examples.twig",
+		"oF": 0
+		},
+	"/components/banner/banner--no-image.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/banner/banner--no-image.twig",
+		"oF": 0
+		},
+	"/components/banner/banner.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/banner/banner.twig",
+		"oF": 0
+		},
 	"/components/box/_boxes.scss": {
 		"aP": 1,
 		"bl": 0,

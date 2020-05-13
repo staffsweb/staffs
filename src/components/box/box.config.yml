@@ -21,6 +21,12 @@ variants:
       background: offwhite
       text: 'This is an offwhite box'
 
+#  - name: offwhite-gradient
+#    label: "Background: Offwhite Gradient"
+#    context:
+#      background: offwhite-gradient
+#      text: 'This is a box with an offwhite gradient (from banners)'
+
   - name: slate
     label: "Background: Slate"
     context:

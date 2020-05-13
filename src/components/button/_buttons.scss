@@ -24,7 +24,7 @@
   }
 
   &--caps {
-    @include button--caps;
+    text-transform: uppercase;
   }
 
   // Colours
