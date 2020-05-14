@@ -20,7 +20,7 @@
         @media (min-width: $zebra-inline-breakpoint) {
           // this is a weird exception because it was designed so the reverse row has no margin on the left,
           // while the offwhite background row does, because it looks better
-          flex: 1 1 #{50% + $zebra-overlap};
+          flex: 1 0 #{50% + $zebra-overlap};
           margin-left: 0;
           margin-right: -#{$zebra-overlap};
         }
