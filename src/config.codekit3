@@ -728,6 +728,14 @@
 		"oAP": "/components/banner/banner--no-image.twig",
 		"oF": 0
 		},
+	"/components/banner/banner.config.yml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/banner/banner.config.yml",
+		"oF": 0
+		},
 	"/components/banner/banner.twig": {
 		"cB": 0,
 		"ft": 8192,
