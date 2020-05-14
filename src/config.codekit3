@@ -1288,6 +1288,27 @@
 		"oA": 0,
 		"oAP": "/components/top-bar/top-bar.twig",
 		"oF": 0
+		},
+	"/components/zebra/_zebra.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 4,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/components/zebra/_zebra.css",
+		"oF": 0,
+		"oS": 2,
+		"sct": 1
+		},
+	"/components/zebra/zebra.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/zebra/zebra.twig",
+		"oF": 0
 		}
 	},
 "hooks": [
