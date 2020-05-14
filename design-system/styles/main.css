@@ -726,7 +726,7 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 0.875rem; font-style
 
 .zebra__row:nth-child(even) .zebra__body { background-color: #f1f1f1; }
 
-@media (min-width: 50rem) { .zebra__row:nth-child(even) .zebra__body { -webkit-box-flex: 1; -ms-flex: 1 1 55%; flex: 1 1 55%; margin-left: 0; margin-right: -5%; } }
+@media (min-width: 50rem) { .zebra__row:nth-child(even) .zebra__body { -webkit-box-flex: 1; -ms-flex: 1 0 55%; flex: 1 0 55%; margin-left: 0; margin-right: -5%; } }
 
 .zebra__figure { position: relative; margin: 0; -webkit-box-flex: 1; -ms-flex: 1 0 50%; flex: 1 0 50%; -ms-flex-item-align: stretch; align-self: stretch; z-index: 0; }
 

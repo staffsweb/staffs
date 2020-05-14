@@ -151,7 +151,11 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-b76955bf4c7c96aba3c6cb2d5d89c840-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"zebra"</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>Useful Note<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>: Images are <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>img<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> elements not backgrounds, sized with object fit so they can take advantage of srcset if possible. Add an inline style [x/y] of <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>object-position<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> to set the focal point for the image, eg. <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>style="object-position: 70% 20%"<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> for an image with a focal point towards the top right.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">hr</span> /&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"zebra"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"zebra__row"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"zebra__figure"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://placeimg.com/600/400/people"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"object-position: 50% 50%"</span> /&gt;</span>
@@ -202,7 +206,11 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-b76955bf4c7c96aba3c6cb2d5d89c840-panel-view">
     <code class="Code Code--lang-twig">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"zebra"</span>&gt;</span>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>Useful Note<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>: Images are <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>img<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> elements not backgrounds, sized with object fit so they can take advantage of srcset if possible. Add an inline style [x/y] of <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>object-position<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> to set the focal point for the image, eg. <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>style="object-position: 70% 20%"<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> for an image with a focal point towards the top right.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">hr</span>/&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"zebra"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"zebra__row"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"zebra__figure"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://placeimg.com/600/400/people"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"object-position: 50% 50%"</span> /&gt;</span>
@@ -299,7 +307,7 @@
         <span class="hljs-keyword">@media</span> (min-width: <span class="hljs-variable">$zebra-inline-breakpoint</span>) {
           <span class="hljs-comment">// this is a weird exception because it was designed so the reverse row has no margin on the left,</span>
           <span class="hljs-comment">// while the offwhite background row does, because it looks better</span>
-          <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">1</span> #{<span class="hljs-number">50%</span> + <span class="hljs-variable">$zebra-overlap</span>};
+          <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">0</span> #{<span class="hljs-number">50%</span> + <span class="hljs-variable">$zebra-overlap</span>};
           <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">0</span>;
           <span class="hljs-attribute">margin-right</span>: -#{<span class="hljs-variable">$zebra-overlap</span>};
         }

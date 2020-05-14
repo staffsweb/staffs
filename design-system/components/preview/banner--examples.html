@@ -18,7 +18,9 @@
 
 <main style="padding: 2rem 0;">
     <div class="wrap">
-        <p>Add a class of <code>banner__bg--blurred</code> to the <code>banner__bg</code> to <em>always</em> blur the background - backgrounds will by default be blurred only at small viewport widths.</p>
+        <p>Backgrounds are <code>img</code> elements not backgrounds, sized with object fit so they can take advantage of srcset if possible. Add an inline style [x/y] of <code>object-position</code> to set the focal point for the image, eg. <code>style="object-position: 70% 20%"</code> for an image with a focal point towards the top right.</p>
+
+<p>Add a class of <code>banner__bg--blurred</code> to the <code>banner__bg</code> to <em>always</em> blur the background - backgrounds will by default be blurred only at small viewport widths.</p>
 
 <div class="grid  grid-2-cols@tablet">
   <div>
