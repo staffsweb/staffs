@@ -124,7 +124,7 @@ body { font-family: 'Roboto', sans-serif; line-height: 2; color: black; backgrou
 
 ::selection { background: rgba(215, 10, 38, 0.2); }
 
-a { color: black; cursor: pointer; text-decoration: underline; }
+a { color: black; cursor: pointer; }
 
 a:hover { color: #d70a26; }
 
@@ -132,13 +132,9 @@ a img { border: 0px; }
 
 a[href^="mailto"], .url { word-break: break-word; }
 
-@supports (text-decoration-thickness: 0.125em) { a { -webkit-text-decoration-color: #d70a26; text-decoration-color: #d70a26; text-decoration-thickness: 0.125em; } }
-
-@supports (text-decoration-thickness: 0.125em) { nav a, ul a, ol a, table a { -webkit-text-decoration-color: revert; text-decoration-color: revert; text-decoration-thickness: revert; } }
+p a:not([class]) { text-decoration: none; font-weight: 500; border-bottom: 1px solid #dddddd; }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { line-height: 1.2; font-weight: 500; }
-
-h1 a, a h1, .h1 a, a .h1, h2 a, a h2, .h2 a, a .h2, h3 a, a h3, .h3 a, a .h3, h4 a, a h4, .h4 a, a .h4, h5 a, a h5, .h5 a, a .h5, h6 a, a h6, .h6 a, a .h6 { color: black; }
 
 h1, h2, h3, h4, h5, h6 { margin: 4rem 0 1.5rem; }
 
@@ -156,17 +152,7 @@ h5, .h5 { font-size: 1.2rem; }
 
 h6, .h6 { font-size: 1rem; }
 
-@media (min-width: 47.5em) and (min-height: 30em) { h1, .h1 { font-size: 4rem; } }
-
-@media (min-width: 47.5em) and (min-height: 30em) { h2, .h2 { font-size: 3rem; } }
-
-@media (min-width: 47.5em) and (min-height: 30em) { h3, .h3 { font-size: 2.5rem; } }
-
-@media (min-width: 47.5em) and (min-height: 30em) { h4, .h4 { font-size: 1.75rem; } }
-
-@media (min-width: 47.5em) and (min-height: 30em) { h5, .h5 { font-size: 1.5rem; } }
-
-@media (min-width: 47.5em) and (min-height: 30em) { h6, .h6 { font-size: 1.2rem; } }
+@media (min-width: 47.5em) and (min-height: 30em) { h1, .h1 { font-size: 4rem; } h2, .h2 { font-size: 3rem; } h3, .h3 { font-size: 2.5rem; } h4, .h4 { font-size: 1.75rem; } h5, .h5 { font-size: 1.5rem; } h6, .h6 { font-size: 1.2rem; } }
 
 p { margin: 0 0 1.5em; }
 
@@ -540,7 +526,7 @@ section:first-child { margin-top: 0; }
 
 .card { position: relative; --accent-color: #970048; margin-bottom: 2rem; border-left: 0.25rem solid var(--accent-color); }
 
-.card a { color: var(--accent-color); -webkit-text-decoration-color: var(--accent-color); text-decoration-color: var(--accent-color); text-decoration: none; }
+.card a { color: var(--accent-color); text-decoration: none; border-bottom: none; }
 
 .card a:hover { text-decoration: underline; }
 

@@ -1,4 +1,5 @@
 label: Meta
+status: ready
 
 variants:
   - name: inline-dd

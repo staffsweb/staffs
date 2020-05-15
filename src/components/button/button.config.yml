@@ -1,5 +1,5 @@
 name: Button
-status: wip
+status: ready
 collated: false
 context:
   text: 'Regular button'

@@ -107,34 +107,42 @@ $border-accent-width: $spacing-2xs;
 }
 
 @mixin base-elements {
-  a { color: $link-color; cursor: pointer; text-decoration: underline; }
+  a { color: $link-color; cursor: pointer; }
   a:hover { color: $link-hover-color }
   a img {	border: 0px; }
   a[href^="mailto"], .url { word-break: break-word; }
 
-  a {
-    @supports (text-decoration-thickness: 0.125em) {
-      text-decoration-color: $primary;
-      text-decoration-thickness: 0.125em;
-    }
+  //a {
+  //  @supports (text-decoration-thickness: 1px) {
+  //    border-bottom: none;
+  //    text-decoration: underline;
+  //    text-decoration-color: $grey-shadow;
+  //    text-decoration-thickness: 1px;
+  //  }
+  //}
+
+  p a:not([class]) {
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid $grey-light
   }
 
-  nav, ul, ol, table {
-    a {
-      @supports (text-decoration-thickness: 0.125em) {
-        text-decoration-color: revert;
-        text-decoration-thickness: revert;
-      }
-    }
-  }
+  //nav, ul, ol, table {
+  //  a {
+  //    @supports (text-decoration-thickness: 1px) {
+  //      text-decoration-color: revert;
+  //      text-decoration-thickness: revert;
+  //    }
+  //  }
+  //}
 
   #{headings()} {
     @include line-height('headings');
     font-weight: 500;
 
-    a, a & {
-      color: black;
-    }
+    //a, a & {
+    //  color: black;
+    //}
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -154,9 +162,9 @@ $border-accent-width: $spacing-2xs;
       @include typescale($size);
     }
   }
-  @each $name, $size in $headings-map {
-    #{$name}, .#{$name} {
-      @media (min-width: 47.5em) and (min-height: 30em) {
+  @media (min-width: 47.5em) and (min-height: 30em) {
+    @each $name, $size in $headings-map {
+      #{$name}, .#{$name} {
         @include typescale($size);
       }
     }

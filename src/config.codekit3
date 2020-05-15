@@ -1170,6 +1170,14 @@
 		"oAP": "/components/tabs/tabs.twig",
 		"oF": 0
 		},
+	"/components/tag/tag.config.yml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/tag/tag.config.yml",
+		"oF": 0
+		},
 	"/components/tag/tag.twig": {
 		"cB": 0,
 		"ft": 8192,
@@ -1309,6 +1317,14 @@
 		"oF": 0,
 		"oS": 2,
 		"sct": 1
+		},
+	"/components/zebra/zebra.config.yml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/zebra/zebra.config.yml",
+		"oF": 0
 		},
 	"/components/zebra/zebra.twig": {
 		"cB": 0,

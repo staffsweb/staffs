@@ -1,5 +1,5 @@
 name: Tile
-status: wip
+status: not_started
 context:
   classes: []
   image: 'masthead.jpg'
