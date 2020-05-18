@@ -77,8 +77,9 @@
       //display: block;
       //left: 0;
       //opacity: 1;
+      visibility: visible;
       transform: translateX(0);
-      transition: transform 100ms, opacity 100ms;
+      transition: transform 100ms, visibility 100ms;
     }
   }
 
@@ -93,6 +94,7 @@
   &__level {
     position: absolute;
     //opacity: 0;
+    visibility: hidden;
     background: $greyblue-light;
     top: 0;
     right: 0;
@@ -103,7 +105,7 @@
     padding-left: $spacing-lg;
     box-sizing: border-box;
     z-index: 1;
-    transition: transform 100ms, opacity 0ms;
+    transition: transform 100ms, visibility 100ms;
   }
 
   &__levelHeader {

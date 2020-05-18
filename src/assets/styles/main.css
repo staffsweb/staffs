@@ -628,11 +628,11 @@ section:first-child { margin-top: 0; }
 
 .megaNav li:last-child > a { border-bottom: 0; }
 
-.megaNav .is-expanded > .megaNav__level { -webkit-transform: translateX(0); transform: translateX(0); -webkit-transition: opacity 100ms, -webkit-transform 100ms; transition: opacity 100ms, -webkit-transform 100ms; transition: transform 100ms, opacity 100ms; transition: transform 100ms, opacity 100ms, -webkit-transform 100ms; }
+.megaNav .is-expanded > .megaNav__level { visibility: visible; -webkit-transform: translateX(0); transform: translateX(0); -webkit-transition: visibility 100ms, -webkit-transform 100ms; transition: visibility 100ms, -webkit-transform 100ms; transition: transform 100ms, visibility 100ms; transition: transform 100ms, visibility 100ms, -webkit-transform 100ms; }
 
 .megaNav__controls { position: absolute; left: 0; width: 3rem; overflow: hidden; }
 
-.megaNav__level { position: absolute; background: #e8ebed; top: 0; right: 0; left: 0; min-height: 100vh; -webkit-transform: translateX(100%); transform: translateX(100%); padding-left: 1.5rem; -webkit-box-sizing: border-box; box-sizing: border-box; z-index: 1; -webkit-transition: opacity 0ms, -webkit-transform 100ms; transition: opacity 0ms, -webkit-transform 100ms; transition: transform 100ms, opacity 0ms; transition: transform 100ms, opacity 0ms, -webkit-transform 100ms; }
+.megaNav__level { position: absolute; visibility: hidden; background: #e8ebed; top: 0; right: 0; left: 0; min-height: 100vh; -webkit-transform: translateX(100%); transform: translateX(100%); padding-left: 1.5rem; -webkit-box-sizing: border-box; box-sizing: border-box; z-index: 1; -webkit-transition: visibility 100ms, -webkit-transform 100ms; transition: visibility 100ms, -webkit-transform 100ms; transition: transform 100ms, visibility 100ms; transition: transform 100ms, visibility 100ms, -webkit-transform 100ms; }
 
 .megaNav__levelHeader { margin-left: -1.5rem; padding-left: 1.5rem; background: white; color: #394851; font-weight: 500; border-bottom: 1px solid #bebfc1; }
 
