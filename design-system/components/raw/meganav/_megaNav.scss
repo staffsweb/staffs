@@ -7,12 +7,13 @@
 
 .megaNav {
   $border-color: #bebfc1;
+  $row-padding-y: 0.75em;
 
   position: absolute;
   left: 0;
   right: 0;
   background: white;
-  font-size: 1.1em;
+  font-size: 1.2em;
   z-index: 9;
   overflow: auto;
   box-sizing: border-box;
@@ -30,7 +31,7 @@
     > a {
       position: relative;
       display: block;
-      padding: 0.5em 2em 0.5em 0;
+      padding: $row-padding-y 2em $row-padding-y 0;
       color: $slate;
       border-bottom: 1px solid $border-color;
 
@@ -44,7 +45,7 @@
           position: absolute;
           display: block;
           right: 0;
-          top: 0.5em;
+          top: $row-padding-y;
           width: 2em;
           height: 2em;
           background: url('../img/icon-gt-red.svg') no-repeat center center;
@@ -104,7 +105,7 @@
 
   &__levelHeader {
     margin-left: -$spacing-lg;
-    padding: 0.5em 2em 0.5em $spacing-lg;
+    padding-left: $spacing-lg;
     background: white;
     color: $slate;
     font-weight: 500;
@@ -117,7 +118,8 @@
     width: 100%;
     background: none;
     border: 0;
-    padding: 0.5em 2em;
+    @include line-height('spaced');
+    padding: $row-padding-y 2em;
     box-sizing: border-box;
     cursor: pointer;
     text-align: center;
@@ -131,7 +133,7 @@
       position: absolute;
       display: block;
       left: 0;
-      top: 0;
+      top: $row-padding-y;
       width: 1em;
       height: 2em;
       background: url('../img/icon-gt-red.svg') no-repeat center center;

@@ -15,7 +15,8 @@
   background: white;
   font-size: 1.2em;
   z-index: 9;
-  overflow: auto;
+  overflow: hidden;
+  overflow-y: auto;
   box-sizing: border-box;
   overflow-scrolling: touch;
 
@@ -73,9 +74,11 @@
     }
 
     > .megaNav__level {
-      display: block;
+      //display: block;
       //left: 0;
+      //opacity: 1;
       transform: translateX(0);
+      transition: transform 100ms, opacity 100ms;
     }
   }
 
@@ -89,7 +92,7 @@
 
   &__level {
     position: absolute;
-    display: none;
+    //opacity: 0;
     background: $greyblue-light;
     top: 0;
     right: 0;
@@ -100,7 +103,7 @@
     padding-left: $spacing-lg;
     box-sizing: border-box;
     z-index: 1;
-    transition: all 100ms;
+    transition: transform 100ms, opacity 0ms;
   }
 
   &__levelHeader {
@@ -164,7 +167,9 @@
     margin-left: $spacing-3xl;
     border-left: 1px solid $border-color;
     box-sizing: border-box;
-    overflow: auto;
+    overflow: hidden;
+    overflow-y: auto;
+    overflow-scrolling: touch;
 
     &-item {
       > a {

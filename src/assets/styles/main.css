@@ -614,7 +614,7 @@ section:first-child { margin-top: 0; }
 
 .site-logo { position: absolute; width: 15%; max-width: 12em; }
 
-.megaNav { position: absolute; left: 0; right: 0; background: white; font-size: 1.2em; z-index: 9; overflow: auto; -webkit-box-sizing: border-box; box-sizing: border-box; overflow-scrolling: touch; }
+.megaNav { position: absolute; left: 0; right: 0; background: white; font-size: 1.2em; z-index: 9; overflow: hidden; overflow-y: auto; -webkit-box-sizing: border-box; box-sizing: border-box; overflow-scrolling: touch; }
 
 .no-js .megaNav ul ul { padding-left: 0.75rem; }
 
@@ -628,11 +628,11 @@ section:first-child { margin-top: 0; }
 
 .megaNav li:last-child > a { border-bottom: 0; }
 
-.megaNav .is-expanded > .megaNav__level { display: block; -webkit-transform: translateX(0); transform: translateX(0); }
+.megaNav .is-expanded > .megaNav__level { -webkit-transform: translateX(0); transform: translateX(0); -webkit-transition: opacity 100ms, -webkit-transform 100ms; transition: opacity 100ms, -webkit-transform 100ms; transition: transform 100ms, opacity 100ms; transition: transform 100ms, opacity 100ms, -webkit-transform 100ms; }
 
 .megaNav__controls { position: absolute; left: 0; width: 3rem; overflow: hidden; }
 
-.megaNav__level { position: absolute; display: none; background: #e8ebed; top: 0; right: 0; left: 0; min-height: 100vh; -webkit-transform: translateX(100%); transform: translateX(100%); padding-left: 1.5rem; -webkit-box-sizing: border-box; box-sizing: border-box; z-index: 1; -webkit-transition: all 100ms; transition: all 100ms; }
+.megaNav__level { position: absolute; background: #e8ebed; top: 0; right: 0; left: 0; min-height: 100vh; -webkit-transform: translateX(100%); transform: translateX(100%); padding-left: 1.5rem; -webkit-box-sizing: border-box; box-sizing: border-box; z-index: 1; -webkit-transition: opacity 0ms, -webkit-transform 100ms; transition: opacity 0ms, -webkit-transform 100ms; transition: transform 100ms, opacity 0ms; transition: transform 100ms, opacity 0ms, -webkit-transform 100ms; }
 
 .megaNav__levelHeader { margin-left: -1.5rem; padding-left: 1.5rem; background: white; color: #394851; font-weight: 500; border-bottom: 1px solid #bebfc1; }
 
@@ -644,7 +644,7 @@ section:first-child { margin-top: 0; }
 
 .megaNav__levelFooter { position: relative; margin-left: -1.5rem; padding: 0.75rem; padding-left: 1.5rem; background: #394851; color: white; z-index: 0; }
 
-.megaNav__topLevel { position: relative; margin: 0; height: 100vh; background: #e8ebed; padding: 0 0 1.5rem 1.5rem; margin-left: 3rem; border-left: 1px solid #bebfc1; -webkit-box-sizing: border-box; box-sizing: border-box; overflow: auto; }
+.megaNav__topLevel { position: relative; margin: 0; height: 100vh; background: #e8ebed; padding: 0 0 1.5rem 1.5rem; margin-left: 3rem; border-left: 1px solid #bebfc1; -webkit-box-sizing: border-box; box-sizing: border-box; overflow: hidden; overflow-y: auto; overflow-scrolling: touch; }
 
 .megaNav__topLevel-item > a { font-weight: 500; }
 
