@@ -442,7 +442,8 @@
   <span class="hljs-attribute">background</span>: white;
   <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.2em</span>;
   <span class="hljs-attribute">z-index</span>: <span class="hljs-number">9</span>;
-  <span class="hljs-attribute">overflow</span>: auto;
+  <span class="hljs-attribute">overflow</span>: hidden;
+  <span class="hljs-attribute">overflow-y</span>: auto;
   <span class="hljs-attribute">box-sizing</span>: border-box;
   <span class="hljs-attribute">overflow</span>-scrolling: touch;
 
@@ -500,9 +501,11 @@
     }
 
     &gt; <span class="hljs-selector-class">.megaNav__level</span> {
-      <span class="hljs-attribute">display</span>: block;
+      <span class="hljs-comment">//display: block;</span>
       <span class="hljs-comment">//left: 0;</span>
+      <span class="hljs-comment">//opacity: 1;</span>
       <span class="hljs-attribute">transform</span>: translateX(<span class="hljs-number">0</span>);
+      <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">100ms</span>, opacity <span class="hljs-number">100ms</span>;
     }
   }
 
@@ -516,7 +519,7 @@
 
   &amp;__level {
     <span class="hljs-attribute">position</span>: absolute;
-    <span class="hljs-attribute">display</span>: none;
+    <span class="hljs-comment">//opacity: 0;</span>
     <span class="hljs-attribute">background</span>: <span class="hljs-variable">$greyblue-light</span>;
     <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
     <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
@@ -527,7 +530,7 @@
     <span class="hljs-attribute">padding-left</span>: <span class="hljs-variable">$spacing-lg</span>;
     <span class="hljs-attribute">box-sizing</span>: border-box;
     <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1</span>;
-    <span class="hljs-attribute">transition</span>: all <span class="hljs-number">100ms</span>;
+    <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">100ms</span>, opacity <span class="hljs-number">0ms</span>;
   }
 
   &amp;__levelHeader {
@@ -591,7 +594,9 @@
     <span class="hljs-attribute">margin-left</span>: <span class="hljs-variable">$spacing-3xl</span>;
     <span class="hljs-attribute">border-left</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$border-color</span>;
     <span class="hljs-attribute">box-sizing</span>: border-box;
-    <span class="hljs-attribute">overflow</span>: auto;
+    <span class="hljs-attribute">overflow</span>: hidden;
+    <span class="hljs-attribute">overflow-y</span>: auto;
+    <span class="hljs-attribute">overflow</span>-scrolling: touch;
 
     &amp;-item {
       &gt; <span class="hljs-selector-tag">a</span> {
@@ -652,7 +657,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">3.8 KB</span>
+                    <span class="Meta-value">4 KB</span>
                 </li>
             </ul>
         </div>
