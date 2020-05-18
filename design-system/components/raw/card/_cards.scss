@@ -8,8 +8,9 @@ $card__internal-spacing: $spacing-sm;
 
   a {
     color: var(--accent-color);
-    text-decoration-color: var(--accent-color);
+    //text-decoration-color: var(--accent-color);
     text-decoration: none;
+    border-bottom: none;
 
     &:hover {
       text-decoration: underline;
