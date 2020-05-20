@@ -91,6 +91,19 @@
     overflow: hidden;
   }
 
+  &__close {
+    content: '';
+    border: 0;
+    box-sizing: border-box;
+    display: block;
+    width: $spacing-3xl;
+    height: $spacing-4xl;
+    margin-top: 0.1em; // yeah this is a bit of a magic number to get it to align with the closeLevel arrows
+    background: url('../img/icon-x-red.svg') no-repeat center center;
+    background-size: 1rem;
+    cursor: pointer;
+  }
+
   &__level {
     position: absolute;
     //opacity: 0;
