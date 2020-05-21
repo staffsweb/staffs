@@ -4,11 +4,12 @@ $card__internal-spacing: $spacing-sm;
   position: relative;
   --accent-color: #{$maroon};
   margin-bottom: $spacing-xl;
+  border-left: $border-accent-width solid $maroon;
   border-left: $border-accent-width solid var(--accent-color);
 
   a {
+    color: #{$maroon};
     color: var(--accent-color);
-    //text-decoration-color: var(--accent-color);
     text-decoration: none;
     border-bottom: none;
 
@@ -37,6 +38,10 @@ $card__internal-spacing: $spacing-sm;
     margin-top: 0;
     margin-bottom: $spacing-md;
   }
+
+  .blockquote__title {
+    color: var(--accent-color);
+  }
 }
 
 //--
@@ -57,10 +62,6 @@ $card__internal-spacing: $spacing-sm;
 
 .card--testimonial {
   padding-bottom: $card__internal-spacing;
-
-  .blockquote__title {
-    color: var(--accent-color);
-  }
 }
 
 .card--course {

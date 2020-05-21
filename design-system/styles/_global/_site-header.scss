@@ -12,4 +12,8 @@
   @media (min-width: 47.5em) and (min-height: 30em) {
     left: $body-border-width--wide;
   }
+
+  > .wrap {
+    position: relative;
+  }
 }

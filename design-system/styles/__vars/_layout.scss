@@ -20,7 +20,7 @@ $body-border-width: $spacing-2xs;
 $body-border-width--wide: $spacing-md;
 $body-border-breakpoint: $wrap-full-gutter-width;
 
-$site-header-nav-visible: 50rem;
+$megaNav-full-breakpoint: 70rem; // if you change this, you'll need to update the corresponding matchMedia (megaNavFullBreakpoint) in app.js
 
 
 @mixin clearfix {

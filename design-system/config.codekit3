@@ -7,7 +7,7 @@
 		"uuidString": "009D710E-07FC-47DF-A834-ED680750A27A"
 		}
 	],
-"creatorBuild": "32137",
+"creatorBuild": "32147",
 "files": {
 	"/apple-touch-icon-precomposed.png": {
 		"ft": 32768,
@@ -121,6 +121,56 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/img/icon-circle-padlock-purple.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/img/icon-circle-padlock-purple.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/img/icon-gt-red.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/img/icon-gt-red.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/img/icon-moneybag-pink.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/img/icon-moneybag-pink.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/img/icon-threepeople-red.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/img/icon-threepeople-red.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/img/icon-x-red.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/img/icon-x-red.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/img/logo.png": {
 		"ft": 32768,
 		"iS": 33392,
@@ -176,14 +226,33 @@
 		"sC": 3,
 		"tS": 1
 		},
+	"/js/app.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/js/app.min.js.map",
+		"oF": 0
+		},
 	"/js/vendor/jquery.cookies.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/js/vendor/jquery.cookies.min.js",
-		"oF": 0,
+		"oF": 1,
+		"sC": 3,
+		"tS": 1
+		},
+	"/js/vendor/jquery.hoverIntent.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/js/vendor/jquery.hoverIntent.min.js",
+		"oF": 1,
 		"sC": 3,
 		"tS": 1
 		},
@@ -302,32 +371,6 @@
 		"oS": 2,
 		"sct": 1
 		},
-	"/styles/_components/_boxes.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 4,
-		"ec": 1,
-		"ft": 4,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "/styles/_components/_boxes.css",
-		"oF": 0,
-		"oS": 2,
-		"sct": 1
-		},
-	"/styles/_components/_cards.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 4,
-		"ec": 1,
-		"ft": 4,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "/styles/_components/_cards.css",
-		"oF": 0,
-		"oS": 2,
-		"sct": 1
-		},
 	"/styles/_components/_embeds.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -337,45 +380,6 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/styles/_components/_embeds.css",
-		"oF": 0,
-		"oS": 2,
-		"sct": 1
-		},
-	"/styles/_components/_icons.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 4,
-		"ec": 1,
-		"ft": 4,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "/styles/_components/_icons.css",
-		"oF": 0,
-		"oS": 2,
-		"sct": 1
-		},
-	"/styles/_components/_lists.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 4,
-		"ec": 1,
-		"ft": 4,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "/styles/_components/_lists.css",
-		"oF": 0,
-		"oS": 2,
-		"sct": 1
-		},
-	"/styles/_components/_panels.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 4,
-		"ec": 1,
-		"ft": 4,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "/styles/_components/_panels.css",
 		"oF": 0,
 		"oS": 2,
 		"sct": 1
@@ -590,7 +594,7 @@
 		"oS": 2,
 		"sct": 1
 		},
-	"/Users/shm00n/Web/staffs/src/components/breadcrumb/_breadcrumb.scss": {
+	"/Users/shm00n/Web/staffs/src/components/banner/_banner.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
@@ -598,7 +602,20 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/Users/shm00n/Web/staffs/src/components/breadcrumb/_breadcrumb.css",
+		"oAP": "/Users/shm00n/Web/staffs/src/components/banner/_banner.css",
+		"oF": 0,
+		"oS": 2,
+		"sct": 1
+		},
+	"/Users/shm00n/Web/staffs/src/components/box/_boxes.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 4,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/Users/shm00n/Web/staffs/src/components/box/_boxes.css",
 		"oF": 0,
 		"oS": 2,
 		"sct": 1
@@ -629,6 +646,45 @@
 		"oS": 2,
 		"sct": 1
 		},
+	"/Users/shm00n/Web/staffs/src/components/card/_cards.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 4,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/Users/shm00n/Web/staffs/src/components/card/_cards.css",
+		"oF": 0,
+		"oS": 2,
+		"sct": 1
+		},
+	"/Users/shm00n/Web/staffs/src/components/icons/_icons.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 4,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/Users/shm00n/Web/staffs/src/components/icons/_icons.css",
+		"oF": 0,
+		"oS": 2,
+		"sct": 1
+		},
+	"/Users/shm00n/Web/staffs/src/components/list/_lists.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 4,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/Users/shm00n/Web/staffs/src/components/list/_lists.css",
+		"oF": 0,
+		"oS": 2,
+		"sct": 1
+		},
 	"/Users/shm00n/Web/staffs/src/components/masthead/_masthead.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -638,6 +694,45 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/Users/shm00n/Web/staffs/src/components/masthead/_masthead.css",
+		"oF": 0,
+		"oS": 2,
+		"sct": 1
+		},
+	"/Users/shm00n/Web/staffs/src/components/megaNav/_megaNav.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 4,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/Users/shm00n/Web/staffs/src/components/megaNav/_megaNav.css",
+		"oF": 0,
+		"oS": 2,
+		"sct": 1
+		},
+	"/Users/shm00n/Web/staffs/src/components/meta/_meta.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 4,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/Users/shm00n/Web/staffs/src/components/meta/_meta.css",
+		"oF": 0,
+		"oS": 2,
+		"sct": 1
+		},
+	"/Users/shm00n/Web/staffs/src/components/quote/quotes.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 4,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/Users/shm00n/Web/staffs/src/components/quote/quotes.css",
 		"oF": 0,
 		"oS": 2,
 		"sct": 1
@@ -681,7 +776,7 @@
 		"oS": 2,
 		"sct": 1
 		},
-	"/Users/shm00n/Web/staffs/src/components/top-bar/_top-bar.scss": {
+	"/Users/shm00n/Web/staffs/src/components/zebra/_zebra.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
@@ -689,7 +784,7 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/Users/shm00n/Web/staffs/src/components/top-bar/_top-bar.css",
+		"oAP": "/Users/shm00n/Web/staffs/src/components/zebra/_zebra.css",
 		"oF": 0,
 		"oS": 2,
 		"sct": 1

@@ -588,11 +588,12 @@
   <span class="hljs-attribute">position</span>: relative;
   --accent-<span class="hljs-attribute">color</span>: #{<span class="hljs-variable">$maroon</span>};
   <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-variable">$spacing-xl</span>;
+  <span class="hljs-attribute">border-left</span>: <span class="hljs-variable">$border-accent-width</span> solid <span class="hljs-variable">$maroon</span>;
   <span class="hljs-attribute">border-left</span>: <span class="hljs-variable">$border-accent-width</span> solid var(--accent-color);
 
   <span class="hljs-selector-tag">a</span> {
+    <span class="hljs-attribute">color</span>: #{<span class="hljs-variable">$maroon</span>};
     <span class="hljs-attribute">color</span>: var(--accent-color);
-    <span class="hljs-comment">//text-decoration-color: var(--accent-color);</span>
     <span class="hljs-attribute">text-decoration</span>: none;
     <span class="hljs-attribute">border-bottom</span>: none;
 
@@ -621,6 +622,10 @@
     <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">0</span>;
     <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-variable">$spacing-md</span>;
   }
+
+  <span class="hljs-selector-class">.blockquote__title</span> {
+    <span class="hljs-attribute">color</span>: var(--accent-color);
+  }
 }
 
 <span class="hljs-comment">//--</span>
@@ -641,10 +646,6 @@
 
 <span class="hljs-selector-class">.card--testimonial</span> {
   <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-variable">$card__internal-spacing</span>;
-
-  <span class="hljs-selector-class">.blockquote__title</span> {
-    <span class="hljs-attribute">color</span>: var(--accent-color);
-  }
 }
 
 <span class="hljs-selector-class">.card--course</span> {
