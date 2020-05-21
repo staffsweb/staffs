@@ -26,13 +26,13 @@
 
     <nav class="megaNav" id="megaNav" role="navigation">
       <div class="megaNav__controls">
-        <button>Close</button>
+        <button class="megaNav__close" id="megaNav__close"><span class="visually-hidden">Close</span></button>
       </div>
 
       <div class="megaNav__topLevel">
         <ul class="megaNav__topLevel-list">
           <li class="megaNav__topLevel-item ">
-            <a class="has-children" href="#">Courses</a>
+            <a class="has-children" href="">Courses</a>
 
             <div class="megaNav__level  megaNav__secondLevel">
               <div class="megaNav__levelHeader">
@@ -41,7 +41,7 @@
 
               <ul class="megaNav__levelList">
                 <li class="  ">
-                  <a class="has-children" href="#">Subject Areas</a>
+                  <a class="has-children" href="">Subject Areas</a>
 
                   <div class="megaNav__level  megaNav__thirdLevel">
                     <div class="megaNav__levelHeader">
@@ -49,24 +49,24 @@
                     </div>
 
                     <ul class="megaNav__levelList  megaNav__thirdLevel-list">
-                      <li class=""><a class="" href="#">Accounting and Finance</a></li>
-                      <li class=""><a class="" href="#">Allied Health and Paramedic Science</a></li>
-                      <li class=""><a class="" href="#">Animation</a></li>
-                      <li class=""><a class="" href="#">Art and Design</a></li>
-                      <li class=""><a class="" href="#">Augmented and Virtual Realities</a></li>
-                      <li class=""><a class="" href="#">Biological and Biomedical Sciences</a></li>
-                      <li class=""><a class="" href="#">Business and Marketing</a></li>
-                      <li class=""><a class="" href="#">Computer Science, AI and Robotics</a></li>
-                      <li class=""><a class="" href="#">Drama, Performance and Theatre Studies</a></li>
-                      <li class=""><a class="" href="#">Education</a></li>
-                      <li class=""><a class="" href="#">Engineering</a></li>
-                      <li class=""><a class="" href="#">...</a></li>
+                      <li class=""><a class="" href="">Accounting and Finance</a></li>
+                      <li class=""><a class="" href="">Allied Health and Paramedic Science</a></li>
+                      <li class=""><a class="" href="">Animation</a></li>
+                      <li class=""><a class="" href="">Art and Design</a></li>
+                      <li class=""><a class="" href="">Augmented and Virtual Realities</a></li>
+                      <li class=""><a class="" href="">Biological and Biomedical Sciences</a></li>
+                      <li class=""><a class="" href="">Business and Marketing</a></li>
+                      <li class=""><a class="" href="">Computer Science, AI and Robotics</a></li>
+                      <li class=""><a class="" href="">Drama, Performance and Theatre Studies</a></li>
+                      <li class=""><a class="" href="">Education</a></li>
+                      <li class=""><a class="" href="">Engineering</a></li>
+                      <li class=""><a class="" href="">...</a></li>
                     </ul>
                   </div>
                 </li>
-                <li class=""><a class="" href="#">Undergraduate</a></li>
+                <li class=""><a class="" href="">Undergraduate</a></li>
                 <li class="">
-                  <a class="has-children" href="#">Postgraduate</a>
+                  <a class="has-children" href="">Postgraduate</a>
 
                   <div class="megaNav__level  megaNav__thirdLevel">
                     <div class="megaNav__levelHeader">
@@ -74,72 +74,83 @@
                     </div>
 
                     <ul class="megaNav__levelList  megaNav__thirdLevel-list">
-                      <li class=""><a class="" href="#">PG Accounting and Finance</a></li>
-                      <li class=""><a class="" href="#">PG Allied Health and Paramedic Science</a></li>
-                      <li class=""><a class="" href="#">PG Animation</a></li>
-                      <li class=""><a class="" href="#">PG Art and Design</a></li>
-                      <li class=""><a class="" href="#">PG Augmented and Virtual Realities</a></li>
-                      <li class=""><a class="" href="#">PG Biological and Biomedical Sciences</a></li>
-                      <li class=""><a class="" href="#">PG Business and Marketing</a></li>
-                      <li class=""><a class="" href="#">PG Computer Science, AI and Robotics</a></li>
-                      <li class=""><a class="" href="#">PG Drama, Performance and Theatre Studies</a></li>
-                      <li class=""><a class="" href="#">PG Education</a></li>
-                      <li class=""><a class="" href="#">PG Engineering</a></li>
-                      <li class=""><a class="" href="#">PG ...</a></li>
-                      <li class=""><a class="" href="#">PG Accounting and Finance</a></li>
-                      <li class=""><a class="" href="#">PG Allied Health and Paramedic Science</a></li>
-                      <li class=""><a class="" href="#">PG Animation</a></li>
-                      <li class=""><a class="" href="#">PG Art and Design</a></li>
-                      <li class=""><a class="" href="#">PG Augmented and Virtual Realities</a></li>
-                      <li class=""><a class="" href="#">PG Biological and Biomedical Sciences</a></li>
-                      <li class=""><a class="" href="#">PG Business and Marketing</a></li>
-                      <li class=""><a class="" href="#">PG Computer Science, AI and Robotics</a></li>
-                      <li class=""><a class="" href="#">PG Drama, Performance and Theatre Studies</a></li>
-                      <li class=""><a class="" href="#">PG Education</a></li>
-                      <li class=""><a class="" href="#">PG Engineering</a></li>
-                      <li class=""><a class="" href="#">PG ...</a></li>
+                      <li class=""><a class="" href="">PG Accounting and Finance</a></li>
+                      <li class=""><a class="" href="">PG Allied Health and Paramedic Science</a></li>
+                      <li class=""><a class="" href="">PG Animation</a></li>
+                      <li class=""><a class="" href="">PG Art and Design</a></li>
+                      <li class=""><a class="" href="">PG Augmented and Virtual Realities</a></li>
+                      <li class=""><a class="" href="">PG Biological and Biomedical Sciences</a></li>
+                      <li class=""><a class="" href="">PG Business and Marketing</a></li>
+                      <li class=""><a class="" href="">PG Computer Science, AI and Robotics</a></li>
+                      <li class=""><a class="" href="">PG Drama, Performance and Theatre Studies</a></li>
+                      <li class=""><a class="" href="">PG Education</a></li>
+                      <li class=""><a class="" href="">PG Engineering</a></li>
+                      <li class=""><a class="" href="">PG ...</a></li>
+                      <li class=""><a class="" href="">PG Accounting and Finance</a></li>
+                      <li class=""><a class="" href="">PG Allied Health and Paramedic Science</a></li>
+                      <li class=""><a class="" href="">PG Animation</a></li>
+                      <li class=""><a class="" href="">PG Art and Design</a></li>
+                      <li class=""><a class="" href="">PG Augmented and Virtual Realities</a></li>
+                      <li class=""><a class="" href="">PG Biological and Biomedical Sciences</a></li>
+                      <li class=""><a class="" href="">PG Business and Marketing</a></li>
+                      <li class=""><a class="" href="">PG Computer Science, AI and Robotics</a></li>
+                      <li class=""><a class="" href="">PG Drama, Performance and Theatre Studies</a></li>
+                      <li class=""><a class="" href="">PG Education</a></li>
+                      <li class=""><a class="" href="">PG Engineering</a></li>
+                      <li class=""><a class="" href="">PG ...</a></li>
                     </ul>
                   </div>
                 </li>
-                <li class=""><a class="" href="#">Professional</a></li>
-                <li class=""><a class="" href="#">Distance Leaning</a></li>
-                <li class=""><a class="" href="#">Partnerships</a></li>
-                <li class=""><a class="" href="#">Apprenticeships</a></li>
+                <li class=""><a class="" href="">Professional</a></li>
+                <li class=""><a class="" href="">Distance Leaning</a></li>
+                <li class=""><a class="" href="">Partnerships</a></li>
+                <li class=""><a class="" href="">Apprenticeships</a></li>
               </ul>
 
               <div class="megaNav__levelFooter">
                 <p>Find a Course</p>
                 <form>
-                  <input type="text" placeholder="Search on keyword / subject" />
-                  <input type="submit" class="button" />
+                  <input type="text" placeholder="Search on keyword / subject"/>
+                  <input type="submit" class="button"/>
                 </form>
               </div>
             </div>
           </li>
           <li class="megaNav__topLevel-item">
-            <a class="has-children" href="#">Student life</a>
+            <a class="has-children" href="">Student life</a>
 
             <div class="megaNav__level  megaNav__secondLevel">
               <div class="megaNav__levelHeader">
                 <button class="megaNav__closeLevel">Student Life</button>
               </div>
 
+              <ul class="megaNav__levelList">
+                <li><a href="">Accommodation</a></li>
+                <li><a href="">Campus and facilities</a></li>
+                <li><a href="">Life in Staffordshire</a></li>
+                <li><a href="">Getting involved</a></li>
+                <li><a href="">Student support</a></li>
+                <li><a href="">Life on campus</a></li>
+                <li><a href="">Sport</a></li>
+              </ul>
+
               <div class="megaNav__levelFooter">
-                <p>What’s it like living here?</p> <p><a href="#" class="button">Book an open day</a></p>
+                <p>What’s it like living here?</p>
+                <p><a href="" class="button">Book an open day</a></p>
               </div>
             </div>
           </li>
           <li class="megaNav__topLevel-item">
-            <a class="" href="#">International</a>
+            <a class="" href="">International</a>
           </li>
           <li class="megaNav__topLevel-item">
-            <a class="" href="#">Research</a>
+            <a class="" href="">Research</a>
           </li>
           <li class="megaNav__topLevel-item">
-            <a class="" href="#">Business</a>
+            <a class="" href="">Business</a>
           </li>
           <li class="megaNav__topLevel-item">
-            <a class="" href="#">About us</a>
+            <a class="" href="">About us</a>
           </li>
         </ul>
       </div>

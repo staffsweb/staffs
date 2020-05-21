@@ -245,6 +245,28 @@
 		"sC": 3,
 		"tS": 1
 		},
+	"/assets/js/vendor/jquery.hoverIntent.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 1,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/js/vendor/jquery.hoverIntent.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/assets/js/vendor/smartresize.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 1,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/js/vendor/smartResize.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
 	"/assets/staffs-logo.png": {
 		"ft": 32768,
 		"iS": 33358,

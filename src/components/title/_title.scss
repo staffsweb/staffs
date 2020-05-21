@@ -1,7 +1,7 @@
 .title {
   position: relative;
-  --color: white;
   --background: #{$red};
+  --color: white;
   max-width: 42em; // @TODO: why? what does this relate to? make a variable
   margin-bottom: $spacing-lg;
   margin-right: $spacing-md;
@@ -17,7 +17,9 @@
   left: $spacing-xs;
   padding: 0.25rem;
   line-height: 1.4;
+  background: $red;
   background: var(--background);
+  color: white;
   color: var(--color);
   box-shadow: -$spacing-xs 0 0 0 var(--background), $spacing-xs 0 0 0 var(--background);
   box-decoration-break: clone;
@@ -42,6 +44,7 @@
       height: 2px;
       transform: rotate(225deg);
       transform-origin: top left;
+      background: $red;
       background: var(--background);
     }
   }

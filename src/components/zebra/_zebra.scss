@@ -52,7 +52,7 @@
     z-index: 1;
 
     @media (min-width: $zebra-inline-breakpoint) {
-      flex: 1 0 50%;
+      flex: -1 0 50%; // this is set to -1 for IE11, so check it if you change it.
       margin: $spacing-4xl auto $spacing-2xl;
       margin-left: -#{$zebra-overlap};
       margin-right: $zebra-overlap;
