@@ -782,11 +782,13 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 0.875rem; font-style
 
 .zebra__figure { position: relative; margin: 0; -webkit-box-flex: 1; -ms-flex: 1 0 50%; flex: 1 0 50%; -ms-flex-item-align: stretch; align-self: stretch; z-index: 0; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
+@media (min-width: 50rem) { .zebra__figure { -webkit-box-flex: 0; -ms-flex: 0 0 50%; flex: 0 0 50%; } }
+
 .zebra__figure img { -o-object-fit: cover; object-fit: cover; -o-object-position: center center; object-position: center center; height: 100%; }
 
 .zebra__body { position: relative; -webkit-box-flex: 1; -ms-flex: 1 1 20em; flex: 1 1 20em; min-width: 50%; -webkit-box-sizing: border-box; box-sizing: border-box; background-color: white; padding: 1rem; z-index: 1; }
 
-@media (min-width: 50rem) { .zebra__body { -webkit-box-flex: 0; -ms-flex: 0 0 50%; flex: 0 0 50%; margin: 4rem auto 2.5rem; left: -5%; } }
+@media (min-width: 50rem) { .zebra__body { -webkit-box-flex: 0; -ms-flex: 0 0 45%; flex: 0 0 45%; margin: 4rem auto 2.5rem; left: -5%; } }
 
 .zebra__title { margin-top: -2rem; margin-right: 1rem; }
 
