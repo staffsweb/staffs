@@ -21,7 +21,7 @@
           // this is a weird exception because it was designed so the reverse row has no margin on the left,
           // while the offwhite background row does, because it looks better
           // it's done in a particular way so IE likes it.
-          flex: 1 0 50%;  // IE.
+          flex: 1 0 50%; // IE.
           left: $zebra-overlap;
           margin-left: -#{$zebra-overlap};
         }
@@ -37,14 +37,23 @@
     z-index: 0;
     box-sizing: border-box;
 
+    display: flex;
+    align-items: center;
+
+    @supports (object-fit: cover) {
+      align-items: stretch;
+    }
+
     @media (min-width: $zebra-inline-breakpoint) {
       flex: 0 0 50%; // IE.
     }
 
     img {
-      object-fit: cover;
-      object-position: center center;
-      height: 100%;
+      @supports (object-fit: cover) {
+        object-fit: cover;
+        object-position: center center;
+        height: 100%;
+      }
     }
   }
 
@@ -58,7 +67,7 @@
     z-index: 1;
 
     @media (min-width: $zebra-inline-breakpoint) {
-      flex: 0 0 45%;  // IE.
+      flex: 0 0 45%; // IE.
       margin: $spacing-4xl auto $spacing-2xl;
       left: -#{$zebra-overlap};
     }
