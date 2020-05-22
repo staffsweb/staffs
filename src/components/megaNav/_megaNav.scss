@@ -1,10 +1,4 @@
 
-.site-logo {
-  position: absolute;
-  width: 15%;
-  max-width: 12em;
-}
-
 .megaNav {
   $border-color: #bebfc1;
   $row-padding-y: 0.75em;
@@ -13,6 +7,7 @@
   position: absolute;
   left: 0;
   right: 0;
+  top: 0;
   background: white;
   font-size: 1.2em;
   z-index: 9;
@@ -20,8 +15,18 @@
   overflow-y: auto;
   box-sizing: border-box;
   overflow-scrolling: touch;
+  transform: translateX(-150%);
+  transition: transform 200ms ease-out;
+
+  &.is-open {
+    transform: translateX(0);
+  }
 
   @media (min-width: $megaNav-full-breakpoint) {
+    top: auto;
+    width: 100%;
+    transform: none;
+    transition: none;
     font-size: 1em;
     position: static;
     overflow: visible;
@@ -402,5 +407,21 @@
 }
 
 .toggle-megaNav {
-  display: none;
+  display: block;
+  height: 2em;
+  width: 2em;
+  margin: $spacing-sm;
+  padding: 0;
+  border: 0;
+  background: url('../img/icon-hamburger-white.svg') center center no-repeat;
+  background-size: 100%;
+  z-index: 2;
+
+  &.is-toggled {
+    opacity: 0.5;
+  }
+
+  @media (min-width: $megaNav-full-breakpoint) {
+    display: none;
+  }
 }

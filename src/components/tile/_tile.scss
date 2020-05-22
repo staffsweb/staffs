@@ -1,0 +1,71 @@
+.tile {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  outline: 1px solid $grey-light;
+  box-shadow: 0 0.1em 0.25em rgba(0, 0, 0, 0.15);
+  min-height: 10em;
+
+  &__figure {
+    position: relative;
+    margin: 0;
+    z-index: 0;
+
+    @supports (object-fit: cover) {
+      img {
+        height: 100%;
+        max-height: 75vmin;
+        object-fit: cover;
+        object-position: center center;
+      }
+    }
+  }
+
+  &__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-right: 2rem;
+    max-height: 80%;
+    padding: 0 $spacing-md 1px;
+    background: white;
+    box-sizing: border-box;
+    z-index: 1;
+
+    &-body {
+    }
+  }
+
+  &__title {
+    margin-top: -$spacing-md;
+  }
+
+  &--no-shadow {
+    box-shadow: none;
+  }
+}
+
+a.tile {
+  //.tile__figure {
+  //  img {
+  //    filter: grayscale(100%);
+  //  }
+  //}
+
+  &:hover,
+  &:focus {
+    color: $slate;
+
+    //.tile__figure {
+    //  img {
+    //    filter: grayscale(0);
+    //  }
+    //}
+  }
+
+  &:focus {
+    outline-width: 3px;
+    outline-color: $red;
+    z-index: 2;
+  }
+}
