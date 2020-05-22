@@ -8,7 +8,33 @@
 
   let megaNavInit = function () {
     let megaNav = $('#megaNav');
+    let megaNavToggle = $('#toggle-megaNav');
+    let megaNavClose = $('#megaNav__close');
     let megaNavFullBreakpoint = window.matchMedia('(min-width: 70rem)');
+
+    megaNavToggle.on('click', function () {
+      var navIsOpen = megaNav.hasClass('is-open');
+
+      if (navIsOpen) {
+        $(this).removeClass('is-toggled');
+        megaNav.removeClass('is-open');
+      } else {
+        $(this).addClass('is-toggled');
+        megaNav.addClass('is-open');
+      }
+    });
+
+    megaNavClose.on('click', function () {
+      var navIsOpen = megaNav.hasClass('is-open');
+
+      if (navIsOpen) {
+        megaNavToggle.removeClass('is-toggled');
+        megaNav.removeClass('is-open');
+      } else {
+        megaNavToggle.addClass('is-toggled');
+        megaNav.addClass('is-open');
+      }
+    });
 
     function updateMegaNavBreakpointClass() {
       if (megaNavFullBreakpoint.matches) {
@@ -89,6 +115,10 @@
       e.preventDefault();
       $(this).closest('.is-expanded').removeClass('is-expanded');
     });
+
+
+    // @TODO: HANDLE KEYBOARD FOCUS BETTER!
+
   };
 
   // --

@@ -13,7 +13,18 @@
     left: $body-border-width--wide;
   }
 
-  > .wrap {
-    position: relative;
+  &__flexContainer {
+    display: flex;
+    justify-content: space-between;
+
+    @media (min-width: $megaNav-full-breakpoint) {
+      position: relative;
+    }
+  }
+
+  .site-logo {
+    width: 15%;
+    max-width: 12em;
+    max-height: 2em;
   }
 }
