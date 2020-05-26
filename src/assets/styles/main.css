@@ -760,6 +760,30 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 0.875rem; font-style
 
 .slab--bg-slate { background-color: #394851; color: #fff; }
 
+.tabs { margin-bottom: 2rem; border-bottom: 0.25rem solid #394851; padding-bottom: 0.75rem; }
+
+.tabs__nav { margin: 0 -1px 0 0; border-bottom: 0.25rem solid #394851; text-align: center; }
+
+@media (min-width: 65rem) { .tabs__nav { overflow: hidden; overflow-x: auto; } }
+
+.tabs__list { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -ms-flex-line-pack: center; align-content: center; -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; }
+
+@media (min-width: 65rem) { .tabs__list { -ms-flex-wrap: nowrap; flex-wrap: nowrap; margin: 0; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; } }
+
+.tabs__item { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-line-pack: center; align-content: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; margin: 0 0.25rem 0.5rem; }
+
+@media (min-width: 65rem) { .tabs__item { margin: 0 1px 0 0; } }
+
+.tabs__link { display: inline-block; font-weight: 500; border-radius: 1em; padding: 0.2em 1em; background: #e8ebed; }
+
+.tabs__link:hover { color: #394851; }
+
+@media (min-width: 65rem) { .tabs__link { padding: 0.5em 1em; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; min-width: 8em; border-radius: 0.2em 0.2em 0 0; } }
+
+@media (min-width: 75rem) { .tabs__link { padding: 0.75em 2em; } }
+
+.tabs__link.is-selected { background: #394851; color: white; }
+
 .tile { position: relative; display: block; overflow: hidden; outline: 1px solid #dddddd; -webkit-box-shadow: 0 0.1em 0.25em rgba(0, 0, 0, 0.15); box-shadow: 0 0.1em 0.25em rgba(0, 0, 0, 0.15); min-height: 10em; }
 
 .tile__figure { position: relative; margin: 0; z-index: 0; }

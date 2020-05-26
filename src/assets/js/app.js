@@ -4,9 +4,13 @@
 // @codekit-prepend quiet './vendor/smartResize';
 
 
+// @TODO: at some point, it'd probably be nice if functions sat in 'eachIndividualComponentName.js'
+// in each component folder and were imported rather than being here, like their Sass files
+
 (function ($) {
 
   let megaNavInit = function () {
+
     let megaNav = $('#megaNav');
     let megaNavToggle = $('#toggle-megaNav');
     let megaNavClose = $('#megaNav__close');
@@ -121,10 +125,41 @@
 
   };
 
+  let tabsInit = function () {
+    // @TODO: check accessibility - add AIRA/keyboard if needed
+
+    $('.js-tabs').each(function () {
+      let tabs = $(this);
+      let links = $('.tabs__link', tabs);
+      let sections = $('.tabs__section', tabs);
+      let defaultTab = $('.tabs__link.is-selected', tabs).attr('href');
+
+      sections.hide();
+
+      if (defaultTab) {
+        $(defaultTab).show();
+      } else {
+        $(links[0]).addClass('is-selected');
+        $(sections[0]).show().addClass('is-expanded');
+      }
+
+      links.on('click', function () {
+        let targetHref = $(this).attr('href');
+
+        sections.hide().removeClass('is-expanded');
+        $(targetHref).show().addClass('is-expanded');
+
+        links.removeClass('is-selected');
+        $(this).addClass('is-selected');
+      })
+    });
+  };
+
   // --
 
   $(document).ready(function () {
     megaNavInit();
+    tabsInit();
   });
 
 })(jQuery);
