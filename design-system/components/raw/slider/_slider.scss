@@ -69,10 +69,16 @@
 
 }
 
-.facility-slider {
+.slider--tiles {
   .slick-slide {
     // these are sized in JS,
     // see sliderInit() in app.js for .js-facility-slider
     // not ideal as they're pixel based not (r)em, but will do for now.
+  }
+}
+
+.slider--event-cards {
+  .slick-slide {
+    margin-right: $grid-gutter;
   }
 }

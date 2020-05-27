@@ -833,6 +833,8 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 0.875rem; font-style
 
 .slick-disabled { opacity: 0; visibility: hidden; }
 
+.slider--event-cards .slick-slide { margin-right: 1.5rem; }
+
 .tabs { margin-bottom: 2rem; border-bottom: 0.25rem solid #394851; padding-bottom: 0.75rem; }
 
 .tabs__nav { margin: 0 -1px 0 0; border-bottom: 0.25rem solid #394851; text-align: center; }
