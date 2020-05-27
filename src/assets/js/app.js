@@ -173,7 +173,7 @@
         {
           breakpoint: 600,
           settings: {
-            slidesToShow: 1.1,
+            slidesToShow: 1.25,
             slidesToScroll: 1
           }
         }

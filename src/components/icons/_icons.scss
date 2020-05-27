@@ -2,20 +2,12 @@
 // the loop at the bottom of the file will create classes for them
 
 $icons: (
-    'menu-pink': 'svg',
-    'search-pink': 'svg',
-    'basket': 'svg',
-    'user': 'svg',
-    'heart': 'svg',
-    'phone': 'svg',
-    'facebook': 'svg',
-    'facebook-pink-circle': 'svg',
-    'twitter': 'svg',
-    'twitter-pink-circle': 'svg',
-    'youtube': 'svg',
-    'youtube-pink-circle': 'svg',
-    //'linkedin': 'svg',
-    'linkedin-pink-circle': 'svg',
+    //'facebook-white': 'svg',
+    //'twitter-white': 'svg',
+    //'youtube-white': 'svg',
+    //'pinterest-white': 'svg',
+    //'linkedin-white': 'svg',
+    //'youtube-white': 'svg',
 );
 
 .icon {
@@ -47,7 +39,7 @@ $icons: (
   }
 
   @each $name, $extension in $icons {
-    &-#{$name} {
+    &--#{$name} {
       background-image: url('../img/icon-#{$name}.#{$extension}');
     }
   }

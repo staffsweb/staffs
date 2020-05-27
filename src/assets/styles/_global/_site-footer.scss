@@ -1,20 +1,33 @@
 .footer-site {
-  background: #fff;
+  background: $slate;
+  color: #fff;
   clear: both;
   position: relative;
-  padding: $spacing-4xl 0 $spacing-xl;
-  text-align: center;
+  padding: 0 0 $spacing-xl;
+
+  a:not(.button) {
+    color: white;
+  }
+
+  h6 {
+    margin-top: $spacing-lg;
+  }
 
   &__logo {
     display: inline-block;
-    margin: $spacing-lg auto $spacing-sm;
-    padding: $spacing-md;
+    margin: 0 0 $spacing-lg;
 
     img {
       display: block;
       margin: auto;
       width: 7.5em;
       max-width: 25vmin;
+    }
+  }
+
+  &__social-list {
+    .icon {
+      @include typescale('5xl');
     }
   }
 
