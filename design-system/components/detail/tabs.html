@@ -71,7 +71,7 @@
 
 <div class="Status Status--tag">
 
-<label class="Status-label" style="background-color: #D70A26; border-color: #D70A26;">Not started</label>
+<label class="Status-label" style="background-color: #ff9233; border-color: #ff9233;">WIP</label>
 
 </div>
 
@@ -123,6 +123,10 @@
         
         
         
+        <li class="Browser-tab Browser-tab--resources" data-role="tab">
+            <a href="#browser-cb000618492fc7ad0b322b5671cf5154-panel-assets">Assets</a>
+        </li>
+        
         
         
         
@@ -147,30 +151,41 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-cb000618492fc7ad0b322b5671cf5154-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs"</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs  js-tabs"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__nav"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#section1"</span>&gt;</span>First: Section 1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#section2"</span>&gt;</span>Section Two<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#section3"</span>&gt;</span>Third Section<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#section4"</span>&gt;</span>Fourth and Final<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__list"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#section1"</span>&gt;</span>First: Section 1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__link  is-selected"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#section2"</span>&gt;</span>Section Two<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#section3"</span>&gt;</span>Third Section<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#section4"</span>&gt;</span>Fourth and Final<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#section5"</span>&gt;</span>Just kidding, here's a really long fifth item<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__section"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"section1"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h3"</span>&gt;</span>section1<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
         Lipsum has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
     <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__section"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"section2"</span>&gt;</span>
-        Lipsum has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h3"</span>&gt;</span>section2<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"intro"</span>&gt;</span>Expanded by default with a class of <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>is-selected<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> on the link<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
     <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__section"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"section3"</span>&gt;</span>
-        Lipsum has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h3"</span>&gt;</span>section3<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry
     <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__section"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"section4"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h3"</span>&gt;</span>section4<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
         Lipsum has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__section"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"section5"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h3"</span>&gt;</span>section5<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
     <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
@@ -180,30 +195,41 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-cb000618492fc7ad0b322b5671cf5154-panel-view">
     <code class="Code Code--lang-twig">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs"</span>&gt;</span>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs  js-tabs"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__nav"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#section1"</span>&gt;</span>First: Section 1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#section2"</span>&gt;</span>Section Two<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#section3"</span>&gt;</span>Third Section<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#section4"</span>&gt;</span>Fourth and Final<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__list"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#section1"</span>&gt;</span>First: Section 1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__link  is-selected"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#section2"</span>&gt;</span>Section Two<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#section3"</span>&gt;</span>Third Section<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#section4"</span>&gt;</span>Fourth and Final<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#section5"</span>&gt;</span>Just kidding, here's a really long fifth item<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__section"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"section1"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h3"</span>&gt;</span>section1<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
     </span><span class="hljs-template-variable">{{ lorem }}</span><span class="xml">
   <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__section"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"section2"</span>&gt;</span>
-    </span><span class="hljs-template-variable">{{ lorem }}</span><span class="xml">
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h3"</span>&gt;</span>section2<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"intro"</span>&gt;</span>Expanded by default with a class of <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>is-selected<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> on the link<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    </span><span class="hljs-template-variable">{{ loremLong }}</span><span class="xml">
   <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__section"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"section3"</span>&gt;</span>
-    </span><span class="hljs-template-variable">{{ lorem }}</span><span class="xml">
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h3"</span>&gt;</span>section3<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    </span><span class="hljs-template-variable">{{ loremShort }}</span><span class="xml">
   <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__section"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"section4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h3"</span>&gt;</span>section4<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
     </span><span class="hljs-template-variable">{{ lorem }}</span><span class="xml">
+  <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__section"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"section5"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h3"</span>&gt;</span>section5<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    </span><span class="hljs-template-variable">{{ loremLong }}</span><span class="xml">
   <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></pre>
     </code>
@@ -212,6 +238,222 @@
     
     
 
+
+<div class="Browser-panel Browser-resources" data-role="tab-panel" id="browser-cb000618492fc7ad0b322b5671cf5154-panel-assets">
+    <div class="FileBrowser">
+
+        <div class="FileBrowser-selectWrapper">
+            <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
+            <select class="FileBrowser-select" id="filebrowser-select">
+                
+                <option value="file-f15edf5537cac9a809ca4b11c372b1c4">_tabs.scss</option>
+                
+                <option value="file-85f5e03a4ec7e87f23e18d4ffea8551c">tabs.js</option>
+                
+                <option value="file-06bc0533d5fe2b34d5eb7fe09f7c4b90">tabs.min.js</option>
+                
+                <option value="file-5e4b20606d834040d70b204ab89d4743">tabs.min.js.map</option>
+                
+            </select>
+        </div>
+
+        
+        <div class="FileBrowser-item is-active" id="file-f15edf5537cac9a809ca4b11c372b1c4" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-SCSS FileBrowser-code">
+                                <pre><span class="hljs-selector-class">.tabs</span> {
+  <span class="hljs-variable">$tabs-inline-breakpoint</span>: <span class="hljs-number">65rem</span>;
+
+  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-variable">$spacing-xl</span>;
+  <span class="hljs-attribute">border-bottom</span>: <span class="hljs-variable">$spacing-2xs</span> solid <span class="hljs-variable">$slate</span>;
+  <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-variable">$spacing-sm</span>;
+
+  &amp;__nav {
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">border-bottom</span>: <span class="hljs-variable">$spacing-2xs</span> solid <span class="hljs-variable">$slate</span>;
+    <span class="hljs-attribute">text-align</span>: center;
+
+    <span class="hljs-keyword">@media</span> (min-width: <span class="hljs-variable">$tabs-inline-breakpoint</span>) {
+      <span class="hljs-attribute">overflow</span>: hidden;
+      <span class="hljs-attribute">overflow-x</span>: auto;
+    }
+  }
+
+  &amp;__list {
+    <span class="hljs-attribute">display</span>: flex;
+    <span class="hljs-attribute">flex-wrap</span>: wrap;
+    <span class="hljs-attribute">justify-content</span>: center;
+    <span class="hljs-attribute">align-content</span>: center;
+    <span class="hljs-attribute">align-items</span>: flex-end;
+
+    <span class="hljs-keyword">@media</span> (min-width: <span class="hljs-variable">$tabs-inline-breakpoint</span>) {
+      <span class="hljs-attribute">flex-wrap</span>: nowrap;
+      <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+      <span class="hljs-attribute">justify-content</span>: flex-start;
+    }
+  }
+
+  &amp;__item {
+    <span class="hljs-attribute">display</span>: flex;
+    <span class="hljs-attribute">align-content</span>: center;
+    <span class="hljs-attribute">justify-content</span>: center;
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-variable">$spacing-2xs</span> <span class="hljs-variable">$spacing-xs</span>;
+
+    <span class="hljs-keyword">@media</span> (min-width: <span class="hljs-variable">$tabs-inline-breakpoint</span>) {
+      <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>;
+    }
+  }
+
+  &amp;__link {
+    <span class="hljs-attribute">display</span>: inline-block;
+    <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">500</span>;
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">1em</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.2em</span> <span class="hljs-number">1em</span>;
+    <span class="hljs-attribute">background</span>: <span class="hljs-variable">$greyblue-light</span>;
+
+    &amp;<span class="hljs-selector-pseudo">:hover</span> {
+      <span class="hljs-attribute">color</span>: <span class="hljs-variable">$slate</span>;
+    }
+
+    <span class="hljs-keyword">@media</span> (min-width: <span class="hljs-variable">$tabs-inline-breakpoint</span>) {
+      <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.5em</span> <span class="hljs-number">1em</span>;
+      <span class="hljs-attribute">display</span>: flex;
+      <span class="hljs-attribute">justify-content</span>: center;
+      <span class="hljs-attribute">align-items</span>: center;
+      <span class="hljs-attribute">min-width</span>: <span class="hljs-number">8em</span>;
+      <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">0.2em</span> <span class="hljs-number">0.2em</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>;
+    }
+
+    <span class="hljs-keyword">@media</span> (min-width: <span class="hljs-variable">$tabs-inline-breakpoint</span> + <span class="hljs-number">10rem</span>) {
+      <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.75em</span> <span class="hljs-number">2em</span>;
+    }
+
+    &amp;<span class="hljs-selector-class">.is-selected</span> {
+      <span class="hljs-attribute">background</span>: <span class="hljs-variable">$slate</span>;
+      <span class="hljs-attribute">color</span>: white;
+    }
+  }
+}</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/tabs/_tabs.scss"><span>/components/raw/tabs/_tabs.scss</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/components/tabs/_tabs.scss</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">1.4 KB</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-85f5e03a4ec7e87f23e18d4ffea8551c" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-JavaScript FileBrowser-code">
+                                <pre><span class="hljs-comment">/* global jQuery */</span>
+
+(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">$</span>) </span>{
+  <span class="hljs-comment">// @<span class="hljs-doctag">TODO:</span> at some point, it'd probably be nice if tabsInit() sat here</span>
+  <span class="hljs-comment">//  and was imported rather than being in app.js</span>
+})(jQuery);</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/tabs/tabs.js"><span>/components/raw/tabs/tabs.js</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/components/tabs/tabs.js</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">171 Bytes</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-06bc0533d5fe2b34d5eb7fe09f7c4b90" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-JavaScript FileBrowser-code">
+                                <pre><span class="hljs-meta">"use strict"</span>;jQuery;
+<span class="hljs-comment">//# sourceMappingURL=tabs.min.js.map</span></pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/tabs/tabs.min.js"><span>/components/raw/tabs/tabs.min.js</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/components/tabs/tabs.min.js</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">57 Bytes</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-5e4b20606d834040d70b204ab89d4743" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-MAP FileBrowser-code">
+                                <pre>{<span class="hljs-attr">"version"</span>:<span class="hljs-number">3</span>,<span class="hljs-attr">"sources"</span>:[<span class="hljs-string">"tabs.js"</span>],<span class="hljs-attr">"names"</span>:[<span class="hljs-string">"jQuery"</span>],<span class="hljs-attr">"mappings"</span>:<span class="hljs-string">"aAKGA"</span>,<span class="hljs-attr">"sourcesContent"</span>:[<span class="hljs-string">"/* global jQuery */\n\n(function ($) {\n  // @TODO: at some point, it'd probably be nice if tabsInit() sat here\n  //  and was imported rather than being in app.js\n})(jQuery);"</span>]}</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/tabs/tabs.min.js.map"><span>/components/raw/tabs/tabs.min.js.map</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/components/tabs/tabs.min.js.map</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">271 Bytes</span>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+</div>
 
 
 
@@ -1753,7 +1995,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
 
 
 </div>
@@ -2130,30 +2372,6 @@
     
 
             </ul>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="top-bar.html" data-pjax>
-                <span>Top Bar</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #D70A26;" title="Not started"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
         </li>
         
     

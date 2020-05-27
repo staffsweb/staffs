@@ -1,116 +1,73 @@
-
-
 <!DOCTYPE html>
-<html class="no-js no-touch" lang="en">
+<html lang="en" dir="ltr" class="no-js">
 <head>
-    
-<script type="text/javascript">(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    window.frctl = {
+        env: 'static'
+    };
+    </script>
+    <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
+    <link rel="shortcut icon" href="../../themes/mandelbrot/favicon.ico" type="image/ico">
 
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta http-equiv="cleartype" content="on" />
+<link rel="stylesheet" href="../../themes/mandelbrot/css/white.css?cachebust=1.2.1" type="text/css">
 
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
-<link href="../../styles/main.css" rel="stylesheet" />
-<link media="print" href="../../styles/print.css" rel="stylesheet" /></head>
 
+<title>Error rendering component everything | Staffordshire University Components</title>
+
+</head>
 <body>
 
-<a class="skip-link screen-reader-text" href="#main-content">Skip to content</a>
 
 
-<div class="masthead" style="background-image: url('../../img/masthead.jpg');">
-    <div class="wrap">
-        <nav class="breadcrumbs">
-  <ul>
-    <li>
-      <a href="#">Home</a>
-    </li>
-    <li>
-      <a href="#">Level 1</a>
-    </li>
-    <li>
-      <a href="#">Level 2</a>
-    </li>
-  </ul>
-</nav>        
-  
-<div class="title  title--has-tail">
-  <h1 class="title__highlight">
-  Shortlisted for "University of the year"
-</h1>
-</div>
+<div class="Frame Frame--full" id="frame">
 
 
+<div class="Error Error--render">
+    <h4 class="Error-title">Error rendering component</h4>
+    <div class="Error-message Prose">
+        <p>Error: Template @top-bar not found</p>
 
-
-
-
-
-
-        
+    </div>
     
-<div class="title  title--bg-white  title--has-tail">
-  <h6 class="title__highlight">
-  - The Times and The Sunday Times Good University Guide 2020
-</h6>
+    <code class="Error-stack">
+        <pre>Error: Error: Template @top-bar not found
+    at /Users/shm00n/Web/staffs/node_modules/@frctl/twig/src/adapter.js:161:24
+    at new Promise (<anonymous>)
+    at TwigAdapter.render (/Users/shm00n/Web/staffs/node_modules/@frctl/twig/src/adapter.js:144:16)
+    at ComponentSource._renderVariant (/Users/shm00n/Web/staffs/node_modules/@frctl/fractal/src/api/components/source.js:207:30)
+    at _renderVariant.next (<anonymous>)
+    at onFulfilled (/Users/shm00n/Web/staffs/node_modules/co/index.js:65:19)
+    at tryCatcher (/Users/shm00n/Web/staffs/node_modules/bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/Users/shm00n/Web/staffs/node_modules/bluebird/js/release/promise.js:547:31)
+    at Promise._settlePromise (/Users/shm00n/Web/staffs/node_modules/bluebird/js/release/promise.js:604:18)
+    at Promise._settlePromise0 (/Users/shm00n/Web/staffs/node_modules/bluebird/js/release/promise.js:649:10)
+    at Promise._settlePromises (/Users/shm00n/Web/staffs/node_modules/bluebird/js/release/promise.js:729:18)
+    at Promise._fulfill (/Users/shm00n/Web/staffs/node_modules/bluebird/js/release/promise.js:673:18)
+    at Promise._resolveCallback (/Users/shm00n/Web/staffs/node_modules/bluebird/js/release/promise.js:466:57)
+    at Promise._settlePromiseFromHandler (/Users/shm00n/Web/staffs/node_modules/bluebird/js/release/promise.js:559:17)
+    at Promise._settlePromise (/Users/shm00n/Web/staffs/node_modules/bluebird/js/release/promise.js:604:18)
+    at Promise._settlePromise0 (/Users/shm00n/Web/staffs/node_modules/bluebird/js/release/promise.js:649:10)
+    at Promise._settlePromises (/Users/shm00n/Web/staffs/node_modules/bluebird/js/release/promise.js:729:18)
+    at Promise._fulfill (/Users/shm00n/Web/staffs/node_modules/bluebird/js/release/promise.js:673:18)
+    at Promise._resolveCallback (/Users/shm00n/Web/staffs/node_modules/bluebird/js/release/promise.js:466:57)
+    at Promise._settlePromiseFromHandler (/Users/shm00n/Web/staffs/node_modules/bluebird/js/release/promise.js:559:17)
+    at Promise._settlePromise (/Users/shm00n/Web/staffs/node_modules/bluebird/js/release/promise.js:604:18)
+    at Promise._settlePromise0 (/Users/shm00n/Web/staffs/node_modules/bluebird/js/release/promise.js:649:10)</pre>
+    </code>
+    
+</div>
+
+
 </div>
 
 
 
 
+<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.2.1"></script>
 
 
 
-
-        
-
-<a href="" class="button">
-    Book an open day
-</a>
-    </div>
-</div>
-
-<main id="main-content" role="main" class="">
-
-</main>
-
-
-
-<footer class="footer-site">
-  <div class="wrap">
-    <div class="grid  grid--spaced  grid-5-cols">
-      <div>
-        <a class="footer-site__logo" title="Home" href="/">
-          <img src="../../img/logo.png" alt="Staffordshire University Logo">
-        </a>
-      </div>
-    </div>
-
-    <div class="grid  grid--spaced  grid-5-cols">
-      <div>address</div>
-      <div></div>
-      <div>Study list</div>
-      <div>Information for</div>
-      <div>Also see</div>
-    </div>
-
-    <div class="grid  grid--spaced">
-      <div>
-        social icons
-      </div>
-    </div>
-  </div>
-</footer>
-
-
-
-
-
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="../../js/app.min.js"></script>
 </body>
 </html>

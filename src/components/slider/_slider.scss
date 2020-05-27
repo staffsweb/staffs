@@ -1,0 +1,78 @@
+@import '../../js/vendor/slick-1.8.1/slick/slick.scss';
+
+.slick-slider {
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: $slate;
+  font-size: 1.5em;
+  width: 1em;
+  height: 1em;
+  padding: 0;
+  text-indent: -999em;
+  color: transparent;
+  border-radius: 100%;
+  border: 0;
+  cursor: pointer;
+  z-index: 2;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  @media (min-width: $wrap-large-gutter-width) {
+    font-size: 2.5em;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    margin: auto;
+    width: 1em;
+    height: 1em;
+    background: url('../img/icon-gt-white.svg') no-repeat 55% 50%;
+    background-size: 30%;
+  }
+}
+
+.slick-next {
+  right: -#{$page-gutter-small/1.5};
+
+  @media (min-width: $wrap-large-gutter-width) {
+    right: -#{$page-gutter-large};
+  }
+}
+
+.slick-prev {
+  left: -#{$page-gutter-small/1.5};
+
+  @media (min-width: $wrap-large-gutter-width) {
+    left: -#{$page-gutter-large};
+  }
+
+  &:before {
+    transform: rotate(180deg);
+  }
+}
+
+.slick-disabled {
+  opacity: 0;
+  visibility: hidden;
+}
+
+// --
+
+.slider {
+
+}
+
+.facility-slider {
+  .slick-slide {
+    // these are sized in JS,
+    // see sliderInit() in app.js for .js-facility-slider
+    // not ideal as they're pixel based not (r)em, but will do for now.
+  }
+}

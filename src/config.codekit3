@@ -141,6 +141,16 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/assets/img/icon-gt-white.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/icon-gt-white.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/assets/img/icon-hamburger-white.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -252,7 +262,7 @@
 		"oA": 0,
 		"oAP": "/assets/js/vendor/jquery.cookies.min.js",
 		"oF": 0,
-		"sC": 3,
+		"sC": 0,
 		"tS": 1
 		},
 	"/assets/js/vendor/jquery.hoverIntent.js": {
@@ -265,6 +275,255 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 1
+		},
+	"/assets/js/vendor/slick-1.8.1/.gitignore": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/js/vendor/slick-1.8.1/.gitignore",
+		"oF": 0
+		},
+	"/assets/js/vendor/slick-1.8.1/bower.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/assets/js/vendor/slick-1.8.1/bower-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/assets/js/vendor/slick-1.8.1/component.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/assets/js/vendor/slick-1.8.1/component-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/assets/js/vendor/slick-1.8.1/CONTRIBUTING.markdown": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/js/vendor/slick-1.8.1/CONTRIBUTING.markdown",
+		"oF": 0
+		},
+	"/assets/js/vendor/slick-1.8.1/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/js/vendor/slick-1.8.1/index.html",
+		"oF": 0
+		},
+	"/assets/js/vendor/slick-1.8.1/ISSUE_TEMPLATE.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/js/vendor/slick-1.8.1/ISSUE_TEMPLATE.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"/assets/js/vendor/slick-1.8.1/LICENSE": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/js/vendor/slick-1.8.1/LICENSE",
+		"oF": 0
+		},
+	"/assets/js/vendor/slick-1.8.1/Makefile": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/js/vendor/slick-1.8.1/Makefile",
+		"oF": 0
+		},
+	"/assets/js/vendor/slick-1.8.1/package.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/assets/js/vendor/slick-1.8.1/package-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/assets/js/vendor/slick-1.8.1/README.markdown": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/js/vendor/slick-1.8.1/README.markdown",
+		"oF": 0
+		},
+	"/assets/js/vendor/slick-1.8.1/slick.jquery.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/assets/js/vendor/slick-1.8.1/slick.jquery-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/assets/js/vendor/slick-1.8.1/slick/ajax-loader.gif": {
+		"ft": 4194304,
+		"iS": 4178,
+		"oA": 0,
+		"oAP": "/assets/js/vendor/slick-1.8.1/slick/ajax-loader.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"/assets/js/vendor/slick-1.8.1/slick/config.rb": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/js/vendor/slick-1.8.1/slick/config.rb",
+		"oF": 0
+		},
+	"/assets/js/vendor/slick-1.8.1/slick/fonts/slick.eot": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/js/vendor/slick-1.8.1/slick/fonts/slick.eot",
+		"oF": 0
+		},
+	"/assets/js/vendor/slick-1.8.1/slick/fonts/slick.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/js/vendor/slick-1.8.1/slick/fonts/slick.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/js/vendor/slick-1.8.1/slick/fonts/slick.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/js/vendor/slick-1.8.1/slick/fonts/slick.ttf",
+		"oF": 0
+		},
+	"/assets/js/vendor/slick-1.8.1/slick/fonts/slick.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/js/vendor/slick-1.8.1/slick/fonts/slick.woff",
+		"oF": 0
+		},
+	"/assets/js/vendor/slick-1.8.1/slick/slick-theme.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/js/vendor/slick-1.8.1/slick/slick-theme-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/js/vendor/slick-1.8.1/slick/slick-theme.less": {
+		"aP": 0,
+		"bl": 0,
+		"eJ": 0,
+		"ft": 1,
+		"iI": 0,
+		"ma": 1,
+		"mS": 0,
+		"oA": 0,
+		"oAP": "/assets/js/vendor/slick-1.8.1/slick/slick-theme.css",
+		"oF": 0,
+		"oS": 0,
+		"rwU": 0,
+		"sI": 0,
+		"sU": 0
+		},
+	"/assets/js/vendor/slick-1.8.1/slick/slick-theme.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 4,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 0,
+		"oAP": "/assets/js/vendor/slick-1.8.1/slick/slick-theme.css",
+		"oF": 0,
+		"oS": 2,
+		"sct": 1
+		},
+	"/assets/js/vendor/slick-1.8.1/slick/slick.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/js/vendor/slick-1.8.1/slick/slick-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/js/vendor/slick-1.8.1/slick/slick.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 1,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/js/vendor/slick-1.8.1/slick/slick.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/assets/js/vendor/slick-1.8.1/slick/slick.less": {
+		"aP": 0,
+		"bl": 0,
+		"eJ": 0,
+		"ft": 1,
+		"iI": 0,
+		"ma": 1,
+		"mS": 0,
+		"oA": 0,
+		"oAP": "/assets/js/vendor/slick-1.8.1/slick/slick.css",
+		"oF": 0,
+		"oS": 0,
+		"rwU": 0,
+		"sI": 0,
+		"sU": 0
+		},
+	"/assets/js/vendor/slick-1.8.1/slick/slick.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 1,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/js/vendor/slick-1.8.1/slick/slick.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/assets/js/vendor/slick-1.8.1/slick/slick.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 4,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 0,
+		"oAP": "/assets/js/vendor/slick-1.8.1/slick/slick.css",
+		"oF": 0,
+		"oS": 2,
+		"sct": 1
 		},
 	"/assets/js/vendor/smartresize.js": {
 		"bF": 0,
@@ -920,6 +1179,14 @@
 		"oAP": "/components/card/card--course.twig",
 		"oF": 0
 		},
+	"/components/card/card--event.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/card/card--event.twig",
+		"oF": 0
+		},
 	"/components/card/card--ksp.twig": {
 		"cB": 0,
 		"ft": 8192,
@@ -1289,6 +1556,35 @@
 		"oAP": "/components/slab/slab.twig",
 		"oF": 0
 		},
+	"/components/slider/_slider.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 4,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/components/slider/_slider.css",
+		"oF": 0,
+		"oS": 2,
+		"sct": 1
+		},
+	"/components/slider/slider--tiles.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/slider/slider--tiles.twig",
+		"oF": 0
+		},
+	"/components/slider/slider.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/slider/slider.twig",
+		"oF": 0
+		},
 	"/components/tabs/_tabs.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -1484,8 +1780,8 @@
 	"creationDate": 608561379.28239501,
 	"displayValue": "staffs",
 	"displayValueWasSetByUser": 1,
-	"iconImageName": "/assets/apple-touch-icon-precomposed.png",
-	"iconImageWasSetByUser": 0
+	"iconImageName": "brackets-red",
+	"iconImageWasSetByUser": 1
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
