@@ -37,10 +37,18 @@ $card__internal-spacing: $spacing-sm;
   &__title {
     margin-top: 0;
     margin-bottom: $spacing-md;
+
+    &--overlap:first-child {
+      margin-top: -#{$spacing-3xl};
+    }
   }
 
   .blockquote__title {
     color: var(--accent-color);
+  }
+
+  .title__highlight {
+    --background: var(--accent-color);
   }
 }
 
@@ -75,5 +83,51 @@ $card__internal-spacing: $spacing-sm;
 
   &__icon {
     //margin-bottom: $card__internal-spacing;
+  }
+}
+
+.card--event {
+  margin-left: $spacing-4xl;
+
+  .card__figure {
+    margin-bottom: -#{$spacing-sm};
+  }
+
+  .card__date {
+    position: absolute;
+    top: 0;
+    left: -$spacing-4xl;
+    width: $spacing-4xl;
+    @include typescale('xs');
+    padding: $spacing-sm 0;
+    color: white;
+    background: $maroon;
+    background: var(--accent-color);
+    line-height: 1;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .card__day {
+    display: block;
+    font-weight: 500;
+    @include typescale('xl');
+
+    @media (min-width: map_get($breakpoint-stages, 'mobile-wide')) {
+      @include typescale('3xl');
+    }
+  }
+
+  @media (min-width: (map_get($breakpoint-stages, 'tablet-wide') + 5rem)) {
+    margin-left: $spacing-5xl;
+
+    .card__date {
+      left: -$spacing-5xl;
+      width: $spacing-5xl;
+    }
+
+    .card__day {
+      @include typescale('5xl');
+    }
   }
 }

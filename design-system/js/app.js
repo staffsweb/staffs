@@ -1,7 +1,9 @@
-/* global jQuery */
 
-// @codekit-prepend quiet './vendor/jquery.hoverIntent';
-// @codekit-prepend quiet './vendor/smartResize';
+
+// @TODO: Learn to module bundle properly and manage dependencies with a proper package manager 🤦
+//@codekit-prepend silent './vendor/jquery.hoverIntent';
+//@codekit-prepend silent './vendor/smartResize';
+//@codekit-prepend silent './vendor/slick-1.8.1/slick/slick';
 
 
 // @TODO: at some point, it'd probably be nice if functions sat in 'eachIndividualComponentName.js'
@@ -155,11 +157,36 @@
     });
   };
 
+  let sliderInit = function () {
+    $('.js-slider--tiles').slick({
+      slidesToShow: 3.1,
+      slidesToScroll: 3,
+      infinite: false,
+      responsive: [
+        {
+          breakpoint: 900,
+          settings: {
+            slidesToShow: 2.1,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1.1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+  };
+
   // --
 
   $(document).ready(function () {
     megaNavInit();
     tabsInit();
+    sliderInit();
   });
 
 })(jQuery);
