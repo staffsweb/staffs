@@ -1585,6 +1585,14 @@
 		"oAP": "/components/slider/slider--tiles.twig",
 		"oF": 0
 		},
+	"/components/slider/slider.config.yml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/slider/slider.config.yml",
+		"oF": 0
+		},
 	"/components/slider/slider.twig": {
 		"cB": 0,
 		"ft": 8192,
