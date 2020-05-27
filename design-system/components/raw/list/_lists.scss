@@ -13,6 +13,22 @@
   }
 }
 
+.list--links {
+  @include line-height('normal');
+
+  li {
+    margin-bottom: $spacing-sm;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 .list--inline-bulleted {
   padding: 0;
 

@@ -1394,25 +1394,6 @@
 		"sC": 3,
 		"tS": 1
 		},
-	"/components/megaNav/megaNav.min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 1,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/components/megaNav/megaNav.min.min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 1
-		},
-	"/components/megaNav/megaNav.min.js.map": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/components/megaNav/megaNav.min.js.map",
-		"oF": 0
-		},
 	"/components/megaNav/megaNav.twig": {
 		"cB": 0,
 		"ft": 8192,
@@ -1648,25 +1629,6 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 1
-		},
-	"/components/tabs/tabs.min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 1,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/components/tabs/tabs.min.min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 1
-		},
-	"/components/tabs/tabs.min.js.map": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/components/tabs/tabs.min.js.map",
-		"oF": 0
 		},
 	"/components/tabs/tabs.twig": {
 		"cB": 0,

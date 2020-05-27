@@ -213,6 +213,22 @@
   }
 }
 
+<span class="hljs-selector-class">.list--links</span> {
+  <span class="hljs-keyword">@include</span> line-height(<span class="hljs-string">'normal'</span>);
+
+  <span class="hljs-selector-tag">li</span> {
+    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-variable">$spacing-sm</span>;
+  }
+
+  <span class="hljs-selector-tag">a</span> {
+    <span class="hljs-attribute">text-decoration</span>: none;
+
+    &amp;<span class="hljs-selector-pseudo">:hover</span> {
+      <span class="hljs-attribute">text-decoration</span>: underline;
+    }
+  }
+}
+
 <span class="hljs-selector-class">.list--inline-bulleted</span> {
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
 
@@ -312,7 +328,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.6 KB</span>
+                    <span class="Meta-value">1.8 KB</span>
                 </li>
             </ul>
         </div>
@@ -335,7 +351,7 @@
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Variants <em class="Meta-count">(4)</em>:</strong>
+            <strong class="Meta-key">Variants <em class="Meta-count">(6)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="">
@@ -350,8 +366,16 @@
                     <span>Inline Bulleted</span>
                 </a>, 
             
+                <a href="list--links.html">
+                    <span>Links</span>
+                </a>, 
+            
                 <a href="list--ordered.html">
                     <span>Ordered</span>
+                </a>, 
+            
+                <a href="list--unstyled.html">
+                    <span>Unstyled</span>
                 </a>
             
             </span>
@@ -1485,8 +1509,56 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="list--links.html" data-pjax>
+                <span>Links</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="list--ordered.html" data-pjax>
                 <span>Ordered</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="list--unstyled.html" data-pjax>
+                <span>Unstyled</span>
                 
 
 <div class="Status Status--unlabelled">
