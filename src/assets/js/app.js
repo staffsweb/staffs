@@ -179,6 +179,35 @@
         }
       ]
     });
+
+    $('.js-slider--event-cards').slick({
+      slidesToShow: 3.1,
+      slidesToScroll: 3,
+      infinite: false,
+      responsive: [
+        {
+          breakpoint: 900,
+          settings: {
+            slidesToShow: 2.1,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 1.5,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 360,
+          settings: {
+            slidesToShow: 1.1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
   };
 
   // --

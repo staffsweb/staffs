@@ -1569,6 +1569,14 @@
 		"oS": 2,
 		"sct": 1
 		},
+	"/components/slider/slider--event-cards.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/slider/slider--event-cards.twig",
+		"oF": 0
+		},
 	"/components/slider/slider--tiles.twig": {
 		"cB": 0,
 		"ft": 8192,
