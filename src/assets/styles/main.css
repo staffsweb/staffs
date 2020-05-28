@@ -602,6 +602,8 @@ section:first-child { margin-top: 0; }
 
 .feature-link p { color: #394851; }
 
+a.feature-link:hover .feature-link__title:after { transform: translateX(0.1rem); }
+
 .icon { position: relative; display: inline-block; width: 1em; height: 1em; text-align: center; background-size: contain; background-position: center center; background-repeat: no-repeat; vertical-align: baseline; top: 0.1em; }
 
 .icon svg, .icon img { width: 100%; max-height: 100%; }

@@ -49,3 +49,13 @@
     color: $slate;
   }
 }
+
+a.feature-link {
+  &:hover {
+    .feature-link__title {
+      &:after {
+        transform: translateX(0.1rem);
+      }
+    }
+  }
+}
