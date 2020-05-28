@@ -1,0 +1,51 @@
+.feature-link {
+  display: block;
+  position: relative;
+  --accent-color: #{$red};
+  margin-bottom: $spacing-xl;
+  color: $slate;
+  padding: 0 calc(#{$spacing-sm} + 2.5%) 0;
+  border-left: $border-accent-width solid $red;
+  border-left: $border-accent-width solid var(--accent-color);
+
+  &__title {
+    display: table;
+    position: relative;
+    margin-bottom: $spacing-xs;
+    padding-right: 1em;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0.05em;
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      margin-left: $spacing-2xs;
+      background: url('../img/icon-gt-red.svg') center center no-repeat;
+      background-size: 40%;
+      vertical-align: text-bottom;
+      transition: transform 75ms ease-out;
+    }
+  }
+
+  &__figure {
+    margin-bottom: $spacing-md;
+  }
+
+  &__content {
+    padding: $spacing-xs 0;
+
+    > :first-child {
+      margin-top: 0;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  p {
+    color: $slate;
+  }
+}
