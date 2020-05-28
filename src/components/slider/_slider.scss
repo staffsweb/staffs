@@ -90,12 +90,13 @@
   }
 
   &__item-title {
-    margin-bottom: $spacing-sm;
-    min-height: 2.8em;
+    margin-bottom: $spacing-lg;
+    min-height: 2.4em; // 2 * line-height @1.2
   }
 
   &__item-description {
-    min-height: 2.4em;
+    min-height: 2.8em; // 2 * line-height @1.4
+    margin-bottom: $spacing-xl;
     @include typescale('sm');
     @include line-height('normal');
   }
