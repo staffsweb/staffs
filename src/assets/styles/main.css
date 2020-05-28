@@ -586,7 +586,7 @@ section:first-child { margin-top: 0; }
 
 @media (min-width: 70rem) { .card--event { margin-left: 6rem; } .card--event .card__date { left: -6rem; width: 6rem; } .card--event .card__day { font-size: 3rem; } }
 
-.feature-link { display: block; position: relative; --accent-color: #d70a26; margin-bottom: 2rem; color: #394851; padding: 0 calc(0.75rem + 2.5%) 0; border-left: 0.25rem solid #d70a26; border-left: 0.25rem solid var(--accent-color); }
+.feature-link { display: block; position: relative; --accent-color: #d70a26; margin-bottom: 2rem; color: #394851; text-decoration: none; padding: 0 calc(0.75rem + 2.5%) 0; border-left: 0.25rem solid #d70a26; border-left: 0.25rem solid var(--accent-color); }
 
 .feature-link__title { display: table; position: relative; margin-bottom: 0.5rem; padding-right: 1em; }
 
