@@ -208,6 +208,37 @@
         }
       ]
     });
+
+    $('.js-slider--accolades').slick({
+      slidesToShow: 5,
+      slidesToScroll: 5,
+      infinite: false,
+      responsive: [
+        {
+          breakpoint: 900,
+          settings: {
+            slidesToShow: 3.1,
+            slidesToScroll: 3
+          }
+        },
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 2.5,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 360,
+          settings: {
+            slidesToShow: 2.1,
+            slidesToScroll: 2
+          }
+        }
+      ]
+    });
+
+
   };
 
   // --

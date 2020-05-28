@@ -7,14 +7,13 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: $slate;
   font-size: 1.5em;
   width: 1em;
   height: 1em;
   padding: 0;
   text-indent: -999em;
+  background: transparent;
   color: transparent;
-  border-radius: 100%;
   border: 0;
   cursor: pointer;
   z-index: 2;
@@ -33,13 +32,14 @@
     margin: auto;
     width: 1em;
     height: 1em;
-    background: url('../img/icon-gt-white.svg') no-repeat 55% 50%;
+    background: $slate url('../img/icon-gt-white.svg') no-repeat 55% 50%;
     background-size: 30%;
+    border-radius: 100%;
   }
 }
 
 .slick-next {
-  right: -#{$page-gutter-small/1.5};
+  right: -#{$page-gutter-small/1.2};
 
   @media (min-width: $wrap-large-gutter-width) {
     right: -#{$page-gutter-large};
@@ -47,7 +47,7 @@
 }
 
 .slick-prev {
-  left: -#{$page-gutter-small/1.5};
+  left: -#{$page-gutter-small/1.2};
 
   @media (min-width: $wrap-large-gutter-width) {
     left: -#{$page-gutter-large};
@@ -80,5 +80,29 @@
 .slider--event-cards {
   .slick-slide {
     margin-right: $grid-gutter;
+  }
+}
+
+.accolade-slider {
+  &__item {
+    text-align: center;
+    margin-right: $grid-gutter-large;
+  }
+
+  &__item-title {
+    margin-bottom: $spacing-sm;
+    min-height: 2.8em;
+  }
+
+  &__item-description {
+    min-height: 2.4em;
+    @include typescale('sm');
+    @include line-height('normal');
+  }
+
+  &__item-img {
+    margin: auto;
+    width: auto;
+    max-height: 2em;
   }
 }

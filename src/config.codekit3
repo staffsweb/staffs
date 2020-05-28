@@ -191,6 +191,50 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/assets/img/logo-guardian.png": {
+		"ft": 32768,
+		"iS": 4546,
+		"oA": 0,
+		"oAP": "/assets/img/logo-guardian.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/img/logo-tef-gold.png": {
+		"ft": 32768,
+		"iS": 10855,
+		"oA": 0,
+		"oAP": "/assets/img/logo-tef-gold.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/img/logo-times.png": {
+		"ft": 32768,
+		"iS": 10843,
+		"oA": 0,
+		"oAP": "/assets/img/logo-times.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/img/logo-wur.png": {
+		"ft": 32768,
+		"iS": 10560,
+		"oA": 0,
+		"oAP": "/assets/img/logo-wur.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/assets/img/logo.png": {
 		"ft": 32768,
 		"iS": 33392,
@@ -1565,6 +1609,14 @@
 		"oF": 0,
 		"oS": 2,
 		"sct": 1
+		},
+	"/components/slider/slider--accolades.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/slider/slider--accolades.twig",
+		"oF": 0
 		},
 	"/components/slider/slider--event-cards.twig": {
 		"cB": 0,
