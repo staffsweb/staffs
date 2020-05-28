@@ -501,14 +501,13 @@
   <span class="hljs-attribute">position</span>: absolute;
   <span class="hljs-attribute">top</span>: <span class="hljs-number">50%</span>;
   <span class="hljs-attribute">transform</span>: translateY(-<span class="hljs-number">50%</span>);
-  <span class="hljs-attribute">background</span>: <span class="hljs-variable">$slate</span>;
   <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.5em</span>;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">1em</span>;
   <span class="hljs-attribute">height</span>: <span class="hljs-number">1em</span>;
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">text-indent</span>: -<span class="hljs-number">999em</span>;
+  <span class="hljs-attribute">background</span>: transparent;
   <span class="hljs-attribute">color</span>: transparent;
-  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">100%</span>;
   <span class="hljs-attribute">border</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">cursor</span>: pointer;
   <span class="hljs-attribute">z-index</span>: <span class="hljs-number">2</span>;
@@ -527,13 +526,14 @@
     <span class="hljs-attribute">margin</span>: auto;
     <span class="hljs-attribute">width</span>: <span class="hljs-number">1em</span>;
     <span class="hljs-attribute">height</span>: <span class="hljs-number">1em</span>;
-    <span class="hljs-attribute">background</span>: url(<span class="hljs-string">'../img/icon-gt-white.svg'</span>) no-repeat <span class="hljs-number">55%</span> <span class="hljs-number">50%</span>;
+    <span class="hljs-attribute">background</span>: <span class="hljs-variable">$slate</span> url(<span class="hljs-string">'../img/icon-gt-white.svg'</span>) no-repeat <span class="hljs-number">55%</span> <span class="hljs-number">50%</span>;
     <span class="hljs-attribute">background-size</span>: <span class="hljs-number">30%</span>;
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">100%</span>;
   }
 }
 
 <span class="hljs-selector-class">.slick-next</span> {
-  <span class="hljs-attribute">right</span>: -#{<span class="hljs-variable">$page-gutter-small</span>/<span class="hljs-number">1.5</span>};
+  <span class="hljs-attribute">right</span>: -#{<span class="hljs-variable">$page-gutter-small</span>/<span class="hljs-number">1.2</span>};
 
   <span class="hljs-keyword">@media</span> (min-width: <span class="hljs-variable">$wrap-large-gutter-width</span>) {
     <span class="hljs-attribute">right</span>: -#{<span class="hljs-variable">$page-gutter-large</span>};
@@ -541,7 +541,7 @@
 }
 
 <span class="hljs-selector-class">.slick-prev</span> {
-  <span class="hljs-attribute">left</span>: -#{<span class="hljs-variable">$page-gutter-small</span>/<span class="hljs-number">1.5</span>};
+  <span class="hljs-attribute">left</span>: -#{<span class="hljs-variable">$page-gutter-small</span>/<span class="hljs-number">1.2</span>};
 
   <span class="hljs-keyword">@media</span> (min-width: <span class="hljs-variable">$wrap-large-gutter-width</span>) {
     <span class="hljs-attribute">left</span>: -#{<span class="hljs-variable">$page-gutter-large</span>};
@@ -575,6 +575,30 @@
   <span class="hljs-selector-class">.slick-slide</span> {
     <span class="hljs-attribute">margin-right</span>: <span class="hljs-variable">$grid-gutter</span>;
   }
+}
+
+<span class="hljs-selector-class">.accolade-slider</span> {
+  &amp;__item {
+    <span class="hljs-attribute">text-align</span>: center;
+    <span class="hljs-attribute">margin-right</span>: <span class="hljs-variable">$grid-gutter-large</span>;
+  }
+
+  &amp;__item-<span class="hljs-selector-tag">title</span> {
+    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-variable">$spacing-sm</span>;
+    <span class="hljs-attribute">min-height</span>: <span class="hljs-number">2.8em</span>;
+  }
+
+  &amp;__item-description {
+    <span class="hljs-attribute">min-height</span>: <span class="hljs-number">2.4em</span>;
+    <span class="hljs-keyword">@include</span> typescale(<span class="hljs-string">'sm'</span>);
+    <span class="hljs-keyword">@include</span> line-height(<span class="hljs-string">'normal'</span>);
+  }
+
+  &amp;__item-<span class="hljs-selector-tag">img</span> {
+    <span class="hljs-attribute">margin</span>: auto;
+    <span class="hljs-attribute">width</span>: auto;
+    <span class="hljs-attribute">max-height</span>: <span class="hljs-number">2em</span>;
+  }
 }</pre>
                             </code>
                             
@@ -591,7 +615,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.4 KB</span>
+                    <span class="Meta-value">1.7 KB</span>
                 </li>
             </ul>
         </div>
@@ -614,11 +638,15 @@
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Variants <em class="Meta-count">(3)</em>:</strong>
+            <strong class="Meta-key">Variants <em class="Meta-count">(4)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="slider--default.html">
                     <span>Default</span>
+                </a>, 
+            
+                <a href="slider--accolades.html">
+                    <span>Accolades</span>
                 </a>, 
             
                 <a href="">
@@ -2234,6 +2262,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="slider--default.html" data-pjax>
                 <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="slider--accolades.html" data-pjax>
+                <span>Accolades</span>
                 
 
 <div class="Status Status--unlabelled">
