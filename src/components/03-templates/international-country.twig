@@ -1,0 +1,97 @@
+{% include '@meganav' %}
+<div class="masthead" style="background-image: url('../../img/masthead.jpg');">
+  <div class="wrap">
+    {% include '@breadcrumbs' %}
+    {% include '@title' with {
+      text: 'Austria',
+      modifiers: ['has-tail'],
+      textElement: 'h1',
+    } %}
+  </div>
+</div>
+
+<main id="main-content" role="main" class="">
+
+  <div class="slab  slab--bg-offwhite">
+    <div class="wrap">
+      <p class="intro">We welcome students from all over the world. Our safe and friendly campus offers award-winning teaching, research excellence, modern accommodation and outstanding facilities..</p>
+    </div>
+  </div>
+
+  <div class="slab">
+    <div class="wrap">
+      <p>Based in the vibrant and cultural city of Stoke-on-Trent, our central location makes a great base for you to explore the rest of the UK.</p>
+      <p>By studying with us, you can achieve a qualification and skills to make a real impact in your chosen career and our dedicated international team is here to support you throughout your journey.</p>
+      <p>Why not take the first step and contact us to discuss your application?</p>
+    </div>
+  </div>
+
+  <div class="slab">
+    <header class="slab__header  section-header  section-header--bg-offwhite  section-header--border-top">
+      <div class="wrap">
+        <div class="section-header__title  title  title--has-tail">
+          <h1 class="h2  title__highlight">Entry Requirements</h1>
+        </div>
+      </div>
+    </header>
+
+    <div class="wrap">
+
+      <div class="tabs  js-tabs">
+        <nav class="tabs__nav">
+          <ul class="tabs__list">
+            <li class="tabs__item"><a class="tabs__link" href="#undergraduate">Undergraduate</a></li>
+            <li class="tabs__item"><a class="tabs__link" href="#postgraduate">Postgraduate</a></li>
+          </ul>
+        </nav>
+
+        <section class="tabs__section" id="undergraduate">
+          <h2 class="visually-hidden">Undergraduate</h2>
+
+          <div class="grid  grid--spaced">
+            <div class="col-3/4@tablet-wide">
+              <h3 class="h4  margin-top-none">Undergraduate (bachelor's) degrees</h3>
+
+              <p>To apply for an undergraduate (bachelor’s) degree you need one of the following qualifications:</p>
+
+              <ul>
+                <li>Obtain 2.3 in the Reifeprufungszeugnis/ Maturazeugnis</li>
+                <li>International Baccalaureate (IB) Diploma with 28 points overall</li>
+                <li>Successful completion of a relevant International Foundation Year from a recognised UK Institution</li>
+                <li>For A-Level requirements, please see the ‘entry requirements’ section on the relevant course page</li>
+              </ul>
+
+              <h3 class="h4">Integrated master's and two-year accelerated degrees</h3>
+
+              <p>To apply for an integrated master’s or two-year accelerated degree you need one of the following qualifications:</p>
+
+              <ul>
+                <li>Obtain 2.0. in the Reifeprufungszeugnis/ Maturazeugnis</li>
+                <li>International Baccalaureate (IB) Diploma with 30 points overall</li>
+                <li>Successful completion of a relevant International Foundation Year from a recognised UK Institution</li>
+                <li>For A-Level requirements, please see the ‘entry requirements’ section on the relevant course page</li>
+              </ul>
+
+              <p>Some of our courses may require more specific qualifications. For the exact entry requirements for your course, please see the individual course pages. If you are not sure and would like further help, please contact us.</p>
+
+              <h3 class="h4">English language requirements</h3>
+
+              <ul>
+                <li>2.0. in the English module of the Reifeprufungszeugnis/ Maturazeugnis</li>
+              </ul>
+            </div>
+
+            <div class="col-1/4@tablet-wide">
+              <div class="box  box--bg-offwhite  box--padded">
+                Contact Us
+              </div>
+            </div>
+        </section>
+
+      </div>
+    </div>
+
+</main>
+
+{% include '@slider--accolades' %}
+{% include '@page-footer' %}

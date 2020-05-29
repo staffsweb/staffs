@@ -1,0 +1,98 @@
+{% include '@meganav' %}
+<div class="masthead" style="background-image: url('../../img/masthead.jpg');">
+  <div class="wrap">
+    {% include '@breadcrumbs' %}
+    {% include '@title' with {
+      text: 'Accommodation',
+      modifiers: ['has-tail'],
+      textElement: 'h1'
+    } %}
+  </div>
+</div>
+
+<main id="main-content" role="main" class="">
+
+  <div class="slab  slab--bg-offwhite">
+    <div class="wrap">
+      <p class="intro">Where you live at university becomes an important part of your student experience. At Staffordshire University, we’ll make sure that you have the best time possible. </p>
+    </div>
+  </div>
+
+  <div class="slab">
+    <div class="wrap">
+      <div class="title  title--has-tail">
+        <h2 class="title__highlight">Guaranteed accommodation</h2>
+      </div>
+      <p>This year we can offer guaranteed accommodation. Find out what this means and check our terms and conditions.</p>
+
+      <div class="grid  grid-2-cols">
+        <div>
+          <a class="feature-link" href="">
+            <div class="feature-link__content">
+              <h3 class="h4 feature-link__title">Accommodation</h3>
+              <p>Where you live is a big part of your student experience and where you’ll meet friends for life.</p>
+            </div>
+          </a>
+        </div>
+
+        <div>
+          <a class="feature-link" href="">
+            <div class="feature-link__content">
+              <h3 class="h4 feature-link__title">Life in Staffordshire</h3>
+              <p>We’ve invested in great new facilities on campus to make Staffordshire University a hub of activity and opportunity.</p>
+            </div>
+          </a>
+        </div>
+
+        <div>
+          <a class="feature-link" href="">
+            <div class="feature-link__content">
+              <h3 class="h4 feature-link__title">Getting involved</h3>
+              <p>{{ loremShort }}</p>
+            </div>
+          </a>
+        </div>
+
+        <div>
+          <a class="feature-link" href="">
+            <div class="feature-link__content">
+              <h3 class="h4 feature-link__title">Campus & facilities</h3>
+              <p>{{ loremShort }}</p>
+            </div>
+          </a>
+        </div>
+
+        <div>
+          <a class="feature-link" href="">
+            <div class="feature-link__content">
+              <h3 class="h4 feature-link__title">Student support</h3>
+            </div>
+          </a>
+        </div>
+
+        <div>
+          <a class="feature-link" href="">
+            <div class="feature-link__content">
+              <h3 class="h4 feature-link__title">Life on campus</h3>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="slab  slab--bg-offwhite">
+    <div class="wrap">
+      <h3 class="h4 slab__title">Our Code of practice</h3>
+      <p>Where you live is a big part of being at university, which is why Staffordshire is one of several universities that has signed-up to The Student Accommodation Code. The Code underpins our ongoing dedication to our students to make sure you get the best out of your time living in our residences. The Code protects our students’ rights to safe, good quality accommodation. It outlines everything students can expect from our accommodation as well as their responsibilities. Full details of The Code are available at the Student Accommodation Code website.</p>
+
+      <img src="https://placeimg.com/600/200" alt=""/>
+    </div>
+  </div>
+
+
+</main>
+
+{% include '@slider--accolades' %}
+{% include '@page-footer' %}

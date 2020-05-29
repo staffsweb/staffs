@@ -1,12 +1,16 @@
 .masthead {
-  min-height: 60vh;
+  display: flex;
+  min-height: 65vmin;
+  padding: 9em 0 2em;  // what does this relate to and why?
   background-size: cover;
-  background-position: 50% 0;
+  background-position: 50% 50%;
+  box-sizing: border-box;
   //float: left;
   //width: 100%;
-  display: flex;
 
-  padding: 9em 0 2em;
+  &__bg {
+    // should use an abs:pos div with responsive image rather than background image
+  }
 
   @media (min-width: 47.5em) and (min-height: 30em) { // @TODO: USE VARIABLES!
     padding-top: 12em;
@@ -18,5 +22,4 @@
   .wrap {
     align-self: flex-end;
   }
-
 }
