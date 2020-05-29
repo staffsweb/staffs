@@ -89,7 +89,7 @@ $megaNav-full-breakpoint: 70rem; // if you change this, you'll need to update th
   }
 }
 
-@mixin align-wide {
+/*@mixin align-wide {
   max-width: none;
   width: calc(100vw - #{$page-gutter-small*2});
   margin-left: calc(-50vw + 50% + #{$page-gutter-small});
@@ -106,7 +106,7 @@ $megaNav-full-breakpoint: 70rem; // if you change this, you'll need to update th
     margin-left: calc(-#{$wrap-width/2} + 50%);
     margin-right: calc(-#{$wrap-width/2} + 50%);
   }
-}
+}*/
 
 @mixin align-full {
   max-width: none;

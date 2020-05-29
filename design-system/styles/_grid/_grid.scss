@@ -498,9 +498,9 @@
 
   @each $stage, $breakpoint in $breakpoint-stages {
 
-    @each $col in $grid-cols {
+    @media (min-width: #{$breakpoint}) {
+      @each $col in $grid-cols {
 
-      @media (min-width: #{$breakpoint}) {
         .grid-#{$col}-cols\@#{$stage} > * {
           @include grid-col(1, $col);
         }
@@ -526,7 +526,6 @@
               }
             }
           }
-
         }
 
         @if ($complex-offsets) {
@@ -544,6 +543,9 @@
 
       }
 
+      .col-full\@#{$stage} {
+        width: 100%;
+      }
     }
 
   }

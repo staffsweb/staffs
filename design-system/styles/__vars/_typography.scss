@@ -359,6 +359,7 @@ $border-accent-width: $spacing-2xs;
   .intro,
   .is-style-intro {
     @include typescale('lg');
+    @include line-height('normal');
     max-width: $line-length-max-rem;
     color: $maroon;
 

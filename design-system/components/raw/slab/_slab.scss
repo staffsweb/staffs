@@ -1,21 +1,38 @@
 .slab {
+  $border-color: $grey-light;
   padding: $spacing-4xl 0;
 
   &__title {
     margin-top: $spacing-md;
   }
-}
 
-.slab--bg-offwhite {
-  background-color: $offwhite;
-}
+  &__header {
+    margin-top: -#{$spacing-4xl};
+  }
 
-.slab--bg-slate {
-  background-color: $slate;
-  color: #fff;
-}
+  //--
 
-.slab--bg-slate-light {
-  background-color: $slate-light;
-  color: #fff;
+  &--border-bottom {
+    border-bottom: 1px solid $border-color;
+  }
+
+  &--border-top {
+    border-bottom: 1px solid $border-color;
+  }
+
+  //--
+
+  &--bg-offwhite {
+    background-color: $offwhite;
+  }
+
+  &--bg-slate {
+    background-color: $slate;
+    color: #fff;
+  }
+
+  &--bg-slate-light {
+    background-color: $slate-light;
+    color: #fff;
+  }
 }

@@ -45,6 +45,10 @@
     width: 100%;
     padding: calc(#{$spacing-sm} + 15%) calc(#{$spacing-sm} + 2.5%) calc(#{$spacing-sm} + 2.5%);
     z-index: 1;
+
+    &--shallow {
+      padding: calc(#{$spacing-xl} + 2.5%) calc(#{$spacing-sm} + 2.5%) calc(#{$spacing-sm} + 2.5%);
+    }
   }
 
   .wrap {

@@ -31,24 +31,31 @@
     }
   }
 
+
+  //--
+
   &--padded {
     padding: calc(#{$spacing-sm} + 2.5%);
   }
-}
 
-.box--has-shadow {
-  box-shadow: 0 0.1em 0.25em rgba(0, 0, 0, 0.15);
-}
+  //-
 
-.box--bg-offwhite {
-  background-color: $offwhite;
-}
+  &--has-shadow {
+    box-shadow: 0 0.1em 0.25em rgba(0, 0, 0, 0.15);
+  }
 
-.box--bg-slate {
-  background-color: $slate;
-  color: #fff;
-}
+  //-
 
-.box--bg-offwhite-gradient {
-  background: radial-gradient(45% 660% at 50% 50%, mix(#e3e3e3, white, 30%) 0%, mix(#ccc, white, 30%) 100%);
+  &--bg-offwhite {
+    background-color: $offwhite;
+  }
+
+  &--bg-slate {
+    background-color: $slate;
+    color: #fff;
+  }
+
+  &--bg-offwhite-gradient {
+    background: radial-gradient(45% 660% at 50% 50%, mix(#e3e3e3, white, 30%) 0%, mix(#ccc, white, 30%) 100%);
+  }
 }
