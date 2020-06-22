@@ -1,6 +1,7 @@
 $card__internal-spacing: $spacing-sm;
 
 .card {
+  display: block;
   position: relative;
   --accent-color: #{$maroon};
   margin-bottom: $spacing-xl;

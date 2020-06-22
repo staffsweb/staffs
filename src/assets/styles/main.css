@@ -500,7 +500,7 @@ section:first-child { margin-top: 0; }
 
 .button--outline-slate:hover, .button--outline-slate:focus, .button--outline-slate:active { color: white; }
 
-.card { position: relative; --accent-color: #970048; margin-bottom: 2rem; border-left: 0.25rem solid #970048; border-left: 0.25rem solid var(--accent-color); }
+.card { display: block; position: relative; --accent-color: #970048; margin-bottom: 2rem; border-left: 0.25rem solid #970048; border-left: 0.25rem solid var(--accent-color); }
 
 .card a { color: #970048; color: var(--accent-color); text-decoration: none; border-bottom: none; }
 
