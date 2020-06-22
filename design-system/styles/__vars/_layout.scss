@@ -115,7 +115,7 @@ $megaNav-full-breakpoint: 70rem; // if you change this, you'll need to update th
   margin-right: calc(-50vw + 50%);
 
   @media (min-width: $breakpoint-largescreen-typography) and (min-height: $breakpoint-largescreen-typography-height) {
-    width: calc(100vw - #{$body-border-width--wide});
-    margin-left: calc(-50vw + 50% + #{$body-border-width--wide/2});
+    width: calc(100vw - #{$body-border-width--wide*2});
+    margin-left: calc(-50vw + 50% + #{$body-border-width--wide});
   }
 }

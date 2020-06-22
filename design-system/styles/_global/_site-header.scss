@@ -9,7 +9,7 @@
   padding: 0;
   margin: 0;
 
-  @media (min-width: 47.5em) and (min-height: 30em) {
+  @media (min-width: $breakpoint-largescreen-typography) and (min-height: $breakpoint-largescreen-typography-height) {
     left: $body-border-width--wide;
   }
 
