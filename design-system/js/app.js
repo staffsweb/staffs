@@ -129,6 +129,7 @@
 
   let tabsInit = function () {
     // @TODO: check accessibility - add AIRA/keyboard if needed
+    // @TODO: consider using history.pushState?
 
     $('.js-tabs').each(function () {
       let tabs = $(this);
@@ -145,7 +146,8 @@
         $(sections[0]).show().addClass('is-expanded');
       }
 
-      links.on('click', function () {
+      links.on('click', function (e) {
+        e.preventDefault();
         let targetHref = $(this).attr('href');
 
         sections.hide().removeClass('is-expanded');
