@@ -1364,6 +1364,27 @@
 		"oAP": "/components/feature-link/feature-link.twig",
 		"oF": 0
 		},
+	"/components/feature-tiles/_feature-tiles.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 4,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/components/feature-tiles/_feature-tiles.css",
+		"oF": 0,
+		"oS": 2,
+		"sct": 1
+		},
+	"/components/feature-tiles/feature-tiles.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/feature-tiles/feature-tiles.twig",
+		"oF": 0
+		},
 	"/components/icons/_icons.scss": {
 		"aP": 1,
 		"bl": 0,

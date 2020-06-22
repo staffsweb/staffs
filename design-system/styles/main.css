@@ -562,6 +562,23 @@ section:first-child { margin-top: 0; }
 
 a.feature-link:hover .feature-link__title:after { transform: translateX(0.1rem); }
 
+@media (min-width: 65rem) { @supports (display: grid) { .feature-tiles { display: grid; grid-auto-flow: dense; grid-template-columns: repeat(12, 1fr); grid-template-rows: repeat(16, 1fr); }
+    .feature-tiles__item { position: relative; grid-column: span 4; grid-row: span 4; width: auto !important; }
+    .feature-tiles__item:nth-child(1) { grid-column: span 4 / -3; grid-row: 1 / span 4; }
+    .feature-tiles__item:nth-child(2) { grid-row: 3 / span 4; }
+    .feature-tiles__item:nth-child(3) { grid-row: 5 / span 4; }
+    .feature-tiles__item:nth-child(4) { grid-row: 9 / span 4; grid-column: span 4 / -3; }
+    .feature-tiles__item:nth-child(5) { grid-row: 11 / span 4; grid-column: 3 / span 4; }
+    .feature-tiles__item:nth-child(6) { grid-row: 13 / span 4; grid-column: span 4 / -1; } } }
+
+.feature-tiles a.tile { transition: transform 250ms; }
+
+.feature-tiles a.tile:hover { transform: scale(1.025); z-index: 2; }
+
+.feature-tiles:hover a.tile .tile__figure img { -webkit-filter: grayscale(1); filter: grayscale(1); }
+
+.feature-tiles:hover a.tile:hover .tile__figure img { -webkit-filter: grayscale(0); filter: grayscale(0); }
+
 .icon { position: relative; display: inline-block; width: 1em; height: 1em; text-align: center; background-size: contain; background-position: center center; background-repeat: no-repeat; vertical-align: baseline; top: 0.1em; }
 
 .icon svg, .icon img { width: 100%; max-height: 100%; }
@@ -854,6 +871,8 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 0.875rem; font-style
 .tile { position: relative; display: block; overflow: hidden; outline: 1px solid #dddddd; box-shadow: 0 0.1em 0.25em rgba(0, 0, 0, 0.15); min-height: 10em; }
 
 .tile__figure { position: relative; margin: 0; z-index: 0; }
+
+.tile__figure img { transition: -webkit-filter 250ms; transition: filter 250ms; transition: filter 250ms, -webkit-filter 250ms; }
 
 @supports ((-o-object-fit: cover) or (object-fit: cover)) { .tile__figure img { height: 100%; max-height: 75vmin; -o-object-fit: cover; object-fit: cover; -o-object-position: center center; object-position: center center; } }
 

@@ -1,0 +1,80 @@
+.feature-tiles {
+  @media (min-width: map_get($breakpoint-stages, 'tablet-wide')) {
+    @supports (display: grid) {
+      display: grid;
+      grid-auto-flow: dense;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(16, 1fr);
+
+      &__item {
+        position: relative;
+        grid-column: span 4;
+        grid-row: span 4;
+        width: auto !important; // overrides fallback sizing
+
+        &:nth-child(1) {
+          grid-column: span 4 / -3;
+          grid-row: 1 / span 4;
+        }
+
+        &:nth-child(2) {
+          grid-row: 3 / span 4;
+        }
+
+        &:nth-child(3) {
+          grid-row: 5 / span 4;
+        }
+
+        &:nth-child(4) {
+          grid-row: 9 / span 4;
+          grid-column: span 4 / -3;
+        }
+
+        &:nth-child(5) {
+          grid-row: 11 / span 4;
+          grid-column: 3 / span 4;
+        }
+
+        &:nth-child(6) {
+          grid-row: 13 / span 4;
+          grid-column: span 4 / -1;
+        }
+      }
+    }
+  }
+
+  // --
+
+  &__square {
+
+  }
+
+  // --
+
+  a.tile {
+    transition: transform 250ms;
+
+    &:hover {
+      transform: scale(1.025);
+      z-index: 2;
+    }
+  }
+
+  &:hover {
+    a.tile {
+      .tile__figure {
+        img {
+          filter: grayscale(1);
+        }
+      }
+
+      &:hover {
+        .tile__figure {
+          img {
+            filter: grayscale(0);
+          }
+        }
+      }
+    }
+  }
+}
