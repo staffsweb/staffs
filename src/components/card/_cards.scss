@@ -5,17 +5,18 @@ $card__internal-spacing: $spacing-sm;
     'red': $red,
     'pink': $pink,
     'maroon': $maroon,
+    'slate': $slate,
   );
 
   display: block;
   position: relative;
-  --accent-color: #{$maroon};
+  --accent-color: #{$red};
   margin-bottom: $spacing-xl;
   border-left: $border-accent-width solid $maroon;
-  border-left: $border-accent-width solid var(--accent-color);
+  border-color: var(--accent-color);
 
   a {
-    color: #{$maroon};
+    color: #{$red};
     color: var(--accent-color);
     text-decoration: none;
     border-bottom: none;

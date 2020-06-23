@@ -6,6 +6,10 @@ variants:
     label: "Theme: Pink"
   - name: red
     label: "Theme: Red"
+  - name: slate
+    label: "Theme: Slate"
+  - name: maroon
+    label: "Theme: Maroon"
 
   - name: ksp
     label: "KSP (Key Selling Points)"

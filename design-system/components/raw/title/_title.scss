@@ -21,6 +21,7 @@
   background: var(--background);
   color: white;
   color: var(--color);
+  box-shadow: -$spacing-xs 0 0 0 #{$red}, $spacing-xs 0 0 0 #{$red};
   box-shadow: -$spacing-xs 0 0 0 var(--background), $spacing-xs 0 0 0 var(--background);
   box-decoration-break: clone;
   //border-top: 0.25rem solid transparent;

@@ -500,9 +500,9 @@ section:first-child { margin-top: 0; }
 
 .button--outline-slate:hover, .button--outline-slate:focus, .button--outline-slate:active { color: white; }
 
-.card { display: block; position: relative; --accent-color: #970048; margin-bottom: 2rem; border-left: 0.25rem solid #970048; border-left: 0.25rem solid var(--accent-color); }
+.card { display: block; position: relative; --accent-color: #d70a26; margin-bottom: 2rem; border-left: 0.25rem solid #970048; border-color: var(--accent-color); }
 
-.card a { color: #970048; color: var(--accent-color); text-decoration: none; border-bottom: none; }
+.card a { color: #d70a26; color: var(--accent-color); text-decoration: none; border-bottom: none; }
 
 .card a:hover { text-decoration: underline; }
 
@@ -527,6 +527,8 @@ section:first-child { margin-top: 0; }
 .card--pink { --accent-color: #d5035e; }
 
 .card--maroon { --accent-color: #970048; }
+
+.card--slate { --accent-color: #394851; }
 
 .card--testimonial { padding-bottom: 0.75rem; }
 
@@ -917,6 +919,8 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 0.875rem; font-style
 
 .tile--accent-maroon { --accent-color: #970048; }
 
+.tile--accent-slate { --accent-color: #394851; }
+
 .tile--accent-tef-gold { --accent-color: #dd9200; }
 
 .tile--no-shadow { box-shadow: none; }
@@ -929,7 +933,7 @@ a.tile:focus { outline-width: 3px; outline-color: #d70a26; z-index: 2; }
 
 .title + .title { margin-top: -1rem; }
 
-.title__highlight { position: relative; display: inline; left: 0.5rem; padding: 0.25rem; line-height: 1.4; background: #d70a26; background: var(--background); color: white; color: var(--color); box-shadow: -0.5rem 0 0 0 var(--background), 0.5rem 0 0 0 var(--background); -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.title__highlight { position: relative; display: inline; left: 0.5rem; padding: 0.25rem; line-height: 1.4; background: #d70a26; background: var(--background); color: white; color: var(--color); box-shadow: -0.5rem 0 0 0 #d70a26, 0.5rem 0 0 0 #d70a26; box-shadow: -0.5rem 0 0 0 var(--background), 0.5rem 0 0 0 var(--background); -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 
 .title__highlight a { color: white; color: var(--color); }
 
