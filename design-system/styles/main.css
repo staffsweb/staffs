@@ -897,6 +897,14 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 0.875rem; font-style
 
 .tile .title__highlight { --background: var(--accent-color); }
 
+.tile--accent-red { --accent-color: #d70a26; }
+
+.tile--accent-pink { --accent-color: #d5035e; }
+
+.tile--accent-maroon { --accent-color: #970048; }
+
+.tile--accent-tef-gold { --accent-color: #dd9200; }
+
 .tile--no-shadow { box-shadow: none; }
 
 a.tile:hover, a.tile:focus { color: #394851; }

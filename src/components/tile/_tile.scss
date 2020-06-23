@@ -1,4 +1,11 @@
 .tile {
+  $accent-colors: (
+    'red': $red,
+    'pink': $pink,
+    'maroon': $maroon,
+    'tef-gold': $gold-tef,
+  );
+
   position: relative;
   display: block;
   overflow: hidden;
@@ -46,6 +53,12 @@
 
   .title__highlight {
     --background: var(--accent-color);
+  }
+
+  @each $name, $value in $accent-colors {
+    &--accent-#{$name} {
+      --accent-color: #{$value};
+    }
   }
 
   &--no-shadow {
