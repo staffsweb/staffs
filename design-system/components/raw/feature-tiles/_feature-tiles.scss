@@ -1,4 +1,11 @@
 .feature-tiles {
+  $accent-colors: (
+    'red': $red,
+    'pink': $pink,
+    'maroon': $maroon,
+    'tef-gold': $gold-tef,
+  );
+
   @media (min-width: map_get($breakpoint-stages, 'tablet-wide')) {
     @supports (display: grid) {
       display: grid;
@@ -10,7 +17,7 @@
         position: relative;
         grid-column: span 4;
         grid-row: span 4;
-        width: auto !important; // overrides fallback sizing
+        width: auto !important; // overrides fallback grid sizing
 
         &:nth-child(1) {
           grid-column: span 4 / -3;
@@ -23,11 +30,29 @@
 
         &:nth-child(3) {
           grid-row: 5 / span 4;
+
+          &:after {
+            position: absolute;
+            content: '';
+            width: 25%;
+            height: 25%;
+            top: 0;
+            left: 100%;
+          }
         }
 
         &:nth-child(4) {
           grid-row: 9 / span 4;
           grid-column: span 4 / -3;
+
+          &:after {
+            position: absolute;
+            content: '';
+            width: 25%;
+            height: 25%;
+            top: 0;
+            left: 100%;
+          }
         }
 
         &:nth-child(5) {
@@ -38,8 +63,35 @@
         &:nth-child(6) {
           grid-row: 13 / span 4;
           grid-column: span 4 / -1;
+
+          &:after {
+            position: absolute;
+            content: '';
+            width: 25%;
+            height: 25%;
+            top: 0;
+            right: 100%;
+          }
+        }
+
+        &:nth-child(n):after {
+          background: var(--accent-color, #{$red});
         }
       }
+
+      .tile__content {
+        margin-right: 25%; // bit of a silly specific override, but this makes things line up with the grid/squares more nicely.
+      }
+    }
+  }
+
+  .title__highlight {
+    --background: var(--accent-color);
+  }
+
+  @each $name, $value in $accent-colors {
+    &__item--accent-#{$name} {
+      --accent-color: #{$value};
     }
   }
 

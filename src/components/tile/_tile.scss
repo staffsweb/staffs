@@ -44,6 +44,10 @@
     margin-top: -$spacing-md;
   }
 
+  .title__highlight {
+    --background: var(--accent-color);
+  }
+
   &--no-shadow {
     box-shadow: none;
   }

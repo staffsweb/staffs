@@ -123,7 +123,7 @@
     });
 
 
-    // @TODO: HANDLE KEYBOARD FOCUS BETTER!
+    // @TODO: Check keyboard focus - could it be handled better?
 
   };
 

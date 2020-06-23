@@ -432,7 +432,7 @@ section:first-child { margin-top: 0; }
 
 .banner .wrap .banner__body { padding-left: 0; padding-right: 0; }
 
-.box { margin: 0 0 2rem; }
+.box { background: white; margin: 0 0 2rem; }
 
 .box__content { padding: calc(0.75rem + 2.5%); }
 
@@ -522,11 +522,11 @@ section:first-child { margin-top: 0; }
 
 .card .title__highlight { --background: var(--accent-color); }
 
-.card--pink { --accent-color: #d5035e; }
-
 .card--red { --accent-color: #d70a26; }
 
-.card--purple { --accent-color: #970048; }
+.card--pink { --accent-color: #d5035e; }
+
+.card--maroon { --accent-color: #970048; }
 
 .card--testimonial { padding-bottom: 0.75rem; }
 
@@ -567,9 +567,24 @@ a.feature-link:hover .feature-link__title:after { transform: translateX(0.1rem);
     .feature-tiles__item:nth-child(1) { grid-column: span 4 / -3; grid-row: 1 / span 4; }
     .feature-tiles__item:nth-child(2) { grid-row: 3 / span 4; }
     .feature-tiles__item:nth-child(3) { grid-row: 5 / span 4; }
+    .feature-tiles__item:nth-child(3):after { position: absolute; content: ''; width: 25%; height: 25%; top: 0; left: 100%; }
     .feature-tiles__item:nth-child(4) { grid-row: 9 / span 4; grid-column: span 4 / -3; }
+    .feature-tiles__item:nth-child(4):after { position: absolute; content: ''; width: 25%; height: 25%; top: 0; left: 100%; }
     .feature-tiles__item:nth-child(5) { grid-row: 11 / span 4; grid-column: 3 / span 4; }
-    .feature-tiles__item:nth-child(6) { grid-row: 13 / span 4; grid-column: span 4 / -1; } } }
+    .feature-tiles__item:nth-child(6) { grid-row: 13 / span 4; grid-column: span 4 / -1; }
+    .feature-tiles__item:nth-child(6):after { position: absolute; content: ''; width: 25%; height: 25%; top: 0; right: 100%; }
+    .feature-tiles__item:nth-child(n):after { background: var(--accent-color, #d70a26); }
+    .feature-tiles .tile__content { margin-right: 25%; } } }
+
+.feature-tiles .title__highlight { --background: var(--accent-color); }
+
+.feature-tiles__item--accent-red { --accent-color: #d70a26; }
+
+.feature-tiles__item--accent-pink { --accent-color: #d5035e; }
+
+.feature-tiles__item--accent-maroon { --accent-color: #970048; }
+
+.feature-tiles__item--accent-tef-gold { --accent-color: #dd9200; }
 
 .feature-tiles a.tile { transition: transform 250ms; }
 
@@ -879,6 +894,8 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 0.875rem; font-style
 .tile__content { position: absolute; bottom: 0; left: 0; margin-right: 2rem; max-height: 90%; padding: 0 1rem 1px; background: white; box-sizing: border-box; z-index: 1; }
 
 .tile__title { margin-top: -1rem; }
+
+.tile .title__highlight { --background: var(--accent-color); }
 
 .tile--no-shadow { box-shadow: none; }
 
