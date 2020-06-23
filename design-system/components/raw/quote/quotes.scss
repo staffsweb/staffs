@@ -17,6 +17,7 @@ cite,
 .blockquote--large,
 .blockquote--short {
   @include typescale('2xl', 'em');
+  @include line-height('headings');
 
   @media (min-width: $breakpoint-largescreen-typography) {
     @include typescale('4xl', 'em');

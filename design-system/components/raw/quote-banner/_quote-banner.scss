@@ -32,8 +32,13 @@
   }
 
   &__figure {
-    margin: auto $grid-gutter;
-    flex: 1 1 50%;
+    margin: $spacing-xl $grid-gutter;
+    flex: 1 1 40%;
+
+    &--align-bottom {
+      margin: 0 $grid-gutter;
+      align-self: flex-end;
+    }
 
     img {
       margin: auto;

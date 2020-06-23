@@ -746,7 +746,7 @@ blockquote footer, .blockquote footer { margin-top: 1.5rem; font-size: 0.875rem;
 
 cite, .cite { font-family: 'Roboto', sans-serif; font-size: 0.875rem; font-style: normal; font-weight: 500; display: block; margin: 1.5rem 0 0; }
 
-.blockquote--large, .blockquote--short { font-size: 1.75em; }
+.blockquote--large, .blockquote--short { font-size: 1.75em; line-height: 1.2; }
 
 @media (min-width: 55rem) { .blockquote--large, .blockquote--short { font-size: 2.5em; } }
 
@@ -772,7 +772,9 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 0.875rem; font-style
 
 .quote-banner--reverse .quote-banner__flexContainer { flex-direction: row-reverse; }
 
-.quote-banner__figure { margin: auto 1.5rem; flex: 1 1 50%; }
+.quote-banner__figure { margin: 2rem 1.5rem; flex: 1 1 40%; }
+
+.quote-banner__figure--align-bottom { margin: 0 1.5rem; align-self: flex-end; }
 
 .quote-banner__figure img { margin: auto; max-height: 75vh; width: auto; }
 
