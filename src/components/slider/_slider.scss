@@ -17,6 +17,7 @@
   border: 0;
   cursor: pointer;
   z-index: 2;
+  overflow: hidden; // prevents odd outline shape
 
   &:hover {
     opacity: 0.8;

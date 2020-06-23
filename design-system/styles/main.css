@@ -843,7 +843,7 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 0.875rem; font-style
 
 .slick-arrow.slick-hidden { display: none; }
 
-.slick-arrow { position: absolute; top: 50%; transform: translateY(-50%); font-size: 1.5em; width: 1em; height: 1em; padding: 0; text-indent: -999em; background: transparent; color: transparent; border: 0; cursor: pointer; z-index: 2; }
+.slick-arrow { position: absolute; top: 50%; transform: translateY(-50%); font-size: 1.5em; width: 1em; height: 1em; padding: 0; text-indent: -999em; background: transparent; color: transparent; border: 0; cursor: pointer; z-index: 2; overflow: hidden; }
 
 .slick-arrow:hover { opacity: 0.8; }
 
