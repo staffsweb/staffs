@@ -1,0 +1,49 @@
+.quote-banner {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient( 45deg, rgba(white, 1) 35%,  rgba($greyblue-superlight, 1) 35% );
+
+  //&:after {
+  //  content: '';
+  //  position: absolute;
+  //  top: -15%;
+  //  right: 40%;
+  //  height: 200%;
+  //  width: 200%;
+  //  background: $greyblue-superlight;
+  //  transform: rotate(45deg);
+  //  transform-origin: center;
+  //  z-index: -1;
+  //}
+
+  &__flexContainer {
+    margin: 0 -#{$grid-gutter};
+    min-height: 50vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  &--reverse {
+    .quote-banner__flexContainer {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__figure {
+    margin: auto $grid-gutter;
+    flex: 1 1 50%;
+
+    img {
+      margin: auto;
+      max-height: 75vh;
+      width: auto;
+    }
+  }
+
+  &__quoteContainer {
+    margin: $spacing-xl $grid-gutter;
+    flex: 1 1 20em;
+  }
+}

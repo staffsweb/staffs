@@ -257,6 +257,17 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/assets/img/placeholder-transparent-person.png": {
+		"ft": 32768,
+		"iS": 1532520,
+		"oA": 0,
+		"oAP": "/assets/img/placeholder-transparent-person.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/assets/img/placeholder/0.jpg": {
 		"ft": 16384,
 		"iS": 391670,
@@ -1587,6 +1598,51 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/components/meta/meta.twig",
+		"oF": 0
+		},
+	"/components/quote-banner/_quote-banner.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 4,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/components/quote-banner/_quote-banner.css",
+		"oF": 0,
+		"oS": 2,
+		"sct": 1
+		},
+	"/components/quote-banner/quote-banner--alternate-image-reverse.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/quote-banner/quote-banner--alternate-image-reverse.twig",
+		"oF": 0
+		},
+	"/components/quote-banner/quote-banner--alternate-image.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/quote-banner/quote-banner--alternate-image.twig",
+		"oF": 0
+		},
+	"/components/quote-banner/quote-banner--reverse.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/quote-banner/quote-banner--reverse.twig",
+		"oF": 0
+		},
+	"/components/quote-banner/quote-banner.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/quote-banner/quote-banner.twig",
 		"oF": 0
 		},
 	"/components/quote/quote--long.twig": {
