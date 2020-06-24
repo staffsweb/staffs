@@ -20,7 +20,7 @@ fractal.web.set('static.path', __dirname + '/src/assets');
 fractal.web.set('builder.dest', __dirname + '/design-system');
 
 // Set the default status of components to Work In Progress, and add some custom
-fractal.components.set('default.status', 'not_started');
+fractal.components.set('default.status', 'wip');
 
 fractal.components.set('statuses', {
   not_started: {

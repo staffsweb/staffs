@@ -1383,6 +1383,14 @@
 		"oAP": "/components/feature-link/feature-link--title-only.twig",
 		"oF": 0
 		},
+	"/components/feature-link/feature-link.config.yml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/feature-link/feature-link.config.yml",
+		"oF": 0
+		},
 	"/components/feature-link/feature-link.twig": {
 		"cB": 0,
 		"ft": 8192,
@@ -1403,6 +1411,14 @@
 		"oF": 0,
 		"oS": 2,
 		"sct": 1
+		},
+	"/components/feature-tiles/feature-tiles.config.yml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/feature-tiles/feature-tiles.config.yml",
+		"oF": 0
 		},
 	"/components/feature-tiles/feature-tiles.twig": {
 		"cB": 0,
@@ -1653,6 +1669,14 @@
 		"oAP": "/components/quote-banner/quote-banner--reverse.twig",
 		"oF": 0
 		},
+	"/components/quote-banner/quote-banner.config.yml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/quote-banner/quote-banner.config.yml",
+		"oF": 0
+		},
 	"/components/quote-banner/quote-banner.twig": {
 		"cB": 0,
 		"ft": 8192,
@@ -1749,6 +1773,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/components/section-header/section-header--border-bottom.twig",
+		"oF": 0
+		},
+	"/components/section-header/section-header.config.yml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/section-header/section-header.config.yml",
 		"oF": 0
 		},
 	"/components/section-header/section-header.twig": {

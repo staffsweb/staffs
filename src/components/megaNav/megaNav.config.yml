@@ -1,5 +1,5 @@
 label: MegaNav
-status: not_started
+status: ready
 handle: meganav
 context:
   text: 'Click me'

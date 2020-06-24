@@ -1,5 +1,5 @@
 name: Slab
-status: wip
+status: ready
 collated: false
 context:
   text: 'This is a slab'
