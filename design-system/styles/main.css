@@ -522,6 +522,8 @@ section:first-child { margin-top: 0; }
 
 .card .title__highlight { --background: var(--accent-color); }
 
+.card .meta--inline-dd dd:before, .card .meta--inline dd:before { color: var(--accent-color); }
+
 .card--red { --accent-color: #d70a26; }
 
 .card--pink { --accent-color: #d5035e; }
@@ -529,6 +531,12 @@ section:first-child { margin-top: 0; }
 .card--maroon { --accent-color: #970048; }
 
 .card--slate { --accent-color: #394851; }
+
+a.card { text-decoration: none; }
+
+a.card:hover { color: black; }
+
+a.card:hover .title__highlight { text-decoration: underline; }
 
 .card--testimonial { padding-bottom: 0.75rem; }
 

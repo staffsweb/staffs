@@ -51,6 +51,8 @@ $card__internal-spacing: $spacing-sm;
     }
   }
 
+  //--  Child elements affected by accent colour
+
   .blockquote__title {
     color: var(--accent-color);
   }
@@ -59,11 +61,30 @@ $card__internal-spacing: $spacing-sm;
     --background: var(--accent-color);
   }
 
+  .meta--inline-dd,
+  .meta--inline {
+    dd:before {
+      color: var(--accent-color);
+    }
+  }
+
   //--  ACCENT THEMES
 
   @each $name, $value in $accent-colors {
     &--#{$name} {
       --accent-color: #{$value};
+    }
+  }
+}
+
+a.card {
+  text-decoration: none;
+
+  &:hover {
+    color: $text-color;
+
+    .title__highlight {
+      text-decoration: underline;
     }
   }
 }
