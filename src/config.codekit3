@@ -1097,6 +1097,51 @@
 		"oAP": "/components/_preview.twig",
 		"oF": 0
 		},
+	"/components/accordion/_accordion.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 4,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/components/accordion/_accordion.css",
+		"oF": 0,
+		"oS": 2,
+		"sct": 1
+		},
+	"/components/accordion/accordion--component.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/accordion/accordion--component.twig",
+		"oF": 0
+		},
+	"/components/accordion/accordion--item.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/accordion/accordion--item.twig",
+		"oF": 0
+		},
+	"/components/accordion/accordion.config.yml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/accordion/accordion.config.yml",
+		"oF": 0
+		},
+	"/components/accordion/accordion.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/accordion/accordion.twig",
+		"oF": 0
+		},
 	"/components/banner/_banner.scss": {
 		"aP": 1,
 		"bl": 0,

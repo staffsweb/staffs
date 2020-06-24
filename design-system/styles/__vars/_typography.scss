@@ -343,18 +343,18 @@ $border-accent-width: $spacing-2xs;
     }
   }
 
-  details {
-    .accordion-title {
+  //details {
+    .accordion__title {
       margin: $spacing-sm 0;
       padding: $spacing-xs;
     }
 
-    .accordion-toggle {
+    .accordion__toggle {
       margin: 0;
       display: inline-block;
       vertical-align: middle;
     }
-  }
+  //}
 
   .intro,
   .is-style-intro {
@@ -370,7 +370,7 @@ $border-accent-width: $spacing-2xs;
 
   .stat {
     @include typescale('2xl', 'em');
-    font-weight: bold;
+    font-weight: 500;
     color: $primary;
     text-decoration: none;
 

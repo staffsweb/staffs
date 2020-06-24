@@ -1,0 +1,29 @@
+status: ready
+
+variants:
+  - name: default
+    label: "Demo"
+
+  - name: component
+#    status: ready
+    label: "Accordion Component"
+    context:
+      titleElement: 'h3'
+      items: [
+        {
+          title: 'An Includable Accordion Item Component',
+          content: '<p>I can be included by Twig</p>'
+        },
+        {
+          title: 'Second Item',
+          content: '<p>I can have many items</p>'
+        }
+      ]
+
+  - name: item
+#    status: ready
+    label: "Single Accordion Item"
+    context:
+      titleElement: 'h4'
+      title: 'An Includable Accordion Item Component'
+      content: '<p>I can be included by Twig</p>'

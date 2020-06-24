@@ -113,15 +113,15 @@ tr { border-bottom: 1px solid #ddd; }
 
 tr:nth-child(even) td { background: #fff; }
 
-details .accordion-title { margin: 0.75rem 0; padding: 0.5rem; }
+.accordion__title { margin: 0.75rem 0; padding: 0.5rem; }
 
-details .accordion-toggle { margin: 0; display: inline-block; vertical-align: middle; }
+.accordion__toggle { margin: 0; display: inline-block; vertical-align: middle; }
 
 .intro, .is-style-intro { font-size: 1.2rem; line-height: 1.4; max-width: 50rem; color: #970048; }
 
 @media (min-width: 40em) { .intro, .is-style-intro { font-size: 1.5em; } }
 
-.stat { font-size: 1.75em; font-weight: bold; color: #d70a26; text-decoration: none; }
+.stat { font-size: 1.75em; font-weight: 500; color: #d70a26; text-decoration: none; }
 
 .stat a { color: #d70a26; text-decoration: none; }
 
