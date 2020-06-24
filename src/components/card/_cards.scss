@@ -12,7 +12,7 @@ $card__internal-spacing: $spacing-sm;
   position: relative;
   --accent-color: #{$red};
   margin-bottom: $spacing-xl;
-  border-left: $border-accent-width solid $maroon;
+  border-left: $border-accent-width solid $red;
   border-color: var(--accent-color);
 
   a {
@@ -124,7 +124,7 @@ a.card {
     @include typescale('xs');
     padding: $spacing-sm 0;
     color: white;
-    background: $maroon;
+    background: $red;
     background: var(--accent-color);
     line-height: 1;
     text-align: center;
