@@ -121,11 +121,31 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/assets/img/icon-calendar.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/icon-calendar.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/assets/img/icon-circle-padlock-purple.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
 		"oAP": "/assets/img/icon-circle-padlock-purple.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/img/icon-clock.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/icon-clock.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
@@ -251,6 +271,16 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/assets/img/icon-pin.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/icon-pin.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/assets/img/icon-pinterest-white.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -266,6 +296,16 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "/assets/img/icon-pinterest.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/img/icon-pricetag.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/icon-pricetag.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
@@ -1675,12 +1715,12 @@
 		"oS": 2,
 		"sct": 1
 		},
-	"/components/list/list--icon-links.twig": {
+	"/components/list/list--icon-bullets.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/components/list/list--icon-links.twig",
+		"oAP": "/components/list/list--icon-bullets.twig",
 		"oF": 0
 		},
 	"/components/list/list--inline-bulleted.twig": {
