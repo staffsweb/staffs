@@ -14,10 +14,9 @@ $card__internal-spacing: $spacing-sm;
   margin-bottom: $spacing-xl;
   border-left: $border-accent-width solid $red;
   border-color: var(--accent-color);
+  @include clearfix;
 
-  a {
-    color: #{$red};
-    color: var(--accent-color);
+  a:not(.button) {
     text-decoration: none;
     border-bottom: none;
 
@@ -45,6 +44,11 @@ $card__internal-spacing: $spacing-sm;
   &__title {
     margin-top: 0;
     margin-bottom: $spacing-md;
+
+    a {
+      color: #{$red};
+      color: var(--accent-color);
+    }
 
     &--overlap:first-child {
       margin-top: -#{$spacing-3xl};
@@ -141,16 +145,26 @@ a.card {
 }
 
 .card--course {
+  // this exists, but doesn't need anything specific (yet)
 }
 
 .card--result {
+  // this exists, but doesn't need anything specific (yet)
+}
+
+.card--profile {
+  // this exists, but doesn't need anything specific (yet)
 }
 
 .card--ksp {
   color: $slate;
 
   &__icon {
-    //margin-bottom: $card__internal-spacing;
+    margin-bottom: $card__internal-spacing;
+
+    img {
+      vertical-align: baseline !important; // this is horribly lazy but browsers, sorry
+    }
   }
 }
 

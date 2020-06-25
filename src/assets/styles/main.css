@@ -386,6 +386,8 @@ section:first-child { margin-top: 0; }
 
 .size-line-length-max { max-width: 50rem; box-sizing: border-box; }
 
+@media (min-width: 32.5rem) { .align-size-xs { max-width: 25%; } .align-size-sm { max-width: 33%; } .align-size-md { max-width: 50%; } .align-size-lg { max-width: 66%; } .size-auto { width: auto; max-width: none; } }
+
 .pager__items { display: flex; flex-wrap: wrap; }
 
 .pager__item a { min-width: 1em; padding: 0.5rem 1rem; }
@@ -534,9 +536,11 @@ section:first-child { margin-top: 0; }
 
 .card { display: block; position: relative; --accent-color: #d70a26; margin-bottom: 2rem; border-left: 0.25rem solid #d70a26; border-color: var(--accent-color); }
 
-.card a { color: #d70a26; color: var(--accent-color); text-decoration: none; border-bottom: none; }
+.card:after { content: ''; display: table; clear: both; }
 
-.card a:hover { text-decoration: underline; }
+.card a:not(.button) { text-decoration: none; border-bottom: none; }
+
+.card a:not(.button):hover { text-decoration: underline; }
 
 .card p { margin-bottom: 0.75rem; }
 
@@ -547,6 +551,8 @@ section:first-child { margin-top: 0; }
 .card__content > :last-child { margin-bottom: 0; }
 
 .card__title { margin-top: 0; margin-bottom: 1rem; }
+
+.card__title a { color: #d70a26; color: var(--accent-color); }
 
 .card__title--overlap:first-child { margin-top: -3rem; }
 
@@ -585,6 +591,10 @@ a.card:hover .title__highlight { text-decoration: underline; }
 .card--pullquote.card--slate:before { background: #fff url("../img/icon-quote-slate.svg") no-repeat center center; background-size: contain; }
 
 .card--ksp { color: #394851; }
+
+.card--ksp__icon { margin-bottom: 0.75rem; }
+
+.card--ksp__icon img { vertical-align: baseline !important; }
 
 .card--event { margin-left: 4rem; }
 
@@ -1201,5 +1211,7 @@ a.tile:focus { outline-width: 3px; outline-color: #d70a26; z-index: 2; }
 
 .js .js-hidden { display: none; }
 
-.link--stretched::after { position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 1; pointer-events: auto; content: ""; background-color: rgba(0, 0, 0, 0); }
+.link--stretched::after { position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 1; pointer-events: all; content: ""; background-color: rgba(0, 0, 0, 0); }
+
+.link--stretched:hover .title__highlight { text-decoration: underline; }
 /*# sourceMappingURL=main.css.map */

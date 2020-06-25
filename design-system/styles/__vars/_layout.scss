@@ -10,9 +10,10 @@ $line-length-max-rem: 50rem;
 $breakpoint-largescreen-typography: $third-breakpoint + 5rem;
 $breakpoint-largescreen-typography-height: 30rem;
 
-$align-leftright-size-small: 33%;
-$align-leftright-size-medium: 50%;
-$align-leftright-size-large: 66%;
+$align-size-xs: 25%;
+$align-size-sm: 33%;
+$align-size-md: 50%;
+$align-size-lg: 66%;
 $align-min-breakpoint: 32.5rem;
 //$align-right-offset-breakpoint: $wrap-width + 10rem;
 
@@ -57,7 +58,7 @@ $megaNav-full-breakpoint: 70rem; // if you change this, you'll need to update th
 
   @media (min-width: $align-min-breakpoint) {
     float: left;
-    max-width: calc(#{$align-leftright-size-medium} - #{$grid-gutter/2});
+    max-width: calc(#{$align-size-md} - #{$grid-gutter/2});
     box-sizing: border-box;
     margin-left: 0;
     margin-top: $spacing-2xs;
@@ -66,7 +67,7 @@ $megaNav-full-breakpoint: 70rem; // if you change this, you'll need to update th
   }
 
   @media (min-width: $third-breakpoint) {
-    max-width: calc(#{$align-leftright-size-small} - #{$grid-gutter/2});
+    max-width: calc(#{$align-size-sm} - #{$grid-gutter/2});
   }
 }
 
@@ -76,7 +77,7 @@ $megaNav-full-breakpoint: 70rem; // if you change this, you'll need to update th
   @media (min-width: $align-min-breakpoint) {
     float: right;
     clear: right;
-    max-width: calc(#{$align-leftright-size-medium} - #{$grid-gutter/2});
+    max-width: calc(#{$align-size-md} - #{$grid-gutter/2});
     box-sizing: border-box;
     margin-right: 0;
     margin-top: $spacing-2xs;
@@ -85,7 +86,7 @@ $megaNav-full-breakpoint: 70rem; // if you change this, you'll need to update th
   }
 
   @media (min-width: $third-breakpoint) {
-    max-width: calc(#{$align-leftright-size-small} - #{$grid-gutter/2});
+    max-width: calc(#{$align-size-sm} - #{$grid-gutter/2});
   }
 }
 

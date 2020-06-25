@@ -69,3 +69,26 @@ section {
   max-width: $line-length-max-rem;
   box-sizing: border-box;
 }
+
+@media (min-width: $align-min-breakpoint) {
+  .align-size-xs {
+    max-width: $align-size-xs;
+  }
+
+  .align-size-sm {
+    max-width: $align-size-sm;
+  }
+
+  .align-size-md {
+    max-width: $align-size-md;
+  }
+
+  .align-size-lg {
+    max-width: $align-size-lg;
+  }
+
+  .size-auto {
+    width: auto;
+    max-width: none;
+  }
+}
