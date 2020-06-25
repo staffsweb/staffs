@@ -1583,6 +1583,14 @@
 		"oAP": "/components/card/card--maroon.twig",
 		"oF": 0
 		},
+	"/components/card/card--overlap-title.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/card/card--overlap-title.twig",
+		"oF": 0
+		},
 	"/components/card/card--pink.twig": {
 		"cB": 0,
 		"ft": 8192,
