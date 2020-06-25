@@ -35,12 +35,18 @@ cite,
 
 .blockquote__title {
   color: $red;
+  color: var(--accent-color, #{$red});
 
   @include typescale('2xl');
 
   @media (min-width: $breakpoint-largescreen-typography) {
     @include typescale('3xl');
   }
+}
+
+.blockquote__highlight {
+  color: $red;
+  color: var(--accent-color, #{$red});
 }
 
 .blockquote__footer {
