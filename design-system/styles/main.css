@@ -650,6 +650,14 @@ a.feature-link:hover .feature-link__title:after { transform: translateX(0.1rem);
 
 .icon--facebook { background-image: url("../img/icon-facebook.svg"); }
 
+.icon--pin { background-image: url("../img/icon-pin.svg"); }
+
+.icon--calendar { background-image: url("../img/icon-calendar.svg"); }
+
+.icon--clock { background-image: url("../img/icon-clock.svg"); }
+
+.icon--pricetag { background-image: url("../img/icon-pricetag.svg"); }
+
 .icon--facebook-white { background-image: url("../img/icon-facebook-white.svg"); }
 
 .icon--instagram { background-image: url("../img/icon-instagram.svg"); }
@@ -690,13 +698,17 @@ a.feature-link:hover .feature-link__title:after { transform: translateX(0.1rem);
 
 .list--links a:hover { text-decoration: underline; }
 
-.list--icon-links { list-style: none; padding: 0; }
+.list--icon-bullets { list-style: none; padding: 0; }
 
-.list--icon-links .icon { margin-right: 0.5em; }
+.list--icon-bullets li { padding-left: 1.5em; }
 
-.list--icon-links a { display: inline-table; }
+.list--icon-bullets .icon { float: left; top: 0.5em; margin-left: -1.5em; }
 
-.list--icon-links.list--inline li { margin-right: 1em; }
+.list--icon-bullets a { display: inline-table; }
+
+.list--icon-bullets.list--inline li { margin-right: 1em; }
+
+.list--icon-bullets.list--links .icon { top: 0.2em; }
 
 .list--inline-bulleted { padding: 0; }
 

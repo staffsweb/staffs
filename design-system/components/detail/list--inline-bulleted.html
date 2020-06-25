@@ -231,12 +231,18 @@
   }
 }
 
-<span class="hljs-selector-class">.list--icon-links</span> {
+<span class="hljs-selector-class">.list--icon-bullets</span> {
   <span class="hljs-attribute">list-style</span>: none;
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
 
+  <span class="hljs-selector-tag">li</span> {
+    <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">1.5em</span>;
+  }
+
   <span class="hljs-selector-class">.icon</span> {
-    <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">0.5em</span>;
+    <span class="hljs-attribute">float</span>: left;
+    <span class="hljs-attribute">top</span>: <span class="hljs-number">0.5em</span>;
+    <span class="hljs-attribute">margin-left</span>: -<span class="hljs-number">1.5em</span>;
   }
 
   <span class="hljs-selector-tag">a</span> {
@@ -248,6 +254,16 @@
       <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">1em</span>;
     }
   }
+
+  &amp;<span class="hljs-selector-class">.list--links</span> {
+    <span class="hljs-selector-class">.icon</span> {
+      <span class="hljs-attribute">top</span>: <span class="hljs-number">0.2em</span>;
+    }
+  }
+}
+
+<span class="hljs-selector-class">.list--icon-bullets</span> {
+
 }
 
 <span class="hljs-selector-class">.list--inline-bulleted</span> {
@@ -349,7 +365,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2 KB</span>
+                    <span class="Meta-value">2.1 KB</span>
                 </li>
             </ul>
         </div>
@@ -379,8 +395,8 @@
                     <span>Default</span>
                 </a>, 
             
-                <a href="list--icon-links.html">
-                    <span>Icon Links</span>
+                <a href="list--icon-bullets.html">
+                    <span>Icon Bullets</span>
                 </a>, 
             
                 <a href="list--inline.html">
@@ -1926,8 +1942,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="list--icon-links.html" data-pjax>
-                <span>Icon Links</span>
+            <a class="Tree-entityLink" href="list--icon-bullets.html" data-pjax>
+                <span>Icon Bullets</span>
                 
 
 <div class="Status Status--unlabelled">
