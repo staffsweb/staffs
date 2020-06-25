@@ -27,7 +27,8 @@
 
   &__social-list {
     .icon {
-      @include typescale('5xl');
+      @include typescale('4xl');
+      margin-right: $spacing-sm;
     }
   }
 

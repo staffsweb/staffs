@@ -29,6 +29,25 @@
   }
 }
 
+.list--icon-links {
+  list-style: none;
+  padding: 0;
+
+  .icon {
+    margin-right: 0.5em;
+  }
+
+  a {
+    display: inline-table; // prevents icon/text wrapping line
+  }
+
+  &.list--inline {
+    li {
+      margin-right: 1em;
+    }
+  }
+}
+
 .list--inline-bulleted {
   padding: 0;
 

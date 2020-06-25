@@ -21,6 +21,12 @@ variants:
       background: offwhite
       text: 'This is an offwhite box'
 
+  - name: greyblue-superlight
+    label: "Background: Superlight Greyblue"
+    context:
+      background: greyblue-superlight
+      text: 'This is an Superlight Greyblue box'
+
 #  - name: offwhite-gradient
 #    label: "Background: Offwhite Gradient"
 #    context:
