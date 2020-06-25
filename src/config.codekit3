@@ -311,6 +311,46 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/assets/img/icon-quote-maroon.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/icon-quote-maroon.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/img/icon-quote-pink.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/icon-quote-pink.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/img/icon-quote-red.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/icon-quote-red.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/img/icon-quote-slate.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/icon-quote-slate.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/assets/img/icon-snapchat-white.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -1549,6 +1589,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/components/card/card--pink.twig",
+		"oF": 0
+		},
+	"/components/card/card--pullquote.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/card/card--pullquote.twig",
 		"oF": 0
 		},
 	"/components/card/card--red.twig": {

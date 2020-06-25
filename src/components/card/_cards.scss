@@ -95,6 +95,51 @@ a.card {
   padding-bottom: $card__internal-spacing;
 }
 
+.card--pullquote {
+  padding-bottom: $card__internal-spacing;
+  margin-left: 5%;
+
+  &:before {
+    content: '';
+    display: block;
+    float: left;
+    width: 5%;
+    height: 0;
+    padding-bottom: 5%;
+    margin-left: -5%;
+    background: #fff url('../img/icon-quote-red.svg') no-repeat center center;
+    background-size: contain;
+  }
+
+  // these themes need to be updated 'manually' for now, as we're using an svg,
+  // and I can't think of a clever way to update dynamically based on the accent var
+
+  &.card--red {
+    &:before {
+      background: #fff url('../img/icon-quote-red.svg') no-repeat center center;
+      background-size: contain;
+    }
+  }
+  &.card--pink {
+    &:before {
+      background: #fff url('../img/icon-quote-pink.svg') no-repeat center center;
+      background-size: contain;
+    }
+  }
+  &.card--maroon {
+    &:before {
+      background: #fff url('../img/icon-quote-maroon.svg') no-repeat center center;
+      background-size: contain;
+    }
+  }
+  &.card--slate {
+    &:before {
+      background: #fff url('../img/icon-quote-slate.svg') no-repeat center center;
+      background-size: contain;
+    }
+  }
+}
+
 .card--course {
 }
 

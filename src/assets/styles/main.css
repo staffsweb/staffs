@@ -572,6 +572,18 @@ a.card:hover .title__highlight { text-decoration: underline; }
 
 .card--testimonial { padding-bottom: 0.75rem; }
 
+.card--pullquote { padding-bottom: 0.75rem; margin-left: 5%; }
+
+.card--pullquote:before { content: ''; display: block; float: left; width: 5%; height: 0; padding-bottom: 5%; margin-left: -5%; background: #fff url("../img/icon-quote-red.svg") no-repeat center center; background-size: contain; }
+
+.card--pullquote.card--red:before { background: #fff url("../img/icon-quote-red.svg") no-repeat center center; background-size: contain; }
+
+.card--pullquote.card--pink:before { background: #fff url("../img/icon-quote-pink.svg") no-repeat center center; background-size: contain; }
+
+.card--pullquote.card--maroon:before { background: #fff url("../img/icon-quote-maroon.svg") no-repeat center center; background-size: contain; }
+
+.card--pullquote.card--slate:before { background: #fff url("../img/icon-quote-slate.svg") no-repeat center center; background-size: contain; }
+
 .card--ksp { color: #394851; }
 
 .card--event { margin-left: 4rem; }
@@ -848,9 +860,11 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 0.875rem; font-style
 
 @media (min-width: 55rem) { .blockquote--small, .blockquote--long { font-size: 1.5em; } }
 
-.blockquote__title { color: #d70a26; font-size: 1.75rem; }
+.blockquote__title { color: #d70a26; color: var(--accent-color, #d70a26); font-size: 1.75rem; }
 
 @media (min-width: 55rem) { .blockquote__title { font-size: 2rem; } }
+
+.blockquote__highlight { color: #d70a26; color: var(--accent-color, #d70a26); }
 
 .blockquote__footer { margin-top: 1.5rem; font-size: 0.875rem; }
 
