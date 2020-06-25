@@ -1,4 +1,5 @@
 .box {
+  position: relative;
   background: white;
   margin: 0 0 $spacing-xl;
 
@@ -68,5 +69,21 @@
 
   &--bg-offwhite-gradient {
     background: radial-gradient(45% 660% at 50% 50%, mix(#e3e3e3, white, 30%) 0%, mix(#ccc, white, 30%) 100%);
+  }
+}
+
+// -- VARIANTS
+
+.box--with-abstitle {
+  // absolutely positioned title
+
+  .box__content:first-child {
+    padding-top: calc(#{$spacing-3xl} + 2.5%);;
+  }
+
+  .box__abstitle {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }

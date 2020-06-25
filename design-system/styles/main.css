@@ -456,7 +456,7 @@ section:first-child { margin-top: 0; }
 
 .banner .wrap .banner__body { padding-left: 0; padding-right: 0; }
 
-.box { background: white; margin: 0 0 2rem; }
+.box { position: relative; background: white; margin: 0 0 2rem; }
 
 .box__figure img { width: 100%; }
 
@@ -485,6 +485,10 @@ section:first-child { margin-top: 0; }
 .box--bg-slate { background-color: #394851; color: #fff; }
 
 .box--bg-offwhite-gradient { background: radial-gradient(45% 660% at 50% 50%, #f7f7f7 0%, #f0f0f0 100%); }
+
+.box--with-abstitle .box__content:first-child { padding-top: calc(3rem + 2.5%); }
+
+.box--with-abstitle .box__abstitle { position: absolute; top: 0; left: 0; }
 
 .breadcrumbs { background: rgba(0, 0, 0, 0.6); display: inline-block; color: #fff; margin: 0 0 0.5rem; padding: 0.5rem 0.75rem; }
 

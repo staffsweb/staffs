@@ -1368,6 +1368,14 @@
 		"oS": 2,
 		"sct": 1
 		},
+	"/components/box/box--abstitle.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/box/box--abstitle.twig",
+		"oF": 0
+		},
 	"/components/box/box.config.yml": {
 		"cB": 0,
 		"ft": 8192,

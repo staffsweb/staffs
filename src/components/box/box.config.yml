@@ -38,3 +38,6 @@ variants:
     context:
       background: slate
       text: 'This is a slate box'
+
+  - name: abstitle
+    label: "AbsPos Title"
