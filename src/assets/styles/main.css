@@ -860,7 +860,7 @@ blockquote p:last-child, .blockquote p:last-child { margin-bottom: 0; }
 
 blockquote footer, .blockquote footer { margin-top: 1.5rem; font-size: 0.875rem; }
 
-cite, .cite { font-family: 'Roboto', sans-serif; font-size: 0.875rem; font-style: normal; font-weight: 500; display: block; margin: 1.5rem 0 0; }
+cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: normal; font-weight: 500; display: block; margin: 1.5rem 0 0.5rem; }
 
 .blockquote--large, .blockquote--short { font-size: 1.75em; line-height: 1.2; }
 
@@ -876,13 +876,13 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 0.875rem; font-style
 
 .blockquote__highlight { color: #d70a26; color: var(--accent-color, #d70a26); }
 
-.blockquote__footer { margin-top: 1.5rem; font-size: 0.875rem; }
+.blockquote__footer { margin-top: 1.5rem; font-size: 1rem; }
 
 .blockquote__prose { margin: 1.5rem 0; font-size: 1rem; line-height: 2; }
 
 .blockquote__figure { -webkit-shape-outside: circle(60%) padding-box; shape-outside: circle(60%) padding-box; }
 
-.blockquote__figure img { margin-left: auto; margin-right: auto; border-radius: 100%; max-height: 50vmin; width: auto; }
+.blockquote__figure img { margin-left: auto; margin-right: auto; border-radius: 100%; max-height: 40vmin; width: auto; }
 
 .quote-banner { position: relative; overflow: hidden; background: linear-gradient(45deg, white 35%, #f0f1f2 35%); }
 

@@ -51,7 +51,7 @@ cite,
 
 .blockquote__footer {
   margin-top: $spacing-lg;
-  @include typescale('sm');
+  @include typescale('md');
 }
 
 .blockquote__prose {
@@ -67,7 +67,7 @@ cite,
     margin-left: auto;
     margin-right: auto;
     border-radius: 100%;
-    max-height: 50vmin;
+    max-height: 40vmin;
     width: auto;
   }
 }

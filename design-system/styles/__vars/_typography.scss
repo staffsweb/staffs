@@ -466,11 +466,11 @@ $border-accent-width: $spacing-2xs;
 
 @mixin cite {
   @include font-primary;
-  @include typescale('sm');
+  @include typescale('lg');
   font-style: normal;
   font-weight: 500;
   display: block;
-  margin: $spacing-lg 0 0;
+  margin: $spacing-lg 0 $spacing-xs;
 }
 
 @mixin figcaption {
