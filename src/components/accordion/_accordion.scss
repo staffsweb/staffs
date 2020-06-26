@@ -10,12 +10,14 @@
   &[open] {
     .accordion__title {
       font-weight: 500;
-      background: $greyblue-light;
+      background: $greyblue-superlight;
     }
 
     .accordion__toggle:before {
-      content: '–';
+      content: '';
       transform: rotate(0deg);
+      background: $slate url('../img/icon-minus-white.svg') no-repeat center center;
+      background-size: 50%;
     }
   }
 }
@@ -48,26 +50,24 @@
   &:before {
     display: inline-block;
     float: left;
-    content: '+';
+    content: '';
     width: 1em;
     height: 1em;
     line-height: 1;
     padding: 0;
     margin-left: -1.5em;
-    background: $slate;
-    color: #fff;
+    background: $slate url('../img/icon-plus-white.svg') no-repeat center center;
+    background-size: 50%;
     text-align: center;
     border-radius: 50%;
     vertical-align: middle;
     box-sizing: border-box;
-    //transition: transform 200ms ease-in-out;
-    //transform: rotate(-90deg);
   }
 }
 
 .accordion__content {
   padding: $spacing-sm;
-  background: $greyblue-superlight;
+  background: $greyblue-supersuperlight;
   border-top: 1px solid $grey-light;
 
   @media (min-width: 40em) {
