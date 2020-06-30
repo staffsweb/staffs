@@ -1,0 +1,92 @@
+
+
+<!DOCTYPE html>
+<html class="no-js no-touch" lang="en">
+<head>
+    
+<script type="text/javascript">(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="cleartype" content="on" />
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+<link href="../../styles/main.css" rel="stylesheet" />
+<link media="print" href="../../styles/print.css" rel="stylesheet" /></head>
+
+<body>
+
+<main style="padding: 2rem 0;">
+    <div class="wrap">
+        <div class="title  title--has-tail">
+  <h1 class="title__highlight">Getting Started</h1>
+</div>
+
+<div class="slab  slab--bg-offwhite  align-full">
+  <div class="wrap">
+    <p class="intro">The Design System contains some guidance on what components are for and how to use them from both a content editor, and developer viewpoint on each individual component. There are also some more globally applicable guidelines for things like Typography, Colour, Spacing and Layout on other pages in this section.</p>
+    <p class="intro"><strong>This is mostly technical documentation intended for those using and maintaining the Staffs Design System. If you don't write code, this might not be the page you're looking for, skip it :)</strong></p>
+    <p class="intro">In this guide you will find some (hopefully) useful notes on:</p>
+    <ul class="">
+      <li><a href="#fractal">Fractal and setting it up</a></li>
+      <li><a href="#file-structure">Front-end architecture / file structure</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="section-header  section-header--bg-offwhite   align-full  margin-top-xl"  id="fractal">
+  <div class="wrap">
+    <div class="title  title--bg-maroon  title--has-tail">
+      <h2 class="title__highlight">Fractal</h2>
+    </div>
+  </div>
+</div>
+
+<p>The design system is managed using <a href="https://fractal.build">https://fractal.build</a>, which has great documentation worth familiarising yourself with, it's already set up to run in the repo, you'll just need it installed on your system, see: <a href="https://fractal.build/guide/installation.html#installing-the-fractal-cli-tool">Installing the Fractal CLI tool</a></p>
+<p>The <code>package.json</code> file in the root of the repository should list everything you need. Just run:</p>
+
+<pre>npm install</pre>
+
+<p>to get everything ready, then you should be able to run:
+
+<pre>fractal start</pre>
+
+<p>To get a localhost version running on your system.</p>
+
+<p>Fractal's settings can be found in <code>fractal.js</code> in the root, as per <a href="https://fractal.build/guide/project-settings.html">the docs</a>. Changing anything in this file will need a restart of Fractal to take effect.</p>
+
+
+
+
+<div class="section-header  section-header--bg-offwhite align-full  margin-top-6xl" id="file-structure">
+  <div class="wrap">
+    <div class="title  title--bg-maroon  title--has-tail">
+      <h2 class="title__highlight">File structure</h2>
+    </div>
+  </div>
+</div>
+
+<p>The file structure for Fractal has been set in <code>fractal.js</code> for components,
+
+<p><strong>Templating Note:</strong> You'll notice that all the template files use <a href="https://twig.symfony.com">Twig</a> as a <a href="https://fractal.build/guide/customisation/template-engines.html">templating language</a>. This means components can be built to be directly included in Drupal and WordPress (using <a href="https://github.com/timber/timber">Timber</a> or likewise). While that might not be directly appropriate for your project's integration, it sped up the development of components at the time.</p>
+<div class="title"><p class="title__highlight"><strong>Plain ol' HTML can be viewed for all components from within Fractal in the HTML tab along the bottom of the screen</strong>.</p></div>
+
+
+
+<div class="section-header  section-header--bg-offwhite align-full  margin-top-6xl">
+  <div class="wrap">
+    <div class="title  title--bg-maroon  title--has-tail">
+      <h2 class="title__highlight">Build process / Code compilation</h2>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+</main>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../../js/app.min.js"></script>
+</body>
+</html>

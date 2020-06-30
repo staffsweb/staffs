@@ -1189,6 +1189,14 @@
 		"oS": 2,
 		"sct": 1
 		},
+	"/components/01-globals-and-docs/00-getting-started.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/01-globals-and-docs/00-getting-started.twig",
+		"oF": 0
+		},
 	"/components/01-globals-and-docs/01-typography.twig": {
 		"cB": 0,
 		"ft": 8192,
@@ -2415,6 +2423,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/components/zebra/zebra.twig",
+		"oF": 0
+		},
+	"/docs/readme.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/readme.txt",
 		"oF": 0
 		}
 	},
