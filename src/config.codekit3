@@ -966,19 +966,6 @@
 		"oS": 2,
 		"sct": 1
 		},
-	"/assets/styles/_components/_embeds.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 4,
-		"ec": 1,
-		"ft": 4,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "/assets/styles/_components/_embeds.css",
-		"oF": 0,
-		"oS": 2,
-		"sct": 1
-		},
 	"/assets/styles/_global/_forms.scss": {
 		"aP": 1,
 		"bl": 0,
