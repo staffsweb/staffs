@@ -153,18 +153,20 @@
 
 <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Alignments<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Elements can be aligned left and right within the normal flow of paragraph content using the classes <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>align-left<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> and <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>align-right<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>. Where no specific size is selected, they'll default to <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>medium<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Elements can be aligned left and right within the normal flow of paragraph content using the classes <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>align-left<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> and <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>align-right<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>. Where no specific size is selected, they'll default to <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>size-md at small screens, and size-sm at larger screens<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
     width. This is normally fine.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>As these elements are floated, <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>always make sure there is enough copy to flow all the way around the element to 'clear' it.<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Sizes<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Elements can be given a size to restrict their width. Normally you don't need to, but if you want to make something explicitly larger or smaller than its default width when aligned, add:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Elements can be given a size to restrict their width. Normally <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>you don't need to<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>, by default things will be size-md at small screens, and size-sm at larger screens, but if you want to make something explicitly larger or
+        smaller than its default width <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>at all times<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>, add one of:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list--unstyled"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>size-<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>size-<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>size-<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list--unstyled  list--inline"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>align-size-xs<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>align-size-sm<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>align-size-md<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>align-size-lg<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">hr</span>&gt;</span>
@@ -230,13 +232,60 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Blockquote<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"align-left blockquote--short"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">q</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"blockquote__title"</span>&gt;</span>If aligning a quote, make it short.<span class="hljs-tag">&lt;/<span class="hljs-name">q</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">footer</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">cite</span>&gt;</span>Dan (VP of Alignment Advice)<span class="hljs-tag">&lt;/<span class="hljs-name">cite</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"align-left"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"blockquote--short"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">q</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"blockquote__title"</span>&gt;</span>If aligning a quote, make it short.<span class="hljs-tag">&lt;/<span class="hljs-name">q</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">footer</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">cite</span>&gt;</span>Dan (VP of Alignment Advice)<span class="hljs-tag">&lt;/<span class="hljs-name">cite</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
 
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Staffordshire University is going global with a programme packed full of free events to start the new decade. The founders of an immersive storytelling app have returned to their university stomping ground to film their latest episode.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Staffordshire University is going global with a programme packed full of free events to start the new decade. The founders of an immersive storytelling app have returned to their university stomping ground to film their latest episode.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Staffordshire University is going global with a programme packed full of free events to start the new decade. The founders of an immersive storytelling app have returned to their university stomping ground to film their latest episode.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Sizes<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"align-right  align-size-xs"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://placeimg.com/210/210"</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span>&gt;</span>size-xs<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Staffordshire University is going global with a programme packed full of free events to start the new decade. The founders of an immersive storytelling app have returned to their university stomping ground to film their latest episode.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Staffordshire University is going global with a programme packed full of free events to start the new decade. The founders of an immersive storytelling app have returned to their university stomping ground to film their latest episode.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"align-right "</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://placeimg.com/800/400"</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>automatically sized (default: normally just use this!)<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Staffordshire University is going global with a programme packed full of free events to start the new decade. The founders of an immersive storytelling app have returned to their university stomping ground to film their latest episode.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Staffordshire University is going global with a programme packed full of free events to start the new decade. The founders of an immersive storytelling app have returned to their university stomping ground to film their latest episode.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"align-right  align-size-sm"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://placeimg.com/800/400"</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span>&gt;</span>size-sm<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Staffordshire University is going global with a programme packed full of free events to start the new decade. The founders of an immersive storytelling app have returned to their university stomping ground to film their latest episode.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Staffordshire University is going global with a programme packed full of free events to start the new decade. The founders of an immersive storytelling app have returned to their university stomping ground to film their latest episode.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"align-right  align-size-md"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://placeimg.com/800/400"</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span>&gt;</span>size-md<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Staffordshire University is going global with a programme packed full of free events to start the new decade. The founders of an immersive storytelling app have returned to their university stomping ground to film their latest episode.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Staffordshire University is going global with a programme packed full of free events to start the new decade. The founders of an immersive storytelling app have returned to their university stomping ground to film their latest episode.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Staffordshire University is going global with a programme packed full of free events to start the new decade. The founders of an immersive storytelling app have returned to their university stomping ground to film their latest episode.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"align-right  align-size-lg"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://placeimg.com/800/400"</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span>&gt;</span>size-lg<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Staffordshire University is going global with a programme packed full of free events to start the new decade. The founders of an immersive storytelling app have returned to their university stomping ground to film their latest episode.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Staffordshire University is going global with a programme packed full of free events to start the new decade. The founders of an immersive storytelling app have returned to their university stomping ground to film their latest episode.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Staffordshire University is going global with a programme packed full of free events to start the new decade. The founders of an immersive storytelling app have returned to their university stomping ground to film their latest episode.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Staffordshire University is going global with a programme packed full of free events to start the new decade. The founders of an immersive storytelling app have returned to their university stomping ground to film their latest episode.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Staffordshire University is going global with a programme packed full of free events to start the new decade. The founders of an immersive storytelling app have returned to their university stomping ground to film their latest episode.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></pre>
@@ -253,18 +302,20 @@
 
 <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Alignments<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Elements can be aligned left and right within the normal flow of paragraph content using the classes <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>align-left<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> and <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>align-right<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>. Where no specific size is selected, they'll default to <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>medium<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Elements can be aligned left and right within the normal flow of paragraph content using the classes <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>align-left<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> and <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>align-right<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>. Where no specific size is selected, they'll default to <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>size-md at small screens, and size-sm at larger screens<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
   width. This is normally fine.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>As these elements are floated, <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>always make sure there is enough copy to flow all the way around the element to 'clear' it.<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Sizes<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Elements can be given a size to restrict their width. Normally you don't need to, but if you want to make something explicitly larger or smaller than its default width when aligned, add:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Elements can be given a size to restrict their width. Normally <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>you don't need to<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>, by default things will be size-md at small screens, and size-sm at larger screens, but if you want to make something explicitly larger or
+  smaller than its default width <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>at all times<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>, add one of:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list--unstyled"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>size-<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>size-<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>size-<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list--unstyled  list--inline"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>align-size-xs<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>align-size-sm<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>align-size-md<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>align-size-lg<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">hr</span>&gt;</span>
@@ -297,7 +348,9 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>In constrained content column<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"grid  grid--spaced  grid-4-cols@tablet-wide"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"box  box--padded  box--bg-slate"</span>&gt;</span>Aside ahead of content<span class="hljs-tag">&lt;/<span class="hljs-name">aside</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"box  box--padded  box--bg-slate"</span>&gt;</span>Aside ahead of content<span class="hljs-tag">&lt;/<span class="hljs-name">aside</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-1/2@tablet-wide"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"align-left"</span>&gt;</span>
@@ -322,18 +375,67 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span></span><span class="hljs-template-variable">{{ placeholderPara2 }}</span><span class="xml"> </span><span class="hljs-template-variable">{{ placeholderPara1 }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"box  box--padded box--bg-slate"</span>&gt;</span>Aside after content<span class="hljs-tag">&lt;/<span class="hljs-name">aside</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"box  box--padded box--bg-slate"</span>&gt;</span>Aside after content<span class="hljs-tag">&lt;/<span class="hljs-name">aside</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
 
 <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Blockquote<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"align-left blockquote--short"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">q</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"blockquote__title"</span>&gt;</span>If aligning a quote, make it short.<span class="hljs-tag">&lt;/<span class="hljs-name">q</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">footer</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">cite</span>&gt;</span>Dan (VP of Alignment Advice)<span class="hljs-tag">&lt;/<span class="hljs-name">cite</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"align-left"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"blockquote--short"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">q</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"blockquote__title"</span>&gt;</span>If aligning a quote, make it short.<span class="hljs-tag">&lt;/<span class="hljs-name">q</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">footer</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">cite</span>&gt;</span>Dan (VP of Alignment Advice)<span class="hljs-tag">&lt;/<span class="hljs-name">cite</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
 
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span></span><span class="hljs-template-variable">{{ placeholderPara2 }}</span><span class="xml"> </span><span class="hljs-template-variable">{{ placeholderPara1 }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span></span><span class="hljs-template-variable">{{ placeholderPara2 }}</span><span class="xml"> </span><span class="hljs-template-variable">{{ placeholderPara1 }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span></span><span class="hljs-template-variable">{{ placeholderPara2 }}</span><span class="xml"> </span><span class="hljs-template-variable">{{ placeholderPara1 }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Sizes<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"align-right  align-size-xs"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://placeimg.com/210/210"</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span>&gt;</span>size-xs<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span></span><span class="hljs-template-variable">{{ placeholderPara2 }}</span><span class="xml"> </span><span class="hljs-template-variable">{{ placeholderPara1 }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span></span><span class="hljs-template-variable">{{ placeholderPara2 }}</span><span class="xml"> </span><span class="hljs-template-variable">{{ placeholderPara1 }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"align-right "</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://placeimg.com/800/400"</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>automatically sized (default: normally just use this!)<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span></span><span class="hljs-template-variable">{{ placeholderPara2 }}</span><span class="xml"> </span><span class="hljs-template-variable">{{ placeholderPara1 }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span></span><span class="hljs-template-variable">{{ placeholderPara2 }}</span><span class="xml"> </span><span class="hljs-template-variable">{{ placeholderPara1 }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"align-right  align-size-sm"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://placeimg.com/800/400"</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span>&gt;</span>size-sm<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span></span><span class="hljs-template-variable">{{ placeholderPara2 }}</span><span class="xml"> </span><span class="hljs-template-variable">{{ placeholderPara1 }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span></span><span class="hljs-template-variable">{{ placeholderPara2 }}</span><span class="xml"> </span><span class="hljs-template-variable">{{ placeholderPara1 }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"align-right  align-size-md"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://placeimg.com/800/400"</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span>&gt;</span>size-md<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span></span><span class="hljs-template-variable">{{ placeholderPara2 }}</span><span class="xml"> </span><span class="hljs-template-variable">{{ placeholderPara1 }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span></span><span class="hljs-template-variable">{{ placeholderPara2 }}</span><span class="xml"> </span><span class="hljs-template-variable">{{ placeholderPara1 }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span></span><span class="hljs-template-variable">{{ placeholderPara2 }}</span><span class="xml"> </span><span class="hljs-template-variable">{{ placeholderPara1 }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"align-right  align-size-lg"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://placeimg.com/800/400"</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span>&gt;</span>size-lg<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span></span><span class="hljs-template-variable">{{ placeholderPara2 }}</span><span class="xml"> </span><span class="hljs-template-variable">{{ placeholderPara1 }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span></span><span class="hljs-template-variable">{{ placeholderPara2 }}</span><span class="xml"> </span><span class="hljs-template-variable">{{ placeholderPara1 }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span></span><span class="hljs-template-variable">{{ placeholderPara2 }}</span><span class="xml"> </span><span class="hljs-template-variable">{{ placeholderPara1 }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span></span><span class="hljs-template-variable">{{ placeholderPara2 }}</span><span class="xml"> </span><span class="hljs-template-variable">{{ placeholderPara1 }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span></span><span class="hljs-template-variable">{{ placeholderPara2 }}</span><span class="xml"> </span><span class="hljs-template-variable">{{ placeholderPara1 }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span></pre>

@@ -366,15 +366,15 @@ section:first-child { margin-top: 0; }
 
 .align-left { float: none; }
 
-@media (min-width: 32.5rem) { .align-left { float: left; max-width: calc(50% - 0.75rem); box-sizing: border-box; margin-left: 0; margin-top: 0.25rem; margin-right: 3rem; margin-bottom: 1.5rem; } }
+@media (min-width: 32.5rem) { .align-left { float: left; max-width: 50%; box-sizing: border-box; margin-left: 0; margin-top: 0.25rem; margin-right: 3rem; margin-bottom: 1.5rem; } }
 
-@media (min-width: 50rem) { .align-left { max-width: calc(33% - 0.75rem); } }
+@media (min-width: 50rem) { .align-left { max-width: 33%; } }
 
 .align-right { float: none; }
 
-@media (min-width: 32.5rem) { .align-right { float: right; clear: right; max-width: calc(50% - 0.75rem); box-sizing: border-box; margin-right: 0; margin-top: 0.25rem; margin-left: 3rem; margin-bottom: 1.5rem; } }
+@media (min-width: 32.5rem) { .align-right { float: right; clear: right; max-width: 50%; box-sizing: border-box; margin-right: 0; margin-top: 0.25rem; margin-left: 3rem; margin-bottom: 1.5rem; } }
 
-@media (min-width: 50rem) { .align-right { max-width: calc(33% - 0.75rem); } }
+@media (min-width: 50rem) { .align-right { max-width: 33%; } }
 
 .align-center, .align-centre { margin-left: auto !important; margin-right: auto !important; }
 
@@ -740,7 +740,7 @@ a.feature-link:hover .feature-link__title:after { transform: translateX(0.1rem);
 
 .list--inline-bulleted li:first-child:before { display: none; }
 
-.masthead { display: flex; min-height: 65vmin; padding: 9em 0 2em; background-size: cover; background-position: 50% 50%; box-sizing: border-box; }
+.masthead { display: flex; min-height: 65vh; min-height: 65vmin; padding: 9em 0 2em; background-size: cover; background-position: 50% 50%; box-sizing: border-box; }
 
 @media (min-width: 47.5em) and (min-height: 30em) { .masthead { padding-top: 12em; } }
 
