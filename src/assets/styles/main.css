@@ -926,7 +926,7 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .section-header--bg-offwhite { padding: 2rem 0 0; margin-bottom: 4rem; background-color: #f1f1f1; }
 
-.section-header--bg-offwhite .section-header__title { position: relative; top: 2rem; }
+.section-header--bg-offwhite .section-header__title { position: relative; top: 2rem; margin-bottom: 6rem; }
 
 .slab { padding: 4rem 0; }
 
