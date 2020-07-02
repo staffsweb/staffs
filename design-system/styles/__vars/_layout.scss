@@ -10,10 +10,10 @@ $line-length-max-rem: 50rem;
 $breakpoint-largescreen-typography: $third-breakpoint + 5rem;
 $breakpoint-largescreen-typography-height: 30rem;
 
-$align-size-xs: 25%;
-$align-size-sm: 33%;
-$align-size-md: 50%;
-$align-size-lg: 66%;
+$align-size-xs: calc(25% - #{$grid-gutter});
+$align-size-sm: calc(33% - #{$grid-gutter});
+$align-size-md: calc(50% - #{$grid-gutter});
+$align-size-lg: calc(66% - #{$grid-gutter});
 $align-min-breakpoint: 32.5rem;
 //$align-right-offset-breakpoint: $wrap-width + 10rem;
 

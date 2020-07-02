@@ -1,6 +1,6 @@
 .title {
   position: relative;
-  --background: #{$red};
+  --background: #{$primary};
   --color: white;
   max-width: 42em; // @TODO: why? what does this relate to? make a variable
   margin-bottom: $spacing-lg;
@@ -17,12 +17,12 @@
   left: $spacing-xs;
   padding: 0.25rem;
   line-height: 1.4;
-  background: $red;
-  background: var(--background);
+  background: $primary;
+  background: var(--background, #{$primary});
   color: white;
   color: var(--color);
-  box-shadow: -$spacing-xs 0 0 0 #{$red}, $spacing-xs 0 0 0 #{$red};
-  box-shadow: -$spacing-xs 0 0 0 var(--background), $spacing-xs 0 0 0 var(--background);
+  box-shadow: -$spacing-xs 0 0 0 #{$primary}, $spacing-xs 0 0 0 #{$primary};
+  box-shadow: -$spacing-xs 0 0 0 var(--background, #{$primary}), $spacing-xs 0 0 0 var(--background, #{$primary});
   box-decoration-break: clone;
   //border-top: 0.25rem solid transparent;
   //border-bottom: 0.25rem solid transparent;
@@ -46,8 +46,8 @@
       height: 2px;
       transform: rotate(225deg);
       transform-origin: top left;
-      background: $red;
-      background: var(--background);
+      background: $primary;
+      background: var(--background, #{$primary});
       transition: transform 500ms;
     }
   }
@@ -91,6 +91,10 @@
 
 .title--bg-slate {
   --background: #{$slate};
+}
+
+.title--bg-red {
+  --background: #{$red}; 
 }
 
 .title--bg-maroon {

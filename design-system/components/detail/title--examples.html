@@ -364,7 +364,7 @@
                             <code class="Code Code--lang-SCSS FileBrowser-code">
                                 <pre><span class="hljs-selector-class">.title</span> {
   <span class="hljs-attribute">position</span>: relative;
-  --<span class="hljs-attribute">background</span>: #{<span class="hljs-variable">$red</span>};
+  --<span class="hljs-attribute">background</span>: #{<span class="hljs-variable">$primary</span>};
   --<span class="hljs-attribute">color</span>: white;
   <span class="hljs-attribute">max-width</span>: <span class="hljs-number">42em</span>; <span class="hljs-comment">// @<span class="hljs-doctag">TODO:</span> why? what does this relate to? make a variable</span>
   <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-variable">$spacing-lg</span>;
@@ -381,12 +381,12 @@
   <span class="hljs-attribute">left</span>: <span class="hljs-variable">$spacing-xs</span>;
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.25rem</span>;
   <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.4</span>;
-  <span class="hljs-attribute">background</span>: <span class="hljs-variable">$red</span>;
-  <span class="hljs-attribute">background</span>: var(--background);
+  <span class="hljs-attribute">background</span>: <span class="hljs-variable">$primary</span>;
+  <span class="hljs-attribute">background</span>: var(--background, #{<span class="hljs-variable">$primary</span>});
   <span class="hljs-attribute">color</span>: white;
   <span class="hljs-attribute">color</span>: var(--color);
-  <span class="hljs-attribute">box-shadow</span>: -<span class="hljs-variable">$spacing-xs</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> #{<span class="hljs-variable">$red</span>}, <span class="hljs-variable">$spacing-xs</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> #{<span class="hljs-variable">$red</span>};
-  <span class="hljs-attribute">box-shadow</span>: -<span class="hljs-variable">$spacing-xs</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> var(--background), <span class="hljs-variable">$spacing-xs</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> var(--background);
+  <span class="hljs-attribute">box-shadow</span>: -<span class="hljs-variable">$spacing-xs</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> #{<span class="hljs-variable">$primary</span>}, <span class="hljs-variable">$spacing-xs</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> #{<span class="hljs-variable">$primary</span>};
+  <span class="hljs-attribute">box-shadow</span>: -<span class="hljs-variable">$spacing-xs</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> var(--background, #{<span class="hljs-variable">$primary</span>}), <span class="hljs-variable">$spacing-xs</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> var(--background, #{<span class="hljs-variable">$primary</span>});
   <span class="hljs-attribute">box-decoration-break</span>: clone;
   <span class="hljs-comment">//border-top: 0.25rem solid transparent;</span>
   <span class="hljs-comment">//border-bottom: 0.25rem solid transparent;</span>
@@ -410,8 +410,8 @@
       <span class="hljs-attribute">height</span>: <span class="hljs-number">2px</span>;
       <span class="hljs-attribute">transform</span>: rotate(<span class="hljs-number">225deg</span>);
       <span class="hljs-attribute">transform-origin</span>: top left;
-      <span class="hljs-attribute">background</span>: <span class="hljs-variable">$red</span>;
-      <span class="hljs-attribute">background</span>: var(--background);
+      <span class="hljs-attribute">background</span>: <span class="hljs-variable">$primary</span>;
+      <span class="hljs-attribute">background</span>: var(--background, #{<span class="hljs-variable">$primary</span>});
       <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">500ms</span>;
     }
   }
@@ -457,6 +457,10 @@
   --<span class="hljs-attribute">background</span>: #{<span class="hljs-variable">$slate</span>};
 }
 
+<span class="hljs-selector-class">.title--bg-red</span> {
+  --<span class="hljs-attribute">background</span>: #{<span class="hljs-variable">$red</span>}; 
+}
+
 <span class="hljs-selector-class">.title--bg-maroon</span> {
   --<span class="hljs-attribute">background</span>: #{<span class="hljs-variable">$maroon</span>};
 }
@@ -488,7 +492,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2.2 KB</span>
+                    <span class="Meta-value">2.3 KB</span>
                 </li>
             </ul>
         </div>
