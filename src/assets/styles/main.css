@@ -406,7 +406,7 @@ section:first-child { margin-top: 0; }
 
 @media (min-width: 70rem) { .header-site__flexContainer { position: relative; } }
 
-.header-site .site-logo { width: 15%; max-width: 12em; max-height: 2em; }
+.header-site .site-logo { width: 20%; max-width: 8.5em; max-height: 2em; }
 
 .footer-site { background: #394851; color: #fff; clear: both; position: relative; padding: 0 0 8rem; }
 
@@ -762,11 +762,11 @@ a.feature-link:hover .feature-link__title:after { transform: translateX(0.1rem);
 
 @media (min-width: 70rem) { .megaNav .is-expanded > .megaNav__secondLevel { display: flex; } }
 
-.megaNav__controls { position: absolute; left: 0; width: 3rem; overflow: hidden; }
+.megaNav__controls { position: absolute; left: 0; width: 4rem; overflow: hidden; }
 
 @media (min-width: 70rem) { .megaNav__controls { display: none; } }
 
-.megaNav__close { content: ''; border: 0; box-sizing: border-box; display: block; width: 3rem; height: 4rem; margin-top: 0.1em; background: url("../img/icon-x-red.svg") no-repeat center center; background-size: 1rem; cursor: pointer; }
+.megaNav__close { content: ''; border: 0; box-sizing: border-box; display: block; width: 4rem; height: 4rem; margin-top: 0.1em; background: url("../img/icon-x-red.svg") no-repeat center center; background-size: 1rem; cursor: pointer; }
 
 .megaNav__level { position: absolute; visibility: hidden; background: #e8ebed; top: 0; right: 0; left: 0; min-height: 100vh; transform: translateX(100%); padding-left: 1.5rem; box-sizing: border-box; z-index: 1; transition: transform 100ms, visibility 100ms; }
 
@@ -786,7 +786,7 @@ a.feature-link:hover .feature-link__title:after { transform: translateX(0.1rem);
 
 @media (min-width: 70rem) { .megaNav__levelFooter { width: 100%; text-align: center; margin: 0; padding: 0.75rem 0.75rem 0; z-index: 2; } .megaNav__levelFooter p, .megaNav__levelFooter form { margin: 0.75rem 1rem; display: inline-block; } }
 
-.megaNav__topLevel { position: relative; margin: 0; height: 100vh; background: #e8ebed; padding: 0 0 1.5rem 1.5rem; margin-left: 3rem; border-left: 1px solid #bebfc1; box-sizing: border-box; overflow: hidden; overflow-y: auto; overflow-scrolling: touch; }
+.megaNav__topLevel { position: relative; margin: 0; height: 100vh; background: #e8ebed; padding: 0 0 1.5rem 1.5rem; margin-left: 4rem; border-left: 1px solid #bebfc1; box-sizing: border-box; overflow: hidden; overflow-y: auto; overflow-scrolling: touch; }
 
 @media (min-width: 70rem) { .megaNav__topLevel { position: static; height: auto; background: none; padding: 0; margin-left: 0; border-left: 0; overflow: visible; } }
 
@@ -808,7 +808,7 @@ a.feature-link:hover .feature-link__title:after { transform: translateX(0.1rem);
 
 @media (min-width: 70rem) { .megaNav__thirdLevel { font-size: 0.85em; left: 100%; right: -300%; top: 0; bottom: 0; background: white; padding: 2rem; max-height: 100%; overflow: auto; box-sizing: border-box; } .megaNav__thirdLevel-list { -webkit-columns: 2; -moz-columns: 2; columns: 2; -webkit-column-gap: 2rem; -moz-column-gap: 2rem; column-gap: 2rem; } .megaNav__thirdLevel .megaNav__thirdLevel-link { padding: 0; border: 0; margin: 0 0 0.5rem; } .megaNav__thirdLevel .megaNav__thirdLevel-link.has-children:after { display: none; } }
 
-.toggle-megaNav { display: block; height: 2em; width: 2em; margin: 0.75rem; padding: 0; border: 0; background: url("../img/icon-hamburger-white.svg") center center no-repeat; background-size: 100%; z-index: 2; }
+.toggle-megaNav { display: block; height: 3rem; width: 3rem; margin: 0.75rem 0 0.75rem 0.75rem; padding: 0; border: 0; background: url("../img/icon-hamburger-white.svg") center center no-repeat; background-size: 2rem; z-index: 2; }
 
 .toggle-megaNav.is-toggled { opacity: 0.5; }
 

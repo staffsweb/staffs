@@ -110,7 +110,7 @@
   &__controls {
     position: absolute;
     left: 0;
-    width: $spacing-3xl;
+    width: $spacing-4xl;
     overflow: hidden;
 
     @media (min-width: $megaNav-full-breakpoint) {
@@ -123,7 +123,7 @@
     border: 0;
     box-sizing: border-box;
     display: block;
-    width: $spacing-3xl;
+    width: $spacing-4xl;
     height: $spacing-4xl;
     margin-top: 0.1em; // yeah this is a bit of a magic number to get it to align with the closeLevel arrows
     background: url('../img/icon-x-red.svg') no-repeat center center;
@@ -230,7 +230,7 @@
     height: 100vh;
     background: $greyblue-light;
     padding: 0 0 $spacing-lg $spacing-lg;
-    margin-left: $spacing-3xl;
+    margin-left: $spacing-4xl;
     border-left: 1px solid $border-color;
     box-sizing: border-box;
     overflow: hidden;
@@ -408,13 +408,13 @@
 
 .toggle-megaNav {
   display: block;
-  height: 2em;
-  width: 2em;
-  margin: $spacing-sm;
+  height: $spacing-3xl;
+  width: $spacing-3xl;
+  margin: $spacing-sm 0 $spacing-sm $spacing-sm;
   padding: 0;
   border: 0;
   background: url('../img/icon-hamburger-white.svg') center center no-repeat;
-  background-size: 100%;
+  background-size: $spacing-xl;
   z-index: 2;
 
   &.is-toggled {

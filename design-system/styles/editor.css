@@ -1,11 +1,11 @@
 @charset "UTF-8";
 /*@mixin align-wide { max-width: none; width: calc(100vw - 2.4rem); margin-left: calc(-50vw + 50% + 1.2rem); margin-right: calc(-50vw + 50% + 1.2rem); @media (min-width: $wrap-full-gutter-width) { width: calc(90vw); margin-left: calc(-45vw + 50%); margin-right: calc(-45vw + 50%); } @media (min-width: $wrap-width + 10rem) { width: $wrap-width; margin-left: calc(-43rem + 50%); margin-right: calc(-43rem + 50%); } }*/
 /*@mixin align-wide { max-width: none; width: calc(100vw - 2.4rem); margin-left: calc(-50vw + 50% + 1.2rem); margin-right: calc(-50vw + 50% + 1.2rem); @media (min-width: $wrap-full-gutter-width) { width: calc(90vw); margin-left: calc(-45vw + 50%); margin-right: calc(-45vw + 50%); } @media (min-width: $wrap-width + 10rem) { width: $wrap-width; margin-left: calc(-43rem + 50%); margin-right: calc(-43rem + 50%); } }*/
-html { position: relative; font-size: 75%; -webkit-text-decoration-skip: ink; text-decoration-skip-ink: auto; }
+html { position: relative; font-size: 80%; -webkit-text-decoration-skip: ink; text-decoration-skip-ink: auto; }
 
-@supports (font: -apple-system-body) { html { font: -apple-system-body; -webkit-text-size-adjust: 75%; -moz-text-size-adjust: 75%; -ms-text-size-adjust: 75%; text-size-adjust: 75%; } }
+@supports (font: -apple-system-body) { html { font: -apple-system-body; -webkit-text-size-adjust: 80%; -moz-text-size-adjust: 80%; -ms-text-size-adjust: 80%; text-size-adjust: 80%; } }
 
-@media (min-width: 47.5em) and (min-height: 40em) { html { font-size: 82.5%; } }
+@media (min-width: 47.5em) and (min-height: 40em) { html { font-size: 82.5%; } @supports (font: -apple-system-body) { html { font: -apple-system-body; -webkit-text-size-adjust: 82.5%; -moz-text-size-adjust: 82.5%; -ms-text-size-adjust: 82.5%; text-size-adjust: 82.5%; } } }
 
 @media (min-width: 90em) and (min-height: 50em) { html { font-size: 95%; } }
 
