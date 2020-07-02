@@ -1001,7 +1001,7 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .tabs__link.is-selected { background: #394851; color: white; }
 
-.tile { --accent-color: var(--background, #d70a26); --background: var(--accent-color); position: relative; display: block; overflow: hidden; outline: 1px solid #dddddd; box-shadow: 0 0.1em 0.25em rgba(0, 0, 0, 0.15); min-height: 10em; }
+.tile { position: relative; display: block; overflow: hidden; outline: 1px solid #dddddd; box-shadow: 0 0.1em 0.25em rgba(0, 0, 0, 0.15); min-height: 10em; }
 
 .tile__figure { position: relative; margin: 0; z-index: 0; }
 
