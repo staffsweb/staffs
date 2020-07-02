@@ -48,6 +48,38 @@
       transform-origin: top left;
       background: $red;
       background: var(--background);
+      transition: transform 500ms;
+    }
+  }
+
+  // We could use an animation if we wanted this to only run once...
+  //
+  //@keyframes title__drawIn {
+  //  from { transform: translate(-50vw, -50vw) rotate(225deg); }
+  //  to   { transform: translate(0, 0) rotate(225deg); }
+  //}
+
+  &.js-waypoint {
+    .title__highlight {
+      &:before {
+        transform: translate(-50vw, -50vw) rotate(225deg);
+      }
+    }
+  }
+
+  &.is-waypoint-reached {
+    .title__highlight {
+      &:before {
+        transform: rotate(225deg);
+      }
+    }
+  }
+
+  @at-root .no-js & {
+    .title__highlight {
+      &:before {
+        transform: rotate(225deg);
+      }
     }
   }
 }

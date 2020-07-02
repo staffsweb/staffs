@@ -16,9 +16,9 @@
   box-sizing: border-box;
   overflow-scrolling: touch;
   transform: translateX(-150%);
-  transition: transform 200ms ease-out;
 
   &.is-open {
+    transition: transform 200ms ease-out;
     transform: translateX(0);
   }
 

@@ -10,6 +10,10 @@
 {% if tail %}
   {% set classString = classString ~ '  title--has-tail' %}
 {% endif %}
+{% if animate %}
+  {% set classString = classString ~ '  js-waypoint' %}
+{% endif %}
+
 
 <div class="title{{ classString }}">
   <{{ textElement }} class="title__highlight{{ textElementStyle ? '  ' ~ textElementStyle }}">

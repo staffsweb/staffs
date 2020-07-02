@@ -290,6 +290,11 @@ $border-accent-width: $spacing-2xs;
     color: #fff;
     max-width: 100%;
     overflow: auto;
+
+    &::selection {
+      background: rgba($primary, 0.75);
+      color: white;
+    }
   }
 
   code {

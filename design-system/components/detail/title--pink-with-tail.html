@@ -175,6 +175,10 @@
 </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> tail %}</span><span class="xml">
   </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> classString = classString ~ '  title--has-tail' %}</span><span class="xml">
 </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> animate %}</span><span class="xml">
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> classString = classString ~ '  js-waypoint' %}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+
 
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title</span></span></span><span class="hljs-template-variable">{{ classString }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
   <span class="hljs-tag">&lt;</span></span><span class="hljs-template-variable">{{ textElement }}</span><span class="xml"><span class="hljs-tag"> <span class="hljs-attr">class</span>=<span class="hljs-string">"title__highlight</span></span></span><span class="hljs-template-variable">{{ textElementStyle ? '  ' ~ textElementStyle }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
@@ -259,6 +263,38 @@
       <span class="hljs-attribute">transform-origin</span>: top left;
       <span class="hljs-attribute">background</span>: <span class="hljs-variable">$red</span>;
       <span class="hljs-attribute">background</span>: var(--background);
+      <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">500ms</span>;
+    }
+  }
+
+  <span class="hljs-comment">// We could use an animation if we wanted this to only run once...</span>
+  <span class="hljs-comment">//</span>
+  <span class="hljs-comment">//@keyframes title__drawIn {</span>
+  <span class="hljs-comment">//  from { transform: translate(-50vw, -50vw) rotate(225deg); }</span>
+  <span class="hljs-comment">//  to   { transform: translate(0, 0) rotate(225deg); }</span>
+  <span class="hljs-comment">//}</span>
+
+  &amp;<span class="hljs-selector-class">.js-waypoint</span> {
+    <span class="hljs-selector-class">.title__highlight</span> {
+      &amp;<span class="hljs-selector-pseudo">:before</span> {
+        <span class="hljs-attribute">transform</span>: translate(-<span class="hljs-number">50vw</span>, -<span class="hljs-number">50vw</span>) rotate(<span class="hljs-number">225deg</span>);
+      }
+    }
+  }
+
+  &amp;<span class="hljs-selector-class">.is-waypoint-reached</span> {
+    <span class="hljs-selector-class">.title__highlight</span> {
+      &amp;<span class="hljs-selector-pseudo">:before</span> {
+        <span class="hljs-attribute">transform</span>: rotate(<span class="hljs-number">225deg</span>);
+      }
+    }
+  }
+
+  <span class="hljs-keyword">@at-root</span> .no-js &amp; {
+    <span class="hljs-selector-class">.title__highlight</span> {
+      &amp;<span class="hljs-selector-pseudo">:before</span> {
+        <span class="hljs-attribute">transform</span>: rotate(<span class="hljs-number">225deg</span>);
+      }
     }
   }
 }
@@ -303,7 +339,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.5 KB</span>
+                    <span class="Meta-value">2.2 KB</span>
                 </li>
             </ul>
         </div>
@@ -578,6 +614,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="grid.html" data-pjax>
                 <span>Grid</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="animation.html" data-pjax>
+                <span>Animation</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2586,6 +2646,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="section-header--border-bottom.html" data-pjax>
                 <span>Border Bottom</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="section-header--waypoints.html" data-pjax>
+                <span>Waypoints</span>
                 
 
 <div class="Status Status--unlabelled">

@@ -5,6 +5,7 @@ context:
   text: 'This is a title'
   background: []
   modifiers: []
+  animate: false
 handle: title
 
 variants:

@@ -4,6 +4,7 @@
 //@codekit-prepend silent './vendor/jquery.hoverIntent';
 //@codekit-prepend silent './vendor/smartResize';
 //@codekit-prepend silent './vendor/slick-1.8.1/slick/slick';
+//@codekit-prepend silent './vendor/waypoints/lib/jquery.waypoints.js';
 
 
 // @TODO: at some point, it'd probably be nice if functions sat in 'eachIndividualComponentName.js'
@@ -243,12 +244,30 @@
 
   };
 
+  let waypointsInit = function () {
+    $('.js-waypoint').each(function () {
+      var el = $(this);
+
+      el.waypoint(function (direction) {
+        if (direction === 'down') {
+          el.addClass('is-waypoint-reached');
+        }
+        else {
+          el.removeClass('is-waypoint-reached');
+        }
+      }, {
+        offset: (window.innerHeight - (window.innerHeight / 20))
+      });
+    });
+  };
+
   // --
 
   $(document).ready(function () {
     megaNavInit();
     tabsInit();
     sliderInit();
+    waypointsInit();
   });
 
 })(jQuery);

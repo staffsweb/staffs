@@ -1,0 +1,225 @@
+
+
+<div class="title  title--has-tail">
+  <h1 class="title__highlight">Animation</h1>
+</div>
+
+<section>
+  <div class="title  title--bg-maroon  title--has-tail">
+    <h2 class="title__highlight  h3">Guidance</h2>
+  </div>
+  <p>Animating content is not more important than the content itself.</p>
+  <p>Use animation <strong>subtly</strong> and <strong>thoughtfully</strong> to draw attention to key elements. <strong>Don't animate things which need to be read</strong>, or distract the user from the content. Instead, animate accents and
+    decorational elements <strong>around</strong> the content.</p>
+  <p><strong>Don't make the user wait.</strong> Delaying things appearing to the user just to animate them can make an interface feel slow, isn't natural, and can be frustrating to a user.</p>
+  <p>Keep timings short. Between 200ms and 500ms is normally completely sufficient.</p>
+</section>
+
+<section>
+  <div class="title  title--bg-maroon  title--has-tail">
+    <h2 class="title__highlight  h3">Waypoints</h2>
+  </div>
+  <p><a href="http://imakewebthings.com/waypoints/guides/jquery-zepto/">jQuery waypoints</a> is included, and a generic trigger has been set up for when elements come into the viewport when scrolled.</p>
+  <p>Add a class of <code>js-waypoint</code> to an element, and when it has entered 5% into the bottom of the viewport, it will gain a class of <code>is-waypoint-reached</code>. You can use this to add CSS transitions/animations for
+    elements.</p>
+  <p>The class will be removed and re-added if a user scrolls back up, and then back down again, so if using a CSS transform, the transform will re-occur. If you want to avoid this behaviour, use a CSS animation (see below for example).</p>
+  <p>The <code>&lt;html&gt;</code> element has a class of <code>no-js</code> before JS runs, and a class of <code>js</code> when the browser starts executing JavaScript, you can use this to provide a fallback if JavaScript is not
+    present, though as it's just swapped by an inline line of JavaScript in the &lt;head&gt;, it isn't bulletproof.</p>
+  <p>Because we're using multiple classes for this, it does come with inherent risk of increasing specificity, which isn't necessarily a problem, just something to be mindful of.</p>
+
+  <div class="title  title--bg-slate  title--has-tail">
+    <h3 class="h5">Example (transform, repeatable):</h3>
+  </div>
+
+  <p>Tails on titles have been given a <code>js-waypoint</code> behaviour. (This is an example with a bit of a high level of specificity, because we're animating an accent inside the main element)</p>
+
+  <p>To start with, we set the animation duration, and transform the tail off the screen for the initial state, styling <code>js-waypoint</code> (taking note of and adding it to the rotation transform it already has).</p>
+
+  <pre>.title__highlight:before {
+  transition: transform 500ms;
+}</pre>
+  <pre>.title--has-tail.js-waypoint {
+  .title__highlight {
+    &:before {
+      transform: translate(-50vw, -50vw) rotate(225deg);
+    }
+  }
+}</pre>
+
+  <p>Then we add the end-state to <code>is-waypoint-reached</code>, resetting the translation:</p>
+
+  <pre>.title--has-tail.js-waypoint {
+  .title__highlight {
+    &:before {
+      transform: rotate(225deg);
+    }
+  }
+}</pre>
+
+  <p>For users without JavaScript, we're going to make sure the tail isn't transitioned off the screen in its initial state:</p>
+
+  <pre>@at-root .no-js .title--has-tail {
+  .title__highlight {
+    &:before {
+      transform: rotate(225deg);
+    }
+  }
+}</pre>
+
+  <p>Result:</p>
+
+  <div class="title  title--bg-pink  title--has-tail  js-waypoint">
+    <h2 class="title__highlight">Demo Tail Drawing!</h2>
+  </div>
+
+
+  <div class="title  title--bg-slate  title--has-tail">
+    <h3 class="h5">Example (animation, single):</h3>
+  </div>
+
+  <p>You'll notice on the example above that if you scroll up and back down, the animation reoccurs, as the class is removed and added. This is sometimes desirable, and sometimes not.</p>
+  <p>It could be argued that if your animation is annoying to see repeatedly, well, it probably shouldn't be there.</p>
+  <p>We can, nevertheless, work around this by using a CSS animation which starts off in a paused state, and plays once. For example, for feature-tiles:<br/></p>
+  <p><em>Sidebar: We break a couple of rules here by animating in what is technically 'content', but the animation is very quick, and due to the nature of the text being aligned to the bottom of a tile, shoulnd't be moving by the time a user wants to read it.</em></p>
+
+  <p>We start by defining a 'grow in' animation:</p>
+
+  <pre>@keyframes tile__growIn {
+  from {
+    opacity: 0.8;
+    transform: scale(0.9);
+  }
+  to   {
+    opacity: 1;
+    transform: scale(1);
+  }
+}</pre>
+
+  <p>Assign it to a tile's item where a waypoint is added, in a paused initial state, and set it to run when the <code>is-waypoint-reached</code> class is added:</p>
+
+  <pre>.feature-tile__item {
+  &.js-waypoint {
+    animation-name: tile__growIn;
+    animation-play-state: paused;
+    animation-iteration-count: 1;
+    animation-duration: 200ms;
+  }
+
+  &.is-waypoint-reached {
+    animation-play-state: running;
+  }
+}</pre>
+
+  <p>If a user scrolls up and back down, re-adding the <code>is-waypoint-reached</code> class, the animation has already run, thus will not run again.</p>
+  <p>Finally, we add a fallback for cases where JavaScript is disabled to run the animation immediately. Again, this isn't perfect, as it doesn't cater for the JS <em>failing to load</em>, so it's important that content still be accessible (ie. don't fade things in from opacity: 0) in the elements' initial state.</p>
+
+  <pre>@at-root .no-js .feature-tiles__item {
+  animation-play-state: running;
+}</pre>
+
+
+  <div class="grid  grid--flush  grid-2-cols@mobile-wide  grid-3-cols@tablet-wide  feature-tiles">
+    <div class="feature-tiles__item  js-waypoint">
+      <a class="tile" href="">
+        <figure class="tile__figure">
+          <img src="https://placeimg.com/500/500/people" class="tile__img" alt=""/>
+        </figure>
+
+        <div class="tile__content">
+          <div class="title tile__title">
+            <h3 class="h4  title__highlight">I grow in</h3>
+          </div>
+          <div class="tile__content-body">
+            <p>This happens quickly enough so this copy can be read by the time I'm visible.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="feature-tiles__item  feature-tiles__item--accent-pink  js-waypoint">
+      <a class="tile" href="">
+        <figure class="tile__figure">
+          <img src="https://placeimg.com/500/500/tech" class="tile__img" alt=""/>
+        </figure>
+
+        <div class="tile__content">
+          <div class="title  tile__title">
+            <h3 class="h4  title__highlight">I grow in only once</h3>
+          </div>
+          <div class="tile__content-body">
+            <p>This happens quickly enough so this copy can be read by the time I'm visible.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="feature-tiles__item  feature-tiles__item--accent-maroon  js-waypoint">
+      <a class="tile" href="">
+        <figure class="tile__figure">
+          <img src="https://placeimg.com/500/500/architecture" class="tile__img" alt=""/>
+        </figure>
+
+        <div class="tile__content">
+          <div class="title  tile__title">
+            <h3 class="h4  title__highlight">If the page is refreshed I grow in again</h3>
+          </div>
+          <div class="tile__content-body">
+            <p>This happens quickly enough so this copy can be read by the time I'm visible.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="feature-tiles__item  feature-tiles__item--accent-pink  js-waypoint">
+      <a class="tile" href="">
+        <figure class="tile__figure">
+          <img src="https://placeimg.com/500/500/tech" class="tile__img" alt=""/>
+        </figure>
+
+        <div class="tile__content">
+          <div class="title  tile__title">
+            <h3 class="h4  title__highlight">But...</h3>
+          </div>
+          <div class="tile__content-body">
+            <p>This happens quickly enough so this copy can be read by the time I'm visible.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="feature-tiles__item  js-waypoint">
+      <a class="tile" href="">
+        <figure class="tile__figure">
+          <img src="https://placeimg.com/500/500" class="tile__img" alt=""/>
+        </figure>
+
+        <div class="tile__content">
+          <div class="title tile__title">
+            <h3 class="h4  title__highlight">But not if scrolled up and down</h3>
+          </div>
+          <div class="tile__content-body">
+            <p>This happens quickly enough so this copy can be read by the time I'm visible.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="feature-tiles__item  feature-tiles__item--accent-tef-gold  js-waypoint">
+      <a class="tile" href="">
+        <figure class="tile__figure">
+          <img src="https://placeimg.com/500/500/nature" class="tile__img" alt=""/>
+        </figure>
+
+        <div class="tile__content">
+          <div class="title  tile__title">
+            <h3 class="h4  title__highlight">Subtle!</h3>
+          </div>
+          <div class="tile__content-body">
+            <p>This happens quickly enough so this copy can be read by the time I'm visible.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+</section>

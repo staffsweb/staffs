@@ -204,6 +204,10 @@ figcaption p:last-child { margin-bottom: 0; }
 
 pre { clear: both; font-size: 0.875em; line-height: 1.4; margin: 1.5rem 0; padding: 1em; -moz-tab-size: 2; -o-tab-size: 2; tab-size: 2; background: black; color: #fff; max-width: 100%; overflow: auto; }
 
+pre::-moz-selection { background: rgba(215, 10, 38, 0.75); color: white; }
+
+pre::selection { background: rgba(215, 10, 38, 0.75); color: white; }
+
 code { display: inline-block; line-height: 1.4; font-size: 0.75em; background: rgba(215, 10, 38, 0.05); padding: 0 0.2em; color: #d70a26; border: 1px rgba(215, 10, 38, 0.25) solid; border-radius: 0.2em; }
 
 table { font-size: 0.9em; width: 100%; margin: 0 0 2rem; border: 1px solid #ddd; border-spacing: 0; border-collapse: collapse; }
@@ -640,6 +644,22 @@ a.feature-link:hover .feature-link__title:after { transform: translateX(0.1rem);
     .feature-tiles__item:nth-child(n):after { background: var(--accent-color, #d70a26); }
     .feature-tiles .tile__content { margin-right: 25%; } } }
 
+@-webkit-keyframes tile__growIn { from { opacity: 0.75;
+    transform: scale(0.9); }
+  to { opacity: 1;
+    transform: scale(1); } }
+
+@keyframes tile__growIn { from { opacity: 0.75;
+    transform: scale(0.9); }
+  to { opacity: 1;
+    transform: scale(1); } }
+
+.feature-tiles__item.js-waypoint { -webkit-animation-name: tile__growIn; animation-name: tile__growIn; -webkit-animation-play-state: paused; animation-play-state: paused; -webkit-animation-iteration-count: 1; animation-iteration-count: 1; -webkit-animation-duration: 200ms; animation-duration: 200ms; }
+
+.feature-tiles__item.is-waypoint-reached { -webkit-animation-play-state: running; animation-play-state: running; }
+
+.no-js .feature-tiles__item { -webkit-animation-play-state: running; animation-play-state: running; }
+
 .feature-tiles .title__highlight { --background: var(--accent-color); }
 
 .feature-tiles__item--accent-red { --accent-color: #d70a26; }
@@ -650,7 +670,7 @@ a.feature-link:hover .feature-link__title:after { transform: translateX(0.1rem);
 
 .feature-tiles__item--accent-tef-gold { --accent-color: #dd9200; }
 
-.feature-tiles a.tile { transition: transform 250ms; }
+.feature-tiles a.tile { transition: transform 200ms; }
 
 .feature-tiles a.tile:hover { transform: scale(1.025); z-index: 2; }
 
@@ -748,9 +768,9 @@ a.feature-link:hover .feature-link__title:after { transform: translateX(0.1rem);
 
 .masthead .wrap { align-self: flex-end; }
 
-.megaNav { position: absolute; left: 0; right: 0; top: 0; background: white; font-size: 1.2em; z-index: 9; overflow: hidden; overflow-y: auto; box-sizing: border-box; overflow-scrolling: touch; transform: translateX(-150%); transition: transform 200ms ease-out; }
+.megaNav { position: absolute; left: 0; right: 0; top: 0; background: white; font-size: 1.2em; z-index: 9; overflow: hidden; overflow-y: auto; box-sizing: border-box; overflow-scrolling: touch; transform: translateX(-150%); }
 
-.megaNav.is-open { transform: translateX(0); }
+.megaNav.is-open { transition: transform 200ms ease-out; transform: translateX(0); }
 
 @media (min-width: 70rem) { .megaNav { top: auto; width: 100%; transform: none; transition: none; font-size: 1em; position: static; overflow: visible; background: none; margin: 0 0 0 17.5%; } }
 
@@ -904,7 +924,7 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .section-header--border-top { border-top: 1px solid #dddddd; }
 
-.section-header--bg-offwhite { padding: 2rem 0 0; margin-bottom: 6rem; background-color: #f1f1f1; }
+.section-header--bg-offwhite { padding: 2rem 0 0; margin-bottom: 4rem; background-color: #f1f1f1; }
 
 .section-header--bg-offwhite .section-header__title { position: relative; top: 2rem; }
 
@@ -1053,7 +1073,13 @@ a.tile:focus { outline-width: 3px; outline-color: #d70a26; z-index: 2; }
 
 .title__highlight a { color: white; color: var(--color); }
 
-.title--has-tail .title__highlight:before { position: absolute; content: ''; margin-top: 2px; top: 0; left: -0.5rem; display: block; width: 1000px; height: 2px; transform: rotate(225deg); transform-origin: top left; background: #d70a26; background: var(--background); }
+.title--has-tail .title__highlight:before { position: absolute; content: ''; margin-top: 2px; top: 0; left: -0.5rem; display: block; width: 1000px; height: 2px; transform: rotate(225deg); transform-origin: top left; background: #d70a26; background: var(--background); transition: transform 500ms; }
+
+.title--has-tail.js-waypoint .title__highlight:before { transform: translate(-50vw, -50vw) rotate(225deg); }
+
+.title--has-tail.is-waypoint-reached .title__highlight:before { transform: rotate(225deg); }
+
+.no-js .title--has-tail .title__highlight:before { transform: rotate(225deg); }
 
 .title--bg-white { --background: white; --color: black; }
 

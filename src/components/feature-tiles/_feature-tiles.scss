@@ -85,6 +85,34 @@
     }
   }
 
+  @keyframes tile__growIn {
+    from {
+      opacity: 0.75;
+      transform: scale(0.9);
+    }
+    to   {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  &__item {
+    &.js-waypoint {
+      animation-name: tile__growIn;
+      animation-play-state: paused;
+      animation-iteration-count: 1;
+      animation-duration: 200ms;
+    }
+
+    &.is-waypoint-reached {
+      animation-play-state: running;
+    }
+  }
+
+  @at-root .no-js .feature-tiles__item {
+    animation-play-state: running;
+  }
+
   .title__highlight {
     --background: var(--accent-color);
   }
@@ -104,7 +132,7 @@
   // --
 
   a.tile {
-    transition: transform 250ms;
+    transition: transform 200ms;
 
     &:hover {
       transform: scale(1.025);
@@ -130,3 +158,5 @@
     }
   }
 }
+
+
