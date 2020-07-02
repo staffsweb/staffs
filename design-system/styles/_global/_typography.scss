@@ -7,6 +7,11 @@ html {
   font-size: 75%;
   text-decoration-skip-ink: auto;
 
+  @supports (font: -apple-system-body) {
+    font: -apple-system-body;
+    text-size-adjust: 75%;
+  }
+
   @media (min-width: 47.5em) and (min-height: 40em) {
     font-size: 82.5%;
   }
@@ -17,11 +22,6 @@ html {
 
   @media (min-width: 120em) and (min-height: 60em) {
     font-size: 110%;
-  }
-
-  @supports (font: -apple-system-body) {
-    font: -apple-system-body;
-    text-size-adjust: 75%;
   }
 }
 
