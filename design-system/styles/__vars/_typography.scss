@@ -162,7 +162,7 @@ $border-accent-width: $spacing-2xs;
       @include typescale($size);
     }
   }
-  @media (min-width: 47.5em) and (min-height: 30em) {
+  @media (min-width: $breakpoint-largescreen-typography) and (min-height: $breakpoint-largescreen-typography-height) {
     @each $name, $size in $headings-map {
       #{$name}, .#{$name} {
         @include typescale($size);
