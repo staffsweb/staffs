@@ -7,6 +7,8 @@
     'tef-gold': $gold-tef,
   );
 
+  --accent-color: var(--background, #{$primary});
+  --background: var(--accent-color);
   position: relative;
   display: block;
   overflow: hidden;
