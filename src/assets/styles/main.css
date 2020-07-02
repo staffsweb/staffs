@@ -114,7 +114,7 @@ html { position: relative; font-size: 90%; -webkit-text-decoration-skip: ink; te
 
 @supports (font: -apple-system-body) { html { font: -apple-system-body; -webkit-text-size-adjust: 80%; -moz-text-size-adjust: 80%; -ms-text-size-adjust: 80%; text-size-adjust: 80%; } }
 
-@media (min-width: 47.5em) and (min-height: 40em) { @supports (font: -apple-system-body) { html { font: -apple-system-body; -webkit-text-size-adjust: 82.5%; -moz-text-size-adjust: 82.5%; -ms-text-size-adjust: 82.5%; text-size-adjust: 82.5%; } } }
+@media (min-width: 47.5em) and (min-height: 40em) { html { font-size: 82.5%; } @supports (font: -apple-system-body) { html { font: -apple-system-body; -webkit-text-size-adjust: 82.5%; -moz-text-size-adjust: 82.5%; -ms-text-size-adjust: 82.5%; text-size-adjust: 82.5%; } } }
 
 @media (min-width: 90em) and (min-height: 50em) { html { font-size: 95%; } }
 
