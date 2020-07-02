@@ -151,7 +151,7 @@ tr:nth-child(even) td { background: #fff; }
 
 main p:not([class]), article p:not([class]) { max-width: 50rem; }
 
-main ul:not([class]), article ul:not([class]) { max-width: calc(50rem - 1.5em); }
+main ul:not([class]), main ol:not([class]), article ul:not([class]), article ol:not([class]) { max-width: calc(50rem - 1.5em); }
 
 hgroup, .hgroup { margin: 0 0 2rem; }
 

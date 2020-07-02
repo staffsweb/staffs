@@ -55,7 +55,8 @@ article {
     max-width: $line-length-max-rem;
   }
 
-  ul:not([class]) {
+  ul:not([class]),
+  ol:not([class]) {
     max-width: calc(#{$line-length-max-rem} - 1.5em); // subtract base ul left hand padding to match p width
   }
 }
