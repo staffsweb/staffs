@@ -114,7 +114,7 @@ html { position: relative; font-size: 90%; -webkit-text-decoration-skip: ink; te
 
 @supports (font: -apple-system-body) { html { font: -apple-system-body; -webkit-text-size-adjust: 80%; -moz-text-size-adjust: 80%; -ms-text-size-adjust: 80%; text-size-adjust: 80%; } }
 
-@media (min-width: 47.5em) and (min-height: 40em) { html { font-size: 82.5%; } @supports (font: -apple-system-body) { html { font: -apple-system-body; -webkit-text-size-adjust: 82.5%; -moz-text-size-adjust: 82.5%; -ms-text-size-adjust: 82.5%; text-size-adjust: 82.5%; } } }
+@media (min-width: 47.5em) { html { font-size: 82.5%; } }
 
 @media (min-width: 90em) and (min-height: 50em) { html { font-size: 95%; } }
 
@@ -808,7 +808,7 @@ a.feature-link:hover .feature-link__title:after { transform: translateX(0.1rem);
 
 @media (min-width: 70rem) { .megaNav__thirdLevel { font-size: 0.85em; left: 100%; right: -300%; top: 0; bottom: 0; background: white; padding: 2rem; max-height: 100%; overflow: auto; box-sizing: border-box; } .megaNav__thirdLevel-list { -webkit-columns: 2; -moz-columns: 2; columns: 2; -webkit-column-gap: 2rem; -moz-column-gap: 2rem; column-gap: 2rem; } .megaNav__thirdLevel .megaNav__thirdLevel-link { padding: 0; border: 0; margin: 0 0 0.5rem; } .megaNav__thirdLevel .megaNav__thirdLevel-link.has-children:after { display: none; } }
 
-.toggle-megaNav { display: block; height: 3rem; width: 3rem; margin: 0.75rem 0 0.75rem 0.75rem; padding: 0; border: 0; background: url("../img/icon-hamburger-white.svg") center center no-repeat; background-size: 2rem; z-index: 2; }
+.toggle-megaNav { display: block; height: 3rem; width: 3rem; margin: 0.75rem 0 0.75rem 0.75rem; padding: 0; border: 0; background: url("../img/icon-hamburger-white.svg") center center no-repeat; background-size: 2rem 2rem; z-index: 2; }
 
 .toggle-megaNav.is-toggled { opacity: 0.5; }
 

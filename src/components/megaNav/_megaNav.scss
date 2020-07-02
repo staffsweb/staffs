@@ -414,7 +414,7 @@
   padding: 0;
   border: 0;
   background: url('../img/icon-hamburger-white.svg') center center no-repeat;
-  background-size: $spacing-xl;
+  background-size: $spacing-xl $spacing-xl;
   z-index: 2;
 
   &.is-toggled {
