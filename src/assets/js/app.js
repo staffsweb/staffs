@@ -256,7 +256,7 @@
           el.removeClass('is-waypoint-reached');
         }
       }, {
-        offset: (window.innerHeight - (window.innerHeight / 20))
+        offset: (Waypoint.viewportHeight() - (window.innerHeight / 50))
       });
     });
   };
