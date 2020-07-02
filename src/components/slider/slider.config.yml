@@ -1,4 +1,5 @@
 status: wip
+label: 'Sliders'
 
 variants:
   - name: default
