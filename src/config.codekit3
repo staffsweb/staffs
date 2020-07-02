@@ -1819,6 +1819,14 @@
 		"oAP": "/components/01-globals-and-docs/06-animation.twig",
 		"oF": 0
 		},
+	"/components/01-globals-and-docs/globals-and-docs.config.yml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/01-globals-and-docs/globals-and-docs.config.yml",
+		"oF": 0
+		},
 	"/components/02-page/_preview.twig": {
 		"cB": 0,
 		"ft": 8192,
@@ -1905,6 +1913,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/components/03-templates/parent-landing.twig",
+		"oF": 0
+		},
+	"/components/03-templates/templates.config.yml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/03-templates/templates.config.yml",
 		"oF": 0
 		},
 	"/components/03-templates/text.twig": {
@@ -2175,6 +2191,22 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/components/card/card--event.twig",
+		"oF": 0
+		},
+	"/components/card/card--flex-overlap.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/card/card--flex-overlap.twig",
+		"oF": 0
+		},
+	"/components/card/card--flex.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/card/card--flex.twig",
 		"oF": 0
 		},
 	"/components/card/card--ksp.twig": {

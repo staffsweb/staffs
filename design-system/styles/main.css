@@ -580,6 +580,20 @@ a.card:hover { color: black; }
 
 a.card:hover .title__highlight { text-decoration: underline; }
 
+.card--flex { display: flex; flex-wrap: wrap; flex-direction: row-reverse; }
+
+.card--flex .card__figure { flex: 1 1 33%; }
+
+.card--flex .card__content { flex: 99 1 17.5em; }
+
+.card--flex-overlap { display: flex; flex-wrap: wrap; flex-direction: row-reverse; padding-bottom: 0.75rem; }
+
+.card--flex-overlap .card__figure { flex: 1 1 33%; }
+
+.card--flex-overlap .card__content { flex: 99 1 17.5em; }
+
+.card--flex-overlap .card__figure { margin-bottom: -0.75rem; }
+
 .card--testimonial { padding-bottom: 0.75rem; }
 
 .card--pullquote { padding-bottom: 0.75rem; margin-left: 5%; }

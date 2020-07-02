@@ -1,5 +1,5 @@
 label: Cards
-status: ready
+status: wip
 
 variants:
   - name: pink
@@ -13,3 +13,6 @@ variants:
 
   - name: ksp
     label: "KSP (Key Selling Points)"
+
+  - name: overlap-title
+    status: caution

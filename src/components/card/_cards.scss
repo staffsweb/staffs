@@ -95,6 +95,39 @@ a.card {
 
 //--  VARIANTS
 
+.card--flex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+
+  .card__figure {
+    flex: 1 1 33%;
+  }
+
+  .card__content {
+    flex: 99 1 17.5em;
+  }
+}
+
+.card--flex-overlap {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  padding-bottom: $spacing-sm;
+
+  .card__figure {
+    flex: 1 1 33%;
+  }
+
+  .card__content {
+    flex: 99 1 17.5em;
+  }
+
+  .card__figure {
+    margin-bottom: -#{$spacing-sm};
+  }
+}
+
 .card--testimonial {
   padding-bottom: $card__internal-spacing;
 }

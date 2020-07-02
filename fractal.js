@@ -23,20 +23,25 @@ fractal.web.set('builder.dest', __dirname + '/design-system');
 fractal.components.set('default.status', 'wip');
 
 fractal.components.set('statuses', {
-  not_started: {
-    label: "Not started",
-    description: "Placeholder",
-    color: "#D70A26"
+  ready: {
+    label: "Ready",
+    description: "Component ready for use.",
+    color: "#29cc29"
   },
   wip: {
     label: "WIP",
     description: "Work in progress. Reference with caution.",
     color: "#ff9233"
   },
-  ready: {
-    label: "Ready",
-    description: "Component ready for use.",
-    color: "#29cc29"
+  caution: {
+    label: "Caution",
+    description: "Deprecated, or to be deprecated, reference with extreme caution.",
+    color: "#D70A26"
+  },
+  reference: {
+    label: "Reference",
+    description: "Documentation or reference purposes.",
+    color: "#2999cc"
   }
 });
 

@@ -301,6 +301,39 @@
 
 <span class="hljs-comment">//--  VARIANTS</span>
 
+<span class="hljs-selector-class">.card--flex</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">flex-wrap</span>: wrap;
+  <span class="hljs-attribute">flex-direction</span>: row-reverse;
+
+  <span class="hljs-selector-class">.card__figure</span> {
+    <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">33%</span>;
+  }
+
+  <span class="hljs-selector-class">.card__content</span> {
+    <span class="hljs-attribute">flex</span>: <span class="hljs-number">99</span> <span class="hljs-number">1</span> <span class="hljs-number">17.5em</span>;
+  }
+}
+
+<span class="hljs-selector-class">.card--flex-overlap</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">flex-wrap</span>: wrap;
+  <span class="hljs-attribute">flex-direction</span>: row-reverse;
+  <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-variable">$spacing-sm</span>;
+
+  <span class="hljs-selector-class">.card__figure</span> {
+    <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">33%</span>;
+  }
+
+  <span class="hljs-selector-class">.card__content</span> {
+    <span class="hljs-attribute">flex</span>: <span class="hljs-number">99</span> <span class="hljs-number">1</span> <span class="hljs-number">17.5em</span>;
+  }
+
+  <span class="hljs-selector-class">.card__figure</span> {
+    <span class="hljs-attribute">margin-bottom</span>: -#{<span class="hljs-variable">$spacing-sm</span>};
+  }
+}
+
 <span class="hljs-selector-class">.card--testimonial</span> {
   <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-variable">$card__internal-spacing</span>;
 }
@@ -434,7 +467,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">4 KB</span>
+                    <span class="Meta-value">4.4 KB</span>
                 </li>
             </ul>
         </div>
@@ -457,7 +490,7 @@
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Variants <em class="Meta-count">(14)</em>:</strong>
+            <strong class="Meta-key">Variants <em class="Meta-count">(16)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="card--default.html">
@@ -484,6 +517,10 @@
                     <span>KSP (Key Selling Points)</span>
                 </a>, 
             
+                <a href="card--overlap-title.html">
+                    <span>Overlap Title</span>
+                </a>, 
+            
                 <a href="card--course.html">
                     <span>Course</span>
                 </a>, 
@@ -496,8 +533,12 @@
                     <span>Event</span>
                 </a>, 
             
-                <a href="card--overlap-title.html">
-                    <span>Overlap Title</span>
+                <a href="card--flex.html">
+                    <span>Flex</span>
+                </a>, 
+            
+                <a href="card--flex-overlap.html">
+                    <span>Flex Overlap</span>
                 </a>, 
             
                 <a href="card--profile.html">
@@ -1767,6 +1808,30 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="card--overlap-title.html" data-pjax>
+                <span>Overlap Title</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="card--course.html" data-pjax>
                 <span>Course</span>
                 
@@ -1839,8 +1904,32 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="card--overlap-title.html" data-pjax>
-                <span>Overlap Title</span>
+            <a class="Tree-entityLink" href="card--flex.html" data-pjax>
+                <span>Flex</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="card--flex-overlap.html" data-pjax>
+                <span>Flex Overlap</span>
                 
 
 <div class="Status Status--unlabelled">

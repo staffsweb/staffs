@@ -1,1 +1,11 @@
 status: wip
+
+variants:
+  - name: default
+    hidden: true
+  - name: accolades
+    label: "Accolade Slider"
+  - name: event-cards
+    label: "Event Cards Slider"
+  - name: tiles
+    label: "Tiles Slider"
