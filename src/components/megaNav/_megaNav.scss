@@ -181,7 +181,7 @@
     text-align: center;
 
     &:active {
-      color: $red;
+      color: $primary;
     }
 
     &:before {
@@ -253,7 +253,7 @@
 
         @media (min-width: $megaNav-full-breakpoint) {
           &:hover {
-            box-shadow: inset 0 $spacing-2xs 0 $red;
+            box-shadow: inset 0 $spacing-2xs 0 $primary;
             text-decoration: none !important;
           }
         }
@@ -264,7 +264,7 @@
           > a {
             background: white;
             color: black;
-            box-shadow: inset 0 $spacing-2xs 0 $red;
+            box-shadow: inset 0 $spacing-2xs 0 $primary;
 
             &:hover {
               text-decoration: underline !important;

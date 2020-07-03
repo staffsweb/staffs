@@ -10,9 +10,9 @@ $card__internal-spacing: $spacing-sm;
 
   display: block;
   position: relative;
-  --accent-color: #{$red};
+  --accent-color: #{$primary};
   margin-bottom: $spacing-xl;
-  border-left: $border-accent-width solid $red;
+  border-left: $border-accent-width solid $primary;
   border-color: var(--accent-color);
   @include clearfix;
 
@@ -46,7 +46,7 @@ $card__internal-spacing: $spacing-sm;
     margin-bottom: $spacing-md;
 
     a {
-      color: #{$red};
+      color: #{$primary};
       color: var(--accent-color);
     }
 
@@ -216,7 +216,7 @@ a.card {
     @include typescale('xs');
     padding: $spacing-sm 0;
     color: white;
-    background: $red;
+    background: $primary;
     background: var(--accent-color);
     line-height: 1;
     text-align: center;

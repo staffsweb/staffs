@@ -75,7 +75,7 @@
         }
 
         &:nth-child(n):after {
-          background: var(--accent-color, #{$red});
+          background: var(--accent-color, #{$primary});
         }
       }
 
