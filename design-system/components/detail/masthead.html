@@ -168,7 +168,7 @@
         <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
 
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title  title--has-tail  js-waypoint"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title__highlight"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title__highlight  h2"</span>&gt;</span>
                 Shortlisted for "University of the year"
             <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -198,6 +198,7 @@
             text: 'Shortlisted for "University of the year"',
             modifiers: ['has-tail'],
             textElement: 'h1',
+            textElementStyle: 'h2',
             animate: true
         } %}</span><span class="xml">
         </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '<a href="title.html">@title</a>' with {
@@ -243,22 +244,13 @@
   <span class="hljs-attribute">display</span>: flex;
   <span class="hljs-attribute">min-height</span>: <span class="hljs-number">65vh</span>;
   <span class="hljs-attribute">min-height</span>: <span class="hljs-number">65vmin</span>;
-  <span class="hljs-attribute">padding</span>: <span class="hljs-number">9em</span> <span class="hljs-number">0</span> <span class="hljs-number">2em</span>;  <span class="hljs-comment">// what does this relate to and why?</span>
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">12rem</span> <span class="hljs-number">0</span> <span class="hljs-variable">$spacing-xl</span>;
   <span class="hljs-attribute">background-size</span>: cover;
   <span class="hljs-attribute">background-position</span>: <span class="hljs-number">50%</span> <span class="hljs-number">50%</span>;
   <span class="hljs-attribute">box-sizing</span>: border-box;
-  <span class="hljs-comment">//float: left;</span>
-  <span class="hljs-comment">//width: 100%;</span>
 
   &amp;__bg {
     <span class="hljs-comment">// should use an abs:pos div with responsive image rather than background image</span>
-  }
-
-  <span class="hljs-keyword">@media</span> (min-width: <span class="hljs-number">47.5em</span>) <span class="hljs-keyword">and</span> (min-height: <span class="hljs-number">30em</span>) { <span class="hljs-comment">// @<span class="hljs-doctag">TODO:</span> USE VARIABLES!</span>
-    <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">12em</span>;
-  }
-  <span class="hljs-keyword">@media</span> (min-width: <span class="hljs-number">60em</span>) <span class="hljs-keyword">and</span> (min-height: <span class="hljs-number">40em</span>) { <span class="hljs-comment">// @<span class="hljs-doctag">TODO:</span> USE VARIABLES!</span>
-    <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">14em</span>;
   }
 
   <span class="hljs-selector-class">.wrap</span> {
@@ -280,7 +272,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">601 Bytes</span>
+                    <span class="Meta-value">328 Bytes</span>
                 </li>
             </ul>
         </div>
