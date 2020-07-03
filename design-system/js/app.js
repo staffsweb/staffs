@@ -85,11 +85,6 @@
           timeout: 250
         });
 
-        $('.megaNav__closeLevel', megaNav).on('click', function (e) {
-          e.preventDefault();
-          $(this).closest('.is-expanded').removeClass('is-expanded');
-        });
-
         $(document).on('click', '#megaNav.is-largescreen .has-children', function (e) {
           e.preventDefault();
           expandChildren($(this));
@@ -102,6 +97,11 @@
         $(document).on('click', '#megaNav.is-smallscreen .has-children', function (e) {
           e.preventDefault();
           expandChildren($(this));
+        });
+
+        $('.megaNav__closeLevel', megaNav).on('click', function (e) {
+          e.preventDefault();
+          $(this).closest('.is-expanded').removeClass('is-expanded');
         });
       }
     }
