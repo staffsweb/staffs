@@ -47,6 +47,8 @@
       if (megaNavFullBreakpoint.matches) {
         megaNav.addClass('is-largescreen');
         megaNav.removeClass('is-smallscreen');
+        
+        $('#megaNav.is-largescreen, .megaNav__topLevel-link.has-children, .megaNav__secondLevel-link.has-children, #megaNav.is-smallscreen .has-children').unbind();
 
         $('#megaNav.is-largescreen').hoverIntent({
           over: function () {
@@ -91,6 +93,8 @@
         });
       }
       else {
+        $('#megaNav.is-largescreen, .megaNav__topLevel-link.has-children, .megaNav__secondLevel-link.has-children, #megaNav.is-smallscreen .has-children').unbind();
+
         megaNav.removeClass('is-largescreen');
         megaNav.addClass('is-smallscreen');
 
