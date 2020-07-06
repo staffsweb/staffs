@@ -50,10 +50,6 @@ $card__internal-spacing: $spacing-sm;
       color: #{$primary};
       color: var(--accent-color);
     }
-
-    &--overlap:first-child {
-      margin-top: -#{$spacing-3xl};
-    }
   }
 
   //--  Child elements affected by accent colour

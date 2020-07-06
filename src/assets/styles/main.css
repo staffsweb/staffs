@@ -557,8 +557,6 @@ section:first-child { margin-top: 0; }
 
 .card__title a { color: #d70a26; color: var(--accent-color); }
 
-.card__title--overlap:first-child { margin-top: -3rem; }
-
 .card .blockquote__title { color: var(--accent-color); }
 
 .card .title__highlight { --background: var(--accent-color); }
