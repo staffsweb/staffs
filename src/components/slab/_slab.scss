@@ -1,5 +1,5 @@
 .slab {
-  $border-color: $grey-light;
+  $border-color: $grey--light;
   padding: $spacing-4xl 0;
 
   &__title {
@@ -32,7 +32,7 @@
   }
 
   &--bg-slate-light {
-    background-color: $slate-light;
+    background-color: $slate--light;
     color: #fff;
   }
 }

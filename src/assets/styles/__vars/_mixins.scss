@@ -1,4 +1,3 @@
-@import "colours";
 
 // at the moment this is used for 'anything we want to repeat / include in places'
 // it could probably use refactoring out into more specifically named/categorised files
@@ -20,8 +19,8 @@
   border-radius: 0.25rem; // explicitly set this for inputs on iOS
   font-weight: 500;
 
-  background-color: $yellow;
-  background-image: linear-gradient(to left, $yellow 50%, black 50%);
+  background-color: $tertiary;
+  background-image: linear-gradient(to left, $tertiary 50%, black 50%);
   background-size: 200% 100%;
   background-position: right bottom;
   color: #000;

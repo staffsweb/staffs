@@ -108,7 +108,7 @@ $border-accent-width: $spacing-2xs;
 
 @mixin base-elements {
   a { color: $link-color; cursor: pointer; }
-  a:hover { color: $link-hover-color }
+  a:hover { color: $link-color--hover }
   a img {	border: 0px; }
   a[href^="mailto"], .url { word-break: break-word; }
 
@@ -124,7 +124,7 @@ $border-accent-width: $spacing-2xs;
   p a:not([class]) {
     text-decoration: none;
     font-weight: 500;
-    border-bottom: 1px solid $grey-light
+    border-bottom: 1px solid $grey--light
   }
 
   //nav, ul, ol, table {
@@ -233,7 +233,7 @@ $border-accent-width: $spacing-2xs;
     clear: both;
     height: 0px;
     border: 0;
-    border-top: 1px solid $grey-light;
+    border-top: 1px solid $grey--light;
     margin: $spacing-4xl auto;
 
     &.compact {
@@ -366,7 +366,7 @@ $border-accent-width: $spacing-2xs;
     @include typescale('lg');
     @include line-height('normal');
     max-width: $line-length-max-rem;
-    color: $maroon;
+    color: $secondary;
 
     @media (min-width: 40em) {
       @include typescale('xl', 'em');
@@ -484,7 +484,7 @@ $border-accent-width: $spacing-2xs;
   @include typescale('xs');
   background: #fff;
   color: $text-color;
-  border-bottom: 1px solid $grey-light;
+  border-bottom: 1px solid $grey--light;
 }
 
 @mixin tag {

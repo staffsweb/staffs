@@ -181,6 +181,16 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/assets/img/icon-gt-primary.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/icon-gt-primary.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/assets/img/icon-gt-red.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -331,6 +341,16 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/assets/img/icon-quote-blue-dil.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/icon-quote-blue-dil.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/assets/img/icon-quote-maroon.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -346,6 +366,16 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "/assets/img/icon-quote-pink.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/img/icon-quote-primary.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/icon-quote-primary.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
@@ -451,6 +481,16 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/assets/img/logo-dil.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/logo-dil.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/assets/img/logo-guardian.png": {
 		"ft": 32768,
 		"iS": 4546,
@@ -538,6 +578,26 @@
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
+		},
+	"/assets/img/theme-dil/icon-gt-primary.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/theme-dil/icon-gt-primary.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/img/theme-dil/icon-quote-primary.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/theme-dil/icon-quote-primary.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
 		},
 	"/assets/js/app.js": {
 		"bF": 0,
@@ -840,7 +900,7 @@
 		"oS": 2,
 		"sct": 1
 		},
-	"/assets/js/vendor/smartresize.js": {
+	"/assets/js/vendor/smartResize.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 1,
@@ -1488,6 +1548,19 @@
 		"oS": 2,
 		"sct": 1
 		},
+	"/assets/styles/__vars/_config.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 4,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/assets/styles/__vars/_config.css",
+		"oF": 0,
+		"oS": 2,
+		"sct": 1
+		},
 	"/assets/styles/__vars/_grid.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -1644,6 +1717,19 @@
 		"oS": 2,
 		"sct": 1
 		},
+	"/assets/styles/_theme/_dil.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 4,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/assets/styles/_theme/_dil.css",
+		"oF": 0,
+		"oS": 2,
+		"sct": 1
+		},
 	"/assets/styles/_utils/_utils.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -1697,6 +1783,37 @@
 		"ma": 1,
 		"oA": 0,
 		"oAP": "/assets/styles/editor.css",
+		"oF": 0,
+		"oS": 2,
+		"sct": 1
+		},
+	"/assets/styles/main-dil.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/styles/main-dil-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/styles/main-dil.css.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/styles/main-dil.css.map",
+		"oF": 0
+		},
+	"/assets/styles/main-dil.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 4,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 0,
+		"oAP": "/assets/styles/main-dil.css",
 		"oF": 0,
 		"oS": 2,
 		"sct": 1
@@ -1859,6 +1976,14 @@
 		"oAP": "/components/03-templates/_blank.twig",
 		"oF": 0
 		},
+	"/components/03-templates/_preview--dil.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/components/03-templates/_preview--dil.twig",
+		"oF": 0
+		},
 	"/components/03-templates/_preview.twig": {
 		"cB": 0,
 		"ft": 8192,
@@ -1881,6 +2006,22 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/components/03-templates/event-single.twig",
+		"oF": 0
+		},
+	"/components/03-templates/homepage--dil.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/03-templates/homepage--dil.twig",
+		"oF": 0
+		},
+	"/components/03-templates/homepage.config.yml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/03-templates/homepage.config.yml",
 		"oF": 0
 		},
 	"/components/03-templates/homepage.twig": {
@@ -1937,6 +2078,14 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/components/_preview-footer.twig",
+		"oF": 0
+		},
+	"/components/_preview-head--dil.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/components/_preview-head--dil.twig",
 		"oF": 0
 		},
 	"/components/_preview-head.twig": {
@@ -2168,6 +2317,14 @@
 		"oF": 0,
 		"oS": 2,
 		"sct": 1
+		},
+	"/components/card/card--blue-dil.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/card/card--blue-dil.twig",
+		"oF": 0
 		},
 	"/components/card/card--course-result.twig": {
 		"cB": 0,

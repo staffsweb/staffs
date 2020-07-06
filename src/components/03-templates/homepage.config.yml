@@ -1,0 +1,4 @@
+variants:
+  - name: dil
+    label: "Digital Institute London"
+    preview: '@preview--dil'

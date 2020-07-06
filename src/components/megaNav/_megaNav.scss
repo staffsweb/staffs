@@ -135,7 +135,7 @@
     position: absolute;
     //opacity: 0;
     visibility: hidden;
-    background: $greyblue-light;
+    background: $greyblue--light;
     top: 0;
     right: 0;
     left: 0;
@@ -206,7 +206,7 @@
     margin-left: -$spacing-lg;
     padding: $spacing-sm;
     padding-left: $spacing-lg;
-    background: $slate-light;
+    background: $slate--light;
     color: white;
     z-index: 0;
 
@@ -228,7 +228,7 @@
     position: relative;
     margin: 0;
     height: 100vh;
-    background: $greyblue-light;
+    background: $greyblue--light;
     padding: 0 0 $spacing-lg $spacing-lg;
     margin-left: $spacing-4xl;
     border-left: 1px solid $border-color;

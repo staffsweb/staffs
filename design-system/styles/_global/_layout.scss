@@ -1,10 +1,10 @@
 @import "../__vars/layout";
 
 body {
-  border-left: $body-border-width solid $red;
+  border-left: $body-border-width solid $primary;
 
   @media (min-width: $breakpoint-largescreen-typography) and (min-height: $breakpoint-largescreen-typography-height) {
-    border-left: $body-border-width--wide solid $red;
+    border-left: $body-border-width--wide solid $primary;
   }
 
   &:after {
@@ -14,7 +14,7 @@ body {
     left: 0;
     bottom: 0;
     width: $body-border-width;
-    background: $red;
+    background: $primary;
     z-index: 0;
 
     @media (min-width: $breakpoint-largescreen-typography) and (min-height: $breakpoint-largescreen-typography-height) {

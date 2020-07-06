@@ -1,12 +1,12 @@
 .feature-link {
   display: block;
   position: relative;
-  --accent-color: #{$red};
+  --accent-color: #{$primary};
   margin-bottom: $spacing-xl;
   color: $slate;
   text-decoration: none;
   padding: 0 calc(#{$spacing-sm} + 2.5%) 0;
-  border-left: $border-accent-width solid $red;
+  border-left: $border-accent-width solid $primary;
   border-left: $border-accent-width solid var(--accent-color);
 
   &__title {
@@ -23,7 +23,7 @@
       width: 1em;
       height: 1em;
       margin-left: $spacing-2xs;
-      background: url('../img/icon-gt-red.svg') center center no-repeat;
+      background: url('#{$image-theme-directory}/icon-gt-primary.svg') center center no-repeat;
       background-size: 40%;
       vertical-align: text-bottom;
       transition: transform 75ms ease-out;

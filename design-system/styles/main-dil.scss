@@ -1,0 +1,67 @@
+@import "__vars/_all";
+
+$image-theme-directory: '../img/theme-dil';
+
+$primary:               $blue--dil;
+$link-color--hover:     $primary;
+$secondary:             $purple--dil;
+$tertiary:              $yellow;
+
+$utils-bg-colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'tertiary': $tertiary,
+  'grey-light': $grey--light,
+  'offwhite': $offwhite,
+  'offblack': $offblack,
+  'white': white,
+);
+
+$utils-text-colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'white': white,
+  'black': black,
+  'offwhite': $offwhite,
+  'offblack': $offblack,
+);
+
+@import "_vendor/normalize";
+
+@import "_global/typography";
+@import "_global/forms";
+
+@import "_grid/grid";
+
+@import "_global/layout";
+@import "_global/nav";
+@import "_global/site-header";
+@import "_global/site-footer";
+
+//@import "../../components/*/*";
+@import "../../components/accordion/accordion";
+@import "../../components/banner/banner";
+@import "../../components/box/boxes";
+@import "../../components/breadcrumbs/breadcrumbs";
+@import "../../components/button/buttons";
+@import "../../components/card/cards";
+@import "../../components/feature-link/feature-link";
+@import "../../components/icons/icons";
+@import "../../components/list/lists";
+@import "../../components/masthead/masthead";
+@import "../../components/megaNav/megaNav";
+@import "../../components/meta/meta";
+@import "../../components/quote/quotes";
+@import "../../components/quote-banner/quote-banner";
+@import "../../components/section-header/section-header";
+@import "../../components/slab/slab";
+@import "../../components/slider/slider";
+@import "../../components/tabs/tabs";
+@import "../../components/tile/tile";
+@import "../../components/feature-tiles/feature-tiles";
+@import "../../components/title/title";
+@import "../../components/zebra/zebra";
+
+@import "_utils/utils";
+
+@import "_theme/dil";

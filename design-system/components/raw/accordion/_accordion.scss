@@ -1,16 +1,16 @@
 .accordion {
   clear: both;
   margin-bottom: $spacing-4xl;
-  border-bottom: 1px solid $grey-light;
+  border-bottom: 1px solid $grey--light;
 }
 
 .accordion__item {
-  border-top: 1px solid $grey-light;
+  border-top: 1px solid $grey--light;
 
   &[open] {
     .accordion__title {
       font-weight: 500;
-      background: $greyblue-superlight;
+      background: $greyblue--superlight;
     }
 
     .accordion__toggle:before {
@@ -67,8 +67,8 @@
 
 .accordion__content {
   padding: $spacing-sm;
-  background: $greyblue-supersuperlight;
-  border-top: 1px solid $grey-light;
+  background: $greyblue--supersuperlight;
+  border-top: 1px solid $grey--light;
 
   @media (min-width: 40em) {
     padding: $spacing-lg $spacing-lg;

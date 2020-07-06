@@ -1,0 +1,350 @@
+{% include '@meganav' %}
+{% include '@masthead' %}
+
+<main id="main-content" role="main" class="">
+  <div class="slab  slab--bg-slate">
+    <div class="wrap">
+{#      <form>#}
+{#        <input type="text" placeholder="Search courses by keyword"/>#}
+
+{#        <select>#}
+{#          <option selected disabled>All levels of study</option>#}
+{#        </select>#}
+
+{#        <input type="submit" class="button" value="Search"/>#}
+{#      </form>#}
+    </div>
+  </div>
+
+  <div class="slab  slab--bg-offwhite">
+    <div class="wrap">
+      {% include '@title' with {
+        text: 'Open days',
+        textElement: 'h2',
+        tail: true,
+        animate: true
+      } %}
+
+      <div class="grid  grid-4-cols">
+        {% for i in 1..4 %}
+          <div>
+            <div class="box  box--has-shadow">
+              <div class="box__content">
+                <div class="title">
+                  <h3 class="h6  title__highlight"><a href="">Undergraduate Open day</a></h3>
+                </div>
+                <time class="strong">28 March 2020</time>
+                <p>Centre of Excellence Shrewsbury</p>
+              </div>
+              <footer class="box__footer">
+                <a href="" class="button  button--block  caps  align-center">Book Now</a>
+              </footer>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="slab slab--light">
+    <div class="wrap">
+      {% include '@title' with {
+        text: 'Features and highlights',
+        textElement: 'h2',
+        tail: true,
+        animate: true
+      } %}
+
+      <div class="grid  grid--flush  grid-2-cols@mobile-wide  grid-3-cols@tablet-wide  feature-tiles">
+        <div class="feature-tiles__item  js-waypoint">
+          <a class="tile" href="">
+            <figure class="tile__figure">
+              <img src="https://placeimg.com/500/500/people" class="tile__img" alt=""/>
+            </figure>
+
+            <div class="tile__content">
+              <div class="title tile__title">
+                <h3 class="h4  title__highlight">Digital Institute London</h3>
+              </div>
+              <div class="tile__content-body">
+                <p>Study Esports, Computer Games Design, Cyber Security, and more, with us in London.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="feature-tiles__item    js-waypoint">
+          <a class="tile" href="">
+            <figure class="tile__figure">
+              <img src="https://placeimg.com/500/500/tech" class="tile__img" alt=""/>
+            </figure>
+
+            <div class="tile__content">
+              <div class="title  tile__title">
+                <h3 class="h4  title__highlight">Developing knowledge</h3>
+              </div>
+              <div class="tile__content-body">
+                <p>Reach your full potential with our postgraduate courses.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="feature-tiles__item    js-waypoint">
+          <a class="tile" href="">
+            <figure class="tile__figure">
+              <img src="https://placeimg.com/500/500/architecture" class="tile__img" alt=""/>
+            </figure>
+
+            <div class="tile__content">
+              <div class="title  tile__title">
+                <h3 class="h4  title__highlight">Connecting Continents</h3>
+              </div>
+              <div class="tile__content-body">
+                <p>Study with us, no matter where in the world you come from.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="feature-tiles__item    js-waypoint">
+          <a class="tile" href="">
+            <figure class="tile__figure">
+              <img src="https://placeimg.com/500/500/tech" class="tile__img" alt=""/>
+            </figure>
+
+            <div class="tile__content">
+              <div class="title  tile__title">
+                <h3 class="h4  title__highlight">Breaking boundaries</h3>
+              </div>
+              <div class="tile__content-body">
+                <p>Public lecture from Ade Adepitan MBE</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="feature-tiles__item  js-waypoint">
+          <a class="tile" href="">
+            <figure class="tile__figure">
+              <img src="https://placeimg.com/500/500" class="tile__img" alt=""/>
+            </figure>
+
+            <div class="tile__content">
+              <div class="title tile__title">
+                <h3 class="h4  title__highlight">There’s still time to apply for 2020 entry</h3>
+              </div>
+              <div class="tile__content-body">
+                <p>Apply for a full-time undergraduate degree at Staffordshire University and get guaranteed accommodation.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="feature-tiles__item  feature-tiles__item--accent-tef-gold  js-waypoint">
+          <a class="tile" href="">
+            <figure class="tile__figure">
+              <img src="https://placeimg.com/500/500/nature" class="tile__img" alt=""/>
+            </figure>
+
+            <div class="tile__content">
+              <div class="title  title--bg-tef-gold  tile__title">
+                <h3 class="h4  title__highlight">TEF Gold</h3>
+              </div>
+              <div class="tile__content-body">
+                <p>Staffordshire University achieves Gold in the Teaching Excellence and Student Outcomes Framework</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slab  slab--bg-offwhite">
+    <div class="wrap">
+      {% include '@title' with {
+        text: 'Be the change',
+        textElement: 'h2',
+        tail: true,
+        animate: true
+      } %}
+
+      <div class="grid  grid--spaced">
+        <div class="col-1/3">
+          <p class="intro">Choose Staffordshire University for its friendly vibe, its world-class facilities, specialist courses and dedicated international student support.</p>
+        </div>
+
+        <div class="col-2/3">
+          <a class="feature-link" href="">
+            <div class="feature-link__content">
+              <h3 class="h4 feature-link__title">Postgraduate</h3>
+              <p>Boost your knowledge and discover a world of new career opportunities with postgraduate study.</p>
+            </div>
+          </a>
+          <a class="feature-link" href="">
+            <div class="feature-link__content">
+              <h3 class="h4 feature-link__title">International</h3>
+              <p>We’ll support you every step of the way from visa and immigration advice to tips on the local area and its attractions.</p>
+            </div>
+          </a>
+          <a class="feature-link" href="">
+            <div class="feature-link__content">
+              <h3 class="h4 feature-link__title">Digital Institute London</h3>
+              <p>Study Esports, Computer Games Design, Cyber Security, and more, with us in London.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="slab  ">
+    <div class="wrap">
+      <header class="section-header  section-header--border-bottom">
+        {% include '@title' with {
+          text: 'Upcoming Events',
+          textElement: 'h2',
+          tail: true,
+          animate: true
+        } %}
+      </header>
+
+      <div class="grid  grid-3-cols@tablet-wide">
+        <div>
+
+          <div class="card  card--event  card--flex ">
+            <figure class="card__figure">
+              <img src="https://placeimg.com/720/360" alt=""/>
+            </figure>
+
+            <div class="card__date">
+              <span class="card__day">28</span>
+              <span class="card__month">September</span>
+            </div>
+
+            <div class="card__content">
+              <div class="title">
+                <h2 class="h6  title__highlight"><a href="" class="">{{ placeholderHeadline2 }}</a></h2>
+              </div>
+              <p>{{ placeholderPara1 }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="card  card--event  card--flex ">
+            <figure class="card__figure">
+              <img src="https://placeimg.com/720/360" alt=""/>
+            </figure>
+
+            <div class="card__date">
+              <span class="card__day">23</span>
+              <span class="card__month">September</span>
+            </div>
+
+            <div class="card__content">
+              <a href="" class="link--stretched">
+                <div class="title">
+                  <h2 class="h6  title__highlight">{{ placeholderHeadline2 }}</h2>
+                </div>
+              </a>
+              <p>Whole card linked using link--stretched. NB: This must sit outside/around the highlight title.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="card  card--event  card--flex  " href="">
+            <div class="card__date">
+              <span class="card__day">30</span>
+              <span class="card__month">September</span>
+            </div>
+
+            <div class="card__content">
+              <a href="" class="link--stretched">
+                <div class="title">
+                  <h2 class="h6  title__highlight">{{ placeholderHeadline2 }}</h2>
+                </div>
+              </a>
+              <p>Example without a figure image.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-right">
+        <a href="" class="button">View all events</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="slab  slab--bg-offwhite">
+    <div class="wrap">
+      <header class="section-header  section-header--border-bottom">
+        {% include '@title' with {
+          text: 'Latest News',
+          textElement: 'h2',
+          tail: true,
+          animate: true
+        } %}
+      </header>
+
+
+      <div class="grid  grid-4-cols">
+        {% for i in 1..4 %}
+          <div>
+
+            <div class="card  card--course">
+              <figure class="card__figure">
+                <img src="https://placeimg.com/480/240/people" alt=""/>
+              </figure>
+
+              <div class="card__content">
+                <h3 class="h6  card__title"><a href="#" class="link--stretched">Research into poverty in Stoke-on-Trent gets new funding boost</a></h3>
+                <p>University's pioneering work with community researchers will help inform new model of community research</p>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+      <div class="text-right">
+        <a href="" class="button">View all news</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="quote-banner  margin-top-3xs">
+    <div class="wrap">
+
+      <div class="quote-banner__flexContainer">
+
+        <div class="quote-banner__quoteContainer">
+          <div class="card  card--testimonial  ">
+            <div class="card__content">
+              <blockquote class="blockquote--large">
+                <q class="blockquote__title">Since coming to Staffordshire Uni I’ve become much more creative and confident in myself and my abilities</q>
+
+                <footer class="blockquote__footer">
+                  <cite class="cite">Dan Sheerman</cite>
+                  <p>Vice President of naming complicated variants of things</p>
+                </footer>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+
+        <figure class="quote-banner__figure  quote-banner__figure--align-bottom">
+          <img src="{{ '/img/placeholder-transparent-person.png' | path }}" alt="person smiling" />
+        </figure>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+{% include '@page-footer' %}

@@ -4,13 +4,14 @@
     'pink': $pink,
     'maroon': $maroon,
     'slate': $slate,
-    'tef-gold': $gold-tef,
+    'tef-gold': $gold--tef,
+    'blue-dil': $blue--dil,
   );
 
   position: relative;
   display: block;
   overflow: hidden;
-  outline: 1px solid $grey-light;
+  outline: 1px solid $grey--light;
   box-shadow: 0 0.1em 0.25em rgba(0, 0, 0, 0.15);
   min-height: 10em;
 

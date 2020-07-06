@@ -6,6 +6,7 @@ $card__internal-spacing: $spacing-sm;
     'pink': $pink,
     'maroon': $maroon,
     'slate': $slate,
+    'blue-dil': $blue--dil,
   );
 
   display: block;
@@ -144,7 +145,7 @@ a.card {
     height: 0;
     padding-bottom: 5%;
     margin-left: -5%;
-    background: #fff url('../img/icon-quote-red.svg') no-repeat center center;
+    background: #fff url('#{$image-theme-directory}/icon-quote-primary.svg') no-repeat center center;
     background-size: contain;
   }
 
@@ -172,6 +173,12 @@ a.card {
   &.card--slate {
     &:before {
       background: #fff url('../img/icon-quote-slate.svg') no-repeat center center;
+      background-size: contain;
+    }
+  }
+  &.card--blue-dil {
+    &:before {
+      background: #fff url('../img/icon-quote-blue-dil.svg') no-repeat center center;
       background-size: contain;
     }
   }

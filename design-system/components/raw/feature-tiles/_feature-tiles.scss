@@ -3,7 +3,8 @@
     'red': $red,
     'pink': $pink,
     'maroon': $maroon,
-    'tef-gold': $gold-tef,
+    'tef-gold': $gold--tef,
+    'blue-dil': $blue--dil,
   );
 
   @media (min-width: map_get($breakpoint-stages, 'tablet-wide')) {
@@ -75,7 +76,7 @@
         }
 
         &:nth-child(n):after {
-          background: var(--accent-color, #{$red});
+          background: var(--accent-color, #{$primary});
         }
       }
 
