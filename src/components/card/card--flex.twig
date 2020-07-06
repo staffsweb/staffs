@@ -1,3 +1,7 @@
+<p>Add a class of <code>card--flex</code> to have a card's figure and content size themselves intrinsically with flexbox. This means if a card is in a wide container, the figure will sit to the right, if the container is small it'll sit above. This is particularly useful for cards in single columns (like search results), and grids of 3, which look awkwardly large otherwise at a tablet-ish width, when they fall to a single column.</p>
+
+<hr/>
+
 <div class="card  card--flex  card--maroon">
   <figure class="card__figure">
     <img src="https://placeimg.com/720/360" alt=""/>
@@ -5,7 +9,7 @@
 
   <div class="card__content">
     <h3 class="h4 card__title"><a href="" class="">{{ placeholderHeadline2 }}</a></h3>
-    <p>{{ placeholderPara1 }}</p>
+    <p>{{ placeholderPara3 }}</p>
   </div>
 </div>
 
@@ -15,7 +19,7 @@
   </figure>
 
   <div class="card__content">
-    <h3 class="h4  card__title"><a href="" class="link--stretched">{{ placeholderHeadline2 }}</a></h3>
+    <h3 class="h4  card__title"><a href="" class="link--stretched">{{ placeholderHeadline }}</a></h3>
     <p>{{ placeholderPara1 }}</p>
   </div>
 </div>
@@ -84,7 +88,7 @@
         <p>
           <time class="strong">10 August 2020</time>
         </p>
-        <p>University's pioneering work with community researchers will help inform new model of community research.</p>
+        <p>{{ placeholderPara1 }}</p>
       </div>
     </div>
   </div>
@@ -103,7 +107,7 @@
         <p>
           <time class="strong">9 April 2020</time>
         </p>
-        <p>University's pioneering work with community researchers will help inform new model of community research.</p>
+        <p>{{ placeholderPara2 }}</p>
       </div>
     </div>
   </div>
