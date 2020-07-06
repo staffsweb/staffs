@@ -151,7 +151,7 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-e7608d385d9b5fbc77f3187765d99571-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card  card--course"</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card  card--flex  card--course"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__content"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tag  margin-bottom-md"</span>&gt;</span>Undergraduate<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
@@ -176,7 +176,7 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card  card--course"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card  card--flex  card--course"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__content"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tag  margin-bottom-md"</span>&gt;</span>Undergraduate<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
@@ -207,7 +207,7 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-e7608d385d9b5fbc77f3187765d99571-panel-view">
     <code class="Code Code--lang-twig">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card  card--course"</span>&gt;</span>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card  card--flex  card--course"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__content"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tag  margin-bottom-md"</span>&gt;</span>Undergraduate<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
@@ -232,7 +232,7 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card  card--course"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card  card--flex  card--course"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__content"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tag  margin-bottom-md"</span>&gt;</span>Undergraduate<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
@@ -371,10 +371,16 @@
 <span class="hljs-selector-tag">a</span><span class="hljs-selector-class">.card</span> {
   <span class="hljs-attribute">text-decoration</span>: none;
 
+  <span class="hljs-selector-class">.card__title</span> {
+    <span class="hljs-attribute">color</span>: #{<span class="hljs-variable">$primary</span>};
+    <span class="hljs-attribute">color</span>: var(--accent-color);
+  }
+
   &amp;<span class="hljs-selector-pseudo">:hover</span> {
     <span class="hljs-attribute">color</span>: <span class="hljs-variable">$text-color</span>;
 
-    <span class="hljs-selector-class">.title__highlight</span> {
+    <span class="hljs-selector-class">.title__highlight</span>,
+    <span class="hljs-selector-class">.card__title</span> {
       <span class="hljs-attribute">text-decoration</span>: underline;
     }
   }
@@ -554,7 +560,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">4.7 KB</span>
+                    <span class="Meta-value">4.8 KB</span>
                 </li>
             </ul>
         </div>
@@ -577,7 +583,7 @@
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Variants <em class="Meta-count">(17)</em>:</strong>
+            <strong class="Meta-key">Variants <em class="Meta-count">(16)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="card--default.html">
@@ -606,10 +612,6 @@
             
                 <a href="card--ksp.html">
                     <span>KSP (Key Selling Points)</span>
-                </a>, 
-            
-                <a href="card--overlap-title.html">
-                    <span>Overlap Title</span>
                 </a>, 
             
                 <a href="card--course.html">
@@ -1949,30 +1951,6 @@
 
 
 <span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="card--overlap-title.html" data-pjax>
-                <span>Overlap Title</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #D70A26;" title="Caution"></span>
 
 
 </div>

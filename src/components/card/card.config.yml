@@ -15,6 +15,3 @@ variants:
 
   - name: ksp
     label: "KSP (Key Selling Points)"
-
-  - name: overlap-title
-    status: caution

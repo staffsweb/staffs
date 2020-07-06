@@ -85,10 +85,16 @@ $card__internal-spacing: $spacing-sm;
 a.card {
   text-decoration: none;
 
+  .card__title {
+    color: #{$primary};
+    color: var(--accent-color);
+  }
+
   &:hover {
     color: $text-color;
 
-    .title__highlight {
+    .title__highlight,
+    .card__title {
       text-decoration: underline;
     }
   }

@@ -21,7 +21,7 @@
 
   background-color: $tertiary;
   background-image: linear-gradient(to left, $tertiary 50%, black 50%);
-  background-size: 200% 100%;
+  background-size: 201% 100%; // should be 200%, but Chrome wants to overlap a pixel.
   background-position: right bottom;
   color: #000;
 
