@@ -557,6 +557,10 @@ section:first-child { margin-top: 0; }
 
 .card__title a { color: #d70a26; color: var(--accent-color); }
 
+.card__figure--video { position: relative; }
+
+.card__figure--video:after { content: ''; position: absolute; width: 4rem; height: 4rem; max-width: 50%; max-height: 50%; top: 50%; left: 50%; transform: translate(-50%, -50%); background: url("../img/icon-play-circle-neutral-light.svg") no-repeat center center; background-size: contain; z-index: 1; pointer-events: none; }
+
 .card .blockquote__title { color: var(--accent-color); }
 
 .card .title__highlight { --background: var(--accent-color); }
@@ -581,13 +585,13 @@ a.card:hover { color: black; }
 
 a.card:hover .title__highlight, a.card:hover .card__title { text-decoration: underline; }
 
-.card--flex { display: flex; flex-wrap: wrap; flex-direction: row-reverse; }
+.card--flex { display: flex; flex-wrap: wrap; align-items: flex-start; flex-direction: row-reverse; }
 
 .card--flex .card__figure { flex: 1 1 33%; }
 
 .card--flex .card__content { flex: 99 1 17.5em; }
 
-.card--flex-overlap { display: flex; flex-wrap: wrap; flex-direction: row-reverse; padding-bottom: 0.75rem; }
+.card--flex-overlap { display: flex; flex-wrap: wrap; align-items: flex-start; flex-direction: row-reverse; padding-bottom: 0.75rem; }
 
 .card--flex-overlap .card__figure { flex: 1 1 33%; }
 
@@ -1259,6 +1263,8 @@ a.tile:focus { outline-width: 3px; outline-color: #d70a26; z-index: 2; }
 .margin-bottom-none, .margin-y-none { margin-bottom: 0 !important; }
 
 .js .js-hidden { display: none; }
+
+.link--stretched { position: static; }
 
 .link--stretched::after { position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 1; pointer-events: all; content: ""; background-color: rgba(0, 0, 0, 0); }
 

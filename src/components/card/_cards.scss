@@ -52,6 +52,28 @@ $card__internal-spacing: $spacing-sm;
     }
   }
 
+  &__figure {
+    &--video {
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: $spacing-4xl;
+        height: $spacing-4xl;
+        max-width: 50%;
+        max-height: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: url('../img/icon-play-circle-neutral-light.svg') no-repeat center center;
+        background-size: contain;
+        z-index: 1;
+        pointer-events: none;
+      }
+    }
+  }
+
   //--  Child elements affected by accent colour
 
   .blockquote__title {
@@ -101,6 +123,7 @@ a.card {
 .card--flex {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   flex-direction: row-reverse;
 
   .card__figure {
@@ -115,6 +138,7 @@ a.card {
 .card--flex-overlap {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   flex-direction: row-reverse;
   padding-bottom: $spacing-sm;
 

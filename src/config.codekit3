@@ -321,6 +321,36 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/assets/img/icon-play-circle-maroon.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/icon-play-circle-maroon.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/img/icon-play-circle-neutral-light.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/icon-play-circle-neutral-light.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/img/icon-play-circle-neutral.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/icon-play-circle-neutral.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/assets/img/icon-plus-white.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -3033,6 +3063,14 @@
 		"oF": 0,
 		"oS": 2,
 		"sct": 1
+		},
+	"/components/tabs/readme.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/tabs/readme.html",
+		"oF": 0
 		},
 	"/components/tabs/readme.md": {
 		"cB": 0,

@@ -76,6 +76,8 @@
 }
 
 .link--stretched {
+  position: static;
+
   &::after {
     position: absolute;
     top: 0;
