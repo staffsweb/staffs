@@ -58,5 +58,9 @@ a.feature-link {
         transform: translateX(0.1rem);
       }
     }
+
+    .feature-link__figure {
+      opacity: $link-image-hover-opacity;
+    }
   }
 }

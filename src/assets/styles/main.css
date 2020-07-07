@@ -647,6 +647,8 @@ a.card:hover .title__highlight, a.card:hover .card__title { text-decoration: und
 
 a.feature-link:hover .feature-link__title:after { transform: translateX(0.1rem); }
 
+a.feature-link:hover .feature-link__figure { opacity: 0.9; }
+
 .icon { position: relative; display: inline-block; width: 1em; height: 1em; text-align: center; background-size: contain; background-position: center center; background-repeat: no-repeat; vertical-align: baseline; top: 0.1em; }
 
 .icon svg, .icon img { display: inline-block; width: 100%; max-height: 100%; vertical-align: middle; }

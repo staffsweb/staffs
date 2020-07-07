@@ -136,6 +136,7 @@
   let tabsInit = function () {
     // @TODO: check accessibility - add AIRA/keyboard if needed
     // @TODO: consider using history.pushState?
+    // @TODO: perhaps add something to handle switching to a tab when its ID is the URL hash?
 
     $('.js-tabs').each(function () {
       let tabs = $(this);
