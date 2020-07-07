@@ -631,7 +631,7 @@ a.card:hover .title__highlight, a.card:hover .card__title { text-decoration: und
 
 .feature-link { display: block; position: relative; --accent-color: #184b9b; margin-bottom: 2rem; color: #394851; text-decoration: none; padding: 0 calc(0.75rem + 2.5%) 0; border-left: 0.25rem solid #184b9b; border-left: 0.25rem solid var(--accent-color); }
 
-.feature-link__title { display: table; position: relative; margin-bottom: 0.5rem; padding-right: 1em; }
+.feature-link__title { display: table; position: relative; margin-bottom: 0.5rem; padding-right: 1em; word-break: break-word; }
 
 .feature-link__title:after { content: ''; position: absolute; bottom: 0.05em; display: inline-block; width: 1em; height: 1em; margin-left: 0.25rem; background: url("../img/theme-dil/icon-gt-primary.svg") center center no-repeat; background-size: 40%; vertical-align: text-bottom; transition: transform 75ms ease-out; }
 
