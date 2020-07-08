@@ -6,7 +6,7 @@ $card__internal-spacing: $spacing-sm;
     'pink': $pink,
     'maroon': $maroon,
     'slate': $slate,
-    'blue-dil': $blue--dil,
+    'blue-ldn': $blue--deep-ldn,
   );
 
   display: block;
@@ -202,9 +202,9 @@ a.card {
       background-size: contain;
     }
   }
-  &.card--blue-dil {
+  &.card--blue-ldn {
     &:before {
-      background: #fff url('../img/icon-quote-blue-dil.svg') no-repeat center center;
+      background: #fff url('../img/icon-quote-blue-ldn.svg') no-repeat center center;
       background-size: contain;
     }
   }

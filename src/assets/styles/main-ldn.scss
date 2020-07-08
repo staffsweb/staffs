@@ -1,11 +1,11 @@
 @import "__vars/_all";
 
-$image-theme-directory: '../img/theme-dil';
+$image-theme-directory: '../img/theme-ldn';
 
-$primary:               $blue--dil;
+$primary:               $blue--deep-ldn;
 $link-color--hover:     $primary;
-$secondary:             $purple--dil;
-$tertiary:              $yellow;
+$secondary:             $magenta--ldn;
+$tertiary:              $purple--ldn;
 
 $utils-bg-colors: (
   'primary': $primary,
@@ -64,4 +64,4 @@ $utils-text-colors: (
 
 @import "_utils/utils";
 
-@import "_theme/dil";
+@import "_theme/ldn";

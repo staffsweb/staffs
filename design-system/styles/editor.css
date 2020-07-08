@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/** Calculate the luminance for a color. See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests */
+/** Calculate the contrast ratio between two colors. See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests */
+/** Determine whether to use dark or light text on top of given color. Returns black for dark text and white for light text. */
 /*@mixin align-wide { max-width: none; width: calc(100vw - 2.4rem); margin-left: calc(-50vw + 50% + 1.2rem); margin-right: calc(-50vw + 50% + 1.2rem); @media (min-width: $wrap-full-gutter-width) { width: calc(90vw); margin-left: calc(-45vw + 50%); margin-right: calc(-45vw + 50%); } @media (min-width: $wrap-width + 10rem) { width: $wrap-width; margin-left: calc(-43rem + 50%); margin-right: calc(-43rem + 50%); } }*/
 html { position: relative; font-size: 90%; -webkit-text-decoration-skip: ink; text-decoration-skip-ink: auto; }
 
@@ -172,7 +175,7 @@ a.tag:hover { text-decoration: underline; color: black; }
 
 .link-access:focus, .visually-hidden:focus, .screen-reader-text:focus { position: static; left: auto; clip: none; }
 
-.button { position: relative; display: inline-block; font-size: inherit; margin: 0 0.25rem 1rem 0; padding: 0.75em 1.5em; border: 0; line-height: 1.15; vertical-align: baseline; text-decoration: none; text-align: center; transition: background 150ms ease-out, color 150ms ease-out; box-sizing: border-box; border-radius: 0.25rem; font-weight: 500; background-color: #ffd91b; background-image: linear-gradient(to left, #ffd91b 50%, black 50%); background-size: 201% 100%; background-position: right bottom; color: #000; }
+.button { position: relative; display: inline-block; font-size: inherit; margin: 0 0.25rem 1rem 0; padding: 0.75em 1.5em; border: 0; line-height: 1.15; vertical-align: baseline; text-decoration: none; text-align: center; transition: background 150ms ease-out, color 150ms ease-out; box-sizing: border-box; border-radius: 0.25rem; font-weight: 500; background-color: #ffd91b; background-image: linear-gradient(to left, #ffd91b 50%, black 50%); background-size: 200% 100%; background-position: right bottom; color: black; }
 
 .button:hover, .button:focus, .button:active { color: white; background-position: 0% bottom; }
 

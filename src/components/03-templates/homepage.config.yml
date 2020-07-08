@@ -1,4 +1,4 @@
 variants:
-  - name: dil
+  - name: ldn
     label: "Digital Institute London"
-    preview: '@preview--dil'
+    preview: '@preview--ldn'

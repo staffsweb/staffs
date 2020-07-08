@@ -182,8 +182,10 @@
         {
           breakpoint: 600,
           settings: {
-            slidesToShow: 1.25,
-            slidesToScroll: 1
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true,
+            centerPadding: '5%',
           }
         }
       ]
@@ -195,16 +197,16 @@
       infinite: false,
       responsive: [
         {
-          breakpoint: 900,
+          breakpoint: 1000,
           settings: {
-            slidesToShow: 2.1,
+            slidesToShow: 2.5,
             slidesToScroll: 2
           }
         },
         {
-          breakpoint: 500,
+          breakpoint: 600,
           settings: {
-            slidesToShow: 1.5,
+            slidesToShow: 1.25,
             slidesToScroll: 1
           }
         },
@@ -226,22 +228,24 @@
         {
           breakpoint: 900,
           settings: {
-            slidesToShow: 3.1,
+            slidesToShow: 3.25,
             slidesToScroll: 3
           }
         },
         {
           breakpoint: 500,
           settings: {
-            slidesToShow: 2.5,
+            slidesToShow: 2,
             slidesToScroll: 2
           }
         },
         {
           breakpoint: 360,
           settings: {
-            slidesToShow: 2.1,
-            slidesToScroll: 2
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true,
+            centerPadding: '5%'
           }
         }
       ]

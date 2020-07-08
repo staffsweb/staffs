@@ -10,8 +10,8 @@ variants:
     label: "Theme: Slate"
   - name: maroon
     label: "Theme: Maroon"
-  - name: blue-dil
-    label: "Theme: Blue (DIL)"
+  - name: blue-ldn
+    label: "Theme: Blue (LDN)"
 
   - name: ksp
     label: "KSP (Key Selling Points)"

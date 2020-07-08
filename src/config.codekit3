@@ -371,11 +371,11 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/assets/img/icon-quote-blue-dil.svg": {
+	"/assets/img/icon-quote-blue-ldn.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/assets/img/icon-quote-blue-dil.svg",
+		"oAP": "/assets/img/icon-quote-blue-ldn.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
@@ -511,16 +511,6 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/assets/img/logo-dil.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/img/logo-dil.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
 	"/assets/img/logo-guardian.png": {
 		"ft": 32768,
 		"iS": 4546,
@@ -531,6 +521,16 @@
 		"opt": 0,
 		"oT": 1,
 		"q": 100
+		},
+	"/assets/img/logo-ldn.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/logo-ldn.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
 		},
 	"/assets/img/logo-tef-gold.png": {
 		"ft": 32768,
@@ -609,21 +609,21 @@
 		"opt": 0,
 		"q": 100
 		},
-	"/assets/img/theme-dil/icon-gt-primary.svg": {
+	"/assets/img/theme-ldn/icon-gt-primary.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/assets/img/theme-dil/icon-gt-primary.svg",
+		"oAP": "/assets/img/theme-ldn/icon-gt-primary.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/assets/img/theme-dil/icon-quote-primary.svg": {
+	"/assets/img/theme-ldn/icon-quote-primary.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/assets/img/theme-dil/icon-quote-primary.svg",
+		"oAP": "/assets/img/theme-ldn/icon-quote-primary.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
@@ -1591,6 +1591,19 @@
 		"oS": 2,
 		"sct": 1
 		},
+	"/assets/styles/__vars/_functions.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 4,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/assets/styles/__vars/_functions.css",
+		"oF": 0,
+		"oS": 2,
+		"sct": 1
+		},
 	"/assets/styles/__vars/_grid.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -1747,7 +1760,7 @@
 		"oS": 2,
 		"sct": 1
 		},
-	"/assets/styles/_theme/_dil.scss": {
+	"/assets/styles/_theme/_ldn.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
@@ -1755,7 +1768,7 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/assets/styles/_theme/_dil.css",
+		"oAP": "/assets/styles/_theme/_ldn.css",
 		"oF": 0,
 		"oS": 2,
 		"sct": 1
@@ -1817,25 +1830,25 @@
 		"oS": 2,
 		"sct": 1
 		},
-	"/assets/styles/main-dil.css": {
+	"/assets/styles/main-ldn.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/assets/styles/main-dil-min.css",
+		"oAP": "/assets/styles/main-ldn-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"/assets/styles/main-dil.css.map": {
+	"/assets/styles/main-ldn.css.map": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/assets/styles/main-dil.css.map",
+		"oAP": "/assets/styles/main-ldn.css.map",
 		"oF": 0
 		},
-	"/assets/styles/main-dil.scss": {
+	"/assets/styles/main-ldn.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 4,
@@ -1843,7 +1856,7 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 0,
-		"oAP": "/assets/styles/main-dil.css",
+		"oAP": "/assets/styles/main-ldn.css",
 		"oF": 0,
 		"oS": 2,
 		"sct": 1
@@ -2006,12 +2019,12 @@
 		"oAP": "/components/03-templates/_blank.twig",
 		"oF": 0
 		},
-	"/components/03-templates/_preview--dil.twig": {
+	"/components/03-templates/_preview--ldn.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 1,
-		"oAP": "/components/03-templates/_preview--dil.twig",
+		"oAP": "/components/03-templates/_preview--ldn.twig",
 		"oF": 0
 		},
 	"/components/03-templates/_preview.twig": {
@@ -2038,12 +2051,12 @@
 		"oAP": "/components/03-templates/event-single.twig",
 		"oF": 0
 		},
-	"/components/03-templates/homepage--dil.twig": {
+	"/components/03-templates/homepage--ldn.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/components/03-templates/homepage--dil.twig",
+		"oAP": "/components/03-templates/homepage--ldn.twig",
 		"oF": 0
 		},
 	"/components/03-templates/homepage.config.yml": {
@@ -2110,12 +2123,12 @@
 		"oAP": "/components/_preview-footer.twig",
 		"oF": 0
 		},
-	"/components/_preview-head--dil.twig": {
+	"/components/_preview-head--ldn.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 1,
-		"oAP": "/components/_preview-head--dil.twig",
+		"oAP": "/components/_preview-head--ldn.twig",
 		"oF": 0
 		},
 	"/components/_preview-head.twig": {
@@ -2348,12 +2361,12 @@
 		"oS": 2,
 		"sct": 1
 		},
-	"/components/card/card--blue-dil.twig": {
+	"/components/card/card--blue-ldn.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/components/card/card--blue-dil.twig",
+		"oAP": "/components/card/card--blue-ldn.twig",
 		"oF": 0
 		},
 	"/components/card/card--course-result.twig": {

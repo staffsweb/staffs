@@ -7,7 +7,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 1.5em;
+  font-size: $page-gutter-small*2;
   width: 1em;
   height: 1em;
   padding: 0;
@@ -24,7 +24,7 @@
   }
 
   @media (min-width: $wrap-large-gutter-width) {
-    font-size: 2.5em;
+    font-size: $page-gutter-large*2;
   }
 
   &:before {
@@ -40,18 +40,26 @@
 }
 
 .slick-next {
-  right: -#{$page-gutter-small/1.2};
+  right: -#{$page-gutter-small/1.1};
 
   @media (min-width: $wrap-large-gutter-width) {
     right: -#{$page-gutter-large};
   }
+
+  @media (min-width: $wrap-full-gutter-width) {
+    right: -#{$page-gutter-full};
+  }
 }
 
 .slick-prev {
-  left: -#{$page-gutter-small/1.2};
+  left: -#{$page-gutter-small/1.1};
 
   @media (min-width: $wrap-large-gutter-width) {
     left: -#{$page-gutter-large};
+  }
+
+  @media (min-width: $wrap-full-gutter-width) {
+    left: -#{$page-gutter-full};
   }
 
   &:before {
@@ -80,14 +88,14 @@
 
 .slider--event-cards {
   .slick-slide {
-    margin-right: $grid-gutter;
+    margin: 0 $grid-gutter 0 0;
   }
 }
 
 .accolade-slider {
   &__item {
     text-align: center;
-    margin-right: $grid-gutter-large;
+    margin: 0 $grid-gutter;
   }
 
   &__item-title {
