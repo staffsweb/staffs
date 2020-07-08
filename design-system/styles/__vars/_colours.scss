@@ -65,3 +65,34 @@ $utils-text-colors: (
   'offwhite': $offwhite,
   'offblack': $offblack,
 );
+
+// Component Theme Variants Setup
+// these are used by components' partials to create colour variants
+// they live here (for the time being) so they can be overridden before components are imported for themes (London)
+
+$card-accent-colors: (
+  'red': $red,
+  'pink': $pink,
+  'maroon': $maroon,
+  'slate': $slate,
+  'blue-ldn': $blue--deep-ldn,
+);
+
+$tile-accent-colors: (
+  'red': $red,
+  'pink': $pink,
+  'maroon': $maroon,
+  'slate': $slate,
+  'tef-gold': $gold--tef,
+  'blue-ldn': $blue--deep-ldn,
+);
+
+$title-bg-colors: (
+  'white': 'white',
+  'red': $red,
+  'pink': $pink,
+  'maroon': $maroon,
+  'slate': $slate,
+  'tef-gold': $gold--tef,
+  'blue-ldn': $blue--deep-ldn,
+)

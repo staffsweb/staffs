@@ -71,7 +71,7 @@
           top: $row-padding-y;
           width: 2em;
           height: 2em;
-          background: url('../img/icon-gt-red.svg') no-repeat center center;
+          background: url('#{$image-theme-directory}/icon-gt-primary.svg') no-repeat center center;
           background-size: 0.5em;
         }
       }
@@ -126,7 +126,7 @@
     width: $spacing-4xl;
     height: $spacing-4xl;
     margin-top: 0.1em; // yeah this is a bit of a magic number to get it to align with the closeLevel arrows
-    background: url('../img/icon-x-red.svg') no-repeat center center;
+    background: url('#{$image-theme-directory}/icon-x-primary.svg') no-repeat center center;
     background-size: 1rem;
     cursor: pointer;
   }
@@ -192,7 +192,7 @@
       top: $row-padding-y;
       width: 1em;
       height: 2em;
-      background: url('../img/icon-gt-red.svg') no-repeat center center;
+      background: url('#{$image-theme-directory}/icon-gt-red.svg') no-repeat center center;
       background-size: 0.5em;
       transform: rotate(180deg);
     }
@@ -338,7 +338,7 @@
           top: $row-padding-y;
           width: 2em;
           height: 2em;
-          background: url('../img/icon-gt-red.svg') no-repeat center center;
+          background: url('#{$image-theme-directory}/icon-gt-primary.svg') no-repeat center center;
           background-size: 0.5em;
         }
       }

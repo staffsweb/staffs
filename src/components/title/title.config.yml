@@ -68,3 +68,10 @@ variants:
       background: pink
       text: 'This is a pink highlighted title with a tail'
 
+
+  - name: examples
+    label: "Examples"
+
+  - name: ldn-examples
+    label: "Examples (LDN)"
+    preview: '@preview-ldn'

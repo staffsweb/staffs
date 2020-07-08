@@ -409,13 +409,7 @@
                             
                             <code class="Code Code--lang-SCSS FileBrowser-code">
                                 <pre><span class="hljs-selector-class">.feature-tiles</span> {
-  <span class="hljs-variable">$accent-colors</span>: (
-    <span class="hljs-string">'red'</span>: <span class="hljs-variable">$red</span>,
-    <span class="hljs-string">'pink'</span>: <span class="hljs-variable">$pink</span>,
-    <span class="hljs-string">'maroon'</span>: <span class="hljs-variable">$maroon</span>,
-    <span class="hljs-string">'tef-gold'</span>: <span class="hljs-variable">$gold--tef</span>,
-    <span class="hljs-string">'blue-ldn'</span>: <span class="hljs-variable">$blue--ldn</span>,
-  );
+  <span class="hljs-comment">// $tile-accent-colors: see __vars/colours</span>
 
   <span class="hljs-keyword">@media</span> (min-width: map_get(<span class="hljs-variable">$breakpoint-stages</span>, <span class="hljs-string">'tablet-wide'</span>)) {
     <span class="hljs-keyword">@supports</span> (display: grid) {
@@ -528,7 +522,7 @@
     --<span class="hljs-attribute">background</span>: var(--accent-color);
   }
 
-  <span class="hljs-keyword">@each</span> <span class="hljs-variable">$name</span>, <span class="hljs-variable">$value</span> in <span class="hljs-variable">$accent-colors</span> {
+  <span class="hljs-keyword">@each</span> <span class="hljs-variable">$name</span>, <span class="hljs-variable">$value</span> in <span class="hljs-variable">$tile-accent-colors</span> {
     &amp;__item--accent-#{<span class="hljs-variable">$name</span>} {
       --accent-<span class="hljs-attribute">color</span>: #{<span class="hljs-variable">$value</span>};
     }
@@ -587,7 +581,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">3 KB</span>
+                    <span class="Meta-value">2.9 KB</span>
                 </li>
             </ul>
         </div>

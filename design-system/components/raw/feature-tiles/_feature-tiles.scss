@@ -1,11 +1,5 @@
 .feature-tiles {
-  $accent-colors: (
-    'red': $red,
-    'pink': $pink,
-    'maroon': $maroon,
-    'tef-gold': $gold--tef,
-    'blue-ldn': $blue--ldn,
-  );
+  // $tile-accent-colors: see __vars/colours
 
   @media (min-width: map_get($breakpoint-stages, 'tablet-wide')) {
     @supports (display: grid) {
@@ -118,7 +112,7 @@
     --background: var(--accent-color);
   }
 
-  @each $name, $value in $accent-colors {
+  @each $name, $value in $tile-accent-colors {
     &__item--accent-#{$name} {
       --accent-color: #{$value};
     }

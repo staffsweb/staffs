@@ -1,4 +1,6 @@
 .title {
+  // $title-bg-colors: see __vars/colours
+
   position: relative;
   --background: #{$primary};
   --color: white;
@@ -84,35 +86,16 @@
   }
 }
 
-.title--bg-white {
-  --background: white;
-  --color: black;
+
+@each $name, $value in $title-bg-colors {
+  .title--bg-#{$name} {
+    --background: #{$value};
+    @if ($value == 'white') {
+      // we should probably be using choose-contrast-color($value) in the if here,
+      // but someone wanted $gold--tef text to be white ¯\_(ツ)_/¯
+      --color: black;
+    }
+  }
 }
-
-.title--bg-slate {
-  --background: #{$slate};
-}
-
-.title--bg-red {
-  --background: #{$red};
-}
-
-.title--bg-maroon {
-  --background: #{$maroon};
-}
-
-.title--bg-pink {
-  --background: #{$pink};
-}
-
-.title--bg-tef-gold {
-  --background: #{$gold--tef};
-}
-
-.title--bg-blue-ldn {
-  --background: #{$blue--deep-ldn};
-}
-
-
 
 

@@ -2,10 +2,26 @@
 
 $image-theme-directory: '../img/theme-ldn';
 
-$primary:               $blue--deep-ldn;
-$link-color--hover:     $primary;
-$secondary:             $magenta--ldn;
-$tertiary:              $purple--ldn;
+// REMINDER ONLY
+/*
+$blue--deep-ldn:              $blue--deep-ldn;
+$blue--ldn:                   $blue--ldn;
+$magenta--ldn:                $magenta--ldn;
+$purple--deep-ldn:            $purple--deep-ldn;
+*/
+
+// Theme Colours OVERWRITE:
+
+$primary:                     $blue--deep-ldn;
+$secondary:                   $purple--deep-ldn;
+$tertiary:                    $magenta--ldn;
+
+/// Referencable colours OVERWRITE
+
+$link-color--hover:           $primary;
+
+// Utilities Classes OVERWRITE
+// these are output by the loops in _utils/utils.scss (included by main)
 
 $utils-bg-colors: (
   'primary': $primary,
@@ -25,6 +41,38 @@ $utils-text-colors: (
   'offwhite': $offwhite,
   'offblack': $offblack,
 );
+
+// Component Theme Variants OVERWRITE
+// these are used by components' partials to create colour variants
+// they live here (for the time being) so they can be overridden before components are imported for themes (London)
+
+
+$card-accent-colors: (
+  'blue-ldn': $blue--ldn,
+  'blue-deep-ldn': $blue--deep-ldn,
+  'magenta-ldn': $magenta--ldn,
+  'purple-deep-ldn': $purple--deep-ldn,
+);
+
+$tile-accent-colors: (
+  'blue-ldn': $blue--ldn,
+  'blue-deep-ldn': $blue--deep-ldn,
+  'magenta-ldn': $magenta--ldn,
+  'purple-deep-ldn': $purple--deep-ldn,
+  'tef-gold': $gold--tef,
+);
+
+$title-bg-colors: (
+  'white': 'white',
+  'blue-ldn': $blue--ldn,
+  'blue-deep-ldn': $blue--deep-ldn,
+  'magenta-ldn': $magenta--ldn,
+  'purple-deep-ldn': $purple--deep-ldn,
+  'tef-gold': $gold--tef,
+);
+
+
+// IMPORT COMPONENTS!
 
 @import "_vendor/normalize";
 

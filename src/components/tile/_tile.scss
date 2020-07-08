@@ -1,12 +1,5 @@
 .tile {
-  $accent-colors: (
-    'red': $red,
-    'pink': $pink,
-    'maroon': $maroon,
-    'slate': $slate,
-    'tef-gold': $gold--tef,
-    'blue-ldn': $blue--deep-ldn,
-  );
+  // $tile-accent-colors: see __vars/colours
 
   position: relative;
   display: block;
@@ -57,7 +50,7 @@
     --background: var(--accent-color);
   }
 
-  @each $name, $value in $accent-colors {
+  @each $name, $value in $tile-accent-colors {
     &--accent-#{$name} {
       --accent-color: #{$value};
     }

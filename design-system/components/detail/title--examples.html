@@ -363,6 +363,8 @@
                             
                             <code class="Code Code--lang-SCSS FileBrowser-code">
                                 <pre><span class="hljs-selector-class">.title</span> {
+  <span class="hljs-comment">// $title-bg-colors: see __vars/colours</span>
+
   <span class="hljs-attribute">position</span>: relative;
   --<span class="hljs-attribute">background</span>: #{<span class="hljs-variable">$primary</span>};
   --<span class="hljs-attribute">color</span>: white;
@@ -448,36 +450,17 @@
   }
 }
 
-<span class="hljs-selector-class">.title--bg-white</span> {
-  --<span class="hljs-attribute">background</span>: white;
-  --<span class="hljs-attribute">color</span>: black;
+
+<span class="hljs-keyword">@each</span> <span class="hljs-variable">$name</span>, <span class="hljs-variable">$value</span> in <span class="hljs-variable">$title-bg-colors</span> {
+  <span class="hljs-selector-class">.title--bg-</span>#{<span class="hljs-variable">$name</span>} {
+    --<span class="hljs-attribute">background</span>: #{<span class="hljs-variable">$value</span>};
+    <span class="hljs-keyword">@if</span> (<span class="hljs-variable">$value</span> == <span class="hljs-string">'white'</span>) {
+      <span class="hljs-comment">// we should probably be using choose-contrast-color($value) in the if here,</span>
+      <span class="hljs-comment">// but someone wanted $gold--tef text to be white ¯\_(ツ)_/¯</span>
+      --<span class="hljs-attribute">color</span>: black;
+    }
+  }
 }
-
-<span class="hljs-selector-class">.title--bg-slate</span> {
-  --<span class="hljs-attribute">background</span>: #{<span class="hljs-variable">$slate</span>};
-}
-
-<span class="hljs-selector-class">.title--bg-red</span> {
-  --<span class="hljs-attribute">background</span>: #{<span class="hljs-variable">$red</span>};
-}
-
-<span class="hljs-selector-class">.title--bg-maroon</span> {
-  --<span class="hljs-attribute">background</span>: #{<span class="hljs-variable">$maroon</span>};
-}
-
-<span class="hljs-selector-class">.title--bg-pink</span> {
-  --<span class="hljs-attribute">background</span>: #{<span class="hljs-variable">$pink</span>};
-}
-
-<span class="hljs-selector-class">.title--bg-tef-gold</span> {
-  --<span class="hljs-attribute">background</span>: #{<span class="hljs-variable">$gold--tef</span>};
-}
-
-<span class="hljs-selector-class">.title--bg-blue-ldn</span> {
-  --<span class="hljs-attribute">background</span>: #{<span class="hljs-variable">$blue--deep-ldn</span>};
-}
-
-
 
 
 </pre>

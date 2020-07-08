@@ -1,4 +1,0 @@
-variants:
-  - name: ldn
-    label: "Digital Institute London"
-    preview: '@preview--ldn'

@@ -118,6 +118,10 @@ $megaNav-full-breakpoint: 70rem; // if you change this, you'll need to update th
 }*/
 
 @mixin align-full {
+  // between scrollbars and the body-border on the left,
+  // this doesn't work as well as it should,
+  // consider tweaking, or just close off the wrapper rather than trying to bleed it
+  
   max-width: none;
   width: calc(100vw - #{$body-border-width});
   margin-left: calc(-50vw + 50% + #{$body-border-width/2});
