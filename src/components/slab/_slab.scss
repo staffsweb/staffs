@@ -22,17 +22,12 @@
 
   //--
 
-  &--bg-offwhite {
-    background-color: $offwhite;
-  }
-
-  &--bg-slate {
-    background-color: $slate;
-    color: #fff;
-  }
-
-  &--bg-slate-light {
-    background-color: $slate--light;
-    color: #fff;
+  @each $name, $value in $slab-bg-colors {
+    &--bg-#{$name} {
+      background-color: #{$value};
+      @if (choose-contrast-color($value) == white) {
+        color: white;
+      }
+    }
   }
 }

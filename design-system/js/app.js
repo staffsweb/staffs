@@ -162,6 +162,8 @@
 
         links.removeClass('is-selected');
         $(this).addClass('is-selected');
+
+        $('.js-slider--variable').slick("setPosition", 0); // how did we end up with tabs of sliders?
       })
     });
   };
@@ -249,6 +251,27 @@
           }
         }
       ]
+    });
+
+    $('.js-slider--variable').each(function () {
+      $(this).slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: false,
+        centerMode: true,
+        centerPadding: '10%',
+        adaptiveHeight: true,
+        variableWidth: true,
+        responsive: [
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
     });
 
 

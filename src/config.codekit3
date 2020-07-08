@@ -2071,12 +2071,12 @@
 		"oAP": "/components/03-templates/international-country.twig",
 		"oF": 0
 		},
-	"/components/03-templates/ldn/homepage.twig": {
+	"/components/03-templates/ldn/homepage-ldn.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/components/03-templates/ldn/homepage.twig",
+		"oAP": "/components/03-templates/ldn/homepage-ldn.twig",
 		"oF": 0
 		},
 	"/components/03-templates/ldn/ldn.config.yml": {
@@ -2127,6 +2127,14 @@
 		"oAP": "/components/_preview--ldn-raw.twig",
 		"oF": 0
 		},
+	"/components/_preview--raw.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/components/_preview--raw.twig",
+		"oF": 0
+		},
 	"/components/_preview-footer--ldn.twig": {
 		"cB": 0,
 		"ft": 8192,
@@ -2165,14 +2173,6 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/components/_preview-ldn.twig",
-		"oF": 0
-		},
-	"/components/_preview-raw.twig": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/components/_preview-raw.twig",
 		"oF": 0
 		},
 	"/components/_preview.twig": {
@@ -3076,6 +3076,14 @@
 		"oAP": "/components/slider/slider--event-cards.twig",
 		"oF": 0
 		},
+	"/components/slider/slider--modules.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/slider/slider--modules.twig",
+		"oF": 0
+		},
 	"/components/slider/slider--tiles.twig": {
 		"cB": 0,
 		"ft": 8192,
@@ -3098,6 +3106,35 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/components/slider/slider.twig",
+		"oF": 0
+		},
+	"/components/table/_tables.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 4,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/components/table/_tables.css",
+		"oF": 0,
+		"oS": 2,
+		"sct": 1
+		},
+	"/components/table/table--modules.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/table/table--modules.twig",
+		"oF": 0
+		},
+	"/components/table/table.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/table/table.twig",
 		"oF": 0
 		},
 	"/components/tabs/_tabs.scss": {
@@ -3139,6 +3176,14 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
+		},
+	"/components/tabs/tabs--with-sliders.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/tabs/tabs--with-sliders.twig",
+		"oF": 0
 		},
 	"/components/tabs/tabs.config.yml": {
 		"cB": 0,

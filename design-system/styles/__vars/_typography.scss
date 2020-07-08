@@ -312,15 +312,24 @@ $border-accent-width: $spacing-2xs;
     font-size: 0.9em;
     width: 100%;
     margin: 0 0 $spacing-xl;
-    border: 1px solid #ddd;
+    //border: 1px solid $offwhite;
     border-spacing: 0;
     border-collapse: collapse;
   }
 
   thead {
-    border-bottom: 2px solid $primary;
+    border-bottom: 2px solid $slate;
 
-    td {
+    td, th {
+      background: #fff;
+    }
+  }
+
+  tr {
+    background: rgba($offwhite, 0.5);
+    border-bottom: 1px solid $offwhite;
+
+    &:nth-child(even) {
       background: #fff;
     }
   }
@@ -331,21 +340,11 @@ $border-accent-width: $spacing-2xs;
 
   th {
     background: #fff;
-    color: $primary;
+    color: $slate;
+    font-weight: 500;
   }
 
   td {
-    background: rgba($offwhite, 0.5);
-  }
-
-  tr {
-    border-bottom: 1px solid #ddd;
-
-    &:nth-child(even) {
-      td {
-        background: #fff;
-      }
-    }
   }
 
   //details {

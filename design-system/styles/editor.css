@@ -103,21 +103,19 @@ pre::selection { background: rgba(215, 10, 38, 0.75); color: white; }
 
 code { display: inline-block; line-height: 1.4; font-size: 0.75em; background: rgba(215, 10, 38, 0.05); padding: 0 0.2em; color: #d70a26; border: 1px rgba(215, 10, 38, 0.25) solid; border-radius: 0.2em; }
 
-table { font-size: 0.9em; width: 100%; margin: 0 0 2rem; border: 1px solid #ddd; border-spacing: 0; border-collapse: collapse; }
+table { font-size: 0.9em; width: 100%; margin: 0 0 2rem; border-spacing: 0; border-collapse: collapse; }
 
-thead { border-bottom: 2px solid #d70a26; }
+thead { border-bottom: 2px solid #394851; }
 
-thead td { background: #fff; }
+thead td, thead th { background: #fff; }
+
+tr { background: rgba(241, 241, 241, 0.5); border-bottom: 1px solid #f1f1f1; }
+
+tr:nth-child(even) { background: #fff; }
 
 td, th { padding: 1em; }
 
-th { background: #fff; color: #d70a26; }
-
-td { background: rgba(241, 241, 241, 0.5); }
-
-tr { border-bottom: 1px solid #ddd; }
-
-tr:nth-child(even) td { background: #fff; }
+th { background: #fff; color: #394851; font-weight: 500; }
 
 .accordion__title { margin: 0.75rem 0; padding: 0.5rem; }
 

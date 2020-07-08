@@ -116,3 +116,17 @@
     max-height: 2em;
   }
 }
+
+.slider--modules {
+  // these are sized in JS,
+  // see sliderInit() in app.js for .js-slider--variable
+
+  .slick-slide {
+    max-width: 80vw;
+    margin: 0 $grid-gutter-small;
+
+    @media (min-width: $wrap-width) {
+      max-width: $wrap-width - 15rem;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+table {
+  // there are some base styles set on this element in the 'base-elements' mixin,
+  // in __vars/typography
+}
+
+.table {
+}
+
+.table--modules {
+  thead {
+    td, th {
+      background: $table-accent;
+      color: white;
+    }
+  }
+
+  &__credits {
+    text-align: center;
+    background: $table-accent--light;
+    color: white;
+  }
+}

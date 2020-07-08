@@ -2,7 +2,7 @@
 {% include '@masthead' %}
 
 <main id="main-content" role="main" class="">
-  <div class="slab  slab--bg-slate">
+  <div class="slab  slab--bg-granite">
     <div class="wrap">
 {#      <form>#}
 {#        <input type="text" placeholder="Search courses by keyword"/>#}
@@ -55,7 +55,7 @@
       } %}
 
       <div class="grid  grid--flush  grid-2-cols@mobile-wide  grid-3-cols@tablet-wide  feature-tiles">
-        <div class="feature-tiles__item  js-waypoint">
+        <div class="feature-tiles__item  feature-tiles__item--accent-blue-deep-ldn  js-waypoint">
           <a class="tile" href="">
             <figure class="tile__figure">
               <img src="https://placeimg.com/500/500/people" class="tile__img" alt=""/>
@@ -72,7 +72,7 @@
           </a>
         </div>
 
-        <div class="feature-tiles__item    js-waypoint">
+        <div class="feature-tiles__item  feature-tiles__item--accent-blue-ldn  js-waypoint">
           <a class="tile" href="">
             <figure class="tile__figure">
               <img src="https://placeimg.com/500/500/tech" class="tile__img" alt=""/>
@@ -89,7 +89,7 @@
           </a>
         </div>
 
-        <div class="feature-tiles__item    js-waypoint">
+        <div class="feature-tiles__item  feature-tiles__item--accent-magenta-ldn  js-waypoint">
           <a class="tile" href="">
             <figure class="tile__figure">
               <img src="https://placeimg.com/500/500/architecture" class="tile__img" alt=""/>
@@ -106,7 +106,7 @@
           </a>
         </div>
 
-        <div class="feature-tiles__item    js-waypoint">
+        <div class="feature-tiles__item  feature-tiles__item--accent-purple-deep-ldn  js-waypoint">
           <a class="tile" href="">
             <figure class="tile__figure">
               <img src="https://placeimg.com/500/500/tech" class="tile__img" alt=""/>
@@ -212,28 +212,7 @@
 
       <div class="grid  grid-3-cols@tablet-wide">
         <div>
-
-          <div class="card  card--event  card--flex ">
-            <figure class="card__figure">
-              <img src="https://placeimg.com/720/360" alt=""/>
-            </figure>
-
-            <div class="card__date">
-              <span class="card__day">28</span>
-              <span class="card__month">September</span>
-            </div>
-
-            <div class="card__content">
-              <div class="title">
-                <h2 class="h6  title__highlight"><a href="" class="">{{ placeholderHeadline2 }}</a></h2>
-              </div>
-              <p>{{ placeholderPara1 }}</p>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div class="card  card--event  card--flex ">
+          <div class="card  card--event  card--flex  card--purple-deep-ldn">
             <figure class="card__figure">
               <img src="https://placeimg.com/720/360" alt=""/>
             </figure>
@@ -255,7 +234,7 @@
         </div>
 
         <div>
-          <div class="card  card--event  card--flex  " href="">
+          <div class="card  card--event  card--flex  card--magenta-ldn" href="">
             <div class="card__date">
               <span class="card__day">30</span>
               <span class="card__month">September</span>
@@ -268,6 +247,26 @@
                 </div>
               </a>
               <p>Example without a figure image.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="card  card--event  card--flex  ">
+            <figure class="card__figure">
+              <img src="https://placeimg.com/720/360" alt=""/>
+            </figure>
+
+            <div class="card__date">
+              <span class="card__day">28</span>
+              <span class="card__month">September</span>
+            </div>
+
+            <div class="card__content">
+              <div class="title">
+                <h2 class="h6  title__highlight"><a href="" class="">{{ placeholderHeadline2 }}</a></h2>
+              </div>
+              <p>{{ placeholderPara1 }}</p>
             </div>
           </div>
         </div>
@@ -323,7 +322,7 @@
       <div class="quote-banner__flexContainer">
 
         <div class="quote-banner__quoteContainer">
-          <div class="card  card--testimonial  ">
+          <div class="card  card--testimonial  card--purple-deep-ldn">
             <div class="card__content">
               <blockquote class="blockquote--large">
                 <q class="blockquote__title">Since coming to Staffordshire Uni I’ve become much more creative and confident in myself and my abilities</q>
@@ -347,4 +346,5 @@
 
 </main>
 
+{% include '@slider--accolades' %}
 {% include '@page-footer' %}

@@ -212,21 +212,19 @@ pre::selection { background: rgba(215, 10, 38, 0.75); color: white; }
 
 code { display: inline-block; line-height: 1.4; font-size: 0.75em; background: rgba(215, 10, 38, 0.05); padding: 0 0.2em; color: #d70a26; border: 1px rgba(215, 10, 38, 0.25) solid; border-radius: 0.2em; }
 
-table { font-size: 0.9em; width: 100%; margin: 0 0 2rem; border: 1px solid #ddd; border-spacing: 0; border-collapse: collapse; }
+table { font-size: 0.9em; width: 100%; margin: 0 0 2rem; border-spacing: 0; border-collapse: collapse; }
 
-thead { border-bottom: 2px solid #d70a26; }
+thead { border-bottom: 2px solid #394851; }
 
-thead td { background: #fff; }
+thead td, thead th { background: #fff; }
+
+tr { background: rgba(241, 241, 241, 0.5); border-bottom: 1px solid #f1f1f1; }
+
+tr:nth-child(even) { background: #fff; }
 
 td, th { padding: 1em; }
 
-th { background: #fff; color: #d70a26; }
-
-td { background: rgba(241, 241, 241, 0.5); }
-
-tr { border-bottom: 1px solid #ddd; }
-
-tr:nth-child(even) td { background: #fff; }
+th { background: #fff; color: #394851; font-weight: 500; }
 
 .accordion__title { margin: 0.75rem 0; padding: 0.5rem; }
 
@@ -914,9 +912,9 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .slab--bg-offwhite { background-color: #f1f1f1; }
 
-.slab--bg-slate { background-color: #394851; color: #fff; }
+.slab--bg-slate { background-color: #394851; color: white; }
 
-.slab--bg-slate-light { background-color: #616d74; color: #fff; }
+.slab--bg-slate-light { background-color: #616d74; color: white; }
 
 /* Slider */
 .slick-slider { position: relative; display: block; box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
@@ -988,6 +986,14 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 .accolade-slider__item-description { min-height: 2.8em; margin-bottom: 2rem; font-size: 0.875rem; line-height: 1.4; }
 
 .accolade-slider__item-img { margin: auto; width: auto; max-height: 2em; }
+
+.slider--modules .slick-slide { max-width: 80vw; margin: 0 0.75rem; }
+
+@media (min-width: 86rem) { .slider--modules .slick-slide { max-width: 71rem; } }
+
+.table--modules thead td, .table--modules thead th { background: #394851; color: white; }
+
+.table--modules__credits { text-align: center; background: #616d74; color: white; }
 
 .tabs { margin-bottom: 2rem; border-bottom: 0.25rem solid #394851; padding-bottom: 0.75rem; }
 
