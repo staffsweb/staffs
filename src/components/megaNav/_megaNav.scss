@@ -61,25 +61,27 @@
       &:hover {
         text-decoration: underline;
       }
-
-      &.has-children {
-        &:after {
-          content: '';
-          position: absolute;
-          display: block;
-          right: 0;
-          top: $row-padding-y;
-          width: 2em;
-          height: 2em;
-          background: url('#{$image-theme-directory}/icon-gt-primary.svg') no-repeat center center;
-          background-size: 0.5em;
-        }
-      }
     }
 
     &:last-child {
       > a {
         border-bottom: 0;
+      }
+    }
+  }
+
+  .has-children {
+    > a {
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        right: 0;
+        top: $row-padding-y;
+        width: 2em;
+        height: 2em;
+        background: url('#{$image-theme-directory}/icon-gt-primary.svg') no-repeat center center;
+        background-size: 0.5em;
       }
     }
   }
@@ -260,6 +262,14 @@
       }
 
       @media (min-width: $megaNav-full-breakpoint) {
+        &.has-children {
+          > a {
+            &:after {
+              display: none;
+            }
+          }
+        }
+
         &.is-expanded {
           > a {
             background: white;
@@ -289,12 +299,6 @@
         padding: $spacing-sm $spacing-lg;
         color: white;
         border: 0;
-
-        &.has-children {
-          &:after {
-            display: none;
-          }
-        }
       }
     }
   }
@@ -328,8 +332,10 @@
     &-link {
       position: relative;
       font-weight: 500;
+    }
 
-      &.has-children {
+    &.has-children {
+      > a {
         &:after {
           content: '';
           position: absolute;
@@ -365,17 +371,19 @@
         column-gap: $spacing-xl;
       }
 
+      &-item.has-children {
+        > a {
+          &:after {
+            display: none;
+          }
+        }
+      }
+
       .megaNav__thirdLevel-link {
         // increase specificity to override > li > a' behaviour
         padding: 0;
         border: 0;
         margin: 0 0 $spacing-xs;
-
-        &.has-children {
-          &:after {
-            display: none;
-          }
-        }
       }
     }
   }
