@@ -1063,6 +1063,21 @@
     <span class="hljs-attribute">color</span>: white;
     <span class="hljs-attribute">z-index</span>: <span class="hljs-number">0</span>;
 
+    <span class="hljs-selector-tag">form</span> {
+      <span class="hljs-attribute">display</span>: flex;
+      <span class="hljs-attribute">flex-wrap</span>: wrap;
+      <span class="hljs-attribute">margin-left</span>: -#{<span class="hljs-variable">$grid-gutter-small</span>};
+      <span class="hljs-attribute">margin-right</span>: -#{<span class="hljs-variable">$grid-gutter-small</span>};
+
+      <span class="hljs-selector-tag">input</span><span class="hljs-selector-attr">[type=text]</span>, <span class="hljs-selector-class">.button</span> {
+        <span class="hljs-attribute">margin-left</span>: #{<span class="hljs-variable">$grid-gutter-small</span>};
+        <span class="hljs-attribute">margin-right</span>: #{<span class="hljs-variable">$grid-gutter-small</span>};
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">15em</span>;
+        <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-variable">$spacing-2xs</span>;
+        <span class="hljs-attribute">box-sizing</span>: border-box;
+      }
+    }
+
     <span class="hljs-keyword">@media</span> (min-width: <span class="hljs-variable">$megaNav-full-breakpoint</span>) {
       <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
       <span class="hljs-attribute">text-align</span>: center;
@@ -1293,7 +1308,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">9 KB</span>
+                    <span class="Meta-value">9.4 KB</span>
                 </li>
             </ul>
         </div>

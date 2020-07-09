@@ -126,7 +126,7 @@
       $(siblings).removeClass('is-expanded')
 
       $(item).addClass('is-expanded');
-      
+
       $('.megaNav__topLevel').scrollTop(0);
     }
 

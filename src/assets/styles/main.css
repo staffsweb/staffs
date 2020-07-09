@@ -796,6 +796,10 @@ a.feature-link:hover .feature-link__figure { opacity: 0.9; }
 
 .megaNav__levelFooter { position: relative; margin-left: -1.5rem; padding: 0.75rem; padding-left: 1.5rem; background: #616d74; color: white; z-index: 0; }
 
+.megaNav__levelFooter form { display: flex; flex-wrap: wrap; margin-left: -0.75rem; margin-right: -0.75rem; }
+
+.megaNav__levelFooter form input[type=text], .megaNav__levelFooter form .button { margin-left: 0.75rem; margin-right: 0.75rem; flex: 1 1 15em; margin-bottom: 0.25rem; box-sizing: border-box; }
+
 @media (min-width: 70rem) { .megaNav__levelFooter { width: 100%; text-align: center; margin: 0; padding: 0.75rem 0.75rem 0; z-index: 2; } .megaNav__levelFooter p, .megaNav__levelFooter form { margin: 0.75rem 1rem; display: inline-block; } }
 
 .megaNav__topLevel { position: relative; margin: 0; height: 100vh; background: #e8ebed; padding: 0 0 1.5rem 1.5rem; margin-left: 4rem; border-left: 1px solid #bebfc1; box-sizing: border-box; overflow: hidden; overflow-y: auto; overflow-scrolling: touch; }
