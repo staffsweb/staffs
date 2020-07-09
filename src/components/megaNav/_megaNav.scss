@@ -203,6 +203,17 @@
   &__levelList {
   }
 
+  &__levelMobileFooter {
+
+    .megaNav__closeLevel {
+      text-align: left;
+    }
+
+    @media (min-width: $megaNav-full-breakpoint) {
+      display: none;
+    }
+  }
+
   &__levelFooter {
     position: relative;
     margin-left: -$spacing-lg;
@@ -252,13 +263,6 @@
     &-item {
       > a {
         font-weight: 500;
-
-        @media (min-width: $megaNav-full-breakpoint) {
-          &:hover {
-            box-shadow: inset 0 $spacing-2xs 0 $primary;
-            text-decoration: none !important;
-          }
-        }
       }
 
       @media (min-width: $megaNav-full-breakpoint) {
@@ -274,11 +278,12 @@
           > a {
             background: white;
             color: black;
-            box-shadow: inset 0 $spacing-2xs 0 $primary;
+          }
+        }
 
-            &:hover {
-              text-decoration: underline !important;
-            }
+        &.is-active {
+          > a {
+            box-shadow: inset 0 $spacing-2xs 0 $primary;
           }
         }
       }

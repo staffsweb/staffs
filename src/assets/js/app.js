@@ -107,6 +107,7 @@
         $('.megaNav__closeLevel', megaNav).on('click', function (e) {
           e.preventDefault();
           $(this).closest('.is-expanded').removeClass('is-expanded');
+          $('.megaNav__topLevel').scrollTop(0);
         });
       }
     }
@@ -125,6 +126,8 @@
       $(siblings).removeClass('is-expanded')
 
       $(item).addClass('is-expanded');
+      
+      $('.megaNav__topLevel').scrollTop(0);
     }
 
 
