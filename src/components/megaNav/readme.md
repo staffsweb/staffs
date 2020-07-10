@@ -1,0 +1,1 @@
+The <code>.megaNav__topLevel-item</code> can have a class of <code>is-active</code> to apply its 'active' state (top red border)

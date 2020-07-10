@@ -118,11 +118,11 @@
       let siblings = item.siblings();
 
       $('.is-expanded', siblings).removeClass('is-expanded');
-      $(siblings).removeClass('is-expanded')
+      $(siblings).removeClass('is-expanded');
+      
+      $('.megaNav__topLevel').scrollTop(0);
 
       $(item).addClass('is-expanded');
-
-      $('.megaNav__topLevel').scrollTop(0);
     }
 
 
