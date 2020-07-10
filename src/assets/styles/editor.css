@@ -103,11 +103,11 @@ pre::selection { background: rgba(215, 10, 38, 0.75); color: white; }
 
 code { display: inline-block; line-height: 1.4; font-size: 0.75em; background: rgba(215, 10, 38, 0.05); padding: 0 0.2em; color: #d70a26; border: 1px rgba(215, 10, 38, 0.25) solid; border-radius: 0.2em; }
 
-table { font-size: 0.9em; width: 100%; margin: 0 0 2rem; border-spacing: 0; border-collapse: collapse; }
+table { font-size: 0.9em; width: 100%; margin: 0 0 2rem; border-spacing: 0; border-collapse: collapse; line-height: 1.4; }
 
 thead { border-bottom: 2px solid #394851; }
 
-thead td, thead th { background: #fff; }
+thead td, thead th { background: #fff; vertical-align: bottom; }
 
 tr { background: rgba(241, 241, 241, 0.5); border-bottom: 1px solid #f1f1f1; }
 
@@ -116,6 +116,8 @@ tr:nth-child(even) { background: #fff; }
 td, th { padding: 1em; }
 
 th { background: #fff; color: #394851; font-weight: 500; }
+
+td { vertical-align: middle; }
 
 .accordion__title { margin: 0.75rem 0; padding: 0.5rem; }
 
@@ -177,15 +179,17 @@ a.tag:hover { text-decoration: underline; color: black; }
 
 .button:hover, .button:focus, .button:active { color: white; background-position: 0% bottom; }
 
-.button--big { font-size: 1.5em; }
+.button--xs { font-size: 0.75em; }
 
-.button--small { font-size: 0.75em; }
+.button--sm { font-size: 0.875em; }
 
-.button--block { display: block; width: 100%; }
+.button--lg { font-size: 1.2em; }
 
-.button--pointy { text-align: left; }
+.button--xl { font-size: 1.5em; }
 
-.button--pointy:after { content: '▶'; padding-left: 0.25em; transition: transform 200ms; }
+.button--block { display: block; width: 100%; text-align: center; }
+
+.button--pointy:after { content: '▶'; padding-left: 0.5em; transition: transform 200ms; }
 
 .button--caps { text-transform: uppercase; }
 

@@ -87,11 +87,6 @@
           },
           timeout: 250
         });
-
-        // $(document).on('click', '#megaNav.is-largescreen .has-children', function (e) {
-        //   e.preventDefault();
-        //   expandChildren($(this));
-        // });
       }
       else {
         $('#megaNav.is-largescreen, .megaNav__topLevel-link.has-children, .megaNav__secondLevel-link.has-children, #megaNav.is-smallscreen .has-children').unbind();

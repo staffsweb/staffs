@@ -33,25 +33,34 @@
   }
 }
 
-@mixin button--big {
-  @include typescale('xl', 'em');
+
+
+@mixin button--xs {
+  @include typescale('xs', 'em');
 }
 
-@mixin button--small {
-  @include typescale('xs', 'em');
+@mixin button--sm {
+  @include typescale('sm', 'em');
+}
+
+@mixin button--lg {
+  @include typescale('lg', 'em');
+}
+
+@mixin button--xl {
+  @include typescale('xl', 'em');
 }
 
 @mixin button--block {
   display: block;
   width: 100%;
+  text-align: center;
 }
 
 @mixin button--pointy {
-  text-align: left;
-
   &:after {
     content: '▶';
-    padding-left: 0.25em;
+    padding-left: 0.5em;
     transition: transform 200ms;
   }
 }

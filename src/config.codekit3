@@ -3121,12 +3121,28 @@
 		"oS": 2,
 		"sct": 1
 		},
+	"/components/table/table--apply.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/table/table--apply.twig",
+		"oF": 0
+		},
 	"/components/table/table--modules.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/components/table/table--modules.twig",
+		"oF": 0
+		},
+	"/components/table/table.config.yml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/table/table.config.yml",
 		"oF": 0
 		},
 	"/components/table/table.twig": {

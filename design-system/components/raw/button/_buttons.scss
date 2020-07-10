@@ -5,12 +5,20 @@
 
   // Sizes
 
-  &--big {
-    @include button--big;
+  &--xs {
+    @include button--xs;
   }
 
-  &--small {
-    @include button--small;
+  &--sm {
+    @include button--sm;
+  }
+
+  &--lg {
+    @include button--lg;
+  }
+
+  &--xl {
+    @include button--xl;
   }
 
   // Layout

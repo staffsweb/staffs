@@ -9,17 +9,30 @@ context:
 handle: button
 
 variants:
-  - name: big
-    label: "Size: Big"
+  - name: xs
+    label: "Size: XS"
     context:
-      classes: ['button--big']
-      text: 'A big button'
+      classes: ['button--xs']
+      text: 'An teeny tiny button'
 
   - name: small
     label: "Size: Small"
     context:
-      classes: ['button--small']
+      classes: ['button--sm']
       text: 'Smol button'
+
+  - name: large
+    label: "Size: Large"
+    context:
+      classes: ['button--lg']
+      text: 'A big button'
+
+  - name: xl
+    label: "Size: XL"
+    context:
+      classes: ['button--xl']
+      text: 'Huge button!'
+    notes: "<strong>Avoid:</strong> There's probably never any need for this, it really is probably too big for almost all applications"
 
   - name: pointy
     label: "Style: Pointy"

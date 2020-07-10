@@ -72,7 +72,7 @@ fractal.components.set('default.context', {
 const myCustomisedTheme = mandelbrot({
   "skin": 'white',
   "nav": ["docs", "components"],
-  "panels": ["html", "view", "resources", "info", "notes"]
+  "panels": ["notes", "html", "view", "resources", "info"]
 });
 fractal.web.theme(myCustomisedTheme);
 

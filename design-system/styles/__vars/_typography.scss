@@ -315,6 +315,7 @@ $border-accent-width: $spacing-2xs;
     //border: 1px solid $offwhite;
     border-spacing: 0;
     border-collapse: collapse;
+    @include line-height('normal');
   }
 
   thead {
@@ -322,6 +323,7 @@ $border-accent-width: $spacing-2xs;
 
     td, th {
       background: #fff;
+      vertical-align: bottom;
     }
   }
 
@@ -345,6 +347,7 @@ $border-accent-width: $spacing-2xs;
   }
 
   td {
+    vertical-align: middle;
   }
 
   //details {

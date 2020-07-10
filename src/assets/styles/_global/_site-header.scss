@@ -25,13 +25,13 @@
   .site-logo {
     width: 20%;
     max-width: 8.5em;
-    max-height: 3.75em;
+    max-height: 3.5em;
   }
 
   &.has-expanded-nav {
     .site-logo {
       img {
-        max-height: 3.75em;
+        max-height: 3.5em;
       }
     }
   }
