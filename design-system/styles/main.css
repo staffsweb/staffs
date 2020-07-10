@@ -708,6 +708,28 @@ a.feature-link:hover .feature-link__figure { opacity: 0.9; }
 
 .icon--youtube-white { background-image: url("../img/icon-youtube-white.svg"); }
 
+.iconBox { display: flex; flex-wrap: wrap; align-items: flex-start; padding: calc(1rem + 2.5%) 0.5rem; margin: 0 0 1rem; background: #394851; color: white; }
+
+.iconBox__icon { flex: 1 1 3rem; padding: 0 calc(0.5rem + 1.25%); box-sizing: border-box; font-size: 2rem; text-align: center; }
+
+.iconBox__icon .icon, .iconBox__icon img { display: block; margin: auto auto 1.5rem; }
+
+.iconBox__content { flex: 1 1 80%; padding: 0 calc(0.5rem + 1.25%); box-sizing: border-box; }
+
+.iconBox__content > :first-child { margin-top: 0; }
+
+.iconBox__content > :last-child { margin-bottom: 0; }
+
+.iconBox__title { margin: 0 0 0.75rem; opacity: 0.75; }
+
+.iconBox--facebook { background: #3b5998; color: white; }
+
+.iconBox--twitter { background: #1da1f2; color: white; }
+
+a.iconBox:hover { color: white; }
+
+a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
+
 .list--unbulleted, .list--unstyled { list-style: none; padding-left: 0; }
 
 .list--inline { padding: 0; }
@@ -840,7 +862,7 @@ a.feature-link:hover .feature-link__figure { opacity: 0.9; }
 
 .meta--inline-dd dd { display: inline; margin-right: 0.5rem; }
 
-.meta--inline-dd dd:before { content: '•'; margin-right: 0.5rem; font-weight: bold; color: #ffd91b; }
+.meta--inline-dd dd:before { content: '•'; margin-right: 0.5rem; font-weight: bold; color: #970048; }
 
 .meta--inline-dd dd:first-of-type:before { display: none; }
 

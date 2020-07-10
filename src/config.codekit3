@@ -141,6 +141,16 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/assets/img/icon-clock-white.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/icon-clock-white.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/assets/img/icon-clock.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -2621,6 +2631,35 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/components/feature-tiles/feature-tiles.twig",
+		"oF": 0
+		},
+	"/components/iconBox/_iconBox.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 4,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/components/iconBox/_iconBox.css",
+		"oF": 0,
+		"oS": 2,
+		"sct": 1
+		},
+	"/components/iconBox/iconbox.config.yml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/iconBox/iconbox.config.yml",
+		"oF": 0
+		},
+	"/components/iconBox/iconBox.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/iconBox/iconBox.twig",
 		"oF": 0
 		},
 	"/components/icons/_icons.scss": {

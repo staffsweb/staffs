@@ -45,6 +45,7 @@ variants:
     context:
       classes: ['button--caps']
       text: 'Button with uppercase/caps: note this poses accessibility concerns - avoid long copy'
+    notes: '<strong>NB:</strong> This poses accessibility concerns - avoid long copy'
 
 
   - name: slate

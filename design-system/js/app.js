@@ -173,14 +173,14 @@
       infinite: false,
       responsive: [
         {
-          breakpoint: 900,
+          breakpoint: 1000,
           settings: {
             slidesToShow: 2.1,
             slidesToScroll: 2
           }
         },
         {
-          breakpoint: 600,
+          breakpoint: 700,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
