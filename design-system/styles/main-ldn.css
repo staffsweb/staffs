@@ -712,7 +712,7 @@ a.feature-link:hover .feature-link__figure { opacity: 0.9; }
 
 .icon--youtube-white { background-image: url("../img/icon-youtube-white.svg"); }
 
-.iconBox { display: flex; flex-wrap: wrap; align-items: flex-start; padding: calc(1rem + 2.5%) 0.5rem; margin: 0 0 1rem; background: #394851; color: white; }
+.iconBox { display: flex; flex-wrap: wrap; align-items: flex-start; padding: calc(1rem + 2.5%) 0.5rem; margin: 0 0 1rem; background: #394851; color: white; text-decoration: none; }
 
 .iconBox__icon { flex: 1 1 3rem; padding: 0 calc(0.5rem + 1.25%); box-sizing: border-box; font-size: 2rem; text-align: center; }
 
