@@ -426,7 +426,7 @@ section:first-child { margin-top: 0; }
 
 .toggle-search-site { background: url("../img/icon-magnify-white.svg") center 0.125rem no-repeat; background-size: 1.5rem 1.5rem; }
 
-@media (min-width: 70rem) { .toggle-search-site { height: 2rem; order: 3; } .toggle-search-site__label { display: block; position: absolute; left: -9999em; clip: rect(0 0 0 0); } }
+@media (min-width: 70rem) { .toggle-search-site { background-position: center center; height: 2rem; order: 3; } .toggle-search-site__label { display: block; position: absolute; left: -9999em; clip: rect(0 0 0 0); } }
 
 .toggle-megaNav { background: url("../img/icon-hamburger-white.svg") center 0.125rem no-repeat; background-size: 1.5rem 1.5rem; }
 

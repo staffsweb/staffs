@@ -79,6 +79,7 @@
   background-size: $spacing-lg $spacing-lg;
 
   @media (min-width: $megaNav-full-breakpoint) {
+    background-position: center center;
     height: $spacing-xl;
     order: 3;
 
