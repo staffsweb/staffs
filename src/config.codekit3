@@ -1002,7 +1002,7 @@
 		"oS": 2,
 		"sct": 1
 		},
-	"/assets/js/vendor/smartResize.js": {
+	"/assets/js/vendor/smartresize.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 1,
@@ -2704,7 +2704,7 @@
 		"oS": 2,
 		"sct": 1
 		},
-	"/components/iconBox/iconBox.config.yml": {
+	"/components/iconBox/iconbox.config.yml": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
