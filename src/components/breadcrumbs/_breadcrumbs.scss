@@ -5,6 +5,10 @@
   margin: 0 0 $spacing-xs;
   padding: $spacing-xs $spacing-sm;
 
+  &.has-solid-bg {
+    background: black;
+  }
+
   ul {
     margin: 0;
     padding: 0;

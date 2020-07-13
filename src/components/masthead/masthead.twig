@@ -3,26 +3,24 @@
     {% if bgImg %}
     {{ bgImg }}
     {% else %}
-      <img src="{{ '/img/masthead.jpg' | path }}" />
+      <img src="{{ '/img/masthead' ~ random(2) ~ '.jpg' | path }}" />
     {% endif %}
   </div>
   <div class="wrap">
     {% include '@breadcrumbs' %}
+
     {% include '@title' with {
-      text: 'Shortlisted for "University of the year"',
+      text: 'Page Title',
       modifiers: ['has-tail'],
       textElement: 'h1',
-      textElementStyle: 'h2',
+      textElementStyle: 'h1',
       animate: true
     } %}
     {% include '@title' with {
-      text: '- The Times and The Sunday Times Good University Guide 2020',
+      text: '(If long, consider using h2 textElementStyle)',
       modifiers: ['bg-white', 'has-tail'],
       textElement: 'h6',
       animate: true
-    } %}
-    {% include '@button' with {
-      text: 'Book an open day',
     } %}
   </div>
 </div>

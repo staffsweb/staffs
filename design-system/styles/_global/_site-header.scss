@@ -9,6 +9,10 @@
   padding: 0;
   margin: 0;
 
+  &.has-solid-bg {
+    background: black;
+  }
+
   @media (min-width: $body-border-breakpoint) {
     left: $body-border-width--wide;
   }

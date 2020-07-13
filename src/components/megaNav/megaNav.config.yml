@@ -6,3 +6,4 @@ handle: 'megaNav'
 variants:
   - name: ldn
     label: "LDN"
+    preview: '@preview--ldn-raw'

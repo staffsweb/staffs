@@ -1,5 +1,9 @@
 {% include '@meganav' %}
-<div class="masthead" style="background-image: url('../../img/masthead.jpg');">
+<div class="masthead">
+  <div class="masthead__bg">
+    <img src="{{ '/img/masthead' ~ random(1) ~ '.jpg' | path }}" />
+  </div>
+
   <div class="wrap">
     {% include '@breadcrumbs' %}
     {% include '@title' with {
