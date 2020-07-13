@@ -90,9 +90,15 @@
           },
           timeout: 200
         });
+
+        $('.has-expanded-nav').on('click', function () {
+          $('.is-expanded', megaNav).removeClass('is-expanded');
+          $('body').removeClass('has-expanded-nav');
+        });
+
       }
       else {
-        $('#megaNav.is-largescreen, .megaNav__topLevel-item.has-children, .megaNav__secondLevel-item.has-children, #megaNav.is-smallscreen .has-children > a').unbind();
+        $('body, #megaNav.is-largescreen, .megaNav__topLevel-item.has-children, .megaNav__secondLevel-item.has-children, #megaNav.is-smallscreen .has-children > a').unbind();
 
         megaNav.removeClass('is-largescreen');
         megaNav.addClass('is-smallscreen');

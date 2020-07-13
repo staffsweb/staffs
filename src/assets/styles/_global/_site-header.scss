@@ -32,11 +32,14 @@
     }
   }
 
-  @at-root .has-expanded-nav .header-site {
-    .site-logo {
-      img {
-        height: 3.5em;
-        //opacity: 0;
+  @at-root .has-expanded-nav {
+
+    .header-site {
+      .site-logo {
+        img {
+          height: 3.5em;
+          //opacity: 0;
+        }
       }
     }
   }
