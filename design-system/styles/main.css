@@ -408,15 +408,29 @@ section:first-child { margin-top: 0; }
 
 @media (min-width: 40rem) { .header-site { left: 1rem; } }
 
-.header-site__flexContainer { display: flex; justify-content: space-between; }
+.header-site__flexContainer { display: flex; justify-content: flex-end; }
 
 @media (min-width: 70rem) { .header-site__flexContainer { position: relative; } }
 
-.header-site .site-logo { width: 20%; max-width: 8.5em; height: 3.5em; }
+.header-site .site-logo { justify-self: flex-start; margin-right: auto; width: 25%; max-width: 8.5em; height: 3.5em; }
 
 .header-site .site-logo img { transition: all 200ms; }
 
 .has-expanded-nav .header-site .site-logo img { height: 3.5em; }
+
+.toggle-megaNav, .toggle-search-site { display: block; justify-self: flex-end; align-self: center; height: 3rem; width: 3rem; margin: 0.75rem 0 0.75rem 0.75rem; padding: 0; border: 0; z-index: 2; cursor: pointer; color: white; }
+
+.toggle-megaNav.is-toggled, .toggle-search-site.is-toggled { opacity: 0.5; }
+
+.toggle-megaNav__label, .toggle-search-site__label { display: block; text-align: center; font-size: 0.6875rem; padding-top: 1.5rem; }
+
+.toggle-search-site { background: url("../img/icon-magnify-white.svg") center 0.125rem no-repeat; background-size: 1.5rem 1.5rem; }
+
+@media (min-width: 70rem) { .toggle-search-site { height: 2rem; order: 3; } .toggle-search-site__label { display: block; position: absolute; left: -9999em; clip: rect(0 0 0 0); } }
+
+.toggle-megaNav { background: url("../img/icon-hamburger-white.svg") center 0.125rem no-repeat; background-size: 1.5rem 1.5rem; }
+
+@media (min-width: 70rem) { .toggle-megaNav { display: none; } }
 
 .footer-site { background: #394851; color: #fff; clear: both; position: relative; padding: 0 0 8rem; }
 
@@ -857,12 +871,6 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 .megaNav__secondLevel.has-children > a:after { content: ''; position: absolute; display: block; right: 0; top: 0.75em; width: 2em; height: 2em; background: url("../img//icon-gt-primary.svg") no-repeat center center; background-size: 0.5em; }
 
 @media (min-width: 70rem) { .megaNav__thirdLevel { font-size: 0.85em; left: 100%; right: -300%; top: 0; bottom: 0; background: white; padding: 2rem; max-height: 100%; overflow: auto; box-sizing: border-box; } .megaNav__thirdLevel-list { -webkit-columns: 2; -moz-columns: 2; columns: 2; -webkit-column-gap: 2rem; -moz-column-gap: 2rem; column-gap: 2rem; } .megaNav__thirdLevel-item.has-children > a:after { display: none; } .megaNav__thirdLevel .megaNav__thirdLevel-link { padding: 0; border: 0; margin: 0 0 0.5rem; } }
-
-.toggle-megaNav { display: block; height: 3rem; width: 3rem; margin: 0.75rem 0 0.75rem 0.75rem; padding: 0; border: 0; background: url("../img/icon-hamburger-white.svg") center center no-repeat; background-size: 2rem 2rem; z-index: 2; }
-
-.toggle-megaNav.is-toggled { opacity: 0.5; }
-
-@media (min-width: 70rem) { .toggle-megaNav { display: none; } }
 
 .meta { line-height: 1.4; }
 

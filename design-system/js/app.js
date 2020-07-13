@@ -91,7 +91,7 @@
           timeout: 200
         });
 
-        $('.has-expanded-nav').on('click', function () { 
+        $('.has-expanded-nav').on('click', function () {
           $('.is-expanded', megaNav).removeClass('is-expanded');
           $('body').removeClass('has-expanded-nav');
         });

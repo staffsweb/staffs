@@ -15,7 +15,7 @@
 
   &__flexContainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 
     @media (min-width: $megaNav-full-breakpoint) {
       position: relative;
@@ -23,7 +23,9 @@
   }
 
   .site-logo {
-    width: 20%;
+    justify-self: flex-start;
+    margin-right: auto;
+    width: 25%;
     max-width: 8.5em;
     height: 3.5em;
 
@@ -42,5 +44,58 @@
         }
       }
     }
+  }
+}
+
+
+.toggle-megaNav,
+.toggle-search-site {
+  display: block;
+  justify-self: flex-end;
+  align-self: center;
+  height: $spacing-3xl;
+  width: $spacing-3xl;
+  margin: $spacing-sm 0 $spacing-sm $spacing-sm;
+  padding: 0;
+  border: 0;
+  z-index: 2;
+  cursor: pointer;
+  color: white;
+
+  &.is-toggled {
+    opacity: 0.5;
+  }
+
+  &__label {
+    display: block;
+    text-align: center;
+    @include typescale('2xs');
+    padding-top: $spacing-lg;
+  }
+}
+
+.toggle-search-site {
+  background: url('../img/icon-magnify-white.svg') center $spacing-3xs no-repeat;
+  background-size: $spacing-lg $spacing-lg;
+
+  @media (min-width: $megaNav-full-breakpoint) {
+    height: $spacing-xl;
+    order: 3;
+
+    &__label {
+      display: block;
+      position: absolute;
+      left: -9999em;
+      clip: rect(0 0 0 0);
+    }
+  }
+}
+
+.toggle-megaNav {
+  background: url('../img/icon-hamburger-white.svg') center $spacing-3xs no-repeat;
+  background-size: $spacing-lg $spacing-lg;
+
+  @media (min-width: $megaNav-full-breakpoint) {
+    display: none;
   }
 }

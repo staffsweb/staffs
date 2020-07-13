@@ -433,23 +433,3 @@
     //}
   }
 }
-
-.toggle-megaNav {
-  display: block;
-  height: $spacing-3xl;
-  width: $spacing-3xl;
-  margin: $spacing-sm 0 $spacing-sm $spacing-sm;
-  padding: 0;
-  border: 0;
-  background: url('../img/icon-hamburger-white.svg') center center no-repeat;
-  background-size: $spacing-xl $spacing-xl;
-  z-index: 2;
-
-  &.is-toggled {
-    opacity: 0.5;
-  }
-
-  @media (min-width: $megaNav-full-breakpoint) {
-    display: none;
-  }
-}
