@@ -1,4 +1,6 @@
-<div class="slab  slab--bg-slate-light {{ alignFull ? ' align-full' }}">
+{% set slabBg = slabBg ? 'slab--bg-' ~ slabBg : 'slab--bg-slate-light' %}
+
+<div class="slab  {{ slabBg }} {{ alignFull ? ' align-full' }}">
   <div class="wrap">
 
     <div class="accolade-slider  js-slider--accolades">

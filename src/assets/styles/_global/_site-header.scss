@@ -25,13 +25,18 @@
   .site-logo {
     width: 20%;
     max-width: 8.5em;
-    max-height: 3.5em;
+    height: 3.5em;
+
+    img {
+      transition: all 200ms;
+    }
   }
 
-  &.has-expanded-nav {
+  @at-root .has-expanded-nav .header-site {
     .site-logo {
       img {
-        max-height: 3.5em;
+        height: 3.5em;
+        //opacity: 0;
       }
     }
   }

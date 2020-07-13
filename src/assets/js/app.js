@@ -6,6 +6,7 @@
 //@codekit-prepend silent './vendor/slick-1.8.1/slick/slick';
 //@codekit-prepend silent './vendor/waypoints/lib/jquery.waypoints.js';
 
+/* global Waypoint */
 
 // @TODO: at some point, it'd probably be nice if functions sat in 'eachIndividualComponentName.js'
 // in each component folder and were imported rather than being here, like their Sass files
@@ -48,7 +49,7 @@
         megaNav.addClass('is-largescreen');
         megaNav.removeClass('is-smallscreen');
 
-        $('#megaNav.is-largescreen, .megaNav__topLevel-link.has-children, .megaNav__secondLevel-link.has-children, #megaNav.is-smallscreen .has-children').unbind();
+        $('#megaNav.is-largescreen, .megaNav__topLevel-item.has-children, .megaNav__secondLevel-item.has-children, #megaNav.is-smallscreen .has-children > a').unbind();
 
         $('#megaNav.is-largescreen').hoverIntent({
           over: function () {
@@ -81,15 +82,17 @@
 
         $('#megaNav.is-largescreen').hoverIntent({
           over: function () {
+            $('body').addClass('has-expanded-nav');
           },
           out: function () {
             $('.is-expanded', megaNav).removeClass('is-expanded');
+            $('body').removeClass('has-expanded-nav');
           },
-          timeout: 250
+          timeout: 200
         });
       }
       else {
-        $('#megaNav.is-largescreen, .megaNav__topLevel-link.has-children, .megaNav__secondLevel-link.has-children, #megaNav.is-smallscreen .has-children').unbind();
+        $('#megaNav.is-largescreen, .megaNav__topLevel-item.has-children, .megaNav__secondLevel-item.has-children, #megaNav.is-smallscreen .has-children > a').unbind();
 
         megaNav.removeClass('is-largescreen');
         megaNav.addClass('is-smallscreen');
@@ -119,7 +122,7 @@
 
       $('.is-expanded', siblings).removeClass('is-expanded');
       $(siblings).removeClass('is-expanded');
-      
+
       $('.megaNav__topLevel').scrollTop(0);
 
       $(item).addClass('is-expanded');

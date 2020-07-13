@@ -659,6 +659,16 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/assets/img/theme-ldn/logo-ldn.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/theme-ldn/logo-ldn.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/assets/js/app.js": {
 		"bF": 0,
 		"ft": 64,
@@ -2025,6 +2035,14 @@
 		"oAP": "/components/02-page/_preview.twig",
 		"oF": 0
 		},
+	"/components/02-page/page-footer--ldn.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/02-page/page-footer--ldn.twig",
+		"oF": 0
+		},
 	"/components/02-page/page-footer.twig": {
 		"cB": 0,
 		"ft": 8192,
@@ -2651,7 +2669,7 @@
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/components/iconBox/iconbox.config.yml",
+		"oAP": "/components/iconBox/iconBox.config.yml",
 		"oF": 0
 		},
 	"/components/iconBox/iconBox.twig": {
@@ -2802,6 +2820,14 @@
 		"oAP": "/components/megaNav/_preview.twig",
 		"oF": 0
 		},
+	"/components/megaNav/megaNav--ldn.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/megaNav/megaNav--ldn.twig",
+		"oF": 0
+		},
 	"/components/megaNav/megaNav.config.yml": {
 		"cB": 0,
 		"ft": 8192,
@@ -2827,6 +2853,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/components/megaNav/megaNav.twig",
+		"oF": 0
+		},
+	"/components/megaNav/readme.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/megaNav/readme.html",
 		"oF": 0
 		},
 	"/components/megaNav/readme.md": {

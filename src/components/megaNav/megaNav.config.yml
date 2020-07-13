@@ -1,5 +1,8 @@
-label: MegaNav
+name: megaNav
+label: 'MegaNav'
 status: ready
-handle: meganav
-context:
-  text: 'Click me'
+handle: 'megaNav'
+
+variants:
+  - name: ldn
+    label: "LDN"

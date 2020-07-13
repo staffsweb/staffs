@@ -2,4 +2,31 @@
   // contains overrides we haven't done more nicely,
   // becuase the alternate theme was a last-minute addition
 
+  .header-site {
+
+    &__flexContainer {
+      align-items: center;
+    }
+
+    .site-logo {
+      width: 35%;
+      max-width: 12.5em;
+
+      img {
+        margin: 0;
+      }
+    }
+  }
+
+  .footer-site {
+    background: $granite--ldn;
+
+    &__logo {
+      margin: $spacing-md 0;
+
+      img {
+        width: 12.5em;
+      }
+    }
+  }
 }
