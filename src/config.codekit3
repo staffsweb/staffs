@@ -778,6 +778,17 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/assets/img/theme-ldn/masthead0.jpg": {
+		"ft": 16384,
+		"iS": 324858,
+		"jF": 2,
+		"oA": 0,
+		"oAP": "/assets/img/theme-ldn/masthead0.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
 	"/assets/js/app.js": {
 		"bF": 0,
 		"ft": 64,

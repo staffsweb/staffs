@@ -41,6 +41,8 @@ $granite--light-ldn:            mix($granite--ldn, white, 85%);
 $primary:                       $red;
 $secondary:                     $maroon;
 $tertiary:                      $yellow;
+$neutral--primary:              $slate;
+$neutral--light:                $slate--light;
 
 /// Referencable colours
 
@@ -49,8 +51,8 @@ $text-color:                    black;
 $link-color:                    black;
 $link-color--hover:             $primary;
 $heading-color:                 black;
-$table-accent:                  $slate;
-$table-accent--light:           $slate--light;
+$table-accent:                  $neutral--primary;
+$table-accent--light:           $neutral--light;
 
 
 // Utilities Classes Setup

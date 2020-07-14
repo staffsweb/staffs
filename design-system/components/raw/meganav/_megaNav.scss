@@ -51,7 +51,7 @@
       position: relative;
       display: block;
       padding: $row-padding-y 2em $row-padding-y 0;
-      color: $slate;
+      color: $neutral--primary;
       border-bottom: 1px solid $border-color;
 
       @media (min-width: $megaNav-full-breakpoint) {
@@ -161,7 +161,7 @@
     margin-left: -$spacing-lg;
     padding-left: $spacing-lg;
     background: white;
-    color: $slate;
+    color: $neutral--primary;
     font-weight: 500;
     border-bottom: 1px solid $border-color;
 
@@ -219,7 +219,7 @@
     margin-left: -$spacing-lg;
     padding: $spacing-sm;
     padding-left: $spacing-lg;
-    background: $slate--light;
+    background: $neutral--light;
     color: white;
     z-index: 0;
 

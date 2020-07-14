@@ -323,7 +323,7 @@ $border-accent-width: $spacing-2xs;
   }
 
   thead {
-    border-bottom: 2px solid $slate;
+    border-bottom: 2px solid $neutral--primary;
 
     td, th {
       background: #fff;
@@ -345,7 +345,7 @@ $border-accent-width: $spacing-2xs;
   }
 
   th {
-    color: $slate;
+    color: $neutral--primary;
     font-weight: 500;
     text-align: left;
   }

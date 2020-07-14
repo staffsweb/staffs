@@ -2,12 +2,12 @@
   $tabs-inline-breakpoint: 65rem;
 
   margin-bottom: $spacing-xl;
-  border-bottom: $spacing-2xs solid $slate;
+  border-bottom: $spacing-2xs solid $neutral--primary;
   padding-bottom: $spacing-sm;
 
   &__nav {
     margin: 0 -1px 0 0;
-    border-bottom: $spacing-2xs solid $slate;
+    border-bottom: $spacing-2xs solid $neutral--primary;
     text-align: center;
 
     @media (min-width: $tabs-inline-breakpoint) {
@@ -49,7 +49,7 @@
     background: $greyblue--light;
 
     &:hover {
-      color: $slate;
+      color: $neutral--primary;
     }
 
     @media (min-width: $tabs-inline-breakpoint) {
@@ -66,7 +66,7 @@
     }
 
     &.is-selected {
-      background: $slate;
+      background: $neutral--primary;
       color: white;
     }
   }
