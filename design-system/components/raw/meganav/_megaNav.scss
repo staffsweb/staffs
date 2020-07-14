@@ -159,15 +159,12 @@
   }
 
   &__levelHeader {
-    position: sticky;
-    top: 0;
     margin-left: -$spacing-lg;
     padding-left: $spacing-lg;
     background: white;
     color: $neutral--primary;
     font-weight: 500;
     border-bottom: 1px solid $border-color;
-    z-index: 2;
 
     @media (min-width: $megaNav-full-breakpoint) {
       display: none;
