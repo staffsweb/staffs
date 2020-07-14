@@ -846,7 +846,7 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 @media (min-width: 70rem) { .megaNav__level { min-height: auto; transform: translateY(-200%); padding: 0; opacity: 0; } }
 
-.megaNav__levelHeader { margin-left: -1.5rem; padding-left: 1.5rem; background: white; color: #41464b; font-weight: 500; border-bottom: 1px solid #bebfc1; }
+.megaNav__levelHeader { position: -webkit-sticky; position: sticky; top: 0; margin-left: -1.5rem; padding-left: 1.5rem; background: white; color: #41464b; font-weight: 500; border-bottom: 1px solid #bebfc1; }
 
 @media (min-width: 70rem) { .megaNav__levelHeader { display: none; } }
 

@@ -159,6 +159,8 @@
   }
 
   &__levelHeader {
+    position: sticky;
+    top: 0;
     margin-left: -$spacing-lg;
     padding-left: $spacing-lg;
     background: white;
