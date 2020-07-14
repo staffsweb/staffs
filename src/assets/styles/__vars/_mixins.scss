@@ -23,6 +23,7 @@
   background-image: linear-gradient(to left, $tertiary 50%, black 50%);
   background-size: 200% 100%;
   background-position: right bottom;
+  background-repeat: no-repeat; // needed for Chrome bug
   color: choose-contrast-color($tertiary);
 
   &:hover,
@@ -59,7 +60,7 @@
 
 @mixin button--pointy {
   &:after {
-    content: '▶';
+    content: '\25B6\FE0E';
     padding-left: 0.5em;
     transition: transform 200ms;
   }

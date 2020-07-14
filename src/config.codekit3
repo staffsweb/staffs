@@ -609,35 +609,112 @@
 	"/assets/img/masthead0.jpg": {
 		"ft": 16384,
 		"iS": 1177245,
-		"jF": 0,
+		"jF": 2,
 		"oA": 0,
 		"oAP": "/assets/img/masthead0.jpg",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
+		"oIPL": 1,
+		"opt": 1,
+		"q": 85
 		},
 	"/assets/img/masthead1.jpg": {
 		"ft": 16384,
 		"iS": 2630804,
-		"jF": 0,
+		"jF": 2,
 		"oA": 0,
 		"oAP": "/assets/img/masthead1.jpg",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
+		"oIPL": 1,
+		"opt": 1,
+		"q": 85
 		},
 	"/assets/img/masthead2.jpg": {
 		"ft": 16384,
 		"iS": 2750212,
-		"jF": 0,
+		"jF": 2,
 		"oA": 0,
 		"oAP": "/assets/img/masthead2.jpg",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
+		"oIPL": 1,
+		"opt": 1,
+		"q": 85
+		},
+	"/assets/img/masthead3.jpg": {
+		"ft": 16384,
+		"iS": 3620819,
+		"jF": 2,
+		"oA": 0,
+		"oAP": "/assets/img/masthead3.jpg",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"q": 80
+		},
+	"/assets/img/masthead4.jpg": {
+		"ft": 16384,
+		"iS": 3096544,
+		"jF": 2,
+		"oA": 0,
+		"oAP": "/assets/img/masthead4.jpg",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"q": 80
+		},
+	"/assets/img/masthead5.jpg": {
+		"ft": 16384,
+		"iS": 2731946,
+		"jF": 2,
+		"oA": 0,
+		"oAP": "/assets/img/masthead5.jpg",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"q": 80
+		},
+	"/assets/img/masthead6.jpg": {
+		"ft": 16384,
+		"iS": 4299389,
+		"jF": 2,
+		"oA": 0,
+		"oAP": "/assets/img/masthead6.jpg",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"q": 75
+		},
+	"/assets/img/masthead7.jpg": {
+		"ft": 16384,
+		"iS": 2385652,
+		"jF": 2,
+		"oA": 0,
+		"oAP": "/assets/img/masthead7.jpg",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"q": 60
+		},
+	"/assets/img/masthead8.jpg": {
+		"ft": 16384,
+		"iS": 1628867,
+		"jF": 2,
+		"oA": 0,
+		"oAP": "/assets/img/masthead8.jpg",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"q": 75
+		},
+	"/assets/img/masthead9.jpg": {
+		"ft": 16384,
+		"iS": 2218956,
+		"jF": 2,
+		"oA": 0,
+		"oAP": "/assets/img/masthead9.jpg",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"q": 60
 		},
 	"/assets/img/placeholder-transparent-person.png": {
 		"ft": 32768,
