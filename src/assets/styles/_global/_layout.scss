@@ -39,6 +39,14 @@ body {
       z-index: 1;
     }
   }
+
+  @at-root .has-expanded-smallscreen-nav {
+    overflow: hidden;
+
+    @media (min-width: $megaNav-full-breakpoint) {
+      overflow: auto;
+    }
+  }
 }
 
 main {

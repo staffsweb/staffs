@@ -26,22 +26,18 @@
       if (navIsOpen) {
         $(this).removeClass('is-toggled');
         megaNav.removeClass('is-open');
+        $('body').removeClass('has-expanded-smallscreen-nav');
       } else {
         $(this).addClass('is-toggled');
         megaNav.addClass('is-open');
+        $('body').addClass('has-expanded-smallscreen-nav');
       }
     });
 
     megaNavClose.on('click', function () {
-      var navIsOpen = megaNav.hasClass('is-open');
-
-      if (navIsOpen) {
-        megaNavToggle.removeClass('is-toggled');
-        megaNav.removeClass('is-open');
-      } else {
-        megaNavToggle.addClass('is-toggled');
-        megaNav.addClass('is-open');
-      }
+      megaNavToggle.removeClass('is-toggled');
+      megaNav.removeClass('is-open');
+      $('body').removeClass('has-expanded-smallscreen-nav');
     });
 
     function updateMegaNavBreakpointClass() {
