@@ -318,6 +318,10 @@ $border-accent-width: $spacing-2xs;
     @include line-height('normal');
   }
 
+  caption {
+    text-align: left;
+  }
+
   thead {
     border-bottom: 2px solid $slate;
 
@@ -341,9 +345,9 @@ $border-accent-width: $spacing-2xs;
   }
 
   th {
-    background: #fff;
     color: $slate;
     font-weight: 500;
+    text-align: left;
   }
 
   td {

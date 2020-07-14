@@ -104,6 +104,8 @@ code { display: inline-block; line-height: 1.4; font-size: 0.75em; background: r
 
 table { font-size: 0.9em; width: 100%; margin: 0 0 2rem; border-spacing: 0; border-collapse: collapse; line-height: 1.4; }
 
+caption { text-align: left; }
+
 thead { border-bottom: 2px solid #394851; }
 
 thead td, thead th { background: #fff; vertical-align: bottom; }
@@ -114,7 +116,7 @@ tr:nth-child(even) { background: #fff; }
 
 td, th { padding: 1em; }
 
-th { background: #fff; color: #394851; font-weight: 500; }
+th { color: #394851; font-weight: 500; text-align: left; }
 
 td { vertical-align: middle; }
 

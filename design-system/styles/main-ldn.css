@@ -220,6 +220,8 @@ code { display: inline-block; line-height: 1.4; font-size: 0.75em; background: r
 
 table { font-size: 0.9em; width: 100%; margin: 0 0 2rem; border-spacing: 0; border-collapse: collapse; line-height: 1.4; }
 
+caption { text-align: left; }
+
 thead { border-bottom: 2px solid #394851; }
 
 thead td, thead th { background: #fff; vertical-align: bottom; }
@@ -230,7 +232,7 @@ tr:nth-child(even) { background: #fff; }
 
 td, th { padding: 1em; }
 
-th { background: #fff; color: #394851; font-weight: 500; }
+th { color: #394851; font-weight: 500; text-align: left; }
 
 td { vertical-align: middle; }
 
@@ -862,7 +864,7 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 @media (min-width: 70rem) { .megaNav__levelFooter { width: 100%; text-align: center; margin: 0; padding: 0.75rem 0.75rem 0; z-index: 2; } .megaNav__levelFooter p, .megaNav__levelFooter form { margin: 0.75rem 1rem; display: inline-block; } }
 
-.megaNav__topLevel { position: relative; margin: 0; height: 100vh; background: #e8ebed; padding: 0 0 1.5rem 1.5rem; margin-left: 4rem; border-left: 1px solid #bebfc1; box-sizing: border-box; overflow: hidden; overflow-y: auto; overflow-scrolling: touch; }
+.megaNav__topLevel { position: relative; margin: 0; height: 100vh; background: #e8ebed; padding: 0 0 4rem 1.5rem; margin-left: 4rem; border-left: 1px solid #bebfc1; box-sizing: border-box; overflow: hidden; overflow-y: auto; overflow-scrolling: touch; box-sizing: border-box; }
 
 @media (min-width: 70rem) { .megaNav__topLevel { position: static; height: auto; background: none; padding: 0; margin-left: 0; border-left: 0; overflow: visible; } }
 
@@ -1342,6 +1344,8 @@ a.tile:focus { outline-width: 3px; outline-color: #144196; z-index: 2; }
 .margin-top-none, .margin-y-none { margin-top: 0 !important; }
 
 .margin-bottom-none, .margin-y-none { margin-bottom: 0 !important; }
+
+.overflow-x { max-width: 100%; overflow: auto; overflow-scrolling: touch; }
 
 .js .js-hidden { display: none; }
 

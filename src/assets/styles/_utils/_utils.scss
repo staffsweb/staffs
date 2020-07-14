@@ -71,6 +71,12 @@
   margin-bottom: 0 !important;
 }
 
+.overflow-x {
+  max-width: 100%;
+  overflow: auto;
+  overflow-scrolling: touch;
+}
+
 .js .js-hidden {
   display: none;
 }

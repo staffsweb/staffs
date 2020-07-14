@@ -257,13 +257,14 @@
     margin: 0;
     height: 100vh;
     background: $greyblue--light;
-    padding: 0 0 $spacing-lg $spacing-lg;
+    padding: 0 0 $spacing-4xl $spacing-lg;
     margin-left: $spacing-4xl;
     border-left: 1px solid $border-color;
     box-sizing: border-box;
     overflow: hidden;
     overflow-y: auto;
     overflow-scrolling: touch;
+    box-sizing: border-box;
 
     @media (min-width: $megaNav-full-breakpoint) {
       position: static;
