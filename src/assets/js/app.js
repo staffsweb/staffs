@@ -349,7 +349,7 @@
     });
 
     $('.page-nav__link').on('click', function (e) {
-      e.preventDefault();
+      // e.preventDefault();
       let target = $($(this).attr('href'));
 
       $('html, body').stop().animate({
