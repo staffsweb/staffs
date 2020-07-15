@@ -282,7 +282,7 @@
 
   let waypointsInit = function () {
     $('.js-waypoint').each(function () {
-      var el = $(this);
+      let el = $(this);
 
       el.waypoint(function (direction) {
         if (direction === 'down') {
@@ -297,6 +297,67 @@
     });
   };
 
+  let pageNavWaypointsInit = function () {
+
+    function getRelatedNavigation(targetid) {
+      return $('.js-page-nav .page-nav__link[href="#' + targetid + '"]');
+    }
+
+    function centerActiveItem(item) {
+      let list = $('.page-nav__list')[0];
+
+      function isOverflowing(element) {
+        return (element.scrollWidth > element.offsetWidth);
+      }
+
+      if (isOverflowing(list)) {
+        let inner = $('.page-nav__inner')[0];
+
+        let leftPos = item.position().left;
+        let centeredPos = leftPos - ($(inner).width()/2) + ($(item).width()/2);
+
+        $(inner).stop().animate({scrollLeft: centeredPos}, 250);
+      }
+    }
+
+    $('.js-waypoint-page-section').each(function () {
+      let el = $(this);
+
+      el.waypoint(function (direction) {
+        let activeItem = getRelatedNavigation(el.attr('id'));
+        activeItem.toggleClass('is-active', direction === 'down');
+
+        if (activeItem.hasClass('is-active')) {
+          centerActiveItem(activeItem);
+        }
+      }, {
+        offset: (window.innerHeight/5)
+      });
+
+      el.waypoint(function (direction) {
+        let activeItem = getRelatedNavigation(el.attr('id'));
+        activeItem.toggleClass('is-active', direction === 'up');
+
+        if (activeItem.hasClass('is-active')) {
+          centerActiveItem(activeItem);
+        }
+      }, {
+        offset: function () {
+          return -($(el).height()) + window.innerHeight/5;
+        }
+      });
+    });
+
+    $('.page-nav__link').on('click', function (e) {
+      e.preventDefault();
+      let target = $($(this).attr('href'));
+
+      $('html, body').stop().animate({
+        scrollTop: (target.offset().top - window.innerHeight/10)
+      }, 250);
+    });
+  };
+
   // --
 
   $(document).ready(function () {
@@ -304,6 +365,7 @@
     tabsInit();
     sliderInit();
     waypointsInit();
+    pageNavWaypointsInit();
   });
 
 })(jQuery);

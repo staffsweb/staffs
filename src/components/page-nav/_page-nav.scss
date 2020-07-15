@@ -1,0 +1,85 @@
+
+.page-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9;
+
+  $background: white;
+  --background: #{$background};
+  --backgroundRGB: #{red($background)}, #{green($background)}, #{blue($background)};
+  background: white;
+  background: var(--background);
+  box-shadow: 0 0.5rem 0.5rem -0.5rem rgba(0,0,0, 0.15);
+
+  &__inner {
+    overflow: hidden;
+    overflow-x: auto;
+    background: linear-gradient(to right, white 30%, rgba(255, 255, 255, 0)),
+    linear-gradient(to right, rgba(255, 255, 255, 0), white 70%) 0 100%,
+    radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, .1), rgba(0, 0, 0, 0)),
+    radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, .1), rgba(0, 0, 0, 0)) 0 100%;
+
+    background: linear-gradient(to right, rgba(var(--backgroundRGB), 1) 30%, rgba(var(--backgroundRGB), 0)),
+    linear-gradient(to right, rgba(var(--backgroundRGB), 0), rgba(var(--backgroundRGB), 1) 70%) 0 100%,
+    radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, .1), rgba(0, 0, 0, 0)),
+    radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, .1), rgba(0, 0, 0, 0)) 0 100%;
+
+    background-repeat: no-repeat;
+    background-color: white;
+    background-color: var(--background);
+    background-size: 1em 100%, 1em 100%, 1em 100%, 1em 100%;
+    background-position: 0 0, 100%, 0 0, 100%;
+    background-attachment: local, local, scroll, scroll;
+  }
+
+  &__list {
+    position: relative;
+    display: flex;
+    margin: 0;
+    padding: $spacing-sm 0;
+    white-space: pre;
+  }
+
+  &__item {
+    margin: 0 $spacing-2xs;
+  }
+
+  &__link {
+    padding: $spacing-xs $spacing-sm;
+    border-radius: 0.2em;
+    font-weight: 500;
+    transition: all 200ms;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &.is-active {
+      background: $primary;
+      color: white;
+      text-decoration: none;
+      cursor: default;
+    }
+  }
+
+  &.is-stuck {
+    $background: $primary;
+    --background: #{$background};
+    --backgroundRGB: #{red($background)}, #{green($background)}, #{blue($background)};
+
+    .page-nav__inner {
+      overflow: hidden;
+      overflow-x: auto;
+    }
+
+    .page-nav__link {
+      color: white;
+
+      &.is-active {
+        background: white;
+        color: $text-color;
+      }
+    }
+  }
+}
+

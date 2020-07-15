@@ -3087,6 +3087,43 @@
 		"oAP": "/components/meta/meta.twig",
 		"oF": 0
 		},
+	"/components/page-nav/_page-nav.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 4,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/components/page-nav/_page-nav.css",
+		"oF": 0,
+		"oS": 2,
+		"sct": 1
+		},
+	"/components/page-nav/page-nav--demo.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/page-nav/page-nav--demo.twig",
+		"oF": 0
+		},
+	"/components/page-nav/page-nav.config.yml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/page-nav/page-nav.config.yml",
+		"oF": 0
+		},
+	"/components/page-nav/page-nav.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/page-nav/page-nav.twig",
+		"oF": 0
+		},
 	"/components/quote-banner/_quote-banner.scss": {
 		"aP": 1,
 		"bl": 0,

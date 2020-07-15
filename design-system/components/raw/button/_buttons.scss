@@ -31,6 +31,10 @@
     @include button--pointy;
   }
 
+  &--clipped {
+    @include button--clipped;
+  }
+
   &--caps {
     text-transform: uppercase;
   }

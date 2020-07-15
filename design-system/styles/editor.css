@@ -192,6 +192,8 @@ a.tag:hover { text-decoration: underline; color: black; }
 
 .button--pointy:after { content: '\25B6\FE0E'; padding-left: 0.5em; transition: transform 200ms; }
 
+.button--clipped { border-radius: 0; -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0.75em 100%, 0 calc(100% - 0.75em)); clip-path: polygon(0 0, 100% 0, 100% 100%, 0.75em 100%, 0 calc(100% - 0.75em)); }
+
 .button--caps { text-transform: uppercase; }
 
 .button--slate { background-image: linear-gradient(to left, #394851 50%, black 50%); color: white; }

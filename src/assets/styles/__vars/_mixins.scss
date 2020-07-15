@@ -66,6 +66,11 @@
   }
 }
 
+@mixin button--clipped {
+  border-radius: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0.75em 100%, 0 calc(100% - 0.75em));
+}
+
 @mixin button--slate {
   background-image: linear-gradient(to left, $slate 50%, black 50%);
   color: white;

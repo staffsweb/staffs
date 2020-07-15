@@ -40,6 +40,21 @@ variants:
       classes: ['button--pointy']
       text: 'Button with pointy arrow'
 
+  - name: cutout
+    label: "Style: Clipped"
+    status: wip
+    context:
+      classes: ['button--clipped']
+      text: 'Button with clipped corner (experimental!)'
+
+  - name: cutout-ldn
+    label: "Style: Clipped (LDN)"
+    status: wip
+    context:
+      classes: ['button--clipped']
+      text: 'Button with clipped corner (experimental!)'
+    preview: '@preview-ldn'
+
   - name: caps
     label: "Style: Caps"
     context:
