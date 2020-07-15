@@ -600,11 +600,15 @@
   &amp;__inner {
     <span class="hljs-attribute">overflow</span>: hidden;
     <span class="hljs-attribute">overflow-x</span>: auto;
+    <span class="hljs-attribute">overflow</span>-scrolling: touch;
+
+    <span class="hljs-comment">// fallback for no CSS vars</span>
     <span class="hljs-attribute">background</span>: linear-gradient(to right, white <span class="hljs-number">30%</span>, rgba(<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">0</span>)),
     linear-gradient(to right, rgba(<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">0</span>), white <span class="hljs-number">70%</span>) <span class="hljs-number">0</span> <span class="hljs-number">100%</span>,
     radial-gradient(farthest-side at <span class="hljs-number">0%</span> <span class="hljs-number">50%</span>, rgba(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">1</span>), rgba(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)),
     radial-gradient(farthest-side at <span class="hljs-number">100%</span> <span class="hljs-number">50%</span>, rgba(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">1</span>), rgba(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)) <span class="hljs-number">0</span> <span class="hljs-number">100%</span>;
 
+    <span class="hljs-comment">// regular :)</span>
     <span class="hljs-attribute">background</span>: linear-gradient(to right, rgba(var(--backgroundRGB), <span class="hljs-number">1</span>) <span class="hljs-number">30%</span>, rgba(var(--backgroundRGB), <span class="hljs-number">0</span>)),
     linear-gradient(to right, rgba(var(--backgroundRGB), <span class="hljs-number">0</span>), rgba(var(--backgroundRGB), <span class="hljs-number">1</span>) <span class="hljs-number">70%</span>) <span class="hljs-number">0</span> <span class="hljs-number">100%</span>,
     radial-gradient(farthest-side at <span class="hljs-number">0%</span> <span class="hljs-number">50%</span>, rgba(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">1</span>), rgba(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)),
@@ -652,11 +656,6 @@
     <span class="hljs-variable">$background</span>: <span class="hljs-variable">$primary</span>;
     --<span class="hljs-attribute">background</span>: #{<span class="hljs-variable">$background</span>};
     --backgroundRGB: #{red(<span class="hljs-variable">$background</span>)}, #{green(<span class="hljs-variable">$background</span>)}, #{blue(<span class="hljs-variable">$background</span>)};
-
-    <span class="hljs-selector-class">.page-nav__inner</span> {
-      <span class="hljs-attribute">overflow</span>: hidden;
-      <span class="hljs-attribute">overflow-x</span>: auto;
-    }
 
     <span class="hljs-selector-class">.page-nav__link</span> {
       <span class="hljs-attribute">color</span>: white;

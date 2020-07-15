@@ -14,11 +14,15 @@
   &__inner {
     overflow: hidden;
     overflow-x: auto;
+    overflow-scrolling: touch;
+
+    // fallback for no CSS vars
     background: linear-gradient(to right, white 30%, rgba(255, 255, 255, 0)),
     linear-gradient(to right, rgba(255, 255, 255, 0), white 70%) 0 100%,
     radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, .1), rgba(0, 0, 0, 0)),
     radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, .1), rgba(0, 0, 0, 0)) 0 100%;
 
+    // regular :)
     background: linear-gradient(to right, rgba(var(--backgroundRGB), 1) 30%, rgba(var(--backgroundRGB), 0)),
     linear-gradient(to right, rgba(var(--backgroundRGB), 0), rgba(var(--backgroundRGB), 1) 70%) 0 100%,
     radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, .1), rgba(0, 0, 0, 0)),
@@ -66,11 +70,6 @@
     $background: $primary;
     --background: #{$background};
     --backgroundRGB: #{red($background)}, #{green($background)}, #{blue($background)};
-
-    .page-nav__inner {
-      overflow: hidden;
-      overflow-x: auto;
-    }
 
     .page-nav__link {
       color: white;
