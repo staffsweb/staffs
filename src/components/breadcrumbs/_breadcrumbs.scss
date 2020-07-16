@@ -1,5 +1,6 @@
 .breadcrumbs {
   background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(1em);
   display: inline-block;
   color: #fff;
   margin: 0 0 $spacing-xs;

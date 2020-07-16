@@ -141,6 +141,16 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/assets/img/icon-circle-padlock-white.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/icon-circle-padlock-white.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/assets/img/icon-clock-white.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -296,6 +306,16 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "/assets/img/icon-moneybag-pink.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/img/icon-moneybag-white.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/icon-moneybag-white.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
@@ -476,6 +496,16 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "/assets/img/icon-threepeople-red.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/img/icon-threepeople-white.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/icon-threepeople-white.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
@@ -663,25 +693,25 @@
 		},
 	"/assets/img/masthead5.jpg": {
 		"ft": 16384,
-		"iS": 2731946,
-		"jF": 2,
-		"oA": 0,
-		"oAP": "/assets/img/masthead5.jpg",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"q": 80
-		},
-	"/assets/img/masthead6.jpg": {
-		"ft": 16384,
 		"iS": 4299389,
 		"jF": 2,
 		"oA": 0,
-		"oAP": "/assets/img/masthead6.jpg",
+		"oAP": "/assets/img/masthead5a.jpg",
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
 		"q": 75
+		},
+	"/assets/img/masthead6.jpg": {
+		"ft": 16384,
+		"iS": 536574,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/masthead6.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"/assets/img/masthead7.jpg": {
 		"ft": 16384,
@@ -2593,6 +2623,14 @@
 		"oAP": "/components/card/card--flex.twig",
 		"oF": 0
 		},
+	"/components/card/card--ksp-light.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/card/card--ksp-light.twig",
+		"oF": 0
+		},
 	"/components/card/card--ksp.twig": {
 		"cB": 0,
 		"ft": 8192,
@@ -2910,6 +2948,14 @@
 		"oF": 0,
 		"oS": 2,
 		"sct": 1
+		},
+	"/components/masthead/masthead--course.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/masthead/masthead--course.twig",
+		"oF": 0
 		},
 	"/components/masthead/masthead--homepage.twig": {
 		"cB": 0,

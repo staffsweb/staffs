@@ -15,3 +15,5 @@ variants:
 
   - name: ksp
     label: "KSP (Key Selling Points)"
+  - name: ksp-light
+    label: "KSP (Light on Dark)"

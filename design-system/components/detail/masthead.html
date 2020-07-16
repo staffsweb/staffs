@@ -162,7 +162,7 @@
         
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"masthead"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"masthead__bg"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../img/masthead9.jpg"</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../img/masthead5.jpg"</span> /&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"wrap"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breadcrumbs"</span>&gt;</span>
@@ -255,12 +255,11 @@
                             
                             <code class="Code Code--lang-SCSS FileBrowser-code">
                                 <pre><span class="hljs-selector-class">.masthead</span> {
+  <span class="hljs-variable">$overlay-breakpoint</span>: <span class="hljs-variable">$third-breakpoint</span> + <span class="hljs-number">10rem</span>;
+
   <span class="hljs-attribute">display</span>: flex;
-  <span class="hljs-attribute">min-height</span>: <span class="hljs-number">65vmin</span>;
-  <span class="hljs-attribute">padding</span>: <span class="hljs-number">12rem</span> <span class="hljs-number">0</span> <span class="hljs-variable">$spacing-xl</span>;
-  <span class="hljs-comment">//background-color: $offwhite;</span>
-  <span class="hljs-attribute">background-size</span>: cover;
-  <span class="hljs-attribute">background-position</span>: <span class="hljs-number">50%</span> <span class="hljs-number">50%</span>;
+  <span class="hljs-attribute">flex-wrap</span>: wrap;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$offwhite</span>;
   <span class="hljs-attribute">box-sizing</span>: border-box;
   <span class="hljs-attribute">position</span>: relative;
 
@@ -283,6 +282,49 @@
       <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
       <span class="hljs-selector-tag">object</span>-fit: cover;
       <span class="hljs-selector-tag">object</span>-<span class="hljs-attribute">position</span>: <span class="hljs-number">60%</span> <span class="hljs-number">35%</span>; <span class="hljs-comment">// we're going to assume the image's focal point is roughly slightly-above-center right, but specify this as an inline style for each image</span>
+    }
+  }
+
+  &amp;__inner {
+    <span class="hljs-attribute">display</span>: flex;
+    <span class="hljs-attribute">flex-wrap</span>: wrap;
+    <span class="hljs-attribute">min-height</span>: <span class="hljs-number">65vmin</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">12rem</span> <span class="hljs-number">0</span> <span class="hljs-variable">$spacing-xl</span>;
+    <span class="hljs-attribute">align-self</span>: flex-end;
+    <span class="hljs-attribute">align-content</span>: flex-end;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">position</span>: relative;
+    <span class="hljs-attribute">box-sizing</span>: border-box;
+
+    <span class="hljs-keyword">@media</span> (min-width: <span class="hljs-variable">$overlay-breakpoint</span>) {
+      <span class="hljs-attribute">position</span>: static;
+    }
+  }
+
+  &amp;__overlay {
+    <span class="hljs-attribute">align-self</span>: flex-end;
+    <span class="hljs-attribute">align-content</span>: flex-end;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-variable">$spacing-lg</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">box-sizing</span>: border-box;
+    <span class="hljs-attribute">background</span>: black;
+    <span class="hljs-attribute">color</span>: white;
+    <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1</span>;
+
+    <span class="hljs-keyword">@media</span> (min-width: <span class="hljs-variable">$overlay-breakpoint</span>) {
+      <span class="hljs-attribute">background</span>: none;
+      <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+      <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-variable">$spacing-lg</span>;
+
+      &amp;Inner {
+        <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> -#{<span class="hljs-variable">$grid-gutter</span>};
+        <span class="hljs-attribute">padding</span>: <span class="hljs-variable">$spacing-lg</span> <span class="hljs-variable">$grid-gutter</span> <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">background</span>: rgba(black, <span class="hljs-number">0.75</span>);
+        <span class="hljs-keyword">@supports</span> (backdrop-filter: blur(<span class="hljs-number">1em</span>)) {
+          <span class="hljs-attribute">background</span>: rgba(black, <span class="hljs-number">0.6</span>);
+        }
+        backdrop-<span class="hljs-attribute">filter</span>: blur(<span class="hljs-number">1em</span>);
+      }
     }
   }
 
@@ -311,7 +353,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">880 Bytes</span>
+                    <span class="Meta-value">1.8 KB</span>
                 </li>
             </ul>
         </div>
@@ -334,7 +376,7 @@
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Variants <em class="Meta-count">(4)</em>:</strong>
+            <strong class="Meta-key">Variants <em class="Meta-count">(5)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="masthead--default.html">
@@ -343,6 +385,10 @@
             
                 <a href="masthead--no-image.html">
                     <span>No Image</span>
+                </a>, 
+            
+                <a href="masthead--course.html">
+                    <span>Course</span>
                 </a>, 
             
                 <a href="masthead--homepage.html">
@@ -1857,6 +1903,30 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="card--ksp-light.html" data-pjax>
+                <span>KSP (Light on Dark)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="card--course.html" data-pjax>
                 <span>Course</span>
                 
@@ -2483,6 +2553,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="masthead--no-image.html" data-pjax>
                 <span>No Image</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="masthead--course.html" data-pjax>
+                <span>Course</span>
                 
 
 <div class="Status Status--unlabelled">

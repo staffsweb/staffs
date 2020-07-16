@@ -1,10 +1,9 @@
 .masthead {
+  $overlay-breakpoint: $third-breakpoint + 10rem;
+
   display: flex;
-  min-height: 65vmin;
-  padding: 12rem 0 $spacing-xl;
-  //background-color: $offwhite;
-  background-size: cover;
-  background-position: 50% 50%;
+  flex-wrap: wrap;
+  background-color: $offwhite;
   box-sizing: border-box;
   position: relative;
 
@@ -27,6 +26,49 @@
       width: 100%;
       object-fit: cover;
       object-position: 60% 35%; // we're going to assume the image's focal point is roughly slightly-above-center right, but specify this as an inline style for each image
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 65vmin;
+    padding: 12rem 0 $spacing-xl;
+    align-self: flex-end;
+    align-content: flex-end;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+
+    @media (min-width: $overlay-breakpoint) {
+      position: static;
+    }
+  }
+
+  &__overlay {
+    align-self: flex-end;
+    align-content: flex-end;
+    width: 100%;
+    padding: $spacing-lg 0 0;
+    box-sizing: border-box;
+    background: black;
+    color: white;
+    z-index: 1;
+
+    @media (min-width: $overlay-breakpoint) {
+      background: none;
+      padding: 0;
+      margin-bottom: $spacing-lg;
+
+      &Inner {
+        margin: 0 -#{$grid-gutter};
+        padding: $spacing-lg $grid-gutter 0;
+        background: rgba(black, 0.75);
+        @supports (backdrop-filter: blur(1em)) {
+          background: rgba(black, 0.6);
+        }
+        backdrop-filter: blur(1em);
+      }
     }
   }
 

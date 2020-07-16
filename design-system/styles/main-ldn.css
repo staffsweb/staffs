@@ -292,9 +292,15 @@ a.tag:hover { text-decoration: underline; color: black; }
 
 .link-access:focus, .visually-hidden:focus, .screen-reader-text:focus { position: static; left: auto; clip: none; }
 
+input[type='checkbox'], input[type='radio'] { position: relative; width: 1em; height: 1em; box-sizing: border-box; margin-right: 0.2em; }
+
+input[type='checkbox'] + label, input[type='radio'] + label { display: inline-block; margin-left: -1.2em; padding-left: 1.2em; box-sizing: border-box; max-width: calc(100% - 1.2em); vertical-align: top; cursor: pointer; }
+
 input[type=text], input[type=password], input[type=number], input[type=email], input[type=tel], input[type=search], input[type=date], textarea, select { max-width: 100%; padding: calc(0.75em - 1px) 0.75em; background: #fff; border: 1px solid rgba(50, 50, 50, 0.25); box-sizing: border-box; border-radius: 0.25rem; }
 
 input[type=text]:focus, input[type=password]:focus, input[type=number]:focus, input[type=email]:focus, input[type=tel]:focus, input[type=search]:focus, input[type=date]:focus, textarea:focus, select:focus { outline: none; border-color: rgba(20, 65, 150, 0.7); }
+
+.form__item { margin: 0 0 0.75rem; }
 
 /*@mixin align-wide { max-width: none; width: calc(100vw - 2.4rem); margin-left: calc(-50vw + 50% + 1.2rem); margin-right: calc(-50vw + 50% + 1.2rem); @media (min-width: $wrap-full-gutter-width) { width: calc(90vw); margin-left: calc(-45vw + 50%); margin-right: calc(-45vw + 50%); } @media (min-width: $wrap-width + 10rem) { width: $wrap-width; margin-left: calc(-43rem + 50%); margin-right: calc(-43rem + 50%); } }*/
 [class^="grid"] { clear: both; padding: 0; margin: 0 -0.75rem; }
@@ -534,7 +540,7 @@ section:first-child { margin-top: 0; }
 
 .box--with-abstitle .box__abstitle { position: absolute; top: 0; left: 0; }
 
-.breadcrumbs { background: rgba(0, 0, 0, 0.6); display: inline-block; color: #fff; margin: 0 0 0.5rem; padding: 0.5rem 0.75rem; }
+.breadcrumbs { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur(1em); backdrop-filter: blur(1em); display: inline-block; color: #fff; margin: 0 0 0.5rem; padding: 0.5rem 0.75rem; }
 
 .breadcrumbs.has-solid-bg { background: black; }
 
@@ -620,6 +626,8 @@ section:first-child { margin-top: 0; }
 
 .card--purple-deep-ldn { --accent-color: #821e82; }
 
+.card--light { --accent-color: rgba(255, 255, 255, 0.5); color: white; }
+
 a.card { text-decoration: none; }
 
 a.card .card__title { color: #144196; color: var(--accent-color); }
@@ -663,6 +671,8 @@ a.card:hover .title__highlight, a.card:hover .card__title { text-decoration: und
 .card--ksp__icon { margin-bottom: 0.75rem; }
 
 .card--ksp__icon img { vertical-align: baseline !important; }
+
+.card--ksp.card--light { color: white; }
 
 .card--event { margin-left: 4rem; }
 
@@ -800,11 +810,19 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 .list--inline-bulleted li:first-child:before { display: none; }
 
-.masthead { display: flex; min-height: 65vmin; padding: 12rem 0 2rem; background-size: cover; background-position: 50% 50%; box-sizing: border-box; position: relative; }
+.masthead { display: flex; flex-wrap: wrap; background-color: #f1f1f1; box-sizing: border-box; position: relative; }
 
 .masthead__bg { position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 0; }
 
 .masthead__bg img { position: absolute; top: 0; right: 0; bottom: 0; left: 0; height: 100%; width: 100%; -o-object-fit: cover; object-fit: cover; -o-object-position: 60% 35%; object-position: 60% 35%; }
+
+.masthead__inner { display: flex; flex-wrap: wrap; min-height: 65vmin; padding: 12rem 0 2rem; align-self: flex-end; align-content: flex-end; width: 100%; position: relative; box-sizing: border-box; }
+
+@media (min-width: 60rem) { .masthead__inner { position: static; } }
+
+.masthead__overlay { align-self: flex-end; align-content: flex-end; width: 100%; padding: 1.5rem 0 0; box-sizing: border-box; background: black; color: white; z-index: 1; }
+
+@media (min-width: 60rem) { .masthead__overlay { background: none; padding: 0; margin-bottom: 1.5rem; } .masthead__overlayInner { margin: 0 -1.5rem; padding: 1.5rem 1.5rem 0; background: rgba(0, 0, 0, 0.75); -webkit-backdrop-filter: blur(1em); backdrop-filter: blur(1em); } @supports ((-webkit-backdrop-filter: blur(1em)) or (backdrop-filter: blur(1em))) { .masthead__overlayInner { background: rgba(0, 0, 0, 0.6); } } }
 
 .masthead .wrap { position: relative; align-self: flex-end; z-index: 0; }
 
