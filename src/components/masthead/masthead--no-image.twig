@@ -3,15 +3,17 @@
 } %}
 
 <div class="masthead  masthead--shallow  masthead--no-bg">
-  <div class="wrap">
-    {% include '@breadcrumbs--has-solid-background' %}
+  <div class="masthead__inner">
+    <div class="wrap">
+      {% include '@breadcrumbs--has-solid-background' %}
 
-    {% include '@title' with {
-      text: 'Masthead With No Image (Shallow)',
-      modifiers: ['has-tail'],
-      textElement: 'h1',
-      textElementStyle: 'h1',
-      animate: true
-    } %}
+      {% include '@title' with {
+        text: 'Masthead With No Image (Shallow)',
+        modifiers: ['has-tail'],
+        textElement: 'h1',
+        textElementStyle: 'h1',
+        animate: true
+      } %}
+    </div>
   </div>
 </div>

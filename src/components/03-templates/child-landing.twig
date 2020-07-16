@@ -1,16 +1,18 @@
 {% include '@meganav' %}
 <div class="masthead">
-  <div class="masthead__bg">
-    <img src="{{ ('/img/masthead' ~ random(9) ~ '.jpg') | path }}" />
-  </div>
-  <div class="wrap">
-    {% include '@breadcrumbs' %}
-    {% include '@title' with {
-      text: 'Accommodation',
-      modifiers: ['has-tail'],
-      textElement: 'h1',
-      animate: true
-    } %}
+  <div class="masthead__inner">
+    <div class="masthead__bg">
+      <img src="{{ ('/img/masthead' ~ random(9) ~ '.jpg') | path }}"/>
+    </div>
+    <div class="wrap">
+      {% include '@breadcrumbs' %}
+      {% include '@title' with {
+        text: 'Accommodation',
+        modifiers: ['has-tail'],
+        textElement: 'h1',
+        animate: true
+      } %}
+    </div>
   </div>
 </div>
 
@@ -89,7 +91,9 @@
   <div class="slab  slab--bg-offwhite">
     <div class="wrap">
       <h3 class="h4 slab__title">Our Code of practice</h3>
-      <p>Where you live is a big part of being at university, which is why Staffordshire is one of several universities that has signed-up to The Student Accommodation Code. The Code underpins our ongoing dedication to our students to make sure you get the best out of your time living in our residences. The Code protects our students’ rights to safe, good quality accommodation. It outlines everything students can expect from our accommodation as well as their responsibilities. Full details of The Code are available at the Student Accommodation Code website.</p>
+      <p>Where you live is a big part of being at university, which is why Staffordshire is one of several universities that has signed-up to The Student Accommodation Code. The Code underpins our ongoing dedication to our students to make
+        sure you get the best out of your time living in our residences. The Code protects our students’ rights to safe, good quality accommodation. It outlines everything students can expect from our accommodation as well as their
+        responsibilities. Full details of The Code are available at the Student Accommodation Code website.</p>
 
       <img src="https://placeimg.com/600/200" alt=""/>
     </div>

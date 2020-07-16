@@ -79,6 +79,8 @@
   }
 
   &--shallow {
-    min-height: 40vh;
+    .masthead__inner {
+      min-height: 40vh;
+    }
   }
 }

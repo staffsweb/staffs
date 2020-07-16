@@ -822,7 +822,7 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 .masthead .wrap { position: relative; align-self: flex-end; z-index: 0; }
 
-.masthead--shallow { min-height: 40vh; }
+.masthead--shallow .masthead__inner { min-height: 40vh; }
 
 .megaNav { position: absolute; left: 0; right: 0; top: 0; background: white; font-size: 1.2em; z-index: 9; overflow: hidden; overflow-y: auto; box-sizing: border-box; overflow-scrolling: touch; transform: translateX(-150%); }
 
