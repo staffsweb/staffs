@@ -1,0 +1,147 @@
+<div class="masthead">
+  <div class="masthead__inner">
+    <div class="masthead__bg">
+      {% if bgImg %}
+        {{ bgImg }}
+      {% else %}
+        <img src="{{ ('/img/masthead' ~ random(5) ~ '.jpg') | path }}"/>
+      {% endif %}
+    </div>
+    <div class="wrap">
+      <nav class="breadcrumbs">
+        <ul>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">Courses</a>
+          </li>
+          <li>
+            <a href="#">Subjects</a>
+          </li>
+          <li>
+            <a href="#">Relatively Long Fourth Level</a>
+          </li>
+        </ul>
+      </nav>
+
+      {% include '@title' with {
+        text: 'Computer Gameplay Design, Production and Programming',
+        modifiers: ['has-tail'],
+        textElement: 'h1',
+        textElementStyle: 'h1',
+        animate: true
+      } %}
+      {% include '@title' with {
+        text: 'MSci',
+        modifiers: ['bg-white', 'has-tail'],
+        textElement: 'h6',
+        animate: true
+      } %}
+    </div>
+  </div>
+
+  <div class="masthead__overlay">
+    <div class="wrap">
+
+      <div class="masthead__overlayInner">
+        <div class="grid  grid-3-cols">
+          <div>
+            <div class="card  card--light">
+              <div class="card__content">
+                <h2 class="h4  card__title">Study Options</h2>
+                <form>
+                  <div class="form__item">
+                    <input type="radio" id="study-option-1" name="study-option" checked/> <label for="study-option-1">Full-time, Stoke-on-Trent campus</label>
+                  </div>
+                  <div class="form__item">
+                    <input type="radio" id="study-option-2" name="study-option"/> <label for="study-option-2">Full-time, City of Stoke-On-Trent Sixth Form College, with a foundation year</label>
+                  </div>
+                  <div class="form__item">
+                    <input type="radio" id="study-option-3" name="study-option"/> <label for="study-option-3">Full-time, Stoke-On-Trent campus, with a placement year</label>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="card  card--light">
+              <div class="card__content">
+                <h2 class="h4  card__title">Award Type</h2>
+                <form>
+                  <div class="form__item">
+                    <input type="radio" id="award-type-msci" name="award-type" checked/> <label for="award-type-msci">MSci</label>
+                  </div>
+                  <div class="form__item">
+                    <input type="radio" id="award-type-bschons" name="award-type"/> <label for="award-type-bschons">BSc (Hons)</label>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="card  card--light">
+              <div class="card__content">
+                <h2 class="h4  card__title">Key Facts</h2>
+                <dl class="meta  meta--inline">
+                  <div class="meta__item">
+                    <dt>UCAS code:</dt>
+                    <dd>I621</dd>
+                  </div>
+                  <div class="meta__item">
+                    <dt>Location:</dt>
+                    <dd>Stoke-on-Trent campus</dd>
+                  </div>
+                  <div class="meta__item">
+                    <dt>Duration:</dt>
+                    <dd>3 Years</dd>
+                  </div>
+                  <div class="meta__item">
+                    <dt>Start date:</dt>
+                    <dd>21 September 2020</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="slab  slab--bg-slate">
+  <div class="wrap">
+    <div class="grid  grid-3-cols">
+      <div>
+        <div class="card  card--ksp  card--light">
+          <div class="card__content">
+            <h3 class="h4  card__title">£11 million funding secured for business</h3>
+            <p>Text describing the USP here </p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="card  card--ksp  card--light">
+          <div class="card__content">
+            <h3 class="h4  card__title">Over 400 regional vacancies filled</h3>
+            <p>Text describing the USP here </p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="card  card--ksp  card--light">
+          <div class="card__content">
+            <h3 class="h4  card__title">71% of our apprentices secure a permanent position</h3>
+            <p>Text describing the USP here </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

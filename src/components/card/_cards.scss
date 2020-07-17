@@ -92,6 +92,11 @@ $card__internal-spacing: $spacing-sm;
       --accent-color: #{$value};
     }
   }
+
+  &--light {
+    --accent-color: #{rgba(white, 0.5)};
+    color: white;
+  }
 }
 
 a.card {
@@ -171,6 +176,7 @@ a.card {
 
   // these themes need to be updated 'manually' for now, as we're using an svg,
   // and I can't think of a clever way to update dynamically based on the accent var
+  // something using inline SVG use/fill?
 
   &.card--red {
     &:before {
@@ -225,6 +231,10 @@ a.card {
     img {
       vertical-align: baseline !important; // this is horribly lazy but browsers, sorry
     }
+  }
+
+  &.card--light {
+    color: white;
   }
 }
 

@@ -1,25 +1,27 @@
 {% include '@meganav' %}
 <div class="masthead">
-  <div class="masthead__bg">
-    <img src="{{ ('/img/masthead0.jpg') | path }}" />
-  </div>
-  <div class="wrap">
-    {% include '@title' with {
-      text: 'Shortlisted for "University of the year"',
-      modifiers: ['has-tail'],
-      textElement: 'h1',
-      textElementStyle: 'h2',
-      animate: true
-    } %}
-    {% include '@title' with {
-      text: '- The Times and The Sunday Times Good University Guide 2020',
-      modifiers: ['bg-white', 'has-tail'],
-      textElement: 'h6',
-      animate: true
-    } %}
-    {% include '@button' with {
-      text: 'Book an open day',
-    } %}
+  <div class="masthead__inner">
+    <div class="masthead__bg">
+      <img src="{{ ('/img/masthead0.jpg') | path }}"/>
+    </div>
+    <div class="wrap">
+      {% include '@title' with {
+        text: 'Shortlisted for "University of the year"',
+        modifiers: ['has-tail'],
+        textElement: 'h1',
+        textElementStyle: 'h2',
+        animate: true
+      } %}
+      {% include '@title' with {
+        text: '- The Times and The Sunday Times Good University Guide 2020',
+        modifiers: ['bg-white', 'has-tail'],
+        textElement: 'h6',
+        animate: true
+      } %}
+      {% include '@button' with {
+        text: 'Book an open day',
+      } %}
+    </div>
   </div>
 </div>
 
@@ -27,15 +29,15 @@
 <main id="main-content" role="main" class="">
   <div class="slab  slab--bg-slate">
     <div class="wrap">
-{#      <form>#}
-{#        <input type="text" placeholder="Search courses by keyword"/>#}
+      {#      <form>#}
+      {#        <input type="text" placeholder="Search courses by keyword"/>#}
 
-{#        <select>#}
-{#          <option selected disabled>All levels of study</option>#}
-{#        </select>#}
+      {#        <select>#}
+      {#          <option selected disabled>All levels of study</option>#}
+      {#        </select>#}
 
-{#        <input type="submit" class="button" value="Search"/>#}
-{#      </form>#}
+      {#        <input type="submit" class="button" value="Search"/>#}
+      {#      </form>#}
     </div>
   </div>
 
@@ -300,7 +302,7 @@
         </div>
 
         <figure class="quote-banner__figure  quote-banner__figure--align-bottom">
-          <img src="{{ '/img/placeholder-transparent-person.png' | path }}" alt="person smiling" />
+          <img src="{{ '/img/placeholder-transparent-person.png' | path }}" alt="person smiling"/>
         </figure>
       </div>
 

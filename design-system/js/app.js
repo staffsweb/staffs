@@ -348,8 +348,7 @@
       });
     });
 
-    $('.page-nav__link').on('click', function (e) {
-      // e.preventDefault();
+    $('.page-nav__link').on('click', function () {
       let target = $($(this).attr('href'));
 
       $('html, body').stop().animate({

@@ -1,16 +1,18 @@
 {% include '@meganav' %}
 <div class="masthead">
-  <div class="masthead__bg">
-    <img src="{{ ('/img/masthead' ~ random(4) ~ '.jpg') | path }}" />
-  </div>
-  <div class="wrap">
-    {% include '@breadcrumbs' %}
-    {% include '@title' with {
-      text: 'Student Life',
-      modifiers: ['has-tail'],
-      textElement: 'h1',
-      animate: true
-    } %}
+  <div class="masthead__inner">
+    <div class="masthead__bg">
+      <img src="{{ ('/img/masthead' ~ random(4) ~ '.jpg') | path }}"/>
+    </div>
+    <div class="wrap">
+      {% include '@breadcrumbs' %}
+      {% include '@title' with {
+        text: 'Student Life',
+        modifiers: ['has-tail'],
+        textElement: 'h1',
+        animate: true
+      } %}
+    </div>
   </div>
 </div>
 

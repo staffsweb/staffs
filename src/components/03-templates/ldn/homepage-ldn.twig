@@ -1,45 +1,47 @@
 {% include '@meganav--ldn' %}
 <div class="masthead">
-  <div class="masthead__bg">
-    <img src="{{ ('/img/theme-ldn/masthead0.jpg') | path }}" style="object-position: 50% 20%" />
-{#    <img src="https://dilondon.staffs.ac.uk/wp-content/uploads/2020/06/computer-science-sul-2000x888.jpg" style="object-position: 60% 35%" />#}
-  </div>
-  <div class="wrap">
-    {% include '@title' with {
-      text: 'Game Changers',
-      tail: true,
-      textElement: 'h1',
-      animate: true
-    } %}
-    {% include '@title' with {
-      text: 'Taking learning to the next level',
-      tail: true,
-      textElement: 'h4',
-      background: 'purple-deep-ldn',
-      animate: true
-    } %}
-    {% include '@title' with {
-      text: 'Study with Staffordshire University London and discover your potential in the latest tech industries.',
-      tail: true,
-      textElement: 'p',
-      background: 'white',
-      animate: true
-    } %}
+  <div class="masthead__inner">
+    <div class="masthead__bg">
+      <img src="{{ ('/img/theme-ldn/masthead0.jpg') | path }}" style="object-position: 50% 20%"/>
+      {#    <img src="https://dilondon.staffs.ac.uk/wp-content/uploads/2020/06/computer-science-sul-2000x888.jpg" style="object-position: 60% 35%" />#}
+    </div>
+    <div class="wrap">
+      {% include '@title' with {
+        text: 'Game Changers',
+        tail: true,
+        textElement: 'h1',
+        animate: true
+      } %}
+      {% include '@title' with {
+        text: 'Taking learning to the next level',
+        tail: true,
+        textElement: 'h4',
+        background: 'purple-deep-ldn',
+        animate: true
+      } %}
+      {% include '@title' with {
+        text: 'Study with Staffordshire University London and discover your potential in the latest tech industries.',
+        tail: true,
+        textElement: 'p',
+        background: 'white',
+        animate: true
+      } %}
+    </div>
   </div>
 </div>
 
 <main id="main-content" role="main" class="">
   <div class="slab  slab--bg-granite">
     <div class="wrap">
-{#      <form>#}
-{#        <input type="text" placeholder="Search courses by keyword"/>#}
+      {#      <form>#}
+      {#        <input type="text" placeholder="Search courses by keyword"/>#}
 
-{#        <select>#}
-{#          <option selected disabled>All levels of study</option>#}
-{#        </select>#}
+      {#        <select>#}
+      {#          <option selected disabled>All levels of study</option>#}
+      {#        </select>#}
 
-{#        <input type="submit" class="button" value="Search"/>#}
-{#      </form>#}
+      {#        <input type="submit" class="button" value="Search"/>#}
+      {#      </form>#}
     </div>
   </div>
 
@@ -364,7 +366,7 @@
         </div>
 
         <figure class="quote-banner__figure  ">
-          <img src="https://dilondon.staffs.ac.uk/wp-content/uploads/2019/07/Discord.jpg" alt="person smiling" />
+          <img src="https://dilondon.staffs.ac.uk/wp-content/uploads/2019/07/Discord.jpg" alt="person smiling"/>
         </figure>
       </div>
 

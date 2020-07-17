@@ -1,17 +1,19 @@
 {% include '@meganav' %}
 <div class="masthead">
-  <div class="masthead__bg">
-    <img src="{{ ('/img/masthead' ~ random(9) ~ '.jpg') | path }}" />
-  </div>
-  <div class="wrap">
-    {% include '@breadcrumbs' %}
-    {% include '@title' with {
-      text: 'Events',
-      modifiers: ['has-tail'],
-      textElement: 'div',
-      textElementStyle: 'h1',
-      animate: true
-    } %}
+  <div class="masthead__inner">
+    <div class="masthead__bg">
+      <img src="{{ ('/img/masthead' ~ random(9) ~ '.jpg') | path }}"/>
+    </div>
+    <div class="wrap">
+      {% include '@breadcrumbs' %}
+      {% include '@title' with {
+        text: 'Events',
+        modifiers: ['has-tail'],
+        textElement: 'div',
+        textElementStyle: 'h1',
+        animate: true
+      } %}
+    </div>
   </div>
 </div>
 
@@ -58,7 +60,9 @@
 
                 <h2 class="h6">Who should attend?</h2>
 
-                <p>2020 marks the International Year of the Nurse and Midwife, and Staffordshire University is joining colleagues across the globe to shine a spotlight on the sector. Celebrations kick off with a talk this week by Visiting Professor Ann-Marie Cannaby, Chief Nurse at the Royal Wolverhampton Hospital, at the University’s Centre of Excellence in Healthcare Education, Stafford.Two hundred years may have passed since the birth of Florence Nightingale, but patient care and safety remain the most important influencing factors within the fields of nursing and midwifery. Professor Cannaby will use her keynote presentation to explore curriculum developments.</p>
+                <p>2020 marks the International Year of the Nurse and Midwife, and Staffordshire University is joining colleagues across the globe to shine a spotlight on the sector. Celebrations kick off with a talk this week by Visiting
+                  Professor Ann-Marie Cannaby, Chief Nurse at the Royal Wolverhampton Hospital, at the University’s Centre of Excellence in Healthcare Education, Stafford.Two hundred years may have passed since the birth of Florence
+                  Nightingale, but patient care and safety remain the most important influencing factors within the fields of nursing and midwifery. Professor Cannaby will use her keynote presentation to explore curriculum developments.</p>
 
                 <div class="box  box--bg-slate  margin-y-2xl">
                   <div class="box__content">
@@ -75,13 +79,15 @@
                   <li>Have come to town</li>
                 </ul>
 
-                <p>On Monday 27 January a special event will mark Holocaust Memorial Day, with members of the Staffordshire University community sharing their experiences of visiting Srebrenica, where genocide occurred during the Bosnian War in 1995.  The same week, on Thursday 30 January, firearms expert Dr Rachel Bolton-King will deliver a lecture about her Churchill Fellowship travels to South Africa, USA and France.</p>
+                <p>On Monday 27 January a special event will mark Holocaust Memorial Day, with members of the Staffordshire University community sharing their experiences of visiting Srebrenica, where genocide occurred during the Bosnian
+                  War in 1995. The same week, on Thursday 30 January, firearms expert Dr Rachel Bolton-King will deliver a lecture about her Churchill Fellowship travels to South Africa, USA and France.</p>
 
                 <h2 class="h6">Other Highlights</h2>
-                <p>Other highlights include a public lecture from broadcaster and wheelchair basketball player Ade Adepitan MBE, which will take place on Tuesday 25 February. From surviving polio as a child to winning a bronze medal at the 2004 Summer Paralympics in Athens and a gold medal at the 2005 Paralympic World Cup in Manchester, Ade will share the ambitious and inspirational story of how he became a global campaigner against racism and disability discrimination.</p>
+                <p>Other highlights include a public lecture from broadcaster and wheelchair basketball player Ade Adepitan MBE, which will take place on Tuesday 25 February. From surviving polio as a child to winning a bronze medal at the
+                  2004 Summer Paralympics in Athens and a gold medal at the 2005 Paralympic World Cup in Manchester, Ade will share the ambitious and inspirational story of how he became a global campaigner against racism and disability
+                  discrimination.</p>
 
                 <p>James Morgan, Head of Communications at Staffordshire University, said:</p>
-
 
 
                 <div class="card  card--pullquote  card--maroon">
