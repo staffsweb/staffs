@@ -82,9 +82,7 @@ function sass() {
 
 function sassDist() {
 
-  const postCssPlugins = [autoprefixer({
-    browsers: COMPATIBILITY
-  })].filter(Boolean);
+  const postCssPlugins = [autoprefixer()].filter(Boolean);
 
   return gulp.src(PATHS.watch.sass)
       .pipe($.sass({
