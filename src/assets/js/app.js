@@ -3,6 +3,7 @@
 // @TODO: Learn to module bundle properly and manage dependencies with a proper package manager 🤦
 //@codekit-prepend silent './vendor/jquery.hoverIntent';
 //@codekit-prepend silent './vendor/smartResize';
+//@codekit-prepend silent './vendor/smartResize';
 //@codekit-prepend silent './vendor/slick-1.8.1/slick/slick';
 //@codekit-prepend silent './vendor/waypoints/lib/jquery.waypoints.js';
 

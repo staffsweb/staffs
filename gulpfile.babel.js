@@ -18,11 +18,13 @@ NB: THIS FILE IS CURRENTLY UNUSED
 import plugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import gulp from 'gulp';
+import rename from 'gulp-rename';
 import yaml from 'js-yaml';
 import fs from 'fs';
 import webpackStream from 'webpack-stream';
 import webpack from 'webpack';
 import named from 'vinyl-named';
+import codekit from 'gulp-codekit';
 import autoprefixer from 'autoprefixer';
 
 const $ = plugins();
@@ -39,7 +41,7 @@ function loadConfig() {
   return yaml.load(ymlFile);
 }
 
-gulp.task('default', gulp.series(setDev, server, gulp.parallel(sass, js), watch));
+gulp.task('default', gulp.series(setDev, gulp.parallel(sass, js), watch));
 gulp.task('deploy', gulp.parallel(setProd, sassDist, js));
 gulp.task('js', gulp.series(setDev, js));
 // gulp.task('images', gulp.series(setDev, themeImageMin));
@@ -75,9 +77,9 @@ function sass() {
       .pipe($.postcss(postCssPlugins))
       .pipe($.sourcemaps.write('.'))
       .pipe(gulp.dest(PATHS.assets.dev.css))
-      .pipe(browserSync.reload({
-        stream: true
-      }))
+      // .pipe(browserSync.reload({
+      //   stream: true
+      // }))
 }
 
 function sassDist() {
@@ -95,14 +97,16 @@ function sassDist() {
 
 function js() {
   return gulp.src(PATHS.js)
+      .pipe(codekit())
       .pipe(named())
       .on('error', logAndContinueError)
       .pipe(webpackStream(require("./webpack.config.js"), webpack))
       .on('error', logAndContinueError)
+      .pipe(rename({ suffix: '.min' }))
       .pipe(gulp.dest(assets_use_path.js))
-      .pipe(browserSync.reload({
-        stream: true
-      }))
+      // .pipe(browserSync.reload({
+      //   stream: true
+      // }))
 }
 
 function themeImageMin() {
@@ -134,5 +138,5 @@ function watch() {
   }, gulp.parallel(js, sass)));
   gulp.watch(PATHS.watch.sass, sass);
   gulp.watch(PATHS.watch.js, js);
-  gulp.watch(PATHS.watch.php, gulp.parallel(reloadWindows));
+  // gulp.watch(PATHS.watch.php, gulp.parallel(reloadWindows));
 }
