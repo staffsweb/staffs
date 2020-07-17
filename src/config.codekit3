@@ -1114,7 +1114,7 @@
 		"ec": 1,
 		"ft": 4,
 		"ma": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/assets/js/vendor/slick-1.8.1/slick/slick.css",
 		"oF": 0,
 		"oS": 2,
