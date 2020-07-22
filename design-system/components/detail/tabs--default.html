@@ -11,7 +11,9 @@
     <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
     <link rel="shortcut icon" href="../../themes/mandelbrot/favicon.ico" type="image/ico">
 
-<link rel="stylesheet" href="../../themes/mandelbrot/css/white.css?cachebust=1.2.1" type="text/css">
+<link rel="stylesheet" href="../../themes/mandelbrot/css/white.css?cachebust=1.4.0" type="text/css">
+
+<link rel="stylesheet" href="../../themes/mandelbrot/css/highlight.css?cachebust=1.4.0" type="text/css">
 
 
 <title>Tabs: Default | Staffordshire University Components</title>
@@ -26,16 +28,20 @@
     <div class="Frame-header">
         <div class="Header">
     <button class="Header-button Header-navToggle" data-action="toggle-sidebar">
-        <svg class="Header-navToggleIcon Header-navToggleIcon--open" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <div class="Header-navToggleIcon Header-navToggleIcon--open">
+            <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/>
 </svg>
 
-        <svg class="Header-navToggleIcon Header-navToggleIcon--closed" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        </div>
+        <div class="Header-navToggleIcon Header-navToggleIcon--closed">
+            <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
 </svg>
 
+        </div>
     </button>
     <a href="../../index.html" class="Header-title" data-pjax>Staffordshire University Components</a>
 </div>
@@ -87,7 +93,6 @@
                 class="Preview-iframe"
                 data-role="window"
                 src="../preview/tabs--default.html"
-                sandbox="allow-same-origin allow-scripts allow-forms allow-modals"
                  style=""
                 marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
             </iframe>
@@ -159,7 +164,7 @@
     
     
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-fe66aa224e8e225cc06b5026b50c1697-panel-html">
-    <code class="Code Code--lang-html">
+    <code class="Code Code--lang-html hljs">
         
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs  js-tabs"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__nav"</span>&gt;</span>
@@ -204,7 +209,7 @@
 
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-fe66aa224e8e225cc06b5026b50c1697-panel-view">
-    <code class="Code Code--lang-twig">
+    <code class="Code Code--lang-twig hljs">
         <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs  js-tabs"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__nav"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tabs__list"</span>&gt;</span>
@@ -273,7 +278,7 @@
                     <span class="Meta-value">
                         <div class="FileBrowser-itemPreview">
                             
-                            <code class="Code Code--lang-SCSS FileBrowser-code">
+                            <code class="Code Code--lang-SCSS FileBrowser-code hljs">
                                 <pre><span class="hljs-selector-class">.tabs</span> {
   <span class="hljs-variable">$tabs-inline-breakpoint</span>: <span class="hljs-number">65rem</span>;
 
@@ -377,7 +382,7 @@
                     <span class="Meta-value">
                         <div class="FileBrowser-itemPreview">
                             
-                            <code class="Code Code--lang-HTML FileBrowser-code">
+                            <code class="Code Code--lang-HTML FileBrowser-code hljs">
                                 <pre><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/1999/xhtml"</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
@@ -418,7 +423,7 @@
                     <span class="Meta-value">
                         <div class="FileBrowser-itemPreview">
                             
-                            <code class="Code Code--lang-JavaScript FileBrowser-code">
+                            <code class="Code Code--lang-JavaScript FileBrowser-code hljs">
                                 <pre><span class="hljs-comment">/* global jQuery */</span>
 
 (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">$</span>) </span>{
@@ -519,27 +524,34 @@
         </div>
 
         <div class="Frame-handle" data-role="frame-resize-handle"></div>
-        
+
         <div class="Frame-panel Frame-panel--sidebar" data-role="sidebar">
             <nav class="Navigation">
+    
+        
 
     
-
-
-    
+        
 <div class="Navigation-group">
 
 <div class="Tree" data-behaviour="tree" id="tree-components">
-    <h3 class="Tree-title">components</h3>
+    <div class="Tree-header">
+        <h3 class="Tree-title">components</h3>
+
+        <button type="button" data-behaviour="collapse-tree" class="Tree-collapse" title="Collapse tree" aria-label="Collapse tree" hidden>
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m9 11c-.6 0-1 .4-1 1s.4 1 1 1h6c.6 0 1-.4 1-1s-.4-1-1-1z"/><path d="m19 21h-14c-1.1 0-2-.9-2-2v-14c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2zm-14-16v14h14v-14z"/></svg>
+
+        </button>
+    </div>
     <ul class="Tree-items Tree-depth-1">
         
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-globals-and-docs">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Globals And Docs</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-globals-and-docs-items">
+                Globals And Docs
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-globals-and-docs-items">
             
             
             
@@ -720,10 +732,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-page">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Page</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-page-items">
+                Page
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-page-items">
             
             
             
@@ -731,10 +743,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-page-footer">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Page Footer</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-page-footer-items">
+                Page Footer
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-page-footer-items">
             
             
             
@@ -824,10 +836,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-templates">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Templates</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-templates-items">
+                Templates
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-templates-items">
             
             
             
@@ -835,10 +847,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-ldn">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Digital Institute London</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-ldn-items">
+                Digital Institute London
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-ldn-items">
             
             
             
@@ -1048,10 +1060,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-accordion">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Accordion</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-accordion-items">
+                Accordion
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-accordion-items">
             
             
             
@@ -1136,10 +1148,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-banner">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Banner</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-banner-items">
+                Banner
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-banner-items">
             
             
             
@@ -1248,10 +1260,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-box">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Box</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-box-items">
+                Box
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-box-items">
             
             
             
@@ -1408,10 +1420,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-breadcrumbs">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Breadcrumbs</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-breadcrumbs-items">
+                Breadcrumbs
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-breadcrumbs-items">
             
             
             
@@ -1472,10 +1484,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-button">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Button</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-button-items">
+                Button
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-button-items">
             
             
             
@@ -1776,10 +1788,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-card">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Cards</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-card-items">
+                Cards
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-card-items">
             
             
             
@@ -2224,10 +2236,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-feature-link">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Feature Link</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-feature-link-items">
+                Feature Link
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-feature-link-items">
             
             
             
@@ -2384,10 +2396,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-list">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Lists</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-list-items">
+                Lists
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-list-items">
             
             
             
@@ -2568,10 +2580,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-masthead">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Masthead</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-masthead-items">
+                Masthead
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-masthead-items">
             
             
             
@@ -2704,10 +2716,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-meganav">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>MegaNav</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-meganav-items">
+                MegaNav
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-meganav-items">
             
             
             
@@ -2768,10 +2780,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-meta">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Meta</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-meta-items">
+                Meta
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-meta-items">
             
             
             
@@ -2856,10 +2868,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-page-nav">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Page Nav</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-page-nav-items">
+                Page Nav
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-page-nav-items">
             
             
             
@@ -2919,11 +2931,35 @@
         
     
         
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="pager.html" data-pjax>
+                <span>Pager</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-quote">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Quotes</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-quote-items">
+                Quotes
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-quote-items">
             
             
             
@@ -3056,10 +3092,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-quote-banner">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Quote Banner</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-quote-banner-items">
+                Quote Banner
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-quote-banner-items">
             
             
             
@@ -3168,10 +3204,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-section-header">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Section Header</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-section-header-items">
+                Section Header
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-section-header-items">
             
             
             
@@ -3280,10 +3316,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-slab">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Slab</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-slab-items">
+                Slab
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-slab-items">
             
             
             
@@ -3392,10 +3428,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-slider">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Sliders</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-slider-items">
+                Sliders
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-slider-items">
             
             
             
@@ -3504,10 +3540,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-table">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Table</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-table-items">
+                Table
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-table-items">
             
             
             
@@ -3592,10 +3628,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-tabs">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Tabs</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-tabs-items">
+                Tabs
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-tabs-items">
             
             
             
@@ -3680,10 +3716,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-tile">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Tile</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-tile-items">
+                Tile
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-tile-items">
             
             
             
@@ -3768,10 +3804,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-title">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Title</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-title-items">
+                Title
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-title-items">
             
             
             
@@ -4101,7 +4137,7 @@
 </div>
 
 
-
+    
 </nav>
 
         </div>
@@ -4111,7 +4147,7 @@
 
 
 
-<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.2.1"></script>
+<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.4.0"></script>
 
 
 

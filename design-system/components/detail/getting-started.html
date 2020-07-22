@@ -11,7 +11,9 @@
     <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
     <link rel="shortcut icon" href="../../themes/mandelbrot/favicon.ico" type="image/ico">
 
-<link rel="stylesheet" href="../../themes/mandelbrot/css/white.css?cachebust=1.2.1" type="text/css">
+<link rel="stylesheet" href="../../themes/mandelbrot/css/white.css?cachebust=1.4.0" type="text/css">
+
+<link rel="stylesheet" href="../../themes/mandelbrot/css/highlight.css?cachebust=1.4.0" type="text/css">
 
 
 <title>Getting Started | Staffordshire University Components</title>
@@ -26,16 +28,20 @@
     <div class="Frame-header">
         <div class="Header">
     <button class="Header-button Header-navToggle" data-action="toggle-sidebar">
-        <svg class="Header-navToggleIcon Header-navToggleIcon--open" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <div class="Header-navToggleIcon Header-navToggleIcon--open">
+            <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/>
 </svg>
 
-        <svg class="Header-navToggleIcon Header-navToggleIcon--closed" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        </div>
+        <div class="Header-navToggleIcon Header-navToggleIcon--closed">
+            <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
 </svg>
 
+        </div>
     </button>
     <a href="../../index.html" class="Header-title" data-pjax>Staffordshire University Components</a>
 </div>
@@ -87,7 +93,6 @@
                 class="Preview-iframe"
                 data-role="window"
                 src="../preview/getting-started.html"
-                sandbox="allow-same-origin allow-scripts allow-forms allow-modals"
                  style=""
                 marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
             </iframe>
@@ -154,7 +159,7 @@
     
     
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-96c8bd3440dc66a95e14bbe0bf3c9d35-panel-html">
-    <code class="Code Code--lang-html">
+    <code class="Code Code--lang-html hljs">
         
         <pre>&lt;div class="title  title--has-tail"&gt;
     &lt;h1 class="title__highlight"&gt;Getting Started&lt;/h1&gt;
@@ -189,33 +194,32 @@
 
 &lt;p&gt;to get everything ready, then you should be able to run:
 
-    &lt;pre&gt;fractal start&lt;/pre&gt;
+&lt;pre&gt;fractal start&lt;/pre&gt;
 
-    &lt;p&gt;To get a localhost version running on your system.&lt;/p&gt;
+&lt;p&gt;To get a localhost version running on your system.&lt;/p&gt;
 
-    &lt;p&gt;Fractal's settings can be found in &lt;code&gt;fractal.js&lt;/code&gt; in the root, as per &lt;a href="https://fractal.build/guide/project-settings.html"&gt;the docs&lt;/a&gt;. Changing anything in this file will need a restart of Fractal to take effect.&lt;/p&gt;
+&lt;p&gt;Fractal's settings can be found in &lt;code&gt;fractal.js&lt;/code&gt; in the root, as per &lt;a href="https://fractal.build/guide/project-settings.html"&gt;the docs&lt;/a&gt;. Changing anything in this file will need a restart of Fractal to take effect.&lt;/p&gt;
 
-    &lt;div class="section-header  section-header--bg-offwhite align-full  margin-top-6xl" id="file-structure"&gt;
-        &lt;div class="wrap"&gt;
-            &lt;div class="section-header__title  title  title--bg-maroon  title--has-tail"&gt;
-                &lt;h2 class="title__highlight"&gt;File structure&lt;/h2&gt;
-            &lt;/div&gt;
+&lt;div class="section-header  section-header--bg-offwhite align-full  margin-top-6xl" id="file-structure"&gt;
+    &lt;div class="wrap"&gt;
+        &lt;div class="section-header__title  title  title--bg-maroon  title--has-tail"&gt;
+            &lt;h2 class="title__highlight"&gt;File structure&lt;/h2&gt;
         &lt;/div&gt;
     &lt;/div&gt;
+&lt;/div&gt;
 
-    &lt;p&gt;The file structure for Fractal is set in &lt;code&gt;fractal.js&lt;/code&gt; for components, assets, docs and the build folder.&lt;/p&gt;
-    &lt;p&gt;The docs folder is unused, we have a folder in components (&lt;code&gt;src/components/01-globals-and-docs&lt;/code&gt;) for these docs (yes, these ones you're reading now), as it's a bit easier to add fancier styles and examples here.&lt;/p&gt;
+&lt;p&gt;The file structure for Fractal is set in &lt;code&gt;fractal.js&lt;/code&gt; for components, assets, docs and the build folder.&lt;/p&gt;
+&lt;p&gt;The docs folder is unused, we have a folder in components (&lt;code&gt;src/components/01-globals-and-docs&lt;/code&gt;) for these docs (yes, these ones you're reading now), as it's a bit easier to add fancier styles and examples here.&lt;/p&gt;
 
-    &lt;h3 class="h4"&gt;The Build Folder&lt;/h3&gt;
-    &lt;p&gt;The &lt;code&gt;design-system&lt;/code&gt; folder is the &lt;strong&gt;build folder&lt;/strong&gt;. This contains &lt;strong&gt;generated code and should not be edited&lt;/strong&gt;. It will be overwritten when building a static version of the component library. More on this later.&lt;/p&gt;
+&lt;h3 class="h4"&gt;The Build Folder&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;design-system&lt;/code&gt; folder is the &lt;strong&gt;build folder&lt;/strong&gt;. This contains &lt;strong&gt;generated code and should not be edited&lt;/strong&gt;. It will be overwritten when building a static version of the component library. More on this later.&lt;/p&gt;
 
-    &lt;h3 class="h4"&gt;The Source Folder&lt;/h3&gt;
-    &lt;p&gt;&lt;code&gt;src&lt;/code&gt; contains everything you'll edit. It runs the localhost version while you're building things, and is then compiled when &lt;a href="https://fractal.build/guide/web/exporting-static-html.html#configuration"&gt;exporting a static HTML version&lt;/a&gt;.
+&lt;h3 class="h4"&gt;The Source Folder&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;src&lt;/code&gt; contains everything you'll edit. It runs the localhost version while you're building things, and is then compiled when &lt;a href="https://fractal.build/guide/web/exporting-static-html.html#configuration"&gt;exporting a static HTML version&lt;/a&gt;.
 
-        &lt;h3 class="h4"&gt;Templating Note&lt;/h3&gt;
-        &lt;p&gt;You'll notice that all the template files use &lt;a href="https://twig.symfony.com"&gt;Twig&lt;/a&gt; as a &lt;a href="https://fractal.build/guide/customisation/template-engines.html"&gt;templating language&lt;/a&gt;. This means components can be built to be directly included in Drupal and WordPress (using &lt;a href="https://github.com/timber/timber"&gt;Timber&lt;/a&gt; or likewise). While that might not be directly appropriate for your project's integration, it sped up the development of components at the time 😇.&lt;/p&gt;
-        &lt;p&lt;strong&gt;Plain ol' HTML is valid Twig, and the compiled HTML can be viewed for all components from within Fractal in the HTML tab along the bottom of the screen&lt;/strong&gt;.
-    &lt;/p&gt;
+&lt;h3 class="h4"&gt;Templating Note&lt;/h3&gt;
+&lt;p&gt;You'll notice that all the template files use &lt;a href="https://twig.symfony.com"&gt;Twig&lt;/a&gt; as a &lt;a href="https://fractal.build/guide/customisation/template-engines.html"&gt;templating language&lt;/a&gt;. This means components can be built to be directly included in Drupal and WordPress (using &lt;a href="https://github.com/timber/timber"&gt;Timber&lt;/a&gt; or likewise). While that might not be directly appropriate for your project's integration, it sped up the development of components at the time 😇.&lt;/p&gt;
+&lt;p&lt;strong&gt;Plain ol' HTML is valid Twig, and the compiled HTML can be viewed for all components from within Fractal in the HTML tab along the bottom of the screen&lt;/strong&gt;.&lt;/p&gt;
 
     &lt;h3 class="h4"&gt;Global Assets&lt;/h3&gt;
     &lt;p&gt;Assets like fonts, images, js and styles (in &lt;a href="https://sass-lang.com"&gt;Sass&lt;/a&gt;) are stored in &lt;code&gt;src/assets&lt;/code&gt;. Edit them here, they get copied to the build folder when building a static version of the component library.&lt;/p&gt;
@@ -247,86 +251,86 @@
     &lt;p class="intro"&gt;The build process has significant room for improvement, but was chosen for speed of getting a component library up, because it 'just works' 😬. If improved, remember to update these docs.&lt;/p&gt;
 
     &lt;p&gt;We use a 'designer-friendly' GUI app for code compilation. It's currently set up for use with &lt;a href="https://codekitapp.com"&gt;CodeKit&lt;/a&gt; which sadly is a &lt;strong&gt;Mac only&lt;/strong&gt; app. A suitable cross-platform GUI alternative might be &lt;a href="https://prepros.io"&gt;PrePros&lt;/a&gt;.
-        &lt;p&gt;CodeKit provides, among other things (simply drag in the &lt;code&gt;src&lt;/code&gt; folder, and &lt;code&gt;config.codekit3&lt;/code&gt; should be picked up with the settings):&lt;/p&gt;
-        &lt;ul&gt;
-            &lt;li&gt;Sass to CSS compilation (currently using Libsass)&lt;/li&gt;
-            &lt;li&gt;Sass syntax checking&lt;/li&gt;
-            &lt;li&gt;Compact output style, works best for git diffs, but compressed (minified) is an option&lt;/li&gt;
-            &lt;li&gt;Source maps&lt;/li&gt;
-            &lt;li&gt;Autoprefixer&lt;/li&gt;
-            &lt;li&gt;Theme image optimisation (for SVG, JPEG, PNG, etc.)&lt;/li&gt;
-            &lt;li&gt;JavaScript transpilation (Babel)&lt;/li&gt;
-            &lt;li&gt;ESLint syntax checking&lt;/li&gt;
-            &lt;li&gt;JS minification&lt;/li&gt;
-            &lt;li&gt;JS source maps&lt;/li&gt;
-        &lt;/ul&gt;
+    &lt;p&gt;CodeKit provides, among other things (simply drag in the &lt;code&gt;src&lt;/code&gt; folder, and &lt;code&gt;config.codekit3&lt;/code&gt; should be picked up with the settings):&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Sass to CSS compilation (currently using Libsass)&lt;/li&gt;
+        &lt;li&gt;Sass syntax checking&lt;/li&gt;
+        &lt;li&gt;Compact output style, works best for git diffs, but compressed (minified) is an option&lt;/li&gt;
+        &lt;li&gt;Source maps&lt;/li&gt;
+        &lt;li&gt;Autoprefixer&lt;/li&gt;
+        &lt;li&gt;Theme image optimisation (for SVG, JPEG, PNG, etc.)&lt;/li&gt;
+        &lt;li&gt;JavaScript transpilation (Babel)&lt;/li&gt;
+        &lt;li&gt;ESLint syntax checking&lt;/li&gt;
+        &lt;li&gt;JS minification&lt;/li&gt;
+        &lt;li&gt;JS source maps&lt;/li&gt;
+    &lt;/ul&gt;
 
-        &lt;p&gt;&lt;strong&gt;There is a gulpfile in the root where a more command-line build process for Sass/JS could be set up. It may be wise to do so. This was attempted quickly but wasn't completed, so there's some packages in &lt;code&gt;package.json&lt;/code&gt; that aren't used. Please feel free to do a better job of this than I did. 😅&lt;/strong&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;There is a gulpfile in the root where a more command-line build process for Sass/JS could be set up. It may be wise to do so. This was attempted quickly but wasn't completed, so there's some packages in &lt;code&gt;package.json&lt;/code&gt; that aren't used. Please feel free to do a better job of this than I did. 😅&lt;/strong&gt;&lt;/p&gt;
 
-        &lt;p&gt;CodeKit watches Sass/JS and compiles on the fly, so when running the localhost version of the site, the assets in &lt;code&gt;src/assets/&lt;/code&gt; are used, and after generating a static version of the library, the assets are copied over to the build folder. Don't watch the files in the build folder, it's just an output.&lt;/p&gt;
+    &lt;p&gt;CodeKit watches Sass/JS and compiles on the fly, so when running the localhost version of the site, the assets in &lt;code&gt;src/assets/&lt;/code&gt; are used, and after generating a static version of the library, the assets are copied over to the build folder. Don't watch the files in the build folder, it's just an output.&lt;/p&gt;
 
-        &lt;h3 class="h4"&gt;Sass (to CSS)&lt;/h3&gt;
+    &lt;h3 class="h4"&gt;Sass (to CSS)&lt;/h3&gt;
 
-        &lt;p&gt;Global styles are located in &lt;code&gt;src/assets/styles/&lt;/code&gt;.&lt;/p&gt;
+    &lt;p&gt;Global styles are located in &lt;code&gt;src/assets/styles/&lt;/code&gt;.&lt;/p&gt;
 
-        &lt;p&gt;The entry point / manifest for generation of the main CSS is in &lt;code&gt;src/assets/styles/main.scss&lt;/code&gt;&lt;/p&gt;
+    &lt;p&gt;The entry point / manifest for generation of the main CSS is in &lt;code&gt;src/assets/styles/main.scss&lt;/code&gt;&lt;/p&gt;
 
-        &lt;ul&gt;
-            &lt;li&gt;&lt;code&gt;__vars&lt;/code&gt; is used for variables/settings, nothing in this folder outputs code, it's just variables and mixins to be called from other places. &lt;strong&gt;Change things here, and they'll likely cascade across the site.&lt;/strong&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;code&gt;_global&lt;/code&gt; contains global, non-componentized styles required for everything, like base typography, layout wrappers&lt;/li&gt;
-            &lt;li&gt;&lt;code&gt;_grid&lt;/code&gt; contains the code that actually outputs the grid system, it doesn't need to be edited unless you want to for example, significantly rename classes or upgrade it to use flexbox rather than floats. You can &lt;em&gt;extend&lt;/em&gt; the grid system by editing its settings &lt;code&gt;_grid.scss&lt;/code&gt; &lt;strong&gt; in &lt;code&gt;__vars&lt;/code&gt;&lt;/strong&gt;.&lt;/li&gt;
-            &lt;li&gt;&lt;code&gt;_utils&lt;/code&gt; contains code which outputs utility classes&lt;/li&gt;
-            &lt;li&gt;&lt;code&gt;_vendor&lt;/code&gt; is a place to add third-party styles if they can't be enqueued in another way. We mostly just use this to include &lt;a href="https://necolas.github.io/normalize.css/"&gt;Normalize&lt;/a&gt;.&lt;/li&gt;
-        &lt;/ul&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;code&gt;__vars&lt;/code&gt; is used for variables/settings, nothing in this folder outputs code, it's just variables and mixins to be called from other places. &lt;strong&gt;Change things here, and they'll likely cascade across the site.&lt;/strong&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;code&gt;_global&lt;/code&gt; contains global, non-componentized styles required for everything, like base typography, layout wrappers&lt;/li&gt;
+        &lt;li&gt;&lt;code&gt;_grid&lt;/code&gt; contains the code that actually outputs the grid system, it doesn't need to be edited unless you want to for example, significantly rename classes or upgrade it to use flexbox rather than floats. You can &lt;em&gt;extend&lt;/em&gt; the grid system by editing its settings &lt;code&gt;_grid.scss&lt;/code&gt; &lt;strong&gt; in &lt;code&gt;__vars&lt;/code&gt;&lt;/strong&gt;.&lt;/li&gt;
+        &lt;li&gt;&lt;code&gt;_utils&lt;/code&gt; contains code which outputs utility classes&lt;/li&gt;
+        &lt;li&gt;&lt;code&gt;_vendor&lt;/code&gt; is a place to add third-party styles if they can't be enqueued in another way. We mostly just use this to include &lt;a href="https://necolas.github.io/normalize.css/"&gt;Normalize&lt;/a&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
 
-        &lt;p&gt;&lt;strong&gt;Component styles&lt;/strong&gt; are separated out into their component folders, and are included by main.scss. It 'reaches out' of the assets folder and into each component, for example:&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Component styles&lt;/strong&gt; are separated out into their component folders, and are included by main.scss. It 'reaches out' of the assets folder and into each component, for example:&lt;/p&gt;
 
-        &lt;pre&gt;
+    &lt;pre&gt;
 @import "__vars/_all";
 @import "../../components/card/cards";
 &lt;/pre&gt;
 
-        &lt;p&gt;&lt;strong&gt;NB: We do not (currently) use 'globbing' to include all files (such as components) - eg. &lt;code&gt;@import "../../components/*/*";&lt;/code&gt;&lt;/strong&gt;. Partially as some Sass compilers don't support it for 'reasons', and partially to control the ordering of what gets imported (one of the 'reasons' some Sass compilers opt not to support globbing). Thus, with the current build process, when you add a partial, you'll need to &lt;strong&gt;manually (purposefully) add it to &lt;code&gt;main.scss&lt;/code&gt;&lt;/strong&gt;. More on this in the guide below.&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;NB: We do not (currently) use 'globbing' to include all files (such as components) - eg. &lt;code&gt;@import "../../components/*/*";&lt;/code&gt;&lt;/strong&gt;. Partially as some Sass compilers don't support it for 'reasons', and partially to control the ordering of what gets imported (one of the 'reasons' some Sass compilers opt not to support globbing). Thus, with the current build process, when you add a partial, you'll need to &lt;strong&gt;manually (purposefully) add it to &lt;code&gt;main.scss&lt;/code&gt;&lt;/strong&gt;. More on this in the guide below.&lt;/p&gt;
 
-        &lt;h3 class="h4"&gt;JavaScript&lt;/h3&gt;
+    &lt;h3 class="h4"&gt;JavaScript&lt;/h3&gt;
 
-        &lt;p&gt;Our first rule is to use sparingly. If a JavaScript-free solution is available (like &lt;a href="https://developer.mozilla.org/en/docs/Web/HTML/Element/details"&gt;&amp;lt;details&amp;gt;&lt;/a&gt;), prefer it!&lt;/p&gt;
-        &lt;p&gt;That said, it's mad to think we can eliminate JavaScript completely.&lt;/p&gt;
-        &lt;p&gt;JavaScript lives in &lt;code&gt;src/assets/js&lt;/code&gt; and is currently compiled by CodeKit.&lt;/p&gt;
-        &lt;p&gt;The entry point is &lt;code&gt;app.js&lt;/code&gt;, which currently uses &lt;code&gt;@codekit-prepend&lt;/code&gt;, CodeKit's &lt;a href="https://codekitapp.com/help/javascript/"&gt;simple JavaScript imports&lt;/a&gt; to bring in third-party libraries we keep in &lt;code&gt;src/assets/js/vendor/&lt;/code&gt;. Using "proper" package management for this would be a great idea.&lt;/p&gt;
-        &lt;p&gt;As mentioned above, it'd also be really nice to separate out what are currently three functions for the megaNav, tabs and slider into separate files in their component folders, and bundle them 'properly' using modern JavaScript methods.&lt;/p&gt;
-        &lt;p&gt;It ain't perfect, but it Works For Now&amp;trade;.&lt;/p&gt;
+    &lt;p&gt;Our first rule is to use sparingly. If a JavaScript-free solution is available (like &lt;a href="https://developer.mozilla.org/en/docs/Web/HTML/Element/details"&gt;&amp;lt;details&amp;gt;&lt;/a&gt;), prefer it!&lt;/p&gt;
+    &lt;p&gt;That said, it's mad to think we can eliminate JavaScript completely.&lt;/p&gt;
+    &lt;p&gt;JavaScript lives in &lt;code&gt;src/assets/js&lt;/code&gt; and is currently compiled by CodeKit.&lt;/p&gt;
+    &lt;p&gt;The entry point is &lt;code&gt;app.js&lt;/code&gt;, which currently uses &lt;code&gt;@codekit-prepend&lt;/code&gt;, CodeKit's &lt;a href="https://codekitapp.com/help/javascript/"&gt;simple JavaScript imports&lt;/a&gt; to bring in third-party libraries we keep in &lt;code&gt;src/assets/js/vendor/&lt;/code&gt;. Using "proper" package management for this would be a great idea.&lt;/p&gt;
+    &lt;p&gt;As mentioned above, it'd also be really nice to separate out what are currently three functions for the megaNav, tabs and slider into separate files in their component folders, and bundle them 'properly' using modern JavaScript methods.&lt;/p&gt;
+    &lt;p&gt;It ain't perfect, but it Works For Now&amp;trade;.&lt;/p&gt;
 
-        &lt;div class="section-header  section-header--bg-offwhite align-full  margin-top-6xl" id="adding-a-new-component"&gt;
-            &lt;div class="wrap"&gt;
-                &lt;div class="section-header__title  title  title--bg-maroon  title--has-tail"&gt;
-                    &lt;h2 class="title__highlight"&gt;Guide: Adding a new component&lt;/h2&gt;
-                &lt;/div&gt;
+    &lt;div class="section-header  section-header--bg-offwhite align-full  margin-top-6xl" id="adding-a-new-component"&gt;
+        &lt;div class="wrap"&gt;
+            &lt;div class="section-header__title  title  title--bg-maroon  title--has-tail"&gt;
+                &lt;h2 class="title__highlight"&gt;Guide: Adding a new component&lt;/h2&gt;
             &lt;/div&gt;
         &lt;/div&gt;
+    &lt;/div&gt;
 
-        &lt;ol&gt;
-            &lt;li&gt;From command line, if Fractal isn't already running, run
-                &lt;pre&gt;fractal start&lt;/pre&gt; form the root of the project, this should start Fractal, and open your browser to the localhost.&lt;/li&gt;
-            &lt;li&gt;Create a folder for the component in &lt;code&gt;src/components/&lt;/code&gt;, eg. &lt;code&gt;src/components/your-component/&lt;/code&gt;&lt;/li&gt;
-            &lt;li&gt;Create a &lt;code&gt;.twig&lt;/code&gt; template file (for the HTML) inside the folder, .eg &lt;code&gt;src/components/your-component/your-component.twig&lt;/code&gt; - as soon as you do this, Fractal should refresh and the component should appear in the components list on the left&lt;/li&gt;
-            &lt;li&gt;Create a &lt;code&gt;.scss&lt;/code&gt; 'partial' file prefixed with an underscore (this lets the compiler know not to directly compile the file, because it is included by another file), eg. &lt;code&gt;src/components/your-component/_your-component.scss&lt;/code&gt;&lt;/li&gt;
-            &lt;li&gt;Reference the partial &lt;code&gt;.scss&lt;/code&gt; in &lt;code&gt;src/assets/styles/main.scss&lt;/code&gt;, so that it's brought into the site CSS, by adding a line like so:
-                &lt;pre&gt;@import "../../components/your-component/your-component";&lt;/pre&gt;
-                For now, this will be compiled to &lt;code&gt;src/assets/styles/main.css&lt;/code&gt;, which is referenced in Fractal.&lt;/li&gt;
-            &lt;li&gt;Write the HTML and Sass for your component&lt;/li&gt;
-            &lt;li&gt;When you're done, &lt;a href="https://fractal.build/guide/web/exporting-static-html.html#configuration"&gt;run a build to a static HTML version&lt;/a&gt; by running
-                &lt;pre&gt;fractal build&lt;/pre&gt; from the command line. This will compile .twig to static HTML, and copy all assets (fonts/img/css) to the &lt;code&gt;design-system&lt;/code&gt; folder, so the component library can be viewed without having to run a localhost version&lt;/li&gt;
-            &lt;li&gt;Add the new/modified files to your chosen flavour of source control&lt;/li&gt;
-            &lt;li&gt;Repeat!&lt;/li&gt;
-        &lt;/ol&gt;</pre>
+    &lt;ol&gt;
+        &lt;li&gt;From command line, if Fractal isn't already running, run
+            &lt;pre&gt;fractal start&lt;/pre&gt; form the root of the project, this should start Fractal, and open your browser to the localhost.&lt;/li&gt;
+        &lt;li&gt;Create a folder for the component in &lt;code&gt;src/components/&lt;/code&gt;, eg. &lt;code&gt;src/components/your-component/&lt;/code&gt;&lt;/li&gt;
+        &lt;li&gt;Create a &lt;code&gt;.twig&lt;/code&gt; template file (for the HTML) inside the folder, .eg &lt;code&gt;src/components/your-component/your-component.twig&lt;/code&gt; - as soon as you do this, Fractal should refresh and the component should appear in the components list on the left&lt;/li&gt;
+        &lt;li&gt;Create a &lt;code&gt;.scss&lt;/code&gt; 'partial' file prefixed with an underscore (this lets the compiler know not to directly compile the file, because it is included by another file), eg. &lt;code&gt;src/components/your-component/_your-component.scss&lt;/code&gt;&lt;/li&gt;
+        &lt;li&gt;Reference the partial &lt;code&gt;.scss&lt;/code&gt; in &lt;code&gt;src/assets/styles/main.scss&lt;/code&gt;, so that it's brought into the site CSS, by adding a line like so:
+            &lt;pre&gt;@import "../../components/your-component/your-component";&lt;/pre&gt;
+            For now, this will be compiled to &lt;code&gt;src/assets/styles/main.css&lt;/code&gt;, which is referenced in Fractal.&lt;/li&gt;
+        &lt;li&gt;Write the HTML and Sass for your component&lt;/li&gt;
+        &lt;li&gt;When you're done, &lt;a href="https://fractal.build/guide/web/exporting-static-html.html#configuration"&gt;run a build to a static HTML version&lt;/a&gt; by running
+            &lt;pre&gt;fractal build&lt;/pre&gt; from the command line. This will compile .twig to static HTML, and copy all assets (fonts/img/css) to the &lt;code&gt;design-system&lt;/code&gt; folder, so the component library can be viewed without having to run a localhost version&lt;/li&gt;
+        &lt;li&gt;Add the new/modified files to your chosen flavour of source control&lt;/li&gt;
+        &lt;li&gt;Repeat!&lt;/li&gt;
+    &lt;/ol&gt;</pre>
         
     </code>
 </div>
 
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-96c8bd3440dc66a95e14bbe0bf3c9d35-panel-view">
-    <code class="Code Code--lang-twig">
+    <code class="Code Code--lang-twig hljs">
         <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title  title--has-tail"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title__highlight"</span>&gt;</span>Getting Started<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -560,27 +564,34 @@
         </div>
 
         <div class="Frame-handle" data-role="frame-resize-handle"></div>
-        
+
         <div class="Frame-panel Frame-panel--sidebar" data-role="sidebar">
             <nav class="Navigation">
+    
+        
 
     
-
-
-    
+        
 <div class="Navigation-group">
 
 <div class="Tree" data-behaviour="tree" id="tree-components">
-    <h3 class="Tree-title">components</h3>
+    <div class="Tree-header">
+        <h3 class="Tree-title">components</h3>
+
+        <button type="button" data-behaviour="collapse-tree" class="Tree-collapse" title="Collapse tree" aria-label="Collapse tree" hidden>
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m9 11c-.6 0-1 .4-1 1s.4 1 1 1h6c.6 0 1-.4 1-1s-.4-1-1-1z"/><path d="m19 21h-14c-1.1 0-2-.9-2-2v-14c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2zm-14-16v14h14v-14z"/></svg>
+
+        </button>
+    </div>
     <ul class="Tree-items Tree-depth-1">
         
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-globals-and-docs">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Globals And Docs</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-globals-and-docs-items">
+                Globals And Docs
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-globals-and-docs-items">
             
             
             
@@ -761,10 +772,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-page">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Page</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-page-items">
+                Page
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-page-items">
             
             
             
@@ -772,10 +783,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-page-footer">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Page Footer</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-page-footer-items">
+                Page Footer
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-page-footer-items">
             
             
             
@@ -865,10 +876,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-templates">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Templates</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-templates-items">
+                Templates
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-templates-items">
             
             
             
@@ -876,10 +887,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-ldn">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Digital Institute London</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-ldn-items">
+                Digital Institute London
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-ldn-items">
             
             
             
@@ -1089,10 +1100,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-accordion">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Accordion</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-accordion-items">
+                Accordion
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-accordion-items">
             
             
             
@@ -1177,10 +1188,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-banner">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Banner</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-banner-items">
+                Banner
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-banner-items">
             
             
             
@@ -1289,10 +1300,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-box">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Box</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-box-items">
+                Box
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-box-items">
             
             
             
@@ -1449,10 +1460,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-breadcrumbs">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Breadcrumbs</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-breadcrumbs-items">
+                Breadcrumbs
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-breadcrumbs-items">
             
             
             
@@ -1513,10 +1524,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-button">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Button</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-button-items">
+                Button
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-button-items">
             
             
             
@@ -1817,10 +1828,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-card">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Cards</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-card-items">
+                Cards
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-card-items">
             
             
             
@@ -2265,10 +2276,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-feature-link">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Feature Link</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-feature-link-items">
+                Feature Link
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-feature-link-items">
             
             
             
@@ -2425,10 +2436,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-list">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Lists</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-list-items">
+                Lists
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-list-items">
             
             
             
@@ -2609,10 +2620,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-masthead">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Masthead</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-masthead-items">
+                Masthead
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-masthead-items">
             
             
             
@@ -2745,10 +2756,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-meganav">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>MegaNav</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-meganav-items">
+                MegaNav
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-meganav-items">
             
             
             
@@ -2809,10 +2820,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-meta">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Meta</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-meta-items">
+                Meta
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-meta-items">
             
             
             
@@ -2897,10 +2908,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-page-nav">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Page Nav</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-page-nav-items">
+                Page Nav
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-page-nav-items">
             
             
             
@@ -2960,11 +2971,35 @@
         
     
         
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="pager.html" data-pjax>
+                <span>Pager</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-quote">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Quotes</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-quote-items">
+                Quotes
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-quote-items">
             
             
             
@@ -3097,10 +3132,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-quote-banner">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Quote Banner</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-quote-banner-items">
+                Quote Banner
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-quote-banner-items">
             
             
             
@@ -3209,10 +3244,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-section-header">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Section Header</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-section-header-items">
+                Section Header
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-section-header-items">
             
             
             
@@ -3321,10 +3356,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-slab">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Slab</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-slab-items">
+                Slab
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-slab-items">
             
             
             
@@ -3433,10 +3468,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-slider">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Sliders</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-slider-items">
+                Sliders
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-slider-items">
             
             
             
@@ -3545,10 +3580,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-table">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Table</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-table-items">
+                Table
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-table-items">
             
             
             
@@ -3633,10 +3668,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-tabs">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Tabs</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-tabs-items">
+                Tabs
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-tabs-items">
             
             
             
@@ -3721,10 +3756,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-tile">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Tile</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-tile-items">
+                Tile
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-tile-items">
             
             
             
@@ -3809,10 +3844,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-title">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Title</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-title-items">
+                Title
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-title-items">
             
             
             
@@ -4142,7 +4177,7 @@
 </div>
 
 
-
+    
 </nav>
 
         </div>
@@ -4152,7 +4187,7 @@
 
 
 
-<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.2.1"></script>
+<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.4.0"></script>
 
 
 

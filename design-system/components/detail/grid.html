@@ -11,7 +11,9 @@
     <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
     <link rel="shortcut icon" href="../../themes/mandelbrot/favicon.ico" type="image/ico">
 
-<link rel="stylesheet" href="../../themes/mandelbrot/css/white.css?cachebust=1.2.1" type="text/css">
+<link rel="stylesheet" href="../../themes/mandelbrot/css/white.css?cachebust=1.4.0" type="text/css">
+
+<link rel="stylesheet" href="../../themes/mandelbrot/css/highlight.css?cachebust=1.4.0" type="text/css">
 
 
 <title>Grid | Staffordshire University Components</title>
@@ -26,16 +28,20 @@
     <div class="Frame-header">
         <div class="Header">
     <button class="Header-button Header-navToggle" data-action="toggle-sidebar">
-        <svg class="Header-navToggleIcon Header-navToggleIcon--open" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <div class="Header-navToggleIcon Header-navToggleIcon--open">
+            <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/>
 </svg>
 
-        <svg class="Header-navToggleIcon Header-navToggleIcon--closed" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        </div>
+        <div class="Header-navToggleIcon Header-navToggleIcon--closed">
+            <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
 </svg>
 
+        </div>
     </button>
     <a href="../../index.html" class="Header-title" data-pjax>Staffordshire University Components</a>
 </div>
@@ -87,7 +93,6 @@
                 class="Preview-iframe"
                 data-role="window"
                 src="../preview/grid.html"
-                sandbox="allow-same-origin allow-scripts allow-forms allow-modals"
                  style=""
                 marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
             </iframe>
@@ -154,7 +159,7 @@
     
     
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-acf9ea5e654e582c408b7b6cc64e08d8-panel-html">
-    <code class="Code Code--lang-html">
+    <code class="Code Code--lang-html hljs">
         
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title  title--has-tail"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title__highlight"</span>&gt;</span>Grid<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
@@ -287,44 +292,44 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Individual columns can be given classes that override the parent grid class.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Individual column classes can be used on all columns instead of a 'default' on the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>grid<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> if required, the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>grid<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> class on the container is still needed, and columns should still be direct descendant elements.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>The fractions that will work depend on your project setup, generally speaking this will range from <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>col-1/2<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>col-5/6<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Always use the <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>lowest common denominator<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> in fractions. <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>col-3/6<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> is <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>not valid<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>, use <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>col-1/2<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>These columns will still use 'automagic' breakpoints, ie. <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>col-1/4<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> will be half-width where visibly suitable. For more complex control of choosing where columns are applied at breakpoints, see below (if applicable to
-        project).<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Always use the <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>lowest common denominator<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> in fractions. <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>col-3/6<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> is <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>not valid<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>, use <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>col-1/2<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>These columns will still use 'automagic' breakpoints, ie. <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>col-1/4<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> will be half-width where visibly suitable. For more complex control of choosing where columns are applied at breakpoints, see below (if applicable to
+    project).<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>It's possible to use multiple col classes to change the widths of items at wider widths, bear in mind the higher denominator breakpoint takes priority the wider the viewport, and if mixing and matching, use fractions that work together,
-        breaking up rows with additional <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>grid<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> wrappers to create new rows.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>It's possible to use multiple col classes to change the widths of items at wider widths, bear in mind the higher denominator breakpoint takes priority the wider the viewport, and if mixing and matching, use fractions that work together,
+    breaking up rows with additional <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>grid<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> wrappers to create new rows.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Complex/Advanced Usage: Custom Breakpoints<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Complex/Advanced Usage: Custom Breakpoints<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>Depending on project setup<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>, the grid may allow custom breakpoints (stages) to be appended to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>grid-<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> and <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>col-<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> classes using the syntaxes:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>grid-[col]-cols@[stage]<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>col-[x]/[col]@[stage]<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>The <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>[col]<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>s, and <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>[stage]<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>s for this usage must be initialised in Sass for the output classes to be compiled and available for use. This is not default behaviour as it can generate a hefty filesize depending on
-        options chosen. See below for your project's support of this.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>Depending on project setup<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>, the grid may allow custom breakpoints (stages) to be appended to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>grid-<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> and <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>col-<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> classes using the syntaxes:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>grid-[col]-cols@[stage]<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>col-[x]/[col]@[stage]<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>The <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>[col]<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>s, and <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>[stage]<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>s for this usage must be initialised in Sass for the output classes to be compiled and available for use. This is not default behaviour as it can generate a hefty filesize depending on
+    options chosen. See below for your project's support of this.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>For example, if stages of <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>s1<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>xxs<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, and <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>phablet<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> were defined, valid grid classes may be:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>grid-2-cols@s1<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>grid-2-cols@xxs<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>grid-4-cols@phablet<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>For example, if stages of <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>s1<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>xxs<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, and <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>phablet<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> were defined, valid grid classes may be:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>grid-2-cols@s1<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>grid-2-cols@xxs<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>grid-4-cols@phablet<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Valid column classes may be:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>col-1/2@s1<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>col-2/5@xxs<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>col-3/4@phablet<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Valid column classes may be:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>col-1/2@s1<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>col-2/5@xxs<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>col-3/4@phablet<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>As with automagic breakpoints, <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>col-<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> classes take priority over any <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>grid-<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> classes, the higher denominator takes priority within the same breakpoint, and the later the breakpoint (the wider the viewport), the
-        greater priority it would have.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>As with automagic breakpoints, <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>col-<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> classes take priority over any <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>grid-<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> classes, the higher denominator takes priority within the same breakpoint, and the later the breakpoint (the wider the viewport), the
+    greater priority it would have.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>This project, at delivery, has been enabled with the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>[stage]<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>s:<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>This project, at delivery, has been enabled with the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>[stage]<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>s:<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
 
-            <span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>
   mobile: 20rem,
   mobile-wide: 35rem,
   tablet: 45rem,
@@ -333,33 +338,33 @@
   desktop-wide: 90rem,
 <span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
 
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>for <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>[col]<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>s:<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>2, 3, 4, 5, 6<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>for <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>[col]<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>s:<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>2, 3, 4, 5, 6<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
 
-                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>So use in this project might include, for example:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>So use in this project might include, for example:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-                    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>grid-2-cols@mobile<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>grid-3-cols@tablet-wide<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>grid-5-cols@desktop<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>col-1/4@mobile<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>col-1/2@tablet<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>col-3/5@desktop-wide<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>grid-2-cols@mobile<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>grid-3-cols@tablet-wide<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>grid-5-cols@desktop<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>col-1/4@mobile<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>col-1/2@tablet<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>col-3/5@desktop-wide<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 
-                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>(To add/edit/remove, see <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>__vars/_breakpoints.scss<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> &amp; <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>__vars/_grid.scss<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>)<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>(To add/edit/remove, see <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>__vars/_breakpoints.scss<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> &amp; <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>__vars/_grid.scss<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>)<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-                    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 
-                    <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></pre>
         
     </code>
 </div>
 
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-acf9ea5e654e582c408b7b6cc64e08d8-panel-view">
-    <code class="Code Code--lang-twig">
+    <code class="Code Code--lang-twig hljs">
         <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title  title--has-tail"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title__highlight"</span>&gt;</span>Grid<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -616,27 +621,34 @@
         </div>
 
         <div class="Frame-handle" data-role="frame-resize-handle"></div>
-        
+
         <div class="Frame-panel Frame-panel--sidebar" data-role="sidebar">
             <nav class="Navigation">
+    
+        
 
     
-
-
-    
+        
 <div class="Navigation-group">
 
 <div class="Tree" data-behaviour="tree" id="tree-components">
-    <h3 class="Tree-title">components</h3>
+    <div class="Tree-header">
+        <h3 class="Tree-title">components</h3>
+
+        <button type="button" data-behaviour="collapse-tree" class="Tree-collapse" title="Collapse tree" aria-label="Collapse tree" hidden>
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m9 11c-.6 0-1 .4-1 1s.4 1 1 1h6c.6 0 1-.4 1-1s-.4-1-1-1z"/><path d="m19 21h-14c-1.1 0-2-.9-2-2v-14c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2zm-14-16v14h14v-14z"/></svg>
+
+        </button>
+    </div>
     <ul class="Tree-items Tree-depth-1">
         
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-globals-and-docs">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Globals And Docs</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-globals-and-docs-items">
+                Globals And Docs
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-globals-and-docs-items">
             
             
             
@@ -817,10 +829,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-page">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Page</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-page-items">
+                Page
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-page-items">
             
             
             
@@ -828,10 +840,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-page-footer">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Page Footer</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-page-footer-items">
+                Page Footer
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-page-footer-items">
             
             
             
@@ -921,10 +933,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-templates">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Templates</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-templates-items">
+                Templates
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-templates-items">
             
             
             
@@ -932,10 +944,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-ldn">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Digital Institute London</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-ldn-items">
+                Digital Institute London
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-ldn-items">
             
             
             
@@ -1145,10 +1157,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-accordion">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Accordion</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-accordion-items">
+                Accordion
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-accordion-items">
             
             
             
@@ -1233,10 +1245,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-banner">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Banner</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-banner-items">
+                Banner
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-banner-items">
             
             
             
@@ -1345,10 +1357,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-box">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Box</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-box-items">
+                Box
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-box-items">
             
             
             
@@ -1505,10 +1517,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-breadcrumbs">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Breadcrumbs</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-breadcrumbs-items">
+                Breadcrumbs
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-breadcrumbs-items">
             
             
             
@@ -1569,10 +1581,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-button">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Button</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-button-items">
+                Button
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-button-items">
             
             
             
@@ -1873,10 +1885,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-card">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Cards</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-card-items">
+                Cards
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-card-items">
             
             
             
@@ -2321,10 +2333,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-feature-link">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Feature Link</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-feature-link-items">
+                Feature Link
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-feature-link-items">
             
             
             
@@ -2481,10 +2493,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-list">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Lists</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-list-items">
+                Lists
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-list-items">
             
             
             
@@ -2665,10 +2677,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-masthead">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Masthead</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-masthead-items">
+                Masthead
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-masthead-items">
             
             
             
@@ -2801,10 +2813,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-meganav">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>MegaNav</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-meganav-items">
+                MegaNav
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-meganav-items">
             
             
             
@@ -2865,10 +2877,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-meta">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Meta</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-meta-items">
+                Meta
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-meta-items">
             
             
             
@@ -2953,10 +2965,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-page-nav">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Page Nav</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-page-nav-items">
+                Page Nav
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-page-nav-items">
             
             
             
@@ -3016,11 +3028,35 @@
         
     
         
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="pager.html" data-pjax>
+                <span>Pager</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-quote">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Quotes</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-quote-items">
+                Quotes
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-quote-items">
             
             
             
@@ -3153,10 +3189,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-quote-banner">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Quote Banner</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-quote-banner-items">
+                Quote Banner
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-quote-banner-items">
             
             
             
@@ -3265,10 +3301,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-section-header">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Section Header</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-section-header-items">
+                Section Header
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-section-header-items">
             
             
             
@@ -3377,10 +3413,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-slab">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Slab</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-slab-items">
+                Slab
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-slab-items">
             
             
             
@@ -3489,10 +3525,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-slider">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Sliders</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-slider-items">
+                Sliders
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-slider-items">
             
             
             
@@ -3601,10 +3637,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-table">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Table</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-table-items">
+                Table
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-table-items">
             
             
             
@@ -3689,10 +3725,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-tabs">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Tabs</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-tabs-items">
+                Tabs
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-tabs-items">
             
             
             
@@ -3777,10 +3813,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-tile">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Tile</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-tile-items">
+                Tile
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-tile-items">
             
             
             
@@ -3865,10 +3901,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-title">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Title</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-title-items">
+                Title
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-title-items">
             
             
             
@@ -4198,7 +4234,7 @@
 </div>
 
 
-
+    
 </nav>
 
         </div>
@@ -4208,7 +4244,7 @@
 
 
 
-<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.2.1"></script>
+<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.4.0"></script>
 
 
 
