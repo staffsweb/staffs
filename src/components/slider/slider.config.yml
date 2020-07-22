@@ -10,3 +10,7 @@ variants:
     label: "Event Cards Slider"
   - name: tiles
     label: "Tiles Slider"
+  - name: tiles-gallery
+    label: "Tiles (Gallery)"
+  - name: gallery
+    label: "Gallery Slider"

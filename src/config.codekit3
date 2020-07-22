@@ -2263,6 +2263,14 @@
 		"oAP": "/components/02-page/page-footer--ldn.twig",
 		"oF": 0
 		},
+	"/components/02-page/page-footer.config.yml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/02-page/page-footer.config.yml",
+		"oF": 0
+		},
 	"/components/02-page/page-footer.twig": {
 		"cB": 0,
 		"ft": 8192,
@@ -2797,6 +2805,14 @@
 		"oAP": "/components/card/ldn/ldn.config.yml",
 		"oF": 0
 		},
+	"/components/contact-us/contact-us.config.yml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/contact-us/contact-us.config.yml",
+		"oF": 0
+		},
 	"/components/contact-us/contact-us.twig": {
 		"cB": 0,
 		"ft": 8192,
@@ -3253,6 +3269,14 @@
 		"oS": 2,
 		"sct": 1
 		},
+	"/components/pager/pager.config.yml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/pager/pager.config.yml",
+		"oF": 0
+		},
 	"/components/pager/pager.twig": {
 		"cB": 0,
 		"ft": 8192,
@@ -3502,12 +3526,28 @@
 		"oAP": "/components/slider/slider--event-cards.twig",
 		"oF": 0
 		},
+	"/components/slider/slider--gallery.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/slider/slider--gallery.twig",
+		"oF": 0
+		},
 	"/components/slider/slider--modules.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/components/slider/slider--modules.twig",
+		"oF": 0
+		},
+	"/components/slider/slider--tiles-gallery.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/slider/slider--tiles-gallery.twig",
 		"oF": 0
 		},
 	"/components/slider/slider--tiles.twig": {

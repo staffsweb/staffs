@@ -130,3 +130,24 @@
     }
   }
 }
+
+.slider--gallery {
+
+  &__nav {
+
+    @at-root .no-js & {
+      display: none;
+    }
+
+    img {
+      box-sizing: border-box;
+      border: $spacing-2xs solid transparent;
+    }
+
+    .slick-current {
+      img {
+        border-color: $primary;
+      }
+    }
+  }
+}

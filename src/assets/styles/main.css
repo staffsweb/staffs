@@ -1109,6 +1109,12 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 @media (min-width: 86rem) { .slider--modules .slick-slide { max-width: 71rem; } }
 
+.no-js .slider--gallery__nav { display: none; }
+
+.slider--gallery__nav img { box-sizing: border-box; border: 0.25rem solid transparent; }
+
+.slider--gallery__nav .slick-current img { border-color: #d70a26; }
+
 .table--modules thead td, .table--modules thead th { background: #394851; color: white; }
 
 .table--modules__credits { text-align: center; background: #616d74; color: white; }
@@ -1156,6 +1162,10 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 @supports ((-o-object-fit: cover) or (object-fit: cover)) { .tile__figure img { height: 100%; max-height: 75vmin; -o-object-fit: cover; object-fit: cover; -o-object-position: center center; object-position: center center; } }
 
 .tile__content { position: absolute; bottom: 0; left: 0; margin-right: 2rem; max-height: 90%; padding: 0 1rem 1px; background: white; box-sizing: border-box; z-index: 1; }
+
+.tile__caption { position: absolute; bottom: 0; left: 0; margin-right: 2rem; max-height: 90%; z-index: 1; padding: 0; border: 0; background: none; }
+
+.tile__caption .title:only-child { margin: 0; }
 
 .tile__title { margin-top: -1rem; }
 
