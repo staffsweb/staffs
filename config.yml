@@ -5,7 +5,7 @@
 PATHS:
     assets:
         dev:
-            css: 'src/assets/dev/styles'
+            css: 'src/assets/styles'
             js: 'src/assets/dev/js'
         dist:
             css: 'src/assets/dist/styles'

@@ -9,4 +9,5 @@ body { font-size: 1em; }
 nav, menu, *[type='submit'], button, .button, .js-print { display: none !important; }
 
 details, details *, .accordion-content, .js-accordion-content { display: block !important; }
+
 /*# sourceMappingURL=print.css.map */
