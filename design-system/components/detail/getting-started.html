@@ -315,7 +315,7 @@
         &lt;li&gt;Create a folder for the component in &lt;code&gt;src/components/&lt;/code&gt;, eg. &lt;code&gt;src/components/your-component/&lt;/code&gt;&lt;/li&gt;
         &lt;li&gt;Create a &lt;code&gt;.twig&lt;/code&gt; template file (for the HTML) inside the folder, .eg &lt;code&gt;src/components/your-component/your-component.twig&lt;/code&gt; - as soon as you do this, Fractal should refresh and the component should appear in the components list on the left&lt;/li&gt;
         &lt;li&gt;Create a &lt;code&gt;.scss&lt;/code&gt; 'partial' file prefixed with an underscore (this lets the compiler know not to directly compile the file, because it is included by another file), eg. &lt;code&gt;src/components/your-component/_your-component.scss&lt;/code&gt;&lt;/li&gt;
-        &lt;li&gt;Reference the partial &lt;code&gt;.scss&lt;/code&gt; in &lt;code&gt;src/assets/styles/main.scss&lt;/code&gt;, so that it's brought into the site CSS, by adding a line like so:
+        &lt;li&gt;Reference the partial &lt;code&gt;.scss&lt;/code&gt; in &lt;code&gt;src/assets/styles/main.scss&lt;/code&gt;*, so that it's brought into the site CSS, by adding a line like so:
             &lt;pre&gt;@import "../../components/your-component/your-component";&lt;/pre&gt;
             For now, this will be compiled to &lt;code&gt;src/assets/styles/main.css&lt;/code&gt;, which is referenced in Fractal.&lt;/li&gt;
         &lt;li&gt;Write the HTML and Sass for your component&lt;/li&gt;
@@ -323,7 +323,9 @@
             &lt;pre&gt;fractal build&lt;/pre&gt; from the command line. This will compile .twig to static HTML, and copy all assets (fonts/img/css) to the &lt;code&gt;design-system&lt;/code&gt; folder, so the component library can be viewed without having to run a localhost version&lt;/li&gt;
         &lt;li&gt;Add the new/modified files to your chosen flavour of source control&lt;/li&gt;
         &lt;li&gt;Repeat!&lt;/li&gt;
-    &lt;/ol&gt;</pre>
+    &lt;/ol&gt;
+
+    &lt;p&gt;&lt;sup&gt;* this will add the component to the main site styles, to include in sub-themes, add to their Sass file too, eg. &lt;code&gt;main-ldn.scss&lt;/code&gt;&lt;/sup&gt;&lt;/p&gt;</pre>
         
     </code>
 </div>
@@ -493,14 +495,16 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Create a folder for the component in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>src/components/<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, eg. <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>src/components/your-component/<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Create a <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>.twig<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> template file (for the HTML) inside the folder, .eg <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>src/components/your-component/your-component.twig<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> - as soon as you do this, Fractal should refresh and the component should appear in the components list on the left<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Create a <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>.scss<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> 'partial' file prefixed with an underscore (this lets the compiler know not to directly compile the file, because it is included by another file), eg. <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>src/components/your-component/_your-component.scss<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Reference the partial <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>.scss<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>src/assets/styles/main.scss<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, so that it's brought into the site CSS, by adding a line like so:
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Reference the partial <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>.scss<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>src/assets/styles/main.scss<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>*, so that it's brought into the site CSS, by adding a line like so:
     <span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>@import "../../components/your-component/your-component";<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
     For now, this will be compiled to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>src/assets/styles/main.css<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, which is referenced in Fractal.<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Write the HTML and Sass for your component<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>When you're done, <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://fractal.build/guide/web/exporting-static-html.html#configuration"</span>&gt;</span>run a build to a static HTML version<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> by running <span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>fractal build<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span> from the command line. This will compile .twig to static HTML, and copy all assets (fonts/img/css) to the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>design-system<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> folder, so the component library can be viewed without having to run a localhost version<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Add the new/modified files to your chosen flavour of source control<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Repeat!<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span></span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">sup</span>&gt;</span>* this will add the component to the main site styles, to include in sub-themes, add to their Sass file too, eg. <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>main-ldn.scss<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">sup</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span></pre>
     </code>
 </div>
 
@@ -746,6 +750,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="animation.html" data-pjax>
                 <span>Animation</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #2999cc;" title="Reference"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="theming.html" data-pjax>
+                <span>Theming</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1713,7 +1741,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -1737,7 +1765,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>

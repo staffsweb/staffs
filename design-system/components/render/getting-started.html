@@ -162,7 +162,7 @@
   <li>Create a folder for the component in <code>src/components/</code>, eg. <code>src/components/your-component/</code></li>
   <li>Create a <code>.twig</code> template file (for the HTML) inside the folder, .eg <code>src/components/your-component/your-component.twig</code> - as soon as you do this, Fractal should refresh and the component should appear in the components list on the left</li>
   <li>Create a <code>.scss</code> 'partial' file prefixed with an underscore (this lets the compiler know not to directly compile the file, because it is included by another file), eg. <code>src/components/your-component/_your-component.scss</code></li>
-  <li>Reference the partial <code>.scss</code> in <code>src/assets/styles/main.scss</code>, so that it's brought into the site CSS, by adding a line like so:
+  <li>Reference the partial <code>.scss</code> in <code>src/assets/styles/main.scss</code>*, so that it's brought into the site CSS, by adding a line like so:
     <pre>@import "../../components/your-component/your-component";</pre>
     For now, this will be compiled to <code>src/assets/styles/main.css</code>, which is referenced in Fractal.</li>
   <li>Write the HTML and Sass for your component</li>
@@ -170,3 +170,5 @@
   <li>Add the new/modified files to your chosen flavour of source control</li>
   <li>Repeat!</li>
 </ol>
+
+<p><sup>* this will add the component to the main site styles, to include in sub-themes, add to their Sass file too, eg. <code>main-ldn.scss</code></sup></p>

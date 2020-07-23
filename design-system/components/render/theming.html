@@ -1,0 +1,40 @@
+
+
+<div class="title  title--has-tail">
+  <h1 class="title__highlight">Theming</h1>
+</div>
+
+<h2>Colour</h2>
+
+<p>Colour plays the primary <i>(geddit?)</i> role for applying a theme layer, or alternate brand skin to the component library. As mentioned in the docs for Colour, abstraction is key.</p>
+<p>We'll take the Digital Institute London (LDN) skin as an example.</p>
+<p>To create this, we've set up an alternate Sass file: <code>main-ldn.scss</code>. We set up the alternate colours we want to use, and then simply import components, because we've nicely built all our components with abstracted colour variables (hopefully).</p>
+
+<p>We pick <code>$primary</code>, <code>$secondary</code>, and <code>$tertiary</code> colours, and the theme also uses an abstracted <code>$neutral--primary</code> and <code>$neutral--light</code>, to avoid using <code>$slate</code> directly from the main Staffs palette, which might not be suitable for sub-themes.</p>
+
+<pre>
+$primary:                     $blue--deep-ldn;
+$secondary:                   $purple--deep-ldn;
+$tertiary:                    $magenta--ldn;
+$neutral--primary:            $granite--ldn;
+$neutral--light:              $granite--light-ldn;
+</pre>
+
+<h2>Key Themeable Components</h2>
+
+<p>There are a number of key themable components which have different colour variants to bring in more of a brand's palette, notably:</p>
+
+<ul>
+  <li><a href="../detail/title--examples.html" target="_top">Titles</a></li>
+  <li><a href="../detail/card--flex.html" target="_top">Cards</a></li>
+  <li><a href="../detail/tile--accent-colours.html" target="_top">Tiles</a> <small>(and <a href="../detail/feature-tiles--default.html" target="_top">Feature Tiles</a>)</small></li>
+  <li><a href="../detail/slab--examples.html" target="_top">Slabs</a></li>
+</ul>
+
+<p>Each of these has a Sass map of colours, from which variants are created, as demonstrated in the docs for <a href="../detail/colour.html" target="_top">Colour</a>.</p>
+
+<h2>Exceptions</h2>
+
+<p>Consider carefully the need for 'exceptions' or additional variants. <strong>Avoid where possible</strong>.</p>
+<p>If a component doesn't work well with a sub-theme, the chances are, it's the main component that needs adapting to be more flexible, rather than an override or exception being made for the sub-theme.</p>
+<p>For example, a key part of the LDN brand is use of the clipped corner from the logo. To introduce this, a 'clipped' button style was added to the main component library, to benefit all sub-themes.</p>

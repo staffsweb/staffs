@@ -20,87 +20,16 @@
 		"oT": 1,
 		"q": 100
 		},
-	"/assets/dev/js/app.min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 1,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/assets/dev/js/app.min.min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 1
-		},
-	"/assets/dev/styles/editor.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/assets/dev/styles/editor-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/assets/dev/styles/editor.css.map": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/assets/dev/styles/editor.css.map",
+	"/assets/dev": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "/build/assets/dev",
 		"oF": 0
 		},
-	"/assets/dev/styles/main-ldn.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/assets/dev/styles/main-ldn-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/assets/dev/styles/main-ldn.css.map": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/assets/dev/styles/main-ldn.css.map",
-		"oF": 0
-		},
-	"/assets/dev/styles/main.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/assets/dev/styles/main-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/assets/dev/styles/main.css.map": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/assets/dev/styles/main.css.map",
-		"oF": 0
-		},
-	"/assets/dev/styles/print.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/assets/dev/styles/print-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/assets/dev/styles/print.css.map": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/assets/dev/styles/print.css.map",
+	"/assets/dist": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "/build/assets/dist",
 		"oF": 0
 		},
 	"/assets/fonts/AshburyMed-webfont.woff": {
@@ -6005,7 +5934,7 @@
 	"rollupExternals": "",
 	"rollupReplacements": "process.env.NODE_ENV:::$NODE_ENV,,,ENVIRONMENT:::$NODE_ENV",
 	"rollupTreeshakingEnabled": 1,
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, .idea, /storage/framework/sessions, node_modules",
+	"skippedFoldersString": "log, _logs, logs, _cache, cache, .idea, /storage/framework/sessions, node_modules, /assets/dev, /assets/dist",
 	"sourceFolderName": "source",
 	"susyVersion": 3,
 	"tsAllowSyntheticDefaultImports": 0,

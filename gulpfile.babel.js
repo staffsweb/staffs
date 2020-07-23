@@ -24,7 +24,7 @@ import fs from 'fs';
 import webpackStream from 'webpack-stream';
 import webpack from 'webpack';
 import named from 'vinyl-named';
-import codekit from 'gulp-codekit';
+import include from 'gulp-include';
 import autoprefixer from 'autoprefixer';
 
 const $ = plugins();
@@ -99,7 +99,8 @@ function sassDist() {
 
 function js() {
   return gulp.src(PATHS.js)
-      .pipe(codekit())
+      .pipe(include())
+      .on('error', logAndContinueError)
       .pipe(named())
       .on('error', logAndContinueError)
       .pipe(webpackStream(require("./webpack.config.js"), webpack))

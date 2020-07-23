@@ -167,9 +167,10 @@
 
 <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Brand colours<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Colours can be found in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>__vars/_colours.scss<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>. Refer to it for available colours when making components, and maintain the pallette there.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Colours can be found in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>__vars/_colours.scss<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>. Refer to it for available colours when making components, and maintain the palette there.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Colours should be stored as solid hexes or rgb (not rgba), and given a <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>name unique to their appearance<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> - consistent with their naming in brand guidelines, if possible, and <span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>then<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span> assigned for use within the design system, it is encouraged to abstract as much as possible.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Colours should be stored as solid hexes or rgb (not rgba), and given a <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>name unique to their appearance<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> - consistent with their naming in brand guidelines, if possible, and <span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>then<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span> assigned for use within the design system, it is encouraged to abstract as much as possible, this helps components to be themed later.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>For example, the theme could use an abstracted <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$neutral--primary<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> and <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$neutral--light<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, to avoid using <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$slate<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> from the main palette, which might not be suitable for sub-themes.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>If multiple shades of a colour exist, give them BEM-like modifier names.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>If allowed by brand guidelines, use Sass rgba() to create transparent variants.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>For example:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -190,7 +191,7 @@
   $main-link-color--hover:        rgba($main-link-color, 0.9)
 <span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
 
-Sass can then pick up <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$main-link-color<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, eg.
+Sass for each component can then pick up <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$main-link-color<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, eg.
 
 <span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>
   a {
@@ -202,12 +203,14 @@ Sass can then pick up <span class="hljs-tag">&lt;<span class="hljs-name">code</s
   }
 <span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
 
+<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Applying colour<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>If not abstracting to a colour variable (or map of colour variables) for a specific component, aim to utilise <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$primary<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$secondary<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, etc. variables when colouring components. This means when a theme layer is applied, the components can take on any updated colours easily. More on this below, and in <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"theming.html"</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"_top"</span>&gt;</span>Theming docs<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
 <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Colour variants<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>If the brand guidelines allow, colour variants/derivatives should be named and added to the main colour variables file so they are traceable. Avoid adding hexes to components, or just lightening/darkening in Sass (these functions are just weird in their operation and produce weird results to what you'd expect, don't use them).<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>If the brand guidelines allow, colour variants/derivatives should always be named and added to the main colour variables file so they are traceable. Hexes should (almost?) never be found in components' partials.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Colour tints<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>'Tints' from print brand guidelines are acheived best by using the Sass <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>mix()<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> function, with white. Something like:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>'Tints' (usually from print brand guidelines) are acheived best by using the Sass <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>mix()<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> function, with white. Something like:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>
   $green-lime:                    #a2aa1f;
@@ -215,6 +218,41 @@ Sass can then pick up <span class="hljs-tag">&lt;<span class="hljs-name">code</s
   $green-lime--tint-20:           mix($green-lime, white, 20%);
   $green-lime--tint-30:           mix($green-lime, white, 30%);
   $green-lime--tint-50:           mix($green-lime, white, 50%);
+<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Avoid just lightening/darkening in Sass (these functions are just weird in their operation and produce inconsistent results to what you might expect, don't use them).<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Component variants (maps &amp; loops)<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>A select number of components have colour variants, these are generated dynamically from maps and loops, for example, the Tile component has a <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$tile-accent-colors<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> map:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>
+$tile-accent-colors: (
+  'red': $red,
+  'pink': $pink,
+  'maroon': $maroon,
+  'slate': $slate,
+  'tef-gold': $gold--tef,
+);
+<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This is accompanied by a loop in the component file to generate CSS classes for variants:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>
+@each $name, $value in $tile-accent-colors {
+  &amp;--accent-#{$name} {
+    --accent-color: #{$value};
+  }
+}
+<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Producing:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>
+.tile--accent-red { --accent-color: #d70a26; }
+.tile--accent-pink { --accent-color: #d5035e; }
+.tile--accent-maroon { --accent-color: #970048; }
+.tile--accent-slate { --accent-color: #394851; }
+.tile--accent-tef-gold { --accent-color: #dd9200; }
 <span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span></pre>
         
     </code>
@@ -229,9 +267,10 @@ Sass can then pick up <span class="hljs-tag">&lt;<span class="hljs-name">code</s
 
 <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Brand colours<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Colours can be found in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>__vars/_colours.scss<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>. Refer to it for available colours when making components, and maintain the pallette there.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Colours can be found in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>__vars/_colours.scss<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>. Refer to it for available colours when making components, and maintain the palette there.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Colours should be stored as solid hexes or rgb (not rgba), and given a <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>name unique to their appearance<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> - consistent with their naming in brand guidelines, if possible, and <span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>then<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span> assigned for use within the design system, it is encouraged to abstract as much as possible.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Colours should be stored as solid hexes or rgb (not rgba), and given a <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>name unique to their appearance<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> - consistent with their naming in brand guidelines, if possible, and <span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>then<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span> assigned for use within the design system, it is encouraged to abstract as much as possible, this helps components to be themed later.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>For example, the theme could use an abstracted <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$neutral--primary<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> and <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$neutral--light<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, to avoid using <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$slate<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> from the main palette, which might not be suitable for sub-themes.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>If multiple shades of a colour exist, give them BEM-like modifier names.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>If allowed by brand guidelines, use Sass rgba() to create transparent variants.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>For example:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -252,7 +291,7 @@ Sass can then pick up <span class="hljs-tag">&lt;<span class="hljs-name">code</s
   $main-link-color--hover:        rgba($main-link-color, 0.9)
 <span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
 
-Sass can then pick up <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$main-link-color<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, eg.
+Sass for each component can then pick up <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$main-link-color<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, eg.
 
 <span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>
   a {
@@ -264,12 +303,14 @@ Sass can then pick up <span class="hljs-tag">&lt;<span class="hljs-name">code</s
   }
 <span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
 
+<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Applying colour<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>If not abstracting to a colour variable (or map of colour variables) for a specific component, aim to utilise <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$primary<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$secondary<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, etc. variables when colouring components. This means when a theme layer is applied, the components can take on any updated colours easily. More on this below, and in <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ '/components/detail/theming' | path }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"_top"</span>&gt;</span>Theming docs<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
 <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Colour variants<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>If the brand guidelines allow, colour variants/derivatives should be named and added to the main colour variables file so they are traceable. Avoid adding hexes to components, or just lightening/darkening in Sass (these functions are just weird in their operation and produce weird results to what you'd expect, don't use them).<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>If the brand guidelines allow, colour variants/derivatives should always be named and added to the main colour variables file so they are traceable. Hexes should (almost?) never be found in components' partials.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Colour tints<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>'Tints' from print brand guidelines are acheived best by using the Sass <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>mix()<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> function, with white. Something like:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>'Tints' (usually from print brand guidelines) are acheived best by using the Sass <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>mix()<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> function, with white. Something like:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>
   $green-lime:                    #a2aa1f;
@@ -277,6 +318,41 @@ Sass can then pick up <span class="hljs-tag">&lt;<span class="hljs-name">code</s
   $green-lime--tint-20:           mix($green-lime, white, 20%);
   $green-lime--tint-30:           mix($green-lime, white, 30%);
   $green-lime--tint-50:           mix($green-lime, white, 50%);
+<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Avoid just lightening/darkening in Sass (these functions are just weird in their operation and produce inconsistent results to what you might expect, don't use them).<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Component variants (maps &amp; loops)<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>A select number of components have colour variants, these are generated dynamically from maps and loops, for example, the Tile component has a <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$tile-accent-colors<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> map:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>
+$tile-accent-colors: (
+  'red': $red,
+  'pink': $pink,
+  'maroon': $maroon,
+  'slate': $slate,
+  'tef-gold': $gold--tef,
+);
+<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This is accompanied by a loop in the component file to generate CSS classes for variants:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>
+@each $name, $value in $tile-accent-colors {
+  &amp;--accent-#{$name} {
+    --accent-color: #{$value};
+  }
+}
+<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Producing:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>
+.tile--accent-red { --accent-color: #d70a26; }
+.tile--accent-pink { --accent-color: #d5035e; }
+.tile--accent-maroon { --accent-color: #970048; }
+.tile--accent-slate { --accent-color: #394851; }
+.tile--accent-tef-gold { --accent-color: #dd9200; }
 <span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span></span></pre>
     </code>
 </div>
@@ -523,6 +599,30 @@ Sass can then pick up <span class="hljs-tag">&lt;<span class="hljs-name">code</s
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="animation.html" data-pjax>
                 <span>Animation</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #2999cc;" title="Reference"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="theming.html" data-pjax>
+                <span>Theming</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1490,7 +1590,7 @@ Sass can then pick up <span class="hljs-tag">&lt;<span class="hljs-name">code</s
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -1514,7 +1614,7 @@ Sass can then pick up <span class="hljs-tag">&lt;<span class="hljs-name">code</s
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
