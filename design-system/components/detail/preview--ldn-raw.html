@@ -57,10 +57,6 @@
 
     
     
-        
-        
-        
-    
 
 <div class="Pen" data-behaviour="pen" id="pen-15fe901413ccb02a15fbad62faefc8de">
 
@@ -93,16 +89,13 @@
     <div class="Preview-wrapper" data-role="resizer">
         <div class="Preview-resizer">
             
-<div class="Error Error--render">
-    <h4 class="Error-title">Error rendering component</h4>
-    <div class="Error-message Prose">
-        <p>Error: Template _preview-head--ldn.twig not found</p>
-
-    </div>
-    
-</div>
-
-            
+             <iframe
+                class="Preview-iframe"
+                data-role="window"
+                src="../preview/preview--ldn-raw.html"
+                 style=""
+                marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
+            </iframe>
         </div>
         <div class="Preview-handle" data-role="resize-handle"></div>
         <div class="Preview-overlay"></div>
@@ -166,31 +159,33 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-15fe901413ccb02a15fbad62faefc8de-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-comment">&lt;!-- Error rendering component --&gt;</span>
-<span class="hljs-comment">&lt;!-- Error: Template _preview-head--ldn.twig not found --&gt;</span>
-<span class="hljs-comment">&lt;!-- Error: Error: Template _preview-head--ldn.twig not found
-    at /Users/shm00n/Web/staffs/node_modules/@frctl/twig/src/adapter.js:161:24
-    at new Promise (&lt;anonymous&gt;)
-    at TwigAdapter.render (/Users/shm00n/Web/staffs/node_modules/@frctl/twig/src/adapter.js:144:16)
-    at ComponentSource._renderVariant (/Users/shm00n/Web/staffs/node_modules/@frctl/fractal/src/api/components/source.js:207:30)
-    at _renderVariant.next (&lt;anonymous&gt;)
-    at onFulfilled (/Users/shm00n/Web/staffs/node_modules/co/index.js:65:19)
-    at tryCatcher (/Users/shm00n/Web/staffs/node_modules/bluebird/js/release/util.js:16:23)
-    at Promise._settlePromiseFromHandler (/Users/shm00n/Web/staffs/node_modules/bluebird/js/release/promise.js:547:31)
-    at Promise._settlePromise (/Users/shm00n/Web/staffs/node_modules/bluebird/js/release/promise.js:604:18)
-    at Promise._settlePromise0 (/Users/shm00n/Web/staffs/node_modules/bluebird/js/release/promise.js:649:10)
-    at Promise._settlePromises (/Users/shm00n/Web/staffs/node_modules/bluebird/js/release/promise.js:729:18)
-    at Promise._fulfill (/Users/shm00n/Web/staffs/node_modules/bluebird/js/release/promise.js:673:18)
-    at Promise._resolveCallback (/Users/shm00n/Web/staffs/node_modules/bluebird/js/release/promise.js:466:57)
-    at Promise._settlePromiseFromHandler (/Users/shm00n/Web/staffs/node_modules/bluebird/js/release/promise.js:559:17)
-    at Promise._settlePromise (/Users/shm00n/Web/staffs/node_modules/bluebird/js/release/promise.js:604:18)
-    at Promise._settlePromise0 (/Users/shm00n/Web/staffs/node_modules/bluebird/js/release/promise.js:649:10)
-    at Promise._settlePromises (/Users/shm00n/Web/staffs/node_modules/bluebird/js/release/promise.js:729:18)
-    at Promise._fulfill (/Users/shm00n/Web/staffs/node_modules/bluebird/js/release/promise.js:673:18)
-    at Promise._resolveCallback (/Users/shm00n/Web/staffs/node_modules/bluebird/js/release/promise.js:466:57)
-    at Promise._settlePromiseFromHandler (/Users/shm00n/Web/staffs/node_modules/bluebird/js/release/promise.js:559:17)
-    at Promise._settlePromise (/Users/shm00n/Web/staffs/node_modules/bluebird/js/release/promise.js:604:18)
-    at Promise._settlePromise0 (/Users/shm00n/Web/staffs/node_modules/bluebird/js/release/promise.js:649:10) --&gt;</span></pre>
+        <pre><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"no-js no-touch theme-ldn"</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span>&gt;</span><span class="javascript">
+        (<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">H</span>) </span>{
+            H.className = H.className.replace(<span class="hljs-regexp">/\bno-js\b/</span>, <span class="hljs-string">'js'</span>)
+        })(<span class="hljs-built_in">document</span>.documentElement)
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">"cleartype"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"on"</span> /&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&amp;display=swap"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"../../styles/main-ldn.css"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"print"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"../../styles/print.css"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../js/app.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -201,7 +196,7 @@
         <pre><span class="xml"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"no-js no-touch theme-ldn"</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
-    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '_preview-head--ldn.twig' %}</span><span class="xml">
+    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '_preview-head-ldn.twig' %}</span><span class="xml">
 <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
@@ -209,7 +204,7 @@
 </span><span class="hljs-template-variable">{{ yield }}</span><span class="xml">
 
 
-</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '_preview-footer--ldn.twig' %}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '_preview-footer-ldn.twig' %}</span><span class="xml">
 
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></span></pre>
