@@ -1,10 +1,5 @@
 <div class="accordion">
   {% include '@accordion--item' with {
-    title: 'Accordion Toggle',
-    content: '<p>Some content inside</p><p>Some content</p>'
-  } %}
-
-  {% include '@accordion--item' with {
     titleElement: 'h2',
     title: 'Accordion toggle with h2',
     content: '<p>Some content inside</p><p>Some content</p>'
@@ -31,6 +26,11 @@
   {% include '@accordion--item' with {
     titleElement: 'h6',
     title: 'Accordion toggle with h6',
+    content: '<p>Some content inside</p><p>Some content</p>'
+  } %}
+
+  {% include '@accordion--item' with {
+    title: 'Accordion Toggle',
     content: '<p>Some content inside</p><p>Some content</p>'
   } %}
 </div>

@@ -1,6 +1,7 @@
 .box {
   position: relative;
   background: white;
+  color: $text-color;
   margin: 0 0 $spacing-xl;
 
   &__figure {

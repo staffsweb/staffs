@@ -178,6 +178,7 @@
       slidesToScroll: 3,
       infinite: false,
       swipeToSlide: true,
+      waitForAnimate: false,
       responsive: [
         {
           breakpoint: 1000,
@@ -202,7 +203,6 @@
       slidesToShow: 3.1,
       slidesToScroll: 3,
       infinite: false,
-      swipeToSlide: true,
       responsive: [
         {
           breakpoint: 1000,
@@ -232,7 +232,6 @@
       slidesToShow: 5,
       slidesToScroll: 5,
       infinite: false,
-      swipeToSlide: true,
       responsive: [
         {
           breakpoint: 900,

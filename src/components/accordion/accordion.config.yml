@@ -19,6 +19,7 @@ variants:
           content: '<p>I can have many items</p>'
         }
       ]
+    handle: 'accordion--component'
 
   - name: item
 #    status: ready

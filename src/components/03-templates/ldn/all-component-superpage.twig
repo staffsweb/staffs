@@ -1,0 +1,583 @@
+{% include '@meganav--ldn' %}
+<div class="masthead">
+  <div class="masthead__inner">
+    <div class="masthead__bg">
+      <img src="{{ ('/img/theme-ldn/masthead0.jpg') | path }}" style="object-position: 50% 20%"/>
+      {#    <img src="https://dilondon.staffs.ac.uk/wp-content/uploads/2020/06/computer-science-sul-2000x888.jpg" style="object-position: 60% 35%" />#}
+    </div>
+    <div class="wrap">
+      {% include '@title' with {
+        text: 'Superpage!',
+        tail: true,
+        textElement: 'h1',
+        animate: true
+      } %}
+      {% include '@title' with {
+        text: 'For testing',
+        tail: true,
+        textElement: 'h4',
+        background: 'purple-deep-ldn',
+        animate: true
+      } %}
+      {% include '@title' with {
+        text: 'This page includes (almost) all the components to test how they work with the LDN stylesheet',
+        tail: true,
+        textElement: 'p',
+        background: 'white',
+        animate: true
+      } %}
+    </div>
+  </div>
+</div>
+
+<main id="main-content" role="main">
+  <nav class="page-nav  js-page-nav">
+    <div class="wrap">
+      <div class="page-nav__inner">
+        <ul class="page-nav__list">
+          <li class="page-nav__item"><a class="page-nav__link" href="#accordion">Accordion</a></li>
+          <li class="page-nav__item"><a class="page-nav__link" href="#banner">Banner</a></li>
+          <li class="page-nav__item"><a class="page-nav__link" href="#pager">Pager</a></li>
+          <li class="page-nav__item"><a class="page-nav__link" href="#page-nav">Page Nav</a></li>
+          {#          <li class="page-nav__item"><a class="page-nav__link" href="#"></a></li>#}
+          {#          <li class="page-nav__item"><a class="page-nav__link" href="#"></a></li>#}
+          {#          <li class="page-nav__item"><a class="page-nav__link" href="#"></a></li>#}
+          {#          <li class="page-nav__item"><a class="page-nav__link" href="#"></a></li>#}
+          {#          <li class="page-nav__item"><a class="page-nav__link" href="#"></a></li>#}
+          <li class="page-nav__item"><a class="page-nav__link" href="#sliders">Sliders</a></li>
+          <li class="page-nav__item"><a class="page-nav__link" href="#tables">Tables</a></li>
+          <li class="page-nav__item"><a class="page-nav__link" href="#tabs">Tabs</a></li>
+          <li class="page-nav__item"><a class="page-nav__link" href="#tags">Tags</a></li>
+          <li class="page-nav__item"><a class="page-nav__link" href="#tiles">Tiles</a></li>
+          <li class="page-nav__item"><a class="page-nav__link" href="#titles">Titles</a></li>
+          <li class="page-nav__item"><a class="page-nav__link" href="#zebra">Zebra</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="slab  js-waypoint-page-section" id="accordion">
+    <div class="slab__header  section-header  section-header--bg-offwhite">
+      <div class="wrap">
+        <div class="section-header__title   title  title--has-tail">
+          <h2 class="title__highlight">Accordion</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      {% include '@accordion' %}
+    </div>
+  </div>
+
+
+  <div class="slab  js-waypoint-page-section" id="banner">
+    <div class="slab__header  section-header  section-header--bg-offwhite">
+      <div class="wrap">
+        <div class="section-header__title   title  title--has-tail">
+          <h2 class="title__highlight">Banner</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      {% include '@banner--examples' %}
+    </div>
+
+    <div class="banner  margin-top-xl">
+      <div class="banner__bg">
+        <img src="https://placeimg.com/1200/400/tech"/>
+      </div>
+
+      <div class="wrap">
+        <div class="banner__body">
+          <div class="hgroup">
+            <div class="title">
+              <div class="h2  title__highlight">Undergraduate Open Day</div>
+            </div>
+            <div class="title  title--bg-blue-ldn">
+              <div class="h4  title__highlight">Saturday 28 March 2020 - Stoke-on-trent campus</div>
+            </div>
+            <div class="title  title--bg-white"><p class="title__highlight">Open days give you the best experience and insight to courses, people and facilities that interest you. Make your choice easier and come meet us.</p></div>
+          </div>
+
+          <div class="banner__cta">
+            <a href="" class="button  button--clipped">Book an open day - a long button title</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="slab  slab--bg-offwhite  js-waypoint-page-section">
+    <div class="slab__header  section-header  section-header--bg-offwhite">
+      <div class="wrap">
+        <div class="section-header__title   title  title--has-tail">
+          <h2 class="title__highlight">Boxes</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="grid  grid-4-cols">
+        {% for i in 1..4 %}
+          <div>
+            {% include '@box' with {
+              text: 'A demo box title',
+              lorem: loremShort,
+              modifiers: ['has-shadow']
+            } %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+
+  <div class="slab  js-waypoint-page-section">
+    <div class="slab__header  section-header  section-header--bg-offwhite">
+      <div class="wrap">
+        <div class="section-header__title   title  title--has-tail">
+          <h2 class="title__highlight">Buttons</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <p class="intro">A 'special' button modifier is available for LDN: <code>button--clipped</code></p>
+
+      <a href="" class="button  button--lg  button--clipped">A large clipped corner button!</a>
+      <a href="" class="button  button--clipped">A clipped corner button!</a>
+      <a href="" class="button  button--sm  button--clipped">A small clipped corner button!</a>
+    </div>
+  </div>
+
+
+  <div class="slab  slab--bg-granite  js-waypoint-page-section">
+    <div class="slab__header  section-header  section-header--bg-offwhite">
+      <div class="wrap">
+        <div class="section-header__title   title  title--has-tail">
+          <h2 class="title__highlight">Cards (KSP)</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      {% include '@card--ksp-light' %}
+    </div>
+  </div>
+
+
+  <div class="slab  js-waypoint-page-section">
+    <div class="slab__header  section-header  section-header--bg-offwhite">
+      <div class="wrap">
+        <div class="section-header__title   title  title--has-tail">
+          <h2 class="title__highlight">Cards (TBC)</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      TBC
+    </div>
+  </div>
+
+
+  <div class="slab  js-waypoint-page-section">
+    <div class="slab__header  section-header  section-header--bg-offwhite">
+      <div class="wrap">
+        <div class="section-header__title   title  title--has-tail">
+          <h2 class="title__highlight">Contact Us</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+
+      {% include '@contact-us' %}
+    </div>
+  </div>
+
+
+  <div class="slab  js-waypoint-page-section">
+    <div class="slab__header  section-header  section-header--bg-offwhite">
+      <div class="wrap">
+        <div class="section-header__title   title  title--has-tail">
+          <h2 class="title__highlight">Feature Tiles</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      {% include '@feature-tiles--ldn' %}
+    </div>
+  </div>
+
+
+  <div class="slab  js-waypoint-page-section">
+    <div class="slab__header  section-header  section-header--bg-offwhite">
+      <div class="wrap">
+        <div class="section-header__title   title  title--has-tail">
+          <h2 class="title__highlight">Feature Links</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      {% include '@feature-link--examples' %}
+    </div>
+  </div>
+
+
+  <div class="slab  js-waypoint-page-section">
+    <div class="slab__header  section-header  section-header--bg-offwhite">
+      <div class="wrap">
+        <div class="section-header__title   title  title--has-tail">
+          <h2 class="title__highlight">IconBox</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="grid  grid-3-cols">
+        {% for i in 1..3 %}
+          <div>
+            <div class="iconBox">
+              <div class="iconBox__icon">
+                <svg id="icon-games" viewBox="0 0 180.43 133.59" width="100%" height="100%" fill="white">
+                  <title>games design</title>
+                  <path d="M122,40.37a6,6,0,0,1,4.26-10.29,6,6,0,0,1,6,6,6,6,0,0,1-6,6A6,6,0,0,1,122,40.37ZM141.14,45a6,6,0,1,0,4.26,1.77A6,6,0,0,0,141.14,45Zm-29.34-.39a6,6,0,1,0,0,12h0a6,6,0,1,0,0-12Zm14.87,14.87a6,6,0,1,0,4.26,1.76A6,6,0,0,0,126.67,59.43Zm53.76,24.28a3.32,3.32,0,0,1-.16,1,3.09,3.09,0,0,1-.85,1.79l-45,46.2a3,3,0,0,1-2.22.94l-.22,0-.22,0a3.1,3.1,0,0,1-2.17-.89L90.21,93.86,50.84,132.7a3.1,3.1,0,0,1-2.17.89l-.22,0-.22,0a3,3,0,0,1-2.22-.94L1,86.45a3.09,3.09,0,0,1-.85-1.79,3.32,3.32,0,0,1-.16-1L.1,21A3.07,3.07,0,0,1,1.42,18.5L18.91,1.05l.16-.13A3.07,3.07,0,0,1,21.27,0H159a3.12,3.12,0,0,1,1.43.36,3.13,3.13,0,0,1,1.06.69l17.41,17.37a3.07,3.07,0,0,1,1.44,2.6Zm-6.2-.81-.1-60.47L157.86,6.2H22.53L6.3,22.39,6.2,82.9l42.29,43.42L88,87.4a3.1,3.1,0,0,1,2.27-.89,3.07,3.07,0,0,1,2.26.89l39.46,38.92ZM70.3,47.65H56V33.36a3.1,3.1,0,0,0-6.2,0V47.65H35.52a3.1,3.1,0,1,0,0,6.2H49.81V68.14a3.1,3.1,0,1,0,6.2,0V53.85H70.3a3.1,3.1,0,1,0,0-6.2Z"></path>
+                </svg>
+              </div>
+
+              <div class="iconBox__content">
+                <h3 class="h6 iconBox__title">BA (Hons) Games PR, and Community Management</h3>
+                <p>Study the art of promotion, management and content creation in our brand-new marketing focused course.</p>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+
+  <div class="slab  js-waypoint-page-section">
+    <div class="slab__header  section-header  section-header--bg-offwhite">
+      <div class="wrap">
+        <div class="section-header__title   title  title--has-tail">
+          <h2 class="title__highlight">Lists</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      {% include '@list--inline-bulleted' %}
+    </div>
+  </div>
+
+
+  <div class="slab  js-waypoint-page-section">
+    <div class="slab__header  section-header  section-header--bg-offwhite">
+      <div class="wrap">
+        <div class="section-header__title   title  title--has-tail">
+          <h2 class="title__highlight">Masthead (Course)</h2>
+        </div>
+      </div>
+    </div>
+
+    {% include '@masthead--course' with {
+      title: 'Only use at the top of a course page, "obviously"',
+      slabBg: 'granite'
+    } %}
+  </div>
+
+
+  <div class="slab  js-waypoint-page-section">
+    <div class="slab__header  section-header  section-header--bg-offwhite">
+      <div class="wrap">
+        <div class="section-header__title   title  title--has-tail">
+          <h2 class="title__highlight">Meta</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+
+      <div class="grid  grid--spaced">
+        <div class="col-1/3@tablet">
+          <div class="title">
+            <h3 class="h4 title__highlight">Meta</h3>
+          </div>
+          {% include '@meta' %}
+        </div>
+
+        <div class="col-2/3@tablet">
+          <div class="title">
+            <h3 class="h4 title__highlight">Inline Meta</h3>
+          </div>
+          {% include '@meta--inline' %}
+
+          <div class="title">
+            <h3 class="h4 title__highlight">Inline Definitions Meta</h3>
+          </div>
+          {% include '@meta--inline-dd' %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="slab  js-waypoint-page-section" id="pager">
+    <div class="slab__header  section-header  section-header--bg-offwhite">
+      <div class="wrap">
+        <div class="section-header__title   title  title--has-tail">
+          <h2 class="title__highlight">Pager</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      {% include '@pager' %}
+    </div>
+  </div>
+
+
+  <div class="slab  js-waypoint-page-section" id="page-nav">
+    <div class="slab__header  section-header  section-header--bg-offwhite">
+      <div class="wrap">
+        <div class="section-header__title   title  title--has-tail">
+          <h2 class="title__highlight">Page Nav (In-page)</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <p class="intro">Look up!</p>
+    </div>
+  </div>
+
+
+  <div class="  js-waypoint-page-section" id="quote-banners">
+    <div class="section-header  section-header--bg-offwhite">
+      <div class="wrap">
+        <div class="section-header__title   title  title--has-tail">
+          <h2 class="title__highlight">Quote Banners</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="quote-banner">
+      <div class="wrap">
+
+        <div class="quote-banner__flexContainer">
+
+          <div class="quote-banner__quoteContainer">
+            <div class="card  card--testimonial  card--purple-deep-ldn ">
+              <div class="card__content">
+                <blockquote class="blockquote--large">
+                  <q class="blockquote__title">These quotes can use all the colour variants of cards</q>
+
+                  <footer class="blockquote__footer">
+                    <cite class="cite">Dan Sheerman</cite>
+                    <p>Vice President of naming complicated variants of things</p>
+                  </footer>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+
+          <figure class="quote-banner__figure  quote-banner__figure--align-bottom">
+            <img src="{{ '/img/placeholder-transparent-person.png' | path }}" alt="person smiling"/>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="quote-banner  quote-banner--reverse">
+      <div class="wrap">
+
+        <div class="quote-banner__flexContainer">
+
+          <div class="quote-banner__quoteContainer">
+            <div class="card  card--testimonial  card--magenta-ldn ">
+              <div class="card__content">
+                <blockquote class="blockquote--large">
+                  <q class="blockquote__title">Since coming to Staffordshire Uni I’ve become much more creative and confident in myself and my abilities</q>
+
+                  <footer class="blockquote__footer">
+                    <cite class="cite">Dan Sheerman</cite>
+                    <p>Vice President of naming complicated variants of things</p>
+                  </footer>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+
+          <figure class="quote-banner__figure  quote-banner__figure--align-bottom">
+            <img src="{{ '/img/placeholder-transparent-person.png' | path }}" alt="person smiling"/>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="slab  slab--bg-offwhite  js-waypoint-page-section" id="slabs">
+    <div class="slab__header  section-header  section-header--bg-offwhite  section-header--border-top">
+      <div class="wrap">
+        <div class="section-header__title   title  title--has-tail">
+          <h2 class="title__highlight">Section Headers & Slabs</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <h3 class="slab__title">Offwhite Slab</h3>
+    </div>
+  </div>
+  <div class="slab">
+    <div class="wrap">
+      <h3 class="slab__title">Default Slab</h3>
+    </div>
+  </div>
+  <div class="slab  slab--bg-granite">
+    <div class="wrap">
+      <h3 class="slab__title">Granite Slab</h3>
+    </div>
+  </div>
+  <div class="slab  slab--bg-granite-light">
+    <div class="wrap">
+      <h3 class="slab__title">Light Granite Slab</h3>
+    </div>
+  </div>
+
+
+  <div class="slab  js-waypoint-page-section" id="sliders">
+    <div class="slab__header  section-header  section-header--bg-offwhite">
+      <div class="wrap">
+        <div class="section-header__title   title  title--has-tail">
+          <h2 class="title__highlight">Sliders</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="margin-bottom-2xl">
+        {% include '@slider--event-cards' %}
+      </div>
+      <div class="margin-bottom-2xl">
+        {% include '@slider--gallery' %}
+      </div>
+      <div class="margin-bottom-2xl">
+        {% include '@slider--modules' %}
+      </div>
+      <div class="margin-bottom-2xl">
+        {% include '@slider--tiles' %}
+      </div>
+      <div class="margin-bottom-4xl">
+        {% include '@slider--tiles-gallery' %}
+      </div>
+    </div>
+  </div>
+
+
+  <div class="slab  js-waypoint-page-section" id="tables">
+    <div class="slab__header  section-header  section-header--bg-offwhite">
+      <div class="wrap">
+        <div class="section-header__title   title  title--has-tail">
+          <h2 class="title__highlight">Tables</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      {% include '@table' %}
+      {% include '@table--apply' %}
+      {% include '@table--modules' %}
+    </div>
+  </div>
+
+
+  <div class="slab  js-waypoint-page-section" id="tabs">
+    <div class="slab__header  section-header  section-header--bg-offwhite">
+      <div class="wrap">
+        <div class="section-header__title   title  title--has-tail">
+          <h2 class="title__highlight">Tabs</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      {% include '@tabs--with-sliders' %}
+    </div>
+  </div>
+
+
+  <div class="slab  js-waypoint-page-section" id="tags">
+    <div class="slab__header  section-header  section-header--bg-offwhite">
+      <div class="wrap">
+        <div class="section-header__title   title  title--has-tail">
+          <h2 class="title__highlight">Tags</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      {% include '@tag' %}
+    </div>
+  </div>
+
+
+  <div class="slab  js-waypoint-page-section" id="tiles">
+    <div class="slab__header  section-header  section-header--bg-offwhite">
+      <div class="wrap">
+        <div class="section-header__title   title  title--has-tail">
+          <h2 class="title__highlight">Tiles</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      TBC
+    </div>
+  </div>
+
+
+  <div class="slab  js-waypoint-page-section" id="titles">
+    <div class="slab__header  section-header  section-header--bg-offwhite">
+      <div class="wrap">
+        <div class="section-header__title   title  title--has-tail">
+          <h2 class="title__highlight">Titles</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      TBC
+    </div>
+  </div>
+
+
+  <div class="slab  js-waypoint-page-section" id="zebra">
+    <div class="slab__header  section-header  section-header--bg-offwhite">
+      <div class="wrap">
+        <div class="section-header__title   title  title--has-tail">
+          <h2 class="title__highlight">Zebra</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      {% include '@zebra' %}
+    </div>
+  </div>
+
+</main>
+
+
+{% include '@slider--accolades' with {
+  slabBg: 'granite-light'
+} %}
+{% include '@page-footer--ldn' %}

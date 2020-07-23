@@ -53,7 +53,7 @@ variants:
     context:
       classes: ['button--clipped']
       text: 'Button with clipped corner (experimental!)'
-    preview: '@preview-ldn'
+    preview: '@preview--ldn'
 
   - name: caps
     label: "Style: Caps"

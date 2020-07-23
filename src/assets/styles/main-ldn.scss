@@ -21,6 +21,8 @@ $neutral--light:              $granite--light-ldn;
 /// Referencable colours OVERWRITE
 
 $link-color--hover:           $primary;
+$table-accent:                $neutral--primary;
+$table-accent--light:         $neutral--light;
 
 // Utilities Classes OVERWRITE
 // these are output by the loops in _utils/utils.scss (included by main)

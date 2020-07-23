@@ -2,6 +2,7 @@
 
 body {
   border-left: $body-border-width solid $primary;
+  overflow-x: hidden; // this is for align-full's 100vw "bug"
 
   @media (min-width: $body-border-breakpoint) {
     border-left: $body-border-width--wide solid $primary;

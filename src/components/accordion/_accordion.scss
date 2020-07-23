@@ -27,6 +27,7 @@
   margin: 0;
   padding: $spacing-lg $spacing-sm;
   font-weight: normal;
+  @include line-height('headings');
   list-style: none;
   cursor: pointer;
 

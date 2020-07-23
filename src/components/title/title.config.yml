@@ -74,4 +74,4 @@ variants:
 
   - name: ldn-examples
     label: "Examples (LDN)"
-    preview: '@preview-ldn'
+    preview: '@preview--ldn'
