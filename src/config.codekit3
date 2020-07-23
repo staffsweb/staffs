@@ -2239,6 +2239,14 @@
 		"oAP": "/components/01-globals-and-docs/06-animation.twig",
 		"oF": 0
 		},
+	"/components/01-globals-and-docs/07-theming.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/01-globals-and-docs/07-theming.twig",
+		"oF": 0
+		},
 	"/components/01-globals-and-docs/globals-and-docs.config.yml": {
 		"cB": 0,
 		"ft": 8192,

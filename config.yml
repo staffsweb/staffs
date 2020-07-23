@@ -1,5 +1,5 @@
 # The host (mamp or otherwise) this project will be running as, for our browsersync proxy
-HOST_URL: 'staffs.local'
+# HOST_URL: 'staffs.local'
 
 # Gulp will reference these paths when it copies files
 PATHS:
@@ -8,8 +8,8 @@ PATHS:
             css: 'src/assets/dev/styles'
             js: 'src/assets/dev/js'
         dist:
-            css: 'src/assets/styles'
-            js: 'src/assets/js'
+            css: 'src/assets/dist/styles'
+            js: 'src/assets/dist/js'
     watch:
         php:
             - '**/*.php'

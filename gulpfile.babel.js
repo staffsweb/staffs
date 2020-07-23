@@ -72,7 +72,9 @@ function sass() {
   return gulp.src(PATHS.watch.sass)
       .pipe($.sourcemaps.init())
       .pipe($.sass({
-        includePaths: PATHS.sass
+        includePaths: PATHS.sass,
+        outputStyle: 'compact',
+        precision: 4
       }).on('error', $.sass.logError))
       .pipe($.postcss(postCssPlugins))
       .pipe($.sourcemaps.write('.'))

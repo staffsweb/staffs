@@ -1,9 +1,14 @@
 .theme-ldn {
-  // contains overrides we haven't done more nicely,
-  // becuase the alternate theme was a last-minute addition
+  // NB: The majority of changes should be taken care of by simply
+  // setting colours for components to inherit in main-ldn.scss
+  // See that file, and the docs on colour and theming before adding overrides here.
+
+
+  // This file just contains scoped overrides we haven't done more nicely,
+  // becuase the alternate theme was a fairly last-minute addition
+
 
   .header-site {
-
     &__flexContainer {
       align-items: center;
     }

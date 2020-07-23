@@ -42,17 +42,15 @@ variants:
 
   - name: cutout
     label: "Style: Clipped"
-    status: wip
     context:
       classes: ['button--clipped']
-      text: 'Button with clipped corner (experimental!)'
+      text: 'Button with clipped corner'
 
   - name: cutout-ldn
     label: "Style: Clipped (LDN)"
-    status: wip
     context:
       classes: ['button--clipped']
-      text: 'Button with clipped corner (experimental!)'
+      text: 'Button with clipped corner'
     preview: '@preview--ldn'
 
   - name: caps
