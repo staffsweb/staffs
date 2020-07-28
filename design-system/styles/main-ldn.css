@@ -1059,9 +1059,9 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 .megaNav .has-children > a:after { content: ''; position: absolute; display: block; right: 0; top: 0.75em; width: 2em; height: 2em; background: url("../img/theme-ldn/icon-gt-primary.svg") no-repeat center center; background-size: 0.5em; }
 
-.megaNav .is-expanded > .megaNav__level { visibility: visible; -webkit-transform: translateX(0); transform: translateX(0); -webkit-transition: visibility 100ms, -webkit-transform 100ms; transition: visibility 100ms, -webkit-transform 100ms; transition: transform 100ms, visibility 100ms; transition: transform 100ms, visibility 100ms, -webkit-transform 100ms; }
+.megaNav .is-expanded > .megaNav__level { visibility: visible; height: auto; overflow: visible; min-height: 100%; -webkit-transform: translateX(0); transform: translateX(0); -webkit-transition: visibility 100ms, -webkit-transform 100ms; transition: visibility 100ms, -webkit-transform 100ms; transition: transform 100ms, visibility 100ms; transition: transform 100ms, visibility 100ms, -webkit-transform 100ms; }
 
-@media (min-width: 70rem) { .megaNav .is-expanded > .megaNav__level { -webkit-transition: none; transition: none; -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; } }
+@media (min-width: 70rem) { .megaNav .is-expanded > .megaNav__level { -webkit-transition: none; transition: none; -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; min-height: none; } }
 
 @media (min-width: 70rem) { .megaNav .is-expanded > .megaNav__secondLevel { display: -webkit-box; display: flex; } }
 
@@ -1071,7 +1071,7 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 .megaNav__close { content: ''; border: 0; box-sizing: border-box; display: block; width: 4rem; height: 4rem; margin-top: 0.1em; background: url("../img/theme-ldn/icon-x-primary.svg") no-repeat center center; background-size: 1rem; cursor: pointer; }
 
-.megaNav__level { position: absolute; visibility: hidden; background: #e8ebed; top: 0; right: 0; left: 0; min-height: 100%; padding-bottom: 12rem; -webkit-transform: translateX(100%); transform: translateX(100%); padding-left: 1.5rem; box-sizing: border-box; z-index: 1; -webkit-transition: visibility 100ms, -webkit-transform 100ms; transition: visibility 100ms, -webkit-transform 100ms; transition: transform 100ms, visibility 100ms; transition: transform 100ms, visibility 100ms, -webkit-transform 100ms; }
+.megaNav__level { position: absolute; visibility: hidden; background: #e8ebed; top: 0; right: 0; left: 0; height: 0; min-height: 0; padding-bottom: 12rem; overflow: hidden; -webkit-transform: translateX(100%); transform: translateX(100%); padding-left: 1.5rem; box-sizing: border-box; z-index: 1; -webkit-transition: visibility 100ms, -webkit-transform 100ms; transition: visibility 100ms, -webkit-transform 100ms; transition: transform 100ms, visibility 100ms; transition: transform 100ms, visibility 100ms, -webkit-transform 100ms; }
 
 @media (min-width: 70rem) { .megaNav__level { min-height: auto; -webkit-transform: translateY(-200%); transform: translateY(-200%); padding: 0; opacity: 0; } }
 

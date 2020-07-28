@@ -6,11 +6,15 @@ import gulp from 'gulp';
 import rename from 'gulp-rename';
 import yaml from 'js-yaml';
 import fs from 'fs';
-import webpackStream from 'webpack-stream';
-import webpack from 'webpack';
+// import webpackStream from 'webpack-stream';
+// import webpack from 'webpack';
 import named from 'vinyl-named';
 import include from 'gulp-include';
 import autoprefixer from 'autoprefixer';
+import sourcemaps from 'gulp-sourcemaps';
+import babel from 'gulp-babel';
+import terser from 'gulp-terser';
+import eslint from 'gulp-eslint';
 
 const $ = plugins();
 
@@ -19,7 +23,8 @@ const fractal = module.exports = require('@frctl/fractal').create();
 const twigAdapter = require('@frctl/twig');
 const mandelbrot = require('@frctl/mandelbrot');
 
-const logger = fractal.cli.console; // keep a reference to the fractal CLI console utility
+const logger = fractal.cli.console; // keep a reference to the fractal CLI
+                                    // console utility
 
 
 // Give it a name
@@ -52,7 +57,7 @@ fractal.components.set('statuses', {
   caution: {
     label: "Caution",
     description: "Deprecated, or to be deprecated, reference with extreme caution.",
-    color: "#D70A26"
+    color: "#d70a26"
   },
   reference: {
     label: "Reference",
@@ -92,11 +97,6 @@ const myCustomisedTheme = mandelbrot({
 });
 fractal.web.theme(myCustomisedTheme);
 
-// Settings for dev server
-// fractal.web.set('server.sync', true);
-// fractal.web.set('server.syncOptions', {
-//   open: 'local'
-// });
 
 /*
  * Start the Fractal server
@@ -108,10 +108,12 @@ fractal.web.theme(myCustomisedTheme);
  * This task will also log any errors to the console.
  */
 
-function fractalDev(){
+function fractalDev() {
   const server = fractal.web.server({
     sync: true,
-    open: 'local'
+    syncOptions: {
+      open: 'local'
+    }
   });
   server.on('error', err => logger.error(err.message));
   return server.start().then(() => {
@@ -129,7 +131,7 @@ function fractalDev(){
  * configuration option set above.
  */
 
-function fractalBuild(){
+function fractalBuild() {
   const builder = fractal.web.builder();
   builder.on('progress', (completed, total) => logger.update(`Exported ${completed} of ${total} items`, 'info'));
   builder.on('error', err => logger.error(err.message));
@@ -189,9 +191,9 @@ function sass() {
       .pipe($.postcss(postCssPlugins))
       .pipe($.sourcemaps.write('.'))
       .pipe(gulp.dest(PATHS.assets.dev.css))
-      // .pipe(browserSync.reload({
-      //   stream: true
-      // }))
+  // .pipe(browserSync.reload({
+  //   stream: true
+  // }))
 }
 
 function sassDist() {
@@ -209,17 +211,25 @@ function sassDist() {
 
 function js() {
   return gulp.src(PATHS.js)
+      .pipe(sourcemaps.init())
+      .on('error', logAndContinueError)
+      .pipe(eslint())
+      .on('error', logAndContinueError)
       .pipe(include())
       .on('error', logAndContinueError)
       .pipe(named())
       .on('error', logAndContinueError)
-      .pipe(webpackStream(require("./webpack.config.js"), webpack))
+      // .pipe(webpackStream(require("./webpack.config.js"), webpack))
+      .pipe(babel({
+        presets: ['@babel/env']
+      }))
       .on('error', logAndContinueError)
-      .pipe(rename({ suffix: '.min' }))
+      .pipe(sourcemaps.write('.'))
+      .on('error', logAndContinueError)
+      .pipe(terser())
+      .on('error', logAndContinueError)
+      .pipe(rename({suffix: '.min'}))
       .pipe(gulp.dest(assets_use_path.js))
-      // .pipe(browserSync.reload({
-      //   stream: true
-      // }))
 }
 
 // function themeImageMin() {

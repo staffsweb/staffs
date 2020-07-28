@@ -1,4 +1,4 @@
-
+/* global Waypoint, console */
 
 // @TODO: Learn to module bundle properly and manage dependencies with a proper package manager 🤦
 //@codekit-prepend silent './vendor/jquery.hoverIntent';
@@ -9,8 +9,6 @@
 //=include vendor/slick-1.8.1/slick/slick.js
 //@codekit-prepend silent './vendor/waypoints/lib/jquery.waypoints.js';
 //=include vendor/waypoints/lib/jquery.waypoints.js
-
-/* global Waypoint */
 
 // @TODO: at some point, it'd probably be nice if functions sat in 'eachIndividualComponentName.js'
 // in each component folder and were imported rather than being here, like their Sass files

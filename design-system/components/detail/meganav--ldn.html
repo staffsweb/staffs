@@ -786,6 +786,9 @@
       <span class="hljs-comment">//left: 0;</span>
       <span class="hljs-comment">//opacity: 1;</span>
       <span class="hljs-attribute">visibility</span>: visible;
+      <span class="hljs-attribute">height</span>: auto;
+      <span class="hljs-attribute">overflow</span>: visible;
+      <span class="hljs-attribute">min-height</span>: <span class="hljs-number">100%</span>;
       <span class="hljs-attribute">transform</span>: translateX(<span class="hljs-number">0</span>);
       <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">100ms</span>, visibility <span class="hljs-number">100ms</span>;
 
@@ -793,6 +796,7 @@
         <span class="hljs-attribute">transition</span>: none;
         <span class="hljs-attribute">transform</span>: translateY(<span class="hljs-number">0</span>);
         <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
+        <span class="hljs-attribute">min-height</span>: none;
       }
     }
 
@@ -836,9 +840,10 @@
     <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
     <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
     <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">min-height</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">min-height</span>: <span class="hljs-number">0</span>;
     <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">12rem</span>; <span class="hljs-comment">// this needs to be stupidly large, because of the way iOS handles 100vh, so items aren't covered by the bottom OS UI when expanded.</span>
-    <span class="hljs-comment">//overflow: auto;</span>
+    <span class="hljs-attribute">overflow</span>: hidden;
     <span class="hljs-attribute">transform</span>: translateX(<span class="hljs-number">100%</span>);
     <span class="hljs-attribute">padding-left</span>: <span class="hljs-variable">$spacing-lg</span>;
     <span class="hljs-attribute">box-sizing</span>: border-box;
@@ -1145,7 +1150,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">9.2 KB</span>
+                    <span class="Meta-value">9.3 KB</span>
                 </li>
             </ul>
         </div>
