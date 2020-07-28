@@ -1120,7 +1120,7 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 .megaNav__secondLevel.has-children > a:after { content: ''; position: absolute; display: block; right: 0; top: 0.75em; width: 2em; height: 2em; background: url("../img/theme-ldn/icon-gt-primary.svg") no-repeat center center; background-size: 0.5em; }
 
-@media (min-width: 70rem) { .megaNav__thirdLevel { font-size: 0.85em; left: 100%; right: -300%; top: 0; bottom: 0; background: white; padding: 2rem; max-height: 100%; overflow: auto; box-sizing: border-box; }
+@media (min-width: 70rem) { .megaNav__thirdLevel { font-size: 0.85em; left: 100%; right: -300%; top: 0; bottom: 0; background: white; padding: 2rem; max-height: 100%; overflow: auto !important; box-sizing: border-box; }
   .megaNav__thirdLevel-list { -webkit-columns: 2; -moz-columns: 2; columns: 2; -webkit-column-gap: 2rem; -moz-column-gap: 2rem; column-gap: 2rem; }
   .megaNav__thirdLevel-item.has-children > a:after { display: none; }
   .megaNav__thirdLevel .megaNav__thirdLevel-link { padding: 0; border: 0; margin: 0 0 0.5rem; } }

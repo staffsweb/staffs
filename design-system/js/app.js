@@ -1,6 +1,10 @@
 /* global Waypoint, console */
 
 // @TODO: Learn to module bundle properly and manage dependencies with a proper package manager 🤦
+
+// These are currently duplicated because we're using gulp-include as a replacement for CodeKit,
+// it compiles with both as a fallback becuase it's @Sheerman's first time using Gulp.
+
 //@codekit-prepend silent './vendor/jquery.hoverIntent';
 //=include vendor/jquery.hoverIntent.js
 //@codekit-prepend silent './vendor/smartResize';

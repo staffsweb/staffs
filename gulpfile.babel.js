@@ -232,7 +232,7 @@ function js() {
       .on('error', logAndContinueError)
       // .pipe(terser())
       .on('error', logAndContinueError)
-      .pipe(rename({suffix: '.min'}))
+      // .pipe(rename({suffix: '.min'}))
       .pipe(gulp.dest(assets_use_path.js))
 }
 

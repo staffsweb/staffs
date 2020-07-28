@@ -390,7 +390,7 @@
       background: white;
       padding: $spacing-xl;
       max-height: 100%;
-      overflow: auto;
+      overflow: auto !important; // sorry, this was lazy
       box-sizing: border-box;
 
       &-list {
