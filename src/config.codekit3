@@ -705,7 +705,7 @@
 		},
 	"/assets/img/masthead5.jpg": {
 		"ft": 16384,
-		"iS": 2731946,
+		"iS": 4299389,
 		"jF": 2,
 		"oA": 0,
 		"oAP": "/assets/img/masthead5a.jpg",
@@ -1132,7 +1132,7 @@
 		"oS": 2,
 		"sct": 1
 		},
-	"/assets/js/vendor/smartResize.js": {
+	"/assets/js/vendor/smartresize.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 1,
@@ -2520,7 +2520,7 @@
 		"oS": 2,
 		"sct": 1
 		},
-	"/components/iconBox/iconBox.config.yml": {
+	"/components/iconBox/iconbox.config.yml": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
