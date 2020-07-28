@@ -2942,6 +2942,19 @@
 		"oAP": "/components/quote-banner/quote-banner.twig",
 		"oF": 0
 		},
+	"/components/quote/_quotes.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 4,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/components/quote/_quotes.css",
+		"oF": 0,
+		"oS": 2,
+		"sct": 1
+		},
 	"/components/quote/quote--long.twig": {
 		"cB": 0,
 		"ft": 8192,
@@ -2989,19 +3002,6 @@
 		"oA": 0,
 		"oAP": "/components/quote/quote.twig",
 		"oF": 0
-		},
-	"/components/quote/quotes.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 4,
-		"ec": 1,
-		"ft": 4,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "/components/quote/quotes.css",
-		"oF": 0,
-		"oS": 2,
-		"sct": 1
 		},
 	"/components/section-header/_section-header.scss": {
 		"aP": 1,

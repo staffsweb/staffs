@@ -3,23 +3,23 @@
 
 # Gulp will reference these paths when it copies files
 PATHS:
-    assets:
-        dev:
-            css: 'src/assets/styles'
-            js: 'src/assets/dev/js'
-        dist:
-            css: 'src/assets/dist/styles'
-            js: 'src/assets/dist/js'
-    watch:
-        php:
-            - '**/*.php'
-            - '!vendor/**/*.*'
-        sass:   'src/assets/styles/**/*.scss'
-        js:   'src/assets/js/**/*.js'
-    js:
-        - 'src/assets/js/app.js'
+  assets:
+    dev:
+      css: 'src/assets/styles'
+      js: 'src/assets/dev/js'
+    dist:
+      css: 'src/assets/dist/styles'
+      js: 'src/assets/dist/js'
+  watch:
+    php:
+      - '**/*.php'
+      - '!vendor/**/*.*'
+    sass: ['src/assets/styles/**/*.scss', 'src/components/**/*.scss']
+    js:   'src/assets/js/app.js'
+  js:
+    - 'src/assets/js/app.js'
 
-    # Paths to Sass libraries
-    sass:
-        - 'node_modules/gulp-sass/scss'
+  # Paths to Sass libraries
+  sass:
+    - 'node_modules/gulp-sass/scss'
 

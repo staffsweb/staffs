@@ -1,7 +1,11 @@
+// This is all very "My first gulpfile",
+// by @Sheerman, a longtime CodeKit user.
+// Please don't judge too harshly.
+
 'use strict';
 
 import plugins from 'gulp-load-plugins';
-import browserSync from 'browser-sync';
+// import browserSync from 'browser-sync';
 import gulp from 'gulp';
 import rename from 'gulp-rename';
 import yaml from 'js-yaml';
@@ -13,7 +17,7 @@ import include from 'gulp-include';
 import autoprefixer from 'autoprefixer';
 import sourcemaps from 'gulp-sourcemaps';
 import babel from 'gulp-babel';
-import terser from 'gulp-terser';
+// import terser from 'gulp-terser';
 import eslint from 'gulp-eslint';
 
 const $ = plugins();
@@ -226,7 +230,7 @@ function js() {
       .on('error', logAndContinueError)
       .pipe(sourcemaps.write('.'))
       .on('error', logAndContinueError)
-      .pipe(terser())
+      // .pipe(terser())
       .on('error', logAndContinueError)
       .pipe(rename({suffix: '.min'}))
       .pipe(gulp.dest(assets_use_path.js))

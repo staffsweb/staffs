@@ -4,6 +4,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 /* global Waypoint, console */
 // @TODO: Learn to module bundle properly and manage dependencies with a proper package manager 🤦
+// These are currently duplicated because we're using gulp-include as a replacement for CodeKit,
+// it compiles with both as a fallback becuase it's @Sheerman's first time using Gulp.
 //@codekit-prepend silent './vendor/jquery.hoverIntent';
 
 /*!
@@ -3644,10 +3646,9 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   if (window.Zepto) {
     window.Zepto.fn.waypoint = createExtension(window.Zepto);
   }
-})();
-
-console.log('logged'); // @TODO: at some point, it'd probably be nice if functions sat in 'eachIndividualComponentName.js'
+})(); // @TODO: at some point, it'd probably be nice if functions sat in 'eachIndividualComponentName.js'
 // in each component folder and were imported rather than being here, like their Sass files
+
 
 (function ($) {
   var megaNavInit = function megaNavInit() {
