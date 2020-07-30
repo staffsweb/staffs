@@ -24,6 +24,8 @@
   </div>
 </div>
 
+<p class="intro"><strong>IMPORTANT: This process is under review pending a move to gulp</strong></p>
+
 <p>The component library is managed using <a href="https://fractal.build">Fractal</a>, which has great documentation worth familiarising yourself with, it's already set up to run in the repo, you'll just need it installed on your system, see: <a href="https://fractal.build/guide/installation.html#installing-the-fractal-cli-tool">Installing the Fractal CLI tool</a></p>
 <p>The <code>package.json</code> file in the root of the repository should list everything you need. Just run:</p>
 
@@ -90,9 +92,11 @@
   </div>
 </div>
 
+<p class="intro"><strong>IMPORTANT: This process is under review pending a move to gulp</strong></p>
+
 <p class="intro">The build process has significant room for improvement, but was chosen for speed of getting a component library up, because it 'just works' 😬. If improved, remember to update these docs.</p>
 
-<p>We use a 'designer-friendly' GUI app for code compilation. It's currently set up for use with <a href="https://codekitapp.com">CodeKit</a> which sadly is a <strong>Mac only</strong> app. A suitable cross-platform GUI alternative might be <a href="https://prepros.io">PrePros</a>.
+<p><del>We use a 'designer-friendly' GUI app for code compilation. It's currently set up for use with <a href="https://codekitapp.com">CodeKit</a> which sadly is a <strong>Mac only</strong> app. A suitable cross-platform GUI alternative might be <a href="https://prepros.io">PrePros</a>.</del></p>
 <p>CodeKit provides, among other things (simply drag in the <code>src</code> folder, and <code>config.codekit3</code> should be picked up with the settings):</p>
 <ul>
   <li>Sass to CSS compilation (currently using Libsass)</li>
@@ -107,9 +111,9 @@
   <li>JS source maps</li>
 </ul>
 
-<p><strong>There is a gulpfile in the root where a more command-line build process for Sass/JS could be set up. It may be wise to do so. This was attempted quickly but wasn't completed, so there's some packages in <code>package.json</code> that aren't used. Please feel free to do a better job of this than I did. 😅</strong></p>
+<p><strong>There is a gulpfile in the root where a more command-line build process for Sass/JS is being set up.</strong></p>
 
-<p>CodeKit watches Sass/JS and compiles on the fly, so when running the localhost version of the site, the assets in <code>src/assets/</code> are used, and after generating a static version of the library, the assets are copied over to the build folder. Don't watch the files in the build folder, it's just an output.</p>
+<p>The build process watches Sass/JS and compiles on the fly, so when running the localhost version of the site, the assets in <code>src/assets/</code> are used, and after generating a static version of the library, the assets are copied over to the build folder. Don't watch the files in the build folder, it's just an output.</p>
 
 <h3 class="h4">Sass (to CSS)</h3>
 
@@ -137,10 +141,12 @@
 
 <h3 class="h4">JavaScript</h3>
 
+<p class="intro"><strong>IMPORTANT: This process is under review pending a move to gulp</strong></p>
+
 <p>Our first rule is to use sparingly. If a JavaScript-free solution is available (like <a href="https://developer.mozilla.org/en/docs/Web/HTML/Element/details">{{ '<details>' | escape }}</a>), prefer it!</p>
 <p>That said, it's mad to think we can eliminate JavaScript completely.</p>
-<p>JavaScript lives in <code>src/assets/js</code> and is currently compiled by CodeKit.</p>
-<p>The entry point is <code>app.js</code>, which currently uses <code>@codekit-prepend</code>, CodeKit's <a href="https://codekitapp.com/help/javascript/">simple JavaScript imports</a> to bring in third-party libraries we keep in <code>src/assets/js/vendor/</code>. Using "proper" package management for this would be a great idea.</p>
+<p>JavaScript lives in <code>src/assets/js</code> <del>and is currently compiled by CodeKit.</del></p>
+<p>The entry point is <code>app.js</code>, <del>which currently uses <code>@codekit-prepend</code>, CodeKit's <a href="https://codekitapp.com/help/javascript/">simple JavaScript imports</a> to bring in third-party libraries we keep in <code>src/assets/js/vendor/</code>. Using "proper" package management for this would be a great idea.</del></p>
 <p>As mentioned above, it'd also be really nice to separate out what are currently three functions for the megaNav, tabs and slider into separate files in their component folders, and bundle them 'properly' using modern JavaScript methods.</p>
 <p>It ain't perfect, but it Works For Now&trade;.</p>
 
@@ -154,9 +160,10 @@
   </div>
 </div>
 
+<p class="intro"><strong>IMPORTANT: This process is under review pending a move to gulp</strong></p>
 
 <ol>
-  <li>From command line, if Fractal isn't already running, run <pre>fractal start</pre> form the root of the project, this should start Fractal, and open your browser to the localhost.</li>
+  <li><del>From command line, if Fractal isn't already running, run <pre>fractal start</pre> form the root of the project, this should start Fractal, and open your browser to the localhost.</del></li>
   <li>Create a folder for the component in <code>src/components/</code>, eg. <code>src/components/your-component/</code></li>
   <li>Create a <code>.twig</code> template file (for the HTML) inside the folder, .eg <code>src/components/your-component/your-component.twig</code> - as soon as you do this, Fractal should refresh and the component should appear in the components list on the left</li>
   <li>Create a <code>.scss</code> 'partial' file prefixed with an underscore (this lets the compiler know not to directly compile the file, because it is included by another file), eg. <code>src/components/your-component/_your-component.scss</code></li>

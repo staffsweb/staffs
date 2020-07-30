@@ -187,6 +187,8 @@
     &lt;/div&gt;
 &lt;/div&gt;
 
+&lt;p class="intro"&gt;&lt;strong&gt;IMPORTANT: This process is under review pending a move to gulp&lt;/strong&gt;&lt;/p&gt;
+
 &lt;p&gt;The component library is managed using &lt;a href="https://fractal.build"&gt;Fractal&lt;/a&gt;, which has great documentation worth familiarising yourself with, it's already set up to run in the repo, you'll just need it installed on your system, see: &lt;a href="https://fractal.build/guide/installation.html#installing-the-fractal-cli-tool"&gt;Installing the Fractal CLI tool&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The &lt;code&gt;package.json&lt;/code&gt; file in the root of the repository should list everything you need. Just run:&lt;/p&gt;
 
@@ -248,9 +250,11 @@
         &lt;/div&gt;
     &lt;/div&gt;
 
+    &lt;p class="intro"&gt;&lt;strong&gt;IMPORTANT: This process is under review pending a move to gulp&lt;/strong&gt;&lt;/p&gt;
+
     &lt;p class="intro"&gt;The build process has significant room for improvement, but was chosen for speed of getting a component library up, because it 'just works' 😬. If improved, remember to update these docs.&lt;/p&gt;
 
-    &lt;p&gt;We use a 'designer-friendly' GUI app for code compilation. It's currently set up for use with &lt;a href="https://codekitapp.com"&gt;CodeKit&lt;/a&gt; which sadly is a &lt;strong&gt;Mac only&lt;/strong&gt; app. A suitable cross-platform GUI alternative might be &lt;a href="https://prepros.io"&gt;PrePros&lt;/a&gt;.
+    &lt;p&gt;&lt;del&gt;We use a 'designer-friendly' GUI app for code compilation. It's currently set up for use with &lt;a href="https://codekitapp.com"&gt;CodeKit&lt;/a&gt; which sadly is a &lt;strong&gt;Mac only&lt;/strong&gt; app. A suitable cross-platform GUI alternative might be &lt;a href="https://prepros.io"&gt;PrePros&lt;/a&gt;.&lt;/del&gt;&lt;/p&gt;
     &lt;p&gt;CodeKit provides, among other things (simply drag in the &lt;code&gt;src&lt;/code&gt; folder, and &lt;code&gt;config.codekit3&lt;/code&gt; should be picked up with the settings):&lt;/p&gt;
     &lt;ul&gt;
         &lt;li&gt;Sass to CSS compilation (currently using Libsass)&lt;/li&gt;
@@ -265,9 +269,9 @@
         &lt;li&gt;JS source maps&lt;/li&gt;
     &lt;/ul&gt;
 
-    &lt;p&gt;&lt;strong&gt;There is a gulpfile in the root where a more command-line build process for Sass/JS could be set up. It may be wise to do so. This was attempted quickly but wasn't completed, so there's some packages in &lt;code&gt;package.json&lt;/code&gt; that aren't used. Please feel free to do a better job of this than I did. 😅&lt;/strong&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;There is a gulpfile in the root where a more command-line build process for Sass/JS is being set up.&lt;/strong&gt;&lt;/p&gt;
 
-    &lt;p&gt;CodeKit watches Sass/JS and compiles on the fly, so when running the localhost version of the site, the assets in &lt;code&gt;src/assets/&lt;/code&gt; are used, and after generating a static version of the library, the assets are copied over to the build folder. Don't watch the files in the build folder, it's just an output.&lt;/p&gt;
+    &lt;p&gt;The build process watches Sass/JS and compiles on the fly, so when running the localhost version of the site, the assets in &lt;code&gt;src/assets/&lt;/code&gt; are used, and after generating a static version of the library, the assets are copied over to the build folder. Don't watch the files in the build folder, it's just an output.&lt;/p&gt;
 
     &lt;h3 class="h4"&gt;Sass (to CSS)&lt;/h3&gt;
 
@@ -294,10 +298,12 @@
 
     &lt;h3 class="h4"&gt;JavaScript&lt;/h3&gt;
 
+    &lt;p class="intro"&gt;&lt;strong&gt;IMPORTANT: This process is under review pending a move to gulp&lt;/strong&gt;&lt;/p&gt;
+
     &lt;p&gt;Our first rule is to use sparingly. If a JavaScript-free solution is available (like &lt;a href="https://developer.mozilla.org/en/docs/Web/HTML/Element/details"&gt;&amp;lt;details&amp;gt;&lt;/a&gt;), prefer it!&lt;/p&gt;
     &lt;p&gt;That said, it's mad to think we can eliminate JavaScript completely.&lt;/p&gt;
-    &lt;p&gt;JavaScript lives in &lt;code&gt;src/assets/js&lt;/code&gt; and is currently compiled by CodeKit.&lt;/p&gt;
-    &lt;p&gt;The entry point is &lt;code&gt;app.js&lt;/code&gt;, which currently uses &lt;code&gt;@codekit-prepend&lt;/code&gt;, CodeKit's &lt;a href="https://codekitapp.com/help/javascript/"&gt;simple JavaScript imports&lt;/a&gt; to bring in third-party libraries we keep in &lt;code&gt;src/assets/js/vendor/&lt;/code&gt;. Using "proper" package management for this would be a great idea.&lt;/p&gt;
+    &lt;p&gt;JavaScript lives in &lt;code&gt;src/assets/js&lt;/code&gt; &lt;del&gt;and is currently compiled by CodeKit.&lt;/del&gt;&lt;/p&gt;
+    &lt;p&gt;The entry point is &lt;code&gt;app.js&lt;/code&gt;, &lt;del&gt;which currently uses &lt;code&gt;@codekit-prepend&lt;/code&gt;, CodeKit's &lt;a href="https://codekitapp.com/help/javascript/"&gt;simple JavaScript imports&lt;/a&gt; to bring in third-party libraries we keep in &lt;code&gt;src/assets/js/vendor/&lt;/code&gt;. Using "proper" package management for this would be a great idea.&lt;/del&gt;&lt;/p&gt;
     &lt;p&gt;As mentioned above, it'd also be really nice to separate out what are currently three functions for the megaNav, tabs and slider into separate files in their component folders, and bundle them 'properly' using modern JavaScript methods.&lt;/p&gt;
     &lt;p&gt;It ain't perfect, but it Works For Now&amp;trade;.&lt;/p&gt;
 
@@ -309,9 +315,11 @@
         &lt;/div&gt;
     &lt;/div&gt;
 
+    &lt;p class="intro"&gt;&lt;strong&gt;IMPORTANT: This process is under review pending a move to gulp&lt;/strong&gt;&lt;/p&gt;
+
     &lt;ol&gt;
-        &lt;li&gt;From command line, if Fractal isn't already running, run
-            &lt;pre&gt;fractal start&lt;/pre&gt; form the root of the project, this should start Fractal, and open your browser to the localhost.&lt;/li&gt;
+        &lt;li&gt;&lt;del&gt;From command line, if Fractal isn't already running, run
+                &lt;pre&gt;fractal start&lt;/pre&gt; form the root of the project, this should start Fractal, and open your browser to the localhost.&lt;/del&gt;&lt;/li&gt;
         &lt;li&gt;Create a folder for the component in &lt;code&gt;src/components/&lt;/code&gt;, eg. &lt;code&gt;src/components/your-component/&lt;/code&gt;&lt;/li&gt;
         &lt;li&gt;Create a &lt;code&gt;.twig&lt;/code&gt; template file (for the HTML) inside the folder, .eg &lt;code&gt;src/components/your-component/your-component.twig&lt;/code&gt; - as soon as you do this, Fractal should refresh and the component should appear in the components list on the left&lt;/li&gt;
         &lt;li&gt;Create a &lt;code&gt;.scss&lt;/code&gt; 'partial' file prefixed with an underscore (this lets the compiler know not to directly compile the file, because it is included by another file), eg. &lt;code&gt;src/components/your-component/_your-component.scss&lt;/code&gt;&lt;/li&gt;
@@ -358,6 +366,8 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"intro"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>IMPORTANT: This process is under review pending a move to gulp<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>The component library is managed using <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://fractal.build"</span>&gt;</span>Fractal<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>, which has great documentation worth familiarising yourself with, it's already set up to run in the repo, you'll just need it installed on your system, see: <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://fractal.build/guide/installation.html#installing-the-fractal-cli-tool"</span>&gt;</span>Installing the Fractal CLI tool<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>The <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>package.json<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> file in the root of the repository should list everything you need. Just run:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -425,9 +435,11 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"intro"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>IMPORTANT: This process is under review pending a move to gulp<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"intro"</span>&gt;</span>The build process has significant room for improvement, but was chosen for speed of getting a component library up, because it 'just works' 😬. If improved, remember to update these docs.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>We use a 'designer-friendly' GUI app for code compilation. It's currently set up for use with <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://codekitapp.com"</span>&gt;</span>CodeKit<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> which sadly is a <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>Mac only<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> app. A suitable cross-platform GUI alternative might be <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://prepros.io"</span>&gt;</span>PrePros<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">del</span>&gt;</span>We use a 'designer-friendly' GUI app for code compilation. It's currently set up for use with <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://codekitapp.com"</span>&gt;</span>CodeKit<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> which sadly is a <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>Mac only<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> app. A suitable cross-platform GUI alternative might be <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://prepros.io"</span>&gt;</span>PrePros<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">del</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>CodeKit provides, among other things (simply drag in the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>src<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> folder, and <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>config.codekit3<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> should be picked up with the settings):<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Sass to CSS compilation (currently using Libsass)<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
@@ -442,9 +454,9 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>JS source maps<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>There is a gulpfile in the root where a more command-line build process for Sass/JS could be set up. It may be wise to do so. This was attempted quickly but wasn't completed, so there's some packages in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>package.json<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> that aren't used. Please feel free to do a better job of this than I did. 😅<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>There is a gulpfile in the root where a more command-line build process for Sass/JS is being set up.<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>CodeKit watches Sass/JS and compiles on the fly, so when running the localhost version of the site, the assets in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>src/assets/<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> are used, and after generating a static version of the library, the assets are copied over to the build folder. Don't watch the files in the build folder, it's just an output.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>The build process watches Sass/JS and compiles on the fly, so when running the localhost version of the site, the assets in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>src/assets/<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> are used, and after generating a static version of the library, the assets are copied over to the build folder. Don't watch the files in the build folder, it's just an output.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h4"</span>&gt;</span>Sass (to CSS)<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
 
@@ -472,10 +484,12 @@
 
 <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h4"</span>&gt;</span>JavaScript<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
 
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"intro"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>IMPORTANT: This process is under review pending a move to gulp<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Our first rule is to use sparingly. If a JavaScript-free solution is available (like <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://developer.mozilla.org/en/docs/Web/HTML/Element/details"</span>&gt;</span></span><span class="hljs-template-variable">{{ '&lt;details&gt;' | escape }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>), prefer it!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>That said, it's mad to think we can eliminate JavaScript completely.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>JavaScript lives in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>src/assets/js<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> and is currently compiled by CodeKit.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>The entry point is <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>app.js<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, which currently uses <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>@codekit-prepend<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, CodeKit's <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://codekitapp.com/help/javascript/"</span>&gt;</span>simple JavaScript imports<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> to bring in third-party libraries we keep in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>src/assets/js/vendor/<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>. Using "proper" package management for this would be a great idea.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>JavaScript lives in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>src/assets/js<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">del</span>&gt;</span>and is currently compiled by CodeKit.<span class="hljs-tag">&lt;/<span class="hljs-name">del</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>The entry point is <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>app.js<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, <span class="hljs-tag">&lt;<span class="hljs-name">del</span>&gt;</span>which currently uses <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>@codekit-prepend<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, CodeKit's <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://codekitapp.com/help/javascript/"</span>&gt;</span>simple JavaScript imports<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> to bring in third-party libraries we keep in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>src/assets/js/vendor/<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>. Using "proper" package management for this would be a great idea.<span class="hljs-tag">&lt;/<span class="hljs-name">del</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>As mentioned above, it'd also be really nice to separate out what are currently three functions for the megaNav, tabs and slider into separate files in their component folders, and bundle them 'properly' using modern JavaScript methods.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>It ain't perfect, but it Works For Now<span class="hljs-symbol">&amp;trade;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
@@ -489,9 +503,10 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"intro"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>IMPORTANT: This process is under review pending a move to gulp<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>From command line, if Fractal isn't already running, run <span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>fractal start<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span> form the root of the project, this should start Fractal, and open your browser to the localhost.<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">del</span>&gt;</span>From command line, if Fractal isn't already running, run <span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>fractal start<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span> form the root of the project, this should start Fractal, and open your browser to the localhost.<span class="hljs-tag">&lt;/<span class="hljs-name">del</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Create a folder for the component in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>src/components/<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, eg. <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>src/components/your-component/<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Create a <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>.twig<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> template file (for the HTML) inside the folder, .eg <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>src/components/your-component/your-component.twig<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> - as soon as you do this, Fractal should refresh and the component should appear in the components list on the left<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Create a <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>.scss<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> 'partial' file prefixed with an underscore (this lets the compiler know not to directly compile the file, because it is included by another file), eg. <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>src/components/your-component/_your-component.scss<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
