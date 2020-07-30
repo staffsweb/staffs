@@ -283,6 +283,15 @@
       <span class="hljs-selector-tag">object</span>-fit: cover;
       <span class="hljs-selector-tag">object</span>-<span class="hljs-attribute">position</span>: <span class="hljs-number">60%</span> <span class="hljs-number">35%</span>; <span class="hljs-comment">// we're going to assume the image's focal point is roughly slightly-above-center right, but specify this as an inline style for each image</span>
     }
+
+    &amp;--blurred {
+      <span class="hljs-attribute">overflow</span>: hidden;
+
+      <span class="hljs-selector-tag">img</span> {
+        <span class="hljs-attribute">transform</span>: scale(<span class="hljs-number">1.1</span>);
+        <span class="hljs-attribute">filter</span>: blur(<span class="hljs-number">1em</span>);
+      }
+    }
   }
 
   &amp;__inner {
@@ -328,6 +337,19 @@
     }
   }
 
+  &amp;--has-blurredBg {
+    <span class="hljs-selector-class">.masthead__overlay</span> {
+      <span class="hljs-attribute">background</span>: rgba(black, <span class="hljs-number">0.75</span>);
+      <span class="hljs-keyword">@supports</span> (backdrop-filter: blur(<span class="hljs-number">1em</span>)) {
+        <span class="hljs-attribute">background</span>: rgba(black, <span class="hljs-number">0.6</span>);
+      }
+
+      <span class="hljs-keyword">@media</span> (min-width: <span class="hljs-variable">$overlay-breakpoint</span>) {
+        <span class="hljs-attribute">background</span>: none;
+      }
+    }
+  }
+
   <span class="hljs-selector-class">.wrap</span> {
     <span class="hljs-attribute">position</span>: relative;
     <span class="hljs-attribute">align-self</span>: flex-end;
@@ -355,7 +377,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.8 KB</span>
+                    <span class="Meta-value">2.2 KB</span>
                 </li>
             </ul>
         </div>

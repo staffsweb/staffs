@@ -1,12 +1,20 @@
 {% set slabBg = slabBg ? 'slab--bg-' ~ slabBg : 'slab--bg-slate' %}
+{% set bgImgURL = bgImg is not empty ?: ('/img/masthead' ~ random(5) ~ '.jpg') %}
 
-<div class="masthead">
+<div class="masthead  masthead--has-blurredBg">
+  <div class="masthead__bg  masthead__bg--blurred">
+    {% if bgImg %}
+      {{ bgImg }}
+    {% else %}
+      <img src="{{ bgImgURL | path }}"/>
+    {% endif %}
+  </div>
   <div class="masthead__inner">
     <div class="masthead__bg">
       {% if bgImg %}
         {{ bgImg }}
       {% else %}
-        <img src="{{ ('/img/masthead' ~ random(5) ~ '.jpg') | path }}"/>
+        <img src="{{ bgImgURL | path }}"/>
       {% endif %}
     </div>
     <div class="wrap">
@@ -51,7 +59,7 @@
           <div>
             <div class="card  card--light">
               <div class="card__content">
-                <h2 class="h4  card__title">Study Options</h2>
+                <h2 class="h4  card__title">Study Options {{ bgImg }}</h2>
                 <form>
                   <div class="form__item">
                     <input type="radio" id="study-option-1" name="study-option" checked/> <label for="study-option-1">Full-time, Stoke-on-Trent campus</label>

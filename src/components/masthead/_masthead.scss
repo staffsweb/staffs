@@ -27,6 +27,15 @@
       object-fit: cover;
       object-position: 60% 35%; // we're going to assume the image's focal point is roughly slightly-above-center right, but specify this as an inline style for each image
     }
+
+    &--blurred {
+      overflow: hidden;
+
+      img {
+        transform: scale(1.1);
+        filter: blur(1em);
+      }
+    }
   }
 
   &__inner {
@@ -68,6 +77,19 @@
           background: rgba(black, 0.6);
         }
         backdrop-filter: blur(1em);
+      }
+    }
+  }
+
+  &--has-blurredBg {
+    .masthead__overlay {
+      background: rgba(black, 0.75);
+      @supports (backdrop-filter: blur(1em)) {
+        background: rgba(black, 0.6);
+      }
+
+      @media (min-width: $overlay-breakpoint) {
+        background: none;
       }
     }
   }

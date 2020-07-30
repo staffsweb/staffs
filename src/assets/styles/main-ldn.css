@@ -1023,6 +1023,10 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 .masthead__bg img { position: absolute; top: 0; right: 0; bottom: 0; left: 0; height: 100%; width: 100%; -o-object-fit: cover; object-fit: cover; -o-object-position: 60% 35%; object-position: 60% 35%; }
 
+.masthead__bg--blurred { overflow: hidden; }
+
+.masthead__bg--blurred img { -webkit-transform: scale(1.1); transform: scale(1.1); -webkit-filter: blur(1em); filter: blur(1em); }
+
 .masthead__inner { display: -webkit-box; display: flex; flex-wrap: wrap; min-height: 65vmin; padding: 12rem 0 2rem; align-self: flex-end; align-content: flex-end; width: 100%; position: relative; box-sizing: border-box; }
 
 @media (min-width: 60rem) { .masthead__inner { position: static; } }
@@ -1032,6 +1036,12 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 @media (min-width: 60rem) { .masthead__overlay { background: none; padding: 0; margin-bottom: 1.5rem; }
   .masthead__overlayInner { margin: 0 -1.5rem; padding: 1.5rem 1.5rem 0; background: rgba(0, 0, 0, 0.75); -webkit-backdrop-filter: blur(1em); backdrop-filter: blur(1em); }
   @supports ((-webkit-backdrop-filter: blur(1em)) or (backdrop-filter: blur(1em))) { .masthead__overlayInner { background: rgba(0, 0, 0, 0.6); } } }
+
+.masthead--has-blurredBg .masthead__overlay { background: rgba(0, 0, 0, 0.75); }
+
+@supports ((-webkit-backdrop-filter: blur(1em)) or (backdrop-filter: blur(1em))) { .masthead--has-blurredBg .masthead__overlay { background: rgba(0, 0, 0, 0.6); } }
+
+@media (min-width: 60rem) { .masthead--has-blurredBg .masthead__overlay { background: none; } }
 
 .masthead .wrap { position: relative; align-self: flex-end; z-index: 0; }
 
