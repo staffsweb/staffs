@@ -1,15 +1,30 @@
 
 .page-nav {
-  position: sticky;
-  top: 0;
-  z-index: 9;
+  height: #{$spacing-md + 1rem + $spacing-sm};
 
-  $background: white;
-  --background: #{$background};
-  --backgroundRGB: #{red($background)}, #{green($background)}, #{blue($background)};
-  background: white;
-  background: var(--background);
-  box-shadow: 0 0.5rem 0.5rem -0.5rem rgba(0,0,0, 0.15);
+  &__stickyContainer {
+    // we'd be doing this with position sticky, but IE,
+    // and the need to change colour on attachment means we're using waypoints instead, sorry.
+
+    //position: sticky;
+
+    top: 0;
+    left: $body-border-width;
+    right: 0;
+    z-index: 9;
+    //transition: all 200ms;
+
+    @media (min-width: $body-border-breakpoint) {
+      left: $body-border-width--wide;
+    }
+
+    $background: white;
+    --background: #{$background};
+    --backgroundRGB: #{red($background)}, #{green($background)}, #{blue($background)};
+    background: white;
+    background: var(--background);
+    box-shadow: 0 0.5rem 0.5rem -0.5rem rgba(0, 0, 0, 0.15);
+  }
 
   &__inner {
     overflow: hidden;
@@ -66,17 +81,20 @@
     }
   }
 
-  &.is-stuck {
-    $background: $primary;
-    --background: #{$background};
-    --backgroundRGB: #{red($background)}, #{green($background)}, #{blue($background)};
+  &.is-waypoint-reached {
+    .page-nav__stickyContainer {
+      position: fixed;
+      $background: $primary;
+      --background: #{$background};
+      --backgroundRGB: #{red($background)}, #{green($background)}, #{blue($background)};
 
-    .page-nav__link {
-      color: white;
+      .page-nav__link {
+        color: white;
 
-      &.is-active {
-        background: white;
-        color: $text-color;
+        &.is-active {
+          background: white;
+          color: $text-color;
+        }
       }
     }
   }

@@ -1153,7 +1153,11 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 .meta--inline dd:first-of-type:before { display: none; }
 
-.page-nav { position: -webkit-sticky; position: sticky; top: 0; z-index: 9; --background: white; --backgroundRGB: 255, 255, 255; background: white; background: var(--background); box-shadow: 0 0.5rem 0.5rem -0.5rem rgba(0, 0, 0, 0.15); }
+.page-nav { height: 2.75rem; }
+
+.page-nav__stickyContainer { top: 0; left: 0.5rem; right: 0; z-index: 9; --background: white; --backgroundRGB: 255, 255, 255; background: white; background: var(--background); box-shadow: 0 0.5rem 0.5rem -0.5rem rgba(0, 0, 0, 0.15); }
+
+@media (min-width: 40rem) { .page-nav__stickyContainer { left: 1rem; } }
 
 .page-nav__inner { overflow: hidden; overflow-x: auto; overflow-scrolling: touch; background: -webkit-gradient(linear, left top, right top, color-stop(30%, white), to(rgba(255, 255, 255, 0))), -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(70%, white)) 0 100%, radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)) 0 100%; background: linear-gradient(to right, white 30%, rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(255, 255, 255, 0), white 70%) 0 100%, radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)) 0 100%; background: -webkit-gradient(linear, left top, right top, color-stop(30%, rgba(var(--backgroundRGB), 1)), to(rgba(var(--backgroundRGB), 0))), -webkit-gradient(linear, left top, right top, from(rgba(var(--backgroundRGB), 0)), color-stop(70%, rgba(var(--backgroundRGB), 1))) 0 100%, radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)) 0 100%; background: linear-gradient(to right, rgba(var(--backgroundRGB), 1) 30%, rgba(var(--backgroundRGB), 0)), linear-gradient(to right, rgba(var(--backgroundRGB), 0), rgba(var(--backgroundRGB), 1) 70%) 0 100%, radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)) 0 100%; background-repeat: no-repeat; background-color: white; background-color: var(--background); background-size: 1em 100%, 1em 100%, 1em 100%, 1em 100%; background-position: 0 0, 100%, 0 0, 100%; background-attachment: local, local, scroll, scroll; }
 
@@ -1167,11 +1171,11 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 .page-nav__link.is-active { background: #d70a26; color: white; text-decoration: none; cursor: default; }
 
-.page-nav.is-stuck { --background: #d70a26; --backgroundRGB: 215, 10, 38; }
+.page-nav.is-waypoint-reached .page-nav__stickyContainer { position: fixed; --background: #d70a26; --backgroundRGB: 215, 10, 38; }
 
-.page-nav.is-stuck .page-nav__link { color: white; }
+.page-nav.is-waypoint-reached .page-nav__stickyContainer .page-nav__link { color: white; }
 
-.page-nav.is-stuck .page-nav__link.is-active { background: white; color: black; }
+.page-nav.is-waypoint-reached .page-nav__stickyContainer .page-nav__link.is-active { background: white; color: black; }
 
 .pager { line-height: 1.4; }
 

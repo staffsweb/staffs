@@ -1,9 +1,11 @@
 /* global Waypoint, console */
 
-// @TODO: Learn to module bundle properly and manage dependencies with a proper package manager 🤦
+// @TODO: Learn to module bundle properly and manage dependencies with a proper
+// package manager 🤦
 
-// These are currently duplicated because we're using gulp-include as a replacement for CodeKit,
-// it compiles with both as a fallback becuase it's @Sheerman's first time using Gulp.
+// These are currently duplicated because we're using gulp-include as a
+// replacement for CodeKit, it compiles with both as a fallback becuase it's
+// @Sheerman's first time using Gulp.
 
 //@codekit-prepend silent './vendor/jquery.hoverIntent';
 //=include vendor/jquery.hoverIntent.js
@@ -14,8 +16,9 @@
 //@codekit-prepend silent './vendor/waypoints/lib/jquery.waypoints.js';
 //=include vendor/waypoints/lib/jquery.waypoints.js
 
-// @TODO: at some point, it'd probably be nice if functions sat in 'eachIndividualComponentName.js'
-// in each component folder and were imported rather than being here, like their Sass files
+// @TODO: at some point, it'd probably be nice if functions sat in
+// 'eachIndividualComponentName.js' in each component folder and were imported
+// rather than being here, like their Sass files
 
 (function ($) {
 
@@ -33,7 +36,8 @@
         $(this).removeClass('is-toggled');
         megaNav.removeClass('is-open');
         $('body').removeClass('has-expanded-smallscreen-nav');
-      } else {
+      }
+      else {
         $(this).addClass('is-toggled');
         megaNav.addClass('is-open');
         $('body').addClass('has-expanded-smallscreen-nav');
@@ -137,7 +141,6 @@
     }
 
 
-
     // @TODO: Check keyboard focus - could it be handled better?
 
   };
@@ -145,7 +148,8 @@
   let tabsInit = function () {
     // @TODO: check accessibility - add AIRA/keyboard if needed
     // @TODO: consider using history.pushState?
-    // @TODO: perhaps add something to handle switching to a tab when its ID is the URL hash?
+    // @TODO: perhaps add something to handle switching to a tab when its ID is
+    // the URL hash?
 
     $('.js-tabs').each(function () {
       let tabs = $(this);
@@ -157,7 +161,8 @@
 
       if (defaultTab) {
         $(defaultTab).show();
-      } else {
+      }
+      else {
         $(links[0]).addClass('is-selected');
         $(sections[0]).show().addClass('is-expanded');
       }
@@ -172,7 +177,9 @@
         links.removeClass('is-selected');
         $(this).addClass('is-selected');
 
-        $('.js-slider--variable').slick("setPosition", 0); // how did we end up with tabs of sliders?
+        $('.js-slider--variable').slick("setPosition", 0); // how did we end up
+                                                           // with tabs of
+                                                           // sliders?
       })
     });
   };
@@ -348,7 +355,7 @@
         let inner = $('.page-nav__inner')[0];
 
         let leftPos = item.position().left;
-        let centeredPos = leftPos - ($(inner).width()/2) + ($(item).width()/2);
+        let centeredPos = leftPos - ($(inner).width() / 2) + ($(item).width() / 2);
 
         $(inner).stop().animate({scrollLeft: centeredPos}, 250);
       }
@@ -365,7 +372,7 @@
           centerActiveItem(activeItem);
         }
       }, {
-        offset: (window.innerHeight/5)
+        offset: (window.innerHeight / 5)
       });
 
       el.waypoint(function (direction) {
@@ -377,7 +384,7 @@
         }
       }, {
         offset: function () {
-          return -($(el).height()) + window.innerHeight/5;
+          return -($(el).height()) + window.innerHeight / 5;
         }
       });
     });
@@ -386,8 +393,23 @@
       let target = $($(this).attr('href'));
 
       $('html, body').stop().animate({
-        scrollTop: (target.offset().top - window.innerHeight/10)
+        scrollTop: (target.offset().top - window.innerHeight / 10)
       }, 250);
+    });
+
+    $('#js-page-nav').each(function () {
+      let el = $(this);
+
+      el.waypoint(function (direction) {
+        if (direction === 'down') {
+          el.addClass('is-waypoint-reached');
+        }
+        else {
+          el.removeClass('is-waypoint-reached');
+        }
+      }, {
+        offset: 0
+      });
     });
   };
 

@@ -3,9 +3,11 @@
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 /* global Waypoint, console */
-// @TODO: Learn to module bundle properly and manage dependencies with a proper package manager 🤦
-// These are currently duplicated because we're using gulp-include as a replacement for CodeKit,
-// it compiles with both as a fallback becuase it's @Sheerman's first time using Gulp.
+// @TODO: Learn to module bundle properly and manage dependencies with a proper
+// package manager 🤦
+// These are currently duplicated because we're using gulp-include as a
+// replacement for CodeKit, it compiles with both as a fallback becuase it's
+// @Sheerman's first time using Gulp.
 //@codekit-prepend silent './vendor/jquery.hoverIntent';
 
 /*!
@@ -3646,8 +3648,9 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   if (window.Zepto) {
     window.Zepto.fn.waypoint = createExtension(window.Zepto);
   }
-})(); // @TODO: at some point, it'd probably be nice if functions sat in 'eachIndividualComponentName.js'
-// in each component folder and were imported rather than being here, like their Sass files
+})(); // @TODO: at some point, it'd probably be nice if functions sat in
+// 'eachIndividualComponentName.js' in each component folder and were imported
+// rather than being here, like their Sass files
 
 
 (function ($) {
@@ -3755,7 +3758,8 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   var tabsInit = function tabsInit() {
     // @TODO: check accessibility - add AIRA/keyboard if needed
     // @TODO: consider using history.pushState?
-    // @TODO: perhaps add something to handle switching to a tab when its ID is the URL hash?
+    // @TODO: perhaps add something to handle switching to a tab when its ID is
+    // the URL hash?
     $('.js-tabs').each(function () {
       var tabs = $(this);
       var links = $('.tabs__link', tabs);
@@ -3777,7 +3781,9 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         $(targetHref).show().addClass('is-expanded');
         links.removeClass('is-selected');
         $(this).addClass('is-selected');
-        $('.js-slider--variable').slick("setPosition", 0); // how did we end up with tabs of sliders?
+        $('.js-slider--variable').slick("setPosition", 0); // how did we end up
+        // with tabs of
+        // sliders?
       });
     });
   };
@@ -3966,6 +3972,18 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
       $('html, body').stop().animate({
         scrollTop: target.offset().top - window.innerHeight / 10
       }, 250);
+    });
+    $('#js-page-nav').each(function () {
+      var el = $(this);
+      el.waypoint(function (direction) {
+        if (direction === 'down') {
+          el.addClass('is-waypoint-reached');
+        } else {
+          el.removeClass('is-waypoint-reached');
+        }
+      }, {
+        offset: 0
+      });
     });
   }; // --
 
