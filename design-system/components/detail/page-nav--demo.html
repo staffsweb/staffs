@@ -595,7 +595,7 @@
                             <code class="Code Code--lang-SCSS FileBrowser-code hljs">
                                 <pre>
 <span class="hljs-selector-class">.page-nav</span> {
-  <span class="hljs-attribute">height</span>: #{<span class="hljs-variable">$spacing-md</span> + <span class="hljs-number">1rem</span> + <span class="hljs-variable">$spacing-sm</span>};
+  <span class="hljs-attribute">min-height</span>: #{<span class="hljs-variable">$spacing-md</span> + <span class="hljs-variable">$spacing-xl</span> + <span class="hljs-variable">$spacing-lg</span>};
 
   &amp;__stickyContainer {
     <span class="hljs-comment">// we'd be doing this with position sticky, but IE,</span>
@@ -626,6 +626,23 @@
     <span class="hljs-attribute">overflow-x</span>: auto;
     <span class="hljs-attribute">overflow</span>-scrolling: touch;
 
+    &amp;::-webkit-scrollbar {
+      height: <span class="hljs-number">10px</span>;
+      <span class="hljs-attribute">background-color</span>: transparent;
+    }
+
+    &amp;::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    &amp;::-webkit-scrollbar-thumb {
+      border: <span class="hljs-number">2px</span> solid var(--background);
+      <span class="hljs-attribute">height</span>: <span class="hljs-number">10px</span>;
+      <span class="hljs-attribute">background-color</span>: rgba(<span class="hljs-number">220</span>,<span class="hljs-number">220</span>,<span class="hljs-number">220</span>, <span class="hljs-number">0.75</span>);
+      <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">10px</span>;
+    }
+
+
     <span class="hljs-comment">// fallback for no CSS vars</span>
     <span class="hljs-attribute">background</span>: linear-gradient(to right, white <span class="hljs-number">30%</span>, rgba(<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">0</span>)),
     linear-gradient(to right, rgba(<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">0</span>), white <span class="hljs-number">70%</span>) <span class="hljs-number">0</span> <span class="hljs-number">100%</span>,
@@ -635,8 +652,8 @@
     <span class="hljs-comment">// regular :)</span>
     <span class="hljs-attribute">background</span>: linear-gradient(to right, rgba(var(--backgroundRGB), <span class="hljs-number">1</span>) <span class="hljs-number">30%</span>, rgba(var(--backgroundRGB), <span class="hljs-number">0</span>)),
     linear-gradient(to right, rgba(var(--backgroundRGB), <span class="hljs-number">0</span>), rgba(var(--backgroundRGB), <span class="hljs-number">1</span>) <span class="hljs-number">70%</span>) <span class="hljs-number">0</span> <span class="hljs-number">100%</span>,
-    radial-gradient(farthest-side at <span class="hljs-number">0%</span> <span class="hljs-number">50%</span>, rgba(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">1</span>), rgba(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)),
-    radial-gradient(farthest-side at <span class="hljs-number">100%</span> <span class="hljs-number">50%</span>, rgba(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">1</span>), rgba(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)) <span class="hljs-number">0</span> <span class="hljs-number">100%</span>;
+    radial-gradient(farthest-side at <span class="hljs-number">0%</span> <span class="hljs-number">50%</span>, rgba(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">2</span>), rgba(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)),
+    radial-gradient(farthest-side at <span class="hljs-number">100%</span> <span class="hljs-number">50%</span>, rgba(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">2</span>), rgba(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)) <span class="hljs-number">0</span> <span class="hljs-number">100%</span>;
 
     <span class="hljs-attribute">background-repeat</span>: no-repeat;
     <span class="hljs-attribute">background-color</span>: white;
@@ -677,6 +694,12 @@
   }
 
   &amp;<span class="hljs-selector-class">.is-waypoint-reached</span> {
+    <span class="hljs-selector-class">.page-nav__inner</span> {
+      &amp;::-webkit-scrollbar-thumb {
+        background-color: rgba(white, <span class="hljs-number">0.35</span>);
+      }
+    }
+
     <span class="hljs-selector-class">.page-nav__stickyContainer</span> {
       <span class="hljs-attribute">position</span>: fixed;
       <span class="hljs-variable">$background</span>: <span class="hljs-variable">$primary</span>;
@@ -711,7 +734,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2.7 KB</span>
+                    <span class="Meta-value">3.2 KB</span>
                 </li>
             </ul>
         </div>
