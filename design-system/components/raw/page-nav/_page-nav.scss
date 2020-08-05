@@ -1,6 +1,6 @@
 
 .page-nav {
-  min-height: #{$spacing-md + $spacing-xl + $spacing-lg};
+  min-height: #{$spacing-md + $spacing-xl + $spacing-md};
 
   &__stickyContainer {
     // we'd be doing this with position sticky, but IE,
@@ -73,7 +73,7 @@
     display: flex;
     margin: 0;
     padding: $spacing-md 0;
-    white-space: pre;
+    white-space: nowrap;
   }
 
   &__item {

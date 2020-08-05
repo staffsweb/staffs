@@ -595,7 +595,7 @@
                             <code class="Code Code--lang-SCSS FileBrowser-code hljs">
                                 <pre>
 <span class="hljs-selector-class">.page-nav</span> {
-  <span class="hljs-attribute">min-height</span>: #{<span class="hljs-variable">$spacing-md</span> + <span class="hljs-variable">$spacing-xl</span> + <span class="hljs-variable">$spacing-lg</span>};
+  <span class="hljs-attribute">min-height</span>: #{<span class="hljs-variable">$spacing-md</span> + <span class="hljs-variable">$spacing-xl</span> + <span class="hljs-variable">$spacing-md</span>};
 
   &amp;__stickyContainer {
     <span class="hljs-comment">// we'd be doing this with position sticky, but IE,</span>
@@ -668,7 +668,7 @@
     <span class="hljs-attribute">display</span>: flex;
     <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
     <span class="hljs-attribute">padding</span>: <span class="hljs-variable">$spacing-md</span> <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">white-space</span>: pre;
+    <span class="hljs-attribute">white-space</span>: nowrap;
   }
 
   &amp;__item {
