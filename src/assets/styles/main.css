@@ -1015,7 +1015,7 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 .masthead { display: flex; flex-wrap: wrap; background-color: #f1f1f1; box-sizing: border-box; position: relative; }
 
-.masthead__bg { position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 0; }
+.masthead__bg { position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 0; overflow: hidden; }
 
 @supports ((-o-object-fit: cover) or (object-fit: cover)) { .masthead__bg img { position: absolute; top: 0; right: 0; bottom: 0; left: 0; height: 100%; width: 100%; -o-object-fit: cover; object-fit: cover; -o-object-position: 60% 35%; object-position: 60% 35%; } }
 
