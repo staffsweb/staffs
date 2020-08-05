@@ -595,15 +595,17 @@
     <span class="hljs-attribute">z-index</span>: <span class="hljs-number">0</span>;
 
     <span class="hljs-selector-tag">img</span> {
-      <span class="hljs-attribute">position</span>: absolute;
-      <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
-      <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
-      <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
-      <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
-      <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
-      <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
-      <span class="hljs-selector-tag">object</span>-fit: cover;
-      <span class="hljs-selector-tag">object</span>-<span class="hljs-attribute">position</span>: <span class="hljs-number">60%</span> <span class="hljs-number">35%</span>; <span class="hljs-comment">// we're going to assume the image's focal point is roughly slightly-above-center right, but specify this as an inline style for each image</span>
+      <span class="hljs-keyword">@supports</span> (object-fit: cover) {
+        <span class="hljs-attribute">position</span>: absolute;
+        <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+        <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+        <span class="hljs-selector-tag">object</span>-fit: cover;
+        <span class="hljs-selector-tag">object</span>-<span class="hljs-attribute">position</span>: <span class="hljs-number">60%</span> <span class="hljs-number">35%</span>; <span class="hljs-comment">// we're going to assume the image's focal point is roughly slightly-above-center right, but specify this as an inline style for each image</span>
+      }
     }
 
     &amp;--blurred {
@@ -699,7 +701,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2.2 KB</span>
+                    <span class="Meta-value">2.3 KB</span>
                 </li>
             </ul>
         </div>
