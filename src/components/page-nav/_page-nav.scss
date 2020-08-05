@@ -43,7 +43,7 @@
     &::-webkit-scrollbar-thumb {
       border: 2px solid var(--background);
       height: 10px;
-      background-color: rgba(220,220,220, 0.75);
+      background-color: rgba(220, 220, 220, 0.75);
       border-radius: 10px;
     }
 
@@ -55,10 +55,12 @@
     radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, .1), rgba(0, 0, 0, 0)) 0 100%;
 
     // regular :)
-    background: linear-gradient(to right, rgba(var(--backgroundRGB), 1) 30%, rgba(var(--backgroundRGB), 0)),
-    linear-gradient(to right, rgba(var(--backgroundRGB), 0), rgba(var(--backgroundRGB), 1) 70%) 0 100%,
-    radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)),
-    radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
+    @supports (--css: variables) {
+      background: linear-gradient(to right, rgba(var(--backgroundRGB), 1) 30%, rgba(var(--backgroundRGB), 0)),
+      linear-gradient(to right, rgba(var(--backgroundRGB), 0), rgba(var(--backgroundRGB), 1) 70%) 0 100%,
+      radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)),
+      radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
+    }
 
     background-repeat: no-repeat;
     background-color: white;
@@ -118,11 +120,13 @@
       radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, .1), rgba(0, 0, 0, 0)),
       radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, .1), rgba(0, 0, 0, 0)) 0 100%;
 
-      // regular
-      background: linear-gradient(to right, rgba(var(--backgroundRGB), 1) 30%, rgba(var(--backgroundRGB), 0)),
-      linear-gradient(to right, rgba(var(--backgroundRGB), 0), rgba(var(--backgroundRGB), 1) 70%) 0 100%,
-      radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)),
-      radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
+      // regular :)
+      @supports (--css: variables) {
+        background: linear-gradient(to right, rgba(var(--backgroundRGB), 1) 30%, rgba(var(--backgroundRGB), 0)),
+        linear-gradient(to right, rgba(var(--backgroundRGB), 0), rgba(var(--backgroundRGB), 1) 70%) 0 100%,
+        radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)),
+        radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
+      }
 
       .page-nav__link {
         color: white;

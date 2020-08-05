@@ -1159,13 +1159,15 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 @media (min-width: 40rem) { .page-nav__stickyContainer { left: 1rem; } }
 
-.page-nav__inner { overflow: hidden; overflow-x: auto; overflow-scrolling: touch; background: linear-gradient(to right, white 30%, rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(255, 255, 255, 0), white 70%) 0 100%, radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)) 0 100%; background: linear-gradient(to right, rgba(var(--backgroundRGB), 1) 30%, rgba(var(--backgroundRGB), 0)), linear-gradient(to right, rgba(var(--backgroundRGB), 0), rgba(var(--backgroundRGB), 1) 70%) 0 100%, radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)) 0 100%; background-repeat: no-repeat; background-color: white; background-color: var(--background); background-size: 1em 100%, 1em 100%, 1em 100%, 1em 100%; background-position: 0 0, 100%, 0 0, 100%; background-attachment: local, local, scroll, scroll; }
+.page-nav__inner { overflow: hidden; overflow-x: auto; overflow-scrolling: touch; background: linear-gradient(to right, white 30%, rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(255, 255, 255, 0), white 70%) 0 100%, radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)) 0 100%; background-repeat: no-repeat; background-color: white; background-color: var(--background); background-size: 1em 100%, 1em 100%, 1em 100%, 1em 100%; background-position: 0 0, 100%, 0 0, 100%; background-attachment: local, local, scroll, scroll; }
 
 .page-nav__inner::-webkit-scrollbar { height: 10px; background-color: transparent; }
 
 .page-nav__inner::-webkit-scrollbar-track { background-color: transparent; }
 
 .page-nav__inner::-webkit-scrollbar-thumb { border: 2px solid var(--background); height: 10px; background-color: rgba(220, 220, 220, 0.75); border-radius: 10px; }
+
+@supports (--css: variables) { .page-nav__inner { background: linear-gradient(to right, rgba(var(--backgroundRGB), 1) 30%, rgba(var(--backgroundRGB), 0)), linear-gradient(to right, rgba(var(--backgroundRGB), 0), rgba(var(--backgroundRGB), 1) 70%) 0 100%, radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)) 0 100%; } }
 
 .page-nav__list { position: relative; display: flex; margin: 0; padding: 1rem 0; white-space: nowrap; }
 
@@ -1179,7 +1181,9 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 .page-nav.is-waypoint-reached .page-nav__inner::-webkit-scrollbar-thumb { background-color: rgba(255, 255, 255, 0.35); }
 
-.page-nav.is-waypoint-reached .page-nav__stickyContainer { position: fixed; background-color: #d70a26; --background: #d70a26; --backgroundRGB: 215, 10, 38; background: linear-gradient(to right, white 30%, rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(255, 255, 255, 0), white 70%) 0 100%, radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)) 0 100%; background: linear-gradient(to right, rgba(var(--backgroundRGB), 1) 30%, rgba(var(--backgroundRGB), 0)), linear-gradient(to right, rgba(var(--backgroundRGB), 0), rgba(var(--backgroundRGB), 1) 70%) 0 100%, radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)) 0 100%; }
+.page-nav.is-waypoint-reached .page-nav__stickyContainer { position: fixed; background-color: #d70a26; --background: #d70a26; --backgroundRGB: 215, 10, 38; background: linear-gradient(to right, white 30%, rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(255, 255, 255, 0), white 70%) 0 100%, radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)) 0 100%; }
+
+@supports (--css: variables) { .page-nav.is-waypoint-reached .page-nav__stickyContainer { background: linear-gradient(to right, rgba(var(--backgroundRGB), 1) 30%, rgba(var(--backgroundRGB), 0)), linear-gradient(to right, rgba(var(--backgroundRGB), 0), rgba(var(--backgroundRGB), 1) 70%) 0 100%, radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)) 0 100%; } }
 
 .page-nav.is-waypoint-reached .page-nav__stickyContainer .page-nav__link { color: white; }
 
