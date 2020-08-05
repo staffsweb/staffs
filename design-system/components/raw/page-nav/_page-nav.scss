@@ -108,8 +108,21 @@
     .page-nav__stickyContainer {
       position: fixed;
       $background: $primary;
+      background-color: $primary;
       --background: #{$background};
       --backgroundRGB: #{red($background)}, #{green($background)}, #{blue($background)};
+
+      // re-add fallback for no CSS vars (IE)
+      background: linear-gradient(to right, white 30%, rgba(255, 255, 255, 0)),
+      linear-gradient(to right, rgba(255, 255, 255, 0), white 70%) 0 100%,
+      radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, .1), rgba(0, 0, 0, 0)),
+      radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, .1), rgba(0, 0, 0, 0)) 0 100%;
+
+      // regular
+      background: linear-gradient(to right, rgba(var(--backgroundRGB), 1) 30%, rgba(var(--backgroundRGB), 0)),
+      linear-gradient(to right, rgba(var(--backgroundRGB), 0), rgba(var(--backgroundRGB), 1) 70%) 0 100%,
+      radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)),
+      radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
 
       .page-nav__link {
         color: white;

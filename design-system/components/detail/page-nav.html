@@ -220,13 +220,13 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-f073d66761b61d96e21d8685f1a9b601">_page-nav.scss</option>
+                <option value="file-1d78ba9e59ec559be137171dd2cb8577">_page-nav.scss</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-f073d66761b61d96e21d8685f1a9b601" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-1d78ba9e59ec559be137171dd2cb8577" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -344,8 +344,21 @@
     <span class="hljs-selector-class">.page-nav__stickyContainer</span> {
       <span class="hljs-attribute">position</span>: fixed;
       <span class="hljs-variable">$background</span>: <span class="hljs-variable">$primary</span>;
+      <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$primary</span>;
       --<span class="hljs-attribute">background</span>: #{<span class="hljs-variable">$background</span>};
       --backgroundRGB: #{red(<span class="hljs-variable">$background</span>)}, #{green(<span class="hljs-variable">$background</span>)}, #{blue(<span class="hljs-variable">$background</span>)};
+
+      <span class="hljs-comment">// re-add fallback for no CSS vars (IE)</span>
+      <span class="hljs-attribute">background</span>: linear-gradient(to right, white <span class="hljs-number">30%</span>, rgba(<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">0</span>)),
+      linear-gradient(to right, rgba(<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">0</span>), white <span class="hljs-number">70%</span>) <span class="hljs-number">0</span> <span class="hljs-number">100%</span>,
+      radial-gradient(farthest-side at <span class="hljs-number">0%</span> <span class="hljs-number">50%</span>, rgba(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">1</span>), rgba(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)),
+      radial-gradient(farthest-side at <span class="hljs-number">100%</span> <span class="hljs-number">50%</span>, rgba(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">1</span>), rgba(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)) <span class="hljs-number">0</span> <span class="hljs-number">100%</span>;
+
+      <span class="hljs-comment">// regular</span>
+      <span class="hljs-attribute">background</span>: linear-gradient(to right, rgba(var(--backgroundRGB), <span class="hljs-number">1</span>) <span class="hljs-number">30%</span>, rgba(var(--backgroundRGB), <span class="hljs-number">0</span>)),
+      linear-gradient(to right, rgba(var(--backgroundRGB), <span class="hljs-number">0</span>), rgba(var(--backgroundRGB), <span class="hljs-number">1</span>) <span class="hljs-number">70%</span>) <span class="hljs-number">0</span> <span class="hljs-number">100%</span>,
+      radial-gradient(farthest-side at <span class="hljs-number">0%</span> <span class="hljs-number">50%</span>, rgba(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">2</span>), rgba(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)),
+      radial-gradient(farthest-side at <span class="hljs-number">100%</span> <span class="hljs-number">50%</span>, rgba(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">2</span>), rgba(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)) <span class="hljs-number">0</span> <span class="hljs-number">100%</span>;
 
       <span class="hljs-selector-class">.page-nav__link</span> {
         <span class="hljs-attribute">color</span>: white;
@@ -375,7 +388,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">3.2 KB</span>
+                    <span class="Meta-value">4 KB</span>
                 </li>
             </ul>
         </div>
