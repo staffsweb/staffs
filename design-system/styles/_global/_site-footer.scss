@@ -4,6 +4,7 @@
   clear: both;
   position: relative;
   padding: 0 0 $spacing-6xl;
+  z-index: 0;
 
   a:not(.button) {
     color: white;
