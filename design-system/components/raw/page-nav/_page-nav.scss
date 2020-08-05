@@ -2,6 +2,11 @@
 .page-nav {
   min-height: #{$spacing-md + $spacing-xl + $spacing-md};
 
+  $background: white;
+
+  --background: #{$background};
+  --backgroundRGB: #{red($background)}, #{green($background)}, #{blue($background)};
+
   &__stickyContainer {
     // we'd be doing this with position sticky, but IE,
     // and the need to change colour on attachment means we're using waypoints instead, sorry.
@@ -18,11 +23,8 @@
       left: $body-border-width--wide;
     }
 
-    $background: white;
-    --background: #{$background};
-    --backgroundRGB: #{red($background)}, #{green($background)}, #{blue($background)};
-    background: white;
-    background: var(--background);
+    background: $background;
+    //background: var(--background);
     box-shadow: 0 0.5rem 0.5rem -0.5rem rgba(0, 0, 0, 0.15);
   }
 
@@ -43,26 +45,23 @@
     &::-webkit-scrollbar-thumb {
       border: 2px solid var(--background);
       height: 10px;
-      background-color: rgba(220,220,220, 0.75);
+      background-color: rgba(220, 220, 220, 0.75);
       border-radius: 10px;
     }
 
-
-    // fallback for no CSS vars
     background: linear-gradient(to right, white 30%, rgba(255, 255, 255, 0)),
     linear-gradient(to right, rgba(255, 255, 255, 0), white 70%) 0 100%,
     radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, .1), rgba(0, 0, 0, 0)),
     radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, .1), rgba(0, 0, 0, 0)) 0 100%;
 
-    // regular :)
-    background: linear-gradient(to right, rgba(var(--backgroundRGB), 1) 30%, rgba(var(--backgroundRGB), 0)),
-    linear-gradient(to right, rgba(var(--backgroundRGB), 0), rgba(var(--backgroundRGB), 1) 70%) 0 100%,
-    radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)),
-    radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
+    //@supports (--css: variables) {
+    //  background: linear-gradient(to right, rgba(var(--backgroundRGB), 1) 30%, rgba(var(--backgroundRGB), 0)),
+    //  linear-gradient(to right, rgba(var(--backgroundRGB), 0), rgba(var(--backgroundRGB), 1) 70%) 0 100%,
+    //  radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)),
+    //  radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
+    //}
 
     background-repeat: no-repeat;
-    background-color: white;
-    background-color: var(--background);
     background-size: 1em 100%, 1em 100%, 1em 100%, 1em 100%;
     background-position: 0 0, 100%, 0 0, 100%;
     background-attachment: local, local, scroll, scroll;
@@ -99,38 +98,45 @@
   }
 
   &.is-waypoint-reached {
+    $background: $primary;
+    --background: #{$background};
+    --backgroundRGB: #{red($background)}, #{green($background)}, #{blue($background)};
+
+    .page-nav__stickyContainer {
+      position: fixed;
+      background: $background;
+      background: var(--background);
+    }
+
     .page-nav__inner {
       &::-webkit-scrollbar-thumb {
         background-color: rgba(white, 0.35);
       }
-    }
 
-    .page-nav__stickyContainer {
-      position: fixed;
-      $background: $primary;
-      background-color: $primary;
-      --background: #{$background};
-      --backgroundRGB: #{red($background)}, #{green($background)}, #{blue($background)};
-
-      // re-add fallback for no CSS vars (IE)
-      background: linear-gradient(to right, white 30%, rgba(255, 255, 255, 0)),
-      linear-gradient(to right, rgba(255, 255, 255, 0), white 70%) 0 100%,
+      background: linear-gradient(to right, $background 30%, rgba($background, 0)),
+      linear-gradient(to right, rgba($background, 0), $background 70%) 0 100%,
       radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, .1), rgba(0, 0, 0, 0)),
       radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, .1), rgba(0, 0, 0, 0)) 0 100%;
 
-      // regular
-      background: linear-gradient(to right, rgba(var(--backgroundRGB), 1) 30%, rgba(var(--backgroundRGB), 0)),
-      linear-gradient(to right, rgba(var(--backgroundRGB), 0), rgba(var(--backgroundRGB), 1) 70%) 0 100%,
-      radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)),
-      radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
+      //@supports (--css: variables) {
+      //  background: linear-gradient(to right, rgba(var(--backgroundRGB), 1) 30%, rgba(var(--backgroundRGB), 0)),
+      //  linear-gradient(to right, rgba(var(--backgroundRGB), 0), rgba(var(--backgroundRGB), 1) 70%) 0 100%,
+      //  radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)),
+      //  radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
+      //}
 
-      .page-nav__link {
-        color: white;
+      background-repeat: no-repeat;
+      background-size: 1em 100%, 1em 100%, 1em 100%, 1em 100%;
+      background-position: 0 0, 100%, 0 0, 100%;
+      background-attachment: local, local, scroll, scroll;
+    }
 
-        &.is-active {
-          background: white;
-          color: $text-color;
-        }
+    .page-nav__link {
+      color: white;
+
+      &.is-active {
+        background: white;
+        color: $text-color;
       }
     }
   }
