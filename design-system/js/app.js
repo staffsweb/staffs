@@ -148,8 +148,7 @@
   let tabsInit = function () {
     // @TODO: check accessibility - add AIRA/keyboard if needed
     // @TODO: consider using history.pushState?
-    // @TODO: perhaps add something to handle switching to a tab when its ID is
-    // the URL hash?
+    // @TODO: perhaps add something to handle switching to a tab when its ID is the URL hash?
 
     $('.js-tabs').each(function () {
       let tabs = $(this);
@@ -325,6 +324,8 @@
   };
 
   let waypointsInit = function () {
+    // Potential Refactor: in an ideal world, using Intersection Observer might be better for this
+
     $('.js-waypoint').each(function () {
       let el = $(this);
 
@@ -342,6 +343,7 @@
   };
 
   let pageNavWaypointsInit = function () {
+    // Potential Refactor: in an ideal world, using Intersection Observer might be better for this
 
     function getRelatedNavigation(targetid) {
       return $('.js-page-nav .page-nav__link[href="#' + targetid + '"]');
@@ -422,12 +424,20 @@
     megaNavInit();
     tabsInit();
     sliderInit();
+    waypointsInit();
+    pageNavWaypointsInit();
   });
 
   $(window).on('load', function () {
-    // ensure these are initialised after images are downloaded
-    waypointsInit();
-    pageNavWaypointsInit();
+    // correct anything loaded on DOM load which might need adjusting (mostly once images have loaded)
+
+    Waypoint.refreshAll();
+  });
+
+
+  $(window).smartResize(function () {
+    // events that need to fire after a window resize (or device rotation)
+    Waypoint.refreshAll();
   });
 
 })(jQuery);

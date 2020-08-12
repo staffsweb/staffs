@@ -3758,8 +3758,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   var tabsInit = function tabsInit() {
     // @TODO: check accessibility - add AIRA/keyboard if needed
     // @TODO: consider using history.pushState?
-    // @TODO: perhaps add something to handle switching to a tab when its ID is
-    // the URL hash?
+    // @TODO: perhaps add something to handle switching to a tab when its ID is the URL hash?
     $('.js-tabs').each(function () {
       var tabs = $(this);
       var links = $('.tabs__link', tabs);
@@ -3908,6 +3907,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   };
 
   var waypointsInit = function waypointsInit() {
+    // Potential Refactor: in an ideal world, using Intersection Observer might be better for this
     $('.js-waypoint').each(function () {
       var el = $(this);
       el.waypoint(function (direction) {
@@ -3923,6 +3923,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   };
 
   var pageNavWaypointsInit = function pageNavWaypointsInit() {
+    // Potential Refactor: in an ideal world, using Intersection Observer might be better for this
     function getRelatedNavigation(targetid) {
       return $('.js-page-nav .page-nav__link[href="#' + targetid + '"]');
     }
@@ -3994,11 +3995,16 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     megaNavInit();
     tabsInit();
     sliderInit();
-  });
-  $(window).on('load', function () {
-    // ensure these are initialised after images are downloaded
     waypointsInit();
     pageNavWaypointsInit();
+  });
+  $(window).on('load', function () {
+    // correct anything loaded on DOM load which might need adjusting (mostly once images have loaded)
+    Waypoint.refreshAll();
+  });
+  $(window).smartResize(function () {
+    // events that need to fire after a window resize (or device rotation)
+    Waypoint.refreshAll();
   });
 })(jQuery);
 //# sourceMappingURL=app.js.map

@@ -170,8 +170,11 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>These can be styled with a modifier to the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>feature-tiles__item<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, which will cascade to the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>title__highlight<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> and pseudo-square (if the grid item has one)<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Modifiers are in the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$tile-accent-colors<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> array in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>_main-ldn.scss<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, currently: <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>accent-blue-ldn<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>accent-blue-deep-ldn<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>accent-magenta-ldn<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>accent-purple-deep-ldn<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, and <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>accent-tef-gold<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Modifiers are in the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$tile-accent-colors<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> map in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>_main-ldn.scss<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, currently: <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>accent-blue-ldn<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>accent-blue-deep-ldn<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>,
+    <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>accent-magenta-ldn<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>accent-purple-deep-ldn<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, and <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>accent-tef-gold<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>NB: Use the modifier on this item, not the tile if you want the accent to cascade correctly to the pseudo-square, you don't need to add to the tile as well :)<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>As the map is overwritten, colours from the main site are not available unless explicitly added to the map in Sass.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"grid  grid--flush  grid-2-cols@mobile-wide  grid-3-cols@tablet-wide  feature-tiles"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"feature-tiles__item  feature-tiles__item--accent-blue-deep-ldn  js-waypoint"</span>&gt;</span>
@@ -288,8 +291,11 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>These can be styled with a modifier to the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>feature-tiles__item<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, which will cascade to the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>title__highlight<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> and pseudo-square (if the grid item has one)<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Modifiers are in the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$tile-accent-colors<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> array in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>_main-ldn.scss<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, currently: <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>accent-blue-ldn<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>accent-blue-deep-ldn<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>accent-magenta-ldn<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>accent-purple-deep-ldn<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, and <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>accent-tef-gold<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Modifiers are in the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$tile-accent-colors<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> map in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>_main-ldn.scss<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, currently: <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>accent-blue-ldn<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>accent-blue-deep-ldn<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>,
+  <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>accent-magenta-ldn<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>accent-purple-deep-ldn<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, and <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>accent-tef-gold<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>NB: Use the modifier on this item, not the tile if you want the accent to cascade correctly to the pseudo-square, you don't need to add to the tile as well :)<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>As the map is overwritten, colours from the main site are not available unless explicitly added to the map in Sass.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"grid  grid--flush  grid-2-cols@mobile-wide  grid-3-cols@tablet-wide  feature-tiles"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"feature-tiles__item  feature-tiles__item--accent-blue-deep-ldn  js-waypoint"</span>&gt;</span>
@@ -4089,6 +4095,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="tile--accent-colours.html" data-pjax>
                 <span>Accent Colours</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="tile--accent-colours-ldn.html" data-pjax>
+                <span>Accent Colours (LDN)</span>
                 
 
 <div class="Status Status--unlabelled">

@@ -998,8 +998,11 @@
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>These can be styled with a modifier to the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>feature-tiles__item<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, which will cascade to the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>title__highlight<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> and pseudo-square (if the grid item has one)<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Modifiers are in the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$tile-accent-colors<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> array in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>_main-ldn.scss<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, currently: <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>accent-blue-ldn<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>accent-blue-deep-ldn<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>accent-magenta-ldn<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>accent-purple-deep-ldn<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, and <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>accent-tef-gold<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Modifiers are in the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$tile-accent-colors<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> map in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>_main-ldn.scss<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, currently: <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>accent-blue-ldn<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>accent-blue-deep-ldn<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>,
+                <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>accent-magenta-ldn<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>accent-purple-deep-ldn<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, and <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>accent-tef-gold<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>NB: Use the modifier on this item, not the tile if you want the accent to cascade correctly to the pseudo-square, you don't need to add to the tile as well :)<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>As the map is overwritten, colours from the main site are not available unless explicitly added to the map in Sass.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"grid  grid--flush  grid-2-cols@mobile-wide  grid-3-cols@tablet-wide  feature-tiles"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"feature-tiles__item  feature-tiles__item--accent-blue-deep-ldn  js-waypoint"</span>&gt;</span>
@@ -3824,7 +3827,201 @@
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"wrap"</span>&gt;</span>
-            TBC
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>In the LDN theme, the default tile uses the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$primary<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> colour, as in the main theme.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>These can be styled with a modifier, which will cascade to the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>title__highlight<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Like other LDN themed component variants, the modifiers are in a map in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>main-ldn.scss<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, consider this the source of truth, but at the time of typing, they're currently:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>accent-blue-ldn<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>accent-blue-deep-ldn<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>accent-magenta-ldn<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>accent-purple-deep-ldn<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>accent-tef-gold<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+            For example:
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span><span class="hljs-symbol">&amp;lt;</span>div class=<span class="hljs-symbol">&amp;quot;</span>tile  tile--accent-blue-deep-ldn<span class="hljs-symbol">&amp;quot;</span><span class="hljs-symbol">&amp;gt;</span><span class="hljs-symbol">&amp;lt;</span>/div<span class="hljs-symbol">&amp;gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>As the map is overwritten, colours from the main site are not available unless explicitly added to the map in Sass.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"grid  grid--flush  grid-2-cols@mobile-wide  grid-3-cols@tablet-wide"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile  tile--accent-blue-deep-ldn"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__figure"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://placeimg.com/500/500/people"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__img"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> /&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__content"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title tile__title"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h4  title__highlight"</span>&gt;</span>tile--accent-blue-deep-ldn<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__content-body"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Reach your full potential with our postgraduate courses.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile  tile--accent-blue-ldn"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__figure"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://placeimg.com/500/500/architecture"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__img"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> /&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__content"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title tile__title"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h4  title__highlight"</span>&gt;</span>tile--accent-blue-ldn<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__content-body"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Study with us, no matter where in the world you come from.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile  tile--accent-magenta-ldn"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__figure"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://placeimg.com/500/500/nature"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__img"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> /&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__content"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title tile__title"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h4  title__highlight"</span>&gt;</span>tile--accent-magenta-ldn<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__content-body"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Study Esports, Computer Games Design, Cyber Security, and more, with us in London.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile  tile--accent-purple-deep-ldn"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__figure"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://placeimg.com/500/500/tech"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__img"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> /&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__content"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title tile__title"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h4  title__highlight"</span>&gt;</span>tile--accent-purple-deep-ldn<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__content-body"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Apply for a full-time undergraduate degree at Staffordshire University and get guaranteed accommodation.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile  tile--accent-tef-gold"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__figure"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://placeimg.com/500/500/tech"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__img"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> /&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__content"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title tile__title"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h4  title__highlight"</span>&gt;</span>tile--accent-tef-gold<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__content-body"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Apply for a full-time undergraduate degree at Staffordshire University and get guaranteed accommodation.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">hr</span> /&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>tile-group<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> can still be applied for a grouped hover effect, as follows:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"grid  grid--flush  grid-2-cols@mobile-wide  grid-3-cols@tablet-wide  tile-group"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__figure"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://placeimg.com/500/500/people"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__img"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> /&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__content"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title tile__title"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h4  title__highlight"</span>&gt;</span>tile (no modifier)<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__content-body"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Reach your full potential with our postgraduate courses.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile  tile--accent-blue-ldn"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__figure"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://placeimg.com/500/500/architecture"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__img"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> /&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__content"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title tile__title"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h4  title__highlight"</span>&gt;</span>tile--accent-blue-ldn<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__content-body"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Study with us, no matter where in the world you come from.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile  tile--accent-magenta-ldn"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__figure"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://placeimg.com/500/500/nature"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__img"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> /&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__content"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title tile__title"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h4  title__highlight"</span>&gt;</span>tile--accent-magenta-ldn<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__content-body"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Study Esports, Computer Games Design, Cyber Security, and more, with us in London.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile  tile--accent-purple-deep-ldn"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__figure"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://placeimg.com/500/500/tech"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__img"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> /&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__content"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title tile__title"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h4  title__highlight"</span>&gt;</span>tile--accent-purple-deep-ldn<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__content-body"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Apply for a full-time undergraduate degree at Staffordshire University and get guaranteed accommodation.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile  tile--accent-tef-gold"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__figure"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://placeimg.com/500/500/tech"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__img"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> /&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__content"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title tile__title"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h4  title__highlight"</span>&gt;</span>tile--accent-tef-gold<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tile__content-body"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Apply for a full-time undergraduate degree at Staffordshire University and get guaranteed accommodation.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
@@ -3839,7 +4036,7 @@
 
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"wrap"</span>&gt;</span>
 
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Modifiers are in the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$tile-accent-colors<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> array in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>_main-ldn.scss<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, currently:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Modifiers are in the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$tile-accent-colors<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> map in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>_main-ldn.scss<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, currently:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
             <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list--inline"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>bg-white<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
@@ -4787,7 +4984,7 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"wrap"</span>&gt;</span>
-      TBC
+      </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '<a href="tile--accent-colours-ldn.html">@tile--accent-colours-ldn</a>' %}</span><span class="xml">
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
@@ -4872,7 +5069,7 @@
         </li>
         
         <li class="Meta-item">
-            <strong class="Meta-key">References <em class="Meta-count">(29)</em>:</strong>
+            <strong class="Meta-key">References <em class="Meta-count">(30)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="meganav--ldn.html">@<span>meganav--ldn</span></a>, 
@@ -4924,6 +5121,8 @@
                 <a href="tabs--with-sliders.html">@<span>tabs--with-sliders</span></a>, 
             
                 <a href="tag.html">@<span>tag</span></a>, 
+            
+                <a href="tile--accent-colours-ldn.html">@<span>tile--accent-colours-ldn</span></a>, 
             
                 <a href="title--ldn-examples.html">@<span>title--ldn-examples</span></a>, 
             
@@ -8362,6 +8561,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="tile--accent-colours.html" data-pjax>
                 <span>Accent Colours</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="tile--accent-colours-ldn.html" data-pjax>
+                <span>Accent Colours (LDN)</span>
                 
 
 <div class="Status Status--unlabelled">

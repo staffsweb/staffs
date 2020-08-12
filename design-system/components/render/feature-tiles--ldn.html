@@ -5,8 +5,11 @@
 </div>
 
 <p>These can be styled with a modifier to the <code>feature-tiles__item</code>, which will cascade to the <code>title__highlight</code> and pseudo-square (if the grid item has one)</p>
-<p>Modifiers are in the <code>$tile-accent-colors</code> array in <code>_main-ldn.scss</code>, currently: <code>accent-blue-ldn</code>, <code>accent-blue-deep-ldn</code>, <code>accent-magenta-ldn</code>, <code>accent-purple-deep-ldn</code>, and <code>accent-tef-gold</code>.</p>
+<p>Modifiers are in the <code>$tile-accent-colors</code> map in <code>_main-ldn.scss</code>, currently: <code>accent-blue-ldn</code>, <code>accent-blue-deep-ldn</code>,
+  <code>accent-magenta-ldn</code>, <code>accent-purple-deep-ldn</code>, and <code>accent-tef-gold</code>.</p>
 <p><strong>NB: Use the modifier on this item, not the tile if you want the accent to cascade correctly to the pseudo-square, you don't need to add to the tile as well :)</strong></p>
+
+<p>As the map is overwritten, colours from the main site are not available unless explicitly added to the map in Sass.</p>
 
 <div class="grid  grid--flush  grid-2-cols@mobile-wide  grid-3-cols@tablet-wide  feature-tiles">
   <div class="feature-tiles__item  feature-tiles__item--accent-blue-deep-ldn  js-waypoint">
