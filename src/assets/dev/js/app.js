@@ -3785,6 +3785,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         // with tabs of
         // sliders?
       });
+      Waypoint.refreshAll(); // tabs' content may change the height of the page, thus these need to be recalculated
     });
   };
 
@@ -3903,6 +3904,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         arrows: false
       });
     });
+    Waypoint.refreshAll(); // sliders' content may change the height of the page, thus these need to be recalculated
   };
 
   var waypointsInit = function waypointsInit() {
@@ -3992,6 +3994,9 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     megaNavInit();
     tabsInit();
     sliderInit();
+  });
+  $(window).on('load', function () {
+    // ensure these are initialised after images are downloaded
     waypointsInit();
     pageNavWaypointsInit();
   });
