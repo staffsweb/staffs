@@ -179,6 +179,7 @@
         $('.js-slider--variable').slick("setPosition", 0); // how did we end up
                                                            // with tabs of
                                                            // sliders?
+        Waypoint.refreshAll(); // height is liable to change, so we need to refresh these
       })
 
       Waypoint.refreshAll(); // tabs' content may change the height of the page, thus these need to be recalculated
@@ -291,6 +292,8 @@
             }
           }
         ]
+      }).on('afterChange', function (){
+        Waypoint.refreshAll(); // height is liable to change, so we need to refresh these
       });
     });
 
@@ -302,6 +305,8 @@
         adaptiveHeight: true,
         asNavFor: '.js-slider--gallery__nav',
         waitForAnimate: false
+      }).on('afterChange', function (){
+        Waypoint.refreshAll(); // height is liable to change, so we need to refresh these
       });
     });
 

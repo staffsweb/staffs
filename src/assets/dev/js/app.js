@@ -3783,6 +3783,8 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         $('.js-slider--variable').slick("setPosition", 0); // how did we end up
         // with tabs of
         // sliders?
+
+        Waypoint.refreshAll(); // height is liable to change, so we need to refresh these
       });
       Waypoint.refreshAll(); // tabs' content may change the height of the page, thus these need to be recalculated
     });
@@ -3878,6 +3880,8 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
             slidesToScroll: 1
           }
         }]
+      }).on('afterChange', function () {
+        Waypoint.refreshAll(); // height is liable to change, so we need to refresh these
       });
     });
     $('.js-slider--gallery').each(function () {
@@ -3888,6 +3892,8 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         adaptiveHeight: true,
         asNavFor: '.js-slider--gallery__nav',
         waitForAnimate: false
+      }).on('afterChange', function () {
+        Waypoint.refreshAll(); // height is liable to change, so we need to refresh these
       });
     });
     $('.js-slider--gallery__nav').each(function () {
