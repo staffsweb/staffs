@@ -174,38 +174,17 @@ a.card {
     background-size: contain;
   }
 
-  // these themes need to be updated 'manually' for now, as we're using an svg,
+  // These themes need to be updated 'manually' for now, as we're using an svg,
   // and I can't think of a clever way to update dynamically based on the accent var
-  // something using inline SVG use/fill?
+  // something using inline SVG use/fill, or a mask?
+  // Don't forget to add the SVG to the filesystem!
 
-  &.card--red {
-    &:before {
-      background: #fff url('../img/icon-quote-red.svg') no-repeat center center;
-      background-size: contain;
-    }
-  }
-  &.card--pink {
-    &:before {
-      background: #fff url('../img/icon-quote-pink.svg') no-repeat center center;
-      background-size: contain;
-    }
-  }
-  &.card--maroon {
-    &:before {
-      background: #fff url('../img/icon-quote-maroon.svg') no-repeat center center;
-      background-size: contain;
-    }
-  }
-  &.card--slate {
-    &:before {
-      background: #fff url('../img/icon-quote-slate.svg') no-repeat center center;
-      background-size: contain;
-    }
-  }
-  &.card--blue-ldn {
-    &:before {
-      background: #fff url('../img/icon-quote-blue-ldn.svg') no-repeat center center;
-      background-size: contain;
+  @each $name, $value in $card-accent-colors {
+    &.card--#{$name} {
+      &:before {
+        background: #fff url('#{$image-theme-directory}/icon-quote-#{$name}.svg') no-repeat center center;
+        background-size: contain;
+      }
     }
   }
 }

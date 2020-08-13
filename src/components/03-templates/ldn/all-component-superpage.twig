@@ -40,7 +40,6 @@
             <li class="page-nav__item"><a class="page-nav__link" href="#banner">Banner</a></li>
             <li class="page-nav__item"><a class="page-nav__link" href="#boxes">Boxes</a></li>
             <li class="page-nav__item"><a class="page-nav__link" href="#buttons">Buttons</a></li>
-            <li class="page-nav__item"><a class="page-nav__link" href="#cards-ksp">Cards (KSP)</a></li>
             <li class="page-nav__item"><a class="page-nav__link" href="#cards">Cards</a></li>
             <li class="page-nav__item"><a class="page-nav__link" href="#contact-us">Contact Us</a></li>
             <li class="page-nav__item"><a class="page-nav__link" href="#feature-tiles">Feature Tiles</a></li>
@@ -168,32 +167,51 @@
   </div>
 
 
-  <div class="slab  slab--bg-granite  js-waypoint-page-section" id="cards-ksp">
+  <div class="slab  js-waypoint-page-section" id="cards">
     <div class="slab__header  section-header  section-header--bg-offwhite">
       <div class="wrap">
         <div class="section-header__title   title  title--has-tail">
-          <h2 class="title__highlight">Cards (KSP)</h2>
+          <h2 class="title__highlight">Cards</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <section class="">
+        {% include '@card--ldn-variants' %}
+      </section>
+
+      <section class="">
+        <div class="title  title--has-tail  margin-bottom-3xl">
+          <h3 class="title__highlight">Cards: Pullquote</h3>
+        </div>
+
+        {% include '@card--pullquote-ldn' %}
+      </section>
+
+      <section class="">
+        <div class="title  title--has-tail  margin-bottom-3xl">
+          <h3 class="title__highlight">Cards: Testimonial</h3>
+        </div>
+
+        {% include '@card--testimonial-ldn' %}
+      </section>
+    </div>
+
+  </div>
+
+
+  <div class="slab  slab--bg-granite" id="cards-ksp">
+    <div class="slab__header  section-header  section-header--bg-offwhite">
+      <div class="wrap">
+        <div class="section-header__title   title  title--has-tail">
+          <h3 class="title__highlight">Cards (KSP)</h3>
         </div>
       </div>
     </div>
 
     <div class="wrap">
       {% include '@card--ksp-light' %}
-    </div>
-  </div>
-
-
-  <div class="slab  js-waypoint-page-section" id="cards">
-    <div class="slab__header  section-header  section-header--bg-offwhite">
-      <div class="wrap">
-        <div class="section-header__title   title  title--has-tail">
-          <h2 class="title__highlight">Cards (TBC)</h2>
-        </div>
-      </div>
-    </div>
-
-    <div class="wrap">
-      TBC
     </div>
   </div>
 

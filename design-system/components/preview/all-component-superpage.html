@@ -329,7 +329,6 @@
             <li class="page-nav__item"><a class="page-nav__link" href="#banner">Banner</a></li>
             <li class="page-nav__item"><a class="page-nav__link" href="#boxes">Boxes</a></li>
             <li class="page-nav__item"><a class="page-nav__link" href="#buttons">Buttons</a></li>
-            <li class="page-nav__item"><a class="page-nav__link" href="#cards-ksp">Cards (KSP)</a></li>
             <li class="page-nav__item"><a class="page-nav__link" href="#cards">Cards</a></li>
             <li class="page-nav__item"><a class="page-nav__link" href="#contact-us">Contact Us</a></li>
             <li class="page-nav__item"><a class="page-nav__link" href="#feature-tiles">Feature Tiles</a></li>
@@ -698,11 +697,663 @@
   </div>
 
 
-  <div class="slab  slab--bg-granite  js-waypoint-page-section" id="cards-ksp">
+  <div class="slab  js-waypoint-page-section" id="cards">
     <div class="slab__header  section-header  section-header--bg-offwhite">
       <div class="wrap">
         <div class="section-header__title   title  title--has-tail">
-          <h2 class="title__highlight">Cards (KSP)</h2>
+          <h2 class="title__highlight">Cards</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <section class="">
+        <p>All types of cards work with the LDN skin, by default they use the primary colour, and accent modifiers relative to LDN can be applied.</p>
+<p>These modifiers, cascade to the appropriate accented elements in different card types.</p>
+<p>Like other LDN themed component variants, the modifiers are in a map in <code>main-ldn.scss</code>, consider this the source of truth, but at the time of typing, they're currently:</p>
+
+<ul>
+  <li><code>blue-ldn</code></li>
+  <li><code>blue-deep-ldn</code></li>
+  <li><code>magenta-ldn</code></li>
+  <li><code>purple-deep-ldn</code></li>
+</ul>
+
+For example:
+
+<pre>&lt;div class=&quot;card  card--flex  card--magenta-ldn&quot;&gt;&lt;/div&gt;</pre>
+
+<hr/>
+
+<div class="card  card--flex">
+  <figure class="card__figure">
+    <img src="https://placeimg.com/720/360" alt=""/>
+  </figure>
+
+  <div class="card__content">
+    <h3 class="h4 card__title"><a href="" class="">Enjoying the View? How computer games can help evaluate landscapes</a></h3>
+    <p>2020 marks the International Year of the Nurse and Midwife, and Staffordshire University is joining colleagues across the globe to shine a spotlight on the sector. Celebrations kick off with a talk this week by Visiting Professor Ann-Marie Cannaby, Chief Nurse at the Royal Wolverhampton Hospital, at the University’s Centre of Excellence in Healthcare Education, Stafford.Two hundred years may have passed since the birth of Florence Nightingale, but patient care and safety remain the most important influencing factors within the fields of nursing and midwifery. Professor Cannaby will use her keynote presentation to explore curriculum developments.</p>
+  </div>
+</div>
+
+<div class="card  card--flex  card--magenta-ldn">
+  <figure class="card__figure">
+    <img src="https://placeimg.com/720/360" alt=""/>
+  </figure>
+
+  <div class="card__content">
+    <h3 class="h4  card__title"><a href="" class="link--stretched">Graduates give Staffs Uni star role in popular app</a></h3>
+    <p>The founders of an immersive storytelling app have returned to their university stomping ground to film their latest episode.</p>
+  </div>
+</div>
+
+<div class="card  card--flex  card--blue-ldn">
+  <div class="card__content">
+    <h3 class="h4  card__title">
+      <a href="#" class="link--stretched">Card Title (with <code>link--stretched</code>)</a>
+    </h3>
+    <p>Example without a figure image</p>
+    <p>The founders of an immersive storytelling app have returned to their university stomping ground to film their latest episode.</p>
+  </div>
+</div>
+
+<div class="card  card--flex  card--purple-deep-ldn">
+  <figure class="card__figure">
+    <img src="https://placeimg.com/720/360" alt=""/>
+  </figure>
+
+  <div class="card__content">
+    <h3 class="h4  card__title"><a href="" class="link--stretched">Graduates give Staffs Uni star role in popular app</a></h3>
+    <p>The founders of an immersive storytelling app have returned to their university stomping ground to film their latest episode.</p>
+  </div>
+</div>
+
+<hr/>
+
+
+<div class="grid  grid-2-cols  grid-4-cols@desktop">
+
+  <div>
+    <div class="card  card--flex  card--blue-deep-ldn">
+      <figure class="card__figure  card__figure--video">
+        <img src="https://placeimg.com/480/240/people" alt=""/>
+      </figure>
+
+      <div class="card__content">
+        <h3 class="card__title  h5">
+          <a href="#" class="link--stretched">Research into poverty in Stoke-on-Trent gets new funding boost</a>
+        </h3>
+        <p><span class="tag">video</span></p>
+        <p>Adding a class of <code>card__figure--video</code> to a figure will give it a play icon overlay.</p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="card  card--flex  card--blue-ldn">
+      <figure class="card__figure">
+        <img src="https://placeimg.com/480/240/tech" alt=""/>
+      </figure>
+
+      <div class="card__content">
+        <h3 class="card__title  h5">
+          <a href="#" class="link--stretched">Graduates give Staffs Uni star role in popular app</a>
+        </h3>
+        <p><span class="tag">blog</span></p>
+        <p>
+          <time class="strong">11 February 2020</time>
+        </p>
+        <p>University's pioneering work with community researchers will help inform new model of community research.</p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="card  card--flex  card--magenta-ldn">
+      <figure class="card__figure">
+        <img src="https://placeimg.com/480/240/nature" alt=""/>
+      </figure>
+
+      <div class="card__content">
+        <h3 class="card__title  h5">
+          <a href="#" class="link--stretched">“It's Beautiful to be Old” Professor tells Vatican</a>
+        </h3>
+        <p><span class="tag">blog</span></p>
+        <p>
+          <time class="strong">10 August 2020</time>
+        </p>
+        <p>The founders of an immersive storytelling app have returned to their university stomping ground to film their latest episode.</p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="card  card--flex  card--purple-deep-ldn">
+      <figure class="card__figure">
+        <img src="https://placeimg.com/480/240/people" alt=""/>
+      </figure>
+
+      <div class="card__content">
+        <h3 class="card__title  h5">
+          <a href="#" class="link--stretched">Research into poverty in Stoke-on-Trent gets new funding boost</a>
+        </h3>
+        <p><span class="tag">blog</span></p>
+        <p>
+          <time class="strong">9 April 2020</time>
+        </p>
+        <p>Staffordshire University is going global with a programme packed full of free events to start the new decade.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr/>
+
+<div class="grid  grid-3-cols">
+
+  <div>
+    <div class="card  card--flex  card--magenta-ldn">
+      <figure class="card__figure">
+        <img src="https://placeimg.com/480/480/tech" alt=""/>
+      </figure>
+
+      <div class="card__content">
+        <h3 class="card__title  h5">
+          <a href="#" class="link--stretched">Accommodation</a>
+        </h3>
+        <p>Where you live is a big part of your student experience and where you’ll make friends for life.</p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="card  card--flex  card--purple-deep-ldn">
+      <figure class="card__figure">
+        <img src="https://placeimg.com/480/480/nature" alt=""/>
+      </figure>
+
+      <div class="card__content">
+        <h3 class="card__title  h5">
+          <a href="#" class="link--stretched">Staffordshire Campus</a>
+        </h3>
+        <p>There’ll be times when you need some support - and we’re here for you. There are many student support services - from welfare to money matters.</p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <a class="card  card--flex" href="">
+      <figure class="card__figure">
+        <img src="https://placeimg.com/480/240/people" alt=""/>
+      </figure>
+
+      <div class="card__content">
+        <h3 class="card__title  h5">
+          Stoke-on-Trent Open Day Programme
+        </h3>
+        <p><span class="tag">publication</span></p>
+        <p>Download our open day PDF (2.8Mb)</p>
+        <b class="button  button--clipped">Download</b>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<hr/>
+
+<div class="card  card--flex-overlap">
+  <figure class="card__figure">
+    <img src="https://placeimg.com/720/360" alt=""/>
+  </figure>
+
+  <div class="card__content">
+    <div class="title">
+      <h3 class="h4  title__highlight"><a href="" class="">Graduates give Staffs Uni star role in popular app</a></h3>
+    </div>
+    <p>Staffordshire University is going global with a programme packed full of free events to start the new decade.</p>
+  </div>
+</div>
+
+<div class="card  card--flex-overlap  card--purple-deep-ldn">
+  <figure class="card__figure">
+    <img src="https://placeimg.com/720/360" alt=""/>
+  </figure>
+
+  <div class="card__content">
+    <a href="" class="link--stretched">
+      <div class="title">
+        <h3 class="h4  title__highlight">Enjoying the View? How computer games can help evaluate landscapes</h3>
+      </div>
+    </a>
+    <p>2020 marks the International Year of the Nurse and Midwife, and Staffordshire University is joining colleagues across the globe to shine a spotlight on the sector. Celebrations kick off with a talk this week by Visiting Professor Ann-Marie Cannaby, Chief Nurse at the Royal Wolverhampton Hospital, at the University’s Centre of Excellence in Healthcare Education, Stafford.Two hundred years may have passed since the birth of Florence Nightingale, but patient care and safety remain the most important influencing factors within the fields of nursing and midwifery. Professor Cannaby will use her keynote presentation to explore curriculum developments.</p>
+  </div>
+</div>
+
+<div class="card  card--flex-overlap  card--magenta-ldn">
+
+  <div class="card__content">
+    <a href="" class="link--stretched">
+      <div class="title">
+        <h3 class="h4  title__highlight">Enjoying the View? How computer games can help evaluate landscapes</h3>
+      </div>
+    </a>
+    <p>Example without a figure image</p>
+    <p>The founders of an immersive storytelling app have returned to their university stomping ground to film their latest episode.</p>
+  </div>
+</div>
+
+<div class="card  card--flex-overlap  card--blue-ldn">
+
+  <div class="card__content">
+    <a href="" class="link--stretched">
+      <div class="title">
+        <h3 class="h4  title__highlight">Enjoying the View? How computer games can help evaluate landscapes</h3>
+      </div>
+    </a>
+    <p>Example without a figure image</p>
+    <p>The founders of an immersive storytelling app have returned to their university stomping ground to film their latest episode.</p>
+  </div>
+</div>
+
+<hr/>
+
+
+<div class="grid  grid-2-cols  grid-4-cols@desktop">
+
+  <div>
+    <div class="card  card--flex-overlap">
+      <figure class="card__figure  card__figure--video">
+        <img src="https://placeimg.com/480/240/people" alt=""/>
+      </figure>
+
+      <div class="card__content">
+        <a href="#" class="link--stretched">
+          <div class="title">
+            <h3 class="h5  title__highlight">Research into poverty in Stoke-on-Trent gets new funding boost</h3>
+          </div>
+        </a>
+        <p><span class="tag">video</span></p>
+        <p>Adding a class of <code>card__figure--video</code> to a figure will give it a play icon overlay.</p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="card  card--flex-overlap  card--magenta-ldn">
+      <figure class="card__figure">
+        <img src="https://placeimg.com/480/240/tech" alt=""/>
+      </figure>
+
+      <div class="card__content">
+        <a href="#" class="link--stretched">
+          <div class="title">
+            <h3 class="h5  title__highlight">Graduates give Staffs Uni star role in popular app</h3>
+          </div>
+        </a>
+        <p><span class="tag">blog</span></p>
+        <p>
+          <time class="strong">11 February 2020</time>
+        </p>
+        <p>University's pioneering work with community researchers will help inform new model of community research.</p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="card  card--flex-overlap  card--blue-ldn">
+      <figure class="card__figure">
+        <img src="https://placeimg.com/480/240/nature" alt=""/>
+      </figure>
+
+      <div class="card__content">
+        <a href="#" class="link--stretched">
+          <div class="title">
+            <h3 class="h5  title__highlight">“It's Beautiful to be Old” Professor tells Vatican</h3>
+          </div>
+        </a>
+        <p><span class="tag">blog</span></p>
+        <p>
+          <time class="strong">10 August 2020</time>
+        </p>
+        <p>University's pioneering work with community researchers will help inform new model of community research.</p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="card  card--flex-overlap  card--purple-deep-ldn">
+      <figure class="card__figure">
+        <img src="https://placeimg.com/480/240/people" alt=""/>
+      </figure>
+
+      <div class="card__content">
+        <a href="#" class="link--stretched">
+          <div class="title">
+            <h3 class="h5  title__highlight">Research into poverty in Stoke-on-Trent gets new funding boost</h3>
+          </div>
+        </a>
+        <p><span class="tag">blog</span></p>
+        <p>
+          <time class="strong">9 April 2020</time>
+        </p>
+        <p>University's pioneering work with community researchers will help inform new model of community research.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr/>
+
+<div class="grid  grid-3-cols">
+
+  <div>
+    <div class="card  card--flex-overlap  card--magenta-ldn">
+      <figure class="card__figure">
+        <img src="https://placeimg.com/480/480/tech" alt=""/>
+      </figure>
+
+      <div class="card__content">
+        <a href="#" class="link--stretched">
+          <div class="title">
+            <h3 class="h5  title__highlight">Accommodation</h3>
+          </div>
+        </a>
+        <p>Where you live is a big part of your student experience and where you’ll make friends for life.</p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="card  card--flex-overlap  card--purple-deep-ldn">
+      <figure class="card__figure">
+        <img src="https://placeimg.com/480/480/nature" alt=""/>
+      </figure>
+
+      <div class="card__content">
+        <a href="#" class="link--stretched">
+          <div class="title">
+            <h3 class="h5  title__highlight">Staffordshire Campus</h3>
+          </div>
+        </a>
+        <p>There’ll be times when you need some support - and we’re here for you. There are many student support services - from welfare to money matters.</p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <a class="card  card--flex-overlap" href="">
+      <figure class="card__figure">
+        <img src="https://placeimg.com/480/240/people" alt=""/>
+      </figure>
+
+      <div class="card__content">
+        <div class="title">
+          <h3 class="h5  title__highlight">Stoke-on-Trent Open Day Programme</h3>
+        </div>
+        <p><span class="tag">publication</span></p>
+        <p>Download our open day PDF (2.8Mb)</p>
+        <b class="button  button--clipped">Download</b>
+      </div>
+    </a>
+  </div>
+</div>
+      </section>
+
+      <section class="">
+        <div class="title  title--has-tail  margin-bottom-3xl">
+          <h3 class="title__highlight">Cards: Pullquote</h3>
+        </div>
+
+        <div class="card  card--pullquote">
+  <div class="card__content">
+    <blockquote>
+      <span class="blockquote__highlight">I’m delighted for Staffordshire University to be shortlisted for Best Educational Institution and all the staff are incredibly proud that our students have been recognised for their game Pair Up. It is a well-deserved honour.</span>
+
+      <footer class="blockquote__footer">
+        <p class="cite">Christie Scanion, Graduate</p>
+        <p>BA(Hons) Sports Development and Coaching (Former title of our Sports Coaching degree)</p>
+      </footer>
+    </blockquote>
+  </div>
+</div>
+
+<div class="card  card--pullquote  card--blue-ldn">
+  <div class="card__content">
+    <blockquote>
+      <span class="blockquote__highlight">I’m delighted for Staffordshire University to be shortlisted for Best Educational Institution and all the staff are incredibly proud that our students have been recognised for their game Pair Up. It is a well-deserved honour.</span>
+
+      <footer class="blockquote__footer">
+        <p class="cite">Christie Scanion, Graduate</p>
+        <p>BA(Hons) Sports Development and Coaching (Former title of our Sports Coaching degree)</p>
+      </footer>
+    </blockquote>
+  </div>
+</div>
+
+<div class="card  card--pullquote  card--magenta-ldn">
+  <div class="card__content">
+    <blockquote>
+      <span class="blockquote__highlight">I’m delighted for Staffordshire University to be shortlisted for Best Educational Institution and all the staff are incredibly proud that our students have been recognised for their game Pair Up. It is a well-deserved honour.</span>
+
+      <footer class="blockquote__footer">
+        <p class="cite">Christie Scanion, Graduate</p>
+        <p>BA(Hons) Sports Development and Coaching (Former title of our Sports Coaching degree)</p>
+      </footer>
+    </blockquote>
+  </div>
+</div>
+
+<div class="card  card--pullquote  card--purple-deep-ldn">
+  <div class="card__content">
+    <blockquote>
+      <span class="blockquote__highlight">I’m delighted for Staffordshire University to be shortlisted for Best Educational Institution and all the staff are incredibly proud that our students have been recognised for their game Pair Up. It is a well-deserved honour.</span>
+
+      <footer class="blockquote__footer">
+        <p class="cite">Christie Scanion, Graduate</p>
+        <p>BA(Hons) Sports Development and Coaching (Former title of our Sports Coaching degree)</p>
+      </footer>
+    </blockquote>
+  </div>
+</div>
+
+<hr/>
+
+<div class="grid  grid--spaced  grid-2-cols@mobile-wide">
+  <div>
+    <div class="card  card--pullquote">
+      <div class="card__content">
+        <blockquote class="">
+          <span class="blockquote__highlight">The quote icon uses an svg, so you can use these four card accent colours, but more will need to be added in the cards.scss partial</span>
+
+          <footer class="blockquote__footer">
+            <p class="cite">Dan Sheerman</p>
+            <p>Head of Blockquotes</p>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="card  card--pullquote  card--blue-ldn">
+      <div class="card__content">
+        <blockquote class="blockquote--short">
+          <span class="blockquote__highlight">They can use the normal short/big long/small classes for sizing</span>
+
+          <footer class="blockquote__footer">
+            <p class="cite">Dan Sheerman</p>
+            <p>VP of Sizing Modifiers</p>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="card  card--pullquote  card--purple-deep-ldn">
+      <div class="card__content">
+        <blockquote>
+          <span class="blockquote__highlight">The quote accent is intrinsically sized, so you can put them in any size column, just adjust the class for text size if needbe.</span>
+
+          <footer class="blockquote__footer">
+            <p class="cite">Dan Sheerman</p>
+            <p>VP of Sizing Modifiers</p>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="card  card--pullquote  card--magenta-ldn">
+      <div class="card__content">
+        <blockquote class="blockquote--long">
+          <span class="blockquote__highlight">I’m delighted for Staffordshire University to be shortlisted for Best Educational Institution and all the staff are incredibly proud that our students have been recognised for their game Pair Up. It is a well-deserved honour.</span>
+
+          <footer class="blockquote__footer">
+            <p class="cite">Christie Scanion, Graduate</p>
+            <p>BA(Hons) Sports Development and Coaching (Former title of our Sports Coaching degree)</p>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</div>      </section>
+
+      <section class="">
+        <div class="title  title--has-tail  margin-bottom-3xl">
+          <h3 class="title__highlight">Cards: Testimonial</h3>
+        </div>
+
+        <div class="card  card--testimonial">
+  <div class="card__content">
+    <blockquote>
+      <figure class="blockquote__figure  align-right  align-size-sm">
+        <img src="https://placeimg.com/480/480/people" alt=""/>
+      </figure>
+
+      <q class="blockquote__title">Great relationships with leading institutions</q>
+
+      <div class="blockquote__prose">
+        <p>I really enjoy the broad range of psycholoy content, the tutors are supportive and really helpful!</p>
+        <p>The facilities are perfect with very advanced equipment, making my studies even m oreinteresting. I particularly enjoy studies in anxiety and how this can influence sports performance. The facilities are perfect with very advanced equipment, making my studies even m oreinteresting. I particularly enjoy studies in anxiety and how this can influence sports performance.</p>
+        <p>The facilities are perfect with very advanced equipment, making my studies even m oreinteresting. I particularly enjoy studies in anxiety and how this can influence sports performance. </p>
+      </div>
+
+      <footer class="blockquote__footer">
+        <p class="cite">Christie Scanion, Graduate </p>
+        <p>BA(Hons) Sports Development and Coaching (Former title of our Sports Coaching degree)</p>
+      </footer>
+    </blockquote>
+  </div>
+</div>
+
+<hr/>
+
+<div class="grid  grid-2-cols@tablet">
+  <div>
+    <div class="card  card--testimonial  card--blue-deep-ldn">
+      <div class="card__content">
+        <blockquote class="blockquote--large">
+          <figure class="blockquote__figure  align-right  align-size-sm">
+            <img src="https://placeimg.com/480/480/people" alt=""/>
+          </figure>
+
+          <q class="blockquote__title">Great relationships with leading institutions</q>
+
+          <div class="blockquote__prose">
+            <p>Thanks to Staffordshire University, I felt I could connect, converse and engage with professionals. Thanks to Staffordshire University, I felt I could connect, converse and engage with professionals.</p>
+          </div>
+
+          <footer class="blockquote__footer">
+            <p class="cite">Sarah Jones</p>
+            <p>Digital Design</p>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="card  card--testimonial  card--blue-ldn">
+      <div class="card__content">
+        <blockquote>
+          <figure class="blockquote__figure  align-right  align-size-sm">
+            <img src="https://placeimg.com/480/480/people" alt=""/>
+          </figure>
+
+          <q class="blockquote__title">Great relationships with leading institutions</q>
+
+          <div class="blockquote__prose">
+            <p>I really enjoy the broad range of psycholoy content, the tutors are supportive and really helpful!</p>
+            <p>The facilities are perfect with very advanced equipment, making my studies even m oreinteresting. I particularly enjoy studies in anxiety and how this can influence sports performance. The facilities are perfect with very advanced equipment, making my studies even m oreinteresting. I particularly enjoy studies in anxiety and how this can influence sports performance.</p>
+            <p>The facilities are perfect with very advanced equipment, making my studies even m oreinteresting. I particularly enjoy studies in anxiety and how this can influence sports performance. </p>
+          </div>
+
+          <footer class="blockquote__footer">
+            <p class="cite">Christie Scanion, Graduate </p>
+            <p>BA(Hons) Sports Development and Coaching (Former title of our Sports Coaching degree)</p>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="card  card--testimonial  card--purple-deep-ldn">
+      <div class="card__content">
+        <blockquote class="blockquote--large">
+          <figure class="blockquote__figure  align-right  align-size-sm">
+            <img src="https://placeimg.com/480/480/people" alt=""/>
+          </figure>
+
+          <q class="blockquote__title">Tutors are supportive and really helpful!</q>
+
+          <div class="blockquote__prose">
+            <p>Thanks to Staffordshire University, I felt I could connect, converse and engage with professionals. Thanks to Staffordshire University, I felt I could connect, converse and engage with professionals.</p>
+          </div>
+
+          <footer class="blockquote__footer">
+            <p class="cite">Christie Scanion, Graduate </p>
+            <p>BA(Hons) Sports Development and Coaching (Former title of our Sports Coaching degree)</p>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="card  card--testimonial  card--magenta-ldn">
+      <div class="card__content">
+        <blockquote>
+          <figure class="blockquote__figure  align-right  align-size-sm">
+            <img src="https://placeimg.com/480/480/people" alt=""/>
+          </figure>
+
+          <q class="blockquote__title">Great relationships with leading institutions</q>
+
+          <div class="blockquote__prose">
+            <p>I really enjoy the broad range of psycholoy content, the tutors are supportive and really helpful!</p>
+            <p>The facilities are perfect with very advanced equipment, making my studies even m oreinteresting. I particularly enjoy studies in anxiety and how this can influence sports performance. </p>
+          </div>
+
+          <footer class="blockquote__footer">
+            <p class="cite">Christie Scanion, Graduate </p>
+            <p>BA(Hons) Sports Development and Coaching (Former title of our Sports Coaching degree)</p>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</div>      </section>
+    </div>
+
+  </div>
+
+
+  <div class="slab  slab--bg-granite" id="cards-ksp">
+    <div class="slab__header  section-header  section-header--bg-offwhite">
+      <div class="wrap">
+        <div class="section-header__title   title  title--has-tail">
+          <h3 class="title__highlight">Cards (KSP)</h3>
         </div>
       </div>
     </div>
@@ -782,21 +1433,6 @@
     </div>
   </div>
 </div>    </div>
-  </div>
-
-
-  <div class="slab  js-waypoint-page-section" id="cards">
-    <div class="slab__header  section-header  section-header--bg-offwhite">
-      <div class="wrap">
-        <div class="section-header__title   title  title--has-tail">
-          <h2 class="title__highlight">Cards (TBC)</h2>
-        </div>
-      </div>
-    </div>
-
-    <div class="wrap">
-      TBC
-    </div>
   </div>
 
 
@@ -1212,11 +1848,11 @@
     
 <div class="masthead  masthead--has-blurredBg">
   <div class="masthead__bg  masthead__bg--blurred">
-          <img src="../../img/masthead2.jpg"/>
+          <img src="../../img/masthead3.jpg"/>
       </div>
   <div class="masthead__inner">
     <div class="masthead__bg">
-              <img src="../../img/masthead2.jpg"/>
+              <img src="../../img/masthead3.jpg"/>
           </div>
     <div class="wrap">
       <nav class="breadcrumbs">

@@ -859,15 +859,13 @@ a.card:hover .title__highlight, a.card:hover .card__title { text-decoration: und
 
 .card--pullquote:before { content: ''; display: block; float: left; width: 5%; height: 0; padding-bottom: 5%; margin-left: -5%; background: #fff url("../img/theme-ldn/icon-quote-primary.svg") no-repeat center center; background-size: contain; }
 
-.card--pullquote.card--red:before { background: #fff url("../img/icon-quote-red.svg") no-repeat center center; background-size: contain; }
+.card--pullquote.card--blue-ldn:before { background: #fff url("../img/theme-ldn/icon-quote-blue-ldn.svg") no-repeat center center; background-size: contain; }
 
-.card--pullquote.card--pink:before { background: #fff url("../img/icon-quote-pink.svg") no-repeat center center; background-size: contain; }
+.card--pullquote.card--blue-deep-ldn:before { background: #fff url("../img/theme-ldn/icon-quote-purple-deep-ldn.svg") no-repeat center center; background-size: contain; }
 
-.card--pullquote.card--maroon:before { background: #fff url("../img/icon-quote-maroon.svg") no-repeat center center; background-size: contain; }
+.card--pullquote.card--magenta-ldn:before { background: #fff url("../img/theme-ldn/icon-quote-magenta-ldn.svg") no-repeat center center; background-size: contain; }
 
-.card--pullquote.card--slate:before { background: #fff url("../img/icon-quote-slate.svg") no-repeat center center; background-size: contain; }
-
-.card--pullquote.card--blue-ldn:before { background: #fff url("../img/icon-quote-blue-ldn.svg") no-repeat center center; background-size: contain; }
+.card--pullquote.card--purple-deep-ldn:before { background: #fff url("../img/theme-ldn/icon-quote-purple-deep-ldn.svg") no-repeat center center; background-size: contain; }
 
 .card--ksp { color: #41464b; }
 

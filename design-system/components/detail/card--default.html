@@ -412,38 +412,17 @@
     <span class="hljs-attribute">background-size</span>: contain;
   }
 
-  <span class="hljs-comment">// these themes need to be updated 'manually' for now, as we're using an svg,</span>
+  <span class="hljs-comment">// These themes need to be updated 'manually' for now, as we're using an svg,</span>
   <span class="hljs-comment">// and I can't think of a clever way to update dynamically based on the accent var</span>
-  <span class="hljs-comment">// something using inline SVG use/fill?</span>
+  <span class="hljs-comment">// something using inline SVG use/fill, or a mask?</span>
+  <span class="hljs-comment">// Don't forget to add the SVG to the filesystem!</span>
 
-  &amp;<span class="hljs-selector-class">.card--red</span> {
-    &amp;<span class="hljs-selector-pseudo">:before</span> {
-      <span class="hljs-attribute">background</span>: <span class="hljs-number">#fff</span> url(<span class="hljs-string">'../img/icon-quote-red.svg'</span>) no-repeat center center;
-      <span class="hljs-attribute">background-size</span>: contain;
-    }
-  }
-  &amp;<span class="hljs-selector-class">.card--pink</span> {
-    &amp;<span class="hljs-selector-pseudo">:before</span> {
-      <span class="hljs-attribute">background</span>: <span class="hljs-number">#fff</span> url(<span class="hljs-string">'../img/icon-quote-pink.svg'</span>) no-repeat center center;
-      <span class="hljs-attribute">background-size</span>: contain;
-    }
-  }
-  &amp;<span class="hljs-selector-class">.card--maroon</span> {
-    &amp;<span class="hljs-selector-pseudo">:before</span> {
-      <span class="hljs-attribute">background</span>: <span class="hljs-number">#fff</span> url(<span class="hljs-string">'../img/icon-quote-maroon.svg'</span>) no-repeat center center;
-      <span class="hljs-attribute">background-size</span>: contain;
-    }
-  }
-  &amp;<span class="hljs-selector-class">.card--slate</span> {
-    &amp;<span class="hljs-selector-pseudo">:before</span> {
-      <span class="hljs-attribute">background</span>: <span class="hljs-number">#fff</span> url(<span class="hljs-string">'../img/icon-quote-slate.svg'</span>) no-repeat center center;
-      <span class="hljs-attribute">background-size</span>: contain;
-    }
-  }
-  &amp;<span class="hljs-selector-class">.card--blue-ldn</span> {
-    &amp;<span class="hljs-selector-pseudo">:before</span> {
-      <span class="hljs-attribute">background</span>: <span class="hljs-number">#fff</span> url(<span class="hljs-string">'../img/icon-quote-blue-ldn.svg'</span>) no-repeat center center;
-      <span class="hljs-attribute">background-size</span>: contain;
+  <span class="hljs-keyword">@each</span> <span class="hljs-variable">$name</span>, <span class="hljs-variable">$value</span> in <span class="hljs-variable">$card-accent-colors</span> {
+    &amp;<span class="hljs-selector-class">.card--</span>#{<span class="hljs-variable">$name</span>} {
+      &amp;<span class="hljs-selector-pseudo">:before</span> {
+        <span class="hljs-attribute">background</span>: <span class="hljs-number">#fff</span> url(<span class="hljs-string">'#{$image-theme-directory}/icon-quote-#{$name}.svg'</span>) no-repeat center center;
+        <span class="hljs-attribute">background-size</span>: contain;
+      }
     }
   }
 }
@@ -536,7 +515,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">5.3 KB</span>
+                    <span class="Meta-value">4.9 KB</span>
                 </li>
             </ul>
         </div>
@@ -559,7 +538,7 @@
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Variants <em class="Meta-count">(17)</em>:</strong>
+            <strong class="Meta-key">Variants <em class="Meta-count">(20)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="">
@@ -586,12 +565,32 @@
                     <span>Theme: Blue (LDN)</span>
                 </a>, 
             
+                <a href="card--ldn-variants.html">
+                    <span>LDN Variants</span>
+                </a>, 
+            
                 <a href="card--ksp.html">
                     <span>KSP (Key Selling Points)</span>
                 </a>, 
             
                 <a href="card--ksp-light.html">
                     <span>KSP (Light on Dark)</span>
+                </a>, 
+            
+                <a href="card--pullquote.html">
+                    <span>Pullquote</span>
+                </a>, 
+            
+                <a href="card--pullquote-ldn.html">
+                    <span>Pullquote (LDN)</span>
+                </a>, 
+            
+                <a href="card--testimonial.html">
+                    <span>Testimonial</span>
+                </a>, 
+            
+                <a href="card--testimonial-ldn.html">
+                    <span>Testimonial (LDN)</span>
                 </a>, 
             
                 <a href="card--course.html">
@@ -618,16 +617,8 @@
                     <span>Profile</span>
                 </a>, 
             
-                <a href="card--pullquote.html">
-                    <span>Pullquote</span>
-                </a>, 
-            
                 <a href="card--result.html">
                     <span>Result</span>
-                </a>, 
-            
-                <a href="card--testimonial.html">
-                    <span>Testimonial</span>
                 </a>
             
             </span>
@@ -2143,6 +2134,30 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="card--ldn-variants.html" data-pjax>
+                <span>LDN Variants</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="card--ksp.html" data-pjax>
                 <span>KSP (Key Selling Points)</span>
                 
@@ -2169,6 +2184,102 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="card--ksp-light.html" data-pjax>
                 <span>KSP (Light on Dark)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="card--pullquote.html" data-pjax>
+                <span>Pullquote</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="card--pullquote-ldn.html" data-pjax>
+                <span>Pullquote (LDN)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="card--testimonial.html" data-pjax>
+                <span>Testimonial</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="card--testimonial-ldn.html" data-pjax>
+                <span>Testimonial (LDN)</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2335,56 +2446,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="card--pullquote.html" data-pjax>
-                <span>Pullquote</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="card--result.html" data-pjax>
                 <span>Result</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="card--testimonial.html" data-pjax>
-                <span>Testimonial</span>
                 
 
 <div class="Status Status--unlabelled">

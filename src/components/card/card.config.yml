@@ -13,7 +13,23 @@ variants:
   - name: blue-ldn
     label: "Theme: Blue (LDN)"
 
+  - name: ldn-variants
+    label: "LDN Variants"
+    preview: '@preview--ldn'
+
   - name: ksp
     label: "KSP (Key Selling Points)"
   - name: ksp-light
     label: "KSP (Light on Dark)"
+
+  - name: pullquote
+    label: "Pullquote"
+  - name: pullquote-ldn
+    label: "Pullquote (LDN)"
+    preview: '@preview--ldn'
+
+  - name: testimonial
+    label: "Testimonial"
+  - name: testimonial-ldn
+    label: "Testimonial (LDN)"
+    preview: '@preview--ldn'
