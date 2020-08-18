@@ -79,13 +79,7 @@ dt { font-weight: 500; }
 
 dd { margin: 0; }
 
-hr { clear: both; height: 0px; border: 0; border-top: 1px solid #dddddd; margin: 4rem auto; }
-
-hr.compact { margin: 2rem auto; }
-
-hr.spaced { margin: 6rem auto; }
-
-hr.invisible { border-color: transparent; }
+hr { clear: both; height: 0; border: 0; border-top: 1px solid #dddddd; margin: 4rem auto; }
 
 img { display: block; max-width: 100%; height: auto; width: auto; }
 

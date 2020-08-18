@@ -231,22 +231,10 @@ $border-accent-width: $spacing-2xs;
 
   hr {
     clear: both;
-    height: 0px;
+    height: 0;
     border: 0;
     border-top: 1px solid $grey--light;
     margin: $spacing-4xl auto;
-
-    &.compact {
-      margin: $spacing-xl auto;
-    }
-
-    &.spaced {
-      margin: $spacing-5xl auto;
-    }
-
-    &.invisible {
-      border-color: transparent;
-    }
   }
 
   img {

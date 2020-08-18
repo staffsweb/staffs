@@ -195,13 +195,7 @@ dt { font-weight: 500; }
 
 dd { margin: 0; }
 
-hr { clear: both; height: 0px; border: 0; border-top: 1px solid #dddddd; margin: 4rem auto; }
-
-hr.compact { margin: 2rem auto; }
-
-hr.spaced { margin: 6rem auto; }
-
-hr.invisible { border-color: transparent; }
+hr { clear: both; height: 0; border: 0; border-top: 1px solid #dddddd; margin: 4rem auto; }
 
 img { display: block; max-width: 100%; height: auto; width: auto; }
 
@@ -861,7 +855,7 @@ a.card:hover .title__highlight, a.card:hover .card__title { text-decoration: und
 
 .card--pullquote.card--blue-ldn:before { background: #fff url("../img/theme-ldn/icon-quote-blue-ldn.svg") no-repeat center center; background-size: contain; }
 
-.card--pullquote.card--blue-deep-ldn:before { background: #fff url("../img/theme-ldn/icon-quote-purple-deep-ldn.svg") no-repeat center center; background-size: contain; }
+.card--pullquote.card--blue-deep-ldn:before { background: #fff url("../img/theme-ldn/icon-quote-blue-deep-ldn.svg") no-repeat center center; background-size: contain; }
 
 .card--pullquote.card--magenta-ldn:before { background: #fff url("../img/theme-ldn/icon-quote-magenta-ldn.svg") no-repeat center center; background-size: contain; }
 
@@ -908,6 +902,28 @@ a.card:hover .title__highlight, a.card:hover .card__title { text-decoration: und
 a.feature-link:hover .feature-link__title:after { transform: translateX(0.1rem); }
 
 a.feature-link:hover .feature-link__figure { opacity: 0.9; }
+
+hr { position: relative; }
+
+.hr--primary { border-top-width: 2px; border-color: #144196; }
+
+.hr--compact { margin: 2rem auto; }
+
+.hr--spaced { margin: 6rem auto; }
+
+.hr--invisible { border-color: transparent; }
+
+[class*='hr--tri-'] { border-color: #144196; }
+
+[class*='hr--tri-']:before, [class*='hr--tri-']:after { position: absolute; content: ''; display: inline-block; width: 0; height: 0; border-style: solid; border-color: transparent; }
+
+.hr--tri-above-left:before { bottom: 0; left: 0; border-width: 1em 0 0 1em; border-color: transparent transparent transparent #144196; }
+
+.hr--tri-below-left:before { top: 0; left: 0; border-width: 1em 1em 0 0; border-color: #144196 transparent transparent transparent; }
+
+.hr--tri-above-right:after { bottom: 0; right: 0; border-width: 0 0 1em 1em; border-color: transparent transparent #144196 transparent; }
+
+.hr--tri-below-right:after { top: 0; right: 0; border-width: 0 1em 1em 0; border-color: transparent #144196 transparent transparent; }
 
 .icon { position: relative; display: inline-block; width: 1em; height: 1em; text-align: center; background-size: contain; background-position: center center; background-repeat: no-repeat; vertical-align: baseline; top: 0.1em; }
 
