@@ -38,6 +38,9 @@
         transform: scale(1.1);
         filter: blur(1em);
       }
+      @media (min-width: $overlay-breakpoint) {
+        display: none; // this full-viewport filter is actually quite process intensive, so get rid as soon as it's not needed
+      }
     }
   }
 

@@ -87,7 +87,7 @@ $slab-bg-colors: (
 @import "_vendor/normalize";
 
 @import "_global/typography";
-@import "_global/forms";
+@import "../../components/forms/forms";
 
 @import "_grid/grid";
 

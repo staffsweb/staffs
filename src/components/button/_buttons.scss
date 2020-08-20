@@ -52,4 +52,8 @@
   &--outline-slate {
     @include button--outline-slate;
   }
+
+  &[disabled] {
+    @include button--disabled;
+  }
 }

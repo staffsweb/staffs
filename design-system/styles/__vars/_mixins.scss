@@ -34,6 +34,15 @@
   }
 }
 
+@mixin button--disabled {
+  opacity: 0.75;
+  border-color: #ccc;
+  background: #ccc;
+  background-position: 0% bottom;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
 
 
 @mixin button--xs {
