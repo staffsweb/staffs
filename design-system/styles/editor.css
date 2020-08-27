@@ -199,7 +199,7 @@ a.tag:hover { text-decoration: underline; color: black; }
 
 .button--slate:hover, .button--slate:focus { color: white; }
 
-.button--outline { color: black; border: 0.2em solid #ffd91b; padding: 0.6em 2em; background-image: linear-gradient(to left, white 50%, #ffd91b 50%); }
+.button--outline { color: black; border: 0.2em solid #ffd91b; padding: 0.6em 2em; background-color: transparent; background-image: linear-gradient(to left, rgba(255, 255, 255, 0) 50%, #ffd91b 50%); }
 
 .button--outline:hover, .button--outline:focus, .button--outline:active { color: black; }
 

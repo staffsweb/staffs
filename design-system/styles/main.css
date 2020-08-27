@@ -301,9 +301,7 @@ input[type=text], input[type=password], input[type=number], input[type=email], i
 
 input[type=text]:focus, input[type=password]:focus, input[type=number]:focus, input[type=email]:focus, input[type=tel]:focus, input[type=search]:focus, input[type=date]:focus, input[type=time]:focus, textarea:focus, select:focus { outline: none; border-color: rgba(50, 50, 50, 0.75); }
 
-textarea { width: 25em; }
-
-select { -webkit-appearance: none; -moz-appearance: none; appearance: none; padding-right: 2em; background: url("../img/icon-arrow-down-black.svg") no-repeat right 0.75em center; background-size: 0.75em; }
+select { -webkit-appearance: none; -moz-appearance: none; appearance: none; padding-right: 2em; background: white url("../img/icon-arrow-down-black.svg") no-repeat right 0.75em center; background-size: 0.75em; }
 
 .form__item { margin: 0 0 1.5rem; }
 
@@ -789,7 +787,7 @@ section:first-child { margin-top: 0; }
 
 .button--slate:hover, .button--slate:focus { color: white; }
 
-.button--outline { color: black; border: 0.2em solid #ffd91b; padding: 0.6em 2em; background-image: linear-gradient(to left, white 50%, #ffd91b 50%); }
+.button--outline { color: black; border: 0.2em solid #ffd91b; padding: 0.6em 2em; background-color: transparent; background-image: linear-gradient(to left, rgba(255, 255, 255, 0) 50%, #ffd91b 50%); }
 
 .button--outline:hover, .button--outline:focus, .button--outline:active { color: black; }
 
