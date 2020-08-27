@@ -253,7 +253,22 @@ $tile-accent-colors: (
 .tile--accent-maroon { --accent-color: #970048; }
 .tile--accent-slate { --accent-color: #394851; }
 .tile--accent-tef-gold { --accent-color: #dd9200; }
-<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Colour Utilities<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>There are two maps, <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$utils-bg-colors<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> and <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$utils-text-colors<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> which generate utility classes for colours. As with the margin/spacing utilities, <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>use sparingly, not
+        by default.<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> These styles probably belong in a component.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>For example, adding:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>'primary': $primary,<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>to the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$utils-text-colors<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> map, will output a class of <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>text-color-primary<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> which can be used to <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-color-primary"</span>&gt;</span>make text the primary colour<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>In <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$utils-bg-colors<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, the line:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>'tertiary': $tertiary,<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Will output a class of <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>bg-tertiary<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> which can be used to <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bg-tertiary"</span>&gt;</span>set the background of any element to tertiary.<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>If you were to use <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>bg-offblack<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, you'd need to be careful to also add a class of <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>text-color-offwhite<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bg-offblack text-color-offwhite"</span>&gt;</span>so that text is
+        readable<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -353,7 +368,22 @@ $tile-accent-colors: (
 .tile--accent-maroon { --accent-color: #970048; }
 .tile--accent-slate { --accent-color: #394851; }
 .tile--accent-tef-gold { --accent-color: #dd9200; }
-<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span></span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Colour Utilities<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>There are two maps, <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$utils-bg-colors<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> and <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$utils-text-colors<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> which generate utility classes for colours. As with the margin/spacing utilities, <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>use sparingly, not
+    by default.<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> These styles probably belong in a component.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>For example, adding:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>'primary': $primary,<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>to the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$utils-text-colors<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> map, will output a class of <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>text-color-primary<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> which can be used to <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-color-primary"</span>&gt;</span>make text the primary colour<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>In <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>$utils-bg-colors<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, the line:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>'tertiary': $tertiary,<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Will output a class of <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>bg-tertiary<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> which can be used to <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bg-tertiary"</span>&gt;</span>set the background of any element to tertiary.<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>If you were to use <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>bg-offblack<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, you'd need to be careful to also add a class of <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>text-color-offwhite<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bg-offblack text-color-offwhite"</span>&gt;</span>so that text is
+    readable<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span></pre>
     </code>
 </div>
 

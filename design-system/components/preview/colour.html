@@ -112,6 +112,20 @@ $tile-accent-colors: (
 .tile--accent-tef-gold { --accent-color: #dd9200; }
 </pre>
 
+<h2>Colour Utilities</h2>
+
+<p>There are two maps, <code>$utils-bg-colors</code> and <code>$utils-text-colors</code> which generate utility classes for colours. As with the margin/spacing utilities, <strong>use sparingly, not
+    by default.</strong> These styles probably belong in a component.</p>
+
+<p>For example, adding:</p>
+<pre>'primary': $primary,</pre>
+<p>to the <code>$utils-text-colors</code> map, will output a class of <code>text-color-primary</code> which can be used to <span class="text-color-primary">make text the primary colour</span>.</p>
+
+<p>In <code>$utils-bg-colors</code>, the line:</p>
+<pre>'tertiary': $tertiary,</pre>
+<p>Will output a class of <code>bg-tertiary</code> which can be used to <span class="bg-tertiary">set the background of any element to tertiary.</span></p>
+<p>If you were to use <code>bg-offblack</code>, you'd need to be careful to also add a class of <code>text-color-offwhite</code> <span class="bg-offblack text-color-offwhite">so that text is
+    readable</span>.</p>
 
     </div>
 </main>
