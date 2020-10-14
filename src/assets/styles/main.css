@@ -1364,7 +1364,7 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 @media (min-width: 40rem) { .slick-arrow { font-size: 3rem; } }
 
-.slick-arrow:before { content: ''; display: block; margin: auto; width: 1em; height: 1em; background: #394851 url("/site/images/icons/icon-gt-white.svg") no-repeat 55% 50%; background-size: 30%; border-radius: 100%; }
+.slick-arrow:before { content: ''; display: block; margin: auto; width: 1em; height: 1em; background: #394851 url("../img/icon-gt-white.svg") no-repeat 55% 50%; background-size: 30%; border-radius: 100%; }
 
 .slick-next { right: -1.0909rem; }
 
