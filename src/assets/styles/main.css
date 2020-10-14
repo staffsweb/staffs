@@ -657,7 +657,7 @@ section:first-child { margin-top: 0; }
 @media (min-width: 70rem) { .toggle-search-site { background-position: center center; height: 2rem; order: 3; }
   .toggle-search-site__label { display: block; position: absolute; left: -9999em; clip: rect(0 0 0 0); } }
 
-.toggle-megaNav { background: url("/site/images/icons/icon-hamburger-white.svg") center 0.25rem no-repeat; background-size: 1.5rem 1.5rem; }
+.toggle-megaNav { background: url("../img/icon-hamburger-white.svg") center 0.25rem no-repeat; background-size: 1.5rem 1.5rem; }
 
 @media (min-width: 70rem) { .toggle-megaNav { display: none; } }
 
@@ -905,7 +905,7 @@ a.card:hover .title__highlight, a.card:hover .card__title { text-decoration: und
 
 .feature-link__title { display: table; position: relative; margin-bottom: 0.5rem; padding-right: 1em; word-break: break-word; }
 
-.feature-link__title:after { content: ''; position: absolute; bottom: 0.05em; display: inline-block; width: 1em; height: 1em; margin-left: 0.25rem; background: url("/site/images/icons/icon-gt-primary.svg") center center no-repeat; background-size: 40%; vertical-align: text-bottom; transition: transform 75ms ease-out; }
+.feature-link__title:after { content: ''; position: absolute; bottom: 0.05em; display: inline-block; width: 1em; height: 1em; margin-left: 0.25rem; background: url("../img//icon-gt-primary.svg") center center no-repeat; background-size: 40%; vertical-align: text-bottom; transition: transform 75ms ease-out; }
 
 .feature-link__figure { margin-bottom: 1rem; }
 
@@ -1101,7 +1101,7 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 .megaNav li:last-child > a { border-bottom: 0; }
 
-.megaNav .has-children > a:after { content: ''; position: absolute; display: block; right: 0; top: 0.75em; width: 2em; height: 2em; background: url("/site/images/icons/icon-gt-primary.svg") no-repeat center center; background-size: 0.5em; }
+.megaNav .has-children > a:after { content: ''; position: absolute; display: block; right: 0; top: 0.75em; width: 2em; height: 2em; background: url("../img//icon-gt-primary.svg") no-repeat center center; background-size: 0.5em; }
 
 .megaNav .is-expanded > .megaNav__level { visibility: visible; height: auto; overflow: visible; min-height: 100%; transform: translateX(0); transition: transform 100ms, visibility 100ms; }
 
@@ -1113,7 +1113,7 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 @media (min-width: 70rem) { .megaNav__controls { display: none; } }
 
-.megaNav__close { content: ''; border: 0; box-sizing: border-box; display: block; width: 4rem; height: 4rem; margin-top: 0.1em; background: url("/site/images/icons/icon-x-primary.svg") no-repeat center center; background-size: 1rem; cursor: pointer; }
+.megaNav__close { content: ''; border: 0; box-sizing: border-box; display: block; width: 4rem; height: 4rem; margin-top: 0.1em; background: url("../img//icon-x-primary.svg") no-repeat center center; background-size: 1rem; cursor: pointer; }
 
 .megaNav__level { position: absolute; visibility: hidden; background: #e8ebed; top: 0; right: 0; left: 0; height: 0; min-height: 0; padding-bottom: 12rem; overflow: hidden; transform: translateX(100%); padding-left: 1.5rem; box-sizing: border-box; z-index: 1; transition: transform 100ms, visibility 100ms; }
 
@@ -1127,7 +1127,7 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 .megaNav__closeLevel:active { color: #d70a26; }
 
-.megaNav__closeLevel:before { content: ''; position: absolute; display: block; left: 0; top: 0.75em; width: 1em; height: 2em; background: url("/site/images/icons/icon-gt-primary.svg") no-repeat center center; background-size: 0.5em; transform: rotate(180deg); }
+.megaNav__closeLevel:before { content: ''; position: absolute; display: block; left: 0; top: 0.75em; width: 1em; height: 2em; background: url("../img//icon-gt-primary.svg") no-repeat center center; background-size: 0.5em; transform: rotate(180deg); }
 
 .megaNav__levelMobileFooter .megaNav__closeLevel { text-align: left; }
 
@@ -1162,7 +1162,7 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 .megaNav__secondLevel-link { position: relative; font-weight: 500; }
 
-.megaNav__secondLevel.has-children > a:after { content: ''; position: absolute; display: block; right: 0; top: 0.75em; width: 2em; height: 2em; background: url("/site/images/icons/icon-gt-primary.svg") no-repeat center center; background-size: 0.5em; }
+.megaNav__secondLevel.has-children > a:after { content: ''; position: absolute; display: block; right: 0; top: 0.75em; width: 2em; height: 2em; background: url("../img//icon-gt-primary.svg") no-repeat center center; background-size: 0.5em; }
 
 @media (min-width: 70rem) { .megaNav__thirdLevel { font-size: 0.85em; left: 100%; right: -300%; top: 0; bottom: 0; background: white; padding: 2rem; max-height: 100%; overflow: auto !important; box-sizing: border-box; }
   .megaNav__thirdLevel-list { -webkit-columns: 2; -moz-columns: 2; columns: 2; -webkit-column-gap: 2rem; -moz-column-gap: 2rem; column-gap: 2rem; }
