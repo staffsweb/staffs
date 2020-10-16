@@ -1768,6 +1768,8 @@ a.tile:focus { outline-width: 3px; outline-color: #d70a26; z-index: 2; }
 
 .js .js-hidden { display: none; }
 
+.visually-hidden { clip: rect(1px, 1px, 1px, 1px); height: 1px; overflow: hidden; position: absolute !important; width: 1px; }
+
 .link--stretched { position: static; }
 
 .link--stretched::after { position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 1; pointer-events: all; content: ""; background-color: rgba(0, 0, 0, 0); }
