@@ -170,7 +170,7 @@ a.card {
     height: 0;
     padding-bottom: 5%;
     margin-left: -5%;
-    background: #fff url('#{$image-theme-directory}/icon-quote-primary.svg') no-repeat center center;
+    background: #fff url('#{$image-theme-directory-icon}/icon-quote-primary.svg') no-repeat center center;
     background-size: contain;
   }
 
@@ -182,7 +182,7 @@ a.card {
   @each $name, $value in $card-accent-colors {
     &.card--#{$name} {
       &:before {
-        background: #fff url('#{$image-theme-directory}/icon-quote-#{$name}.svg') no-repeat center center;
+        background: #fff url('#{$image-theme-directory-icon}/icon-quote-#{$name}.svg') no-repeat center center;
         background-size: contain;
       }
     }
