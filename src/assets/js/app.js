@@ -15,6 +15,8 @@
 //=include vendor/slick-1.8.1/slick/slick.js
 //@codekit-prepend silent './vendor/waypoints/lib/jquery.waypoints.js';
 //=include vendor/waypoints/lib/jquery.waypoints.js
+//@codekit-prepend silent './vendor/jquery-ui.js';
+//=include vendor/jquery-ui.js
 
 // @TODO: at some point, it'd probably be nice if functions sat in
 // 'eachIndividualComponentName.js' in each component folder and were imported
@@ -423,6 +425,66 @@
     });
   };
 
+  let autocompleteInit = function() {
+    $.widget("custom.courseautocomplete", $.ui.autocomplete, {
+      _create: function() {
+        this._super();
+        this.widget().menu( "option", "items", "> :not(.ui-autocomplete-category)" );
+      },
+      _renderMenu: function( ul, items ) {
+        var that = this,
+          currentCategory = "";
+        $.each( items, function( index, item ) {
+          var li;
+          if ( item.cat != currentCategory ) {
+            ul.append( "<li class='ui-autocomplete-category'>" + item.cat + "</li>" );
+            currentCategory = item.cat;
+          }
+          li = that._renderItemData( ul, item );
+          if ( item.cat ) {
+            li.attr( "aria-label", item.cat + " : " + item.disp );
+          }
+        });
+      },
+      _renderItemData: function( ul, item) {
+            var label = item.disp.replace(new RegExp('('+ $("#course-search__keywords").val() + ')', 'i'), '<strong>$1</strong>');
+            ul.data('ui-autocomplete-item', item);
+            return $("<li>")
+              .data('ui-autocomplete-item', item )
+              .append( "<div>" + label + "</div>" )
+              .addClass('ui-menu-item ui-menu-item__course')
+              .appendTo( ul );
+        }
+    });
+    
+    $("#course-search__keywords").courseautocomplete({
+      source: function(request, response) {
+        $.ajax({
+            url: "https://search.staffs.ac.uk/s/search.html",
+            dataType: "json",
+            data: {
+              meta_t_trunc : request.term.toLowerCase(), // CG: Accounts for mobile devices using sentence caps when doing autocorrect
+              collection : 'staffordshire-coursetitles',
+              profile : 'auto-completion',
+              form : 'qc',
+              meta_V_and : $("#course-search__level").val(), // CG: Level of study can either be a hidden form field or a <select>
+              sort : 'dmetaV' // CG: Sorts by level of study, with UG first
+            },
+            success: function(data) {
+                response(data);
+            }
+        });
+      },
+      minLength: 3,
+      delay: 300,
+      select: function(event, ui) {
+        // CG: Redirect to the relevant course page
+        window.location = ui.item.action;
+        return false;
+      }
+    });
+  };
+
   // --
 
   $(document).ready(function () {
@@ -431,6 +493,7 @@
     sliderInit();
     waypointsInit();
     pageNavWaypointsInit();
+    autocompleteInit();
   });
 
   $(window).on('load', function () {
