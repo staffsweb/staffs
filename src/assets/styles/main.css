@@ -1967,6 +1967,8 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .accolade-slider__item-img { margin: auto; width: auto; max-height: 2em; }
 
+.accolade-slider a { color: white; text-decoration: none; }
+
 .slider--modules .slick-slide { max-width: 80vw; margin: 0 0.75rem; }
 
 @media (min-width: 86rem) { .slider--modules .slick-slide { max-width: 71rem; } }

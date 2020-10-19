@@ -1374,6 +1374,8 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .slab--bg-granite-light { background-color: #5e6266; color: white; }
 
+.slab--bg-slate-light { background-color: #fff; }
+
 /* Slider */
 .slick-slider { position: relative; display: block; box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
 
@@ -1444,6 +1446,8 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 .accolade-slider__item-description { min-height: 2.8em; margin-bottom: 2rem; font-size: 0.875rem; line-height: 1.4; }
 
 .accolade-slider__item-img { margin: auto; width: auto; max-height: 2em; }
+
+.accolade-slider a { color: black; text-decoration: none; }
 
 .slider--modules .slick-slide { max-width: 80vw; margin: 0 0.75rem; }
 
