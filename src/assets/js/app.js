@@ -486,6 +486,17 @@
   };
 
   let siteSearchInit = function() {
+    // CG: Show / hide the site search
+    $("#btn-search--desktop").on("click", function(e) {
+      $(".site-search").addClass("site-search--open");
+    });
+
+    $(document).on("keyup", function (e) {
+      if(e.keyCode == 27) {
+        $(".site-search").removeClass("site-search--open");
+      }
+    }
+
     /* CG: Build search URLs */
     function courseSearchUrl(query, collection = "staffordshire-coursetitles", level = null) {
 

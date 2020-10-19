@@ -6528,7 +6528,12 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   };
 
   var siteSearchInit = function siteSearchInit() {
+    // CG: Show / hide the site search
+    $("#btn-search--desktop").on("click", function (e) {
+      $(".site-search").addClass("site-search--open");
+    });
     /* CG: Build search URLs */
+
     function courseSearchUrl(query) {
       var collection = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "staffordshire-coursetitles";
       var level = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;

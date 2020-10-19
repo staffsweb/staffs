@@ -1868,11 +1868,17 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .section-header--bg-offwhite .section-header__title { position: relative; top: 2rem; margin-bottom: 6rem; }
 
-.site-search { font-size: 1.75rem; color: #FFF; background-color: #970048; padding: 1.5rem; display: flex; }
+.site-search__options { font-size: 1.75rem; color: #FFF; background-color: #970048; padding: 1.5rem; display: flex; }
 
-.site-search label { clear: right; }
+.site-search__options label { clear: right; }
 
 .site-search__keywords[type='search'] { max-width: 100%; }
+
+.site-search { opacity: 0; transition: opacity 0.5s; content: ''; position: absolute; top: 0; right: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); }
+
+.site-search--open { pointer-events: auto; z-index: 1000; }
+
+.site-search--open { opacity: 1; }
 
 .slab { position: relative; padding: 4rem 0; z-index: 0; }
 
