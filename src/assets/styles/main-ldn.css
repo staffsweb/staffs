@@ -720,7 +720,7 @@ section:first-child { margin-top: 0; }
 
 .footer-site { background: #41464b; color: #fff; clear: both; position: relative; padding: 0 0 8rem; z-index: 0; }
 
-.footer-site a:not(.button) { color: white; }
+.footer-site a:not(.button) { color: white; text-decoration: none; }
 
 .footer-site h6 { margin-top: 1.5rem; }
 
@@ -728,7 +728,21 @@ section:first-child { margin-top: 0; }
 
 .footer-site__logo img { display: block; margin: auto; width: 7.5em; max-width: 25vmin; }
 
-.footer-site__social-list .icon { font-size: 2.5rem; margin-right: 0.75rem; }
+.footer-site__social-list .icon { font-size: 2.5rem; margin-right: 0.75rem; max-height: 100%; vertical-align: middle; }
+
+.footer-site__social-list .icon--facebook { background-image: url("/site/images/icons/icon-facebook-white.svg"); }
+
+.footer-site__social-list .icon--twitter { background-image: url("/site/images/icons/icon-twitter-white.svg"); }
+
+.footer-site__social-list .icon--youtube { background-image: url("/site/images/icons/icon-youtube-white.svg"); }
+
+.footer-site__social-list .icon--pinterest { background-image: url("/site/images/icons/icon-pinterest-white.svg"); }
+
+.footer-site__social-list .icon--snapchat { background-image: url("/site/images/icons/icon-snapchat-white.svg"); }
+
+.footer-site__social-list .icon--instagram { background-image: url("/site/images/icons/icon-instagram-white.svg"); }
+
+.footer-site__social-list .icon--linkedin { background-image: url("/site/images/icons/icon-linkedin-white.svg"); }
 
 .footer-site__legal { margin: 0 0 0.25rem; font-size: 0.75rem; line-height: 0.8; }
 
