@@ -1,0 +1,28 @@
+.course-search {
+    &__keywords {
+        &[type="search"] {
+            max-width: 100%;
+        }
+    } 
+    select {
+        max-width: 100%;
+    } 
+}
+@media (min-width: $third-breakpoint) {
+    .course-search {
+        &__keywords {
+            &[type="search"] {
+                max-width: 60%;
+            }
+        } 
+        &__submit {
+            max-width: 10%;
+        }
+        select {
+            max-width: 30%;
+        }
+    }
+}
+.course-search__category {
+    font-weight: bold;
+}

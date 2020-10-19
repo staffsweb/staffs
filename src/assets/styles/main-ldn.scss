@@ -1,7 +1,5 @@
 @import "__vars/_all";
 
-$image-theme-directory: '../img/theme-ldn';
-
 // REMINDER ONLY
 /*
 $blue--deep-ldn:              $blue--deep-ldn;
@@ -23,6 +21,8 @@ $neutral--light:              $granite--light-ldn;
 $link-color--hover:           $primary;
 $table-accent:                $neutral--primary;
 $table-accent--light:         $neutral--light;
+
+$slate--light:                #fff;
 
 // Utilities Classes OVERWRITE
 // these are output by the loops in _utils/utils.scss (included by main)
@@ -79,6 +79,7 @@ $slab-bg-colors: (
   'offwhite': $offwhite,
   'granite': $granite--ldn,
   'granite-light': $granite--light-ldn,
+  'slate-light': $slate--light,
 );
 
 
@@ -128,3 +129,7 @@ $slab-bg-colors: (
 @import "_utils/utils";
 
 @import "_theme/ldn";
+
+
+//Overrides
+@import "../../components/megaNav/ldn/megaNav";

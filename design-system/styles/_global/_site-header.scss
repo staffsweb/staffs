@@ -79,7 +79,7 @@
 }
 
 .toggle-search-site {
-  background: url('../img/icon-magnify-white.svg') center $spacing-2xs no-repeat;
+  background: url('#{$image-theme-directory-icon}/icon-magnify-white.svg') center $spacing-2xs no-repeat;
   background-size: $spacing-lg $spacing-lg;
 
   @media (min-width: $megaNav-full-breakpoint) {
@@ -97,7 +97,7 @@
 }
 
 .toggle-megaNav {
-  background: url('../img/icon-hamburger-white.svg') center $spacing-2xs no-repeat;
+  background: url('#{$image-theme-directory-icon}/icon-hamburger-white.svg') center $spacing-2xs no-repeat;
   background-size: $spacing-lg $spacing-lg;
 
   @media (min-width: $megaNav-full-breakpoint) {

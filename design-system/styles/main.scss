@@ -1,6 +1,7 @@
 @import "__vars/_all";
 
 @import "_vendor/normalize";
+@import "_vendor/jquery-ui";
 
 @import "_global/typography";
 @import "../../components/forms/forms";
@@ -18,6 +19,7 @@
 @import "../../components/breadcrumbs/breadcrumbs";
 @import "../../components/button/buttons";
 @import "../../components/card/cards";
+@import "../../components/course-search/course-search";
 @import "../../components/feature-link/feature-link";
 @import "../../components/hr/hr";
 @import "../../components/icons/icons";
@@ -31,6 +33,7 @@
 @import "../../components/quote/quotes";
 @import "../../components/quote-banner/quote-banner";
 @import "../../components/section-header/section-header";
+@import "../../components/global-search/global-search";
 @import "../../components/slab/slab";
 @import "../../components/slider/slider";
 @import "../../components/table/tables";

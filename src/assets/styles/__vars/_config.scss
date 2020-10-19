@@ -1,3 +1,23 @@
-$image-theme-directory: '../img/'; // this is overridden if using a theme which requires different images (eg. London)
+$image-theme-directory: '/site/images'; // this is overridden if using a theme which requires different images (eg. London)
+$image-theme-directory-icon: '#{$image-theme-directory}/icons';
 
 $link-image-hover-opacity: 0.9;
+
+//Social Media Icons
+$facebook-icon : '/site/images/icons/icon-facebook-white.svg';
+$twitter-icon : '/site/images/icons/icon-twitter-white.svg';
+$youtube-icon : '/site/images/icons/icon-youtube-white.svg';
+$pinterest-icon : '/site/images/icons/icon-pinterest-white.svg';
+$snapchat-icon : '/site/images/icons/icon-snapchat-white.svg';
+$instagram-icon : '/site/images/icons/icon-instagram-white.svg';
+$linkedin-icon : '/site/images/icons/icon-linkedin-white.svg';
+
+$social-media-icons: (
+  'facebook': $facebook-icon,
+  'twitter': $twitter-icon,
+  'youtube': $youtube-icon,
+  'pinterest': $pinterest-icon,
+  'snapchat': $snapchat-icon,
+  'instagram': $instagram-icon,
+  'linkedin': $linkedin-icon
+);
