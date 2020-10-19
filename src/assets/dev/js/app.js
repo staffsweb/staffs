@@ -6530,7 +6530,12 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   var siteSearchInit = function siteSearchInit() {
     // CG: Show / hide the site search
     $("#btn-search--desktop").on("click", function (e) {
-      $(".site-search").addClass("site-search--open");
+      $(".global-search").addClass("global-search--open");
+    });
+    $(document).on("keyup", function (e) {
+      if (e.keyCode == 27) {
+        $(".global-search").removeClass("global-search--open");
+      }
     });
     /* CG: Build search URLs */
 
@@ -6551,9 +6556,9 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
       return "https://search.staffs.ac.uk/s/search.html?collection=staffordshire-main&query=" + query;
     }
 
-    $("#site-search__keywords").keyup(function (e) {
+    $("#global-search__keywords").keyup(function (e) {
       // CG: Decide whether to search the whole site or just courses
-      var collection = $(".site-search__scope:checked").val(); // CG: Detect ENTER being pressed
+      var collection = $(".global-search__scope:checked").val(); // CG: Detect ENTER being pressed
 
       var keycode = e.keyCode ? e.keyCode : e.which;
 

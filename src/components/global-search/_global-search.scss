@@ -1,4 +1,4 @@
-.site-search__options {
+.global-search__options {
     @include typescale('2xl');
     color: #FFF;
     background-color: $maroon;
@@ -9,10 +9,10 @@
         clear: right;
     }
 }
-.site-search__keywords[type='search'] {
+.global-search__keywords[type='search'] {
     max-width: 100%;
 }
-.site-search {
+.global-search {
     opacity: 0;
     transition: opacity 0.5s;
     content: '';

@@ -115,7 +115,13 @@
     width: auto;
     max-height: 2em;
   }
+  
+  a {
+    color: choose-contrast-color($slate--light);
+    text-decoration: none;
+  }
 }
+
 
 .slider--modules {
   // these are sized in JS,
