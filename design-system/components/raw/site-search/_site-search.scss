@@ -1,0 +1,14 @@
+.site-search {
+    @include typescale('2xl');
+    color: #FFF;
+    background-color: $maroon;
+    padding: $spacing-lg;
+    display: flex;
+
+    & label {
+        clear: right;
+    }
+}
+.site-search__keywords[type='search'] {
+    max-width: 100%;
+}

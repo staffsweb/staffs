@@ -1,6 +1,7 @@
 @import "__vars/_all";
 
 @import "_vendor/normalize";
+@import "_vendor/jquery-ui";
 
 @import "_global/typography";
 @import "../../components/forms/forms";
@@ -32,6 +33,7 @@
 @import "../../components/quote/quotes";
 @import "../../components/quote-banner/quote-banner";
 @import "../../components/section-header/section-header";
+@import "../../components/site-search/site-search";
 @import "../../components/slab/slab";
 @import "../../components/slider/slider";
 @import "../../components/table/tables";
