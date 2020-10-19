@@ -437,7 +437,7 @@
         $.each( items, function( index, item ) {
           var li;
           if ( item.cat != currentCategory ) {
-            ul.append( "<li class='ui-autocomplete-category'>" + item.cat + "</li>" );
+            ul.append( "<li class='course-search__category ui-autocomplete-category'>" + item.cat + "</li>" );
             currentCategory = item.cat;
           }
           li = that._renderItemData( ul, item );
@@ -485,6 +485,45 @@
     });
   };
 
+  let siteSearchInit = function() {
+    /* CG: Build search URLs */
+    function courseSearchUrl(query, collection = "staffordshire-coursetitles", level = null) {
+
+      if(level == "postgraduate") {
+          return "https://search.staffs.ac.uk/s/search.html?collection=" + collection + "&f.Level%7CV=postgraduate+(taught)&f.Level%7CV=postgraduate+(research)&query=" + query;
+      } else if (level == "undergraduate") {
+          return "https://search.staffs.ac.uk/s/search.html?collection=" + collection + "&f.Level%7CV=undergraduate&query=" + query;
+      }
+      return "https://search.staffs.ac.uk/s/search.html?collection=" + collection + "&query=" + query;
+    }
+
+    function siteSearchUrl(query) {
+      return "https://search.staffs.ac.uk/s/search.html?collection=staffordshire-main&query=" + query;
+    }
+
+    $("#site-search__keywords").keyup(function (e) {
+      // CG: Decide whether to search the whole site or just courses
+      var collection = $(".site-search__scope:checked").val();
+
+      // CG: Detect ENTER being pressed
+      var keycode = (e.keyCode ? e.keyCode : e.which);
+      if (keycode == '13') {
+          $('#form1').on('submit', function (e) {
+              e.preventDefault();
+          });
+          e.stopImmediatePropagation();
+
+          if(collection == "wholeSite")
+          {
+            window.location.href = siteSearchUrl($(this).val());
+          } else {
+            window.location.href = courseSearchUrl($(this).val());
+          }
+      }
+      e.preventDefault();
+  });
+  };
+
   // --
 
   $(document).ready(function () {
@@ -493,6 +532,7 @@
     sliderInit();
     waypointsInit();
     pageNavWaypointsInit();
+    siteSearchInit();
     autocompleteInit();
   });
 

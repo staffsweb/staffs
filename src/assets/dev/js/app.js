@@ -6479,7 +6479,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
           var li;
 
           if (item.cat != currentCategory) {
-            ul.append("<li class='ui-autocomplete-category'>" + item.cat + "</li>");
+            ul.append("<li class='course-search__category ui-autocomplete-category'>" + item.cat + "</li>");
             currentCategory = item.cat;
           }
 
@@ -6525,6 +6525,48 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         return false;
       }
     });
+  };
+
+  var siteSearchInit = function siteSearchInit() {
+    /* CG: Build search URLs */
+    function courseSearchUrl(query) {
+      var collection = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "staffordshire-coursetitles";
+      var level = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+
+      if (level == "postgraduate") {
+        return "https://search.staffs.ac.uk/s/search.html?collection=" + collection + "&f.Level%7CV=postgraduate+(taught)&f.Level%7CV=postgraduate+(research)&query=" + query;
+      } else if (level == "undergraduate") {
+        return "https://search.staffs.ac.uk/s/search.html?collection=" + collection + "&f.Level%7CV=undergraduate&query=" + query;
+      }
+
+      return "https://search.staffs.ac.uk/s/search.html?collection=" + collection + "&query=" + query;
+    }
+
+    function siteSearchUrl(query) {
+      return "https://search.staffs.ac.uk/s/search.html?collection=staffordshire-main&query=" + query;
+    }
+
+    $("#site-search__keywords").keyup(function (e) {
+      // CG: Decide whether to search the whole site or just courses
+      var collection = $(".site-search__scope:checked").val(); // CG: Detect ENTER being pressed
+
+      var keycode = e.keyCode ? e.keyCode : e.which;
+
+      if (keycode == '13') {
+        $('#form1').on('submit', function (e) {
+          e.preventDefault();
+        });
+        e.stopImmediatePropagation();
+
+        if (collection == "wholeSite") {
+          window.location.href = siteSearchUrl($(this).val());
+        } else {
+          window.location.href = courseSearchUrl($(this).val());
+        }
+      }
+
+      e.preventDefault();
+    });
   }; // --
 
 
@@ -6534,6 +6576,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     sliderInit();
     waypointsInit();
     pageNavWaypointsInit();
+    siteSearchInit();
     autocompleteInit();
   });
   $(window).on('load', function () {

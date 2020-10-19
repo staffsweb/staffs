@@ -1462,6 +1462,8 @@ a.card:hover .title__highlight, a.card:hover .card__title { text-decoration: und
   .course-search__submit { max-width: 10%; }
   .course-search select { max-width: 30%; } }
 
+.course-search__category { font-weight: bold; }
+
 .feature-link { display: block; position: relative; --accent-color: #d70a26; margin-bottom: 2rem; color: #394851; text-decoration: none; padding: 0 calc(0.75rem + 2.5%) 0; border-left: 0.25rem solid #d70a26; border-left: 0.25rem solid var(--accent-color); }
 
 .feature-link__title { display: table; position: relative; margin-bottom: 0.5rem; padding-right: 1em; word-break: break-word; }
@@ -1865,6 +1867,12 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 .section-header--bg-offwhite { padding: 2rem 0 0; margin-bottom: 4rem; background-color: #f1f1f1; }
 
 .section-header--bg-offwhite .section-header__title { position: relative; top: 2rem; margin-bottom: 6rem; }
+
+.site-search { font-size: 1.75rem; color: #FFF; background-color: #970048; padding: 1.5rem; display: flex; }
+
+.site-search label { clear: right; }
+
+.site-search__keywords[type='search'] { max-width: 100%; }
 
 .slab { position: relative; padding: 4rem 0; z-index: 0; }
 
