@@ -1,0 +1,34 @@
+.global-search__options {
+    @include typescale('2xl');
+    color: #FFF;
+    background-color: $maroon;
+    padding: $spacing-lg;
+    display: flex;
+
+    & label {
+        clear: right;
+    }
+}
+.global-search__keywords[type='search'] {
+    max-width: 100%;
+}
+.global-search {
+    opacity: 0;
+    transition: opacity 0.5s;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+
+  &--open {
+    pointer-events: auto;
+    z-index: 1000;
+  }
+  
+ &--open {
+    opacity: 1;
+  }
+}

@@ -22,6 +22,8 @@ $link-color--hover:           $primary;
 $table-accent:                $neutral--primary;
 $table-accent--light:         $neutral--light;
 
+$slate--light:                #fff;
+
 // Utilities Classes OVERWRITE
 // these are output by the loops in _utils/utils.scss (included by main)
 
@@ -77,6 +79,7 @@ $slab-bg-colors: (
   'offwhite': $offwhite,
   'granite': $granite--ldn,
   'granite-light': $granite--light-ldn,
+  'slate-light': $slate--light,
 );
 
 

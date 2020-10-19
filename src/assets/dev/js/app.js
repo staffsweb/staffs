@@ -6528,7 +6528,17 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   };
 
   var siteSearchInit = function siteSearchInit() {
+    // CG: Show / hide the site search
+    $("#btn-search--desktop").on("click", function (e) {
+      $(".global-search").addClass("global-search--open");
+    });
+    $(document).on("keyup", function (e) {
+      if (e.keyCode == 27) {
+        $(".global-search").removeClass("global-search--open");
+      }
+    });
     /* CG: Build search URLs */
+
     function courseSearchUrl(query) {
       var collection = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "staffordshire-coursetitles";
       var level = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
@@ -6546,9 +6556,9 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
       return "https://search.staffs.ac.uk/s/search.html?collection=staffordshire-main&query=" + query;
     }
 
-    $("#site-search__keywords").keyup(function (e) {
+    $("#global-search__keywords").keyup(function (e) {
       // CG: Decide whether to search the whole site or just courses
-      var collection = $(".site-search__scope:checked").val(); // CG: Detect ENTER being pressed
+      var collection = $(".global-search__scope:checked").val(); // CG: Detect ENTER being pressed
 
       var keycode = e.keyCode ? e.keyCode : e.which;
 
