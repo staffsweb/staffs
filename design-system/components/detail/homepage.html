@@ -519,7 +519,19 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"main-content"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"main"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"slab  slab--bg-slate"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"wrap"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"course-search"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"course-search__keywords"</span>&gt;</span>Search courses by keyword<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"course-search__keywords"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"course-search__keywords"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"cQueryH"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"search"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Search courses by keyword"</span>&gt;</span>
 
+                <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"course-search__level"</span>&gt;</span>Filter<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"course-search__level"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"cFilter"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span>&gt;</span>All levels of study<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"undergraduate"</span>&gt;</span>Undergraduate<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"postgraduate"</span>&gt;</span>Postgraduate<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"course-search__submit"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"cSubmit"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
@@ -1223,15 +1235,19 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"main-content"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"main"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"slab  slab--bg-slate"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"wrap"</span>&gt;</span>
-      </span><span class="hljs-comment">{#      &lt;form&gt;#}</span><span class="xml">
-      </span><span class="hljs-comment">{#        &lt;input type="text" placeholder="Search courses by keyword"/&gt;#}</span><span class="xml">
-
-      </span><span class="hljs-comment">{#        &lt;select&gt;#}</span><span class="xml">
-      </span><span class="hljs-comment">{#          &lt;option selected disabled&gt;All levels of study&lt;/option&gt;#}</span><span class="xml">
-      </span><span class="hljs-comment">{#        &lt;/select&gt;#}</span><span class="xml">
-
-      </span><span class="hljs-comment">{#        &lt;input type="submit" class="button" value="Search"/&gt;#}</span><span class="xml">
-      </span><span class="hljs-comment">{#      &lt;/form&gt;#}</span><span class="xml">
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"course-search"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"course-search__keywords"</span>&gt;</span>Search courses by keyword<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"course-search__keywords"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"course-search__keywords"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"cQueryH"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"search"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Search courses by keyword"</span>&gt;</span>
+          
+          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"course-search__level"</span>&gt;</span>Filter<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"course-search__level"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"cFilter"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span>&gt;</span>All levels of study<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"undergraduate"</span>&gt;</span>Undergraduate<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"postgraduate"</span>&gt;</span>Postgraduate<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+      
+          <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"course-search__submit"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"cSubmit"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
@@ -3420,6 +3436,30 @@
         
     
         
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="course-search.html" data-pjax>
+                <span>Course Search</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-feature-link">
             <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-feature-link-items">
                 Feature Link
@@ -4760,6 +4800,30 @@
     
 
             </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="site-search.html" data-pjax>
+                <span>Site Search</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
         </li>
         
     

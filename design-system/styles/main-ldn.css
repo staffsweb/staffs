@@ -1764,6 +1764,8 @@ a.tile:focus { outline-width: 3px; outline-color: #144196; z-index: 2; }
 
 .js .js-hidden { display: none; }
 
+.visually-hidden { clip: rect(1px, 1px, 1px, 1px); height: 1px; overflow: hidden; position: absolute !important; width: 1px; }
+
 .link--stretched { position: static; }
 
 .link--stretched::after { position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 1; pointer-events: all; content: ""; background-color: rgba(0, 0, 0, 0); }
@@ -1781,5 +1783,11 @@ a.tile:focus { outline-width: 3px; outline-color: #144196; z-index: 2; }
 .theme-ldn .footer-site__logo { margin: 1rem 0; }
 
 .theme-ldn .footer-site__logo img { width: 12.5em; }
+
+.theme-ldn .megaNav__close { background: url("/site/images/icons/london/icon-x-primary.svg") no-repeat center center; background-size: 1rem; }
+
+.theme-ldn .megaNav .has-children > a:after { background: url("/site/images/icons/london/icon-gt-primary.svg") no-repeat center center; background-size: 0.5em; }
+
+.theme-ldn .megaNav__closeLevel:before { background: url("/site/images/icons/london/icon-gt-primary.svg") no-repeat center center; background-size: 0.5em; }
 
 /*# sourceMappingURL=main-ldn.css.map */

@@ -1,7 +1,5 @@
 @import "__vars/_all";
 
-$image-theme-directory: '../img/theme-ldn';
-
 // REMINDER ONLY
 /*
 $blue--deep-ldn:              $blue--deep-ldn;
@@ -128,3 +126,7 @@ $slab-bg-colors: (
 @import "_utils/utils";
 
 @import "_theme/ldn";
+
+
+//Overrides
+@import "../../components/megaNav/ldn/megaNav";
