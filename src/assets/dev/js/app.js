@@ -6532,6 +6532,14 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     $("#btn-search--desktop").on("click", function (e) {
       $(".global-search").addClass("global-search--open");
     });
+    $("#global-search__close").on("click", function (e) {
+      $(".global-search").removeClass("global-search--open");
+    });
+    $(".global-search__scope").on("change", function (e) {
+      var itemId = $(".global-search__scope:checked").attr("id");
+      var labelText = $("label[for='" + itemId + "']").text();
+      $("#global-search__keywords").attr("placeholder", labelText);
+    });
     $(document).on("keyup", function (e) {
       if (e.keyCode == 27) {
         $(".global-search").removeClass("global-search--open");
