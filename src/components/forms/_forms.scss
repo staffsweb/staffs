@@ -71,7 +71,7 @@ textarea {
 select {
   appearance: none;
   padding-right: 2em;
-  background: white url('../img/icon-arrow-down-black.svg') no-repeat right 0.75em center;
+  background: white url('#{$image-theme-directory-icon}/icon-arrow-down-black.svg') no-repeat right 0.75em center;
   background-size: 0.75em;
 }
 

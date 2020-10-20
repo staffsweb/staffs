@@ -6527,7 +6527,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     });
   };
 
-  var siteSearchInit = function siteSearchInit() {
+  var searchInit = function searchInit() {
     // CG: Show / hide the site search
     $("#btn-search--desktop").on("click", function (e) {
       $(".global-search").addClass("global-search--open");
@@ -6577,6 +6577,33 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
       e.preventDefault();
     });
+    $("#course-search__submit").on("click", function (e) {
+      $('#form1').on('submit', function (e) {
+        e.preventDefault();
+      });
+      var searchTerm = $("#course-search__keywords").val(); // CG: Check if the level is in a SELECT or a hidden field
+
+      var level = $("#course-search__level").prop("tagName") == "OPTION" ? $("#course-search__level").find(":selected").val() : $("#course-search__level").val();
+      window.location.href = courseSearchUrl(searchTerm, "staffordshire-coursetitles", level);
+      e.preventDefault();
+    });
+    $("#course-search__keywords").keyup(function (e) {
+      // CG: Do a course search when ENTER is pressed
+      // CG: Detect ENTER being pressed
+      var keycode = e.keyCode ? e.keyCode : e.which;
+
+      if (keycode == '13') {
+        $('#form1').on('submit', function (e) {
+          e.preventDefault();
+        });
+        e.stopImmediatePropagation();
+        var searchTerm = $(this).val();
+        var level = $("#course-search__level").prop("tagName") == "OPTION" ? $("#course-search__level").find(":selected").val() : $("#course-search__level").val();
+        window.location.href = courseSearchUrl(searchTerm, "staffordshire-coursetitles", level);
+      }
+
+      e.preventDefault();
+    });
   }; // --
 
 
@@ -6586,7 +6613,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     sliderInit();
     waypointsInit();
     pageNavWaypointsInit();
-    siteSearchInit();
+    searchInit();
     autocompleteInit();
   });
   $(window).on('load', function () {

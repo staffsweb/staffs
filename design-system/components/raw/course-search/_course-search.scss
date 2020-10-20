@@ -6,7 +6,10 @@
     } 
     select {
         max-width: 100%;
-    } 
+    }
+    &__submit:hover {
+        cursor: pointer;
+    }
 }
 @media (min-width: $third-breakpoint) {
     .course-search {
@@ -25,4 +28,13 @@
 }
 .course-search__category {
     font-weight: bold;
+    padding: 0 $spacing-xs;
+    margin-bottom: 0;
+}
+.ui-menu-item__course {
+    padding: 0 $spacing-xs 0 $spacing-sm;
+
+    &:hover {
+        background-color: #EEE;
+    }
 }

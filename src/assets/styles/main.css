@@ -822,7 +822,7 @@ input[type=text]:focus, input[type=password]:focus, input[type=number]:focus, in
 
 textarea { max-width: 25em; }
 
-select { -webkit-appearance: none; -moz-appearance: none; appearance: none; padding-right: 2em; background: white url("../img/icon-arrow-down-black.svg") no-repeat right 0.75em center; background-size: 0.75em; }
+select { -webkit-appearance: none; -moz-appearance: none; appearance: none; padding-right: 2em; background: white url("/site/images/icons/icon-arrow-down-black.svg") no-repeat right 0.75em center; background-size: 0.75em; }
 
 .form__item { margin: 0 0 1.5rem; }
 
@@ -1458,11 +1458,17 @@ a.card:hover .title__highlight, a.card:hover .card__title { text-decoration: und
 
 .course-search select { max-width: 100%; }
 
+.course-search__submit:hover { cursor: pointer; }
+
 @media (min-width: 50rem) { .course-search__keywords[type="search"] { max-width: 60%; }
   .course-search__submit { max-width: 10%; }
   .course-search select { max-width: 30%; } }
 
-.course-search__category { font-weight: bold; }
+.course-search__category { font-weight: bold; padding: 0 0.5rem; margin-bottom: 0; }
+
+.ui-menu-item__course { padding: 0 0.5rem 0 0.75rem; }
+
+.ui-menu-item__course:hover { background-color: #EEE; }
 
 .feature-link { display: block; position: relative; --accent-color: #d70a26; margin-bottom: 2rem; color: #394851; text-decoration: none; padding: 0 calc(0.75rem + 2.5%) 0; border-left: 0.25rem solid #d70a26; border-left: 0.25rem solid var(--accent-color); }
 
@@ -1868,17 +1874,19 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .section-header--bg-offwhite .section-header__title { position: relative; top: 2rem; margin-bottom: 6rem; }
 
+.global-search__keywords[type='search'] { max-width: 100%; }
+
+.global-search { opacity: 0; transition: opacity 0.5s; position: absolute; z-index: -1; top: 0; right: 0; width: 100%; height: 100vh; background: rgba(0, 0, 0, 0.9); display: flex; }
+
+.global-search__container { margin: 5em 0; }
+
 .global-search__options { font-size: 1.75rem; color: #FFF; background-color: #970048; padding: 1.5rem; display: flex; }
 
 .global-search__options label { clear: right; }
 
-.global-search__keywords[type='search'] { max-width: 100%; }
+.global-search__hint { color: #FFF; }
 
-.global-search { opacity: 0; transition: opacity 0.5s; content: ''; position: absolute; top: 0; right: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); }
-
-.global-search--open { pointer-events: auto; z-index: 1000; }
-
-.global-search--open { opacity: 1; }
+.global-search--open { opacity: 1; pointer-events: auto; z-index: 1000; }
 
 .slab { position: relative; padding: 4rem 0; z-index: 0; }
 

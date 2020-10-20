@@ -176,7 +176,7 @@
         <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"postgraduate"</span>&gt;</span>Postgraduate<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"course-search__submit"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"cSubmit"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button  course-search__submit"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"course-search__submit"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"cSubmit"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
     </code>
@@ -196,7 +196,7 @@
         <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"postgraduate"</span>&gt;</span>Postgraduate<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"course-search__submit"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"cSubmit"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button  course-search__submit"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"course-search__submit"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"cSubmit"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></pre>
     </code>
 </div>
@@ -234,7 +234,10 @@
     } 
     <span class="hljs-selector-tag">select</span> {
         <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100%</span>;
-    } 
+    }
+    &amp;__submit<span class="hljs-selector-pseudo">:hover</span> {
+        <span class="hljs-attribute">cursor</span>: pointer;
+    }
 }
 <span class="hljs-keyword">@media</span> (min-width: <span class="hljs-variable">$third-breakpoint</span>) {
     <span class="hljs-selector-class">.course-search</span> {
@@ -253,6 +256,15 @@
 }
 <span class="hljs-selector-class">.course-search__category</span> {
     <span class="hljs-attribute">font-weight</span>: bold;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-variable">$spacing-xs</span>;
+    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
+}
+<span class="hljs-selector-class">.ui-menu-item__course</span> {
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-variable">$spacing-xs</span> <span class="hljs-number">0</span> <span class="hljs-variable">$spacing-sm</span>;
+
+    &amp;<span class="hljs-selector-pseudo">:hover</span> {
+        <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#EEE</span>;
+    }
 }</pre>
                             </code>
                             
@@ -269,7 +281,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">525 Bytes</span>
+                    <span class="Meta-value">760 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -290,6 +302,25 @@
         
         
         
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">Variants <em class="Meta-count">(3)</em>:</strong>
+            <span class="Meta-value Meta-value--linkList">
+            
+                <a href="course-search--default.html">
+                    <span>Default</span>
+                </a>, 
+            
+                <a href="course-search--postgraduate-only.html">
+                    <span>Postgraduate Only</span>
+                </a>, 
+            
+                <a href="course-search--undergraduate-only.html">
+                    <span>Undergraduate Only</span>
+                </a>
+            
+            </span>
+        </li>
         
         <li class="Meta-item">
             <strong class="Meta-key">Preview:</strong>
@@ -2164,10 +2195,21 @@
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-course-search">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-course-search-items">
+                Course Search
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-course-search-items">
+            
+            
+            
+            
+    
         
-        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
-            <a class="Tree-entityLink" href="" data-pjax>
-                <span>Course Search</span>
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="course-search--default.html" data-pjax>
+                <span>Default</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2184,6 +2226,59 @@
 
 
             </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="course-search--postgraduate-only.html" data-pjax>
+                <span>Postgraduate Only</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="course-search--undergraduate-only.html" data-pjax>
+                <span>Undergraduate Only</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
         </li>
         
     

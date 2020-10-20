@@ -1,34 +1,40 @@
-.global-search__options {
-    @include typescale('2xl');
-    color: #FFF;
-    background-color: $maroon;
-    padding: $spacing-lg;
-    display: flex;
-
-    & label {
-        clear: right;
-    }
-}
 .global-search__keywords[type='search'] {
     max-width: 100%;
 }
 .global-search {
     opacity: 0;
     transition: opacity 0.5s;
-    content: '';
     position: absolute;
+    z-index: -1;
     top: 0;
     right: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: rgba(0, 0, 0, 0.9);
+    display: flex;
 
+    &__container {
+      margin: 5em 0;
+    }
+
+    &__options {
+      @include typescale('2xl');
+      color: #FFF;
+      background-color: $maroon;
+      padding: $spacing-lg;
+      display: flex;
+  
+      & label {
+          clear: right;
+      }
+    }
+
+      &__hint {
+        color: #FFF;
+      }
   &--open {
+    opacity: 1;
     pointer-events: auto;
     z-index: 1000;
-  }
-  
- &--open {
-    opacity: 1;
   }
 }
