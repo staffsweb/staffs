@@ -9,6 +9,7 @@
   a:not(.button) {
     // a:not([class]) instead?
     color: white;
+    text-decoration: none;
   }
 
   h6 {
@@ -31,6 +32,14 @@
     .icon {
       @include typescale('4xl');
       margin-right: $spacing-sm;
+      max-height: 100%;
+      vertical-align: middle;
+
+      @each $name, $value in $social-media-icons {
+        &--#{$name} {
+          background-image: url('#{$value}');
+        }
+      }
     }
   }
 

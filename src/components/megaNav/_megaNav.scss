@@ -85,6 +85,31 @@
       }
     }
   }
+  
+  .has-simple-children {
+    @media (min-width: $megaNav-full-breakpoint) {
+      position: relative;
+
+      .megaNav__levelFooter {
+        display: none;
+      }
+
+      .megaNav__level {
+        left: auto;
+      }
+
+      .megaNav__secondLevel {
+        background: white;
+      }
+
+      .megaNav__secondLevel-list {
+        padding: $spacing-md;
+        min-height: auto;
+        width: auto;
+        min-width: 17.5em;
+      }
+    }
+  }
 
   .is-expanded {
     > .megaNav__level {
