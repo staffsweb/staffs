@@ -1294,6 +1294,8 @@ section:first-child { margin-top: 0; }
 
 .box__title { margin-top: 0; }
 
+.box__title a { text-decoration: none; }
+
 .box__footer { padding: 1rem calc(0.75rem + 2.5%); background: rgba(0, 0, 0, 0.05); box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.05); }
 
 .box__footer > :first-child { margin-top: 0; }
