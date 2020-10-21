@@ -11,10 +11,10 @@
   text-align: right;
 
   &__container {
-    margin: 5em 0;
-    margin-left: auto;
-    margin-right: auto;
-    @media (min-width: $third-breakpoint) {
+    margin: $spacing-4xl auto;
+    padding: $spacing-xl;
+    
+    @media (min-width: $fifth-breakpoint) {
       max-width: 60%;
     }
   }

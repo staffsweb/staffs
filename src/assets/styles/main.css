@@ -1896,9 +1896,9 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .global-search { opacity: 0; transition: opacity 0.5s; position: absolute; z-index: -1; top: 0; right: 0; width: 100%; height: 100vh; background: rgba(0, 0, 0, 0.9); text-align: right; }
 
-.global-search__container { margin: 5em 0; margin-left: auto; margin-right: auto; }
+.global-search__container { margin: 4rem auto; padding: 2rem; }
 
-@media (min-width: 50rem) { .global-search__container { max-width: 60%; } }
+@media (min-width: 80rem) { .global-search__container { max-width: 60%; } }
 
 .global-search__options { font-size: 1.75rem; color: #FFF; background-color: #970048; padding: 1.5rem; display: flex; text-align: left; }
 

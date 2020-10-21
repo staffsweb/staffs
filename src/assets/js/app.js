@@ -486,26 +486,24 @@
   };
 
   let searchInit = function() {
-    // CG: Show / hide the site search
-    $("#btn-search--desktop").on("click", function(e) {
-      $(".global-search").addClass("global-search--open");
-    });
-
-    $("#global-search__close").on("click", function(e) {
-      $(".global-search").removeClass("global-search--open");
-    });
-
-    $(".global-search__scope").on("change", function(e) {
-      var itemId = $(".global-search__scope:checked").attr("id");
-      var labelText = $("label[for='" + itemId + "']").text();
-      $("#global-search__keywords").attr("placeholder", labelText);
+    // CG: Show / hide the global search as appropriate
+    $("#btn-search--desktop, #global-search__close").on("click", function(e) {
+      $("#global-search").toggleClass("global-search--open");
     });
 
     $(document).on("keyup", function (e) {
       if(e.keyCode == 27) {
-        $(".global-search").removeClass("global-search--open");
+        $("#global-search").removeClass("global-search--open");
       }
     });
+
+    // CG: Change the global search placeholder depending on whether we're searching courses or the whole site
+    $("#global-search__options .global-search__scope").on("change", function(e) {
+      var itemId = $("#global-search__options .global-search__scope:checked").attr("id");
+      var labelText = $("#global-search__options label[for='" + itemId + "']").text();
+      $("#global-search__keywords").attr("placeholder", labelText);
+    });
+
 
     /* CG: Build search URLs */
     function courseSearchUrl(query, collection = "staffordshire-coursetitles", level = null) {
