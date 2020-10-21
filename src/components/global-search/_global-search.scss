@@ -1,12 +1,12 @@
 .global-search {
   opacity: 0;
   transition: opacity 0.5s;
-  position: absolute;
+  position: fixed;
   z-index: -1;
   top: 0;
   right: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: rgba(0, 0, 0, 0.9);
   text-align: right;
 
@@ -20,12 +20,15 @@
   }
 
   &__options {
-    @include typescale('2xl');
+    @include typescale('lg');
     color: #FFF;
     background-color: $maroon;
     padding: $spacing-lg;
-    display: flex;
     text-align: left;
+
+    @media (min-width: $fifth-breakpoint) {
+      @include typescale('xl');
+    }
 
     & label {
         clear: right;
@@ -50,5 +53,11 @@
     background: none;
     border: 0;
     color: #FFF;
+    @include typescale('3xl');
+    padding: $spacing-lg;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
