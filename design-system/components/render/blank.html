@@ -163,7 +163,7 @@
             <li class="megaNav__topLevel-item">
               <a class="megaNav__topLevel-link" href="">International</a>
             </li>
-            <li class="megaNav__topLevel-item  has-children">
+            <li class="megaNav__topLevel-item  has-children  has-simple-children">
               <a class="megaNav__topLevel-link " href="">Research</a>
 
               <div class="megaNav__level  megaNav__secondLevel">
@@ -328,14 +328,28 @@
     </div>
   </div>
 </header>
-
-<div class="masthead">
+<div class="global-search" role="form">
+    <div class="global-search__container">
+        <button class="global-search__close" id="global-search__close">Close</button>
+        <div class="global-search__options  grid  grid-2-cols">
+            <div>
+                <input class="global-search__scope" id="global-search__scope--courses" name="cScope" type="radio" value="courses" checked>
+                <label for="global-search__scope--courses">Search courses</label>
+                <br>
+                <input class="global-search__scope" id="global-search__scope--site" name="cScope" type="radio" value="wholeSite">
+                <label for="global-search__scope--site">Search staffs.ac.uk</label>
+            </div>
+            <div class="col-3/4">
+                <input class="global-search__keywords" id="global-search__keywords" name="cQueryH" type="search" placeholder="Search courses">
+            </div>
+        </div>
+        <p class="global-search__hint">Hit enter to search or ESC to close</p>
+    </div>
+</div><div class="masthead">
   <div class="masthead__inner">
     <div class="masthead__bg">
-      
-        <img src="../../img/masthead8.jpg"/>
-      
-    </div>
+              <img src="../../img/masthead5.jpg"/>
+          </div>
     <div class="wrap">
       <nav class="breadcrumbs">
   <ul>
@@ -350,19 +364,8 @@
     </li>
   </ul>
 </nav>
-
       
-
-
-
-  
-
-
-
-
-  
-
-
+    
 
 <div class="title  title--has-tail  js-waypoint">
   <h1 class="title__highlight  h1">
@@ -377,21 +380,8 @@
 
 
 
-
       
-
-
-
-  
-
-  
-
-
-
-
-  
-
-
+      
 
 <div class="title  title--bg-white  title--has-tail  js-waypoint">
   <h6 class="title__highlight">
@@ -406,12 +396,9 @@
 
 
 
-
     </div>
   </div>
 </div>
-
-
 
 <main id="main-content" role="main" class="">
     <div class="wrap">

@@ -2,10 +2,11 @@
 
 <div class="global-search" role="form">
     <div class="global-search__container">
+        <button class="global-search__close" id="global-search__close">Close</button>
         <div class="global-search__options  grid  grid-2-cols">
             <div>
-                <input class="global-search__scope" id="global-search__scope--sites" name="cScope" type="radio" value="courses" checked>
-                <label for="global-search__scope--sites">Search courses</label>
+                <input class="global-search__scope" id="global-search__scope--courses" name="cScope" type="radio" value="courses" checked>
+                <label for="global-search__scope--courses">Search courses</label>
                 <br>
                 <input class="global-search__scope" id="global-search__scope--site" name="cScope" type="radio" value="wholeSite">
                 <label for="global-search__scope--site">Search staffs.ac.uk</label>
@@ -14,6 +15,6 @@
                 <input class="global-search__keywords" id="global-search__keywords" name="cQueryH" type="search" placeholder="Search courses">
             </div>
         </div>
+        <p class="global-search__hint">Hit enter to search or ESC to close</p>
     </div>
-    <p class="global-search__hint">Hit enter to search or ESC to close</p>
 </div>
