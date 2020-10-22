@@ -6610,6 +6610,28 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
       e.preventDefault();
     });
+    $("#megaNav-course-search__submit").on("click", function (e) {
+      $('#form1').on('submit', function (e) {
+        e.preventDefault();
+      });
+      var searchTerm = $("#megaNav-course-search__keywords").val();
+      window.location.href = courseSearchUrl(searchTerm);
+      e.preventDefault();
+    });
+    $("#megaNav-course-search__keywords").keyup(function (e) {
+      var keycode = e.keyCode ? e.keyCode : e.which;
+
+      if (keycode == '13') {
+        $('#form1').on('submit', function (e) {
+          e.preventDefault();
+        });
+        e.stopImmediatePropagation();
+        var searchTerm = $(this).val();
+        window.location.href = courseSearchUrl(searchTerm);
+      }
+
+      e.preventDefault();
+    });
   }; // --
 
 
