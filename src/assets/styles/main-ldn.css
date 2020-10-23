@@ -1824,4 +1824,6 @@ a.tile:focus { outline-width: 3px; outline-color: #144196; z-index: 2; }
 
 .theme-ldn .megaNav__closeLevel:before { background: url("/site/images/icons/london/icon-gt-primary.svg") no-repeat center center; background-size: 0.5em; }
 
+.theme-ldn .feature-link__title:after { background: url("/site/images/icons/london/icon-gt-primary.svg") no-repeat center center; background-size: 40%; }
+
 /*# sourceMappingURL=main-ldn.css.map */
