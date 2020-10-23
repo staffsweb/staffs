@@ -1400,25 +1400,17 @@ section:first-child { margin-top: 0; }
 
 .card .meta--inline-dd dd:before, .card .meta--inline dd:before { color: var(--accent-color); }
 
-.card--red { --accent-color: #d70a26; }
+.card--primary { --accent-color: #d70a26; }
 
-.card--red svg { fill: #d70a26; }
+.card--primary svg { fill: #d70a26; }
 
-.card--pink { --accent-color: #d5035e; }
+.card--secondary { --accent-color: #d5035e; }
 
-.card--pink svg { fill: #d5035e; }
+.card--secondary svg { fill: #d5035e; }
 
-.card--maroon { --accent-color: #970048; }
+.card--tertiary { --accent-color: #970048; }
 
-.card--maroon svg { fill: #970048; }
-
-.card--slate { --accent-color: #394851; }
-
-.card--slate svg { fill: #394851; }
-
-.card--blue-ldn { --accent-color: #144196; }
-
-.card--blue-ldn svg { fill: #144196; }
+.card--tertiary svg { fill: #970048; }
 
 .card--light { --accent-color: rgba(255, 255, 255, 0.5); color: white; }
 

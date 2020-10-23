@@ -1,7 +1,7 @@
 $card__internal-spacing: $spacing-sm;
 
 .card {
-  // $card-accent-colors: see __vars/colours
+  // $theme-colours: see __vars/colours
 
   display: block;
   position: relative;
@@ -87,7 +87,7 @@ $card__internal-spacing: $spacing-sm;
 
   //--  ACCENT THEMES
 
-  @each $name, $value in $card-accent-colors {
+  @each $name, $value in $theme-colours {
     &--#{$name} {
       --accent-color: #{$value};
 

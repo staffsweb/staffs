@@ -81,6 +81,12 @@ $utils-text-colors: (
 // these are used by components' partials to create colour variants
 // they live here (for the time being) so they can be overridden before components are imported for themes (London)
 
+$theme-colours: (
+  'primary' : $red,
+  'secondary' : $pink,
+  'tertiary' : $maroon
+);
+
 $card-accent-colors: (
   'red': $red,
   'pink': $pink,
