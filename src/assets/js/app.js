@@ -633,6 +633,11 @@
     });
   };
 
+  let titleStylesInit = function() {
+    // CG Apply the "highlight" and "tail" styles to headings in the page body automatically
+    $(".page-body__content > h2").wrap("<div class='title  title--has-tail'></div>").addClass("title__highlight");
+  };
+
 
   // --
 
@@ -642,6 +647,7 @@
     sliderInit();
     waypointsInit();
     pageNavWaypointsInit();
+    titleStylesInit();
     searchInit();
     autocompleteInit();
   });
