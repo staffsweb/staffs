@@ -90,12 +90,21 @@ $card__internal-spacing: $spacing-sm;
   @each $name, $value in $card-accent-colors {
     &--#{$name} {
       --accent-color: #{$value};
+
+      svg {
+          fill: #{$value};
+      }
     }
   }
 
   &--light {
     --accent-color: #{rgba(white, 0.5)};
     color: white;
+
+    svg {
+      fill: white;
+    }
+
   }
 }
 

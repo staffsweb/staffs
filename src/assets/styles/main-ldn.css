@@ -906,13 +906,23 @@ section:first-child { margin-top: 0; }
 
 .card--blue-ldn { --accent-color: #0082c8; }
 
+.card--blue-ldn svg { fill: #0082c8; }
+
 .card--blue-deep-ldn { --accent-color: #144196; }
+
+.card--blue-deep-ldn svg { fill: #144196; }
 
 .card--magenta-ldn { --accent-color: #b90f82; }
 
+.card--magenta-ldn svg { fill: #b90f82; }
+
 .card--purple-deep-ldn { --accent-color: #821e82; }
 
+.card--purple-deep-ldn svg { fill: #821e82; }
+
 .card--light { --accent-color: rgba(255, 255, 255, 0.5); color: white; }
+
+.card--light svg { fill: white; }
 
 a.card { text-decoration: none; }
 
