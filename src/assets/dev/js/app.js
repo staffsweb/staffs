@@ -6552,6 +6552,33 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         return false;
       }
     });
+    $("#global-search__keywords").courseautocomplete({
+      source: function source(request, response) {
+        $.ajax({
+          url: "https://search.staffs.ac.uk/s/search.html",
+          dataType: "json",
+          data: {
+            meta_t_trunc: request.term.toLowerCase(),
+            // CG: Accounts for mobile devices using sentence caps when doing autocorrect
+            collection: 'staffordshire-coursetitles',
+            profile: 'auto-completion',
+            form: 'qc',
+            sort: 'dmetaV' // CG: Sorts by level of study, with UG first
+
+          },
+          success: function success(data) {
+            response(data);
+          }
+        });
+      },
+      minLength: 3,
+      delay: 300,
+      select: function select(event, ui) {
+        // CG: Redirect to the relevant course page
+        window.location = ui.item.action;
+        return false;
+      }
+    });
   };
 
   var searchInit = function searchInit() {
@@ -6662,8 +6689,9 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   };
 
   var titleStylesInit = function titleStylesInit() {
-    // CG Apply the "highlight" and "tail" styles to headings in the page body automatically
-    $(".page-body__content > h2").wrap("<div class='title  title--has-tail'></div>").addClass("title__highlight");
+    // CG Apply the "highlight" and "tail" styles to the appropriate headings in the page body automatically
+    $("#page-body__content > h2, .grid-template__column:first-child > h2").wrap("<div class='title  title--has-tail'></div>").addClass("title__highlight");
+    $(".grid-template__column:not(:first-child) > h2").wrap("<div class='title'></div>").addClass("title__highlight");
   };
 
   var removeExistingSvgFills = function removeExistingSvgFills(parentClass) {
