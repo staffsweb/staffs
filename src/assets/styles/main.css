@@ -1488,6 +1488,8 @@ a.card:hover .title__highlight, a.card:hover .card__title { text-decoration: und
 
 .course-search__category { font-weight: bold; padding: 0 0.5rem; margin-bottom: 0; }
 
+.ui-autocomplete { z-index: 1000; }
+
 .ui-menu-item__course { padding: 0 0.5rem 0 0.75rem; }
 
 .ui-menu-item__course:hover { background-color: #EEE; }
@@ -1918,7 +1920,7 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .global-search__hint { color: #FFF; }
 
-.global-search--open { opacity: 1; pointer-events: auto; z-index: 1000; }
+.global-search--open { opacity: 1; pointer-events: auto; z-index: 999; }
 
 .global-search__close { background: none; border: 0; color: #FFF; font-size: 2rem; padding: 1.5rem; }
 

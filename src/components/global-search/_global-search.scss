@@ -46,7 +46,7 @@
   &--open {
     opacity: 1;
     pointer-events: auto;
-    z-index: 1000;
+    z-index: 999;
   }
 
   &__close {

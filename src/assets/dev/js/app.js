@@ -6555,7 +6555,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         return false;
       }
     });
-    $("#global-search__keywords").courseautocomplete({
+    $("#global-search__keywords--courses").courseautocomplete({
       source: function source(request, response) {
         $.ajax({
           url: "https://search.staffs.ac.uk/s/search.html",
@@ -6593,12 +6593,19 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
       if (e.keyCode == 27) {
         $("#global-search").removeClass("global-search--open");
       }
-    }); // CG: Change the global search placeholder depending on whether we're searching courses or the whole site
+    }); // CG: Show / hide the appropriate global search field
 
     $("#global-search__options .global-search__scope").on("change", function (e) {
-      var itemId = $("#global-search__options .global-search__scope:checked").attr("id");
-      var labelText = $("#global-search__options label[for='" + itemId + "']").text();
-      $("#global-search__keywords").attr("placeholder", labelText);
+      var scope = $("#global-search__options .global-search__scope:checked").val();
+
+      if (scope == "courses") {
+        // Show the course search field
+        $("#global-search__keywords--courses").removeClass("visually-hidden");
+        $("#global-search__keywords--whole-site").addClass("visually-hidden");
+      } else {
+        $("#global-search__keywords--whole-site").removeClass("visually-hidden");
+        $("#global-search__keywords--courses").addClass("visually-hidden");
+      }
     });
     /* CG: Build search URLs */
 
@@ -6619,10 +6626,8 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
       return "https://search.staffs.ac.uk/s/search.html?collection=staffordshire-main&query=" + query;
     }
 
-    $("#global-search__keywords").keyup(function (e) {
-      // CG: Decide whether to search the whole site or just courses
-      var collection = $(".global-search__scope:checked").val(); // CG: Detect ENTER being pressed
-
+    $("#global-search__keywords--whole-site").keyup(function (e) {
+      // CG: Detect ENTER being pressed
       var keycode = e.keyCode ? e.keyCode : e.which;
 
       if (keycode == '13') {
@@ -6630,12 +6635,21 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
           e.preventDefault();
         });
         e.stopImmediatePropagation();
+        window.location.href = siteSearchUrl($(this).val());
+      }
 
-        if (collection == "wholeSite") {
-          window.location.href = siteSearchUrl($(this).val());
-        } else {
-          window.location.href = courseSearchUrl($(this).val());
-        }
+      e.preventDefault();
+    });
+    $("#global-search__keywords--courses").keyup(function (e) {
+      // CG: Detect ENTER being pressed
+      var keycode = e.keyCode ? e.keyCode : e.which;
+
+      if (keycode == '13') {
+        $('#form1').on('submit', function (e) {
+          e.preventDefault();
+        });
+        e.stopImmediatePropagation();
+        window.location.href = courseSearchUrl($(this).val());
       }
 
       e.preventDefault();
