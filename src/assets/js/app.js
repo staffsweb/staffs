@@ -661,8 +661,8 @@
 
   let titleStylesInit = function() {
     // CG Apply the "highlight" and "tail" styles to the appropriate headings in the page body automatically
-    $("#page-body__content > h2, .mini-template-grid:first-child > h2").wrap("<div class='title  title--has-tail'></div>").addClass("title__highlight");
-    $(".mini-template-grid:not(:first-child) > h2").wrap("<div class='title'></div>").addClass("title__highlight");
+    $("#page-body__content > h2, .mini-template-grid__column:first-child > h2").wrap("<div class='title  title--has-tail'></div>").addClass("title__highlight");
+    $(".mini-template-grid__column:not(:first-child) > h2").wrap("<div class='title'></div>").addClass("title__highlight");
   };
 
   let removeExistingSvgFills = function(parentClass) {
