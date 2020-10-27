@@ -958,7 +958,7 @@ a.card:hover .title__highlight, a.card:hover .card__title { text-decoration: und
 
 .card--ksp { color: #41464b; }
 
-.card--ksp__icon { margin-bottom: 0.75rem; }
+.card--ksp__icon { margin-bottom: 0.75rem; max-width: 100%; height: auto !important; }
 
 .card--ksp__icon img { vertical-align: baseline !important; }
 
