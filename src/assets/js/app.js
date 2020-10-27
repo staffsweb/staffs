@@ -459,33 +459,6 @@
               .appendTo( ul );
         }
     });
-    
-    $("#megaNav-course-search__keywords").courseautocomplete({
-      source: function(request, response) {
-        $.ajax({
-            url: "https://search.staffs.ac.uk/s/search.html",
-            dataType: "json",
-            data: {
-              meta_t_trunc : request.term.toLowerCase(), // CG: Accounts for mobile devices using sentence caps when doing autocorrect
-              collection : 'staffordshire-coursetitles',
-              profile : 'auto-completion',
-              form : 'qc',
-              meta_V_and : $("#course-search__level").val(), // CG: Level of study can either be a hidden form field or a <select>
-              sort : 'dmetaV' // CG: Sorts by level of study, with UG first
-            },
-            success: function(data) {
-                response(data);
-            }
-        });
-      },
-      minLength: 3,
-      delay: 300,
-      select: function(event, ui) {
-        // CG: Redirect to the relevant course page
-        window.location = ui.item.action;
-        return false;
-      }
-    });
 
     $("#course-search__keywords").courseautocomplete({
       source: function(request, response) {
@@ -497,6 +470,7 @@
               collection : 'staffordshire-coursetitles',
               profile : 'auto-completion',
               form : 'qc',
+              meta_V_and: $("#course-search__level").find(":selected").val(),
               sort : 'dmetaV' // CG: Sorts by level of study, with UG first
             },
             success: function(data) {
