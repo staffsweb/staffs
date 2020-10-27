@@ -86,6 +86,11 @@ $card__internal-spacing: $spacing-sm;
   }
 
   //--  ACCENT THEMES
+  @each $name, $value in $card-accent-colors {
+    &--#{$name} {
+      --accent-color: #{$value};
+    }
+  } 
 
   @each $name, $value in $theme-colours {
     &--#{$name} {
