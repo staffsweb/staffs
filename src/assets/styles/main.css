@@ -1941,6 +1941,12 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .global-search__close:hover { cursor: pointer; }
 
+.sitewide-message { background-color: #FFD91C; position: absolute; left: 0; right: 0; z-index: -1; }
+
+.sitewide-message__text { margin: 0; }
+
+@media (max-width: 65rem) { .sitewide-message__text { padding: 1rem 5% 1rem 30%; line-height: 1.5rem; } }
+
 .slab { position: relative; padding: 4rem 0; z-index: 0; }
 
 .slab__title { margin-top: 1rem; }

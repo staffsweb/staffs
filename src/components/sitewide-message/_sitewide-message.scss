@@ -1,0 +1,16 @@
+.sitewide-message {
+    background-color: #FFD91C;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    &__text {
+        margin: 0;
+
+        @media (max-width: map_get($breakpoint-stages, 'tablet-wide')) {
+            padding: $spacing-md 5% $spacing-md 30%;
+            line-height: $spacing-lg;
+        }
+    }
+}
