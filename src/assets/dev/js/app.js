@@ -6332,6 +6332,19 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         }
       }]
     });
+    $('.js-slider--responsive').slick({
+      infinite: false,
+      responsive: [{
+        breakpoint: 99999,
+        settings: 'unslick'
+      }, {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }]
+    });
     $('.js-slider--variable').each(function () {
       $(this).slick({
         slidesToShow: 1,
