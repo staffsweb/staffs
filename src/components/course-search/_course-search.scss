@@ -2,6 +2,9 @@
     &__keywords {
         &[type="search"] {
             max-width: 100%;
+            -webkit-appearance: none;
+            border-radius: 0.25rem;
+            -webkit-border-radius: 0.25rem;
         }
     } 
     select {

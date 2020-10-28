@@ -1580,6 +1580,8 @@ a.tile:focus { outline-width: 3px; outline-color: #144196; z-index: 2; }
 
 .tile-group:hover a.tile:hover .tile__figure img { -webkit-filter: grayscale(0); filter: grayscale(0); }
 
+@media (max-width: 35rem) { .feature-tiles__item { margin-bottom: 1.5rem; } }
+
 @media (min-width: 65rem) { @supports (display: grid) { .feature-tiles { display: grid; grid-auto-flow: dense; grid-template-columns: repeat(12, 1fr); grid-template-rows: repeat(16, 1fr); }
     .feature-tiles__item { position: relative; grid-column: span 4; grid-row: span 4; width: auto !important; }
     .feature-tiles__item:nth-child(1) { grid-column: span 4 / -3; grid-row: 1 / span 4; }

@@ -1486,7 +1486,7 @@ a.card:hover .title__highlight, a.card:hover .card__title { text-decoration: und
   .card--event .card__date { left: -6rem; width: 6rem; }
   .card--event .card__day { font-size: 3rem; } }
 
-.course-search__keywords[type="search"] { max-width: 100%; }
+.course-search__keywords[type="search"] { max-width: 100%; -webkit-appearance: none; border-radius: 0.25rem; -webkit-border-radius: 0.25rem; }
 
 .course-search select { max-width: 100%; }
 
@@ -2124,6 +2124,8 @@ a.tile:focus { outline-width: 3px; outline-color: #d70a26; z-index: 2; }
 .tile-group:hover a.tile .tile__figure img { -webkit-filter: grayscale(1); filter: grayscale(1); }
 
 .tile-group:hover a.tile:hover .tile__figure img { -webkit-filter: grayscale(0); filter: grayscale(0); }
+
+@media (max-width: 35rem) { .feature-tiles__item { margin-bottom: 1.5rem; } }
 
 @media (min-width: 65rem) { @supports (display: grid) { .feature-tiles { display: grid; grid-auto-flow: dense; grid-template-columns: repeat(12, 1fr); grid-template-rows: repeat(16, 1fr); }
     .feature-tiles__item { position: relative; grid-column: span 4; grid-row: span 4; width: auto !important; }
