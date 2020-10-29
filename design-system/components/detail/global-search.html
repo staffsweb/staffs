@@ -165,19 +165,31 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-b0b87625908ce8f7f2f0ca96b20737d5-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"global-search"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"form"</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"global-search"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"global-search"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"form"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"global-search__close"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"global-search__close"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"position:absolute"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">symbol</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 16 16"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"icon-close-white"</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Atoms/Iconography/close-white@2x<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M16 1.61L9.61 8 16 14.39 14.39 16 8 9.61 1.61 16 0 14.39 6.39 8 0 1.61 1.61 0 8 6.39 14.39 0z"</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"currentColor"</span> <span class="hljs-attr">fill-rule</span>=<span class="hljs-string">"evenodd"</span> /&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">symbol</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon icon-close-white"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xmlns:xlink</span>=<span class="hljs-string">"http://www.w3.org/1999/xlink"</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"#icon-close-white"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Close search<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"global-search__container"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"global-search__close"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"global-search__close"</span>&gt;</span>Close<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"global-search__options  grid  grid-2-cols"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"global-search__scope"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"global-search__scope--courses"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"cScope"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"courses"</span> <span class="hljs-attr">checked</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"global-search__options"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"grid  global-search__options"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-1/4@tablet  col-full@mobile"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"global-search__scope"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"global-search__scope--courses"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"cScope"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"courses"</span> <span class="hljs-attr">checked</span>=<span class="hljs-string">""</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"global-search__scope--courses"</span>&gt;</span>Search courses<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"global-search__scope"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"global-search__scope--site"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"cScope"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"wholeSite"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"global-search__scope--site"</span>&gt;</span>Search staffs.ac.uk<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-3/4"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"global-search__keywords"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"global-search__keywords"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"cQueryH"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"search"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Search courses"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-3/4@tablet  col-full@mobile"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"global-search__keywords"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"global-search__keywords--courses"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"cQueryH"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"search"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Search courses"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"global-search__keywords  visually-hidden"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"global-search__keywords-whole-site"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"cQueryH"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"search"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Search staffs.ac.uk"</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"global-search__hint"</span>&gt;</span>Hit enter to search or ESC to close<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -190,19 +202,24 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-b0b87625908ce8f7f2f0ca96b20737d5-panel-view">
     <code class="Code Code--lang-twig hljs">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"global-search"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"form"</span>&gt;</span>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"global-search"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"global-search"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"form"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"global-search__close"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"global-search__close"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"position:absolute"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">symbol</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 16 16"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"icon-close-white"</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Atoms/Iconography/close-white@2x<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M16 1.61L9.61 8 16 14.39 14.39 16 8 9.61 1.61 16 0 14.39 6.39 8 0 1.61 1.61 0 8 6.39 14.39 0z"</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"currentColor"</span> <span class="hljs-attr">fill-rule</span>=<span class="hljs-string">"evenodd"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">symbol</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon icon-close-white"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xmlns:xlink</span>=<span class="hljs-string">"http://www.w3.org/1999/xlink"</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"#icon-close-white"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Close search<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"global-search__container"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"global-search__close"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"global-search__close"</span>&gt;</span>Close<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"global-search__options  grid  grid-2-cols"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"global-search__scope"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"global-search__scope--courses"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"cScope"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"courses"</span> <span class="hljs-attr">checked</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"global-search__options"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"grid  global-search__options"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-1/4@tablet  col-full@mobile"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"global-search__scope"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"global-search__scope--courses"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"cScope"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"courses"</span> <span class="hljs-attr">checked</span>=<span class="hljs-string">""</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"global-search__scope--courses"</span>&gt;</span>Search courses<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"global-search__scope"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"global-search__scope--site"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"cScope"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"wholeSite"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"global-search__scope--site"</span>&gt;</span>Search staffs.ac.uk<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-3/4"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"global-search__keywords"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"global-search__keywords"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"cQueryH"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"search"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Search courses"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-3/4@tablet  col-full@mobile"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"global-search__keywords"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"global-search__keywords--courses"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"cQueryH"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"search"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Search courses"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"global-search__keywords  visually-hidden"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"global-search__keywords-whole-site"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"cQueryH"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"search"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Search staffs.ac.uk"</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"global-search__hint"</span>&gt;</span>Hit enter to search or ESC to close<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -239,31 +256,34 @@
                                 <pre><span class="hljs-selector-class">.global-search</span> {
   <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">transition</span>: opacity <span class="hljs-number">0.5s</span>;
-  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">position</span>: fixed;
   <span class="hljs-attribute">z-index</span>: -<span class="hljs-number">1</span>;
   <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
-  <span class="hljs-attribute">height</span>: <span class="hljs-number">100vh</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
   <span class="hljs-attribute">background</span>: rgba(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.9</span>);
   <span class="hljs-attribute">text-align</span>: right;
 
   &amp;__container {
-    <span class="hljs-attribute">margin</span>: <span class="hljs-number">5em</span> <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">margin-left</span>: auto;
-    <span class="hljs-attribute">margin-right</span>: auto;
-    <span class="hljs-keyword">@media</span> (min-width: <span class="hljs-variable">$third-breakpoint</span>) {
+    <span class="hljs-attribute">margin</span>: <span class="hljs-variable">$spacing-4xl</span> auto;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-variable">$spacing-xl</span>;
+    
+    <span class="hljs-keyword">@media</span> (min-width: <span class="hljs-variable">$fifth-breakpoint</span>) {
       <span class="hljs-attribute">max-width</span>: <span class="hljs-number">60%</span>;
     }
   }
 
   &amp;__options {
-    <span class="hljs-keyword">@include</span> typescale(<span class="hljs-string">'2xl'</span>);
+    <span class="hljs-keyword">@include</span> typescale(<span class="hljs-string">'lg'</span>);
     <span class="hljs-attribute">color</span>: <span class="hljs-number">#FFF</span>;
     <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$maroon</span>;
     <span class="hljs-attribute">padding</span>: <span class="hljs-variable">$spacing-lg</span>;
-    <span class="hljs-attribute">display</span>: flex;
     <span class="hljs-attribute">text-align</span>: left;
+
+    <span class="hljs-keyword">@media</span> (min-width: <span class="hljs-variable">$fifth-breakpoint</span>) {
+      <span class="hljs-keyword">@include</span> typescale(<span class="hljs-string">'xl'</span>);
+    }
 
     &amp; <span class="hljs-selector-tag">label</span> {
         <span class="hljs-attribute">clear</span>: right;
@@ -281,13 +301,19 @@
   &amp;--open {
     <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
     <span class="hljs-attribute">pointer-events</span>: auto;
-    <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1000</span>;
+    <span class="hljs-attribute">z-index</span>: <span class="hljs-number">999</span>;
   }
 
   &amp;__close {
     <span class="hljs-attribute">background</span>: none;
     <span class="hljs-attribute">border</span>: <span class="hljs-number">0</span>;
     <span class="hljs-attribute">color</span>: <span class="hljs-number">#FFF</span>;
+    <span class="hljs-keyword">@include</span> typescale(<span class="hljs-string">'3xl'</span>);
+    <span class="hljs-attribute">padding</span>: <span class="hljs-variable">$spacing-lg</span>;
+
+    &amp;<span class="hljs-selector-pseudo">:hover</span> {
+      <span class="hljs-attribute">cursor</span>: pointer;
+    }
   }
 }</pre>
                             </code>
@@ -305,7 +331,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">816 Bytes</span>
+                    <span class="Meta-value">971 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -763,6 +789,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="homepage-ldn.html" data-pjax>
                 <span>Homepage Ldn</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="news-single.html" data-pjax>
+                <span>News Single</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2134,6 +2184,30 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="card--news.html" data-pjax>
+                <span>News</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="card--profile.html" data-pjax>
                 <span>Profile</span>
                 
@@ -2990,6 +3064,30 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="masthead--no-image-ldn.html" data-pjax>
+                <span>No Image (LDN)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="masthead--course.html" data-pjax>
                 <span>Course</span>
                 
@@ -3661,6 +3759,30 @@
     
 
             </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="sitewide-message.html" data-pjax>
+                <span>Sitewide Message</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
         </li>
         
     
