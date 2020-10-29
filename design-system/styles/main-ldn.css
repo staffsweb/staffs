@@ -1783,6 +1783,8 @@ a.tile:focus { outline-width: 3px; outline-color: #144196; z-index: 2; }
 
 .theme-ldn .footer-site__logo img { width: 12.5em; }
 
+.masthead { background-color: #1d1d1b; }
+
 .masthead--primary-gradient { background: linear-gradient(#144196, #0082c8); }
 
 .theme-ldn .megaNav__close { background: url("/site/images/icons/london/icon-x-primary.svg") no-repeat center center; background-size: 1rem; }
