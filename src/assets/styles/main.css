@@ -1185,7 +1185,7 @@ section:first-child { margin-top: 0; }
   .align-size-lg { max-width: calc(66% - 1.5rem); }
   .size-auto { width: auto; max-width: none; } }
 
-.header-site { background: rgba(0, 0, 0, 0.6); position: absolute; top: 0; left: 0.5rem; right: 0; z-index: 10; padding: 0; margin: 0; }
+.header-site { background: rgba(0, 0, 0, 0.6); position: absolute; left: 0.5rem; right: 0; z-index: 10; padding: 0; margin: 0; }
 
 .header-site.has-solid-bg { background: black; }
 
@@ -1486,7 +1486,7 @@ a.card:hover .title__highlight, a.card:hover .card__title { text-decoration: und
   .card--event .card__date { left: -6rem; width: 6rem; }
   .card--event .card__day { font-size: 3rem; } }
 
-.course-search__keywords[type="search"] { max-width: 100%; }
+.course-search__keywords[type="search"] { max-width: 100%; -webkit-appearance: none; border-radius: 0.25rem; -webkit-border-radius: 0.25rem; }
 
 .course-search select { max-width: 100%; }
 
@@ -1941,6 +1941,10 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .global-search__close:hover { cursor: pointer; }
 
+.sitewide-message { background-color: #FFD91C; padding: 0.5rem 0.75rem; }
+
+.sitewide-message__text { margin: 0; line-height: 1.5; }
+
 .slab { position: relative; padding: 4rem 0; z-index: 0; }
 
 .slab__title { margin-top: 1rem; }
@@ -2029,6 +2033,12 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 .accolade-slider__item-img { margin: auto; width: auto; max-height: 2em; }
 
 .accolade-slider a { color: white; text-decoration: none; }
+
+.js-slider--responsive .slick-slide { margin: 0 1.5rem 0; }
+
+.js-slider--responsive .slick-prev { left: 0; }
+
+.js-slider--responsive .slick-next { right: 0; }
 
 .slider--modules .slick-slide { max-width: 80vw; margin: 0 0.75rem; }
 
@@ -2124,6 +2134,8 @@ a.tile:focus { outline-width: 3px; outline-color: #d70a26; z-index: 2; }
 .tile-group:hover a.tile .tile__figure img { -webkit-filter: grayscale(1); filter: grayscale(1); }
 
 .tile-group:hover a.tile:hover .tile__figure img { -webkit-filter: grayscale(0); filter: grayscale(0); }
+
+@media (max-width: 35rem) { .feature-tiles__item { margin-bottom: 1.5rem; } }
 
 @media (min-width: 65rem) { @supports (display: grid) { .feature-tiles { display: grid; grid-auto-flow: dense; grid-template-columns: repeat(12, 1fr); grid-template-rows: repeat(16, 1fr); }
     .feature-tiles__item { position: relative; grid-column: span 4; grid-row: span 4; width: auto !important; }

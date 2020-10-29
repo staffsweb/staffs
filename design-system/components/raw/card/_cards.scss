@@ -1,7 +1,7 @@
 $card__internal-spacing: $spacing-sm;
 
 .card {
-  // $card-accent-colors: see __vars/colours
+  // $theme-colours: see __vars/colours
 
   display: block;
   position: relative;
@@ -86,16 +86,30 @@ $card__internal-spacing: $spacing-sm;
   }
 
   //--  ACCENT THEMES
-
   @each $name, $value in $card-accent-colors {
     &--#{$name} {
       --accent-color: #{$value};
+    }
+  } 
+
+  @each $name, $value in $theme-colours {
+    &--#{$name} {
+      --accent-color: #{$value};
+
+      svg {
+          fill: #{$value};
+      }
     }
   }
 
   &--light {
     --accent-color: #{rgba(white, 0.5)};
     color: white;
+
+    svg {
+      fill: white;
+    }
+
   }
 }
 
@@ -206,6 +220,8 @@ a.card {
 
   &__icon {
     margin-bottom: $card__internal-spacing;
+    max-width: 100%;
+    height: auto!important;
 
     img {
       vertical-align: baseline !important; // this is horribly lazy but browsers, sorry

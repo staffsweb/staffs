@@ -1,6 +1,13 @@
 .feature-tiles {
   // $tile-accent-colors: see __vars/colours
 
+  @media(max-width: map_get($breakpoint-stages, 'mobile-wide'))
+  {
+    &__item {
+      margin-bottom: $spacing-lg;
+    }
+  }
+
   @media (min-width: map_get($breakpoint-stages, 'tablet-wide')) {
     @supports (display: grid) {
       display: grid;

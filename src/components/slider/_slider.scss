@@ -122,6 +122,20 @@
   }
 }
 
+.js-slider--responsive {
+  .slick-slide {
+    margin: 0 $grid-gutter 0;
+  }
+
+  .slick-prev {
+    left: 0;
+  }
+
+  .slick-next {
+    right: 0;
+  }
+}
+
 
 .slider--modules {
   // these are sized in JS,
