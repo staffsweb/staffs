@@ -92,6 +92,12 @@
   }
 }
 
+.slider--responsive {
+  .slick-slide {
+    margin: 0 $grid-gutter 0 0;
+  }
+}
+
 .accolade-slider {
   &__item {
     text-align: center;
