@@ -6340,7 +6340,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
       }, {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 1.1,
           slidesToScroll: 1
         }
       }]
