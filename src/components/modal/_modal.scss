@@ -1,0 +1,84 @@
+.modal__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9998;
+  }
+  
+  .modal__container {
+    background-color: #fff;
+    padding: 30px;
+    max-width: none;
+    max-height: auto;
+    border-radius: 4px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    z-index: 9999;
+    top: 50px;
+    bottom: 50px;
+    right: 50px;
+    left: 50px;
+    overflow: auto;
+    position: fixed;
+  }
+  
+  .modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .modal__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.25;
+    color: #00449e;
+    box-sizing: border-box;
+  }
+  
+  .modal__close {
+    background: transparent;
+    border: 0;
+  }
+  
+  .modal__header .modal__close:before { 
+      content: "\2715"; 
+      font-size: 2rem;
+    }
+  
+  .modal__content {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    color: rgba(0,0,0,.8);
+  }
+  
+  @keyframes mmslideOut {
+      from { transform: translateY(-10%); }
+      to { transform: translateY(0); }
+  }
+  
+  .micromodal-slide {
+    display: none;
+  }
+  
+  .micromodal-slide.is-open {
+    display: block;
+  }
+  
+  .micromodal-slide[aria-hidden="true"] .modal__container {
+    animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
+  }
+  
+  .micromodal-slide .modal__container,
+  .micromodal-slide .modal__overlay {
+    will-change: transform;
+  }

@@ -706,7 +706,21 @@
         }
     }
   };
-  // --
+  
+  var modal = function modal() {
+    var modalTriggers = document.querySelectorAll('.popup-trigger');
+    var modalCloseTrigger = document.querySelector('.popup-modal__close');
+    modalTriggers.forEach(function (trigger) {
+      trigger.addEventListener('click', function () {
+        var popupTrigger = trigger.dataset.popupTrigger;
+        var popupModal = document.querySelector("[data-popup-modal=\"".concat(popupTrigger, "\"]"));
+        popupModal.classList.add('is-open');
+        popupModal.querySelector('.popup-modal__close').addEventListener('click', function () {
+          popupModal.classList.remove('is-open');
+        });
+      });
+    });
+  }
 
   $(document).ready(function () {
     megaNavInit();
@@ -716,6 +730,7 @@
     pageNavWaypointsInit();
     searchInit();
     autocompleteInit();
+    modal();
   });
   $(window).on('DOMContentLoaded', function () {
     // event triggers once DOM is loaded but before stylesheets are applied
@@ -723,7 +738,6 @@
   });
   $(window).on('load', function () {
     // correct anything loaded on DOM load which might need adjusting (mostly once images have loaded)
-
     Waypoint.refreshAll();
   });
 
