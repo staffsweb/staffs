@@ -1109,6 +1109,15 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; padd
 
 .col-full { width: 100%; clear: both; }
 
+/* CG: Alternative to the grid to allow items to be aligned to the bottom */
+.title-grid { display: table; width: 100%; }
+
+.title-grid__title { display: table-cell; width: 50%; }
+
+.title-grid__button { display: table-cell; width: 50%; vertical-align: bottom; text-align: right; }
+
+.title-grid__button .button { margin-bottom: 1.5rem; }
+
 /*@mixin align-wide {
   max-width: none;
   width: calc(100vw - 2.4rem);
