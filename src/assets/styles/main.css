@@ -1703,7 +1703,7 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 .megaNav li > a { position: relative; display: block; padding: 0.75em 2em 0.75em 0; color: #394851; border-bottom: 1px solid #bebfc1; }
 
-@media (min-width: 70rem) { .megaNav li > a { padding: 0.75rem; } }
+@media (min-width: 70rem) { .megaNav li > a { padding: 0.75rem 1.5rem 0.75rem; } }
 
 .megaNav li > a:hover { text-decoration: underline; }
 

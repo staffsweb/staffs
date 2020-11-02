@@ -55,7 +55,7 @@
       border-bottom: 1px solid $border-color;
 
       @media (min-width: $megaNav-full-breakpoint) {
-        padding: $spacing-sm;
+        padding: $spacing-sm $spacing-lg $spacing-sm;
       }
 
       &:hover {
