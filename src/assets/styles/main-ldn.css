@@ -1867,7 +1867,7 @@ a.tile:focus { outline-width: 3px; outline-color: #144196; z-index: 2; }
 
 .modal__title { margin-top: 0; margin-bottom: 0; font-weight: 600; font-size: 1.25rem; line-height: 1.25; color: #00449e; box-sizing: border-box; }
 
-.modal__close { background: transparent; border: 0; }
+.modal__close { background: transparent; border: 0; cursor: pointer; }
 
 .modal__header .modal__close:before { content: "\2715"; font-size: 2rem; }
 
