@@ -708,14 +708,14 @@
   };
   
   var modal = function modal() {
-    var modalTriggers = document.querySelectorAll('.popup-trigger');
+    var modalTriggers = document.querySelectorAll('[data-modal-trigger]');
     modalTriggers.forEach(function (trigger) {
       trigger.addEventListener('click', function () {
-        var popupTrigger = trigger.dataset.popupTrigger;
-        var popupModal = document.querySelector("[data-popup-modal=\"".concat(popupTrigger, "\"]"));
-        popupModal.classList.add('is-open');
-        popupModal.querySelector('.popup-modal__close').addEventListener('click', function () {
-          popupModal.classList.remove('is-open');
+        var modalTrigger = trigger.dataset.modalTrigger;
+        var modal = document.querySelector("[data-modal=\"".concat(modalTrigger, "\"]"));
+        modal.classList.add('is-open');
+        modal.querySelector('[data-modal-close]').addEventListener('click', function () {
+          modal.classList.remove('is-open');
         });
       });
     });

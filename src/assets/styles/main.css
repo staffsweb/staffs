@@ -2404,12 +2404,14 @@ a.tile:focus { outline-width: 3px; outline-color: #d70a26; z-index: 2; }
 @keyframes mmslideOut { from { transform: translateY(-10%); }
   to { transform: translateY(0); } }
 
-.micromodal-slide { display: none; }
+.modal-slide { display: none; }
 
-.micromodal-slide.is-open { display: block; }
+.modal-slide.is-open { display: block; }
 
-.micromodal-slide[aria-hidden="true"] .modal__container { -webkit-animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1); animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1); }
+.modal-slide[aria-hidden="true"] .modal__container { -webkit-animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1); animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1); }
 
-.micromodal-slide .modal__container, .micromodal-slide .modal__overlay { will-change: transform; }
+.modal-slide .modal__container, .modal-slide .modal__overlay { will-change: transform; }
+
+.modal__content p { max-width: none; }
 
 /*# sourceMappingURL=main.css.map */

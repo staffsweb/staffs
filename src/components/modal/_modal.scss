@@ -67,19 +67,23 @@
       to { transform: translateY(0); }
   }
   
-  .micromodal-slide {
+  .modal-slide {
     display: none;
   }
   
-  .micromodal-slide.is-open {
+  .modal-slide.is-open {
     display: block;
   }
   
-  .micromodal-slide[aria-hidden="true"] .modal__container {
+  .modal-slide[aria-hidden="true"] .modal__container {
     animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
   }
   
-  .micromodal-slide .modal__container,
-  .micromodal-slide .modal__overlay {
+  .modal-slide .modal__container,
+  .modal-slide .modal__overlay {
     will-change: transform;
+  }
+
+  .modal__content p {
+    max-width: none;
   }
