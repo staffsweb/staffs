@@ -6726,7 +6726,6 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
   var modal = function modal() {
     var modalTriggers = document.querySelectorAll('.popup-trigger');
-    var modalCloseTrigger = document.querySelector('.popup-modal__close');
     modalTriggers.forEach(function (trigger) {
       trigger.addEventListener('click', function () {
         var popupTrigger = trigger.dataset.popupTrigger;
