@@ -375,6 +375,13 @@
 
   };
 
+  let sliderReInit = function (sliderCssClass) {
+    var slider = $('.' + sliderCssClass);
+    if(slider) {
+      slider.slick('reinit');
+    }
+  }
+
   let waypointsInit = function () {
     // CG Apply the "highlight" and "tail" styles to the appropriate headings in the page body automatically, ready for the animation to be added
     $("#page-body__content > h2, #page-body__content section h2, .mini-template-grid__column:first-child > h2, .slab > .wrap > h2").wrap("<div class='title  title--has-tail  js-waypoint'></div>").addClass("title__highlight");
@@ -717,8 +724,9 @@
         modal.querySelector('[data-modal-close]').addEventListener('click', function () {
           modal.classList.remove('is-open');
         });
-
+        
         event.preventDefault();
+        sliderReInit('modal-slider');
       });
     });
   };
