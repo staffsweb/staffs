@@ -1889,4 +1889,6 @@ a.tile:focus { outline-width: 3px; outline-color: #144196; z-index: 2; }
 
 .modal__content p { max-width: none; }
 
+@media (max-width: 35rem) { .modal .slab, .modal .wrap { padding: 0; } }
+
 /*# sourceMappingURL=main-ldn.css.map */

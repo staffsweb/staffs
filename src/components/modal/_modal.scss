@@ -87,3 +87,10 @@
   .modal__content p {
     max-width: none;
   }
+
+  @media(max-width: map_get($breakpoint-stages, 'mobile-wide'))
+  {
+    .modal .slab, .modal .wrap {
+      padding: 0;
+    }
+  }
