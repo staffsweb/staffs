@@ -6418,8 +6418,8 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     Waypoint.refreshAll(); // sliders' content may change the height of the page, thus these need to be recalculated
   };
 
-  var sliderReInit = function sliderReInit(sliderCssClass) {
-    var slider = $('.' + sliderCssClass);
+  var sliderReInit = function sliderReInit(sliderCssSelector) {
+    var slider = $(sliderCssSelector);
 
     if (slider) {
       slider.slick('reinit');
@@ -6743,7 +6743,12 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
           modal.classList.remove('is-open');
         });
         event.preventDefault();
-        sliderReInit('modal-slider');
+        var isSliderRefreshed = parseInt(modal.dataset.sliderIsrefreshed);
+
+        if (isSliderRefreshed === 0) {
+          sliderReInit("[data-modal=\"".concat(modalTrigger, "\"] .modal-slider"));
+          modal.setAttribute("data-slider-isrefreshed", 1);
+        }
       });
     });
   };

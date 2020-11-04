@@ -375,8 +375,8 @@
 
   };
 
-  let sliderReInit = function (sliderCssClass) {
-    var slider = $('.' + sliderCssClass);
+  let sliderReInit = function (sliderCssSelector) {
+    var slider = $(sliderCssSelector);
     if(slider) {
       slider.slick('reinit');
     }
@@ -726,7 +726,11 @@
         });
         
         event.preventDefault();
-        sliderReInit('modal-slider');
+        var isSliderRefreshed = parseInt(modal.dataset.sliderIsrefreshed);
+        if(isSliderRefreshed === 0) {
+          sliderReInit("[data-modal=\"".concat(modalTrigger, "\"] .modal-slider"));
+          modal.setAttribute("data-slider-isrefreshed", 1);
+        }
       });
     });
   };
