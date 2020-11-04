@@ -2423,6 +2423,7 @@ a.tile:focus { outline-width: 3px; outline-color: #d70a26; z-index: 2; }
 .modal__content .grid div:nth-child(2) .card { border: none; }
 
 @media (max-width: 35rem) { .modal__content .slab, .modal__content .wrap { padding: 0; }
-  .modal__content .card__figure { padding-bottom: 100%; } }
+  .modal__content .card__figure { padding-bottom: 100%; }
+  .modal__content figure { margin: 0 0 0; } }
 
 /*# sourceMappingURL=main.css.map */
