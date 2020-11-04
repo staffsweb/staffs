@@ -209,7 +209,7 @@
             slidesToShow: 1,
             slidesToScroll: 1,
             centerMode: true,
-            centerPadding: '5%'
+            centerPadding: '0%'
           }
         }
       ]

@@ -1591,6 +1591,8 @@ a.tile:hover, a.tile:focus { color: #41464b; }
 
 a.tile:focus { outline-width: 3px; outline-color: #144196; z-index: 2; }
 
+.has-cta .tile { min-height: 25em; }
+
 .tile-group a.tile { transition: transform 200ms; }
 
 .tile-group a.tile:hover { transform: scale(1.025); z-index: 2; }

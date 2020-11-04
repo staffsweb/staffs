@@ -6278,7 +6278,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
           slidesToShow: 1,
           slidesToScroll: 1,
           centerMode: true,
-          centerPadding: '5%'
+          centerPadding: '0%'
         }
       }]
     });
