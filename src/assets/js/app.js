@@ -151,9 +151,13 @@
     // @TODO: check accessibility - add AIRA/keyboard if needed
     // @TODO: consider using history.pushState?
     // @TODO: perhaps add something to handle switching to a tab when its ID is the URL hash?
+    var tabCount = 1;
 
     $('.js-tabs').each(function () {
       let tabs = $(this);
+      var tabId = 'tabs-' + tabCount;
+      tabs.attr('id', tabId);
+      tabCount++;
       let links = $('.tabs__link', tabs);
       let sections = $('.tabs__section', tabs);
       let defaultTab = $('.tabs__link.is-selected', tabs).attr('href');
@@ -170,7 +174,7 @@
 
       links.on('click', function (e) {
         e.preventDefault();
-        let targetHref = $(this).attr('href');
+        let targetHref = '#' + tabId + ' ' + $(this).attr('href');
 
         sections.hide().removeClass('is-expanded');
         $(targetHref).show().addClass('is-expanded');
