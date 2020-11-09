@@ -995,6 +995,10 @@ a.card:hover .title__highlight, a.card:hover .card__title { text-decoration: und
   .card--event .card__date { left: -6rem; width: 6rem; }
   .card--event .card__day { font-size: 3rem; } }
 
+.card__video.card__figure { position: relative; height: 0; padding-bottom: 33%; }
+
+.card__video.card__figure iframe { position: absolute; width: 100%; height: 100%; }
+
 .feature-link { display: block; position: relative; --accent-color: #144196; margin-bottom: 2rem; color: #41464b; text-decoration: none; padding: 0 calc(0.75rem + 2.5%) 0; border-left: 0.25rem solid #144196; border-left: 0.25rem solid var(--accent-color); }
 
 .feature-link__title { display: table; position: relative; margin-bottom: 0.5rem; padding-right: 1em; word-break: break-word; }
@@ -1890,10 +1894,6 @@ a.tile:focus { outline-width: 3px; outline-color: #144196; z-index: 2; }
 .modal-slide .modal__container, .modal-slide .modal__overlay { will-change: transform; }
 
 .modal__content p { max-width: none; }
-
-.modal__content .card__figure { position: relative; height: 0; padding-bottom: 33%; }
-
-.modal__content .card__figure iframe { position: absolute; width: 100%; height: 100%; }
 
 .modal__content .grid div:nth-child(2) .card { border: none; }
 
