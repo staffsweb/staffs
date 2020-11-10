@@ -39,6 +39,8 @@
     z-index: 1;
 
     &-body {
+      @include typescale('sm');
+      @include line-height('normal');
     }
   }
 
