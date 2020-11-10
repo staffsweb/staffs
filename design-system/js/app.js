@@ -151,9 +151,13 @@
     // @TODO: check accessibility - add AIRA/keyboard if needed
     // @TODO: consider using history.pushState?
     // @TODO: perhaps add something to handle switching to a tab when its ID is the URL hash?
+    var tabCount = 1;
 
     $('.js-tabs').each(function () {
       let tabs = $(this);
+      var tabId = 'tabs-' + tabCount;
+      tabs.attr('id', tabId);
+      tabCount++;
       let links = $('.tabs__link', tabs);
       let sections = $('.tabs__section', tabs);
       let defaultTab = $('.tabs__link.is-selected', tabs).attr('href');
@@ -170,7 +174,7 @@
 
       links.on('click', function (e) {
         e.preventDefault();
-        let targetHref = $(this).attr('href');
+        let targetHref = '#' + tabId + ' ' + $(this).attr('href');
 
         sections.hide().removeClass('is-expanded');
         $(targetHref).show().addClass('is-expanded');
@@ -209,7 +213,7 @@
             slidesToShow: 1,
             slidesToScroll: 1,
             centerMode: true,
-            centerPadding: '5%'
+            centerPadding: '0%'
           }
         }
       ]
@@ -274,7 +278,7 @@
         }
       ]
     });
-    
+
     $('.js-slider--responsive').slick({
       infinite: false,
       responsive: [{
@@ -284,12 +288,41 @@
         {
           breakpoint: 600,
           settings: {
-            slidesToShow: 1,
+            slidesToShow: 1.2,
             slidesToScroll: 1
           }
         }
       ]
-    });    
+    });
+
+    $('.js-slider--generic').slick({
+      slidesToShow: 3.1,
+      slidesToScroll: 3,
+      infinite: false,
+      responsive: [
+        {
+          breakpoint: 1000,
+          settings: {
+            slidesToShow: 2.5,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1.25,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 360,
+          settings: {
+            slidesToShow: 1.1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
 
     $('.js-slider--variable').each(function () {
       $(this).slick({
@@ -345,6 +378,13 @@
     Waypoint.refreshAll(); // sliders' content may change the height of the page, thus these need to be recalculated
 
   };
+
+  let sliderReInit = function (sliderCssSelector) {
+    var slider = $(sliderCssSelector);
+    if(slider) {
+      slider.slick('reinit');
+    }
+  }
 
   let waypointsInit = function () {
     // CG Apply the "highlight" and "tail" styles to the appropriate headings in the page body automatically, ready for the animation to be added
@@ -677,7 +717,27 @@
         }
     }
   };
-  // --
+  
+  var modal = function modal() {
+    var modalTriggers = document.querySelectorAll('[data-modal-trigger]');
+    modalTriggers.forEach(function (trigger) {
+      trigger.addEventListener('click', function (event) {
+        var modalTrigger = trigger.dataset.modalTrigger;
+        var modal = document.querySelector("[data-modal=\"".concat(modalTrigger, "\"]"));
+        modal.classList.add('is-open');
+        modal.querySelector('[data-modal-close]').addEventListener('click', function () {
+          modal.classList.remove('is-open');
+        });
+        
+        event.preventDefault();
+        var isSliderRefreshed = parseInt(modal.dataset.sliderIsrefreshed);
+        if(isSliderRefreshed === 0) {
+          sliderReInit("[data-modal=\"".concat(modalTrigger, "\"] .modal-slider"));
+          modal.setAttribute("data-slider-isrefreshed", 1);
+        }
+      });
+    });
+  };
 
   $(document).ready(function () {
     megaNavInit();
@@ -687,6 +747,7 @@
     pageNavWaypointsInit();
     searchInit();
     autocompleteInit();
+    modal();
   });
   $(window).on('DOMContentLoaded', function () {
     // event triggers once DOM is loaded but before stylesheets are applied
@@ -694,7 +755,6 @@
   });
   $(window).on('load', function () {
     // correct anything loaded on DOM load which might need adjusting (mostly once images have loaded)
-
     Waypoint.refreshAll();
   });
 

@@ -6228,8 +6228,12 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     // @TODO: check accessibility - add AIRA/keyboard if needed
     // @TODO: consider using history.pushState?
     // @TODO: perhaps add something to handle switching to a tab when its ID is the URL hash?
+    var tabCount = 1;
     $('.js-tabs').each(function () {
       var tabs = $(this);
+      var tabId = 'tabs-' + tabCount;
+      tabs.attr('id', tabId);
+      tabCount++;
       var links = $('.tabs__link', tabs);
       var sections = $('.tabs__section', tabs);
       var defaultTab = $('.tabs__link.is-selected', tabs).attr('href');
@@ -6244,7 +6248,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
       links.on('click', function (e) {
         e.preventDefault();
-        var targetHref = $(this).attr('href');
+        var targetHref = '#' + tabId + ' ' + $(this).attr('href');
         sections.hide().removeClass('is-expanded');
         $(targetHref).show().addClass('is-expanded');
         links.removeClass('is-selected');
@@ -6278,7 +6282,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
           slidesToShow: 1,
           slidesToScroll: 1,
           centerMode: true,
-          centerPadding: '5%'
+          centerPadding: '0%'
         }
       }]
     });
@@ -6340,7 +6344,31 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
       }, {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 1.2,
+          slidesToScroll: 1
+        }
+      }]
+    });
+    $('.js-slider--generic').slick({
+      slidesToShow: 3.1,
+      slidesToScroll: 3,
+      infinite: false,
+      responsive: [{
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 2.5,
+          slidesToScroll: 2
+        }
+      }, {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1.25,
+          slidesToScroll: 1
+        }
+      }, {
+        breakpoint: 360,
+        settings: {
+          slidesToShow: 1.1,
           slidesToScroll: 1
         }
       }]
@@ -6392,6 +6420,14 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
       });
     });
     Waypoint.refreshAll(); // sliders' content may change the height of the page, thus these need to be recalculated
+  };
+
+  var sliderReInit = function sliderReInit(sliderCssSelector) {
+    var slider = $(sliderCssSelector);
+
+    if (slider) {
+      slider.slick('reinit');
+    }
   };
 
   var waypointsInit = function waypointsInit() {
@@ -6698,8 +6734,28 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         pathElms[x].style.removeProperty('fill');
       }
     }
-  }; // --
+  };
 
+  var modal = function modal() {
+    var modalTriggers = document.querySelectorAll('[data-modal-trigger]');
+    modalTriggers.forEach(function (trigger) {
+      trigger.addEventListener('click', function (event) {
+        var modalTrigger = trigger.dataset.modalTrigger;
+        var modal = document.querySelector("[data-modal=\"".concat(modalTrigger, "\"]"));
+        modal.classList.add('is-open');
+        modal.querySelector('[data-modal-close]').addEventListener('click', function () {
+          modal.classList.remove('is-open');
+        });
+        event.preventDefault();
+        var isSliderRefreshed = parseInt(modal.dataset.sliderIsrefreshed);
+
+        if (isSliderRefreshed === 0) {
+          sliderReInit("[data-modal=\"".concat(modalTrigger, "\"] .modal-slider"));
+          modal.setAttribute("data-slider-isrefreshed", 1);
+        }
+      });
+    });
+  };
 
   $(document).ready(function () {
     megaNavInit();
@@ -6709,6 +6765,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     pageNavWaypointsInit();
     searchInit();
     autocompleteInit();
+    modal();
   });
   $(window).on('DOMContentLoaded', function () {
     // event triggers once DOM is loaded but before stylesheets are applied

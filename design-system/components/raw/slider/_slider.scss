@@ -92,12 +92,6 @@
   }
 }
 
-.slider--responsive {
-  .slick-slide {
-    margin: 0 $grid-gutter 0 0;
-  }
-}
-
 .accolade-slider {
   &__item {
     text-align: center;
@@ -125,6 +119,20 @@
   a {
     color: choose-contrast-color($slate--light);
     text-decoration: none;
+  }
+}
+
+.js-slider--responsive {
+  .slick-slide {
+    margin: 0 $grid-gutter 0;
+  }
+
+  .slick-prev {
+    left: 0;
+  }
+
+  .slick-next {
+    right: 0;
   }
 }
 
