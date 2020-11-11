@@ -995,7 +995,7 @@ a.card:hover .title__highlight, a.card:hover .card__title { text-decoration: und
   .card--event .card__date { left: -6rem; width: 6rem; }
   .card--event .card__day { font-size: 3rem; } }
 
-.card__video.card__figure { position: relative; height: 0; padding-bottom: 33%; }
+.card__video.card__figure { position: relative; height: 0; padding-bottom: 50%; }
 
 @media (max-width: 35rem) { .card__video.card__figure { padding-bottom: 100%; } }
 
@@ -1899,7 +1899,7 @@ a.tile:focus { outline-width: 3px; outline-color: #144196; z-index: 2; }
 
 .modal__content p { max-width: none; }
 
-.modal__content .card { border: none; }
+.modal__content .card { border: none; max-width: 980px; }
 
 @media (max-width: 35rem) { .modal__content .slab, .modal__content .wrap { padding: 0; }
   .modal__content figure { margin: 0 0 0; } }

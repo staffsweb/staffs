@@ -90,6 +90,7 @@
 
   .modal__content .card {
     border: none;
+    max-width: 980px;
   }
 
   @media(max-width: map_get($breakpoint-stages, 'mobile-wide'))
