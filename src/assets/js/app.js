@@ -720,10 +720,23 @@
   
   var modal = function modal() {
     var modalTriggers = document.querySelectorAll('[data-modal-trigger]');
+
+    var count = 1;
+
     modalTriggers.forEach(function (trigger) {
+
+      var modalTrigger = trigger.dataset.modalTrigger;
+      var modal = document.querySelector("[data-modal=\"".concat(modalTrigger, "\"]"));
+
+      trigger.setAttribute('data-modal-trigger', modalTrigger + "-" + count);
+      modal.setAttribute('data-modal', modalTrigger + "-" + count);
+      count++;
+
+
       trigger.addEventListener('click', function (event) {
         var modalTrigger = trigger.dataset.modalTrigger;
         var modal = document.querySelector("[data-modal=\"".concat(modalTrigger, "\"]"));
+
         modal.classList.add('is-open');
         modal.querySelector('[data-modal-close]').addEventListener('click', function () {
           modal.classList.remove('is-open');
