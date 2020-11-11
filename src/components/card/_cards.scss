@@ -282,7 +282,7 @@ a.card {
 .card__video.card__figure {
   position: relative;
   height: 0;
-  padding-bottom: 50%;
+  padding-bottom: 25%;
   @media (max-width: map_get($breakpoint-stages, 'mobile-wide')) {
     padding-bottom: 100%;
   }

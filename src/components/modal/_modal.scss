@@ -93,6 +93,12 @@
     max-width: 980px;
   }
 
+  .modal__content .card {
+    &__video {
+      padding-bottom: 50%;
+    }
+  }
+
   @media(max-width: map_get($breakpoint-stages, 'mobile-wide'))
   {
     .modal__content .slab, .modal__content .wrap {
