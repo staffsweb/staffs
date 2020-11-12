@@ -1541,7 +1541,7 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .tabs { margin-bottom: 2rem; border-bottom: 0.25rem solid #41464b; padding-bottom: 0.75rem; }
 
-.tabs__nav { margin: 0 -1px 0 0; border-bottom: 0.25rem solid #41464b; text-align: center; }
+.tabs__nav { margin: 0 -1px 0 0; border-bottom: 3px solid #41464b; text-align: center; }
 
 @media (min-width: 65rem) { .tabs__nav { overflow: hidden; overflow-x: auto; } }
 
