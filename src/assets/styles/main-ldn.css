@@ -1522,6 +1522,10 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .slider--gallery__nav .slick-current img { border-color: #144196; }
 
+.social-links .icon { width: 2rem; height: 2rem; }
+
+.social-links a { text-decoration: none; }
+
 .table--modules thead td, .table--modules thead th { background: #41464b; color: white; }
 
 .table--modules__credits { text-align: center; background: #5e6266; color: white; }

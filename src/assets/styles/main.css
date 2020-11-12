@@ -2065,6 +2065,10 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .slider--gallery__nav .slick-current img { border-color: #d70a26; }
 
+.social-links .icon { width: 2rem; height: 2rem; }
+
+.social-links a { text-decoration: none; }
+
 .table--modules thead td, .table--modules thead th { background: #394851; color: white; }
 
 .table--modules__credits { text-align: center; background: #616d74; color: white; }
