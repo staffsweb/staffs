@@ -1051,45 +1051,45 @@ hr { position: relative; }
 
 .icon:before { font-size: 1em; display: inline-block; }
 
-.icon--envelope { background-image: url("../img/icon-envelope.svg"); }
+.icon--envelope { background-image: url("/site/images/icons/icon-envelope.svg"); }
 
-.icon--phone { background-image: url("../img/icon-phone.svg"); }
+.icon--phone { background-image: url("/site/images/icons/icon-phone.svg"); }
 
-.icon--facebook { background-image: url("../img/icon-facebook.svg"); }
+.icon--facebook { background-image: url("/site/images/icons/icon-facebook.svg"); }
 
-.icon--pin { background-image: url("../img/icon-pin.svg"); }
+.icon--pin { background-image: url("/site/images/icons/icon-pin.svg"); }
 
-.icon--calendar { background-image: url("../img/icon-calendar.svg"); }
+.icon--calendar { background-image: url("/site/images/icons/icon-calendar.svg"); }
 
-.icon--clock { background-image: url("../img/icon-clock.svg"); }
+.icon--clock { background-image: url("/site/images/icons/icon-clock.svg"); }
 
-.icon--pricetag { background-image: url("../img/icon-pricetag.svg"); }
+.icon--pricetag { background-image: url("/site/images/icons/icon-pricetag.svg"); }
 
-.icon--facebook-white { background-image: url("../img/icon-facebook-white.svg"); }
+.icon--facebook-white { background-image: url("/site/images/icons/icon-facebook-white.svg"); }
 
-.icon--instagram { background-image: url("../img/icon-instagram.svg"); }
+.icon--instagram { background-image: url("/site/images/icons/icon-instagram.svg"); }
 
-.icon--instagram-white { background-image: url("../img/icon-instagram-white.svg"); }
+.icon--instagram-white { background-image: url("/site/images/icons/icon-instagram-white.svg"); }
 
-.icon--linkedin { background-image: url("../img/icon-linkedin.svg"); }
+.icon--linkedin { background-image: url("/site/images/icons/icon-linkedin.svg"); }
 
-.icon--linkedin-white { background-image: url("../img/icon-linkedin-white.svg"); }
+.icon--linkedin-white { background-image: url("/site/images/icons/icon-linkedin-white.svg"); }
 
-.icon--pinterest { background-image: url("../img/icon-pinterest.svg"); }
+.icon--pinterest { background-image: url("/site/images/icons/icon-pinterest.svg"); }
 
-.icon--pinterest-white { background-image: url("../img/icon-pinterest-white.svg"); }
+.icon--pinterest-white { background-image: url("/site/images/icons/icon-pinterest-white.svg"); }
 
-.icon--snapchat { background-image: url("../img/icon-snapchat.svg"); }
+.icon--snapchat { background-image: url("/site/images/icons/icon-snapchat.svg"); }
 
-.icon--snapchat-white { background-image: url("../img/icon-snapchat-white.svg"); }
+.icon--snapchat-white { background-image: url("/site/images/icons/icon-snapchat-white.svg"); }
 
-.icon--twitter { background-image: url("../img/icon-twitter.svg"); }
+.icon--twitter { background-image: url("/site/images/icons/icon-twitter.svg"); }
 
-.icon--twitter-white { background-image: url("../img/icon-twitter-white.svg"); }
+.icon--twitter-white { background-image: url("/site/images/icons/icon-twitter-white.svg"); }
 
-.icon--youtube { background-image: url("../img/icon-youtube.svg"); }
+.icon--youtube { background-image: url("/site/images/icons/icon-youtube.svg"); }
 
-.icon--youtube-white { background-image: url("../img/icon-youtube-white.svg"); }
+.icon--youtube-white { background-image: url("/site/images/icons/icon-youtube-white.svg"); }
 
 .iconBox { display: flex; flex-wrap: wrap; align-items: flex-start; padding: calc(1rem + 2.5%) 0.5rem; margin: 0 0 1rem; background: #41464b; color: white; text-decoration: none; }
 
