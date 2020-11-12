@@ -16,7 +16,7 @@
     .accordion__toggle:before {
       content: '';
       transform: rotate(0deg);
-      background: $neutral--primary url('../img/icon-minus-white.svg') no-repeat center center;
+      background: $neutral--primary url('#{$image-theme-directory-icon}/icon-minus-white.svg') no-repeat center center;
       background-size: 50%;
     }
   }
@@ -57,7 +57,7 @@
     line-height: 1;
     padding: 0;
     margin-left: -1.5em;
-    background: $neutral--primary url('../img/icon-plus-white.svg') no-repeat center center;
+    background: $neutral--primary url('#{$image-theme-directory-icon}/icon-plus-white.svg') no-repeat center center;
     background-size: 50%;
     text-align: center;
     border-radius: 50%;
