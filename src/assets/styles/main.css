@@ -958,6 +958,13 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; padd
   .grid-6-cols\@mobile > *:nth-child(6n + 7) { clear: left; }
   .col-1\/6\@mobile:nth-child(n) { width: 16.6657%; }
   .col-5\/6\@mobile:nth-child(n) { width: 83.3323%; }
+  .grid-10-cols\@mobile > * { width: 10%; }
+  .grid-10-cols\@mobile > *:nth-child(n) { clear: none; }
+  .grid-10-cols\@mobile > *:nth-child(10n + 11) { clear: left; }
+  .col-1\/10\@mobile:nth-child(n) { width: 10%; }
+  .col-3\/10\@mobile:nth-child(n) { width: 30%; }
+  .col-7\/10\@mobile:nth-child(n) { width: 70%; }
+  .col-9\/10\@mobile:nth-child(n) { width: 90%; }
   .col-full\@mobile { width: 100%; } }
 
 @media (min-width: 35rem) { .grid-2-cols\@mobile-wide > * { width: 50%; }
@@ -987,6 +994,13 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; padd
   .grid-6-cols\@mobile-wide > *:nth-child(6n + 7) { clear: left; }
   .col-1\/6\@mobile-wide:nth-child(n) { width: 16.6657%; }
   .col-5\/6\@mobile-wide:nth-child(n) { width: 83.3323%; }
+  .grid-10-cols\@mobile-wide > * { width: 10%; }
+  .grid-10-cols\@mobile-wide > *:nth-child(n) { clear: none; }
+  .grid-10-cols\@mobile-wide > *:nth-child(10n + 11) { clear: left; }
+  .col-1\/10\@mobile-wide:nth-child(n) { width: 10%; }
+  .col-3\/10\@mobile-wide:nth-child(n) { width: 30%; }
+  .col-7\/10\@mobile-wide:nth-child(n) { width: 70%; }
+  .col-9\/10\@mobile-wide:nth-child(n) { width: 90%; }
   .col-full\@mobile-wide { width: 100%; } }
 
 @media (min-width: 45rem) { .grid-2-cols\@tablet > * { width: 50%; }
@@ -1016,6 +1030,13 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; padd
   .grid-6-cols\@tablet > *:nth-child(6n + 7) { clear: left; }
   .col-1\/6\@tablet:nth-child(n) { width: 16.6657%; }
   .col-5\/6\@tablet:nth-child(n) { width: 83.3323%; }
+  .grid-10-cols\@tablet > * { width: 10%; }
+  .grid-10-cols\@tablet > *:nth-child(n) { clear: none; }
+  .grid-10-cols\@tablet > *:nth-child(10n + 11) { clear: left; }
+  .col-1\/10\@tablet:nth-child(n) { width: 10%; }
+  .col-3\/10\@tablet:nth-child(n) { width: 30%; }
+  .col-7\/10\@tablet:nth-child(n) { width: 70%; }
+  .col-9\/10\@tablet:nth-child(n) { width: 90%; }
   .col-full\@tablet { width: 100%; } }
 
 @media (min-width: 65rem) { .grid-2-cols\@tablet-wide > * { width: 50%; }
@@ -1045,6 +1066,13 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; padd
   .grid-6-cols\@tablet-wide > *:nth-child(6n + 7) { clear: left; }
   .col-1\/6\@tablet-wide:nth-child(n) { width: 16.6657%; }
   .col-5\/6\@tablet-wide:nth-child(n) { width: 83.3323%; }
+  .grid-10-cols\@tablet-wide > * { width: 10%; }
+  .grid-10-cols\@tablet-wide > *:nth-child(n) { clear: none; }
+  .grid-10-cols\@tablet-wide > *:nth-child(10n + 11) { clear: left; }
+  .col-1\/10\@tablet-wide:nth-child(n) { width: 10%; }
+  .col-3\/10\@tablet-wide:nth-child(n) { width: 30%; }
+  .col-7\/10\@tablet-wide:nth-child(n) { width: 70%; }
+  .col-9\/10\@tablet-wide:nth-child(n) { width: 90%; }
   .col-full\@tablet-wide { width: 100%; } }
 
 @media (min-width: 80rem) { .grid-2-cols\@desktop > * { width: 50%; }
@@ -1074,6 +1102,13 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; padd
   .grid-6-cols\@desktop > *:nth-child(6n + 7) { clear: left; }
   .col-1\/6\@desktop:nth-child(n) { width: 16.6657%; }
   .col-5\/6\@desktop:nth-child(n) { width: 83.3323%; }
+  .grid-10-cols\@desktop > * { width: 10%; }
+  .grid-10-cols\@desktop > *:nth-child(n) { clear: none; }
+  .grid-10-cols\@desktop > *:nth-child(10n + 11) { clear: left; }
+  .col-1\/10\@desktop:nth-child(n) { width: 10%; }
+  .col-3\/10\@desktop:nth-child(n) { width: 30%; }
+  .col-7\/10\@desktop:nth-child(n) { width: 70%; }
+  .col-9\/10\@desktop:nth-child(n) { width: 90%; }
   .col-full\@desktop { width: 100%; } }
 
 @media (min-width: 90rem) { .grid-2-cols\@desktop-wide > * { width: 50%; }
@@ -1103,6 +1138,13 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; padd
   .grid-6-cols\@desktop-wide > *:nth-child(6n + 7) { clear: left; }
   .col-1\/6\@desktop-wide:nth-child(n) { width: 16.6657%; }
   .col-5\/6\@desktop-wide:nth-child(n) { width: 83.3323%; }
+  .grid-10-cols\@desktop-wide > * { width: 10%; }
+  .grid-10-cols\@desktop-wide > *:nth-child(n) { clear: none; }
+  .grid-10-cols\@desktop-wide > *:nth-child(10n + 11) { clear: left; }
+  .col-1\/10\@desktop-wide:nth-child(n) { width: 10%; }
+  .col-3\/10\@desktop-wide:nth-child(n) { width: 30%; }
+  .col-7\/10\@desktop-wide:nth-child(n) { width: 70%; }
+  .col-9\/10\@desktop-wide:nth-child(n) { width: 90%; }
   .col-full\@desktop-wide { width: 100%; } }
 
 .col-reverse { float: right; }
