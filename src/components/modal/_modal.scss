@@ -96,8 +96,17 @@
   .modal__content .card {
     &__video {
       padding-bottom: 50%;
+      position: relative;
+      height: 0;
+      @media (max-width: map_get($breakpoint-stages, 'mobile-wide')) {
+        padding-bottom: 100%;
+      }
     }
   }
+
+  .modal__content  .card__video.card__figure iframe {
+    position: absolute;
+  } 
 
   @media(max-width: map_get($breakpoint-stages, 'mobile-wide'))
   {
