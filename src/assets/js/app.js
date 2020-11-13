@@ -388,9 +388,8 @@
 
   let waypointsInit = function () {
     // CG Apply the "highlight" and "tail" styles to the appropriate headings in the page body automatically, ready for the animation to be added
-    $("#page-body__content h2").filter(function(elem) {
-      return !$(this).parents(".card").length
-    }).wrap("<div class='title  title--has-tail  js-waypoint'></div>").addClass("title__highlight");
+    $("#page-body__content > h2, #page-body__content section h2, .mini-template-grid__column:first-child > h2, .slab > .wrap > h2").wrap("<div class='title  title--has-tail  js-waypoint'></div>").addClass("title__highlight");
+    $(".mini-template-grid__column:not(:first-child) > h2").wrap("<div class='title'></div>").addClass("title__highlight");
 
     // Potential Refactor: in an ideal world, using Intersection Observer might be better for this
     $('.js-waypoint').each(function () {
