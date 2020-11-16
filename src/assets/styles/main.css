@@ -2262,9 +2262,11 @@ a.tile:focus { outline-width: 3px; outline-color: #d70a26; z-index: 2; }
 
 .feature-tiles:hover a.tile:hover .tile__figure img { -webkit-filter: grayscale(0); filter: grayscale(0); }
 
-.title { position: relative; --background: #d70a26; --color: white; max-width: 42em; margin-bottom: 1.5rem; margin-right: 1rem; }
+.title { position: relative; --background: #d70a26; --color: white; max-width: 42em; margin-top: 3rem; margin-bottom: 1.5rem; margin-right: 1rem; }
 
 .title + .title { margin-top: -1rem; }
+
+.slab .title, .mini-template-grid .title { margin-top: 0; }
 
 .title__highlight { position: relative; display: inline; left: 0.5rem; padding: 0.25rem; line-height: 1.4; background: #d70a26; background: var(--background, #d70a26); color: white; color: var(--color); box-shadow: -0.5rem 0 0 0 #d70a26, 0.5rem 0 0 0 #d70a26; box-shadow: -0.5rem 0 0 0 var(--background, #d70a26), 0.5rem 0 0 0 var(--background, #d70a26); -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 
