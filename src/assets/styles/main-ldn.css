@@ -1717,9 +1717,11 @@ a.tile:focus { outline-width: 3px; outline-color: #144196; z-index: 2; }
 
 .feature-tiles:hover a.tile:hover .tile__figure img { -webkit-filter: grayscale(0); filter: grayscale(0); }
 
-.title { position: relative; --background: #144196; --color: white; max-width: 42em; margin-bottom: 1.5rem; margin-right: 1rem; }
+.title { position: relative; --background: #144196; --color: white; max-width: 42em; margin-top: 3rem; margin-bottom: 1.5rem; margin-right: 1rem; }
 
 .title + .title { margin-top: -1rem; }
+
+.slab .title, .mini-template-grid .title { margin-top: 0; }
 
 .title__highlight { position: relative; display: inline; left: 0.5rem; padding: 0.25rem; line-height: 1.4; background: #144196; background: var(--background, #144196); color: white; color: var(--color); box-shadow: -0.5rem 0 0 0 #144196, 0.5rem 0 0 0 #144196; box-shadow: -0.5rem 0 0 0 var(--background, #144196), 0.5rem 0 0 0 var(--background, #144196); -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 
