@@ -5,7 +5,6 @@
   --background: #{$primary};
   --color: white;
   max-width: 42em; // @TODO: why? what does this relate to? make a variable
-  margin-top:  $spacing-3xl;
   margin-bottom: $spacing-lg;
   margin-right: $spacing-md;
 
@@ -43,6 +42,8 @@
 }
 
 .title--has-tail {
+  margin-top:  $spacing-3xl;
+  
   .title__highlight { // @TODO: Consider refactoring onto parent to reduce specificity further
     &:before {
       position: absolute;
