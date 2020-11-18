@@ -1961,7 +1961,7 @@ a.tile:focus { outline-width: 3px; outline-color: #144196; z-index: 2; }
 
 @media (max-width: 35rem) { .modal__content .card__video { padding-bottom: 100%; } }
 
-.modal__content .card__video.card__figure iframe { position: absolute; }
+.modal__content .card__video.card__figure iframe { position: absolute; border: none; }
 
 @media (max-width: 35rem) { .modal__content .slab, .modal__content .wrap { padding: 0; }
   .modal__content figure { margin: 0 0 0; } }
