@@ -1633,7 +1633,7 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .tile__caption .title:only-child { margin: 0; }
 
-.tile__title { margin-top: -1rem; }
+.tile__title { margin-top: -1rem !important; }
 
 .tile .title__highlight { --background: var(--accent-color); }
 
