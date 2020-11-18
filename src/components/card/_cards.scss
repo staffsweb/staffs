@@ -60,7 +60,7 @@ $card__internal-spacing: $spacing-sm;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background: url('../img/icon-play-circle-neutral-light.svg') no-repeat center center;
+        background: url('#{$image-theme-directory-icon}/icon-play-circle-neutral-light.svg') no-repeat center center;
         background-size: contain;
         z-index: 1;
         pointer-events: none;
