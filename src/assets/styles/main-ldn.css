@@ -1949,6 +1949,8 @@ a.tile:focus { outline-width: 3px; outline-color: #144196; z-index: 2; }
 
 .modal-slide.is-open { display: block; }
 
+body.modal__is-open { overflow: hidden; }
+
 .modal-slide[aria-hidden="true"] .modal__container { -webkit-animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1); animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1); }
 
 .modal-slide .modal__container, .modal-slide .modal__overlay { will-change: transform; }
@@ -1962,6 +1964,12 @@ a.tile:focus { outline-width: 3px; outline-color: #144196; z-index: 2; }
 @media (max-width: 35rem) { .modal__content .card__video { padding-bottom: 100%; } }
 
 .modal__content .card__video.card__figure iframe { position: absolute; border: none; }
+
+.modal--dark .modal__container { background-color: transparent; }
+
+.modal--dark .modal__close { color: white; }
+
+.modal--dark .modal__overlay { z-index: 9998; opacity: 0.9; }
 
 @media (max-width: 35rem) { .modal__content .slab, .modal__content .wrap { padding: 0; }
   .modal__content figure { margin: 0 0 0; } }

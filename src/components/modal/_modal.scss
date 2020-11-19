@@ -74,6 +74,10 @@
   .modal-slide.is-open {
     display: block;
   }
+
+  body.modal__is-open {
+    overflow: hidden;
+  }
   
   .modal-slide[aria-hidden="true"] .modal__container {
     animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
@@ -108,6 +112,19 @@
       }
     }
   }
+}
+
+.modal--dark {
+  .modal__container {
+    background-color: transparent;
+  }
+  .modal__close {
+    color: white;
+  }
+  .modal__overlay {
+    z-index: 9998;
+        opacity: 0.9;
+    }
 }
 
 @media(max-width: map_get($breakpoint-stages, 'mobile-wide'))
