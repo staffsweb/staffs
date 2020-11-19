@@ -6751,8 +6751,9 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         var modal = document.querySelector("[data-modal=\"".concat(modalTrigger, "\"]"));
         modal.classList.add('is-open');
         var iframe = document.querySelector("[data-src]");
+        var hasIframe = iframe && iframe != undefined;
 
-        if (iframe && iframe != undefined) {
+        if (hasIframe) {
           iframe.setAttribute('src', iframe.dataset.src);
         }
 
@@ -6760,7 +6761,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
           modal.classList.remove('is-open');
           document.body.classList.remove('modal__is-open');
 
-          if (iframe && iframe != undefined) {
+          if (hasIframe) {
             iframe.removeAttribute('src');
           }
         });

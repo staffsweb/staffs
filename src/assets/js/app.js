@@ -739,17 +739,18 @@
 
         modal.classList.add('is-open');
         
-        var iframe = document.querySelector("[data-src]");
-        
-        if(iframe && iframe != undefined) {
+        var iframe = document.querySelector("[data-src]"); 
+        var hasIframe = iframe && iframe != undefined;
+
+        if(hasIframe) {
           iframe.setAttribute('src', iframe.dataset.src);
         }
 
         modal.querySelector('[data-modal-close]').addEventListener('click', function () {
           modal.classList.remove('is-open');
           document.body.classList.remove('modal__is-open');
-
-          if(iframe && iframe != undefined) {
+          
+          if(hasIframe) {
             iframe.removeAttribute('src');
           }
 
