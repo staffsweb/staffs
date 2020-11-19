@@ -732,16 +732,27 @@
       modal.setAttribute('data-modal', modalTrigger + "-" + count);
       count++;
 
-
       trigger.addEventListener('click', function (event) {
         document.body.classList.add('modal__is-open');
         var modalTrigger = trigger.dataset.modalTrigger;
         var modal = document.querySelector("[data-modal=\"".concat(modalTrigger, "\"]"));
 
         modal.classList.add('is-open');
+        
+        var iframe = document.querySelector("[data-src]");
+        
+        if(iframe && iframe != undefined) {
+          iframe.setAttribute('src', iframe.dataset.src);
+        }
+
         modal.querySelector('[data-modal-close]').addEventListener('click', function () {
           modal.classList.remove('is-open');
           document.body.classList.remove('modal__is-open');
+
+          if(iframe && iframe != undefined) {
+            iframe.removeAttribute('src');
+          }
+
         });
         
         event.preventDefault();
