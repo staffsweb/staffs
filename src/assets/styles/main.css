@@ -2492,11 +2492,13 @@ body.modal__is-open { overflow: hidden; }
 
 .modal__content .card__video.card__figure iframe { position: absolute; border: none; }
 
-.modal--dark .modal__container { background-color: transparent; }
+.modal--dark .modal__container { background-color: transparent; padding: 30px 0; }
 
 .modal--dark .modal__close { color: white; }
 
 .modal--dark .modal__overlay { z-index: 9998; opacity: 0.9; }
+
+@media (max-width: 35rem) { .modal--dark .modal__container { right: 0; left: 0; } }
 
 @media (max-width: 35rem) { .modal__content .slab, .modal__content .wrap { padding: 0; }
   .modal__content figure { margin: 0 0 0; } }
