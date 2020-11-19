@@ -6750,19 +6750,19 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         var modalTrigger = trigger.dataset.modalTrigger;
         var modal = document.querySelector("[data-modal=\"".concat(modalTrigger, "\"]"));
         modal.classList.add('is-open');
-        var iframe = document.querySelector("[data-src]");
-        var hasIframe = iframe && iframe != undefined;
+        var video = modal.querySelector("[data-video-src]");
+        var hasVideo = video && video != undefined;
 
-        if (hasIframe) {
-          iframe.setAttribute('src', iframe.dataset.src);
+        if (hasVideo) {
+          video.setAttribute('src', video.dataset.videoSrc);
         }
 
         modal.querySelector('[data-modal-close]').addEventListener('click', function () {
           modal.classList.remove('is-open');
           document.body.classList.remove('modal__is-open');
 
-          if (hasIframe) {
-            iframe.removeAttribute('src');
+          if (hasVideo) {
+            video.removeAttribute('src');
           }
         });
         event.preventDefault();
