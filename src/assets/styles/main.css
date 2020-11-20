@@ -2012,7 +2012,7 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .sitewide-message__text { margin: 0; line-height: 1.5; }
 
-.slab { position: relative; padding: 4rem 0; z-index: 0; }
+.slab { position: relative; padding: 4rem 0; }
 
 .slab__title { margin-top: 1rem; }
 
