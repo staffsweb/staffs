@@ -1241,6 +1241,9 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 .masthead--shallow .masthead__inner { min-height: 40vh; }
 
+@media (max-width: 35rem) { .masthead--profile .masthead__inner { padding: 8rem 0 2rem; }
+  .masthead--profile .masthead__inner figure { margin: 2rem 0 2rem; } }
+
 .megaNav { position: absolute; left: 0; right: 0; top: 0; background: white; font-size: 1.2em; z-index: 9; overflow: hidden; overflow-y: auto; box-sizing: border-box; overflow-scrolling: touch; transform: translateX(-150%); }
 
 .megaNav.is-open { transition: transform 200ms ease-out; transform: translateX(0); }
