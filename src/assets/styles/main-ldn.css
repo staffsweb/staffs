@@ -1021,6 +1021,12 @@ a.card:hover .title__highlight, a.card:hover .card__title { text-decoration: und
 
 .card--pullquote.card--purple-deep-ldn:before { background: #fff url("/site/images/icons/icon-quote-purple-deep-ldn.svg") no-repeat center center; background-size: contain; }
 
+.card--contact ul.list--inline { padding-left: 1.5em; }
+
+.card--contact ul.list--inline li a { text-decoration: none !important; }
+
+.card--contact ul.list--inline .icon { font-size: 1.5rem; }
+
 .card--ksp { color: #41464b; }
 
 .card--ksp__icon { margin-bottom: 0.75rem; max-width: 100%; height: auto !important; }
