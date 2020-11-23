@@ -1527,6 +1527,8 @@ a.card:hover .title__highlight, a.card:hover .card__title { text-decoration: und
 
 .card--contact ul.list--inline .icon { font-size: 1.5rem; }
 
+.card--contact ul.list--icon-bullets li a { text-decoration: none !important; border-bottom: 1px solid #dddddd; }
+
 .card--ksp { color: #394851; }
 
 .card--ksp__icon { margin-bottom: 0.75rem; max-width: 100%; height: auto !important; }
