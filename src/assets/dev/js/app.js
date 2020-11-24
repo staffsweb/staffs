@@ -6735,7 +6735,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   };
 
   var removeExistingSvgFills = function removeExistingSvgFills(parentClass) {
-    var pathElms = document.querySelectorAll(parentClass + " svg path");
+    var pathElms = document.querySelectorAll(parentClass + " svg path" + ", " + parentClass + " svg g");
 
     if (pathElms && pathElms !== undefined && pathElms.length !== 0) {
       for (var x = 0; x < pathElms.length; x++) {
