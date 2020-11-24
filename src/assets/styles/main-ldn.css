@@ -1175,13 +1175,13 @@ hr { position: relative; }
 
 .iconBox--youtube { background: #c4302b; color: white; }
 
-.iconBox--bg-red { background: #d70a26; }
+.iconBox--bg-blue-ldn { background: #0082c8; }
 
-.iconBox--bg-pink { background: #d5035e; }
+.iconBox--bg-blue-deep-ldn { background: #144196; }
 
-.iconBox--bg-maroon { background: #970048; }
+.iconBox--bg-magenta-ldn { background: #b90f82; }
 
-.iconBox--bg-tef-gold { background: #dd9200; }
+.iconBox--bg-purple-deep-ldn { background: #821e82; }
 
 .iconBox--bg-slate { background: #394851; }
 
