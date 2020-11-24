@@ -6266,6 +6266,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
       if (targetTabId == "#courses__postgraduate") {
         $('.tabs__link[href="#courses__postgraduate"]', tabs).trigger('click');
+        $("html, body").scrollTop($("#courses__postgraduate").offset().top - 150);
       }
     });
   };

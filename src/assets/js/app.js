@@ -193,10 +193,11 @@
       Waypoint.refreshAll(); // tabs' content may change the height of the page, thus these need to be recalculated
 
       // CG: Check if we need to switch to a tab via a URL fragment
-      let targetTabId = window.location.hash;
-      if(targetTabId == "#courses__postgraduate")
-      {
+      var targetTabId = window.location.hash;
+
+      if (targetTabId == "#courses__postgraduate") {
         $('.tabs__link[href="#courses__postgraduate"]', tabs).trigger('click');
+        $("html, body").scrollTop($("#courses__postgraduate").offset().top - 150);
       }
     });
   };
