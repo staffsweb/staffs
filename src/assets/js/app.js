@@ -197,7 +197,7 @@
 
       if (targetTabId == "#courses__postgraduate") {
         $('.tabs__link[href="#courses__postgraduate"]', tabs).trigger('click');
-        $("html, body").scrollTop($("#courses__postgraduate").offset().top - 150);
+        $("html, body").scrollTop(0);
       }
     });
   };
