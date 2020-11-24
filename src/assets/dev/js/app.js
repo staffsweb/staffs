@@ -6260,6 +6260,13 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         Waypoint.refreshAll(); // height is liable to change, so we need to refresh these
       });
       Waypoint.refreshAll(); // tabs' content may change the height of the page, thus these need to be recalculated
+      // CG: Check if we need to switch to a tab via a URL fragment
+
+      var targetTabId = window.location.hash;
+
+      if (targetTabId == "#courses__postgraduate") {
+        $('.tabs__link[href="#courses__postgraduate"]', tabs).trigger('click');
+      }
     });
   };
 
