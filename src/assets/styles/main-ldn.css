@@ -1169,6 +1169,24 @@ hr { position: relative; }
 
 .iconBox--twitter { background: #1da1f2; color: white; }
 
+.iconBox--linkedIn { background: #0e76a8; color: white; }
+
+.iconBox--instagram { background: #3f729b; color: white; }
+
+.iconBox--youtube { background: #c4302b; color: white; }
+
+.iconBox--bg-blue-ldn { background: #0082c8; }
+
+.iconBox--bg-blue-deep-ldn { background: #144196; }
+
+.iconBox--bg-magenta-ldn { background: #b90f82; }
+
+.iconBox--bg-purple-deep-ldn { background: #821e82; }
+
+.iconBox--bg-slate { background: #394851; }
+
+.iconBox .iconBox__icon svg { fill: white; }
+
 a.iconBox:hover { color: white; }
 
 a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }

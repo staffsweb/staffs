@@ -726,11 +726,12 @@ if(anchorTarget == "#courses__postgraduate")
   };
 
   let removeExistingSvgFills = function(parentClass) {
-    var pathElms = document.querySelectorAll(parentClass + " svg path");
+    var pathElms = document.querySelectorAll(parentClass + " svg path" + ", " + parentClass + " svg g");
 
     if (pathElms && pathElms !== undefined && pathElms.length !== 0) {
         for (var x = 0; x < pathElms.length; x++) {
             pathElms[x].style.removeProperty('fill');
+            pathElms[x].removeAttribute('fill');
         }
     }
   };
@@ -796,6 +797,7 @@ if(anchorTarget == "#courses__postgraduate")
   $(window).on('DOMContentLoaded', function () {
     // event triggers once DOM is loaded but before stylesheets are applied
     removeExistingSvgFills('.card--ksp');
+    removeExistingSvgFills('.iconBox__icon');
   });
   $(window).on('load', function () {
     // correct anything loaded on DOM load which might need adjusting (mostly once images have loaded)
