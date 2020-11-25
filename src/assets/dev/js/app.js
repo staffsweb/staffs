@@ -2,6 +2,12 @@
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
+// CG: Allow switching of PG course tab in subject pages, but don't scroll to the anchor
+var anchorTarget = window.location.hash;
+
+if (anchorTarget == "#courses__postgraduate") {
+  window.location.hash = "";
+}
 /* global Waypoint, console */
 // @TODO: Learn to module bundle properly and manage dependencies with a proper
 // package manager 🤦
@@ -42,6 +48,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
  * @param  selector    selector OR undefined
  * @author Brian Cherne <brian(at)cherne(dot)net>
  */
+
+
 ;
 
 (function (factory) {
@@ -6262,11 +6270,9 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
       Waypoint.refreshAll(); // tabs' content may change the height of the page, thus these need to be recalculated
       // CG: Check if we need to switch to a tab via a URL fragment
 
-      var targetTabId = window.location.hash;
-
-      if (targetTabId == "#courses__postgraduate") {
+      if (anchorTarget == "#courses__postgraduate") {
         $('.tabs__link[href="#courses__postgraduate"]', tabs).trigger('click');
-        $("html, body").scrollTop(0);
+        window.scrollTo(0, 0);
       }
     });
   };
