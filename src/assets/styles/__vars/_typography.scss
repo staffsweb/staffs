@@ -121,11 +121,12 @@ $border-accent-width: $spacing-2xs;
   //  }
   //}
 
-  p a:not([class]) {
+  p a:not([class]), p a[class*="sys_"] {
     text-decoration: none;
     font-weight: 500;
     border-bottom: 1px solid $grey--light
   }
+
 
   //nav, ul, ol, table {
   //  a {
