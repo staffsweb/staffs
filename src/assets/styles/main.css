@@ -1584,6 +1584,8 @@ a.card:hover .title__highlight, a.card:hover .card__title { text-decoration: und
 
 .ui-menu-item__course:hover { background-color: #EEE; }
 
+.course-summary { padding: 1rem 2rem; background-color: #f1f1f1; margin-top: 3rem; }
+
 .feature-link { display: block; position: relative; --accent-color: #d70a26; margin-bottom: 2rem; color: #394851; text-decoration: none; padding: 0 calc(0.75rem + 2.5%) 0; border-left: 0.25rem solid #d70a26; border-left: 0.25rem solid var(--accent-color); }
 
 .feature-link__title { display: table; position: relative; margin-bottom: 0.5rem; padding-right: 1em; word-break: break-word; }
