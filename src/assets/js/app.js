@@ -38,8 +38,7 @@
         $(this).removeClass('is-toggled');
         megaNav.removeClass('is-open');
         $('body').removeClass('has-expanded-smallscreen-nav');
-      }
-      else {
+      } else {
         $(this).addClass('is-toggled');
         megaNav.addClass('is-open');
         $('body').addClass('has-expanded-smallscreen-nav');
@@ -51,6 +50,25 @@
       megaNav.removeClass('is-open');
       $('body').removeClass('has-expanded-smallscreen-nav');
     });
+
+    let keyMap = {
+      BACKSPACE: 8,
+      COMMA: 188,
+      DELETE: 46,
+      DOWN: 40,
+      END: 35,
+      ENTER: 13,
+      ESCAPE: 27,
+      HOME: 36,
+      LEFT: 37,
+      PAGE_DOWN: 34,
+      PAGE_UP: 33,
+      PERIOD: 190,
+      RIGHT: 39,
+      SPACE: 32,
+      TAB: 9,
+      UP: 38,
+    };
 
     function updateMegaNavBreakpointClass() {
       if (megaNavFullBreakpoint.matches) {
@@ -104,8 +122,159 @@
           $('body').removeClass('has-expanded-nav');
         });
 
-      }
-      else {
+        $('.megaNav__topLevel-item > a').on('keydown', function (e) {
+          let item = $(this).parent();
+
+          switch (e.keyCode) {
+            case keyMap.RIGHT:
+              e.preventDefault();
+              if (item.hasClass('is-expanded')) {
+                collapseChildren(item);
+              }
+              focusNextSibling(item);
+              break;
+
+            case keyMap.LEFT:
+              e.preventDefault();
+              if (item.hasClass('is-expanded')) {
+                collapseChildren(item);
+              }
+              focusPrevSibling(item);
+              break;
+          }
+        });
+
+        $('.megaNav__topLevel-item.has-children > a').on('keydown', function (e) {
+          let item = $(this).parent();
+
+          switch (e.keyCode) {
+            case keyMap.SPACE:
+              e.preventDefault();
+              if (item.hasClass('is-expanded')) {
+                collapseChildren(item);
+              } else {
+                expandChildren(item);
+              }
+              break;
+
+            case keyMap.DOWN:
+              e.preventDefault();
+              if (item.hasClass('is-expanded')) {
+                focusFirstChildItem(item);
+              } else {
+                expandChildren(item);
+              }
+              break;
+
+            case keyMap.UP:
+              e.preventDefault();
+              collapseChildren(item);
+              break;
+          }
+        });
+
+        $('.megaNav__secondLevel-item > a').on('keydown', function (e) {
+          let item = $(this).parent();
+
+          switch (e.keyCode) {
+            case keyMap.ESCAPE:
+              focusParentItem(item);
+              collapseParent(item);
+              break;
+
+            case keyMap.UP:
+              e.preventDefault();
+              if (item.hasClass('is-expanded')) {
+                collapseChildren(item);
+              }
+              if ($(item).is(':first-child')) {
+                focusParentItem(item);
+                collapseParent(item);
+              } else if ($(item).not(':last-child')) {
+                focusPrevSibling(item);
+              }
+              break;
+
+            case keyMap.DOWN:
+              e.preventDefault();
+              if ($(item).not(':first-child')) {
+                focusNextSibling(item);
+              }
+              break;
+          }
+        });
+
+        $('.megaNav__secondLevel-item.has-children > a').on('keydown', function (e) {
+          let item = $(this).parent();
+
+          switch (e.keyCode) {
+            case keyMap.SPACE:
+              e.preventDefault();
+              if (item.hasClass('is-expanded')) {
+                collapseChildren(item);
+              } else {
+                expandChildren(item);
+              }
+              break;
+
+            case keyMap.RIGHT:
+              e.preventDefault();
+              if (item.hasClass('is-expanded')) {
+                focusFirstChildItem(item);
+              } else {
+                expandChildren(item);
+              }
+              break;
+
+            case keyMap.LEFT:
+              e.preventDefault();
+              collapseChildren(item);
+              break;
+          }
+        });
+
+        $('.megaNav__thirdLevel-item > a').on('keydown', function (e) {
+          let item = $(this).parent();
+
+          switch (e.keyCode) {
+            case keyMap.ESCAPE:
+            case keyMap.LEFT:
+              e.stopPropagation();
+              e.preventDefault();
+              focusParentItem(item);
+              collapseParent(item);
+              break;
+
+            case keyMap.UP:
+              e.preventDefault();
+              if (item.hasClass('is-expanded')) {
+                collapseChildren(item);
+              }
+              if ($(item).is(':first-child')) {
+                focusParentItem(item);
+                collapseParent(item);
+              } else if ($(item).not(':last-child')) {
+                focusPrevSibling(item);
+              }
+              break;
+
+            case keyMap.DOWN:
+              e.preventDefault();
+              if ($(item).not(':first-child')) {
+                focusNextSibling(item);
+              }
+              break;
+          }
+        });
+
+        $(document).on('keydown', function (e) {
+          if (e.keyCode == keyMap.ESCAPE) {
+            $('.is-expanded', megaNav).removeClass('is-expanded');
+            $('body').removeClass('has-expanded-nav');
+          }
+        });
+
+      } else {
         $('body, #megaNav.is-largescreen, .megaNav__topLevel-item.has-children, .megaNav__secondLevel-item.has-children, #megaNav.is-smallscreen .has-children > a').unbind();
 
         megaNav.removeClass('is-largescreen');
@@ -120,6 +289,14 @@
           e.preventDefault();
           $(this).closest('.is-expanded').removeClass('is-expanded');
           $('.megaNav__topLevel').scrollTop(0);
+        });
+
+        $(document).on("keyup", function (e) {
+          if (e.keyCode == keyMap.ESCAPE) {
+            $(megaNav).removeClass('is-open');
+            $('body').removeClass('has-expanded-smallscreen-nav');
+            $('#toggle-megaNav').removeClass('is-toggled');
+          }
         });
       }
     }
@@ -142,8 +319,35 @@
       $(item).addClass('is-expanded');
     }
 
+    function collapseChildren(item) {
+      $('.megaNav__topLevel').scrollTop(0);
+      $(item).removeClass('is-expanded');
+    }
 
-    // @TODO: Check keyboard focus - could it be handled better?
+    function collapseParent(item) {
+      let target = $(item).closest('.is-expanded');
+      collapseChildren(target);
+    }
+
+    function focusFirstChildItem(item) {
+      let target = $(item).find('> .megaNav__level .megaNav__levelList > li:first-child > a').eq(0);
+      target.focus();
+    }
+
+    function focusNextSibling(item) {
+      let target = $(item).next('li').children('a');
+      target.focus();
+    }
+
+    function focusPrevSibling(item) {
+      let target = $(item).prev('li').children('a');
+      target.focus();
+    }
+
+    function focusParentItem(item) {
+      let target = $(item).closest('.megaNav__level').siblings('a').eq(0);
+      target.focus();
+    }
 
   };
 
@@ -166,8 +370,7 @@
 
       if (defaultTab) {
         $(defaultTab).show();
-      }
-      else {
+      } else {
         $(links[0]).addClass('is-selected');
         $(sections[0]).show().addClass('is-expanded');
       }
@@ -284,7 +487,7 @@
       responsive: [{
         breakpoint: 99999,
         settings: 'unslick'
-        },
+      },
         {
           breakpoint: 600,
           settings: {
@@ -343,7 +546,7 @@
             }
           }
         ]
-      }).on('afterChange', function (){
+      }).on('afterChange', function () {
         Waypoint.refreshAll(); // height is liable to change, so we need to refresh these
       });
     });
@@ -356,7 +559,7 @@
         adaptiveHeight: true,
         asNavFor: '.js-slider--gallery__nav',
         waitForAnimate: false
-      }).on('afterChange', function (){
+      }).on('afterChange', function () {
         Waypoint.refreshAll(); // height is liable to change, so we need to refresh these
       });
     });
@@ -381,7 +584,7 @@
 
   let sliderReInit = function (sliderCssSelector) {
     var slider = $(sliderCssSelector);
-    if(slider) {
+    if (slider) {
       slider.slick('reinit');
     }
   }
@@ -398,8 +601,7 @@
       el.waypoint(function (direction) {
         if (direction === 'down') {
           el.addClass('is-waypoint-reached');
-        }
-        else {
+        } else {
           el.removeClass('is-waypoint-reached');
         }
       }, {
@@ -474,8 +676,7 @@
       el.waypoint(function (direction) {
         if (direction === 'down') {
           el.addClass('is-waypoint-reached');
-        }
-        else {
+        } else {
           el.removeClass('is-waypoint-reached');
         }
       }, {
@@ -484,59 +685,59 @@
     });
   };
 
-  let autocompleteInit = function() {
+  let autocompleteInit = function () {
     $.widget("custom.courseautocomplete", $.ui.autocomplete, {
-      _create: function() {
+      _create: function () {
         this._super();
-        this.widget().menu( "option", "items", "> :not(.ui-autocomplete-category)" );
+        this.widget().menu("option", "items", "> :not(.ui-autocomplete-category)");
       },
-      _renderMenu: function( ul, items ) {
+      _renderMenu: function (ul, items) {
         var that = this,
           currentCategory = "";
-        $.each( items, function( index, item ) {
+        $.each(items, function (index, item) {
           var li;
-          if ( item.cat != currentCategory ) {
-            ul.append( "<li class='course-search__category ui-autocomplete-category'>" + item.cat + "</li>" );
+          if (item.cat != currentCategory) {
+            ul.append("<li class='course-search__category ui-autocomplete-category'>" + item.cat + "</li>");
             currentCategory = item.cat;
           }
-          li = that._renderItemData( ul, item );
-          if ( item.cat ) {
-            li.attr( "aria-label", item.cat + " : " + item.disp );
+          li = that._renderItemData(ul, item);
+          if (item.cat) {
+            li.attr("aria-label", item.cat + " : " + item.disp);
           }
         });
       },
-      _renderItemData: function( ul, item) {
-            var label = item.disp.replace(new RegExp('('+ $("#course-search__keywords").val() + ')', 'i'), '<strong>$1</strong>');
-            ul.data('ui-autocomplete-item', item);
-            return $("<li>")
-              .data('ui-autocomplete-item', item )
-              .append( "<div>" + label + "</div>" )
-              .addClass('ui-menu-item ui-menu-item__course')
-              .appendTo( ul );
-        }
+      _renderItemData: function (ul, item) {
+        var label = item.disp.replace(new RegExp('(' + $("#course-search__keywords").val() + ')', 'i'), '<strong>$1</strong>');
+        ul.data('ui-autocomplete-item', item);
+        return $("<li>")
+          .data('ui-autocomplete-item', item)
+          .append("<div>" + label + "</div>")
+          .addClass('ui-menu-item ui-menu-item__course')
+          .appendTo(ul);
+      }
     });
 
     $("#course-search__keywords").courseautocomplete({
-      source: function(request, response) {
+      source: function (request, response) {
         $.ajax({
-            url: "https://search.staffs.ac.uk/s/search.html",
-            dataType: "json",
-            data: {
-              meta_t_trunc : request.term.toLowerCase(), // CG: Accounts for mobile devices using sentence caps when doing autocorrect
-              collection : 'staffordshire-coursetitles',
-              profile : 'auto-completion',
-              form : 'qc',
-              meta_V_and: $("#course-search__level").find(":selected").val(),
-              sort : 'dmetaV' // CG: Sorts by level of study, with UG first
-            },
-            success: function(data) {
-                response(data);
-            }
+          url: "https://search.staffs.ac.uk/s/search.html",
+          dataType: "json",
+          data: {
+            meta_t_trunc: request.term.toLowerCase(), // CG: Accounts for mobile devices using sentence caps when doing autocorrect
+            collection: 'staffordshire-coursetitles',
+            profile: 'auto-completion',
+            form: 'qc',
+            meta_V_and: $("#course-search__level").find(":selected").val(),
+            sort: 'dmetaV' // CG: Sorts by level of study, with UG first
+          },
+          success: function (data) {
+            response(data);
+          }
         });
       },
       minLength: 3,
       delay: 300,
-      select: function(event, ui) {
+      select: function (event, ui) {
         // CG: Redirect to the relevant course page
         window.location = ui.item.action;
         return false;
@@ -544,25 +745,25 @@
     });
 
     $("#global-search__keywords--courses").courseautocomplete({
-      source: function(request, response) {
+      source: function (request, response) {
         $.ajax({
-            url: "https://search.staffs.ac.uk/s/search.html",
-            dataType: "json",
-            data: {
-              meta_t_trunc : request.term.toLowerCase(), // CG: Accounts for mobile devices using sentence caps when doing autocorrect
-              collection : 'staffordshire-coursetitles',
-              profile : 'auto-completion',
-              form : 'qc',
-              sort : 'dmetaV' // CG: Sorts by level of study, with UG first
-            },
-            success: function(data) {
-                response(data);
-            }
+          url: "https://search.staffs.ac.uk/s/search.html",
+          dataType: "json",
+          data: {
+            meta_t_trunc: request.term.toLowerCase(), // CG: Accounts for mobile devices using sentence caps when doing autocorrect
+            collection: 'staffordshire-coursetitles',
+            profile: 'auto-completion',
+            form: 'qc',
+            sort: 'dmetaV' // CG: Sorts by level of study, with UG first
+          },
+          success: function (data) {
+            response(data);
+          }
         });
       },
       minLength: 3,
       delay: 300,
-      select: function(event, ui) {
+      select: function (event, ui) {
         // CG: Redirect to the relevant course page
         window.location = ui.item.action;
         return false;
@@ -570,23 +771,23 @@
     });
   };
 
-  let searchInit = function() {
+  let searchInit = function () {
     // CG: Show / hide the global search as appropriate
-    $("#btn-search--desktop, #global-search__close").on("click", function(e) {
+    $("#btn-search--desktop, #global-search__close").on("click", function (e) {
       $("#global-search").toggleClass("global-search--open");
     });
 
     $(document).on("keyup", function (e) {
-      if(e.keyCode == 27) {
+      if (e.keyCode == 27) {
         $("#global-search").removeClass("global-search--open");
       }
     });
 
     // CG: Show / hide the appropriate global search field
-    $("#global-search__options .global-search__scope").on("change", function(e) {
+    $("#global-search__options .global-search__scope").on("change", function (e) {
       var scope = $("#global-search__options .global-search__scope:checked").val();
-      
-      if(scope == "courses") {
+
+      if (scope == "courses") {
         // Show the course search field
         $("#global-search__keywords--courses").removeClass("visually-hidden");
         $("#global-search__keywords--whole-site").addClass("visually-hidden");
@@ -600,10 +801,10 @@
     /* CG: Build search URLs */
     function courseSearchUrl(query, collection = "staffordshire-coursetitles", level = null) {
 
-      if(level == "postgraduate") {
-          return "https://search.staffs.ac.uk/s/search.html?collection=" + collection + "&f.Level%7CV=postgraduate+(taught)&f.Level%7CV=postgraduate+(research)&query=" + query;
+      if (level == "postgraduate") {
+        return "https://search.staffs.ac.uk/s/search.html?collection=" + collection + "&f.Level%7CV=postgraduate+(taught)&f.Level%7CV=postgraduate+(research)&query=" + query;
       } else if (level == "undergraduate") {
-          return "https://search.staffs.ac.uk/s/search.html?collection=" + collection + "&f.Level%7CV=undergraduate&query=" + query;
+        return "https://search.staffs.ac.uk/s/search.html?collection=" + collection + "&f.Level%7CV=undergraduate&query=" + query;
       }
       return "https://search.staffs.ac.uk/s/search.html?collection=" + collection + "&query=" + query;
     }
@@ -617,14 +818,14 @@
       // CG: Detect ENTER being pressed
       var keycode = (e.keyCode ? e.keyCode : e.which);
       if (keycode == '13') {
-          $('#form1').on('submit', function (e) {
-              e.preventDefault();
-          });
-          e.stopImmediatePropagation();
+        $('#form1').on('submit', function (e) {
+          e.preventDefault();
+        });
+        e.stopImmediatePropagation();
 
-          window.location.href = siteSearchUrl($(this).val());
-        }
-        e.preventDefault();
+        window.location.href = siteSearchUrl($(this).val());
+      }
+      e.preventDefault();
     });
 
     $("#global-search__keywords--courses").keyup(function (e) {
@@ -632,18 +833,18 @@
       // CG: Detect ENTER being pressed
       var keycode = (e.keyCode ? e.keyCode : e.which);
       if (keycode == '13') {
-          $('#form1').on('submit', function (e) {
-              e.preventDefault();
-          });
-          e.stopImmediatePropagation();
+        $('#form1').on('submit', function (e) {
+          e.preventDefault();
+        });
+        e.stopImmediatePropagation();
 
-          window.location.href = courseSearchUrl($(this).val());
+        window.location.href = courseSearchUrl($(this).val());
 
-        }
-        e.preventDefault();
+      }
+      e.preventDefault();
     });
 
-    $("#course-search__submit").on("click", function(e) {
+    $("#course-search__submit").on("click", function (e) {
       $('#form1').on('submit', function (e) {
         e.preventDefault();
       });
@@ -666,7 +867,7 @@
       var keycode = (e.keyCode ? e.keyCode : e.which);
       if (keycode == '13') {
         $('#form1').on('submit', function (e) {
-            e.preventDefault();
+          e.preventDefault();
         });
         e.stopImmediatePropagation();
 
@@ -678,46 +879,46 @@
       e.preventDefault();
     });
 
-    $("#megaNav-course-search__submit").on("click", function(e) {
+    $("#megaNav-course-search__submit").on("click", function (e) {
       $('#form1').on('submit', function (e) {
         e.preventDefault();
       });
-  
+
       var searchTerm = $("#megaNav-course-search__keywords").val();
-  
+
       window.location.href = courseSearchUrl(searchTerm);
-  
+
       e.preventDefault();
-  
+
     });
-  
+
     $("#megaNav-course-search__keywords").keyup(function (e) {
-  
+
       var keycode = (e.keyCode ? e.keyCode : e.which);
       if (keycode == '13') {
         $('#form1').on('submit', function (e) {
-            e.preventDefault();
+          e.preventDefault();
         });
         e.stopImmediatePropagation();
-  
+
         var searchTerm = $(this).val();
-  
+
         window.location.href = courseSearchUrl(searchTerm);
       }
       e.preventDefault();
     });
   };
 
-  let removeExistingSvgFills = function(parentClass) {
+  let removeExistingSvgFills = function (parentClass) {
     var pathElms = document.querySelectorAll(parentClass + " svg path");
 
     if (pathElms && pathElms !== undefined && pathElms.length !== 0) {
-        for (var x = 0; x < pathElms.length; x++) {
-            pathElms[x].style.removeProperty('fill');
-        }
+      for (var x = 0; x < pathElms.length; x++) {
+        pathElms[x].style.removeProperty('fill');
+      }
     }
   };
-  
+
   var modal = function modal() {
     var modalTriggers = document.querySelectorAll('[data-modal-trigger]');
 
@@ -738,27 +939,27 @@
         var modal = document.querySelector("[data-modal=\"".concat(modalTrigger, "\"]"));
 
         modal.classList.add('is-open');
-        
-        var video = modal.querySelector("[data-video-src]"); 
+
+        var video = modal.querySelector("[data-video-src]");
         var hasVideo = video && video != undefined;
 
-        if(hasVideo) {
+        if (hasVideo) {
           video.setAttribute('src', video.dataset.videoSrc);
         }
 
         modal.querySelector('[data-modal-close]').addEventListener('click', function () {
           modal.classList.remove('is-open');
           document.body.classList.remove('modal__is-open');
-          
-          if(hasVideo) {
+
+          if (hasVideo) {
             video.removeAttribute('src');
           }
 
         });
-        
+
         event.preventDefault();
         var isSliderRefreshed = parseInt(modal.dataset.sliderIsrefreshed);
-        if(isSliderRefreshed === 0) {
+        if (isSliderRefreshed === 0) {
           sliderReInit("[data-modal=\"".concat(modalTrigger, "\"] .modal-slider"));
           modal.setAttribute("data-slider-isrefreshed", 1);
         }

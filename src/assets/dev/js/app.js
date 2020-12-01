@@ -6146,6 +6146,24 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
       megaNav.removeClass('is-open');
       $('body').removeClass('has-expanded-smallscreen-nav');
     });
+    var keyMap = {
+      BACKSPACE: 8,
+      COMMA: 188,
+      DELETE: 46,
+      DOWN: 40,
+      END: 35,
+      ENTER: 13,
+      ESCAPE: 27,
+      HOME: 36,
+      LEFT: 37,
+      PAGE_DOWN: 34,
+      PAGE_UP: 33,
+      PERIOD: 190,
+      RIGHT: 39,
+      SPACE: 32,
+      TAB: 9,
+      UP: 38
+    };
 
     function updateMegaNavBreakpointClass() {
       if (megaNavFullBreakpoint.matches) {
@@ -6192,6 +6210,174 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
           $('.is-expanded', megaNav).removeClass('is-expanded');
           $('body').removeClass('has-expanded-nav');
         });
+        $('.megaNav__topLevel-item > a').on('keydown', function (e) {
+          var item = $(this).parent();
+
+          switch (e.keyCode) {
+            case keyMap.RIGHT:
+              e.preventDefault();
+
+              if (item.hasClass('is-expanded')) {
+                collapseChildren(item);
+              }
+
+              focusNextSibling(item);
+              break;
+
+            case keyMap.LEFT:
+              e.preventDefault();
+
+              if (item.hasClass('is-expanded')) {
+                collapseChildren(item);
+              }
+
+              focusPrevSibling(item);
+              break;
+          }
+        });
+        $('.megaNav__topLevel-item.has-children > a').on('keydown', function (e) {
+          var item = $(this).parent();
+
+          switch (e.keyCode) {
+            case keyMap.SPACE:
+              e.preventDefault();
+
+              if (item.hasClass('is-expanded')) {
+                collapseChildren(item);
+              } else {
+                expandChildren(item);
+              }
+
+              break;
+
+            case keyMap.DOWN:
+              e.preventDefault();
+
+              if (item.hasClass('is-expanded')) {
+                focusFirstChildItem(item);
+              } else {
+                expandChildren(item);
+              }
+
+              break;
+
+            case keyMap.UP:
+              e.preventDefault();
+              collapseChildren(item);
+              break;
+          }
+        });
+        $('.megaNav__secondLevel-item > a').on('keydown', function (e) {
+          var item = $(this).parent();
+
+          switch (e.keyCode) {
+            case keyMap.ESCAPE:
+              focusParentItem(item);
+              collapseParent(item);
+              break;
+
+            case keyMap.UP:
+              e.preventDefault();
+
+              if (item.hasClass('is-expanded')) {
+                collapseChildren(item);
+              }
+
+              if ($(item).is(':first-child')) {
+                focusParentItem(item);
+                collapseParent(item);
+              } else if ($(item).not(':last-child')) {
+                focusPrevSibling(item);
+              }
+
+              break;
+
+            case keyMap.DOWN:
+              e.preventDefault();
+
+              if ($(item).not(':first-child')) {
+                focusNextSibling(item);
+              }
+
+              break;
+          }
+        });
+        $('.megaNav__secondLevel-item.has-children > a').on('keydown', function (e) {
+          var item = $(this).parent();
+
+          switch (e.keyCode) {
+            case keyMap.SPACE:
+              e.preventDefault();
+
+              if (item.hasClass('is-expanded')) {
+                collapseChildren(item);
+              } else {
+                expandChildren(item);
+              }
+
+              break;
+
+            case keyMap.RIGHT:
+              e.preventDefault();
+
+              if (item.hasClass('is-expanded')) {
+                focusFirstChildItem(item);
+              } else {
+                expandChildren(item);
+              }
+
+              break;
+
+            case keyMap.LEFT:
+              e.preventDefault();
+              collapseChildren(item);
+              break;
+          }
+        });
+        $('.megaNav__thirdLevel-item > a').on('keydown', function (e) {
+          var item = $(this).parent();
+
+          switch (e.keyCode) {
+            case keyMap.ESCAPE:
+            case keyMap.LEFT:
+              e.stopPropagation();
+              e.preventDefault();
+              focusParentItem(item);
+              collapseParent(item);
+              break;
+
+            case keyMap.UP:
+              e.preventDefault();
+
+              if (item.hasClass('is-expanded')) {
+                collapseChildren(item);
+              }
+
+              if ($(item).is(':first-child')) {
+                focusParentItem(item);
+                collapseParent(item);
+              } else if ($(item).not(':last-child')) {
+                focusPrevSibling(item);
+              }
+
+              break;
+
+            case keyMap.DOWN:
+              e.preventDefault();
+
+              if ($(item).not(':first-child')) {
+                focusNextSibling(item);
+              }
+
+              break;
+          }
+        });
+        $(document).on('keydown', function (e) {
+          if (e.keyCode == keyMap.ESCAPE) {
+            $('.is-expanded', megaNav).removeClass('is-expanded');
+            $('body').removeClass('has-expanded-nav');
+          }
+        });
       } else {
         $('body, #megaNav.is-largescreen, .megaNav__topLevel-item.has-children, .megaNav__secondLevel-item.has-children, #megaNav.is-smallscreen .has-children > a').unbind();
         megaNav.removeClass('is-largescreen');
@@ -6204,6 +6390,13 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
           e.preventDefault();
           $(this).closest('.is-expanded').removeClass('is-expanded');
           $('.megaNav__topLevel').scrollTop(0);
+        });
+        $(document).on("keyup", function (e) {
+          if (e.keyCode == keyMap.ESCAPE) {
+            $(megaNav).removeClass('is-open');
+            $('body').removeClass('has-expanded-smallscreen-nav');
+            $('#toggle-megaNav').removeClass('is-toggled');
+          }
         });
       }
     }
@@ -6220,8 +6413,37 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
       $(siblings).removeClass('is-expanded');
       $('.megaNav__topLevel').scrollTop(0);
       $(item).addClass('is-expanded');
-    } // @TODO: Check keyboard focus - could it be handled better?
+    }
 
+    function collapseChildren(item) {
+      $('.megaNav__topLevel').scrollTop(0);
+      $(item).removeClass('is-expanded');
+    }
+
+    function collapseParent(item) {
+      var target = $(item).closest('.is-expanded');
+      collapseChildren(target);
+    }
+
+    function focusFirstChildItem(item) {
+      var target = $(item).find('> .megaNav__level .megaNav__levelList > li:first-child > a').eq(0);
+      target.focus();
+    }
+
+    function focusNextSibling(item) {
+      var target = $(item).next('li').children('a');
+      target.focus();
+    }
+
+    function focusPrevSibling(item) {
+      var target = $(item).prev('li').children('a');
+      target.focus();
+    }
+
+    function focusParentItem(item) {
+      var target = $(item).closest('.megaNav__level').siblings('a').eq(0);
+      target.focus();
+    }
   };
 
   var tabsInit = function tabsInit() {
