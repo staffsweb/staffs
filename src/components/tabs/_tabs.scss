@@ -7,7 +7,7 @@
 
   &__nav {
     margin: 0 -1px 0 0;
-    border-bottom: $spacing-2xs solid $neutral--primary;
+    border-bottom: 3px solid $neutral--primary;
     text-align: center;
 
     @media (min-width: $tabs-inline-breakpoint) {

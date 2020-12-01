@@ -1,7 +1,7 @@
 $card__internal-spacing: $spacing-sm;
 
 .card {
-  // $card-accent-colors: see __vars/colours
+  // $theme-colours: see __vars/colours
 
   display: block;
   position: relative;
@@ -60,7 +60,7 @@ $card__internal-spacing: $spacing-sm;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background: url('../img/icon-play-circle-neutral-light.svg') no-repeat center center;
+        background: url('#{$image-theme-directory-icon}/icon-play-circle-neutral-light.svg') no-repeat center center;
         background-size: contain;
         z-index: 1;
         pointer-events: none;
@@ -86,16 +86,30 @@ $card__internal-spacing: $spacing-sm;
   }
 
   //--  ACCENT THEMES
-
   @each $name, $value in $card-accent-colors {
     &--#{$name} {
       --accent-color: #{$value};
+    }
+  } 
+
+  @each $name, $value in $theme-colours {
+    &--#{$name} {
+      --accent-color: #{$value};
+
+      svg {
+          fill: #{$value};
+      }
     }
   }
 
   &--light {
     --accent-color: #{rgba(white, 0.5)};
     color: white;
+
+    svg {
+      fill: white;
+    }
+
   }
 }
 
@@ -206,6 +220,8 @@ a.card {
 
   &__icon {
     margin-bottom: $card__internal-spacing;
+    max-width: 100%;
+    height: auto!important;
 
     img {
       vertical-align: baseline !important; // this is horribly lazy but browsers, sorry
@@ -259,6 +275,35 @@ a.card {
 
     .card__day {
       @include typescale('5xl');
+    }
+  }
+}
+
+.card__video.card__figure {
+  @media (max-width: map_get($breakpoint-stages, 'mobile-wide')) {
+    padding-bottom: 50%;
+    position: relative;
+    height: 0;
+  }
+  & iframe {
+    width: 100%;
+    height: 100%;
+    @media (max-width: map_get($breakpoint-stages, 'mobile-wide')) {
+      padding-bottom: 50%;
+      position: absolute;
+    }
+  }
+}
+
+.grid-2-cols\@tablet {
+  &  .card__video {
+    &.card__figure {
+      padding-bottom: 50%;
+      position: relative;
+      height: 0;
+      & iframe {
+        position: absolute;
+      }
     }
   }
 }

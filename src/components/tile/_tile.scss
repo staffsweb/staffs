@@ -39,6 +39,8 @@
     z-index: 1;
 
     &-body {
+      @include typescale('sm');
+      @include line-height('normal');
     }
   }
 
@@ -59,7 +61,7 @@
   }
 
   &__title {
-    margin-top: -$spacing-md;
+    margin-top: -$spacing-md!important;
   }
 
   .title__highlight {
@@ -100,4 +102,8 @@ a.tile {
     outline-color: $primary;
     z-index: 2;
   }
+}
+
+.has-cta .tile {
+  min-height: 30em;
 }

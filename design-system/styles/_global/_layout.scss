@@ -65,6 +65,10 @@ section {
   }
 }
 
+.page-body {
+  margin: $spacing-4xl 0;
+}
+
 .wrap {
   @include wrap;
 }

@@ -56,7 +56,7 @@ $icons: (
 
   @each $name, $extension in $icons {
     &--#{$name} {
-      background-image: url('../img/icon-#{$name}.#{$extension}');
+      background-image: url('/site/images/icons/icon-#{$name}.#{$extension}');
     }
   }
 }

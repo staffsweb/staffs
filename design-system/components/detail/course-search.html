@@ -77,7 +77,7 @@
 
 <div class="Status Status--tag">
 
-<label class="Status-label" style="background-color: #ff9233; border-color: #ff9233;">WIP</label>
+<label class="Status-label" style="background-color: #29cc29; border-color: #29cc29;">Ready</label>
 
 </div>
 
@@ -176,7 +176,7 @@
         <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"postgraduate"</span>&gt;</span>Postgraduate<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"course-search__submit"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"cSubmit"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button  course-search__submit"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"course-search__submit"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"cSubmit"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
     </code>
@@ -196,7 +196,7 @@
         <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"postgraduate"</span>&gt;</span>Postgraduate<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"course-search__submit"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"cSubmit"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button  course-search__submit"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"course-search__submit"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"cSubmit"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></pre>
     </code>
 </div>
@@ -212,13 +212,13 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-6c4d0487e4e2d25045552c35972f1c0e">_course-search.scss</option>
+                <option value="file-d196622d661d967c89c4a9755444f771">_course-search.scss</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-6c4d0487e4e2d25045552c35972f1c0e" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-d196622d661d967c89c4a9755444f771" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -230,11 +230,24 @@
     &amp;__keywords {
         &amp;<span class="hljs-selector-attr">[type="search"]</span> {
             <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100%</span>;
+            -webkit-appearance: none;
+            <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">0.25rem</span>;
+            -webkit-<span class="hljs-attribute">border-radius</span>: <span class="hljs-number">0.25rem</span>;
         }
     } 
     <span class="hljs-selector-tag">select</span> {
         <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100%</span>;
-    } 
+    }
+    &amp;__submit<span class="hljs-selector-pseudo">:hover</span> {
+        <span class="hljs-attribute">cursor</span>: pointer;
+    }
+    &amp;__category {
+        <span class="hljs-attribute">font-weight</span>: bold; <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-number">0.5rem</span>; <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
+    }
+    &amp;__level {
+        <span class="hljs-attribute">font-weight</span>: bold;
+        <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-variable">$spacing-xs</span>;
+    }
 }
 <span class="hljs-keyword">@media</span> (min-width: <span class="hljs-variable">$third-breakpoint</span>) {
     <span class="hljs-selector-class">.course-search</span> {
@@ -251,8 +264,25 @@
         }
     }
 }
-<span class="hljs-selector-class">.course-search__category</span> {
-    <span class="hljs-attribute">font-weight</span>: bold;
+<span class="hljs-keyword">@media</span> (max-width: <span class="hljs-variable">$third-breakpoint</span>) {
+    <span class="hljs-selector-class">.course-search</span> {
+        &amp;__keywords {
+            <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-variable">$spacing-sm</span>;
+        }
+        &amp;__submit {
+            <span class="hljs-attribute">margin-top</span>: <span class="hljs-variable">$spacing-sm</span>;
+        }
+    }
+}
+<span class="hljs-selector-class">.ui-autocomplete</span> {
+    <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1000</span>;
+}
+<span class="hljs-selector-class">.ui-menu-item__course</span> {
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-variable">$spacing-xs</span> <span class="hljs-number">0</span> <span class="hljs-variable">$spacing-sm</span>;
+
+    &amp;<span class="hljs-selector-pseudo">:hover</span> {
+        <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#EEE</span>;
+    }
 }</pre>
                             </code>
                             
@@ -265,11 +295,11 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src\components\course-search\_course-search.scss</span>
+                    <span class="Meta-value">src/components/course-search/_course-search.scss</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">525 Bytes</span>
+                    <span class="Meta-value">1.2 KB</span>
                 </li>
             </ul>
         </div>
@@ -292,6 +322,25 @@
         
         
         <li class="Meta-item">
+            <strong class="Meta-key">Variants <em class="Meta-count">(3)</em>:</strong>
+            <span class="Meta-value Meta-value--linkList">
+            
+                <a href="course-search--default.html">
+                    <span>Default</span>
+                </a>, 
+            
+                <a href="course-search--undergraduate-only.html">
+                    <span>Undergraduate Only</span>
+                </a>, 
+            
+                <a href="course-search--postgraduate-only.html">
+                    <span>Postgraduate Only</span>
+                </a>
+            
+            </span>
+        </li>
+        
+        <li class="Meta-item">
             <strong class="Meta-key">Preview:</strong>
             <span class="Meta-value">
                 <ul>
@@ -310,7 +359,7 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src\components\course-search\course-search.twig</span>
+            <span class="Meta-value">src/components/course-search/course-search.twig</span>
         </li>
         
         
@@ -718,6 +767,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="homepage-ldn.html" data-pjax>
                 <span>Homepage Ldn</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="news-single.html" data-pjax>
+                <span>News Single</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2089,6 +2162,30 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="card--news.html" data-pjax>
+                <span>News</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="card--profile.html" data-pjax>
                 <span>Profile</span>
                 
@@ -2164,10 +2261,45 @@
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-course-search">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-course-search-items">
+                Course Search
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-course-search-items">
+            
+            
+            
+            
+    
         
-        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
-            <a class="Tree-entityLink" href="" data-pjax>
-                <span>Course Search</span>
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="course-search--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="course-search--undergraduate-only.html" data-pjax>
+                <span>Undergraduate Only</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2184,6 +2316,35 @@
 
 
             </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="course-search--postgraduate-only.html" data-pjax>
+                <span>Postgraduate Only</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
         </li>
         
     
@@ -2463,7 +2624,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -2859,6 +3020,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="masthead--no-image.html" data-pjax>
                 <span>No Image</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="masthead--no-image-ldn.html" data-pjax>
+                <span>No Image (LDN)</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -3552,6 +3737,30 @@
     
 
             </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="sitewide-message.html" data-pjax>
+                <span>Sitewide Message</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
         </li>
         
     

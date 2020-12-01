@@ -55,7 +55,7 @@
       border-bottom: 1px solid $border-color;
 
       @media (min-width: $megaNav-full-breakpoint) {
-        padding: $spacing-sm;
+        padding: $spacing-sm $spacing-lg $spacing-sm;
       }
 
       &:hover {
@@ -82,6 +82,31 @@
         height: 2em;
         background: url('#{$image-theme-directory-icon}/icon-gt-primary.svg') no-repeat center center;
         background-size: 0.5em;
+      }
+    }
+  }
+  
+  .has-simple-children {
+    @media (min-width: $megaNav-full-breakpoint) {
+      position: relative;
+
+      .megaNav__levelFooter {
+        display: none;
+      }
+
+      .megaNav__level {
+        left: auto;
+      }
+
+      .megaNav__secondLevel {
+        background: white;
+      }
+
+      .megaNav__secondLevel-list {
+        padding: $spacing-md;
+        min-height: auto;
+        width: auto;
+        min-width: 17.5em;
       }
     }
   }

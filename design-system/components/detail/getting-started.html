@@ -247,16 +247,14 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h4"</span>&gt;</span>Global Assets<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Assets like fonts, images, js and styles (in <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://sass-lang.com"</span>&gt;</span>Sass<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>) are stored in
     <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>src/assets<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>. Edit them here, they get copied to the build folder when building a static version of the
-    component library.
-<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    component library.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h4"</span>&gt;</span>Components<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Each component has a folder in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>src/components/<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>. This normally contains a <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>.twig<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> view
     template (for the HTML), some contain a config file to add context, dynamically created variants, control naming and
     ordering. Ideally all the styles and JS for a component will live here also. At the time of writing, all the
     components have their own <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>.scss<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> file for styles, but the JS is in one <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>app.js<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> file in
-    <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>assets<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.
-<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>assets<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>The JavaScript could probably use breaking up and bundling better. Ideally it'd be nice to do a similar thing with JS
     for each component as we do for Sass styles, so:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
@@ -392,8 +390,7 @@
         from the root of the project, this should start Fractal, Sass/JS filewatching, and open your browser to the localhost.
     <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Create a folder for the component in <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>src/components/<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, eg.
-        <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>src/components/your-component/<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>src/components/your-component/<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Create a <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>.twig<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> template file (for the HTML) inside the folder, .eg <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>src/components/your-component/your-component.twig<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>
         - as soon as you do this, Fractal should refresh and the component should appear in the components list on the
         left
@@ -732,7 +729,7 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src\components\01-globals-and-docs\00-getting-started.twig</span>
+            <span class="Meta-value">src/components/01-globals-and-docs/00-getting-started.twig</span>
         </li>
         
         
@@ -1140,6 +1137,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="homepage-ldn.html" data-pjax>
                 <span>Homepage Ldn</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="news-single.html" data-pjax>
+                <span>News Single</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2511,6 +2532,30 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="card--news.html" data-pjax>
+                <span>News</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="card--profile.html" data-pjax>
                 <span>Profile</span>
                 
@@ -2586,10 +2631,45 @@
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-course-search">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-course-search-items">
+                Course Search
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-course-search-items">
+            
+            
+            
+            
+    
+        
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="course-search.html" data-pjax>
-                <span>Course Search</span>
+            <a class="Tree-entityLink" href="course-search--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="course-search--undergraduate-only.html" data-pjax>
+                <span>Undergraduate Only</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2606,6 +2686,35 @@
 
 
             </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="course-search--postgraduate-only.html" data-pjax>
+                <span>Postgraduate Only</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
         </li>
         
     
@@ -2885,7 +2994,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -3281,6 +3390,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="masthead--no-image.html" data-pjax>
                 <span>No Image</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="masthead--no-image-ldn.html" data-pjax>
+                <span>No Image (LDN)</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -3974,6 +4107,30 @@
     
 
             </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="sitewide-message.html" data-pjax>
+                <span>Sitewide Message</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
         </li>
         
     

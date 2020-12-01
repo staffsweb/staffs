@@ -156,6 +156,7 @@
     <div class="Prose Prose--condensed">
         
         <p>The <code>.megaNav__topLevel-item</code> can have a class of <code>is-active</code> to apply its ‘active’ state (top red border)</p>
+<p>For items with no third level, a class of <code>has-simple-children</code> should be added to the <code>megaNav__topLevel-item</code> (in addition to <code>has-children</code>)</p>
 
         
     </div>
@@ -327,7 +328,7 @@
                         <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"megaNav__topLevel-item"</span>&gt;</span>
                             <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"megaNav__topLevel-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>International<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
                         <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"megaNav__topLevel-item  has-children"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"megaNav__topLevel-item  has-children  has-simple-children"</span>&gt;</span>
                             <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"megaNav__topLevel-link "</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Research<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 
                             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"megaNav__level  megaNav__secondLevel"</span>&gt;</span>
@@ -660,7 +661,7 @@
             <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"megaNav__topLevel-item"</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"megaNav__topLevel-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>International<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"megaNav__topLevel-item  has-children"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"megaNav__topLevel-item  has-children  has-simple-children"</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"megaNav__topLevel-link "</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Research<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 
               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"megaNav__level  megaNav__secondLevel"</span>&gt;</span>
@@ -839,17 +840,17 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-7d1b88137469d74a946d51350b484d8e">_megaNav.scss</option>
+                <option value="file-8c8da30ed0b3bba14ccac34ac001b4bb">_megaNav.scss</option>
                 
-                <option value="file-f39615885f1e0c1a5e58ff4fded9c489">megaNav.js</option>
+                <option value="file-2a5666273d1e06ec902b03cd85f94965">megaNav.js</option>
                 
-                <option value="file-140775c6591b869b6e01c319bc3e5dce">readme.html</option>
+                <option value="file-8072485b53e853765e4c8f3b1adf907e">readme.html</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-7d1b88137469d74a946d51350b484d8e" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-8c8da30ed0b3bba14ccac34ac001b4bb" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -914,7 +915,7 @@
       <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$border-color</span>;
 
       <span class="hljs-keyword">@media</span> (min-width: <span class="hljs-variable">$megaNav-full-breakpoint</span>) {
-        <span class="hljs-attribute">padding</span>: <span class="hljs-variable">$spacing-sm</span>;
+        <span class="hljs-attribute">padding</span>: <span class="hljs-variable">$spacing-sm</span> <span class="hljs-variable">$spacing-lg</span> <span class="hljs-variable">$spacing-sm</span>;
       }
 
       &amp;<span class="hljs-selector-pseudo">:hover</span> {
@@ -941,6 +942,31 @@
         <span class="hljs-attribute">height</span>: <span class="hljs-number">2em</span>;
         <span class="hljs-attribute">background</span>: url(<span class="hljs-string">'#{$image-theme-directory-icon}/icon-gt-primary.svg'</span>) no-repeat center center;
         <span class="hljs-attribute">background-size</span>: <span class="hljs-number">0.5em</span>;
+      }
+    }
+  }
+  
+  <span class="hljs-selector-class">.has-simple-children</span> {
+    <span class="hljs-keyword">@media</span> (min-width: <span class="hljs-variable">$megaNav-full-breakpoint</span>) {
+      <span class="hljs-attribute">position</span>: relative;
+
+      <span class="hljs-selector-class">.megaNav__levelFooter</span> {
+        <span class="hljs-attribute">display</span>: none;
+      }
+
+      <span class="hljs-selector-class">.megaNav__level</span> {
+        <span class="hljs-attribute">left</span>: auto;
+      }
+
+      <span class="hljs-selector-class">.megaNav__secondLevel</span> {
+        <span class="hljs-attribute">background</span>: white;
+      }
+
+      <span class="hljs-selector-class">.megaNav__secondLevel-list</span> {
+        <span class="hljs-attribute">padding</span>: <span class="hljs-variable">$spacing-md</span>;
+        <span class="hljs-attribute">min-height</span>: auto;
+        <span class="hljs-attribute">width</span>: auto;
+        <span class="hljs-attribute">min-width</span>: <span class="hljs-number">17.5em</span>;
       }
     }
   }
@@ -1311,7 +1337,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src\components\megaNav\_megaNav.scss</span>
+                    <span class="Meta-value">src/components/megaNav/_megaNav.scss</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -1320,7 +1346,7 @@
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-f39615885f1e0c1a5e58ff4fded9c489" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-2a5666273d1e06ec902b03cd85f94965" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -1345,16 +1371,16 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src\components\megaNav\megaNav.js</span>
+                    <span class="Meta-value">src/components/megaNav/megaNav.js</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">179 Bytes</span>
+                    <span class="Meta-value">174 Bytes</span>
                 </li>
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-140775c6591b869b6e01c319bc3e5dce" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-8072485b53e853765e4c8f3b1adf907e" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -1386,11 +1412,11 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src\components\megaNav\readme.html</span>
+                    <span class="Meta-value">src/components/megaNav/readme.html</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">296 Bytes</span>
+                    <span class="Meta-value">284 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -1446,12 +1472,12 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src\components\megaNav\megaNav.twig</span>
+            <span class="Meta-value">src/components/megaNav/megaNav.twig</span>
         </li>
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Referenced by <em class="Meta-count">(9)</em>:</strong>
+            <strong class="Meta-key">Referenced by <em class="Meta-count">(8)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="page-header.html">@<span>page-header</span></a>, 
@@ -1463,8 +1489,6 @@
                 <a href="homepage.html">@<span>homepage</span></a>, 
             
                 <a href="international-country.html">@<span>international-country</span></a>, 
-            
-                <a href="news-single.html">@<span>news-single</span></a>, 
             
                 <a href="parent-landing.html">@<span>parent-landing</span></a>, 
             
@@ -1879,6 +1903,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="homepage-ldn.html" data-pjax>
                 <span>Homepage Ldn</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="news-single.html" data-pjax>
+                <span>News Single</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -3250,6 +3298,30 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="card--news.html" data-pjax>
+                <span>News</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="card--profile.html" data-pjax>
                 <span>Profile</span>
                 
@@ -3325,10 +3397,45 @@
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-course-search">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-course-search-items">
+                Course Search
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-course-search-items">
+            
+            
+            
+            
+    
+        
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="course-search.html" data-pjax>
-                <span>Course Search</span>
+            <a class="Tree-entityLink" href="course-search--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="course-search--undergraduate-only.html" data-pjax>
+                <span>Undergraduate Only</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -3345,6 +3452,35 @@
 
 
             </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="course-search--postgraduate-only.html" data-pjax>
+                <span>Postgraduate Only</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
         </li>
         
     
@@ -3624,7 +3760,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -4020,6 +4156,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="masthead--no-image.html" data-pjax>
                 <span>No Image</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="masthead--no-image-ldn.html" data-pjax>
+                <span>No Image (LDN)</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -4713,6 +4873,30 @@
     
 
             </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="sitewide-message.html" data-pjax>
+                <span>Sitewide Message</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
         </li>
         
     

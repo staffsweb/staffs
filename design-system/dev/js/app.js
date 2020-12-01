@@ -6228,8 +6228,12 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     // @TODO: check accessibility - add AIRA/keyboard if needed
     // @TODO: consider using history.pushState?
     // @TODO: perhaps add something to handle switching to a tab when its ID is the URL hash?
+    var tabCount = 1;
     $('.js-tabs').each(function () {
       var tabs = $(this);
+      var tabId = 'tabs-' + tabCount;
+      tabs.attr('id', tabId);
+      tabCount++;
       var links = $('.tabs__link', tabs);
       var sections = $('.tabs__section', tabs);
       var defaultTab = $('.tabs__link.is-selected', tabs).attr('href');
@@ -6244,7 +6248,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
       links.on('click', function (e) {
         e.preventDefault();
-        var targetHref = $(this).attr('href');
+        var targetHref = '#' + tabId + ' ' + $(this).attr('href');
         sections.hide().removeClass('is-expanded');
         $(targetHref).show().addClass('is-expanded');
         links.removeClass('is-selected');
@@ -6278,7 +6282,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
           slidesToShow: 1,
           slidesToScroll: 1,
           centerMode: true,
-          centerPadding: '5%'
+          centerPadding: '0%'
         }
       }]
     });
@@ -6332,6 +6336,43 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         }
       }]
     });
+    $('.js-slider--responsive').slick({
+      infinite: false,
+      responsive: [{
+        breakpoint: 99999,
+        settings: 'unslick'
+      }, {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1.2,
+          slidesToScroll: 1
+        }
+      }]
+    });
+    $('.js-slider--generic').slick({
+      slidesToShow: 3.1,
+      slidesToScroll: 3,
+      infinite: false,
+      responsive: [{
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 2.5,
+          slidesToScroll: 2
+        }
+      }, {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1.25,
+          slidesToScroll: 1
+        }
+      }, {
+        breakpoint: 360,
+        settings: {
+          slidesToShow: 1.1,
+          slidesToScroll: 1
+        }
+      }]
+    });
     $('.js-slider--variable').each(function () {
       $(this).slick({
         slidesToShow: 1,
@@ -6381,8 +6422,19 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     Waypoint.refreshAll(); // sliders' content may change the height of the page, thus these need to be recalculated
   };
 
+  var sliderReInit = function sliderReInit(sliderCssSelector) {
+    var slider = $(sliderCssSelector);
+
+    if (slider) {
+      slider.slick('reinit');
+    }
+  };
+
   var waypointsInit = function waypointsInit() {
-    // Potential Refactor: in an ideal world, using Intersection Observer might be better for this
+    // CG Apply the "highlight" and "tail" styles to the appropriate headings in the page body automatically, ready for the animation to be added
+    $("#page-body__content > h2, #page-body__content section h2, .mini-template-grid__column:first-child > h2, .slab > .wrap > h2").wrap("<div class='title  title--has-tail  js-waypoint'></div>").addClass("title__highlight");
+    $(".mini-template-grid__column:not(:first-child) > h2").wrap("<div class='title'></div>").addClass("title__highlight"); // Potential Refactor: in an ideal world, using Intersection Observer might be better for this
+
     $('.js-waypoint').each(function () {
       var el = $(this);
       el.waypoint(function (direction) {
@@ -6507,8 +6559,34 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
             collection: 'staffordshire-coursetitles',
             profile: 'auto-completion',
             form: 'qc',
-            meta_V_and: $("#course-search__level").val(),
-            // CG: Level of study can either be a hidden form field or a <select>
+            meta_V_and: $("#course-search__level").find(":selected").val(),
+            sort: 'dmetaV' // CG: Sorts by level of study, with UG first
+
+          },
+          success: function success(data) {
+            response(data);
+          }
+        });
+      },
+      minLength: 3,
+      delay: 300,
+      select: function select(event, ui) {
+        // CG: Redirect to the relevant course page
+        window.location = ui.item.action;
+        return false;
+      }
+    });
+    $("#global-search__keywords--courses").courseautocomplete({
+      source: function source(request, response) {
+        $.ajax({
+          url: "https://search.staffs.ac.uk/s/search.html",
+          dataType: "json",
+          data: {
+            meta_t_trunc: request.term.toLowerCase(),
+            // CG: Accounts for mobile devices using sentence caps when doing autocorrect
+            collection: 'staffordshire-coursetitles',
+            profile: 'auto-completion',
+            form: 'qc',
             sort: 'dmetaV' // CG: Sorts by level of study, with UG first
 
           },
@@ -6527,14 +6605,27 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     });
   };
 
-  var siteSearchInit = function siteSearchInit() {
-    // CG: Show / hide the site search
-    $("#btn-search--desktop").on("click", function (e) {
-      $(".global-search").addClass("global-search--open");
+  var searchInit = function searchInit() {
+    // CG: Show / hide the global search as appropriate
+    $("#btn-search--desktop, #global-search__close").on("click", function (e) {
+      $("#global-search").toggleClass("global-search--open");
     });
     $(document).on("keyup", function (e) {
       if (e.keyCode == 27) {
-        $(".global-search").removeClass("global-search--open");
+        $("#global-search").removeClass("global-search--open");
+      }
+    }); // CG: Show / hide the appropriate global search field
+
+    $("#global-search__options .global-search__scope").on("change", function (e) {
+      var scope = $("#global-search__options .global-search__scope:checked").val();
+
+      if (scope == "courses") {
+        // Show the course search field
+        $("#global-search__keywords--courses").removeClass("visually-hidden");
+        $("#global-search__keywords--whole-site").addClass("visually-hidden");
+      } else {
+        $("#global-search__keywords--whole-site").removeClass("visually-hidden");
+        $("#global-search__keywords--courses").addClass("visually-hidden");
       }
     });
     /* CG: Build search URLs */
@@ -6556,10 +6647,8 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
       return "https://search.staffs.ac.uk/s/search.html?collection=staffordshire-main&query=" + query;
     }
 
-    $("#global-search__keywords").keyup(function (e) {
-      // CG: Decide whether to search the whole site or just courses
-      var collection = $(".global-search__scope:checked").val(); // CG: Detect ENTER being pressed
-
+    $("#global-search__keywords--whole-site").keyup(function (e) {
+      // CG: Detect ENTER being pressed
       var keycode = e.keyCode ? e.keyCode : e.which;
 
       if (keycode == '13') {
@@ -6567,18 +6656,106 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
           e.preventDefault();
         });
         e.stopImmediatePropagation();
-
-        if (collection == "wholeSite") {
-          window.location.href = siteSearchUrl($(this).val());
-        } else {
-          window.location.href = courseSearchUrl($(this).val());
-        }
+        window.location.href = siteSearchUrl($(this).val());
       }
 
       e.preventDefault();
     });
-  }; // --
+    $("#global-search__keywords--courses").keyup(function (e) {
+      // CG: Detect ENTER being pressed
+      var keycode = e.keyCode ? e.keyCode : e.which;
 
+      if (keycode == '13') {
+        $('#form1').on('submit', function (e) {
+          e.preventDefault();
+        });
+        e.stopImmediatePropagation();
+        window.location.href = courseSearchUrl($(this).val());
+      }
+
+      e.preventDefault();
+    });
+    $("#course-search__submit").on("click", function (e) {
+      $('#form1').on('submit', function (e) {
+        e.preventDefault();
+      });
+      var searchTerm = $("#course-search__keywords").val(); // CG: Check if the level is in a SELECT or a hidden field
+
+      var level = $("#course-search__level").prop("tagName") == "OPTION" ? $("#course-search__level").find(":selected").val() : $("#course-search__level").val();
+      window.location.href = courseSearchUrl(searchTerm, "staffordshire-coursetitles", level);
+      e.preventDefault();
+    });
+    $("#course-search__keywords").keyup(function (e) {
+      // CG: Do a course search when ENTER is pressed
+      // CG: Detect ENTER being pressed
+      var keycode = e.keyCode ? e.keyCode : e.which;
+
+      if (keycode == '13') {
+        $('#form1').on('submit', function (e) {
+          e.preventDefault();
+        });
+        e.stopImmediatePropagation();
+        var searchTerm = $(this).val();
+        var level = $("#course-search__level").prop("tagName") == "OPTION" ? $("#course-search__level").find(":selected").val() : $("#course-search__level").val();
+        window.location.href = courseSearchUrl(searchTerm, "staffordshire-coursetitles", level);
+      }
+
+      e.preventDefault();
+    });
+    $("#megaNav-course-search__submit").on("click", function (e) {
+      $('#form1').on('submit', function (e) {
+        e.preventDefault();
+      });
+      var searchTerm = $("#megaNav-course-search__keywords").val();
+      window.location.href = courseSearchUrl(searchTerm);
+      e.preventDefault();
+    });
+    $("#megaNav-course-search__keywords").keyup(function (e) {
+      var keycode = e.keyCode ? e.keyCode : e.which;
+
+      if (keycode == '13') {
+        $('#form1').on('submit', function (e) {
+          e.preventDefault();
+        });
+        e.stopImmediatePropagation();
+        var searchTerm = $(this).val();
+        window.location.href = courseSearchUrl(searchTerm);
+      }
+
+      e.preventDefault();
+    });
+  };
+
+  var removeExistingSvgFills = function removeExistingSvgFills(parentClass) {
+    var pathElms = document.querySelectorAll(parentClass + " svg path");
+
+    if (pathElms && pathElms !== undefined && pathElms.length !== 0) {
+      for (var x = 0; x < pathElms.length; x++) {
+        pathElms[x].style.removeProperty('fill');
+      }
+    }
+  };
+
+  var modal = function modal() {
+    var modalTriggers = document.querySelectorAll('[data-modal-trigger]');
+    modalTriggers.forEach(function (trigger) {
+      trigger.addEventListener('click', function (event) {
+        var modalTrigger = trigger.dataset.modalTrigger;
+        var modal = document.querySelector("[data-modal=\"".concat(modalTrigger, "\"]"));
+        modal.classList.add('is-open');
+        modal.querySelector('[data-modal-close]').addEventListener('click', function () {
+          modal.classList.remove('is-open');
+        });
+        event.preventDefault();
+        var isSliderRefreshed = parseInt(modal.dataset.sliderIsrefreshed);
+
+        if (isSliderRefreshed === 0) {
+          sliderReInit("[data-modal=\"".concat(modalTrigger, "\"] .modal-slider"));
+          modal.setAttribute("data-slider-isrefreshed", 1);
+        }
+      });
+    });
+  };
 
   $(document).ready(function () {
     megaNavInit();
@@ -6586,8 +6763,13 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     sliderInit();
     waypointsInit();
     pageNavWaypointsInit();
-    siteSearchInit();
+    searchInit();
     autocompleteInit();
+    modal();
+  });
+  $(window).on('DOMContentLoaded', function () {
+    // event triggers once DOM is loaded but before stylesheets are applied
+    removeExistingSvgFills('.card--ksp');
   });
   $(window).on('load', function () {
     // correct anything loaded on DOM load which might need adjusting (mostly once images have loaded)
