@@ -121,7 +121,7 @@ $border-accent-width: $spacing-2xs;
   //  }
   //}
 
-  p, td
+  p, td, dd
   {
     & a:not([class]), & a[class*="sys_"] {
       text-decoration: none;
