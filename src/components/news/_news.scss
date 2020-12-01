@@ -4,4 +4,13 @@
             max-width: $align-size-md;
         }
     }
+
+    .news-articles-search {
+        h3 {
+            margin-top: 0;
+        }
+        button {
+            cursor: pointer;
+        }
+    }
 }

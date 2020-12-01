@@ -2009,4 +2009,8 @@ body.modal__is-open { overflow: hidden; }
 
 @media (min-width: 50rem) { .news-record .align-right { max-width: calc(50% - 1.5rem); } }
 
+.news-record .news-articles-search h3 { margin-top: 0; }
+
+.news-record .news-articles-search button { cursor: pointer; }
+
 /*# sourceMappingURL=main-ldn.css.map */
