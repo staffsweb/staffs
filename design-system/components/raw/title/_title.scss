@@ -13,6 +13,12 @@
   }
 }
 
+.slab, .mini-template-grid {
+  .title {
+    margin-top: 0;
+  }
+}
+
 .title__highlight {
   position: relative;
   display: inline;
@@ -36,6 +42,8 @@
 }
 
 .title--has-tail {
+  margin-top:  $spacing-3xl;
+  
   .title__highlight { // @TODO: Consider refactoring onto parent to reduce specificity further
     &:before {
       position: absolute;
