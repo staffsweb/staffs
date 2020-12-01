@@ -2536,4 +2536,6 @@ body.modal__is-open { overflow: hidden; }
 @media (max-width: 35rem) { .modal__content .slab, .modal__content .wrap { padding: 0; }
   .modal__content figure { margin: 0 0 0; } }
 
+@media (min-width: 50rem) { .news-record .align-right { max-width: calc(50% - 1.5rem); } }
+
 /*# sourceMappingURL=main.css.map */

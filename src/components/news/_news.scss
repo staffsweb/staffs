@@ -1,0 +1,7 @@
+.news-record {
+    .align-right {
+        @media (min-width: $third-breakpoint) {
+            max-width: $align-size-md;
+        }
+    }
+}
