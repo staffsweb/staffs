@@ -893,9 +893,9 @@ iframe { border: none; }
 
 .breadcrumbs li:first-child:before { display: none; }
 
-.breadcrumbs a, .breadcrumbs a:visited { color: #fff; font-weight: 500; }
+.breadcrumbs li a, .breadcrumbs li a:visited, .breadcrumbs li a:not([class]) { color: #fff; font-weight: 500; border-bottom: 0; }
 
-.breadcrumbs a:hover, .breadcrumbs a:visited:hover { text-decoration: underline; }
+.breadcrumbs li a:hover, .breadcrumbs li a:visited:hover, .breadcrumbs li a:not([class]):hover { text-decoration: underline; }
 
 .button { position: relative; display: inline-block; font-size: inherit; margin: 0 0.25rem 1rem 0; padding: 0.75em 1.5em; border: 0; line-height: 1.15; vertical-align: baseline; text-decoration: none; text-align: center; transition: background 150ms ease-out, color 150ms ease-out; box-sizing: border-box; border-radius: 0.25rem; font-weight: 500; background-color: #b90f82; background-image: linear-gradient(to left, #b90f82 50%, black 50%); background-size: 200% 100%; background-position: right bottom; background-repeat: no-repeat; color: white; }
 
