@@ -6791,6 +6791,36 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     });
   };
 
+  var toggleSlide = function toggleSlide(query, callback) {
+    var courseModulesTriggers = document.querySelectorAll(query);
+    courseModulesTriggers.forEach(function (trigger) {
+      trigger.addEventListener('click', function (event) {
+        var elmId = trigger.getAttribute('href').replace('#', '');
+
+        if (elmId && elmId != undefined) {
+          var targetElm = document.getElementById(elmId);
+
+          if (targetElm && targetElm != undefined) {
+            targetElm.classList.add('hidden');
+            var hiddenElm = document.getElementById(trigger.dataset.courseModulesTrigger);
+
+            if (hiddenElm && hiddenElm != undefined) {
+              hiddenElm.classList.remove('hidden');
+              callback(hiddenElm);
+            }
+          }
+        }
+      });
+    });
+  };
+
+  var scrollToTop = function scrollToTop(elm) {
+    var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 100;
+    $('html, body').animate({
+      scrollTop: $(elm).offset().top - offset
+    }, 200);
+  };
+
   $(document).ready(function () {
     megaNavInit();
     tabsInit();
@@ -6804,7 +6834,9 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   $(window).on('DOMContentLoaded', function () {
     // event triggers once DOM is loaded but before stylesheets are applied
     removeExistingSvgFills('.card--ksp');
-    removeExistingSvgFills('.iconBox__icon');
+    removeExistingSvgFills('.iconBox__icon'); //Course Tabs
+
+    toggleSlide('[data-course-modules-trigger]', scrollToTop);
   });
   $(window).on('load', function () {
     // correct anything loaded on DOM load which might need adjusting (mostly once images have loaded)

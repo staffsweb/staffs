@@ -77,8 +77,8 @@
   overflow-scrolling: touch;
 }
 
-.js .js-hidden {
-  display: none;
+.js .js-hidden, .hidden {
+  display: none!important;
 }
 
 // CG: Hide only visually, but have it available for screen readers: http://snook.ca/archives/html_and_css/hiding-content-for-accessibility

@@ -1926,7 +1926,7 @@ a.tile:focus { outline-width: 3px; outline-color: #144196; z-index: 2; }
 
 .overflow-x { max-width: 100%; overflow: auto; overflow-scrolling: touch; }
 
-.js .js-hidden { display: none; }
+.js .js-hidden, .hidden { display: none !important; }
 
 .visually-hidden { clip: rect(1px, 1px, 1px, 1px); height: 1px; overflow: hidden; position: absolute !important; width: 1px; }
 
