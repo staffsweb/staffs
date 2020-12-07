@@ -196,6 +196,10 @@ if(anchorTarget == "#courses__postgraduate")
                                                            // sliders?
         Waypoint.refreshAll(); // height is liable to change, so we need to refresh these
 
+        $(targetHref).children('.js-slider--generic').each(function () {
+          $(this).slick('reinit');
+        });
+
       });
 
       Waypoint.refreshAll(); // tabs' content may change the height of the page, thus these need to be recalculated

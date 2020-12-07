@@ -6266,6 +6266,10 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         // sliders?
 
         Waypoint.refreshAll(); // height is liable to change, so we need to refresh these
+
+        $(targetHref).children('.js-slider--generic').each(function () {
+          $(this).slick('reinit');
+        });
       });
       Waypoint.refreshAll(); // tabs' content may change the height of the page, thus these need to be recalculated
       // CG: Check if we need to switch to a tab via a URL fragment
