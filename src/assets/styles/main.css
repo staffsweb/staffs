@@ -1273,6 +1273,8 @@ iframe { border: none; }
 
 .footer-site a:not(.button) { color: white; text-decoration: none; }
 
+.footer-site li a:not([class]), .footer-site li a[class*="sys_"] { border-bottom: 0; }
+
 .footer-site h6 { margin-top: 1.5rem; }
 
 .footer-site__logo { display: inline-block; margin: 0 0 1.5rem; }
