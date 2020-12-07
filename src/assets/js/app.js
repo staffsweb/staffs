@@ -196,10 +196,14 @@ if(anchorTarget == "#courses__postgraduate")
                                                            // sliders?
         Waypoint.refreshAll(); // height is liable to change, so we need to refresh these
 
-        $(targetHref).children('.js-slider--generic').each(function () {
-          $(this).slick('reinit');
-        });
+        var sliders = $(targetHref).children('.js-slider--generic');
 
+        if(sliders && sliders.length != 0) {
+          $(sliders).each(function () {
+            var sliderElm = this;
+            sliderReInit(sliderElm, sliderElm);
+          });
+        }
       });
 
       Waypoint.refreshAll(); // tabs' content may change the height of the page, thus these need to be recalculated
@@ -400,10 +404,14 @@ if(anchorTarget == "#courses__postgraduate")
 
   };
 
-  let sliderReInit = function (sliderCssSelector) {
-    var slider = $(sliderCssSelector);
-    if(slider) {
-      slider.slick('reinit');
+  let sliderReInit = function (sliderElm, elmWithRefreshId) {
+    var isSliderRefreshed = parseInt(elmWithRefreshId.dataset.sliderIsrefreshed);
+    if(isSliderRefreshed === 0) {
+      var slider = $(sliderElm);
+      if(slider) {
+        slider.slick('reinit');
+        elmWithRefreshId.setAttribute("data-slider-isrefreshed", 1);
+      }
     }
   }
 
@@ -779,11 +787,7 @@ if(anchorTarget == "#courses__postgraduate")
         });
         
         event.preventDefault();
-        var isSliderRefreshed = parseInt(modal.dataset.sliderIsrefreshed);
-        if(isSliderRefreshed === 0) {
-          sliderReInit("[data-modal=\"".concat(modalTrigger, "\"] .modal-slider"));
-          modal.setAttribute("data-slider-isrefreshed", 1);
-        }
+        sliderReInit(document.querySelector("[data-modal=\"".concat(modalTrigger, "\"] .modal-slider")), modal);
       });
     });
   };

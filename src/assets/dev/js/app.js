@@ -6267,9 +6267,14 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
         Waypoint.refreshAll(); // height is liable to change, so we need to refresh these
 
-        $(targetHref).children('.js-slider--generic').each(function () {
-          $(this).slick('reinit');
-        });
+        var sliders = $(targetHref).children('.js-slider--generic');
+
+        if (sliders && sliders.length != 0) {
+          $(sliders).each(function () {
+            var sliderElm = this;
+            sliderReInit(sliderElm, sliderElm);
+          });
+        }
       });
       Waypoint.refreshAll(); // tabs' content may change the height of the page, thus these need to be recalculated
       // CG: Check if we need to switch to a tab via a URL fragment
@@ -6440,11 +6445,16 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     Waypoint.refreshAll(); // sliders' content may change the height of the page, thus these need to be recalculated
   };
 
-  var sliderReInit = function sliderReInit(sliderCssSelector) {
-    var slider = $(sliderCssSelector);
+  var sliderReInit = function sliderReInit(sliderElm, elmWithRefreshId) {
+    var isSliderRefreshed = parseInt(elmWithRefreshId.dataset.sliderIsrefreshed);
 
-    if (slider) {
-      slider.slick('reinit');
+    if (isSliderRefreshed === 0) {
+      var slider = $(sliderElm);
+
+      if (slider) {
+        slider.slick('reinit');
+        elmWithRefreshId.setAttribute("data-slider-isrefreshed", 1);
+      }
     }
   };
 
@@ -6785,12 +6795,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
           }
         });
         event.preventDefault();
-        var isSliderRefreshed = parseInt(modal.dataset.sliderIsrefreshed);
-
-        if (isSliderRefreshed === 0) {
-          sliderReInit("[data-modal=\"".concat(modalTrigger, "\"] .modal-slider"));
-          modal.setAttribute("data-slider-isrefreshed", 1);
-        }
+        sliderReInit(document.querySelector("[data-modal=\"".concat(modalTrigger, "\"] .modal-slider")), modal);
       });
     });
   };
