@@ -1063,6 +1063,30 @@ a.card:hover .title__highlight, a.card:hover .card__title { text-decoration: und
 
 .grid-2-cols\@tablet .card__video.card__figure iframe { position: absolute; }
 
+.course-summary { padding: 1rem 2rem; background-color: #f1f1f1; margin-top: 3rem; }
+
+.pie-chart { width: 200px; }
+
+.pie-chart .pie { transform: rotate(-90deg); width: 200px; height: 200px; background: #F4F4F4; border-radius: 50%; margin-bottom: 2rem; }
+
+.pie-chart .pie circle { fill: none; stroke: #F4F4F4; stroke-width: 99; -webkit-animation: rotate 1.5s ease-in; animation: rotate 1.5s ease-in; }
+
+.pie-chart .pie .circle-1 { stroke: #D20052; }
+
+.pie-chart .pie .circle-2 { stroke: #394851; }
+
+.pie-chart .pie .circle-3 { stroke: #C3C1C1; }
+
+.pie-chart .pie-chart_key { margin: 0.5rem 0; }
+
+.pie-chart .pie-chart_key .key-color { display: inline-block; width: 17px; height: 17px; margin-right: 0.5rem; }
+
+.pie-chart .pie-chart_key .key-color.key-1 { background: #D20052; }
+
+.pie-chart .pie-chart_key .key-color.key-2 { background: #394851; }
+
+.pie-chart .pie-chart_key .key-color.key-3 { background: #C3C1C1; }
+
 .feature-link { display: block; position: relative; --accent-color: #144196; margin-bottom: 2rem; color: #41464b; text-decoration: none; padding: 0 calc(0.75rem + 2.5%) 0; border-left: 0.25rem solid #144196; border-left: 0.25rem solid var(--accent-color); }
 
 .feature-link__title { display: table; position: relative; margin-bottom: 0.5rem; padding-right: 1em; word-break: break-word; }
