@@ -6267,12 +6267,12 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
         Waypoint.refreshAll(); // height is liable to change, so we need to refresh these
 
-        var sliders = $(targetHref).children('.js-slider--generic');
+        var sliders = $(targetHref).find('.js-slider--generic');
 
         if (sliders && sliders.length != 0) {
           $(sliders).each(function () {
             var sliderElm = this;
-            sliderReInit(sliderElm, sliderElm);
+            sliderReInit(sliderElm, $(targetHref).get(0));
           });
         }
       });
