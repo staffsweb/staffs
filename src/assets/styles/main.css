@@ -2055,6 +2055,8 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .global-search__close:hover { cursor: pointer; }
 
+.side-nav { border-bottom: 2px solid #d70a26; }
+
 .sitewide-message { background-color: #FFD91C; padding: 0.5rem 0.75rem; }
 
 .sitewide-message__text { margin: 0; line-height: 1.5; }

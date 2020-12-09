@@ -1508,6 +1508,8 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .section-header--bg-offwhite .section-header__title { position: relative; top: 2rem; margin-bottom: 6rem; }
 
+.side-nav { border-bottom: 2px solid #144196; }
+
 .sitewide-message { background-color: #FFD91C; padding: 0.5rem 0.75rem; }
 
 .sitewide-message__text { margin: 0; line-height: 1.5; }
