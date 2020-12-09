@@ -130,6 +130,11 @@ $border-accent-width: $spacing-2xs;
     }
   }
 
+  .link--standard {
+    font-weight: 500!important;
+    border-bottom: 1px solid $grey--light!important;
+  }
+
 
   //nav, ul, ol, table {
   //  a {
@@ -274,7 +279,7 @@ $border-accent-width: $spacing-2xs;
   pre {
     clear: both;
     @include typescale('sm', 'em');
-    @include line-height('normal')
+    @include line-height('normal');
     margin: $spacing-lg 0;
     padding: 1em;
     tab-size: 2;
@@ -291,7 +296,7 @@ $border-accent-width: $spacing-2xs;
 
   code {
     display: inline-block;
-    @include line-height('normal')
+    @include line-height('normal');
     @include typescale('xs', 'em');
     background: rgba($primary, 0.05);
     padding: 0 0.2em;
