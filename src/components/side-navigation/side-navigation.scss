@@ -1,4 +1,7 @@
 .side-nav {
+    @media (min-width: map-get($breakpoint-stages, 'tablet')) {
+        margin-left: $spacing-md;
+    }
 
     &__list {
         border-bottom: 2px solid $primary;

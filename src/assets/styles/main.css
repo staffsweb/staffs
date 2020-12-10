@@ -659,6 +659,8 @@ p a:not([class]), p a[class*="sys_"], li a:not([class]), li a[class*="sys_"], td
 
 .link--standard { font-weight: 500 !important; border-bottom: 1px solid #dddddd !important; }
 
+.link--standard:hover { text-decoration: none; }
+
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { line-height: 1.2; font-weight: 500; }
 
 h1, h2, h3, h4, h5, h6 { margin: 4rem 0 1.5rem; }
@@ -2078,6 +2080,8 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 .global-search__close { background: none; border: 0; color: #FFF; font-size: 2rem; padding: 1.5rem; }
 
 .global-search__close:hover { cursor: pointer; }
+
+@media (min-width: 45rem) { .side-nav { margin-left: 1rem; } }
 
 .side-nav__list { border-bottom: 2px solid #d70a26; border-top: 2px solid #d70a26; padding: 1.5rem 0; }
 

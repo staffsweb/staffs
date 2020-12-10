@@ -133,6 +133,10 @@ $border-accent-width: $spacing-2xs;
   .link--standard {
     font-weight: 500!important;
     border-bottom: 1px solid $grey--light!important;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 
 
