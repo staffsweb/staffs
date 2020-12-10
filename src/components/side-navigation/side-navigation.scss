@@ -1,3 +1,17 @@
 .side-nav {
-    border-bottom: 2px solid $primary;
+
+    &__list {
+        border-bottom: 2px solid $primary;
+        border-top: 2px solid $primary;
+        padding: $spacing-lg 0;
+    }
+
+    &__current {
+        font-weight: 500;
+    }
+
+    & .title {
+        margin-bottom: 0;
+        line-height: $spacing-lg;
+    }
 }

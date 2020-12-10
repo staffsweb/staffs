@@ -1534,7 +1534,11 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .section-header--bg-offwhite .section-header__title { position: relative; top: 2rem; margin-bottom: 6rem; }
 
-.side-nav { border-bottom: 2px solid #144196; }
+.side-nav__list { border-bottom: 2px solid #144196; border-top: 2px solid #144196; padding: 1.5rem 0; }
+
+.side-nav__current { font-weight: 500; }
+
+.side-nav .title { margin-bottom: 0; line-height: 1.5rem; }
 
 .sitewide-message { background-color: #FFD91C; padding: 0.5rem 0.75rem; }
 
