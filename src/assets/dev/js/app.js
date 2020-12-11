@@ -6773,10 +6773,15 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
       var modal = document.querySelector("[data-modal=\"".concat(modalTrigger, "\"]"));
 
       if (modal && modal != undefined) {
-        var modalTriggerName = modalTrigger + "-" + count;
+        if (trigger.hasAttribute("data-modal-trigger-isunique")) {
+          var modalTriggerName = modalTrigger;
+        } else {
+          var modalTriggerName = modalTrigger + "-" + count;
+          count++;
+        }
+
         trigger.setAttribute('data-modal-trigger', modalTriggerName);
         modal.setAttribute('data-modal', modalTriggerName);
-        count++;
         trigger.addEventListener('click', function (event) {
           document.body.classList.add('modal__is-open');
           var modalTrigger = trigger.dataset.modalTrigger;

@@ -760,11 +760,17 @@ if(anchorTarget == "#courses__postgraduate")
       
       if(modal && modal != undefined){
 
-        var modalTriggerName = modalTrigger + "-" + count;
+        if(trigger.hasAttribute("data-modal-trigger-isunique")) {
+          var modalTriggerName = modalTrigger;
+        }
+        else{
+          var modalTriggerName = modalTrigger + "-" + count;
+          count++;
+        }
+
 
         trigger.setAttribute('data-modal-trigger', modalTriggerName);
         modal.setAttribute('data-modal', modalTriggerName);
-        count++;
   
         trigger.addEventListener('click', function (event) {
           document.body.classList.add('modal__is-open');
