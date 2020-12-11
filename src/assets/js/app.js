@@ -757,38 +757,39 @@ if(anchorTarget == "#courses__postgraduate")
 
       var modalTrigger = trigger.dataset.modalTrigger;
       var modal = document.querySelector("[data-modal=\"".concat(modalTrigger, "\"]"));
-
-      trigger.setAttribute('data-modal-trigger', modalTrigger + "-" + count);
-      modal.setAttribute('data-modal', modalTrigger + "-" + count);
-      count++;
-
-      trigger.addEventListener('click', function (event) {
-        document.body.classList.add('modal__is-open');
-        var modalTrigger = trigger.dataset.modalTrigger;
-        var modal = document.querySelector("[data-modal=\"".concat(modalTrigger, "\"]"));
-
-        modal.classList.add('is-open');
-        
-        var video = modal.querySelector("[data-video-src]"); 
-        var hasVideo = video && video != undefined;
-
-        if(hasVideo) {
-          video.setAttribute('src', video.dataset.videoSrc);
-        }
-
-        modal.querySelector('[data-modal-close]').addEventListener('click', function () {
-          modal.classList.remove('is-open');
-          document.body.classList.remove('modal__is-open');
+      
+      if(modal && modal != undefined){
+        trigger.setAttribute('data-modal-trigger', modalTrigger + "-" + count);
+        modal.setAttribute('data-modal', modalTrigger + "-" + count);
+        count++;
+  
+        trigger.addEventListener('click', function (event) {
+          document.body.classList.add('modal__is-open');
+          var modalTrigger = trigger.dataset.modalTrigger;
+          var modal = document.querySelector("[data-modal=\"".concat(modalTrigger, "\"]"));
+  
+          modal.classList.add('is-open');
           
+          var video = modal.querySelector("[data-video-src]"); 
+          var hasVideo = video && video != undefined;
+  
           if(hasVideo) {
-            video.removeAttribute('src');
+            video.setAttribute('src', video.dataset.videoSrc);
           }
-
+  
+          modal.querySelector('[data-modal-close]').addEventListener('click', function () {
+            modal.classList.remove('is-open');
+            document.body.classList.remove('modal__is-open');
+            
+            if(hasVideo) {
+              video.removeAttribute('src');
+            }
+  
+          });
+          event.preventDefault();
+          sliderReInit(document.querySelector("[data-modal=\"".concat(modalTrigger, "\"] .modal-slider")), modal);
         });
-        
-        event.preventDefault();
-        sliderReInit(document.querySelector("[data-modal=\"".concat(modalTrigger, "\"] .modal-slider")), modal);
-      });
+      }    
     });
   };
 
