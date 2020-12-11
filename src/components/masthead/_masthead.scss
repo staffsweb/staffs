@@ -82,6 +82,7 @@
         background: rgba(black, 0.75);
         @supports (backdrop-filter: blur(1em)) {
           background: rgba(black, 0.6);
+          min-height: 310px;
         }
         backdrop-filter: blur(1em);
       }
