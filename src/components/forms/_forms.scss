@@ -98,3 +98,33 @@ select {
     }
   }
 }
+
+.sys_form-submit {
+  @include button;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.sys_fieldlabel, .sys_legend, .sys_sectionbreak-header {
+  font-weight: 500;
+}
+
+.sys_cms-form-body {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.sys_namesubelement {
+  float: left;
+  margin-right: $spacing-md;
+}
+
+.sys_cms-form-validationsummary {
+  color: $primary;
+
+  & a {
+    color: $primary;
+  }
+}

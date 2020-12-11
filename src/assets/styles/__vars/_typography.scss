@@ -135,7 +135,7 @@ $border-accent-width: $spacing-2xs;
     border-bottom: 1px solid $grey--light!important;
 
     &:hover {
-      text-decoration: none;
+      text-decoration: none!important;
     }
   }
 
