@@ -6848,13 +6848,12 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     searchInit();
     autocompleteInit();
     modal();
+    toggleSlide('[data-course-modules-trigger]', scrollToTop);
   });
   $(window).on('DOMContentLoaded', function () {
     // event triggers once DOM is loaded but before stylesheets are applied
     removeExistingSvgFills('.card--ksp');
-    removeExistingSvgFills('.iconBox__icon'); //Course Tabs
-
-    toggleSlide('[data-course-modules-trigger]', scrollToTop);
+    removeExistingSvgFills('.iconBox__icon');
   });
   $(window).on('load', function () {
     // correct anything loaded on DOM load which might need adjusting (mostly once images have loaded)
