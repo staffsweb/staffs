@@ -1673,7 +1673,7 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .social-links .icon { width: 2rem; height: 2rem; }
 
-.social-links a { text-decoration: none; }
+.social-links a { text-decoration: none; border-bottom: 0; }
 
 .table--modules thead td, .table--modules thead th { background: #41464b; color: white; }
 
