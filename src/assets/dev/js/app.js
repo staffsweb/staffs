@@ -6839,6 +6839,42 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     }, 200);
   };
 
+  var stopFlag = false;
+
+  var toggleVariant = function toggleVariant() {
+    $('input[name=award-type]').on('change', function (e) {
+      if (stopFlag == false) {
+        var newId = $(this).val();
+        var activeAward = $('*[data-award="' + newId + '"]');
+        console.log("Award = " + $(this).val());
+        $('*[data-award]').not(activeAward.show()).hide().removeClass('activeSelect');
+        $('*[data-award] input').attr('selected', false);
+        $('select[data-award^=' + newId + ']').addClass('activeSelect');
+        var awardSelectorElm = $('[data-award="' + newId + '"] input[name=study-option]').first();
+        awardSelectorElm.attr('selected', true);
+        awardSelectorElm.trigger('change');
+      }
+
+      stopFlag = false;
+    });
+    $('input[name=study-option]').on('change', function () {
+      if (stopFlag == false) {
+        var activeOption = $(this).val();
+        console.log("Mode of study = " + activeOption);
+        var activeMode = $('*[data-mode="' + activeOption + '"]');
+        $('*[data-mode]').not(activeMode.show()).hide(); //Refresh sliders         
+
+        $(".sits-course-modules").each(function () {
+          $(this).slick("getSlick").refresh();
+        }); // CG: Refresh the Unistats iframe, if necessary
+
+        $("[data-mode='" + activeOption + "'] #unistats-widget-frame").attr("src", $("[data-mode='" + activeOption + "'] #unistats-widget-frame").attr("src"));
+      }
+
+      stopFlag = false;
+    });
+  };
+
   $(document).ready(function () {
     megaNavInit();
     tabsInit();
@@ -6848,13 +6884,13 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     searchInit();
     autocompleteInit();
     modal();
+    toggleVariant();
+    toggleSlide('[data-course-modules-trigger]', scrollToTop);
   });
   $(window).on('DOMContentLoaded', function () {
     // event triggers once DOM is loaded but before stylesheets are applied
     removeExistingSvgFills('.card--ksp');
-    removeExistingSvgFills('.iconBox__icon'); //Course Tabs
-
-    toggleSlide('[data-course-modules-trigger]', scrollToTop);
+    removeExistingSvgFills('.iconBox__icon');
   });
   $(window).on('load', function () {
     // correct anything loaded on DOM load which might need adjusting (mostly once images have loaded)
