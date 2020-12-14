@@ -6841,18 +6841,59 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
   var stopFlag = false;
 
-  var toggleVariant = function toggleVariant() {
+  function getURLParameter(name) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(window.location.href);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+  }
+
+  ;
+
+  var toggleVariantFromUrl = function toggleVariantFromUrl() {
+    // CG: Switch tabs on hash, but don't scroll to them
+    if (window.location.hash) {
+      $(".tab__item a[href='" + window.location.hash + "']").click();
+    } // CG: Switch to variant via URL
+
+
+    if (typeof mode == "undefined" && typeof award == "undefined") {
+      var mode = "";
+      var award = "";
+    }
+
+    mode = getURLParameter("m");
+    award = getURLParameter("a");
+
+    if (mode != "" && award != "") {
+      //stopFlag = true;
+      console.log('award (via URL parameter) = ' + award);
+      console.log('mode (via URL parameter) = ' + mode);
+      var matchingStudyOption = $('[data-award="' + award + '"] input[value=' + mode + ']'); // Do the switch over only if there's at lead one valid option
+
+      if (matchingStudyOption.length > 0) {
+        // If there are, do the switchover
+        $('input[value=' + award + ']').trigger('change');
+        matchingStudyOption.trigger('change');
+      }
+    }
+
+    ;
+  };
+
+  var toggleVariantInit = function toggleVariantInit() {
     $('input[name=award-type]').on('change', function (e) {
       if (stopFlag == false) {
         var newId = $(this).val();
         var activeAward = $('*[data-award="' + newId + '"]');
         console.log("Award = " + $(this).val());
-        $('*[data-award]').not(activeAward.show()).hide().removeClass('activeSelect');
-        $('*[data-award] input').attr('selected', false);
-        $('select[data-award^=' + newId + ']').addClass('activeSelect');
-        var awardSelectorElm = $('[data-award="' + newId + '"] input[name=study-option]').first();
-        awardSelectorElm.attr('selected', true);
-        awardSelectorElm.trigger('change');
+        $('*[data-award]').not(activeAward.show()).hide();
+        $('*[data-award] input').prop('checked', false);
+        $(this).prop('checked', true);
+        var studyOptionElm = $('[data-award="' + newId + '"] input[name=study-option]').first();
+        studyOptionElm.trigger('change');
       }
 
       stopFlag = false;
@@ -6869,10 +6910,42 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         }); // CG: Refresh the Unistats iframe, if necessary
 
         $("[data-mode='" + activeOption + "'] #unistats-widget-frame").attr("src", $("[data-mode='" + activeOption + "'] #unistats-widget-frame").attr("src"));
+        $(this).prop('checked', true);
       }
 
       stopFlag = false;
     });
+  };
+
+  var visualizerInit = function visualizerInit() {
+    if (getURLParameter("visualizer") == "true") {
+      $('[data-source]').each(function () {
+        if (!$(this).hasClass('course-details_usp')) {
+          $(this).css('position', 'relative');
+        }
+
+        $(this).prepend('<div class="source-label">' + $(this).data('source') + '</div>');
+        $(this).addClass('element-outline');
+      });
+      $('[data-source]').hover(function () {
+        $(this).addClass('source-outline');
+        $('#source-indicator__source').text($(this).data('source'));
+        $('#source-indicator__field').text($(this).data('field'));
+        $('#source-indicator').show();
+      }, function () {
+        $(this).removeClass('source-outline');
+        $('#source-indicator__source').text('');
+        $('#source-indicator__field').text('');
+        $('#source-indicator').hide();
+      });
+      $(document).mousemove(function (e) {
+        var item = $('#source-indicator');
+        item.css({
+          left: e.pageX + 10,
+          top: e.pageY + 10
+        });
+      });
+    }
   };
 
   $(document).ready(function () {
@@ -6884,11 +6957,13 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     searchInit();
     autocompleteInit();
     modal();
-    toggleVariant();
+    toggleVariantInit();
+    visualizerInit();
     toggleSlide('[data-course-modules-trigger]', scrollToTop);
   });
   $(window).on('DOMContentLoaded', function () {
     // event triggers once DOM is loaded but before stylesheets are applied
+    toggleVariantFromUrl();
     removeExistingSvgFills('.card--ksp');
     removeExistingSvgFills('.iconBox__icon');
   });
