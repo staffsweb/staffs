@@ -6906,7 +6906,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         $('*[data-mode]').not(activeMode.show()).hide(); //Refresh sliders         
 
         $(".sits-course-modules").each(function () {
-          $(this).slick("getSlick").refresh();
+          $(this).slick('reinit');
         }); // CG: Refresh the Unistats iframe, if necessary
 
         $("[data-mode='" + activeOption + "'] #unistats-widget-frame").attr("src", $("[data-mode='" + activeOption + "'] #unistats-widget-frame").attr("src"));
