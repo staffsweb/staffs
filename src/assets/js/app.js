@@ -940,6 +940,23 @@ if(anchorTarget == "#courses__postgraduate")
     }  
   };
 
+  var countrySubmit = function countrySubmit() {
+      $('#countrySubmit').on("click", function (e) {
+        e.preventDefault();
+        var countryPagePath = document.getElementById('countryPicker').value;
+        if (countryPagePath == "") {
+            return false;
+        } 
+        $('#form1').on('submit', function (e) {
+            e.preventDefault();
+        });
+        e.stopImmediatePropagation();
+        if (countryPagePath != "") {
+            window.location.href = window.location.protocol + "//" + window.location.hostname + countryPagePath;
+        }
+    });
+  };
+
   $(document).ready(function () {
     megaNavInit();
     tabsInit();
@@ -952,6 +969,7 @@ if(anchorTarget == "#courses__postgraduate")
     toggleVariantInit();
     visualizerInit();
     toggleSlide('[data-course-modules-trigger]', scrollToTop);
+    countrySubmit();
   });
   $(window).on('DOMContentLoaded', function () {
     // event triggers once DOM is loaded but before stylesheets are applied

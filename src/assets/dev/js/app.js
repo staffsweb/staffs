@@ -6948,6 +6948,26 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     }
   };
 
+  var countrySubmit = function countrySubmit() {
+    $('#countrySubmit').on("click", function (e) {
+      e.preventDefault();
+      var countryPagePath = document.getElementById('countryPicker').value;
+
+      if (countryPagePath == "") {
+        return false;
+      }
+
+      $('#form1').on('submit', function (e) {
+        e.preventDefault();
+      });
+      e.stopImmediatePropagation();
+
+      if (countryPagePath != "") {
+        window.location.href = window.location.protocol + "//" + window.location.hostname + countryPagePath;
+      }
+    });
+  };
+
   $(document).ready(function () {
     megaNavInit();
     tabsInit();
@@ -6960,6 +6980,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     toggleVariantInit();
     visualizerInit();
     toggleSlide('[data-course-modules-trigger]', scrollToTop);
+    countrySubmit();
   });
   $(window).on('DOMContentLoaded', function () {
     // event triggers once DOM is loaded but before stylesheets are applied
