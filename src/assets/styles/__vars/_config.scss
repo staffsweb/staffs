@@ -1,4 +1,4 @@
-$image-theme-directory: '/site/images'; // this is overridden if using a theme which requires different images (eg. London)
+$image-theme-directory: '//www.staffs.ac.uk/site/images'; // this is overridden if using a theme which requires different images (eg. London)
 $image-theme-directory-icon: '#{$image-theme-directory}/icons';
 
 $link-image-hover-opacity: 0.9;

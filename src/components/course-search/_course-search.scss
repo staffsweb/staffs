@@ -20,6 +20,12 @@
         font-weight: bold;
         padding: 0 $spacing-xs;
     }
+    & section {
+        margin: 0;
+    }
+    & h3 {
+        margin: $spacing-lg 0 $spacing-md;
+    }
 }
 @media (min-width: $third-breakpoint) {
     .course-search {
@@ -33,6 +39,14 @@
         }
         select {
             max-width: 30%;
+        }
+        &__subject-list {
+            -moz-column-count: 3;
+            -moz-column-gap: $spacing-md;
+            -webkit-column-count: 3;
+            -webkit-column-gap: $spacing-md;
+            column-count: 3;
+            column-gap: $spacing-md;
         }
     }
 }
