@@ -6760,7 +6760,10 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     if (pathElms && pathElms !== undefined && pathElms.length !== 0) {
       for (var x = 0; x < pathElms.length; x++) {
         pathElms[x].style.removeProperty('fill');
-        pathElms[x].removeAttribute('fill');
+
+        if (pathElms[x].getAttribute('fill') !== 'none') {
+          pathElms[x].removeAttribute('fill');
+        }
       }
     }
   };
