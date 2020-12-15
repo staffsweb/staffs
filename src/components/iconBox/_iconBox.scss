@@ -72,3 +72,11 @@ a.iconBox {
     }
   }
 }
+
+.grid-3-cols {
+
+  & .iconBox__icon svg {
+    vertical-align: top;
+  }
+
+}

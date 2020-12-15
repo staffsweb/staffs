@@ -1239,6 +1239,8 @@ a.iconBox:hover { color: white; }
 
 a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
+.grid-3-cols .iconBox__icon svg { vertical-align: top; }
+
 .list--unbulleted, .list--unstyled { list-style: none; padding-left: 0; }
 
 .list--spaced > li { margin-bottom: 1.5rem; }
