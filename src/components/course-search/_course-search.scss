@@ -23,7 +23,7 @@
     & section {
         margin: 0;
     }
-    & h3 {
+    & h3:not([class]) {
         margin: $spacing-lg 0 $spacing-md;
     }
 }
