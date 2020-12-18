@@ -2245,6 +2245,8 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .pathway-container .slick-slide { padding-right: 20px; }
 
+.pathway-container .slick-slide .modules-link.align-right { max-width: none; }
+
 .tabs { margin-bottom: 2rem; border-bottom: 0.25rem solid #394851; padding-bottom: 0.75rem; }
 
 .tabs__nav { margin: 0 -1px 0 0; border-bottom: 3px solid #394851; text-align: center; }
