@@ -6816,6 +6816,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     var courseModulesTriggers = document.querySelectorAll(query);
     courseModulesTriggers.forEach(function (trigger) {
       trigger.addEventListener('click', function (event) {
+        event.preventDefault();
         var elmId = trigger.getAttribute('href').replace('#', '');
 
         if (elmId && elmId != undefined) {

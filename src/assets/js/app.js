@@ -809,6 +809,7 @@ if(anchorTarget == "#courses__postgraduate")
 
     courseModulesTriggers.forEach(function (trigger) {
       trigger.addEventListener('click', function (event) {
+        event.preventDefault();
         var elmId = trigger.getAttribute('href').replace('#', '');
         if(elmId && elmId != undefined) {
 
