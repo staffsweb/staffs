@@ -405,12 +405,26 @@ if(anchorTarget == "#courses__postgraduate")
   };
 
   let sliderReInit = function (sliderElm, elmWithRefreshId) {
-    var isSliderRefreshed = parseInt(elmWithRefreshId.dataset.sliderIsrefreshed);
-    if(isSliderRefreshed === 0) {
+
+    var isReset = false;
+    var hasAttribute = false;
+
+    if(!elmWithRefreshId.hasAttribute("data-slider-isrefreshed")) {
+      isReset = true;
+    }
+    else {
+      var isSliderRefreshed = parseInt(elmWithRefreshId.dataset.sliderIsrefreshed);
+      isReset = isSliderRefreshed === 0;
+      hasAttribute = true;
+    }
+    
+    if(isReset) {
       var slider = $(sliderElm);
       if(slider) {
         slider.slick('reinit');
-        elmWithRefreshId.setAttribute("data-slider-isrefreshed", 1);
+        if(hasAttribute) {
+          elmWithRefreshId.setAttribute("data-slider-isrefreshed", 1);
+        }
       }
     }
   }
