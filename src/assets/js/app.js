@@ -555,7 +555,7 @@ if(anchorTarget == "#courses__postgraduate")
               collection : 'staffordshire-coursetitles',
               profile : 'auto-completion',
               form : 'qc',
-              meta_V_and: $("#course-search__level").find(":selected").val(),
+              meta_V_and: $("#course-search__level").find(":selected").val() != null ? $("#course-search__level").find(":selected").val() : $("#course-search__level").val(),
               sort : 'dmetaV' // CG: Sorts by level of study, with UG first
             },
             success: function(data) {
