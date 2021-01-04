@@ -78,4 +78,10 @@ table {
 
 .pathway-container .slick-slide {
   padding-right: 20px;
+
+  & .modules-link {
+    &.align-right {
+      max-width: none;
+    }
+  } 
 }

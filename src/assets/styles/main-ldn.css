@@ -1297,7 +1297,8 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 @media (min-width: 60rem) { .masthead__overlay { background: none; padding: 0; margin-bottom: 1.5rem; }
   .masthead__overlayInner { margin: 0 -1.5rem; padding: 1.5rem 1.5rem 0; background: rgba(0, 0, 0, 0.75); -webkit-backdrop-filter: blur(1em); backdrop-filter: blur(1em); }
-  @supports ((-webkit-backdrop-filter: blur(1em)) or (backdrop-filter: blur(1em))) { .masthead__overlayInner { background: rgba(0, 0, 0, 0.6); min-height: 340px; } } }
+  @supports ((-webkit-backdrop-filter: blur(1em)) or (backdrop-filter: blur(1em))) { .masthead__overlayInner { background: rgba(0, 0, 0, 0.6); min-height: 340px; } }
+  .masthead__overlayInner .meta--inline dd::before { display: none; } }
 
 .masthead--has-blurredBg .masthead__overlay { background: rgba(0, 0, 0, 0.75); }
 
@@ -1695,6 +1696,8 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
   .table--apply__buttonCell { flex: 1 1 100%; } }
 
 .pathway-container .slick-slide { padding-right: 20px; }
+
+.pathway-container .slick-slide .modules-link.align-right { max-width: none; }
 
 .tabs { margin-bottom: 2rem; border-bottom: 0.25rem solid #41464b; padding-bottom: 0.75rem; }
 

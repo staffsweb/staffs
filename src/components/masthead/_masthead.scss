@@ -85,6 +85,10 @@
           min-height: 340px;
         }
         backdrop-filter: blur(1em);
+
+        & .meta--inline dd::before {
+          display: none;
+        }
       }
     }
   }

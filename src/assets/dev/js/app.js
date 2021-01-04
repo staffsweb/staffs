@@ -6446,14 +6446,26 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   };
 
   var sliderReInit = function sliderReInit(sliderElm, elmWithRefreshId) {
-    var isSliderRefreshed = parseInt(elmWithRefreshId.dataset.sliderIsrefreshed);
+    var isReset = false;
+    var hasAttribute = false;
 
-    if (isSliderRefreshed === 0) {
+    if (!elmWithRefreshId.hasAttribute("data-slider-isrefreshed")) {
+      isReset = true;
+    } else {
+      var isSliderRefreshed = parseInt(elmWithRefreshId.dataset.sliderIsrefreshed);
+      isReset = isSliderRefreshed === 0;
+      hasAttribute = true;
+    }
+
+    if (isReset) {
       var slider = $(sliderElm);
 
       if (slider) {
         slider.slick('reinit');
-        elmWithRefreshId.setAttribute("data-slider-isrefreshed", 1);
+
+        if (hasAttribute) {
+          elmWithRefreshId.setAttribute("data-slider-isrefreshed", 1);
+        }
       }
     }
   };
@@ -6816,6 +6828,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     var courseModulesTriggers = document.querySelectorAll(query);
     courseModulesTriggers.forEach(function (trigger) {
       trigger.addEventListener('click', function (event) {
+        event.preventDefault();
         var elmId = trigger.getAttribute('href').replace('#', '');
 
         if (elmId && elmId != undefined) {
