@@ -157,6 +157,13 @@
               }
               break;
 
+            case keyMap.ENTER:
+              if (!item.hasClass('is-expanded')) {
+                e.preventDefault();
+                expandChildren(item);
+              }
+              break;
+
             case keyMap.DOWN:
               e.preventDefault();
               if (item.hasClass('is-expanded')) {
@@ -213,6 +220,13 @@
               if (item.hasClass('is-expanded')) {
                 collapseChildren(item);
               } else {
+                expandChildren(item);
+              }
+              break;
+
+            case keyMap.ENTER:
+              if (!item.hasClass('is-expanded')) {
+                e.preventDefault();
                 expandChildren(item);
               }
               break;
