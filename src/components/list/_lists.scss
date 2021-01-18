@@ -92,6 +92,53 @@
   }
 }
 
+.list--steps {
+  list-style: none;
+  padding-inline-start: $spacing-xl;
+  counter-reset: list--steps;
+  margin-bottom: $spacing-4xl;
+
+  li {
+    position: relative;
+    border-left: $border-accent-width solid $neutral--primary;
+    padding-left: $spacing-xl;
+    margin-bottom: $spacing-2xl;
+
+    &::before {
+      content: counter(list--steps);
+      counter-increment: list--steps;
+      display: block;
+      float: left;
+      clear: left;
+      margin-left: -#{$spacing-2xl + $spacing-xl};
+      width: $spacing-2xl;
+      padding: $spacing-2xs 0;
+      background: $neutral--primary;
+      color: white;
+      @include typescale('xl');
+      line-height: 1.4; // matches .title
+      text-align: center;
+    }
+
+  }
+
+  &__box {
+    background: $greyblue--superlight;
+    padding: calc(#{$spacing-sm} + 2.5%);
+    margin-left: -$spacing-xl;
+  }
+
+  &__title {
+  }
+
+  &__cta {
+    .button:only-child {
+      margin-bottom: 0;
+    }
+  }
+
+}
+
 
 
 //.list-bordered-items {
