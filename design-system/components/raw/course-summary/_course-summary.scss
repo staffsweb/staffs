@@ -1,0 +1,61 @@
+.course-summary {
+    padding: $spacing-md $spacing-xl;
+    background-color: $offwhite;
+    margin-top: $spacing-3xl;
+}
+.pie-chart {
+    width: 200px;
+
+    & .pie {
+        -webkit-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+        width: 200px;
+        height: 200px;
+        background: #F4F4F4;
+        border-radius: 50%;
+        margin-bottom: 2rem;
+
+        & circle {
+            fill: none;
+            stroke: #F4F4F4;
+            stroke-width: 99;
+            -webkit-animation: rotate 1.5s ease-in;
+                    animation: rotate 1.5s ease-in;
+          }
+        & .circle-1 {
+            stroke: #D20052;
+          }
+        & .circle-2 {
+            stroke: #394851;
+          }
+
+        & .circle-3 {
+            stroke: #C3C1C1;
+        }
+      }
+           
+      & .pie-chart_key {
+        margin: 0.5rem 0;
+
+        & .key-color {
+            display: inline-block;
+            width: 17px;
+            height: 17px;
+            margin-right: 0.5rem;
+          }
+
+          & .key-color.key-1 {
+            background: #D20052;
+          }
+
+          & .key-color.key-2 {
+            background: #394851;
+          }
+
+          & .key-color.key-3 {
+            background: #C3C1C1;
+          }
+      }
+  }
+  
+  

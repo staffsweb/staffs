@@ -12,6 +12,11 @@
     text-decoration: none;
   }
 
+  li a:not([class]), li a[class*="sys_"] {
+    border-bottom: 0;
+    font-weight: 300;
+  }
+
   h6 {
     margin-top: $spacing-lg;
   }

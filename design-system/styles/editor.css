@@ -26,7 +26,11 @@ a img { border: 0px; }
 
 a[href^="mailto"], .url { word-break: break-word; }
 
-p a:not([class]) { text-decoration: none; font-weight: 500; border-bottom: 1px solid #dddddd; }
+p a:not([class]), p a[class*="sys_"], li a:not([class]), li a[class*="sys_"], td a:not([class]), td a[class*="sys_"], dd a:not([class]), dd a[class*="sys_"] { text-decoration: none; font-weight: 500; border-bottom: 1px solid #dddddd; }
+
+.link--standard { font-weight: 500 !important; border-bottom: 1px solid #dddddd !important; }
+
+.link--standard:hover { text-decoration: none !important; }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { line-height: 1.2; font-weight: 500; }
 
@@ -210,5 +214,10 @@ a.tag:hover { text-decoration: underline; color: black; }
 .button[disabled] { opacity: 0.75; border-color: #ccc; background: #ccc; background-position: 0% bottom; color: #aaa; cursor: not-allowed; }
 
 html { font-size: 100%; -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+.accordion .sys_placeholder-accordionRow { border: 2px solid #394851 !important; }
+
+/* Single Col */
+div[class*="-12"].column { padding: 0 0.75rem; }
 
 /*# sourceMappingURL=editor.css.map */

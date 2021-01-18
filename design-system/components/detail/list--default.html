@@ -306,6 +306,53 @@
   }
 }
 
+<span class="hljs-selector-class">.list--steps</span> {
+  <span class="hljs-attribute">list-style</span>: none;
+  <span class="hljs-attribute">padding</span>-inline-start: <span class="hljs-variable">$spacing-xl</span>;
+  <span class="hljs-attribute">counter-reset</span>: list--steps;
+  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-variable">$spacing-4xl</span>;
+
+  <span class="hljs-selector-tag">li</span> {
+    <span class="hljs-attribute">position</span>: relative;
+    <span class="hljs-attribute">border-left</span>: <span class="hljs-variable">$border-accent-width</span> solid <span class="hljs-variable">$neutral--primary</span>;
+    <span class="hljs-attribute">padding-left</span>: <span class="hljs-variable">$spacing-xl</span>;
+    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-variable">$spacing-2xl</span>;
+
+    &amp;<span class="hljs-selector-pseudo">::before</span> {
+      <span class="hljs-attribute">content</span>: counter(list--steps);
+      <span class="hljs-attribute">counter-increment</span>: list--steps;
+      <span class="hljs-attribute">display</span>: block;
+      <span class="hljs-attribute">float</span>: left;
+      <span class="hljs-attribute">clear</span>: left;
+      <span class="hljs-attribute">margin-left</span>: -#{<span class="hljs-variable">$spacing-2xl</span> + <span class="hljs-variable">$spacing-xl</span>};
+      <span class="hljs-attribute">width</span>: <span class="hljs-variable">$spacing-2xl</span>;
+      <span class="hljs-attribute">padding</span>: <span class="hljs-variable">$spacing-2xs</span> <span class="hljs-number">0</span>;
+      <span class="hljs-attribute">background</span>: <span class="hljs-variable">$neutral--primary</span>;
+      <span class="hljs-attribute">color</span>: white;
+      <span class="hljs-keyword">@include</span> typescale(<span class="hljs-string">'xl'</span>);
+      <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.4</span>; <span class="hljs-comment">// matches .title</span>
+      <span class="hljs-attribute">text-align</span>: center;
+    }
+
+  }
+
+  &amp;__box {
+    <span class="hljs-attribute">background</span>: <span class="hljs-variable">$greyblue--superlight</span>;
+    <span class="hljs-attribute">padding</span>: calc(#{<span class="hljs-variable">$spacing-sm</span>} + <span class="hljs-number">2.5%</span>);
+    <span class="hljs-attribute">margin-left</span>: -<span class="hljs-variable">$spacing-xl</span>;
+  }
+
+  &amp;__title {
+  }
+
+  &amp;__cta {
+    <span class="hljs-selector-class">.button</span><span class="hljs-selector-pseudo">:only-child</span> {
+      <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
+    }
+  }
+
+}
+
 
 
 <span class="hljs-comment">//.list-bordered-items {</span>
@@ -383,7 +430,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2.2 KB</span>
+                    <span class="Meta-value">3.2 KB</span>
                 </li>
             </ul>
         </div>
@@ -406,7 +453,7 @@
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Variants <em class="Meta-count">(7)</em>:</strong>
+            <strong class="Meta-key">Variants <em class="Meta-count">(8)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="">
@@ -431,6 +478,10 @@
             
                 <a href="list--ordered.html">
                     <span>Ordered</span>
+                </a>, 
+            
+                <a href="list--steps.html">
+                    <span>Steps</span>
                 </a>, 
             
                 <a href="list--unstyled.html">
@@ -2443,8 +2494,56 @@
         </li>
         
     
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="course-search--with-subject-areas.html" data-pjax>
+                <span>With Subject Areas</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
 
             </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="course-summary.html" data-pjax>
+                <span>Course Summary</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
         </li>
         
     
@@ -3032,6 +3131,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="list--ordered.html" data-pjax>
                 <span>Ordered</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="list--steps.html" data-pjax>
+                <span>Steps</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -3729,6 +3852,30 @@
         
     
         
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="ratio.html" data-pjax>
+                <span>Ratio</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-section-header">
             <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-section-header-items">
                 Section Header
@@ -3837,6 +3984,30 @@
     
 
             </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="side-navigation.html" data-pjax>
+                <span>Side Navigation</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
         </li>
         
     
@@ -4133,6 +4304,30 @@
     
 
             </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="social-links.html" data-pjax>
+                <span>Social Links</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
         </li>
         
     

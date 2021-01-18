@@ -2,6 +2,12 @@
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
+// CG: Allow switching of PG course tab in subject pages, but don't scroll to the anchor
+var anchorTarget = window.location.hash;
+
+if (anchorTarget == "#courses__postgraduate") {
+  window.location.hash = "";
+}
 /* global Waypoint, console */
 // @TODO: Learn to module bundle properly and manage dependencies with a proper
 // package manager 🤦
@@ -42,6 +48,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
  * @param  selector    selector OR undefined
  * @author Brian Cherne <brian(at)cherne(dot)net>
  */
+
+
 ;
 
 (function (factory) {
@@ -6258,8 +6266,23 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         // sliders?
 
         Waypoint.refreshAll(); // height is liable to change, so we need to refresh these
+
+        var sliders = $(targetHref).find('.js-slider--generic');
+
+        if (sliders && sliders.length != 0) {
+          $(sliders).each(function () {
+            var sliderElm = this;
+            sliderReInit(sliderElm, $(targetHref).get(0));
+          });
+        }
       });
       Waypoint.refreshAll(); // tabs' content may change the height of the page, thus these need to be recalculated
+      // CG: Check if we need to switch to a tab via a URL fragment
+
+      if (anchorTarget == "#courses__postgraduate") {
+        $('.tabs__link[href="#courses__postgraduate"]', tabs).trigger('click');
+        window.scrollTo(0, 0);
+      }
     });
   };
 
@@ -6422,11 +6445,28 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     Waypoint.refreshAll(); // sliders' content may change the height of the page, thus these need to be recalculated
   };
 
-  var sliderReInit = function sliderReInit(sliderCssSelector) {
-    var slider = $(sliderCssSelector);
+  var sliderReInit = function sliderReInit(sliderElm, elmWithRefreshId) {
+    var isReset = false;
+    var hasAttribute = false;
 
-    if (slider) {
-      slider.slick('reinit');
+    if (!elmWithRefreshId.hasAttribute("data-slider-isrefreshed")) {
+      isReset = true;
+    } else {
+      var isSliderRefreshed = parseInt(elmWithRefreshId.dataset.sliderIsrefreshed);
+      isReset = isSliderRefreshed === 0;
+      hasAttribute = true;
+    }
+
+    if (isReset) {
+      var slider = $(sliderElm);
+
+      if (slider) {
+        slider.slick('reinit');
+
+        if (hasAttribute) {
+          elmWithRefreshId.setAttribute("data-slider-isrefreshed", 1);
+        }
+      }
     }
   };
 
@@ -6559,7 +6599,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
             collection: 'staffordshire-coursetitles',
             profile: 'auto-completion',
             form: 'qc',
-            meta_V_and: $("#course-search__level").find(":selected").val(),
+            meta_V_and: $("#course-search__level").find(":selected").val() != null ? $("#course-search__level").find(":selected").val() : $("#course-search__level").val(),
             sort: 'dmetaV' // CG: Sorts by level of study, with UG first
 
           },
@@ -6727,33 +6767,220 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   };
 
   var removeExistingSvgFills = function removeExistingSvgFills(parentClass) {
-    var pathElms = document.querySelectorAll(parentClass + " svg path");
+    var pathElms = document.querySelectorAll(parentClass + " svg path" + ", " + parentClass + " svg g");
 
     if (pathElms && pathElms !== undefined && pathElms.length !== 0) {
       for (var x = 0; x < pathElms.length; x++) {
         pathElms[x].style.removeProperty('fill');
+
+        if (pathElms[x].getAttribute('fill') !== 'none') {
+          pathElms[x].removeAttribute('fill');
+        }
       }
     }
   };
 
   var modal = function modal() {
     var modalTriggers = document.querySelectorAll('[data-modal-trigger]');
+    var count = 1;
     modalTriggers.forEach(function (trigger) {
-      trigger.addEventListener('click', function (event) {
-        var modalTrigger = trigger.dataset.modalTrigger;
-        var modal = document.querySelector("[data-modal=\"".concat(modalTrigger, "\"]"));
-        modal.classList.add('is-open');
-        modal.querySelector('[data-modal-close]').addEventListener('click', function () {
-          modal.classList.remove('is-open');
-        });
-        event.preventDefault();
-        var isSliderRefreshed = parseInt(modal.dataset.sliderIsrefreshed);
+      var modalTrigger = trigger.dataset.modalTrigger;
+      var modal = document.querySelector("[data-modal=\"".concat(modalTrigger, "\"]"));
 
-        if (isSliderRefreshed === 0) {
-          sliderReInit("[data-modal=\"".concat(modalTrigger, "\"] .modal-slider"));
-          modal.setAttribute("data-slider-isrefreshed", 1);
+      if (modal && modal != undefined) {
+        if (trigger.hasAttribute("data-modal-trigger-isunique")) {
+          var modalTriggerName = modalTrigger;
+        } else {
+          var modalTriggerName = modalTrigger + "-" + count;
+          count++;
+        }
+
+        trigger.setAttribute('data-modal-trigger', modalTriggerName);
+        modal.setAttribute('data-modal', modalTriggerName);
+        trigger.addEventListener('click', function (event) {
+          document.body.classList.add('modal__is-open');
+          var modalTrigger = trigger.dataset.modalTrigger;
+          var modal = document.querySelector("[data-modal=\"".concat(modalTrigger, "\"]"));
+          modal.classList.add('is-open');
+          var video = modal.querySelector("[data-video-src]");
+          var hasVideo = video && video != undefined;
+
+          if (hasVideo) {
+            video.setAttribute('src', video.dataset.videoSrc);
+          }
+
+          modal.querySelector('[data-modal-close]').addEventListener('click', function () {
+            modal.classList.remove('is-open');
+            document.body.classList.remove('modal__is-open');
+
+            if (hasVideo) {
+              video.removeAttribute('src');
+            }
+          });
+          event.preventDefault();
+          sliderReInit(document.querySelector("[data-modal=\"".concat(modalTrigger, "\"] .modal-slider")), modal);
+        });
+      }
+    });
+  };
+
+  var toggleSlide = function toggleSlide(query, callback) {
+    var courseModulesTriggers = document.querySelectorAll(query);
+    courseModulesTriggers.forEach(function (trigger) {
+      trigger.addEventListener('click', function (event) {
+        event.preventDefault();
+        var elmId = trigger.getAttribute('href').replace('#', '');
+
+        if (elmId && elmId != undefined) {
+          var targetElm = document.getElementById(elmId);
+
+          if (targetElm && targetElm != undefined) {
+            targetElm.classList.add('hidden');
+            var hiddenElm = document.getElementById(trigger.dataset.courseModulesTrigger);
+
+            if (hiddenElm && hiddenElm != undefined) {
+              hiddenElm.classList.remove('hidden');
+              callback(hiddenElm);
+            }
+          }
         }
       });
+    });
+  };
+
+  var scrollToTop = function scrollToTop(elm) {
+    var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 100;
+    $('html, body').animate({
+      scrollTop: $(elm).offset().top - offset
+    }, 200);
+  };
+
+  var stopFlag = false;
+
+  function getURLParameter(name) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(window.location.href);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+  }
+
+  ;
+
+  var toggleVariantFromUrl = function toggleVariantFromUrl() {
+    // CG: Switch tabs on hash, but don't scroll to them
+    if (window.location.hash) {
+      $(".tab__item a[href='" + window.location.hash + "']").click();
+    } // CG: Switch to variant via URL
+
+
+    if (typeof mode == "undefined" && typeof award == "undefined") {
+      var mode = "";
+      var award = "";
+    }
+
+    mode = getURLParameter("m");
+    award = getURLParameter("a");
+
+    if (mode != "" && award != "") {
+      //stopFlag = true;
+      console.log('award (via URL parameter) = ' + award);
+      console.log('mode (via URL parameter) = ' + mode);
+      var matchingStudyOption = $('[data-award="' + award + '"] input[value=' + mode + ']'); // Do the switch over only if there's at lead one valid option
+
+      if (matchingStudyOption.length > 0) {
+        // If there are, do the switchover
+        $('input[value=' + award + ']').trigger('change');
+        matchingStudyOption.trigger('change');
+      }
+    }
+
+    ;
+  };
+
+  var toggleVariantInit = function toggleVariantInit() {
+    $('input[name=award-type]').on('change', function (e) {
+      if (stopFlag == false) {
+        var newId = $(this).val();
+        var activeAward = $('*[data-award="' + newId + '"]');
+        console.log("Award = " + $(this).val());
+        $('*[data-award]').not(activeAward.show()).hide();
+        $('*[data-award] input').prop('checked', false);
+        $(this).prop('checked', true);
+        var studyOptionElm = $('[data-award="' + newId + '"] input[name=study-option]').first();
+        studyOptionElm.trigger('change');
+      }
+
+      stopFlag = false;
+    });
+    $('input[name=study-option]').on('change', function () {
+      if (stopFlag == false) {
+        var activeOption = $(this).val();
+        console.log("Mode of study = " + activeOption);
+        var activeMode = $('*[data-mode="' + activeOption + '"]');
+        $('*[data-mode]').not(activeMode.show()).hide(); //Refresh sliders         
+
+        $(".sits-course-modules").each(function () {
+          $(this).slick('reinit');
+        }); // CG: Refresh the Unistats iframe, if necessary
+
+        $("[data-mode='" + activeOption + "'] #unistats-widget-frame").attr("src", $("[data-mode='" + activeOption + "'] #unistats-widget-frame").attr("src"));
+        $(this).prop('checked', true);
+      }
+
+      stopFlag = false;
+    });
+  };
+
+  var visualizerInit = function visualizerInit() {
+    if (getURLParameter("visualizer") == "true") {
+      $('[data-source]').each(function () {
+        if (!$(this).hasClass('course-details_usp')) {
+          $(this).css('position', 'relative');
+        }
+
+        $(this).prepend('<div class="source-label">' + $(this).data('source') + '</div>');
+        $(this).addClass('element-outline');
+      });
+      $('[data-source]').hover(function () {
+        $(this).addClass('source-outline');
+        $('#source-indicator__source').text($(this).data('source'));
+        $('#source-indicator__field').text($(this).data('field'));
+        $('#source-indicator').show();
+      }, function () {
+        $(this).removeClass('source-outline');
+        $('#source-indicator__source').text('');
+        $('#source-indicator__field').text('');
+        $('#source-indicator').hide();
+      });
+      $(document).mousemove(function (e) {
+        var item = $('#source-indicator');
+        item.css({
+          left: e.pageX + 10,
+          top: e.pageY + 10
+        });
+      });
+    }
+  };
+
+  var countrySubmit = function countrySubmit() {
+    $('#countrySubmit').on("click", function (e) {
+      e.preventDefault();
+      var countryPagePath = document.getElementById('countryPicker').value;
+
+      if (countryPagePath == "") {
+        return false;
+      }
+
+      $('#form1').on('submit', function (e) {
+        e.preventDefault();
+      });
+      e.stopImmediatePropagation();
+
+      if (countryPagePath != "") {
+        window.location.href = window.location.protocol + "//" + window.location.hostname + countryPagePath;
+      }
     });
   };
 
@@ -6766,10 +6993,16 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     searchInit();
     autocompleteInit();
     modal();
+    toggleVariantInit();
+    visualizerInit();
+    toggleSlide('[data-course-modules-trigger]', scrollToTop);
+    countrySubmit();
   });
   $(window).on('DOMContentLoaded', function () {
     // event triggers once DOM is loaded but before stylesheets are applied
+    toggleVariantFromUrl();
     removeExistingSvgFills('.card--ksp');
+    removeExistingSvgFills('.iconBox__icon');
   });
   $(window).on('load', function () {
     // correct anything loaded on DOM load which might need adjusting (mostly once images have loaded)
