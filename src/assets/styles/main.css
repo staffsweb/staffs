@@ -1840,6 +1840,8 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 .list--steps.accordion .accordion__toggle:before { float: right; margin: 0 0 0 1rem; }
 
+.lead-generation { position: absolute; }
+
 .masthead { display: flex; flex-wrap: wrap; background-color: #f1f1f1; box-sizing: border-box; position: relative; }
 
 .masthead__bg { position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 0; overflow: hidden; }
@@ -2305,6 +2307,8 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 @media (min-width: 75rem) { .tabs__link { padding: 0.75em 2em; } }
 
 .tabs__link.is-selected { background: #394851; color: white; }
+
+.tabs__section { padding-top: 4rem; }
 
 .tile { position: relative; display: block; overflow: hidden; outline: 1px solid #dddddd; box-shadow: 0 0.1em 0.25em rgba(0, 0, 0, 0.15); min-height: 10em; }
 
