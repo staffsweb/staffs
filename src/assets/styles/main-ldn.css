@@ -1286,6 +1286,32 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 .list--inline-bulleted li:first-child:before { display: none; }
 
+.list--steps { list-style: none; -webkit-padding-start: 3rem; padding-inline-start: 3rem; counter-reset: list--steps; margin-bottom: 4rem; }
+
+.list--steps li { position: relative; border-left: 0.25rem solid #41464b; padding-left: 1.5rem; margin-bottom: 2.5rem; }
+
+.list--steps li::before { content: counter(list--steps); counter-increment: list--steps; display: block; float: left; clear: left; margin-left: -4.625rem; width: 3rem; padding: 0.25rem 0; background: #41464b; color: white; font-size: 2rem; font-weight: 500; line-height: 1.4; text-align: center; }
+
+.list--steps__box { background: #f0f1f2; padding: calc(0.75rem + 2.5%); margin-left: -1.5rem; }
+
+.list--steps__cta .button:only-child { margin-bottom: 0; }
+
+.list--steps.accordion { border-bottom: 0; }
+
+.list--steps.accordion li { border-color: #144196; }
+
+.list--steps.accordion li::before { background-color: #144196; }
+
+.list--steps.accordion .accordion__title { background: #f0f1f2; }
+
+.list--steps.accordion .accordion__title, .list--steps.accordion .accordion__content { padding-left: calc(0.75rem + 2.5%); }
+
+.list--steps.accordion .accordion__item { border-top: none; margin-left: -1.5rem; }
+
+.list--steps.accordion .accordion__toggle { padding-left: 0; }
+
+.list--steps.accordion .accordion__toggle:before { float: right; margin: 0 0 0 1rem; }
+
 .masthead { display: flex; flex-wrap: wrap; background-color: #f1f1f1; box-sizing: border-box; position: relative; }
 
 .masthead__bg { position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 0; overflow: hidden; }

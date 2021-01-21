@@ -21,6 +21,7 @@
 @import "../../components/button/buttons";
 @import "../../components/card/cards";
 @import "../../components/course-search/course-search";
+@import "../../components/course-summary/course-summary";
 @import "../../components/feature-link/feature-link";
 @import "../../components/hr/hr";
 @import "../../components/icons/icons";
@@ -33,8 +34,10 @@
 @import "../../components/pager/pager";
 @import "../../components/quote/quotes";
 @import "../../components/quote-banner/quote-banner";
+@import "../../components/ratio/ratio";
 @import "../../components/section-header/section-header";
 @import "../../components/global-search/global-search";
+@import "../../components/side-navigation/side-navigation";
 @import "../../components/sitewide-message/sitewide-message";
 @import "../../components/slab/slab";
 @import "../../components/slider/slider";
@@ -51,3 +54,4 @@
 
 //Custom
 @import "../../components/modal/modal";
+@import "../../components/news/_news.scss";

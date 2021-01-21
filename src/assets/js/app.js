@@ -46,8 +46,7 @@ if(anchorTarget == "#courses__postgraduate")
         $(this).removeClass('is-toggled');
         megaNav.removeClass('is-open');
         $('body').removeClass('has-expanded-smallscreen-nav');
-      }
-      else {
+      } else {
         $(this).addClass('is-toggled');
         megaNav.addClass('is-open');
         $('body').addClass('has-expanded-smallscreen-nav');
@@ -59,6 +58,25 @@ if(anchorTarget == "#courses__postgraduate")
       megaNav.removeClass('is-open');
       $('body').removeClass('has-expanded-smallscreen-nav');
     });
+
+    let keyMap = {
+      BACKSPACE: 8,
+      COMMA: 188,
+      DELETE: 46,
+      DOWN: 40,
+      END: 35,
+      ENTER: 13,
+      ESCAPE: 27,
+      HOME: 36,
+      LEFT: 37,
+      PAGE_DOWN: 34,
+      PAGE_UP: 33,
+      PERIOD: 190,
+      RIGHT: 39,
+      SPACE: 32,
+      TAB: 9,
+      UP: 38,
+    };
 
     function updateMegaNavBreakpointClass() {
       if (megaNavFullBreakpoint.matches) {
@@ -112,8 +130,173 @@ if(anchorTarget == "#courses__postgraduate")
           $('body').removeClass('has-expanded-nav');
         });
 
-      }
-      else {
+        $('.megaNav__topLevel-item > a').on('keydown', function (e) {
+          let item = $(this).parent();
+
+          switch (e.keyCode) {
+            case keyMap.RIGHT:
+              e.preventDefault();
+              if (item.hasClass('is-expanded')) {
+                collapseChildren(item);
+              }
+              focusNextSibling(item);
+              break;
+
+            case keyMap.LEFT:
+              e.preventDefault();
+              if (item.hasClass('is-expanded')) {
+                collapseChildren(item);
+              }
+              focusPrevSibling(item);
+              break;
+          }
+        });
+
+        $('.megaNav__topLevel-item.has-children > a').on('keydown', function (e) {
+          let item = $(this).parent();
+
+          switch (e.keyCode) {
+            case keyMap.SPACE:
+              e.preventDefault();
+              if (item.hasClass('is-expanded')) {
+                collapseChildren(item);
+              } else {
+                expandChildren(item);
+              }
+              break;
+
+            case keyMap.ENTER:
+              if (!item.hasClass('is-expanded')) {
+                e.preventDefault();
+                expandChildren(item);
+              }
+              break;
+
+            case keyMap.DOWN:
+              e.preventDefault();
+              if (item.hasClass('is-expanded')) {
+                focusFirstChildItem(item);
+              } else {
+                expandChildren(item);
+              }
+              break;
+
+            case keyMap.UP:
+              e.preventDefault();
+              collapseChildren(item);
+              break;
+          }
+        });
+
+        $('.megaNav__secondLevel-item > a').on('keydown', function (e) {
+          let item = $(this).parent();
+
+          switch (e.keyCode) {
+            case keyMap.ESCAPE:
+              focusParentItem(item);
+              collapseParent(item);
+              break;
+
+            case keyMap.UP:
+              e.preventDefault();
+              if (item.hasClass('is-expanded')) {
+                collapseChildren(item);
+              }
+              if ($(item).is(':first-child')) {
+                focusParentItem(item);
+                collapseParent(item);
+              } else if ($(item).not(':last-child')) {
+                focusPrevSibling(item);
+              }
+              break;
+
+            case keyMap.DOWN:
+              e.preventDefault();
+              if ($(item).not(':first-child')) {
+                focusNextSibling(item);
+              }
+              break;
+          }
+        });
+
+        $('.megaNav__secondLevel-item.has-children > a').on('keydown', function (e) {
+          let item = $(this).parent();
+
+          switch (e.keyCode) {
+            case keyMap.SPACE:
+              e.preventDefault();
+              if (item.hasClass('is-expanded')) {
+                collapseChildren(item);
+              } else {
+                expandChildren(item);
+              }
+              break;
+
+            case keyMap.ENTER:
+              if (!item.hasClass('is-expanded')) {
+                e.preventDefault();
+                expandChildren(item);
+              }
+              break;
+
+            case keyMap.RIGHT:
+              e.preventDefault();
+              if (item.hasClass('is-expanded')) {
+                focusFirstChildItem(item);
+              } else {
+                expandChildren(item);
+              }
+              break;
+
+            case keyMap.LEFT:
+              e.preventDefault();
+              collapseChildren(item);
+              break;
+          }
+        });
+
+        $('.megaNav__thirdLevel-item > a').on('keydown', function (e) {
+          let item = $(this).parent();
+
+          switch (e.keyCode) {
+            case keyMap.ESCAPE:
+            case keyMap.LEFT:
+              e.stopPropagation();
+              e.preventDefault();
+              focusParentItem(item);
+              collapseParent(item);
+              break;
+
+            case keyMap.UP:
+              e.preventDefault();
+              if (item.hasClass('is-expanded')) {
+                collapseChildren(item);
+              }
+              if ($(item).is(':first-child')) {
+                focusParentItem(item);
+                collapseParent(item);
+              } else if ($(item).not(':last-child')) {
+                focusPrevSibling(item);
+              }
+              break;
+
+            case keyMap.DOWN:
+              e.preventDefault();
+              if ($(item).not(':first-child')) {
+                focusNextSibling(item);
+              }
+              break;
+          }
+        });
+
+        $(document).on('keydown', function (e) {
+          if (e.keyCode == keyMap.ESCAPE) {
+            $('.is-expanded', megaNav).removeClass('is-expanded');
+            $('body').removeClass('has-expanded-nav');
+          }
+        });
+
+      } else {
         $('body, #megaNav.is-largescreen, .megaNav__topLevel-item.has-children, .megaNav__secondLevel-item.has-children, #megaNav.is-smallscreen .has-children > a').unbind();
 
         megaNav.removeClass('is-largescreen');
@@ -128,6 +311,14 @@ if(anchorTarget == "#courses__postgraduate")
           e.preventDefault();
           $(this).closest('.is-expanded').removeClass('is-expanded');
           $('.megaNav__topLevel').scrollTop(0);
+        });
+
+        $(document).on("keyup", function (e) {
+          if (e.keyCode == keyMap.ESCAPE) {
+            $(megaNav).removeClass('is-open');
+            $('body').removeClass('has-expanded-smallscreen-nav');
+            $('#toggle-megaNav').removeClass('is-toggled');
+          }
         });
       }
     }
@@ -150,8 +341,35 @@ if(anchorTarget == "#courses__postgraduate")
       $(item).addClass('is-expanded');
     }
 
+    function collapseChildren(item) {
+      $('.megaNav__topLevel').scrollTop(0);
+      $(item).removeClass('is-expanded');
+    }
 
-    // @TODO: Check keyboard focus - could it be handled better?
+    function collapseParent(item) {
+      let target = $(item).closest('.is-expanded');
+      collapseChildren(target);
+    }
+
+    function focusFirstChildItem(item) {
+      let target = $(item).find('> .megaNav__level .megaNav__levelList > li:first-child > a').eq(0);
+      target.focus();
+    }
+
+    function focusNextSibling(item) {
+      let target = $(item).next('li').children('a');
+      target.focus();
+    }
+
+    function focusPrevSibling(item) {
+      let target = $(item).prev('li').children('a');
+      target.focus();
+    }
+
+    function focusParentItem(item) {
+      let target = $(item).closest('.megaNav__level').siblings('a').eq(0);
+      target.focus();
+    }
 
   };
 

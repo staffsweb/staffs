@@ -87,6 +87,14 @@ $slab-bg-colors: (
   'slate-light': $slate--light,
 );
 
+$icon-box-colors: (
+  'blue-ldn': $blue--ldn,
+  'blue-deep-ldn': $blue--deep-ldn,
+  'magenta-ldn': $magenta--ldn,
+  'purple-deep-ldn': $purple--deep-ldn,
+  'slate': $slate
+);
+
 
 // IMPORT COMPONENTS!
 
@@ -109,6 +117,7 @@ $slab-bg-colors: (
 @import "../../components/breadcrumbs/breadcrumbs";
 @import "../../components/button/buttons";
 @import "../../components/card/cards";
+@import "../../components/course-summary/course-summary";
 @import "../../components/feature-link/feature-link";
 @import "../../components/hr/hr";
 @import "../../components/icons/icons";
@@ -121,7 +130,9 @@ $slab-bg-colors: (
 @import "../../components/pager/pager";
 @import "../../components/quote/quotes";
 @import "../../components/quote-banner/quote-banner";
+@import "../../components/ratio/ratio";
 @import "../../components/section-header/section-header";
+@import "../../components/side-navigation/side-navigation";
 @import "../../components/sitewide-message/sitewide-message";
 @import "../../components/slab/slab";
 @import "../../components/slider/slider";
@@ -146,3 +157,4 @@ $slab-bg-colors: (
 
 //Custom
 @import "../../components/modal/modal";
+@import "../../components/news/_news.scss";
