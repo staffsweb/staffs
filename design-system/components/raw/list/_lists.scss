@@ -94,14 +94,14 @@
 
 .list--steps {
   list-style: none;
-  padding-inline-start: $spacing-xl;
+  padding-inline-start: $spacing-3xl;
   counter-reset: list--steps;
   margin-bottom: $spacing-4xl;
 
   li {
     position: relative;
     border-left: $border-accent-width solid $neutral--primary;
-    padding-left: $spacing-xl;
+    padding-left: $spacing-lg;
     margin-bottom: $spacing-2xl;
 
     &::before {
@@ -110,12 +110,13 @@
       display: block;
       float: left;
       clear: left;
-      margin-left: -#{$spacing-2xl + $spacing-xl};
-      width: $spacing-2xl;
+      margin-left: -#{$spacing-3xl + $spacing-lg + $border-accent-width/2};
+      width: $spacing-3xl;
       padding: $spacing-2xs 0;
       background: $neutral--primary;
       color: white;
-      @include typescale('xl');
+      @include typescale('3xl');
+      font-weight: 500;
       line-height: 1.4; // matches .title
       text-align: center;
     }
@@ -125,7 +126,7 @@
   &__box {
     background: $greyblue--superlight;
     padding: calc(#{$spacing-sm} + 2.5%);
-    margin-left: -$spacing-xl;
+    margin-left: -$spacing-lg;
   }
 
   &__title {
@@ -137,67 +138,43 @@
     }
   }
 
+  //--
+
+  &.accordion {
+    // component fusion, like Jazz fusion; not sure if this is a wonderful or terrible idea
+
+    border-bottom: 0;
+
+    li {
+      border-color: $primary;
+
+      &::before {
+        background-color: $primary;
+      }
+    }
+
+    .accordion__title {
+      background: $greyblue--superlight;
+    }
+
+    .accordion__title,
+    .accordion__content {
+      padding-left: calc(#{$spacing-sm} + 2.5%);
+    }
+
+    .accordion__item {
+      border-top: none;
+      margin-left: -$spacing-lg;
+    }
+
+    .accordion__toggle {
+      padding-left: 0;
+
+      &:before {
+        float: right;
+        margin: 0 0 0 $spacing-md;
+      }
+    }
+  }
+
 }
-
-
-
-//.list-bordered-items {
-//  list-style: none;
-//  padding-left: 0;
-//
-//  li {
-//    padding: $spacing-sm 0;
-//    border-bottom: 1px solid $grey-light;
-//  }
-//}
-
-//.list-icon-bullets {
-//  list-style: none;
-//  padding-left: 0;
-//
-//  li {
-//    @include clearfix;
-//    border-bottom: 1px solid $grey-light;
-//  }
-//
-//  a {
-//    @include typescale('md');
-//    display: block;
-//    text-decoration: none;
-//    text-decoration-color: black;
-//    padding: $spacing-md $spacing-md $spacing-md 3.5rem;
-//
-//    &:after {
-//      bottom: 1.2rem;
-//    }
-//
-//    .icon {
-//      font-size: 2.5rem;
-//      float: left;
-//      margin-top: -0.75rem;
-//      margin-left: -3.5rem;
-//    }
-//
-//    &:hover {
-//      text-decoration: underline;
-//      @include link-pointy--hover;
-//    }
-//  }
-//}
-//
-//.list-block {
-//  list-style: none;
-//  padding-left: 0;
-//  margin-bottom: $spacing-4xl;
-//
-//  > li,
-//  .item {
-//    border-top: 1px solid $grey-light;
-//    padding-top: $spacing-xl;
-//    margin-bottom: $spacing-xl;
-//  }
-//
-//  .item__title {
-//    margin-top: 0;
-//  }
-//}

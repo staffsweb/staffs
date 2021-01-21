@@ -183,7 +183,7 @@
     <code class="Code Code--lang-twig hljs">
         <pre><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> titleElement = titleElement ?: 'span' %}</span><span class="xml">
 
-<span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion__item"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion__item"</span></span></span><span class="hljs-template-variable">{{ open ? ' open' }}</span><span class="xml"><span class="hljs-tag">&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">summary</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion__title"</span>&gt;</span>
     <span class="hljs-tag">&lt;</span></span><span class="hljs-template-variable">{{ titleElement }}</span><span class="xml"><span class="hljs-tag"> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion__toggle"</span>&gt;</span></span><span class="hljs-template-variable">{{ title }}</span><span class="xml"><span class="hljs-tag">&lt;/</span></span><span class="hljs-template-variable">{{ titleElement }}</span><span class="xml"><span class="hljs-tag">&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
@@ -220,7 +220,9 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-SCSS FileBrowser-code hljs">
-                                <pre><span class="hljs-selector-class">.accordion</span> {
+                                <pre><span class="hljs-comment">// See also: fusion with list--steps in _lists.scss</span>
+
+<span class="hljs-selector-class">.accordion</span> {
   <span class="hljs-attribute">clear</span>: both;
   <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-variable">$spacing-4xl</span>;
   <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$grey--light</span>;
@@ -335,7 +337,7 @@
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Variants <em class="Meta-count">(3)</em>:</strong>
+            <strong class="Meta-key">Variants <em class="Meta-count">(4)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="accordion--default.html">
@@ -348,6 +350,10 @@
             
                 <a href="">
                     <span>Single Accordion Item</span>
+                </a>, 
+            
+                <a href="accordion--steps.html">
+                    <span>Steps</span>
                 </a>
             
             </span>
@@ -377,12 +383,14 @@
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Referenced by <em class="Meta-count">(2)</em>:</strong>
+            <strong class="Meta-key">Referenced by <em class="Meta-count">(3)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="accordion.html">@<span>accordion</span></a>, 
             
-                <a href="accordion--component.html">@<span>accordion--component</span></a>
+                <a href="accordion--component.html">@<span>accordion--component</span></a>, 
+            
+                <a href="accordion--steps.html">@<span>accordion--steps</span></a>
             
             </span>
         </li>
@@ -1076,6 +1084,30 @@
         <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
             <a class="Tree-entityLink" href="" data-pjax>
                 <span>Single Accordion Item</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="accordion--steps.html" data-pjax>
+                <span>Steps</span>
                 
 
 <div class="Status Status--unlabelled">

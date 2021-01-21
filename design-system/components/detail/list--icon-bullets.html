@@ -410,14 +410,14 @@
 
 <span class="hljs-selector-class">.list--steps</span> {
   <span class="hljs-attribute">list-style</span>: none;
-  <span class="hljs-attribute">padding</span>-inline-start: <span class="hljs-variable">$spacing-xl</span>;
+  <span class="hljs-attribute">padding</span>-inline-start: <span class="hljs-variable">$spacing-3xl</span>;
   <span class="hljs-attribute">counter-reset</span>: list--steps;
   <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-variable">$spacing-4xl</span>;
 
   <span class="hljs-selector-tag">li</span> {
     <span class="hljs-attribute">position</span>: relative;
     <span class="hljs-attribute">border-left</span>: <span class="hljs-variable">$border-accent-width</span> solid <span class="hljs-variable">$neutral--primary</span>;
-    <span class="hljs-attribute">padding-left</span>: <span class="hljs-variable">$spacing-xl</span>;
+    <span class="hljs-attribute">padding-left</span>: <span class="hljs-variable">$spacing-lg</span>;
     <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-variable">$spacing-2xl</span>;
 
     &amp;<span class="hljs-selector-pseudo">::before</span> {
@@ -426,12 +426,13 @@
       <span class="hljs-attribute">display</span>: block;
       <span class="hljs-attribute">float</span>: left;
       <span class="hljs-attribute">clear</span>: left;
-      <span class="hljs-attribute">margin-left</span>: -#{<span class="hljs-variable">$spacing-2xl</span> + <span class="hljs-variable">$spacing-xl</span>};
-      <span class="hljs-attribute">width</span>: <span class="hljs-variable">$spacing-2xl</span>;
+      <span class="hljs-attribute">margin-left</span>: -#{<span class="hljs-variable">$spacing-3xl</span> + <span class="hljs-variable">$spacing-lg</span> + <span class="hljs-variable">$border-accent-width</span>/<span class="hljs-number">2</span>};
+      <span class="hljs-attribute">width</span>: <span class="hljs-variable">$spacing-3xl</span>;
       <span class="hljs-attribute">padding</span>: <span class="hljs-variable">$spacing-2xs</span> <span class="hljs-number">0</span>;
       <span class="hljs-attribute">background</span>: <span class="hljs-variable">$neutral--primary</span>;
       <span class="hljs-attribute">color</span>: white;
-      <span class="hljs-keyword">@include</span> typescale(<span class="hljs-string">'xl'</span>);
+      <span class="hljs-keyword">@include</span> typescale(<span class="hljs-string">'3xl'</span>);
+      <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">500</span>;
       <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.4</span>; <span class="hljs-comment">// matches .title</span>
       <span class="hljs-attribute">text-align</span>: center;
     }
@@ -441,7 +442,7 @@
   &amp;__box {
     <span class="hljs-attribute">background</span>: <span class="hljs-variable">$greyblue--superlight</span>;
     <span class="hljs-attribute">padding</span>: calc(#{<span class="hljs-variable">$spacing-sm</span>} + <span class="hljs-number">2.5%</span>);
-    <span class="hljs-attribute">margin-left</span>: -<span class="hljs-variable">$spacing-xl</span>;
+    <span class="hljs-attribute">margin-left</span>: -<span class="hljs-variable">$spacing-lg</span>;
   }
 
   &amp;__title {
@@ -453,70 +454,47 @@
     }
   }
 
+  <span class="hljs-comment">//--</span>
+
+  &amp;<span class="hljs-selector-class">.accordion</span> {
+    <span class="hljs-comment">// component fusion, like Jazz fusion; not sure if this is a wonderful or terrible idea</span>
+
+    <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">0</span>;
+
+    <span class="hljs-selector-tag">li</span> {
+      <span class="hljs-attribute">border-color</span>: <span class="hljs-variable">$primary</span>;
+
+      &amp;<span class="hljs-selector-pseudo">::before</span> {
+        <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$primary</span>;
+      }
+    }
+
+    <span class="hljs-selector-class">.accordion__title</span> {
+      <span class="hljs-attribute">background</span>: <span class="hljs-variable">$greyblue--superlight</span>;
+    }
+
+    <span class="hljs-selector-class">.accordion__title</span>,
+    <span class="hljs-selector-class">.accordion__content</span> {
+      <span class="hljs-attribute">padding-left</span>: calc(#{<span class="hljs-variable">$spacing-sm</span>} + <span class="hljs-number">2.5%</span>);
+    }
+
+    <span class="hljs-selector-class">.accordion__item</span> {
+      <span class="hljs-attribute">border-top</span>: none;
+      <span class="hljs-attribute">margin-left</span>: -<span class="hljs-variable">$spacing-lg</span>;
+    }
+
+    <span class="hljs-selector-class">.accordion__toggle</span> {
+      <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">0</span>;
+
+      &amp;<span class="hljs-selector-pseudo">:before</span> {
+        <span class="hljs-attribute">float</span>: right;
+        <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-variable">$spacing-md</span>;
+      }
+    }
+  }
+
 }
-
-
-
-<span class="hljs-comment">//.list-bordered-items {</span>
-<span class="hljs-comment">//  list-style: none;</span>
-<span class="hljs-comment">//  padding-left: 0;</span>
-<span class="hljs-comment">//</span>
-<span class="hljs-comment">//  li {</span>
-<span class="hljs-comment">//    padding: $spacing-sm 0;</span>
-<span class="hljs-comment">//    border-bottom: 1px solid $grey-light;</span>
-<span class="hljs-comment">//  }</span>
-<span class="hljs-comment">//}</span>
-
-<span class="hljs-comment">//.list-icon-bullets {</span>
-<span class="hljs-comment">//  list-style: none;</span>
-<span class="hljs-comment">//  padding-left: 0;</span>
-<span class="hljs-comment">//</span>
-<span class="hljs-comment">//  li {</span>
-<span class="hljs-comment">//    @include clearfix;</span>
-<span class="hljs-comment">//    border-bottom: 1px solid $grey-light;</span>
-<span class="hljs-comment">//  }</span>
-<span class="hljs-comment">//</span>
-<span class="hljs-comment">//  a {</span>
-<span class="hljs-comment">//    @include typescale('md');</span>
-<span class="hljs-comment">//    display: block;</span>
-<span class="hljs-comment">//    text-decoration: none;</span>
-<span class="hljs-comment">//    text-decoration-color: black;</span>
-<span class="hljs-comment">//    padding: $spacing-md $spacing-md $spacing-md 3.5rem;</span>
-<span class="hljs-comment">//</span>
-<span class="hljs-comment">//    &amp;:after {</span>
-<span class="hljs-comment">//      bottom: 1.2rem;</span>
-<span class="hljs-comment">//    }</span>
-<span class="hljs-comment">//</span>
-<span class="hljs-comment">//    .icon {</span>
-<span class="hljs-comment">//      font-size: 2.5rem;</span>
-<span class="hljs-comment">//      float: left;</span>
-<span class="hljs-comment">//      margin-top: -0.75rem;</span>
-<span class="hljs-comment">//      margin-left: -3.5rem;</span>
-<span class="hljs-comment">//    }</span>
-<span class="hljs-comment">//</span>
-<span class="hljs-comment">//    &amp;:hover {</span>
-<span class="hljs-comment">//      text-decoration: underline;</span>
-<span class="hljs-comment">//      @include link-pointy--hover;</span>
-<span class="hljs-comment">//    }</span>
-<span class="hljs-comment">//  }</span>
-<span class="hljs-comment">//}</span>
-<span class="hljs-comment">//</span>
-<span class="hljs-comment">//.list-block {</span>
-<span class="hljs-comment">//  list-style: none;</span>
-<span class="hljs-comment">//  padding-left: 0;</span>
-<span class="hljs-comment">//  margin-bottom: $spacing-4xl;</span>
-<span class="hljs-comment">//</span>
-<span class="hljs-comment">//  &gt; li,</span>
-<span class="hljs-comment">//  .item {</span>
-<span class="hljs-comment">//    border-top: 1px solid $grey-light;</span>
-<span class="hljs-comment">//    padding-top: $spacing-xl;</span>
-<span class="hljs-comment">//    margin-bottom: $spacing-xl;</span>
-<span class="hljs-comment">//  }</span>
-<span class="hljs-comment">//</span>
-<span class="hljs-comment">//  .item__title {</span>
-<span class="hljs-comment">//    margin-top: 0;</span>
-<span class="hljs-comment">//  }</span>
-<span class="hljs-comment">//}</span></pre>
+</pre>
                             </code>
                             
                         </div>
@@ -532,7 +510,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">3.2 KB</span>
+                    <span class="Meta-value">2.8 KB</span>
                 </li>
             </ul>
         </div>
@@ -1305,6 +1283,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="accordion--item.html" data-pjax>
                 <span>Single Accordion Item</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="accordion--steps.html" data-pjax>
+                <span>Steps</span>
                 
 
 <div class="Status Status--unlabelled">
