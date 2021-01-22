@@ -157,6 +157,11 @@
   border: 0;
 }
 
-.accreditation-logos > img {
-  display: inline-block;
+.accreditation-logos
+{
+  margin-bottom: $spacing-2xl;
+
+  & > img {
+    display: inline-block;
+  }
 }

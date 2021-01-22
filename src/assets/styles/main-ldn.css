@@ -2062,6 +2062,8 @@ a.tile:focus { outline-width: 3px; outline-color: #144196; z-index: 2; }
 
 .unistats-embed { width: 100%; height: 160px; border: 0; }
 
+.accreditation-logos { margin-bottom: 2.5rem; }
+
 .accreditation-logos > img { display: inline-block; }
 
 .theme-ldn .header-site__flexContainer { align-items: center; }
