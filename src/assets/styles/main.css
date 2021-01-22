@@ -1994,7 +1994,7 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 .meta--inline dd:first-of-type:before { display: none; }
 
-.page-nav { min-height: 4rem; --background: white; --backgroundRGB: 255, 255, 255; }
+.page-nav { min-height: 4rem; margin-bottom: 4rem; --background: white; --backgroundRGB: 255, 255, 255; }
 
 .page-nav__stickyContainer { top: 0; left: 0.5rem; right: 0; z-index: 9; background: white; box-shadow: 0 0.5rem 0.5rem -0.5rem rgba(0, 0, 0, 0.15); }
 
