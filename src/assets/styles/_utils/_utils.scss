@@ -157,11 +157,15 @@
   border: 0;
 }
 
-.accreditation-logos
-{
+.accreditation-logos {
   margin-bottom: $spacing-2xl;
 
   & > img {
     display: inline-block;
   }
+}
+
+.system-info {
+  text-align: right;
+  font-size: 90%;
 }
