@@ -1840,6 +1840,12 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 .list--steps.accordion .accordion__toggle:before { float: right; margin: 0 0 0 1rem; }
 
+.lead-gen { color: #FFF; background-size: cover; background-color: #333; text-align: center; padding: 1.5rem; }
+
+.lead-gen__no { color: #FFF; }
+
+.lead-gen--prospectus { background: url(//www.staffs.ac.uk/courses/images/lead-generation/lead-gen-prospectus-bg.jpg) top center no-repeat; }
+
 .masthead { display: flex; flex-wrap: wrap; background-color: #f1f1f1; box-sizing: border-box; position: relative; }
 
 .masthead__bg { position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 0; overflow: hidden; }
@@ -1860,7 +1866,7 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 @media (min-width: 60rem) { .masthead__overlay { background: none; padding: 0; margin-bottom: 1.5rem; }
   .masthead__overlayInner { margin: 0 -1.5rem; padding: 1.5rem 1.5rem 0; background: rgba(0, 0, 0, 0.75); -webkit-backdrop-filter: blur(1em); backdrop-filter: blur(1em); }
-  @supports ((-webkit-backdrop-filter: blur(1em)) or (backdrop-filter: blur(1em))) { .masthead__overlayInner { background: rgba(0, 0, 0, 0.6); min-height: 340px; } }
+  @supports ((-webkit-backdrop-filter: blur(1em)) or (backdrop-filter: blur(1em))) { .masthead__overlayInner { background: rgba(0, 0, 0, 0.6); /*min-height: 340px;*/ } }
   .masthead__overlayInner .meta--inline dd::before { display: none; } }
 
 .masthead--has-blurredBg .masthead__overlay { background: rgba(0, 0, 0, 0.75); }

@@ -1,0 +1,15 @@
+.lead-gen {
+    color: #FFF;
+    background-size:  cover;
+    background-color:  #333;
+    text-align: center;
+    padding: $spacing-lg;
+
+    &__no {
+        color: #FFF;
+    }
+
+    &--prospectus {
+        background: url(//www.staffs.ac.uk/courses/images/lead-generation/lead-gen-prospectus-bg.jpg) top center no-repeat;
+    }
+}
