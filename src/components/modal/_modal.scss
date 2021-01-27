@@ -26,6 +26,10 @@
     left: 50px;
     overflow: auto;
     position: fixed;
+    @media (min-width: (map_get($breakpoint-stages, 'tablet-wide') )) {
+      right: 20%;
+      left: 20%;
+    }
   }
   
   .modal__header {

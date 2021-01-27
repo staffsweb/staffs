@@ -71,6 +71,10 @@
     color: white;
     z-index: 1;
 
+    & a {
+      color: white;
+    }
+
     @media (min-width: $overlay-breakpoint) {
       background: none;
       padding: 0;
