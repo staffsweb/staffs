@@ -6775,7 +6775,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         }
       });
     });
-    $('.page-nav__link').on('click', function () {
+    $('.page-nav__link, #apply-scroll-btn').on('click', function () {
       var target = $($(this).attr('href'));
       $('html, body').stop().animate({
         scrollTop: target.offset().top - window.innerHeight / 10

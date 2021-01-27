@@ -721,7 +721,7 @@ if(anchorTarget == "#courses__postgraduate")
       });
     });
 
-    $('.page-nav__link').on('click', function () {
+    $('.page-nav__link, #apply-scroll-btn').on('click', function () {
       let target = $($(this).attr('href'));
 
       $('html, body').stop().animate({
