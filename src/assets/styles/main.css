@@ -1840,7 +1840,7 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 .list--steps.accordion .accordion__toggle:before { float: right; margin: 0 0 0 1rem; }
 
-.lead-gen { color: #FFF; background-size: cover; background-color: #333; text-align: center; padding: 1.5rem; }
+.lead-gen { position: fixed; bottom: 0; left: 0; z-index: 9997; right: 0; color: #FFF; background-size: cover; background-color: #333; text-align: center; padding: 1.5rem; }
 
 .lead-gen__no { color: #FFF; }
 

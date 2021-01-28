@@ -25,6 +25,7 @@ if(anchorTarget == "#courses__postgraduate")
 //=include vendor/waypoints/lib/jquery.waypoints.js
 //@codekit-prepend silent './vendor/jquery-ui.js';
 //=include vendor/jquery-ui.js
+//=include specific-functionality/lead-generation.js
 
 // @TODO: at some point, it'd probably be nice if functions sat in
 // 'eachIndividualComponentName.js' in each component folder and were imported
