@@ -71,10 +71,6 @@
     color: white;
     z-index: 1;
 
-    & a {
-      color: white;
-    }
-
     @media (min-width: $overlay-breakpoint) {
       background: none;
       padding: 0;
@@ -130,6 +126,19 @@
           margin: 2rem 0 2rem;
         }
       }
+    }
+  }
+}
+
+.card {
+  & a.masthead__school-link {
+    color: white;
+    border-bottom: 1px solid white!important;
+
+    &:hover {
+      color: $red;
+      border-bottom-color: $red!important;
+      text-decoration: none;
     }
   }
 }

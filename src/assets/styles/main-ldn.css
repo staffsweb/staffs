@@ -1330,8 +1330,6 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 .masthead__overlay { align-self: flex-end; align-content: flex-end; width: 100%; padding: 1.5rem 0 0; box-sizing: border-box; background: black; color: white; z-index: 1; }
 
-.masthead__overlay a { color: white; }
-
 @media (min-width: 60rem) { .masthead__overlay { background: none; padding: 0; margin-bottom: 1.5rem; }
   .masthead__overlayInner { margin: 0 -1.5rem; padding: 1.5rem 1.5rem 0; background: rgba(0, 0, 0, 0.75); -webkit-backdrop-filter: blur(1em); backdrop-filter: blur(1em); }
   @supports ((-webkit-backdrop-filter: blur(1em)) or (backdrop-filter: blur(1em))) { .masthead__overlayInner { background: rgba(0, 0, 0, 0.6); /*min-height: 340px;*/ } }
@@ -1349,6 +1347,10 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 @media (max-width: 35rem) { .masthead--profile .masthead__inner { padding: 8rem 0 2rem; }
   .masthead--profile .masthead__inner figure { margin: 2rem 0 2rem; } }
+
+.card a.masthead__school-link { color: white; border-bottom: 1px solid white !important; }
+
+.card a.masthead__school-link:hover { color: #d70a26; border-bottom-color: #d70a26 !important; text-decoration: none; }
 
 .megaNav { position: absolute; left: 0; right: 0; top: 0; background: white; font-size: 1.2em; z-index: 9; overflow: hidden; overflow-y: auto; box-sizing: border-box; overflow-scrolling: touch; transform: translateX(-150%); }
 
