@@ -6127,13 +6127,106 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   var widgetsAutocomplete = $.ui.autocomplete;
 });
 
-var leadGenInit = function leadGenInit() {
-  $("#lead-gen-prospectus__submit-btn").on("click", function (e) {
-    e.preventDefault();
-    var fields = $(".crm-form--prospectus-request-lead-gen").find("input[data-required='true'], select[data-required='true']:visible, textarea[data-required='true']");
+function readCookie(name) {
+  var regex = new RegExp("[; ]" + name + "=([^\\s;]*)");
+  var match = (" " + document.cookie).match(regex);
 
-    if (requiredFieldsCompleted(fields)) {
-      $("#loading-spinner").show();
+  if (name && match) {
+    return unescape(match[1]);
+  } else {
+    return "";
+  }
+}
+
+function setCookie(name, value, days) {
+  var expires = "";
+
+  if (days) {
+    var date = new Date();
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+    expires = "; expires=" + date.toUTCString();
+  }
+
+  document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+var leadGenInit = function leadGenInit() {
+  var leadGenActive = $("#lead-gen").length > 0 ? true : false; // CG: Only if lead gen is present on the page
+
+  $(document).on("scroll", function (e) {
+    // CG: Limit scrolling past entry requirements
+    if (leadGenActive) {
+      var dontScrollPast = $("#scroll-limit").offset().top;
+      var windowScrollTop = $(document).scrollTop();
+
+      if (windowScrollTop >= dontScrollPast) {
+        $("#lead-gen").slideDown("slow");
+        $(document).scrollTop(dontScrollPast);
+      }
+
+      if (windowScrollTop < dontScrollPast - 10) {
+        $("#lead-gen").slideUp("slow");
+      }
+    }
+  });
+  $("#lead-gen__submit-btn").on("click", function (e) {
+    e.preventDefault();
+    var requiredFieldsCompleted = true; // CG: Validate each field in turn
+
+    if ($("#address-1").val() == null) {
+      requiredFieldsCompleted = false;
+    }
+
+    if ($("#address-2").val() == null) {
+      requiredFieldsCompleted = false;
+    }
+
+    if ($("#city-or-town").val() == null) {
+      requiredFieldsCompleted = false;
+    }
+
+    if ($("#email").val() == null) {
+      requiredFieldsCompleted = false;
+    }
+
+    if ($("#firstname").val() == null) {
+      requiredFieldsCompleted = false;
+    }
+
+    if ($("#lastname").val() == null) {
+      requiredFieldsCompleted = false;
+    }
+
+    if ($("#mobileno").val() == null) {
+      requiredFieldsCompleted = false;
+    }
+
+    if ($("#postcode").val() == null) {
+      requiredFieldsCompleted = false;
+    }
+
+    if ($("[name='PREF_EMAIL']:checked").val() == null) {
+      requiredFieldsCompleted = false;
+    }
+
+    if ($("[name='PREF_MAIL']:checked").val() == null) {
+      requiredFieldsCompleted = false;
+    }
+
+    if ($("[name='PREF_SMS']:checked").val() == null) {
+      requiredFieldsCompleted = false;
+    }
+
+    if ($("[name='PREF_TELEPHONE']:checked").val() == null) {
+      requiredFieldsCompleted = false;
+    }
+
+    if ($("[name='YEAR_OF_ENTRY']:checked").val() == null) {
+      requiredFieldsCompleted = false;
+    }
+
+    if (requiredFieldsCompleted) {
+      $("#loading-spinner--lead-gen").show();
       $.post("/api/CrmLeadGen/HandleProspectusRequest", {
         "ADD1": $("#address-1").val(),
         "ADD2": $("#address-2").val(),
@@ -6155,76 +6248,27 @@ var leadGenInit = function leadGenInit() {
         "SUBJECT": $("#SUBJECT").val(),
         "YEAR_OF_ENTRY": $("[name='YEAR_OF_ENTRY']:checked").val()
       }).done(function (data) {
-        $("#loading-spinner").hide(); // CG: Replace the form fields with the success message
+        $("#loading-spinner--lead-gen").hide(); // CG: Replace the form fields with the success message
 
-        $(".crm-form--prospectus-request-lead-gen").html("<h2><span><svg xmlns='http://www.w3.org/2000/svg' class='icon icon-tick-green'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#icon-tick-green'></use></svg></span> Thank you</h2><p class='text-center'>Your request has been sent.</p>");
-        $(".hide-for-lead-gen").removeClass("visuallyhidden");
+        $("#lead-gen__form").html("<h2>Thank you</h2><p class='text-center'>Your request has been sent.</p>");
         $('.slick-slider').slick('refresh');
-        setCookie("HideLeadGenProspectus", 1, 30);
+        setCookie("HideLeadGen", 1, 30);
         setTimeout(function () {
-          $("#lead-gen-prospectus, #lead-gen-prospectus__form").remove();
+          $("#lead-gen").remove();
         }, 5000);
       }).fail(function () {
-        $("#loading-spinner, #lead-gen-form").hide();
-        $(".crm-form--prospectus-request-lead-gen").html("<h2>An error occurred</h2><p>Sorry - there was a problem submitting your request. Please try again later.</p>");
+        $("#loading-spinner--lead-gen").hide();
+        $("#lead-gen__form").html("<h2>An error occurred</h2><p>Sorry - there was a problem submitting your request. Please try again later.</p>");
       });
+    } else {
+      alert("Please check that you have completed all required fields.");
     }
   });
-  $("#lead-gen-updates__submit-btn").on("click", function (e) {
-    e.preventDefault();
-    var fields = $(".crm-form--sign-up-for-updates-lead-gen").find("input[data-required='true'], select[data-required='true']:visible, textarea[data-required='true']");
-
-    if (requiredFieldsCompleted(fields)) {
-      $("#loading-spinner").show();
-      $.post("/api/CrmLeadGen/SignUpForUpdates", {
-        "COURSE_OF_SUBJECT": $("#COURSE_OF_SUBJECT").val(),
-        "EMAIL": $("#email").val(),
-        "FIRSTNAME": $("#firstname").val(),
-        "LANDINGPAGE": $("#LANDINGPAGE").val(),
-        "LASTNAME": $("#lastname").val(),
-        "MARKETING_CAMPAIGN": $("#MARKETING_CAMPAIGN").val(),
-        "MARKETING_MEDIUM": $("#MARKETING_MEDIUM").val(),
-        "MARKETING_SOURCE": $("#MARKETING_SOURCE").val(),
-        "MOBILENO": $("#mobileno").val(),
-        "PREF_EMAIL": $("[name='PREF_EMAIL']:checked").val(),
-        "PREF_MAIL": $("[name='PREF_MAIL']:checked").val(),
-        "PREF_SMS": $("[name='PREF_SMS']:checked").val(),
-        "PREF_TELEPHONE": $("[name='PREF_TELEPHONE']:checked").val(),
-        "SUBJECT": $("#SUBJECT").val(),
-        "YEAR_OF_ENTRY": $("[name='YEAR_OF_ENTRY']:checked").val()
-      }).done(function (data) {
-        $("#loading-spinner").hide(); // CG: Replace the form fields with the success message
-
-        $(".crm-form--sign-up-for-updates-lead-gen").html("<h2><span><svg xmlns='http://www.w3.org/2000/svg' class='icon icon-tick-green'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#icon-tick-green'></use></svg></span> Thank you</h2><p class='text-center'>Your request has been sent.</p>");
-        $(".hide-for-lead-gen").removeClass("visuallyhidden");
-        $('.slick-slider').slick('refresh');
-        setCookie("HideLeadGenUpdates", 1, 30);
-        setTimeout(function () {
-          $("#lead-gen-updates, #lead-gen-updates__form").remove();
-        }, 5000);
-      }).fail(function () {
-        $("#loading-spinner, #lead-gen-updates__form").hide();
-        $(".crm-form--sign-up-for-updates-lead-gen").html("<h2>An error occurred</h2><p>Sorry - there was a problem submitting your request. Please try again later.</p>");
-      });
-    }
-  });
-  $("#lead-gen-prospectus__order-btn, #lead-gen-updates__yes-btn").on("click", function (e) {
-    e.preventDefault();
-    $(".lead-gen-form").show();
-  });
-  $("#lead-gen-prospectus__no-thanks").on("click", function (e) {
+  $("#lead-gen__no-btn").on("click", function (e) {
     e.preventDefault();
     $(".lead-gen").slideUp("slow");
-    showContentHiddenForLeadGen();
-    setCookie("HideLeadGenProspectus", 1, 30);
-    hideLeadGenProspectus = 1;
-  });
-  $("#lead-gen-updates__no-btn").on("click", function (e) {
-    e.preventDefault();
-    $(".lead-gen").slideUp("slow");
-    showContentHiddenForLeadGen();
-    setCookie("HideLeadGenUpdates", 1, 30);
-    hideLeadGenUpdates = 1;
+    setCookie("HideLeadGen", 1, 30);
+    leadGenActive = false;
   });
   $("#lead-gen-form__close").on("click", function (e) {
     $("#lead-gen-prospectus__form, #lead-gen-updates__form").hide();
@@ -7339,6 +7383,7 @@ var leadGenInit = function leadGenInit() {
     visualizerInit();
     toggleSlide('[data-course-modules-trigger]', scrollToTop);
     countrySubmit();
+    leadGenInit();
   });
   $(window).on('DOMContentLoaded', function () {
     // event triggers once DOM is loaded but before stylesheets are applied

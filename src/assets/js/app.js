@@ -25,6 +25,7 @@ if(anchorTarget == "#courses__postgraduate")
 //=include vendor/waypoints/lib/jquery.waypoints.js
 //@codekit-prepend silent './vendor/jquery-ui.js';
 //=include vendor/jquery-ui.js
+//=include specific-functionality/cookie-read-and-write.js
 //=include specific-functionality/lead-generation.js
 
 // @TODO: at some point, it'd probably be nice if functions sat in
@@ -1206,6 +1207,7 @@ if(anchorTarget == "#courses__postgraduate")
     visualizerInit();
     toggleSlide('[data-course-modules-trigger]', scrollToTop);
     countrySubmit();
+    leadGenInit();
   });
   $(window).on('DOMContentLoaded', function () {
     // event triggers once DOM is loaded but before stylesheets are applied
