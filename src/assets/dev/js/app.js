@@ -6150,6 +6150,14 @@ function setCookie(name, value, days) {
   document.cookie = name + "=" + (value || "") + expires + "; path=/";
 }
 
+var crmFormsInit = function crmFormsInit() {
+  $("#consent-to-all-btn").on("click", function (e) {
+    e.preventDefault(); // CG: Set all buttons to "yes"
+
+    $("#pref-sms-yes, #pref-email-yes, #pref-mail-yes, #pref-tel-yes").prop("checked", true);
+  });
+};
+
 var leadGenInit = function leadGenInit() {
   var leadGenActive = $("#lead-gen").length > 0 ? true : false; // CG: Only if lead gen is present on the page
 
@@ -6923,11 +6931,17 @@ var leadGenInit = function leadGenInit() {
         }
       });
     });
-    $('.page-nav__link, #apply-scroll-btn').on('click', function () {
+    $('.page-nav__link').on('click', function () {
       var target = $($(this).attr('href'));
       $('html, body').stop().animate({
         scrollTop: target.offset().top - window.innerHeight / 10
       }, 250);
+    });
+    $('#apply-scroll-btn').on('click', function () {
+      var target = $($(this).attr('href'));
+      $('html, body').stop().animate({
+        scrollTop: target.offset().top - window.innerHeight / 10
+      }, 750);
     });
     $('#js-page-nav').each(function () {
       var el = $(this);
@@ -7383,6 +7397,7 @@ var leadGenInit = function leadGenInit() {
     visualizerInit();
     toggleSlide('[data-course-modules-trigger]', scrollToTop);
     countrySubmit();
+    crmFormsInit();
     leadGenInit();
   });
   $(window).on('DOMContentLoaded', function () {
