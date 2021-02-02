@@ -328,6 +328,8 @@ input[type=text], input[type=password], input[type=number], input[type=email], i
 
 input[type=text]:focus, input[type=password]:focus, input[type=number]:focus, input[type=email]:focus, input[type=tel]:focus, input[type=search]:focus, input[type=date]:focus, input[type=time]:focus, textarea:focus, select:focus { outline: none; border-color: rgba(50, 50, 50, 0.75); }
 
+.crm-form input[type=text], .crm-form input[type=password], .crm-form input[type=number], .crm-form input[type=email], .crm-form input[type=tel], .crm-form input[type=search], .crm-form input[type=date], .crm-form input[type=time], .crm-form textarea, .crm-form select { max-width: none; }
+
 textarea { max-width: 25em; }
 
 select { -webkit-appearance: none; -moz-appearance: none; appearance: none; padding-right: 2em; background: white url("//www.staffs.ac.uk/site/images/icons/icon-arrow-down-black.svg") no-repeat right 0.75em center; background-size: 0.75em; }

@@ -62,6 +62,10 @@ select {
     outline: none;
     border-color: rgba(50, 50, 50, 0.75);
   }
+
+  .crm-form & {
+    max-width: none;
+  }
 }
 
 textarea {
