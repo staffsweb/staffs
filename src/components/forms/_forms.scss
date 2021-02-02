@@ -75,6 +75,11 @@ select {
   background-size: 0.75em;
 }
 
+.form--invalid, .crm-form__error-msg {
+  color: $red;
+  border-color: $red!important;
+}
+
 .form__item {
   margin: 0 0 $spacing-lg;
 }

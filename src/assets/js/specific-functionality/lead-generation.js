@@ -19,24 +19,9 @@ let leadGenInit = function() {
 
     $("#lead-gen__submit-btn").on("click", function(e) {
         e.preventDefault();
-        var requiredFieldsCompleted = true;
+        var fields = $("#lead-gen__form").find("input[data-required='true'], select[data-required='true']:visible, textarea[data-required='true']");
 
-        // CG: Validate each field in turn
-        if($("#address-1").val() == null) { requiredFieldsCompleted = false; }
-        if($("#address-2").val() == null) { requiredFieldsCompleted = false; }
-        if($("#city-or-town").val() == null) { requiredFieldsCompleted = false; }
-        if($("#email").val() == null) { requiredFieldsCompleted = false; }
-        if($("#firstname").val() == null) { requiredFieldsCompleted = false; }
-        if($("#lastname").val() == null) { requiredFieldsCompleted = false; }
-        if($("#mobileno").val() == null) { requiredFieldsCompleted = false; }
-        if($("#postcode").val() == null) { requiredFieldsCompleted = false; }
-        if($("[name='PREF_EMAIL']:checked").val() == null) { requiredFieldsCompleted = false; }
-        if($("[name='PREF_MAIL']:checked").val() == null) { requiredFieldsCompleted = false; }
-        if($("[name='PREF_SMS']:checked").val() == null) { requiredFieldsCompleted = false; }
-        if($("[name='PREF_TELEPHONE']:checked").val() == null) { requiredFieldsCompleted = false; }
-        if($("[name='YEAR_OF_ENTRY']:checked").val() == null) { requiredFieldsCompleted = false; }
-
-        if(requiredFieldsCompleted) {
+        if(requiredFieldsCompleted(fields)) {
             $("#loading-spinner--lead-gen").show();
 
             $.post("/api/CrmLeadGen/HandleProspectusRequest", {
@@ -63,19 +48,20 @@ let leadGenInit = function() {
             .done(function(data) {
                 $("#loading-spinner--lead-gen").hide();
                 // CG: Replace the form fields with the success message
-                $("#lead-gen__form").html("<h2>Thank you</h2><p class='text-center'>Your request has been sent.</p>");
+                $("#lead-gen__form").html("<h2>Thank you!</h2><p class='font-3xl'>Your request has been sent.</p>");
                 $('.slick-slider').slick('refresh');
                 setCookie("HideLeadGen", 1, 30);
+                leadGenActive = false;
                 setTimeout(function () {
-                    $("#lead-gen").remove();
+                    $("#lead-gen-modal").remove();
                 }, 5000);
             })
             .fail(function() {
                 $("#loading-spinner--lead-gen").hide();
-                $("#lead-gen__form").html("<h2>An error occurred</h2><p>Sorry - there was a problem submitting your request. Please try again later.</p>");
+                $("#lead-gen__form").html("<h2>An error occurred</h2><p class'font-3xl'>Sorry - there was a problem submitting your request. Please try again later.</p>");
             });
         } else {
-            alert("Please check that you have completed all required fields.");
+            // CG: Invalid
         }
     });
 

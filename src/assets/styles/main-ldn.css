@@ -332,6 +332,8 @@ textarea { max-width: 25em; }
 
 select { -webkit-appearance: none; -moz-appearance: none; appearance: none; padding-right: 2em; background: white url("//www.staffs.ac.uk/site/images/icons/icon-arrow-down-black.svg") no-repeat right 0.75em center; background-size: 0.75em; }
 
+.form--invalid, .crm-form__error-msg { color: #d70a26; border-color: #d70a26 !important; }
+
 .form__item { margin: 0 0 1.5rem; }
 
 .form__group { margin: 0 0 1.5rem; }
@@ -1166,47 +1168,47 @@ hr { position: relative; }
 
 .icon:before { font-size: 1em; display: inline-block; }
 
-.icon--envelope { background-image: url("/site/images/icons/icon-envelope.svg"); }
+.icon--envelope { background-image: url("//www.staffs.ac.uk/site/images/icons/icon-envelope.svg"); }
 
-.icon--phone { background-image: url("/site/images/icons/icon-phone.svg"); }
+.icon--phone { background-image: url("//www.staffs.ac.uk/site/images/icons/icon-phone.svg"); }
 
-.icon--facebook { background-image: url("/site/images/icons/icon-facebook.svg"); }
+.icon--facebook { background-image: url("//www.staffs.ac.uk/site/images/icons/icon-facebook.svg"); }
 
-.icon--pin { background-image: url("/site/images/icons/icon-pin.svg"); }
+.icon--pin { background-image: url("//www.staffs.ac.uk/site/images/icons/icon-pin.svg"); }
 
-.icon--calendar { background-image: url("/site/images/icons/icon-calendar.svg"); }
+.icon--calendar { background-image: url("//www.staffs.ac.uk/site/images/icons/icon-calendar.svg"); }
 
-.icon--clock { background-image: url("/site/images/icons/icon-clock.svg"); }
+.icon--clock { background-image: url("//www.staffs.ac.uk/site/images/icons/icon-clock.svg"); }
 
-.icon--pricetag { background-image: url("/site/images/icons/icon-pricetag.svg"); }
+.icon--pricetag { background-image: url("//www.staffs.ac.uk/site/images/icons/icon-pricetag.svg"); }
 
-.icon--facebook-white { background-image: url("/site/images/icons/icon-facebook-white.svg"); }
+.icon--facebook-white { background-image: url("//www.staffs.ac.uk/site/images/icons/icon-facebook-white.svg"); }
 
-.icon--instagram { background-image: url("/site/images/icons/icon-instagram.svg"); }
+.icon--instagram { background-image: url("//www.staffs.ac.uk/site/images/icons/icon-instagram.svg"); }
 
-.icon--instagram-white { background-image: url("/site/images/icons/icon-instagram-white.svg"); }
+.icon--instagram-white { background-image: url("//www.staffs.ac.uk/site/images/icons/icon-instagram-white.svg"); }
 
-.icon--linkedin { background-image: url("/site/images/icons/icon-linkedin.svg"); }
+.icon--linkedin { background-image: url("//www.staffs.ac.uk/site/images/icons/icon-linkedin.svg"); }
 
-.icon--linkedin-white { background-image: url("/site/images/icons/icon-linkedin-white.svg"); }
+.icon--linkedin-white { background-image: url("//www.staffs.ac.uk/site/images/icons/icon-linkedin-white.svg"); }
 
-.icon--pinterest { background-image: url("/site/images/icons/icon-pinterest.svg"); }
+.icon--pinterest { background-image: url("//www.staffs.ac.uk/site/images/icons/icon-pinterest.svg"); }
 
-.icon--pinterest-white { background-image: url("/site/images/icons/icon-pinterest-white.svg"); }
+.icon--pinterest-white { background-image: url("//www.staffs.ac.uk/site/images/icons/icon-pinterest-white.svg"); }
 
-.icon--snapchat { background-image: url("/site/images/icons/icon-snapchat.svg"); }
+.icon--snapchat { background-image: url("//www.staffs.ac.uk/site/images/icons/icon-snapchat.svg"); }
 
-.icon--snapchat-white { background-image: url("/site/images/icons/icon-snapchat-white.svg"); }
+.icon--snapchat-white { background-image: url("//www.staffs.ac.uk/site/images/icons/icon-snapchat-white.svg"); }
 
-.icon--twitter { background-image: url("/site/images/icons/icon-twitter.svg"); }
+.icon--twitter { background-image: url("//www.staffs.ac.uk/site/images/icons/icon-twitter.svg"); }
 
-.icon--twitter-white { background-image: url("/site/images/icons/icon-twitter-white.svg"); }
+.icon--twitter-white { background-image: url("//www.staffs.ac.uk/site/images/icons/icon-twitter-white.svg"); }
 
-.icon--youtube { background-image: url("/site/images/icons/icon-youtube.svg"); }
+.icon--youtube { background-image: url("//www.staffs.ac.uk/site/images/icons/icon-youtube.svg"); }
 
-.icon--youtube-white { background-image: url("/site/images/icons/icon-youtube-white.svg"); }
+.icon--youtube-white { background-image: url("//www.staffs.ac.uk/site/images/icons/icon-youtube-white.svg"); }
 
-.icon--form { background-image: url("/site/images/icons/icon-form.svg"); }
+.icon--form { background-image: url("//www.staffs.ac.uk/site/images/icons/icon-form.svg"); }
 
 .iconBox { display: flex; flex-wrap: wrap; align-items: flex-start; padding: calc(1rem + 2.5%) 0.5rem; margin: 0 0 1rem; background: #41464b; color: white; text-decoration: none; }
 
@@ -2148,6 +2150,8 @@ a.tile:focus { outline-width: 3px; outline-color: #144196; z-index: 2; }
 .modal__overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #000000; display: flex; justify-content: center; align-items: center; z-index: 9998; }
 
 .modal__container { background-color: #fff; padding: 30px; max-width: none; max-height: auto; border-radius: 4px; overflow-y: auto; box-sizing: border-box; z-index: 9999; top: 50px; bottom: 50px; right: 50px; left: 50px; overflow: auto; position: fixed; }
+
+@media (max-width: 20rem) { .modal__container { right: 5px; left: 5px; } }
 
 @media (min-width: 65rem) { .modal__container { right: 20%; left: 20%; } }
 
