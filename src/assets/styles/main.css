@@ -1440,7 +1440,7 @@ iframe { border: none; }
 
 .button--xl { font-size: 1.5em; }
 
-.button--block { display: block; width: 100%; text-align: center; }
+.button--block { display: block; width: 100%; text-align: center; line-height: 1.5; }
 
 .button--pointy:after { content: '\25B6\FE0E'; padding-left: 0.5em; transition: transform 200ms; }
 
