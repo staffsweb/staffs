@@ -51,9 +51,9 @@ let leadGenInit = function() {
                 $("#lead-gen__form").html("<h2>Thank you!</h2><p class='font-3xl'>Your request has been sent.</p>");
                 $('.slick-slider').slick('refresh');
                 setCookie("HideLeadGen", 1, 30);
-                leadGenActive = false;
                 setTimeout(function () {
-                    $("#lead-gen-modal").remove();
+                    $("#lead-gen-modal .modal__close").trigger("click");
+                    $("#lead-gen__no-btn").trigger("click");
                 }, 5000);
             })
             .fail(function() {
@@ -70,9 +70,5 @@ let leadGenInit = function() {
         $(".lead-gen").slideUp("slow");
         setCookie("HideLeadGen", 1, 30);
         leadGenActive = false;
-    });
-
-    $("#lead-gen-form__close").on("click", function(e) {
-        $("#lead-gen-prospectus__form, #lead-gen-updates__form").hide();
     });
 };
