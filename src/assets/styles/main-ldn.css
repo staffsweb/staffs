@@ -1403,7 +1403,7 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 .card a.masthead__school-link { color: white; border-bottom: 1px solid white !important; }
 
-.card a.masthead__school-link:hover { color: #d70a26; border-bottom-color: #d70a26 !important; text-decoration: none; }
+.card a.masthead__school-link:hover { border-bottom: none !important; text-decoration: none; }
 
 .megaNav { position: absolute; left: 0; right: 0; top: 0; background: white; font-size: 1.2em; z-index: 9; overflow: hidden; overflow-y: auto; box-sizing: border-box; overflow-scrolling: touch; transform: translateX(-150%); }
 

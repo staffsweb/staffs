@@ -136,8 +136,7 @@
     border-bottom: 1px solid white!important;
 
     &:hover {
-      color: $red;
-      border-bottom-color: $red!important;
+      border-bottom: none!important;
       text-decoration: none;
     }
   }

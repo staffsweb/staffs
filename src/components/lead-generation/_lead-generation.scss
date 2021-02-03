@@ -12,6 +12,11 @@
 
     &__no {
         color: #FFF;
+
+        &:hover {
+            color: inherit;
+            text-decoration: none;
+        }
     }
 
     &--prospectus {
