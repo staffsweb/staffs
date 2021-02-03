@@ -4,7 +4,7 @@ let leadGenInit = function() {
     $(document).on("scroll", function(e) {
         // CG: Limit scrolling past entry requirements
         if(leadGenActive) {
-            var dontScrollPast = $("#scroll-limit").offset().top;
+            var dontScrollPast = $("#entry").offset().top;
             var windowScrollTop = $(document).scrollTop();
             if(windowScrollTop >= dontScrollPast) {
                 $("#lead-gen").slideDown("slow");
