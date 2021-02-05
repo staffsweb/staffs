@@ -25,6 +25,9 @@ if(anchorTarget == "#courses__postgraduate")
 //=include vendor/waypoints/lib/jquery.waypoints.js
 //@codekit-prepend silent './vendor/jquery-ui.js';
 //=include vendor/jquery-ui.js
+//=include specific-functionality/cookie-read-and-write.js
+//=include specific-functionality/crm-forms.js
+//=include specific-functionality/lead-generation.js
 
 // @TODO: at some point, it'd probably be nice if functions sat in
 // 'eachIndividualComponentName.js' in each component folder and were imported
@@ -729,6 +732,14 @@ if(anchorTarget == "#courses__postgraduate")
       }, 250);
     });
 
+    $('#apply-scroll-btn').on('click', function () {
+      let target = $($(this).attr('href'));
+
+      $('html, body').stop().animate({
+        scrollTop: (target.offset().top - window.innerHeight / 10)
+      }, 750);
+    });
+
     $('#js-page-nav').each(function () {
       let el = $(this);
 
@@ -1205,6 +1216,8 @@ if(anchorTarget == "#courses__postgraduate")
     visualizerInit();
     toggleSlide('[data-course-modules-trigger]', scrollToTop);
     countrySubmit();
+    crmFormsInit();
+    leadGenInit();
   });
   $(window).on('DOMContentLoaded', function () {
     // event triggers once DOM is loaded but before stylesheets are applied
