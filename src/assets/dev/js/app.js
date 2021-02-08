@@ -6345,14 +6345,16 @@ var leadGenInit = function leadGenInit() {
   }
 
   $(document).on("scroll", function (e) {
-    // CG: Activate the lead gen banner when the user reaches the top of the "hidden" content
-    var scrollBottom = $(window).scrollTop() + $(window).height();
-    var targetDivPos = $("#hide-for-lead-gen").position().top - 100;
+    if (leadGenActive) {
+      // CG: Activate the lead gen banner when the user reaches the top of the "hidden" content
+      var scrollBottom = $(window).scrollTop() + $(window).height();
+      var targetDivPos = $("#hide-for-lead-gen").position().top - 100;
 
-    if (scrollBottom >= targetDivPos && leadGenActive) {
-      $("#lead-gen").slideDown("slow");
-    } else {
-      $("#lead-gen").slideUp("slow");
+      if (scrollBottom >= targetDivPos && leadGenActive) {
+        $("#lead-gen").slideDown("slow");
+      } else {
+        $("#lead-gen").slideUp("slow");
+      }
     }
   });
   $("#lead-gen__submit-btn").on("click", function (e) {
