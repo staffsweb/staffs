@@ -1941,7 +1941,7 @@ a.tile:focus { outline-width: 3px; outline-color: #144196; z-index: 2; }
 
 @supports ((-o-object-fit: cover) or (object-fit: cover)) { .zebra__figure img { -o-object-fit: cover; object-fit: cover; -o-object-position: center center; object-position: center center; height: 100%; } }
 
-.zebra__body { position: relative; flex: 1 1 20em; min-width: 50%; box-sizing: border-box; background-color: white; padding: 1rem; z-index: 1; }
+.zebra__body { position: relative; flex: 1 1 20em; min-width: 50%; box-sizing: border-box; background-color: white; padding: 1rem; z-index: 0; }
 
 @media (min-width: 50rem) { .zebra__body { flex: 0 0 45%; margin: 4rem auto 2.5rem; left: -5%; } }
 
