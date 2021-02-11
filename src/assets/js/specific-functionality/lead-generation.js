@@ -1,8 +1,12 @@
 let leadGenInit = function() {
-    var leadGenActive = $("#lead-gen").length > 0 ? true : false; // CG: Only if lead gen is present on the page. In the back end, it is not written to the page is the cookie "HideLeadGen" is present.
+    var leadGenActive = readCookie("HideLeadGen") == "1" ? false : true;
+
+    //var leadGenActive = $("#lead-gen").length > 0 ? true : false; // CG: Only if lead gen is present on the page. In the back end, it is not written to the page is the cookie "HideLeadGen" is present.
     if(leadGenActive) {
         // CG: Hide the content we don't want the user to scroll past
         $("#hide-for-lead-gen, #accolade-slider, #footer-site").addClass("visually-hidden");
+    } else {
+        $("#lead-gen").remove();
     }
 
     $(document).on("scroll", function(e) {

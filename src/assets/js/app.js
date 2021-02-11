@@ -1141,7 +1141,7 @@ if(anchorTarget == "#courses__postgraduate")
           var activeMode = $('*[data-mode="' + activeOption + '"]');
           $('*[data-mode]').not(activeMode.show()).hide();
          //Refresh sliders         
-          $(".sits-course-modules").each(function() {
+          $(".slick-slider").each(function() {
               $(this).slick('reinit');          
           });
           // CG: Refresh the Unistats iframe, if necessary
