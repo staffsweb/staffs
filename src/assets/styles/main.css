@@ -2455,6 +2455,8 @@ a.tile:focus { outline-width: 3px; outline-color: #d70a26; z-index: 2; }
 
 .title + .title { margin-top: -1rem; }
 
+.title--course-location { margin-top: 0.5rem; }
+
 .slab .title, .mini-template-grid .title { margin-top: 0; }
 
 .title__highlight { position: relative; display: inline; left: 0.5rem; padding: 0.25rem; line-height: 1.4; background: #d70a26; background: var(--background, #d70a26); color: white; color: var(--color); box-shadow: -0.5rem 0 0 0 #d70a26, 0.5rem 0 0 0 #d70a26; box-shadow: -0.5rem 0 0 0 var(--background, #d70a26), 0.5rem 0 0 0 var(--background, #d70a26); -webkit-box-decoration-break: clone; box-decoration-break: clone; }
