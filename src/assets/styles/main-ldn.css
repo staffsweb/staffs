@@ -1653,6 +1653,8 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .slab--bg-slate-light { background-color: #fff; }
 
+.slab--bg-blue-ldn { background-color: #144196; color: white; }
+
 /* Slider */
 .slick-slider { position: relative; display: block; box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
 
