@@ -62,6 +62,10 @@ select {
     outline: none;
     border-color: rgba(50, 50, 50, 0.75);
   }
+
+  .crm-form & {
+    max-width: none;
+  }
 }
 
 textarea {
@@ -73,6 +77,11 @@ select {
   padding-right: 2em;
   background: white url('#{$image-theme-directory-icon}/icon-arrow-down-black.svg') no-repeat right 0.75em center;
   background-size: 0.75em;
+}
+
+.form--invalid, .crm-form__error-msg {
+  color: $red;
+  border-color: $red!important;
 }
 
 .form__item {

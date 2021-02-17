@@ -237,7 +237,7 @@ a.card {
   color: $neutral--primary;
 
   &__icon {
-    margin-bottom: $card__internal-spacing;
+    margin-bottom: $card__internal-spacing * 2;
     max-width: 100%;
     height: auto!important;
 

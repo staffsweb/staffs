@@ -24,8 +24,16 @@
     bottom: 50px;
     right: 50px;
     left: 50px;
+    @media (max-width: (map_get($breakpoint-stages, 'mobile') )) {
+      right: 5px;
+      left: 5px;
+    }
     overflow: auto;
     position: fixed;
+    @media (min-width: (map_get($breakpoint-stages, 'tablet-wide') )) {
+      right: 20%;
+      left: 20%;
+    }
   }
   
   .modal__header {

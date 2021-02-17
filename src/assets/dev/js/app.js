@@ -6125,7 +6125,291 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     }
   });
   var widgetsAutocomplete = $.ui.autocomplete;
-}); // @TODO: at some point, it'd probably be nice if functions sat in
+});
+
+function readCookie(name) {
+  var regex = new RegExp("[; ]" + name + "=([^\\s;]*)");
+  var match = (" " + document.cookie).match(regex);
+
+  if (name && match) {
+    return unescape(match[1]);
+  } else {
+    return "";
+  }
+}
+
+function setCookie(name, value, days) {
+  var expires = "";
+
+  if (days) {
+    var date = new Date();
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+    expires = "; expires=" + date.toUTCString();
+  }
+
+  document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+function checkForInvalidFields() {
+  // CG: Count the invalid fields, then enable / disable the "submit" button as appropriate
+  var invalidFieldCount = 0;
+  var radioButtonNames = [];
+  $(".crm-form input:visible[data-required='true']:not([type='radio']), .crm-form select:visible[data-required='true'], .crm-form textarea:visible[data-required='true']").each(function () {
+    if (!isValid($(this))) {
+      invalidFieldCount++; //console.log($(this).attr("id") + " is invalid");
+    }
+  }); // CG: Check radio buttons separately:
+  // CG: ================================
+
+  $(".crm-form input[data-required='true'][type=radio]").each(function () {
+    // CG: Get the names of all radio buttons that are required
+    radioButtonNames.push($(this).attr("name"));
+  }); // CG: Reduce to only the unique names
+
+  radioButtonNames = radioButtonNames.filter(onlyUnique);
+
+  for (var i = 0; i < radioButtonNames.length; i++) {
+    // CG: Check that at least one radio button with that name has been selected 
+    if (!$(".crm-form input[name='" + radioButtonNames[i] + "']:checked").val()) {
+      invalidFieldCount++; //console.log("Missing radio button " + radioButtonNames[i]);
+    }
+  }
+
+  console.log(invalidFieldCount + " fields are invalid");
+
+  if (invalidFieldCount > 0) {
+    $("#submit-btn").attr("disabled", "disabled");
+  } else {
+    $("#submit-btn").removeAttr("disabled");
+  }
+}
+
+function onlyUnique(value, index, self) {
+  return self.indexOf(value) === index;
+}
+
+function isValidEmailAddress(address) {
+  var regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return regex.test(address);
+} // CG: Validate a single field
+
+
+function isValid($obj) {
+  var valueToCheck = ""; // CG: Handle <select> elements differently
+
+  if ($obj.prop("tagName") == "SELECT") {
+    valueToCheck = $obj.find(":selected").val();
+  } else {
+    valueToCheck = $obj.val();
+  } // CG: Specific check for email fields
+
+
+  if ($obj.attr("type") == "email") {
+    // CG: Apply regex for email address
+    if (!isValidEmailAddress($obj.val())) {
+      return false;
+    }
+  } // CG: Check all other types of fields
+
+
+  if (valueToCheck == "") {
+    //console.log($obj.prop("id") + " is invalid");
+    return false;
+  } else {
+    return true;
+  }
+} // CG: Only allow the user to change "pages", or submit, if the required fields are completed
+
+
+function requiredFieldsCompleted(fields) {
+  var errorsFound = false;
+  $(".crm-form__error-msg").remove();
+  $.each(fields, function (i, field) {
+    if (!fieldIsValid(field)) {
+      errorsFound = true; // CG: Reveal the address fields if the postcode is missing, otherwise the user won't see what's causing the problem
+
+      if (field.name == "ADD1") {
+        $("#address-confirmation").slideDown();
+      }
+    }
+  });
+
+  if (errorsFound) {
+    // CG: Scroll to the first invalid field
+    $("html, body").animate({
+      scrollTop: $(".form--invalid:first").offset().top - 30
+    }, 500);
+  }
+
+  return !errorsFound;
+}
+
+function fieldIsValid(field) {
+  // CG: Get the field DOM object based on the name
+  var $field = $("[name='" + field.name + "']");
+  var $label = $("label[for='" + field.id + "']");
+  $field.removeClass("form--invalid");
+  $label.removeClass("form--invalid"); // CG: Validate checkboxes / radio buttons
+  // Get all the inputs with the same name, and check if at least one of them is checked
+
+  if ($field.attr("type") == "checkbox" || $field.attr("type") == "radio") {
+    var $fieldset = $field.closest("fieldset");
+
+    if ($("[name='" + field.name + "']:checked").length == 0) {
+      // CG: Add error message to the <fieldset>, if there isn't one already
+      if ($fieldset.find(".crm-form__error-msg").length == 0) {
+        $fieldset.append("<p class=crm-form__error-msg>Please select an option</p>");
+      }
+
+      console.log(field.name + " is invalid");
+      return false;
+    }
+  } // CG: Validate email fields
+
+
+  if ($field.attr("type") == "email") {
+    // CG: Apply regex for email address
+    var $container = $field.parent();
+
+    if (!isValidEmailAddress($field.val())) {
+      $field.addClass("form--invalid");
+      $container.append("<p class=crm-form__error-msg>Please enter a valid email address</p>"); //$field.attr("placeholder","Please enter a valid email address");
+
+      return false;
+    } else {
+      $container.remove(".crm-form__error-msg");
+    }
+  }
+
+  if ($field.val() == "") {
+    $field.addClass("form--invalid");
+
+    if ($field.prop("tagName") != "SELECT") {
+      // CG: Check for an existing placeholder, and use that if it's present
+      var placeHolderText = $field.attr("data-invalid-message");
+
+      if (placeHolderText != "") {
+        $field.attr("placeholder", placeHolderText);
+      } else {
+        $field.attr("placeholder", "Please complete this field");
+      }
+    }
+
+    return false;
+  }
+
+  return true;
+}
+
+var crmFormsInit = function crmFormsInit() {
+  // CG: Validation: check each field in turn when the user clicks off it
+  $(".crm-form input, .crm-form select, .crm-form textarea").on("blur change", function () {
+    if ($(this).attr("data-required") == "true") {
+      var fieldId = $(this).attr("id");
+      var $label = $("label[for='" + fieldId + "']");
+
+      if (!isValid($(this))) {
+        $(this).addClass("form--invalid");
+
+        if (fieldId == "ENQUIRY") {
+          $(this).attr("placeholder", "Please enter your enquiry");
+        } else {
+          $(this).attr("placeholder", "Please complete this field");
+        }
+      } else {
+        $(this).removeClass("form--invalid");
+        $(this).removeAttr("placeholder");
+      } // CG: Activate the "submit" button only if all required fields have been completed
+
+
+      checkForInvalidFields();
+    }
+  }); // CG: Strip all non-numeric spaces from Phone no
+
+  $('#MOBILENO').on("blur change", function () {
+    $(this).val($(this).val().replace(/\D/g, ''));
+  });
+  $("#consent-to-all-btn").on("click", function (e) {
+    e.preventDefault(); // CG: Set all buttons to "yes"
+
+    $("#pref-sms-yes, #pref-email-yes, #pref-mail-yes, #pref-tel-yes").prop("checked", true);
+  });
+};
+
+var leadGenInit = function leadGenInit() {
+  var leadGenActive = readCookie("HideLeadGen") == "1" ? false : true; //var leadGenActive = $("#lead-gen").length > 0 ? true : false; // CG: Only if lead gen is present on the page. In the back end, it is not written to the page is the cookie "HideLeadGen" is present.
+
+  if (leadGenActive && $("#hide-for-lead-gen").length > 0) {
+    // CG: Hide the content we don't want the user to scroll past
+    $("#hide-for-lead-gen, #accolade-slider, #footer-site").addClass("visually-hidden");
+  } else {
+    $("#lead-gen").remove();
+  }
+
+  $(document).on("scroll", function (e) {
+    if (leadGenActive && $("#hide-for-lead-gen").length > 0) {
+      // CG: Activate the lead gen banner when the user reaches the top of the "hidden" content
+      var scrollBottom = $(window).scrollTop() + $(window).height();
+      var targetDivPos = $("#hide-for-lead-gen").position().top - 100;
+
+      if (scrollBottom >= targetDivPos && leadGenActive) {
+        $("#lead-gen").slideDown("slow");
+      } else {
+        $("#lead-gen").slideUp("slow");
+      }
+    }
+  });
+  $("#lead-gen__submit-btn").on("click", function (e) {
+    e.preventDefault();
+    var fields = $("#lead-gen__form").find("input[data-required='true'], select[data-required='true']:visible, textarea[data-required='true']");
+
+    if (requiredFieldsCompleted(fields)) {
+      $("#loading-spinner--lead-gen").show();
+      $.post("/api/CrmLeadGen/HandleProspectusRequest", {
+        "ADD1": $("#address-1").val(),
+        "ADD2": $("#address-2").val(),
+        "CITYORTOWN": $("#city-or-town").val(),
+        "COURSE_OF_SUBJECT": $("#COURSE_OF_SUBJECT").val(),
+        "EMAIL": $("#email").val(),
+        "FIRSTNAME": $("#firstname").val(),
+        "LANDINGPAGE": $("#LANDINGPAGE").val(),
+        "LASTNAME": $("#lastname").val(),
+        "MARKETING_CAMPAIGN": $("#MARKETING_CAMPAIGN").val(),
+        "MARKETING_MEDIUM": $("#MARKETING_MEDIUM").val(),
+        "MARKETING_SOURCE": $("#MARKETING_SOURCE").val(),
+        "MOBILENO": $("#mobileno").val(),
+        "POSTCODE": $("#postcode").val(),
+        "PREF_EMAIL": $("[name='PREF_EMAIL']:checked").val(),
+        "PREF_MAIL": $("[name='PREF_MAIL']:checked").val(),
+        "PREF_SMS": $("[name='PREF_SMS']:checked").val(),
+        "PREF_TELEPHONE": $("[name='PREF_TELEPHONE']:checked").val(),
+        "SUBJECT": $("#SUBJECT").val(),
+        "YEAR_OF_ENTRY": $("[name='YEAR_OF_ENTRY']:checked").val()
+      }).done(function (data) {
+        $("#loading-spinner--lead-gen").hide(); // CG: Replace the form fields with the success message
+
+        $("#lead-gen__form").html("<h2>Thank you!</h2><p class='font-3xl'>Your request has been sent.</p>");
+        setCookie("HideLeadGen", 1, 30);
+        setTimeout(function () {
+          $("#lead-gen-modal .modal__close").trigger("click");
+          $("#lead-gen__no-btn").trigger("click");
+        }, 5000);
+      }).fail(function () {
+        $("#loading-spinner--lead-gen").hide();
+        $("#lead-gen__form").html("<h2>An error occurred</h2><p class'font-3xl'>Sorry - there was a problem submitting your request. Please try again later.</p>");
+      });
+    } else {// CG: Invalid
+    }
+  });
+  $("#lead-gen__no-btn").on("click", function (e) {
+    e.preventDefault();
+    $(".lead-gen").slideUp("slow");
+    setCookie("HideLeadGen", 1, 30);
+    leadGenActive = false;
+    $("#hide-for-lead-gen, #accolade-slider, #footer-site").removeClass("visually-hidden");
+    $('.slick-slider').slick('refresh');
+  });
+}; // @TODO: at some point, it'd probably be nice if functions sat in
 // 'eachIndividualComponentName.js' in each component folder and were imported
 // rather than being here, like their Sass files
 
@@ -6781,6 +7065,12 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         scrollTop: target.offset().top - window.innerHeight / 10
       }, 250);
     });
+    $('#apply-scroll-btn').on('click', function () {
+      var target = $($(this).attr('href'));
+      $('html, body').stop().animate({
+        scrollTop: target.offset().top - window.innerHeight / 10
+      }, 750);
+    });
     $('#js-page-nav').each(function () {
       var el = $(this);
       el.waypoint(function (direction) {
@@ -7159,7 +7449,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         var activeMode = $('*[data-mode="' + activeOption + '"]');
         $('*[data-mode]').not(activeMode.show()).hide(); //Refresh sliders         
 
-        $(".sits-course-modules").each(function () {
+        $(".slick-slider").each(function () {
           $(this).slick('reinit');
         }); // CG: Refresh the Unistats iframe, if necessary
 
@@ -7235,6 +7525,8 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     visualizerInit();
     toggleSlide('[data-course-modules-trigger]', scrollToTop);
     countrySubmit();
+    crmFormsInit();
+    leadGenInit();
   });
   $(window).on('DOMContentLoaded', function () {
     // event triggers once DOM is loaded but before stylesheets are applied

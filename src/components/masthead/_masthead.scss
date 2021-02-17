@@ -82,7 +82,7 @@
         background: rgba(black, 0.75);
         @supports (backdrop-filter: blur(1em)) {
           background: rgba(black, 0.6);
-          min-height: 340px;
+          /*min-height: 340px;*/
         }
         backdrop-filter: blur(1em);
 
@@ -126,6 +126,18 @@
           margin: 2rem 0 2rem;
         }
       }
+    }
+  }
+}
+
+.card {
+  & a.masthead__school-link {
+    color: white;
+    border-bottom: 1px solid white!important;
+
+    &:hover {
+      border-bottom: none!important;
+      text-decoration: none;
     }
   }
 }

@@ -142,11 +142,61 @@
   padding: 2px;
   font-size: 12px;
   color: #FFF;
-  background-color: #E31837;  
+  background-color: $red;  
   z-index: 200;
   border: 1px solid #FFF;
 }
 
 .course-details_usp.element-outline .column {
   width: 28%;
+}
+
+.unistats-embed {
+  width: 100%;
+  height: 160px;
+  border: 0;
+}
+
+.accreditation-logos {
+  margin-bottom: $spacing-2xl;
+
+  & > img {
+    display: inline-block;
+  }
+}
+
+.system-info {
+  text-align: right;
+  font-size: 90%;
+}
+
+.note {
+  &--validation {
+    color: $red;
+    font-weight: 500;
+  }
+}
+
+.pie-chart {
+  width: 200px; 
+
+  .pie { transform: rotate(-90deg); width: 200px; height: 200px; background: #F4F4F4; border-radius: 50%; margin-bottom: 2rem; }
+
+  .pie circle { fill: none; stroke: #F4F4F4; stroke-width: 99; -webkit-animation: rotate 1.5s ease-in; animation: rotate 1.5s ease-in; }
+
+  .pie .circle-1 { stroke: #D20052; }
+
+  .pie .circle-2 { stroke: #394851; }
+
+  .pie .circle-3 { stroke: #C3C1C1; }
+
+  .pie-chart_key { margin: 0.5rem 0; }
+
+  .pie-chart_key .key-color { display: inline-block; width: 17px; height: 17px; margin-right: 0.5rem; }
+
+  .pie-chart_key .key-color.key-1 { background: #D20052; }
+
+  .pie-chart_key .key-color.key-2 { background: #394851; }
+
+  .pie-chart_key .key-color.key-3 { background: #C3C1C1; }
 }

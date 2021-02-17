@@ -85,6 +85,7 @@ $slab-bg-colors: (
   'granite': $granite--ldn,
   'granite-light': $granite--light-ldn,
   'slate-light': $slate--light,
+  'blue-ldn': $blue--deep-ldn,
 );
 
 $icon-box-colors: (
@@ -117,12 +118,12 @@ $icon-box-colors: (
 @import "../../components/breadcrumbs/breadcrumbs";
 @import "../../components/button/buttons";
 @import "../../components/card/cards";
-@import "../../components/course-summary/course-summary";
 @import "../../components/feature-link/feature-link";
 @import "../../components/hr/hr";
 @import "../../components/icons/icons";
 @import "../../components/iconBox/iconBox";
 @import "../../components/list/lists";
+@import "../../components/loading-spinner/loading-spinner";
 @import "../../components/masthead/masthead";
 @import "../../components/megaNav/megaNav";
 @import "../../components/meta/meta";
