@@ -19,3 +19,9 @@ variants:
     context:
       background: slate
       text: 'This is a slate slab'
+
+  - name: bg-img
+    label: "Background Image"
+    context:
+      background: img
+      text: 'This is a slab with background image'
