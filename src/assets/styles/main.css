@@ -1406,6 +1406,10 @@ iframe { border: none; }
 
 .box--bg-slate { background-color: #394851; color: #fff; }
 
+.box--bg-slate a.link--standard { color: #fff; text-decoration: none; }
+
+.box--bg-slate a.link--standard:hover { border-bottom: 0 !important; }
+
 .box--bg-offwhite-gradient { background: radial-gradient(45% 660% at 50% 50%, #f7f7f7 0%, #f0f0f0 100%); }
 
 .box--with-abstitle .box__content:first-child { padding-top: calc(3rem + 2.5%); }
