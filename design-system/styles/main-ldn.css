@@ -1228,19 +1228,29 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 .list--steps { list-style: none; -webkit-padding-start: 3rem; padding-inline-start: 3rem; counter-reset: list--steps; margin-bottom: 4rem; }
 
-.list--steps li { position: relative; border-left: 0.25rem solid #41464b; padding-left: 1.5rem; margin-bottom: 2.5rem; }
+.list--steps > li { position: relative; border-left: 0.25rem solid #41464b; border-color: var(--accent-color, #41464b); padding-left: 1.5rem; margin-bottom: 2.5rem; }
 
-.list--steps li::before { content: counter(list--steps); counter-increment: list--steps; display: block; float: left; clear: left; margin-left: -4.625rem; width: 3rem; padding: 0.25rem 0; background: #41464b; color: white; font-size: 2rem; font-weight: 500; line-height: 1.4; text-align: center; }
+.list--steps > li::before { content: counter(list--steps); counter-increment: list--steps; display: block; float: left; clear: left; margin-left: -4.625rem; width: 3rem; padding: 0.25rem 0; background: var(--accent-color, #41464b); color: white; font-size: 2rem; font-weight: 500; line-height: 1.4; text-align: center; }
 
 .list--steps__box { background: #f0f1f2; padding: calc(0.75rem + 2.5%); margin-left: -1.5rem; }
 
 .list--steps__cta .button:only-child { margin-bottom: 0; }
 
+.list--steps-accent-red { --accent-color: #d70a26; }
+
+.list--steps-accent-pink { --accent-color: #d5035e; }
+
+.list--steps-accent-maroon { --accent-color: #970048; }
+
+.list--steps-accent-slate { --accent-color: #394851; }
+
+.list--steps-accent-blue-ldn { --accent-color: #144196; }
+
 .list--steps.accordion { border-bottom: 0; }
 
-.list--steps.accordion li { border-color: #144196; }
+.list--steps.accordion > li { border-color: #144196; border-color: var(--accent-color, #144196); }
 
-.list--steps.accordion li::before { background-color: #144196; }
+.list--steps.accordion > li::before { background-color: #144196; background-color: var(--accent-color, #144196); }
 
 .list--steps.accordion .accordion__title { background: #f0f1f2; }
 
