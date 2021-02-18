@@ -226,6 +226,8 @@
   <span class="hljs-attribute">position</span>: relative;
   <span class="hljs-variable">$border-color</span>: <span class="hljs-variable">$grey--light</span>;
   <span class="hljs-attribute">padding</span>: <span class="hljs-variable">$spacing-4xl</span> <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">background-size</span>: cover;
+  <span class="hljs-attribute">background-repeat</span>: no-repeat;
 
   &amp;__title {
     <span class="hljs-attribute">margin-top</span>: <span class="hljs-variable">$spacing-md</span>;
@@ -233,6 +235,21 @@
 
   &amp;__header {
     <span class="hljs-attribute">margin-top</span>: -#{<span class="hljs-variable">$spacing-4xl</span>};
+  }
+
+  &amp;__bg {
+    <span class="hljs-attribute">position</span>: absolute;
+    <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">z-index</span>: -<span class="hljs-number">1</span>;
+
+    <span class="hljs-selector-tag">img</span> {
+      <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+      <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+      <span class="hljs-selector-tag">object</span>-fit: cover;
+    }
   }
 
   <span class="hljs-comment">//--</span>
@@ -271,7 +288,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">568 Bytes</span>
+                    <span class="Meta-value">834 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -294,7 +311,7 @@
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Variants <em class="Meta-count">(4)</em>:</strong>
+            <strong class="Meta-key">Variants <em class="Meta-count">(6)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="slab--default.html">
@@ -307,6 +324,14 @@
             
                 <a href="">
                     <span>Background: Slate</span>
+                </a>, 
+            
+                <a href="slab--bg-img.html">
+                    <span>Background Image</span>
+                </a>, 
+            
+                <a href="slab--ldn.html">
+                    <span>London Variants</span>
                 </a>, 
             
                 <a href="slab--examples.html">
@@ -3996,6 +4021,54 @@
         <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
             <a class="Tree-entityLink" href="" data-pjax>
                 <span>Background: Slate</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="slab--bg-img.html" data-pjax>
+                <span>Background Image</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="slab--ldn.html" data-pjax>
+                <span>London Variants</span>
                 
 
 <div class="Status Status--unlabelled">

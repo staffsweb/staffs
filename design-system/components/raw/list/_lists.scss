@@ -93,14 +93,23 @@
 }
 
 .list--steps {
+  $number-accent-colors: (
+    'red': $red,
+    'pink': $pink,
+    'maroon': $maroon,
+    'slate': $slate,
+    'blue-ldn': $blue--deep-ldn,
+  );
+
   list-style: none;
   padding-inline-start: $spacing-3xl;
   counter-reset: list--steps;
   margin-bottom: $spacing-4xl;
 
-  li {
+  > li {
     position: relative;
     border-left: $border-accent-width solid $neutral--primary;
+    border-color: var(--accent-color, #{$neutral--primary});
     padding-left: $spacing-lg;
     margin-bottom: $spacing-2xl;
 
@@ -113,7 +122,7 @@
       margin-left: -#{$spacing-3xl + $spacing-lg + $border-accent-width/2};
       width: $spacing-3xl;
       padding: $spacing-2xs 0;
-      background: $neutral--primary;
+      background: var(--accent-color, #{$neutral--primary});
       color: white;
       @include typescale('3xl');
       font-weight: 500;
@@ -138,18 +147,28 @@
     }
   }
 
+  //--  ACCENT THEMES
+  @each $name, $value in $number-accent-colors {
+    &-accent-#{$name} {
+      --accent-color: #{$value};
+    }
+  }
+
+
   //--
 
   &.accordion {
-    // component fusion, like Jazz fusion; not sure if this is a wonderful or terrible idea
+    // component fusion, like Jazz fusion; not sure if this is a wonderful or terrible idea (probably terrible)
 
     border-bottom: 0;
 
-    li {
+    > li {
       border-color: $primary;
+      border-color: var(--accent-color, #{$primary});
 
       &::before {
         background-color: $primary;
+        background-color: var(--accent-color, #{$primary});
       }
     }
 

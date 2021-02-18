@@ -71,6 +71,15 @@
   &--bg-slate {
     background-color: $slate;
     color: #fff;
+
+    & a.link--standard {
+      color: #fff;
+      text-decoration: none;
+
+      &:hover {
+        border-bottom: 0!important;
+      }
+    }
   }
 
   &--bg-offwhite-gradient {
