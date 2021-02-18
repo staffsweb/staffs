@@ -25,3 +25,7 @@ variants:
     context:
       background: img
       text: 'This is a slab with background image'
+
+  - name: ldn
+    label: 'London Variants'
+    preview: '@preview--ldn'
