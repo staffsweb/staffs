@@ -1800,19 +1800,29 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 .list--steps { list-style: none; -webkit-padding-start: 3rem; padding-inline-start: 3rem; counter-reset: list--steps; margin-bottom: 4rem; }
 
-.list--steps li { position: relative; border-left: 0.25rem solid #394851; padding-left: 1.5rem; margin-bottom: 2.5rem; }
+.list--steps > li { position: relative; border-left: 0.25rem solid #394851; border-color: var(--accent-color, #394851); padding-left: 1.5rem; margin-bottom: 2.5rem; }
 
-.list--steps li::before { content: counter(list--steps); counter-increment: list--steps; display: block; float: left; clear: left; margin-left: -4.625rem; width: 3rem; padding: 0.25rem 0; background: #394851; color: white; font-size: 2rem; font-weight: 500; line-height: 1.4; text-align: center; }
+.list--steps > li::before { content: counter(list--steps); counter-increment: list--steps; display: block; float: left; clear: left; margin-left: -4.625rem; width: 3rem; padding: 0.25rem 0; background: var(--accent-color, #394851); color: white; font-size: 2rem; font-weight: 500; line-height: 1.4; text-align: center; }
 
 .list--steps__box { background: #f0f1f2; padding: calc(0.75rem + 2.5%); margin-left: -1.5rem; }
 
 .list--steps__cta .button:only-child { margin-bottom: 0; }
 
+.list--steps-accent-red { --accent-color: #d70a26; }
+
+.list--steps-accent-pink { --accent-color: #d5035e; }
+
+.list--steps-accent-maroon { --accent-color: #970048; }
+
+.list--steps-accent-slate { --accent-color: #394851; }
+
+.list--steps-accent-blue-ldn { --accent-color: #144196; }
+
 .list--steps.accordion { border-bottom: 0; }
 
-.list--steps.accordion li { border-color: #d70a26; }
+.list--steps.accordion > li { border-color: #d70a26; border-color: var(--accent-color, #d70a26); }
 
-.list--steps.accordion li::before { background-color: #d70a26; }
+.list--steps.accordion > li::before { background-color: #d70a26; background-color: var(--accent-color, #d70a26); }
 
 .list--steps.accordion .accordion__title { background: #f0f1f2; }
 
@@ -2197,11 +2207,15 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .sitewide-message__text { margin: 0; line-height: 1.5; }
 
-.slab { position: relative; padding: 4rem 0; }
+.slab { position: relative; padding: 4rem 0; background-size: cover; background-repeat: no-repeat; }
 
 .slab__title { margin-top: 1rem; }
 
 .slab__header { margin-top: -4rem; }
+
+.slab__bg { position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: -1; }
+
+.slab__bg img { height: 100%; width: 100%; -o-object-fit: cover; object-fit: cover; }
 
 .slab--border-bottom { border-bottom: 1px solid #dddddd; }
 

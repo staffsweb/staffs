@@ -1,19 +1,25 @@
 let leadGenInit = function() {
-    var leadGenActive = $("#lead-gen").length > 0 ? true : false; // CG: Only if lead gen is present on the page. In the back end, it is not written to the page is the cookie "HideLeadGen" is present.
-    if(leadGenActive) {
+    var leadGenActive = readCookie("HideLeadGen") == "1" ? false : true;
+
+    //var leadGenActive = $("#lead-gen").length > 0 ? true : false; // CG: Only if lead gen is present on the page. In the back end, it is not written to the page is the cookie "HideLeadGen" is present.
+    if(leadGenActive && $("#hide-for-lead-gen").length > 0) {
         // CG: Hide the content we don't want the user to scroll past
         $("#hide-for-lead-gen, #accolade-slider, #footer-site").addClass("visually-hidden");
+    } else {
+        $("#lead-gen").remove();
     }
 
     $(document).on("scroll", function(e) {
-        // CG: Activate the lead gen banner when the user reaches the top of the "hidden" content
-        var scrollBottom = $(window).scrollTop() + $(window).height();
-        var targetDivPos = $("#hide-for-lead-gen").position().top - 100;
+        if(leadGenActive && $("#hide-for-lead-gen").length > 0) {
+            // CG: Activate the lead gen banner when the user reaches the top of the "hidden" content
+            var scrollBottom = $(window).scrollTop() + $(window).height();
+            var targetDivPos = $("#hide-for-lead-gen").position().top - 100;
 
-        if (scrollBottom >= targetDivPos && leadGenActive) {
-            $("#lead-gen").slideDown("slow");
-        } else {
-            $("#lead-gen").slideUp("slow");
+            if (scrollBottom >= targetDivPos && leadGenActive) {
+                $("#lead-gen").slideDown("slow");
+            } else {
+                $("#lead-gen").slideUp("slow");
+            }
         }
     });
 
