@@ -779,6 +779,8 @@ iframe { border: none; }
 
 .header-site.has-solid-bg { background: black; }
 
+.header-site--dashboard { background: #d70a26; }
+
 @media (min-width: 40rem) { .header-site { left: 1rem; } }
 
 .header-site__flexContainer { display: flex; justify-content: flex-end; }
