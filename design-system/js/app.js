@@ -28,6 +28,7 @@ if(anchorTarget == "#courses__postgraduate")
 //=include specific-functionality/cookie-read-and-write.js
 //=include specific-functionality/crm-forms.js
 //=include specific-functionality/lead-generation.js
+//=include specific-functionality/news-and-events-search.js
 
 // @TODO: at some point, it'd probably be nice if functions sat in
 // 'eachIndividualComponentName.js' in each component folder and were imported
@@ -1218,6 +1219,7 @@ if(anchorTarget == "#courses__postgraduate")
     countrySubmit();
     crmFormsInit();
     leadGenInit();
+    newsAndEventsSearchInit();
   });
   $(window).on('DOMContentLoaded', function () {
     // event triggers once DOM is loaded but before stylesheets are applied
