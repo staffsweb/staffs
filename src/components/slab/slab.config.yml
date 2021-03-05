@@ -22,6 +22,7 @@ variants:
 
   - name: bg-img
     label: "Background Image"
+    hidden: true
     context:
       background: img
       text: 'This is a slab with background image'
