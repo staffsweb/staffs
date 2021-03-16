@@ -22,3 +22,9 @@
 .ratio-a4-landscape {
     padding-bottom: 70.72%;
 }
+.embed-container {
+	background-color: #CCC;
+}
+.optanon-video-message[src] {
+	display: none; /* CG: For use with the Optanon cookie banner. When the script switches "data-src" to "src", the "sorry" message is hidden */
+}

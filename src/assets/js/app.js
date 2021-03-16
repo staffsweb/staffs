@@ -26,6 +26,7 @@ if(anchorTarget == "#courses__postgraduate")
 //@codekit-prepend silent './vendor/jquery-ui.js';
 //=include vendor/jquery-ui.js
 //=include specific-functionality/cookie-read-and-write.js
+//=include specific-functionality/optanon.js
 //=include specific-functionality/crm-forms.js
 //=include specific-functionality/lead-generation.js
 //=include specific-functionality/news-and-events-search.js
@@ -1024,12 +1025,21 @@ if(anchorTarget == "#courses__postgraduate")
           var modal = document.querySelector("[data-modal=\"".concat(modalTrigger, "\"]"));
   
           modal.classList.add('is-open');
-          
+
           var video = modal.querySelector("[data-video-src]"); 
           var hasVideo = video && video != undefined;
+
+          // CG: Only display the video if the user has consented to the relevant cookies, e.g. the cookie string contains "C0003:1"
+          var videoCookieCategory = getOptanonCategoryFromClass(video.className);
   
-          if(hasVideo) {
+          if(hasVideo && relevantCookiesAccepted(videoCookieCategory)) {
             video.setAttribute('src', video.dataset.videoSrc);
+          } else {
+            const newDiv = document.createElement("p");
+            newDiv.style.color = '#FFF';
+            newDiv.innerHTML = "Sorry, this video requires the use of functional cookies which you have not consented to use. You can <a style='color: #FFF; text-decoration: underline;' href='/legal/data-protection/cookie-policy'>change your cookie settings</a> or <a style='color: #FFF; text-decoration: underline;' href='" + video.dataset.videoSrc + "'>watch the video on YouTube</a>.";
+
+            video.parentNode.replaceChild(newDiv, video);
           }
   
           modal.querySelector('[data-modal-close]').addEventListener('click', function () {
