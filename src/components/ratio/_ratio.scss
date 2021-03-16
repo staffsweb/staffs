@@ -25,6 +25,10 @@
 .embed-container {
 	background-color: #CCC;
 }
-.optanon-video-message[src] {
-	display: none; /* CG: For use with the Optanon cookie banner. When the script switches "data-src" to "src", the "sorry" message is hidden */
+.optanon-video-message {
+	padding: $spacing-md;
+
+	&[src] {
+		display: none; /* CG: For use with the Optanon cookie banner. When the script switches "data-src" to "src", the "sorry" message is hidden */
+	}
 }

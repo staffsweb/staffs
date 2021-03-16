@@ -1635,6 +1635,8 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .embed-container { background-color: #CCC; }
 
+.optanon-video-message { padding: 1rem; }
+
 .optanon-video-message[src] { display: none; /* CG: For use with the Optanon cookie banner. When the script switches "data-src" to "src", the "sorry" message is hidden */ }
 
 .section-header { margin-bottom: 4rem; }
