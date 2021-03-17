@@ -27,6 +27,10 @@
 }
 .optanon-video-message {
 	padding: $spacing-md;
+	position: absolute;
+	z-index: 100;
+	font-size: 0.75rem;
+	line-height: 1.1rem;
 
 	&[src] {
 		display: none; /* CG: For use with the Optanon cookie banner. When the script switches "data-src" to "src", the "sorry" message is hidden */
