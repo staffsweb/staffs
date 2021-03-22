@@ -7498,15 +7498,18 @@ var newsAndEventsSearchInit = function newsAndEventsSearchInit() {}; // @TODO: a
           var video = modal.querySelector("[data-video-src]");
           var hasVideo = video && video != undefined; // CG: Only display the video if the user has consented to the relevant cookies, e.g. the cookie string contains "C0003:1"
 
-          var videoCookieCategory = getOptanonCategoryFromClass(video.className);
+          if (hasVideo)
+          {
+            var videoCookieCategory = getOptanonCategoryFromClass(video.className);
 
-          if (hasVideo && relevantCookiesAccepted(videoCookieCategory)) {
-            video.setAttribute('src', video.dataset.videoSrc);
-          } else {
-            var newDiv = document.createElement("p");
-            newDiv.style.color = '#FFF';
-            newDiv.innerHTML = "Sorry, this video requires the use of functional cookies which you have not consented to use. You can <a style='color: #FFF; text-decoration: underline;' href='/legal/data-protection/cookie-policy'>change your cookie settings</a> or <a style='color: #FFF; text-decoration: underline;' href='" + video.dataset.videoSrc + "'>watch the video on YouTube</a>.";
-            video.parentNode.replaceChild(newDiv, video);
+            if(relevantCookiesAccepted(videoCookieCategory)) {
+              video.setAttribute('src', video.dataset.videoSrc);
+            } else {
+              var newDiv = document.createElement("p");
+              newDiv.style.color = '#FFF';
+              newDiv.innerHTML = "Sorry, this video requires the use of functional cookies which you have not consented to use. You can <a style='color: #FFF; text-decoration: underline;' href='/legal/data-protection/cookie-policy'>change your cookie settings</a> or <a style='color: #FFF; text-decoration: underline;' href='" + video.dataset.videoSrc + "'>watch the video on YouTube</a>.";
+              video.parentNode.replaceChild(newDiv, video);
+            }
           }
 
           modal.querySelector('[data-modal-close]').addEventListener('click', function () {
