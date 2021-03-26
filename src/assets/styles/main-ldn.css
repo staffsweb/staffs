@@ -2173,13 +2173,13 @@ a.tile:focus { outline-width: 3px; outline-color: #144196; z-index: 2; }
 
 .masthead { background: linear-gradient(#144196, #0082c8); }
 
-.theme-ldn .megaNav__close { background: url("//www.staffs.ac.uk/site/images/icons/london/icon-x-primary.svg") no-repeat center center; background-size: 1rem; }
+.theme-ldn .megaNav__close { background: url("//www.staffs.ac.uk/microsites/london/images/icons/icon-x-primary.svg") no-repeat center center; background-size: 1rem; }
 
-.theme-ldn .megaNav .has-children > a:after { background: url("//www.staffs.ac.uk/site/images/icons/london/icon-gt-primary.svg") no-repeat center center; background-size: 0.5em; }
+.theme-ldn .megaNav .has-children > a:after { background: url("//www.staffs.ac.uk/microsites/london/images/icons/icon-gt-primary.svg") no-repeat center center; background-size: 0.5em; }
 
-.theme-ldn .megaNav__closeLevel:before { background: url("//www.staffs.ac.uk/site/images/icons/london/icon-gt-primary.svg") no-repeat center center; background-size: 0.5em; }
+.theme-ldn .megaNav__closeLevel:before { background: url("//www.staffs.ac.uk/microsites/london/images/icons/icon-gt-primary.svg") no-repeat center center; background-size: 0.5em; }
 
-.theme-ldn .feature-link__title:after { background: url("//www.staffs.ac.uk/site/images/icons/london/icon-gt-primary.svg") no-repeat center center; background-size: 40%; }
+.theme-ldn .feature-link__title:after { background: url("image-theme-directory-icon-ldn/icon-gt-primary.svg") no-repeat center center; background-size: 40%; }
 
 .modal__overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #000000; display: flex; justify-content: center; align-items: center; z-index: 9998; }
 

@@ -1,13 +1,13 @@
 .theme-ldn .megaNav {
     &__close {
-        background: url('#{$image-theme-directory-icon}/london/icon-x-primary.svg') no-repeat center center;
+        background: url('#{$image-theme-directory-icon-ldn}/icon-x-primary.svg') no-repeat center center;
         background-size: 1rem;
     }
 
     .has-children {
         > a {
           &:after {
-            background: url('#{$image-theme-directory-icon}/london/icon-gt-primary.svg') no-repeat center center;
+            background: url('#{$image-theme-directory-icon-ldn}/icon-gt-primary.svg') no-repeat center center;
             background-size: 0.5em;
           }
         }
@@ -15,7 +15,7 @@
 
       &__closeLevel {
         &:before {
-            background: url('#{$image-theme-directory-icon}/london/icon-gt-primary.svg') no-repeat center center;
+            background: url('#{$image-theme-directory-icon-ldn}/icon-gt-primary.svg') no-repeat center center;
             background-size: 0.5em;
           }
       
