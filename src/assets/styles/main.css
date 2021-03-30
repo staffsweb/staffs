@@ -2310,7 +2310,7 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .accolade-slider__item-img { margin: auto; width: auto; max-height: 2em; }
 
-.accolade-slider a { color: white; text-decoration: none; }
+.accolade-slider a { color: inherit; text-decoration: none; }
 
 .js-slider--responsive .slick-slide { margin: 0 1.5rem 0; }
 
