@@ -48,4 +48,15 @@
       }
     }
   }
+
+  &--bg-blue-ldn {
+    & a {
+      color: inherit;
+
+      &:hover {
+        text-decoration: none;
+        border-bottom: 0;
+      }
+    }
+  }
 }
