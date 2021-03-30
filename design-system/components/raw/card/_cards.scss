@@ -49,6 +49,11 @@ $card__internal-spacing: $spacing-sm;
   &__figure {
     &--video {
       position: relative;
+      background-color: #CCC;
+
+      &:hover {
+        cursor: pointer;
+      }
 
       &:after {
         content: '';
@@ -64,6 +69,10 @@ $card__internal-spacing: $spacing-sm;
         background-size: contain;
         z-index: 1;
         pointer-events: none;
+      }
+
+      & img {
+        color: #CCC;
       }
     }
   }

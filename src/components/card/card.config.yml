@@ -22,6 +22,10 @@ variants:
   - name: ksp-light
     label: "KSP (Light on Dark)"
 
+  - name: ksp-ldn-variants
+    label: "KSP (LDN)"
+    preview: '@preview--ldn'
+
   - name: pullquote
     label: "Pullquote"
   - name: pullquote-ldn

@@ -26,6 +26,7 @@ if(anchorTarget == "#courses__postgraduate")
 //@codekit-prepend silent './vendor/jquery-ui.js';
 //=include vendor/jquery-ui.js
 //=include specific-functionality/cookie-read-and-write.js
+//=include specific-functionality/optanon.js
 //=include specific-functionality/crm-forms.js
 //=include specific-functionality/lead-generation.js
 //=include specific-functionality/news-and-events-search.js
@@ -495,9 +496,13 @@ if(anchorTarget == "#courses__postgraduate")
       ]
     });
 
+    // CG: Calculate how many slides to show by default, so that they are always centred. Stop at 5
+    var accoladeSlidesToShow = $(".js-slider--accolades > div").length;
+    accoladeSlidesToShow = accoladeSlidesToShow > 5 ? 5 : accoladeSlidesToShow;
+
     $('.js-slider--accolades').slick({
-      slidesToShow: 5,
-      slidesToScroll: 5,
+      slidesToShow: accoladeSlidesToShow,
+      slidesToScroll: accoladeSlidesToShow,
       infinite: false,
       responsive: [
         {
@@ -1017,19 +1022,26 @@ if(anchorTarget == "#courses__postgraduate")
 
         trigger.setAttribute('data-modal-trigger', modalTriggerName);
         modal.setAttribute('data-modal', modalTriggerName);
-  
         trigger.addEventListener('click', function (event) {
           document.body.classList.add('modal__is-open');
           var modalTrigger = trigger.dataset.modalTrigger;
           var modal = document.querySelector("[data-modal=\"".concat(modalTrigger, "\"]"));
-  
           modal.classList.add('is-open');
-          
-          var video = modal.querySelector("[data-video-src]"); 
-          var hasVideo = video && video != undefined;
-  
-          if(hasVideo) {
-            video.setAttribute('src', video.dataset.videoSrc);
+          var video = modal.querySelector("[data-video-src]");
+          var hasVideo = video && video != undefined; // CG: Only display the video if the user has consented to the relevant cookies, e.g. the cookie string contains "C0003:1"
+
+          if (hasVideo)
+          {
+            var videoCookieCategory = getOptanonCategoryFromClass(video.className);
+
+            if(relevantCookiesAccepted(videoCookieCategory)) {
+              video.setAttribute('src', video.dataset.videoSrc);
+            } else {
+              var newDiv = document.createElement("p");
+              newDiv.style.color = '#FFF';
+              newDiv.innerHTML = "Sorry, this video requires the use of functional cookies which you have not consented to use. You can <a style='color: #FFF; text-decoration: underline;' href='/legal/data-protection/cookie-policy'>change your cookie settings</a> or <a style='color: #FFF; text-decoration: underline;' href='" + video.dataset.videoSrc + "'>watch the video on YouTube</a>.";
+              video.parentNode.replaceChild(newDiv, video);
+            }
           }
   
           modal.querySelector('[data-modal-close]').addEventListener('click', function () {

@@ -6148,6 +6148,29 @@ function setCookie(name, value, days) {
   }
 
   document.cookie = name + "=" + (value || "") + expires + "; path=/";
+} // CG: Functionality for use with the cookie banner, March 2021 onwards
+
+
+function getOptanonCategoryFromClass(string) {
+  var re = /optanon-category-([cC]\d{4})/gm;
+  var matches = re.exec(string);
+
+  if (!matches) {
+    return false;
+  } else {
+    return matches[1];
+  }
+}
+
+function relevantCookiesAccepted(category) {
+  // CG: Checks if the specific category (such as "C0002") is present in the Optanon "accepted" categories in the cookie
+  var optanonCookieString = readCookie('OptanonConsent');
+
+  if (optanonCookieString.indexOf(category + ":1") != -1) {
+    return true;
+  }
+
+  return false;
 }
 
 function checkForInvalidFields() {
@@ -6996,10 +7019,13 @@ var newsAndEventsSearchInit = function newsAndEventsSearchInit() {}; // @TODO: a
           slidesToScroll: 1
         }
       }]
-    });
+    }); // CG: Calculate how many slides to show by default, so that they are always centred. Stop at 5
+
+    var accoladeSlidesToShow = $(".js-slider--accolades > div").length;
+    accoladeSlidesToShow = accoladeSlidesToShow > 5 ? 5 : accoladeSlidesToShow;
     $('.js-slider--accolades').slick({
-      slidesToShow: 5,
-      slidesToScroll: 5,
+      slidesToShow: accoladeSlidesToShow,
+      slidesToScroll: accoladeSlidesToShow,
       infinite: false,
       responsive: [{
         breakpoint: 900,
@@ -7473,10 +7499,19 @@ var newsAndEventsSearchInit = function newsAndEventsSearchInit() {}; // @TODO: a
           var modal = document.querySelector("[data-modal=\"".concat(modalTrigger, "\"]"));
           modal.classList.add('is-open');
           var video = modal.querySelector("[data-video-src]");
-          var hasVideo = video && video != undefined;
+          var hasVideo = video && video != undefined; // CG: Only display the video if the user has consented to the relevant cookies, e.g. the cookie string contains "C0003:1"
 
           if (hasVideo) {
-            video.setAttribute('src', video.dataset.videoSrc);
+            var videoCookieCategory = getOptanonCategoryFromClass(video.className);
+
+            if (relevantCookiesAccepted(videoCookieCategory)) {
+              video.setAttribute('src', video.dataset.videoSrc);
+            } else {
+              var newDiv = document.createElement("p");
+              newDiv.style.color = '#FFF';
+              newDiv.innerHTML = "Sorry, this video requires the use of functional cookies which you have not consented to use. You can <a style='color: #FFF; text-decoration: underline;' href='/legal/data-protection/cookie-policy'>change your cookie settings</a> or <a style='color: #FFF; text-decoration: underline;' href='" + video.dataset.videoSrc + "'>watch the video on YouTube</a>.";
+              video.parentNode.replaceChild(newDiv, video);
+            }
           }
 
           modal.querySelector('[data-modal-close]').addEventListener('click', function () {

@@ -1488,9 +1488,13 @@ iframe { border: none; }
 
 .card__title a { color: #d70a26; color: var(--accent-color); }
 
-.card__figure--video { position: relative; }
+.card__figure--video { position: relative; background-color: #CCC; }
+
+.card__figure--video:hover { cursor: pointer; }
 
 .card__figure--video:after { content: ''; position: absolute; width: 4rem; height: 4rem; max-width: 50%; max-height: 50%; top: 50%; left: 50%; transform: translate(-50%, -50%); background: url("//www.staffs.ac.uk/site/images/icons/icon-play-circle-neutral-light.svg") no-repeat center center; background-size: contain; z-index: 1; pointer-events: none; }
+
+.card__figure--video img { color: #CCC; }
 
 .card .blockquote__title { color: var(--accent-color); }
 
@@ -2165,6 +2169,12 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .ratio-a4-landscape { padding-bottom: 70.72%; }
 
+.embed-container { background-color: #CCC; }
+
+.optanon-video-message { padding: 1rem; position: absolute; z-index: 100; font-size: 0.75rem; line-height: 1.1rem; }
+
+.optanon-video-message[src] { display: none; /* CG: For use with the Optanon cookie banner. When the script switches "data-src" to "src", the "sorry" message is hidden */ }
+
 .section-header { margin-bottom: 4rem; }
 
 .section-header--border-bottom { border-bottom: 1px solid #dddddd; }
@@ -2228,6 +2238,10 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 .slab--bg-slate { background-color: #394851; color: white; }
 
 .slab--bg-slate-light { background-color: #616d74; color: white; }
+
+.slab--bg-blue-ldn a { color: inherit; }
+
+.slab--bg-blue-ldn a:hover { text-decoration: none; border-bottom: 0; }
 
 /* Slider */
 .slick-slider { position: relative; display: block; box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
@@ -2300,7 +2314,7 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .accolade-slider__item-img { margin: auto; width: auto; max-height: 2em; }
 
-.accolade-slider a { color: white; text-decoration: none; }
+.accolade-slider a { color: inherit; text-decoration: none; }
 
 .js-slider--responsive .slick-slide { margin: 0 1.5rem 0; }
 
