@@ -2183,6 +2183,8 @@ a.tile:focus { outline-width: 3px; outline-color: #144196; z-index: 2; }
 
 .theme-ldn .footer-site__logo img { width: 12.5em; }
 
+.theme-ldn .box .button, .theme-ldn .banner .button, .theme-ldn .masthead .button { border-radius: 0; -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0.75em 100%, 0 calc(100% - 0.75em)); clip-path: polygon(0 0, 100% 0, 100% 100%, 0.75em 100%, 0 calc(100% - 0.75em)); }
+
 .masthead { background: linear-gradient(#144196, #0082c8); }
 
 .theme-ldn .megaNav__close { background: url("//www.staffs.ac.uk/site/images/icons/london/icon-x-primary.svg") no-repeat center center; background-size: 1rem; }

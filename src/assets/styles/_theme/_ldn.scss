@@ -34,4 +34,12 @@
       }
     }
   }
+
+  // CG: Certain buttons in components on London to be clipped by default
+  .box, .banner, .masthead 
+  {
+    & .button {
+      @include button--clipped;
+    }
+  }
 }
