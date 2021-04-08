@@ -78,6 +78,13 @@ variants:
       classes: ['button--outline-slate']
       text: 'Slate Outline Style Button'
 
+  - name: outline-white
+    label: "Style: Outline White (LDN)"
+    context:
+      classes: ['button--outline-white']
+      text: 'Button with white outline'
+    preview: '@preview--ldn-blue'
+
   - name: block
     label: "Style: Block-level Element"
     context:
