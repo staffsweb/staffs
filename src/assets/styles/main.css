@@ -2251,6 +2251,10 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .slab--bg-blue-ldn a:hover { text-decoration: none; border-bottom: 0; }
 
+.slab--bg-blue-ldn svg * { fill: currentColor; }
+
+.slab--bg-granite svg * { fill: currentColor; }
+
 /* Slider */
 .slick-slider { position: relative; display: block; box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
 
