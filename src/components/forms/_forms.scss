@@ -108,6 +108,14 @@ select {
   }
 }
 
+.multipage-form {
+  &__page {
+    &[aria-hidden='true'] {
+      display: none;
+    }
+  }
+}
+
 .sys_form-submit {
   @include button;
 

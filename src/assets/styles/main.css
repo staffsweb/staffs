@@ -842,6 +842,8 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; padd
 
 .form__group--inline .form__item label { display: inline; max-width: none; }
 
+.multipage-form__page[aria-hidden='true'] { display: none; }
+
 .sys_form-submit { position: relative; display: inline-block; font-size: inherit; margin: 0 0.25rem 1rem 0; padding: 0.75em 1.5em; border: 0; line-height: 1.15; vertical-align: baseline; text-decoration: none; text-align: center; transition: background 150ms ease-out, color 150ms ease-out; box-sizing: border-box; border-radius: 0.25rem; font-weight: 500; background-color: #ffd91b; background-image: linear-gradient(to left, #ffd91b 50%, black 50%); background-size: 200% 100%; background-position: right bottom; background-repeat: no-repeat; color: black; }
 
 .sys_form-submit:hover, .sys_form-submit:focus, .sys_form-submit:active { color: white; background-position: 0% bottom; }
