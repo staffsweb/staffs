@@ -1703,6 +1703,8 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .slab--bg-granite svg * { fill: currentColor; }
 
+.slab--bg-granite a { color: inherit; }
+
 /* Slider */
 .slick-slider { position: relative; display: block; box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
 
@@ -2190,6 +2192,8 @@ a.tile:focus { outline-width: 3px; outline-color: #144196; z-index: 2; }
 .theme-ldn .footer-site__logo img { width: 12.5em; }
 
 .theme-ldn .box .button, .theme-ldn .banner .button, .theme-ldn .masthead .button { border-radius: 0; -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0.75em 100%, 0 calc(100% - 0.75em)); clip-path: polygon(0 0, 100% 0, 100% 100%, 0.75em 100%, 0 calc(100% - 0.75em)); }
+
+.theme-ldn .multipage-form .button:not([class^="multipage-form__prev-btn"]) { border-radius: 0; -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0.75em 100%, 0 calc(100% - 0.75em)); clip-path: polygon(0 0, 100% 0, 100% 100%, 0.75em 100%, 0 calc(100% - 0.75em)); }
 
 .masthead { background: linear-gradient(#144196, #0082c8); }
 
