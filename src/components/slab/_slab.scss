@@ -64,7 +64,7 @@
     }
   }
 
-  &--bg-granite {
+  &--bg-granite, &--bg-slate {
     & svg * {
       fill: currentColor;
     }
