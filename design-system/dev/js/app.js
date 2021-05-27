@@ -7684,7 +7684,12 @@ var newsAndEventsSearchInit = function newsAndEventsSearchInit() {}; // @TODO: a
       e.stopImmediatePropagation();
 
       if (countryPagePath != "") {
-        window.location.href = window.location.protocol + "//" + window.location.hostname + countryPagePath;
+        if (window.location.hostname == "www.staffslondon.ac.uk") {
+          // SM 21/05/21 If the country selector is used from the London site, direct to the main site pages
+          window.location.href = window.location.protocol + "//www.staffs.ac.uk" + countryPagePath;
+        } else {
+          window.location.href = window.location.protocol + "//" + window.location.hostname + countryPagePath;
+        }
       }
     });
   };

@@ -42,4 +42,11 @@
       @include button--clipped;
     }
   }
+
+  .multipage-form 
+  {
+    & .button:not([class^="multipage-form__prev-btn"]) {
+      @include button--clipped;
+    }
+  }
 }
