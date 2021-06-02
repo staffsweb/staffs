@@ -34,4 +34,19 @@
       }
     }
   }
+
+  // CG: Certain buttons in components on London to be clipped by default
+  .box, .banner, .masthead 
+  {
+    & .button {
+      @include button--clipped;
+    }
+  }
+
+  .multipage-form 
+  {
+    & .button:not([class^="multipage-form__prev-btn"]) {
+      @include button--clipped;
+    }
+  }
 }

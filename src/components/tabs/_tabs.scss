@@ -71,6 +71,8 @@
     }
   }
 
-  .slick-list {
+  &__section {
+    padding-top: $spacing-4xl;
   }
+
 }

@@ -2,6 +2,12 @@
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
+// CG: Allow switching of PG course tab in subject pages, but don't scroll to the anchor
+var anchorTarget = window.location.hash;
+
+if (anchorTarget == "#courses__postgraduate") {
+  window.location.hash = "";
+}
 /* global Waypoint, console */
 // @TODO: Learn to module bundle properly and manage dependencies with a proper
 // package manager 🤦
@@ -42,6 +48,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
  * @param  selector    selector OR undefined
  * @author Brian Cherne <brian(at)cherne(dot)net>
  */
+
+
 ;
 
 (function (factory) {
@@ -6117,7 +6125,456 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     }
   });
   var widgetsAutocomplete = $.ui.autocomplete;
-}); // @TODO: at some point, it'd probably be nice if functions sat in
+});
+
+function readCookie(name) {
+  var regex = new RegExp("[; ]" + name + "=([^\\s;]*)");
+  var match = (" " + document.cookie).match(regex);
+
+  if (name && match) {
+    return unescape(match[1]);
+  } else {
+    return "";
+  }
+}
+
+function setCookie(name, value, days) {
+  var expires = "";
+
+  if (days) {
+    var date = new Date();
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+    expires = "; expires=" + date.toUTCString();
+  }
+
+  document.cookie = name + "=" + (value || "") + expires + "; path=/";
+} // CG: Functionality for use with the cookie banner, March 2021 onwards
+
+
+function getOptanonCategoryFromClass(string) {
+  var re = /optanon-category-([cC]\d{4})/gm;
+  var matches = re.exec(string);
+
+  if (!matches) {
+    return false;
+  } else {
+    return matches[1];
+  }
+}
+
+function relevantCookiesAccepted(category) {
+  // CG: Checks if the specific category (such as "C0002") is present in the Optanon "accepted" categories in the cookie
+  var optanonCookieString = readCookie('OptanonConsent');
+
+  if (optanonCookieString.indexOf(category + ":1") != -1) {
+    return true;
+  }
+
+  return false;
+}
+
+function checkForInvalidFields() {
+  // CG: Count the invalid fields, then enable / disable the "submit" button as appropriate
+  var invalidFieldCount = 0;
+  var radioButtonNames = [];
+  $(".crm-form input:visible[data-required='true']:not([type='radio']), .crm-form select:visible[data-required='true'], .crm-form textarea:visible[data-required='true']").each(function () {
+    if (!isValid($(this))) {
+      invalidFieldCount++; //console.log($(this).attr("id") + " is invalid");
+    }
+  }); // CG: Check radio buttons separately:
+  // CG: ================================
+
+  $(".crm-form input[data-required='true'][type=radio]").each(function () {
+    // CG: Get the names of all radio buttons that are required
+    radioButtonNames.push($(this).attr("name"));
+  }); // CG: Reduce to only the unique names
+
+  radioButtonNames = radioButtonNames.filter(onlyUnique);
+
+  for (var i = 0; i < radioButtonNames.length; i++) {
+    // CG: Check that at least one radio button with that name has been selected 
+    if (!$(".crm-form input[name='" + radioButtonNames[i] + "']:checked").val()) {
+      invalidFieldCount++; //console.log("Missing radio button " + radioButtonNames[i]);
+    }
+  }
+
+  console.log(invalidFieldCount + " fields are invalid");
+
+  if (invalidFieldCount > 0) {
+    $("#submit-btn").attr("disabled", "disabled");
+  } else {
+    $("#submit-btn").removeAttr("disabled");
+  }
+}
+
+function onlyUnique(value, index, self) {
+  return self.indexOf(value) === index;
+}
+
+function isValidEmailAddress(address) {
+  var regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return regex.test(address);
+} // CG: Validate a single field
+
+
+function isValid($obj) {
+  var valueToCheck = ""; // CG: Handle <select> elements differently
+
+  if ($obj.prop("tagName") == "SELECT") {
+    valueToCheck = $obj.find(":selected").val();
+  } else {
+    valueToCheck = $obj.val();
+  } // CG: Specific check for email fields
+
+
+  if ($obj.attr("type") == "email") {
+    // CG: Apply regex for email address
+    if (!isValidEmailAddress($obj.val())) {
+      return false;
+    }
+  } // CG: Check all other types of fields
+
+
+  if (valueToCheck == "") {
+    //console.log($obj.prop("id") + " is invalid");
+    return false;
+  } else {
+    return true;
+  }
+} // CG: Only allow the user to change "pages", or submit, if the required fields are completed
+
+
+function requiredFieldsCompleted(fields) {
+  var errorsFound = false;
+  $(".crm-form__error-msg").remove();
+  $.each(fields, function (i, field) {
+    if (!fieldIsValid(field)) {
+      errorsFound = true; // CG: Reveal the address fields if the postcode is missing, otherwise the user won't see what's causing the problem
+
+      if (field.name == "ADD1") {
+        $("#address-confirmation").slideDown();
+      }
+    }
+  });
+
+  if (errorsFound) {
+    // CG: Scroll to the first invalid field
+    $("html, body").animate({
+      scrollTop: $(".form--invalid:first").offset().top - 30
+    }, 500);
+  }
+
+  return !errorsFound;
+}
+
+function fieldIsValid(field) {
+  // CG: Get the field DOM object based on the name
+  var $field = $("[name='" + field.name + "']");
+  var $label = $("label[for='" + field.id + "']");
+  $field.removeClass("form--invalid");
+  $label.removeClass("form--invalid"); // CG: Validate checkboxes / radio buttons
+  // Get all the inputs with the same name, and check if at least one of them is checked
+
+  if ($field.attr("type") == "checkbox" || $field.attr("type") == "radio") {
+    var $fieldset = $field.closest("fieldset");
+
+    if ($("[name='" + field.name + "']:checked").length == 0) {
+      // CG: Add error message to the <fieldset>, if there isn't one already
+      if ($fieldset.find(".crm-form__error-msg").length == 0) {
+        $fieldset.append("<p class=crm-form__error-msg>Please select an option</p>");
+      }
+
+      console.log(field.name + " is invalid");
+      return false;
+    }
+  } // CG: Validate email fields
+
+
+  if ($field.attr("type") == "email") {
+    // CG: Apply regex for email address
+    var $container = $field.parent();
+
+    if (!isValidEmailAddress($field.val())) {
+      $field.addClass("form--invalid");
+      $container.append("<p class=crm-form__error-msg>Please enter a valid email address</p>"); //$field.attr("placeholder","Please enter a valid email address");
+
+      return false;
+    } else {
+      $container.remove(".crm-form__error-msg");
+    }
+  }
+
+  if ($field.val() == "") {
+    $field.addClass("form--invalid");
+
+    if ($field.prop("tagName") != "SELECT") {
+      // CG: Check for an existing placeholder, and use that if it's present
+      var placeHolderText = $field.attr("data-invalid-message");
+
+      if (placeHolderText != "") {
+        $field.attr("placeholder", placeHolderText);
+      } else {
+        $field.attr("placeholder", "Please complete this field");
+      }
+    }
+
+    return false;
+  }
+
+  return true;
+}
+
+var crmFormsInit = function crmFormsInit() {
+  // CG: Validation: check each field in turn when the user clicks off it
+  $(".crm-form input, .crm-form select, .crm-form textarea").on("blur change", function () {
+    if ($(this).attr("data-required") == "true") {
+      var fieldId = $(this).attr("id");
+      var $label = $("label[for='" + fieldId + "']");
+
+      if (!isValid($(this))) {
+        $(this).addClass("form--invalid");
+
+        if (fieldId == "ENQUIRY") {
+          $(this).attr("placeholder", "Please enter your enquiry");
+        } else {
+          $(this).attr("placeholder", "Please complete this field");
+        }
+      } else {
+        $(this).removeClass("form--invalid");
+        $(this).removeAttr("placeholder");
+      } // CG: Activate the "submit" button only if all required fields have been completed
+
+
+      checkForInvalidFields();
+    }
+  }); // CG: Strip all non-numeric spaces from Phone no
+
+  $('#MOBILENO').on("blur change", function () {
+    $(this).val($(this).val().replace(/\D/g, ''));
+  });
+  $("#consent-to-all-btn").on("click", function (e) {
+    e.preventDefault(); // CG: Set all buttons to "yes"
+
+    $("#pref-sms-yes, #pref-email-yes, #pref-mail-yes, #pref-tel-yes").prop("checked", true);
+  });
+};
+
+var leadGenInit = function leadGenInit() {
+  var leadGenActive = readCookie("HideLeadGen") == "1" ? false : true; //var leadGenActive = $("#lead-gen").length > 0 ? true : false; // CG: Only if lead gen is present on the page. In the back end, it is not written to the page is the cookie "HideLeadGen" is present.
+
+  if (leadGenActive && $("#hide-for-lead-gen").length > 0) {
+    // CG: Hide the content we don't want the user to scroll past
+    $("#hide-for-lead-gen, #accolade-slider, #footer-site").addClass("visually-hidden");
+  } else {
+    $("#lead-gen").remove();
+  }
+
+  $(document).on("scroll", function (e) {
+    if (leadGenActive && $("#hide-for-lead-gen").length > 0) {
+      // CG: Activate the lead gen banner when the user reaches the top of the "hidden" content
+      var scrollBottom = $(window).scrollTop() + $(window).height();
+      var targetDivPos = $("#hide-for-lead-gen").position().top - 100;
+
+      if (scrollBottom >= targetDivPos && leadGenActive) {
+        $("#lead-gen").slideDown("slow");
+      } else {
+        $("#lead-gen").slideUp("slow");
+      }
+    }
+  });
+  $("#lead-gen__submit-btn").on("click", function (e) {
+    e.preventDefault();
+    var fields = $("#lead-gen__form").find("input[data-required='true'], select[data-required='true']:visible, textarea[data-required='true']");
+
+    if (requiredFieldsCompleted(fields)) {
+      $("#loading-spinner--lead-gen").show();
+      $.post("/api/CrmLeadGen/HandleProspectusRequest", {
+        "ADD1": $("#address-1").val(),
+        "ADD2": $("#address-2").val(),
+        "CITYORTOWN": $("#city-or-town").val(),
+        "COURSE_OF_SUBJECT": $("#COURSE_OF_SUBJECT").val(),
+        "EMAIL": $("#email").val(),
+        "FIRSTNAME": $("#firstname").val(),
+        "LANDINGPAGE": $("#LANDINGPAGE").val(),
+        "LASTNAME": $("#lastname").val(),
+        "MARKETING_CAMPAIGN": $("#MARKETING_CAMPAIGN").val(),
+        "MARKETING_MEDIUM": $("#MARKETING_MEDIUM").val(),
+        "MARKETING_SOURCE": $("#MARKETING_SOURCE").val(),
+        "MOBILENO": $("#mobileno").val(),
+        "POSTCODE": $("#postcode").val(),
+        "PREF_EMAIL": $("[name='PREF_EMAIL']:checked").val(),
+        "PREF_MAIL": $("[name='PREF_MAIL']:checked").val(),
+        "PREF_SMS": $("[name='PREF_SMS']:checked").val(),
+        "PREF_TELEPHONE": $("[name='PREF_TELEPHONE']:checked").val(),
+        "SUBJECT": $("#SUBJECT").val(),
+        "YEAR_OF_ENTRY": $("[name='YEAR_OF_ENTRY']:checked").val()
+      }).done(function (data) {
+        $("#loading-spinner--lead-gen").hide(); // CG: Replace the form fields with the success message
+
+        $("#lead-gen__form").html("<h2>Thank you!</h2><p class='font-3xl'>Your request has been sent.</p>");
+        setCookie("HideLeadGen", 1, 30);
+        setTimeout(function () {
+          $("#lead-gen-modal .modal__close").trigger("click");
+          $("#lead-gen__no-btn").trigger("click");
+        }, 5000);
+      }).fail(function () {
+        $("#loading-spinner--lead-gen").hide();
+        $("#lead-gen__form").html("<h2>An error occurred</h2><p class'font-3xl'>Sorry - there was a problem submitting your request. Please try again later.</p>");
+      });
+    } else {// CG: Invalid
+    }
+  });
+  $("#lead-gen__no-btn").on("click", function (e) {
+    e.preventDefault();
+    $(".lead-gen").slideUp("slow");
+    setCookie("HideLeadGen", 1, 30);
+    leadGenActive = false;
+    $("#hide-for-lead-gen, #accolade-slider, #footer-site").removeClass("visually-hidden");
+    $('.slick-slider').slick('refresh');
+  });
+};
+
+var defaultPageSize = 12;
+var defaultPageIndex = 0;
+var pageIndex = 0;
+var month;
+var year;
+var category;
+var searchText;
+var timer;
+var curEntryCount = 0;
+var url;
+
+function News(loadMore, redirectPage) {
+  url = "/news/";
+  var searchText = document.getElementById('news_search').value; //category = document.getElementById('news_category').value; // SM: Commenting out as not using category for the moment and causing load more button to fail
+
+  category = "";
+  month = document.getElementById('news_month').value;
+  year = document.getElementById('news_year').value;
+
+  if (loadMore) {
+    LoadMore('news', searchText, category, month, year, 'newsPage');
+  } else if (!redirectPage) {
+    window.location = UrlRedirect(url, year, month, category, searchText);
+  } else {
+    if (year > 0) {
+      window.history.pushState("newsPageYear", "news", "/news/" + year);
+    }
+
+    if (year > 0 && month > 0) {
+      window.history.pushState("newsPageYearMonth", "news", "/news/" + year + "/" + month);
+    }
+
+    Search('news', searchText, category, month, year, 'newsPage');
+  }
+
+  return false;
+}
+
+function Events(loadMore, redirectPage) {
+  url = "/events/";
+  searchText = document.getElementById('news_search').value;
+  category = document.getElementById('news_category').value;
+  month = document.getElementById('news_month').value;
+  year = document.getElementById('news_year').value;
+
+  if (loadMore) {
+    LoadMore('events', searchText, category, month, year, 'eventsPage');
+  } else if (!redirectPage) {
+    window.location = UrlRedirect(url, year, month, category, searchText);
+  } else {
+    if (year > 0) {
+      window.history.pushState("eventPageYear", "event", "/events/" + year);
+    }
+
+    if (year > 0 && month > 0) {
+      window.history.pushState("eventPageYearMonth", "event", "/events/" + year + "/" + month);
+    }
+
+    Search('events', searchText, category, month, year, 'eventsPage');
+  }
+
+  return false;
+}
+
+function Search(contentTypeId, searchText, category, month, year, elementId) {
+  pageIndex = defaultPageIndex;
+  curEntryCount = 0;
+  var querystring = QueryString(contentTypeId, searchText, category, month, year, pageIndex, defaultPageSize);
+  AjaxSearch(querystring, elementId, false);
+}
+
+function LoadMore(contentTypeId, searchText, category, month, year, elementId) {
+  pageIndex++;
+  var querystring = QueryString(contentTypeId, searchText, category, month, year, pageIndex, defaultPageSize);
+  AjaxSearch(querystring, elementId, true);
+}
+
+function QueryString(contentTypeId, searchText, category, month, year, pageIndex, pageSize, level) {
+  var querystring = '';
+
+  if (level != "" || level != null) {
+    level = "";
+  }
+
+  if (Array.isArray(contentTypeId)) {
+    querystring = "/api/SU/Search" + "?contentTypeId=" + contentTypeId + "&searchText=" + searchText + "&category=" + category + "&month=" + month + "&year=" + year + "&pageIndex=" + pageIndex + "&pageSize=" + pageSize + "&level=" + level;
+  } else {
+    querystring = "/api/SU/Search/" + contentTypeId + "?searchText=" + searchText + "&category=" + category + "&month=" + month + "&year=" + year + "&pageIndex=" + pageIndex + "&pageSize=" + pageSize + "&level=" + level;
+  }
+
+  return querystring;
+}
+
+function AjaxSearch(querystring, elementId, doAppend) {
+  var xhttp = new XMLHttpRequest();
+  var div = document.getElementById(elementId);
+  console.log("ElementId = " + elementId + "; div = " + div);
+
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      $("#loading").remove();
+
+      if (doAppend) {
+        var json = this.response;
+
+        if (json.entries === undefined) {
+          json = JSON.parse(json);
+        }
+
+        div.insertAdjacentHTML('beforeend', json.entries);
+      } else {
+        var json = this.response;
+
+        if (json.entries === undefined) {
+          json = JSON.parse(json);
+        }
+
+        div.innerHTML = json.entries;
+      }
+
+      if (json.entryCount == 0) {
+        div.insertAdjacentHTML('beforeend', "<p class='msg msg--noresults large-12 column'>Sorry, no results found. </p>");
+        $('.load-more').addClass('visually-hidden');
+      }
+
+      curEntryCount = json.entryCount + curEntryCount;
+
+      if (curEntryCount >= json.totalCount) {
+        $('.load-more').addClass('visually-hidden');
+      } else {//$('.load-more').removeClass('visually-hidden');
+      }
+    }
+  };
+
+  $(div).append("<div id='loading' class='bg loading--bg'><svg id='loadingIcon' style='margin:10px 47%' width='80px' height='80px' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid' class='uil-default'><rect x='0' y='0' width='100%' height='120' fill='none' class='bk'></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#003b5c' transform='rotate(0 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#003b5c' transform='rotate(30 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.08333333333333333s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#003b5c' transform='rotate(60 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.16666666666666666s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#003b5c' transform='rotate(90 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.25s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#003b5c' transform='rotate(120 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.3333333333333333s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#003b5c' transform='rotate(150 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.4166666666666667s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#003b5c' transform='rotate(180 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.5s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#003b5c' transform='rotate(210 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.5833333333333334s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#003b5c' transform='rotate(240 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.6666666666666666s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#003b5c' transform='rotate(270 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.75s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#003b5c' transform='rotate(300 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.8333333333333334s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#003b5c' transform='rotate(330 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.9166666666666666s' repeatCount='indefinite'/></rect></svg></div>");
+  xhttp.open("POST", querystring, true);
+  xhttp.responseType = "json";
+  xhttp.send();
+}
+
+var newsAndEventsSearchInit = function newsAndEventsSearchInit() {}; // @TODO: at some point, it'd probably be nice if functions sat in
 // 'eachIndividualComponentName.js' in each component folder and were imported
 // rather than being here, like their Sass files
 
@@ -6496,8 +6953,23 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         // sliders?
 
         Waypoint.refreshAll(); // height is liable to change, so we need to refresh these
+
+        var sliders = $(targetHref).find('.js-slider--generic');
+
+        if (sliders && sliders.length != 0) {
+          $(sliders).each(function () {
+            var sliderElm = this;
+            sliderReInit(sliderElm, $(targetHref).get(0));
+          });
+        }
       });
       Waypoint.refreshAll(); // tabs' content may change the height of the page, thus these need to be recalculated
+      // CG: Check if we need to switch to a tab via a URL fragment
+
+      if (anchorTarget == "#courses__postgraduate") {
+        $('.tabs__link[href="#courses__postgraduate"]', tabs).trigger('click');
+        window.scrollTo(0, 0);
+      }
     });
   };
 
@@ -6547,10 +7019,13 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
           slidesToScroll: 1
         }
       }]
-    });
+    }); // CG: Calculate how many slides to show by default, so that they are always centred. Stop at 5
+
+    var accoladeSlidesToShow = $(".js-slider--accolades > div").length;
+    accoladeSlidesToShow = accoladeSlidesToShow > 5 ? 5 : accoladeSlidesToShow;
     $('.js-slider--accolades').slick({
-      slidesToShow: 5,
-      slidesToScroll: 5,
+      slidesToShow: accoladeSlidesToShow,
+      slidesToScroll: accoladeSlidesToShow,
       infinite: false,
       responsive: [{
         breakpoint: 900,
@@ -6660,11 +7135,28 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     Waypoint.refreshAll(); // sliders' content may change the height of the page, thus these need to be recalculated
   };
 
-  var sliderReInit = function sliderReInit(sliderCssSelector) {
-    var slider = $(sliderCssSelector);
+  var sliderReInit = function sliderReInit(sliderElm, elmWithRefreshId) {
+    var isReset = false;
+    var hasAttribute = false;
 
-    if (slider) {
-      slider.slick('reinit');
+    if (!elmWithRefreshId.hasAttribute("data-slider-isrefreshed")) {
+      isReset = true;
+    } else {
+      var isSliderRefreshed = parseInt(elmWithRefreshId.dataset.sliderIsrefreshed);
+      isReset = isSliderRefreshed === 0;
+      hasAttribute = true;
+    }
+
+    if (isReset) {
+      var slider = $(sliderElm);
+
+      if (slider) {
+        slider.slick('reinit');
+
+        if (hasAttribute) {
+          elmWithRefreshId.setAttribute("data-slider-isrefreshed", 1);
+        }
+      }
     }
   };
 
@@ -6741,6 +7233,12 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         scrollTop: target.offset().top - window.innerHeight / 10
       }, 250);
     });
+    $('#apply-scroll-btn').on('click', function () {
+      var target = $($(this).attr('href'));
+      $('html, body').stop().animate({
+        scrollTop: target.offset().top - window.innerHeight / 10
+      }, 750);
+    });
     $('#js-page-nav').each(function () {
       var el = $(this);
       el.waypoint(function (direction) {
@@ -6797,7 +7295,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
             collection: 'staffordshire-coursetitles',
             profile: 'auto-completion',
             form: 'qc',
-            meta_V_and: $("#course-search__level").find(":selected").val(),
+            meta_V_and: $("#course-search__level").find(":selected").val() != null ? $("#course-search__level").find(":selected").val() : $("#course-search__level").val(),
             sort: 'dmetaV' // CG: Sorts by level of study, with UG first
 
           },
@@ -6965,11 +7463,15 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   };
 
   var removeExistingSvgFills = function removeExistingSvgFills(parentClass) {
-    var pathElms = document.querySelectorAll(parentClass + " svg path");
+    var pathElms = document.querySelectorAll(parentClass + " svg path" + ", " + parentClass + " svg g");
 
     if (pathElms && pathElms !== undefined && pathElms.length !== 0) {
       for (var x = 0; x < pathElms.length; x++) {
         pathElms[x].style.removeProperty('fill');
+
+        if (pathElms[x].getAttribute('fill') !== 'none') {
+          pathElms[x].removeAttribute('fill');
+        }
       }
     }
   };
@@ -6980,37 +7482,215 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     modalTriggers.forEach(function (trigger) {
       var modalTrigger = trigger.dataset.modalTrigger;
       var modal = document.querySelector("[data-modal=\"".concat(modalTrigger, "\"]"));
-      trigger.setAttribute('data-modal-trigger', modalTrigger + "-" + count);
-      modal.setAttribute('data-modal', modalTrigger + "-" + count);
-      count++;
-      trigger.addEventListener('click', function (event) {
-        document.body.classList.add('modal__is-open');
-        var modalTrigger = trigger.dataset.modalTrigger;
-        var modal = document.querySelector("[data-modal=\"".concat(modalTrigger, "\"]"));
-        modal.classList.add('is-open');
-        var video = modal.querySelector("[data-video-src]");
-        var hasVideo = video && video != undefined;
 
-        if (hasVideo) {
-          video.setAttribute('src', video.dataset.videoSrc);
+      if (modal && modal != undefined) {
+        if (trigger.hasAttribute("data-modal-trigger-isunique")) {
+          var modalTriggerName = modalTrigger;
+        } else {
+          var modalTriggerName = modalTrigger + "-" + count;
+          count++;
         }
 
-        modal.querySelector('[data-modal-close]').addEventListener('click', function () {
-          modal.classList.remove('is-open');
-          document.body.classList.remove('modal__is-open');
+        trigger.setAttribute('data-modal-trigger', modalTriggerName);
+        modal.setAttribute('data-modal', modalTriggerName);
+        trigger.addEventListener('click', function (event) {
+          document.body.classList.add('modal__is-open');
+          var modalTrigger = trigger.dataset.modalTrigger;
+          var modal = document.querySelector("[data-modal=\"".concat(modalTrigger, "\"]"));
+          modal.classList.add('is-open');
+          var video = modal.querySelector("[data-video-src]");
+          var hasVideo = video && video != undefined; // CG: Only display the video if the user has consented to the relevant cookies, e.g. the cookie string contains "C0003:1"
 
           if (hasVideo) {
-            video.removeAttribute('src');
-          }
-        });
-        event.preventDefault();
-        var isSliderRefreshed = parseInt(modal.dataset.sliderIsrefreshed);
+            var videoCookieCategory = getOptanonCategoryFromClass(video.className);
 
-        if (isSliderRefreshed === 0) {
-          sliderReInit("[data-modal=\"".concat(modalTrigger, "\"] .modal-slider"));
-          modal.setAttribute("data-slider-isrefreshed", 1);
+            if (relevantCookiesAccepted(videoCookieCategory)) {
+              video.setAttribute('src', video.dataset.videoSrc);
+            } else {
+              var newDiv = document.createElement("p");
+              newDiv.style.color = '#FFF';
+              newDiv.innerHTML = "Sorry, this video requires the use of functional cookies which you have not consented to use. You can <a style='color: #FFF; text-decoration: underline;' href='/legal/data-protection/cookie-policy'>change your cookie settings</a> or <a style='color: #FFF; text-decoration: underline;' href='" + video.dataset.videoSrc + "'>watch the video on YouTube</a>.";
+              video.parentNode.replaceChild(newDiv, video);
+            }
+          }
+
+          modal.querySelector('[data-modal-close]').addEventListener('click', function () {
+            modal.classList.remove('is-open');
+            document.body.classList.remove('modal__is-open');
+
+            if (hasVideo) {
+              video.removeAttribute('src');
+            }
+          });
+          event.preventDefault();
+          sliderReInit(document.querySelector("[data-modal=\"".concat(modalTrigger, "\"] .modal-slider")), modal);
+        });
+      }
+    });
+  };
+
+  var toggleSlide = function toggleSlide(query, callback) {
+    var courseModulesTriggers = document.querySelectorAll(query);
+    courseModulesTriggers.forEach(function (trigger) {
+      trigger.addEventListener('click', function (event) {
+        event.preventDefault();
+        var elmId = trigger.getAttribute('href').replace('#', '');
+
+        if (elmId && elmId != undefined) {
+          var targetElm = document.getElementById(elmId);
+
+          if (targetElm && targetElm != undefined) {
+            targetElm.classList.add('hidden');
+            var hiddenElm = document.getElementById(trigger.dataset.courseModulesTrigger);
+
+            if (hiddenElm && hiddenElm != undefined) {
+              hiddenElm.classList.remove('hidden');
+              callback(hiddenElm);
+            }
+          }
         }
       });
+    });
+  };
+
+  var scrollToTop = function scrollToTop(elm) {
+    var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 100;
+    $('html, body').animate({
+      scrollTop: $(elm).offset().top - offset
+    }, 200);
+  };
+
+  var stopFlag = false;
+
+  function getURLParameter(name) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(window.location.href);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+  }
+
+  ;
+
+  var toggleVariantFromUrl = function toggleVariantFromUrl() {
+    // CG: Switch tabs on hash, but don't scroll to them
+    if (window.location.hash) {
+      $(".tab__item a[href='" + window.location.hash + "']").click();
+    } // CG: Switch to variant via URL
+
+
+    if (typeof mode == "undefined" && typeof award == "undefined") {
+      var mode = "";
+      var award = "";
+    }
+
+    mode = getURLParameter("m");
+    award = getURLParameter("a");
+
+    if (mode != "" && award != "") {
+      //stopFlag = true;
+      console.log('award (via URL parameter) = ' + award);
+      console.log('mode (via URL parameter) = ' + mode);
+      var matchingStudyOption = $('[data-award="' + award + '"] input[value=' + mode + ']'); // Do the switch over only if there's at lead one valid option
+
+      if (matchingStudyOption.length > 0) {
+        // If there are, do the switchover
+        $('input[value=' + award + ']').trigger('change');
+        matchingStudyOption.trigger('change');
+      }
+    }
+
+    ;
+  };
+
+  var toggleVariantInit = function toggleVariantInit() {
+    $('input[name=award-type]').on('change', function (e) {
+      if (stopFlag == false) {
+        var newId = $(this).val();
+        var activeAward = $('*[data-award="' + newId + '"]');
+        console.log("Award = " + $(this).val());
+        $('*[data-award]').not(activeAward.show()).hide();
+        $('*[data-award] input').prop('checked', false);
+        $(this).prop('checked', true);
+        var studyOptionElm = $('[data-award="' + newId + '"] input[name=study-option]').first();
+        studyOptionElm.trigger('change');
+      }
+
+      stopFlag = false;
+    });
+    $('input[name=study-option]').on('change', function () {
+      if (stopFlag == false) {
+        var activeOption = $(this).val();
+        console.log("Mode of study = " + activeOption);
+        var activeMode = $('*[data-mode="' + activeOption + '"]');
+        $('*[data-mode]').not(activeMode.show()).hide(); //Refresh sliders         
+
+        $(".slick-slider").each(function () {
+          $(this).slick('reinit');
+        }); // CG: Refresh the Unistats iframe, if necessary
+
+        $("[data-mode='" + activeOption + "'] #unistats-widget-frame").attr("src", $("[data-mode='" + activeOption + "'] #unistats-widget-frame").attr("src"));
+        $(this).prop('checked', true);
+      }
+
+      stopFlag = false;
+    });
+  };
+
+  var visualizerInit = function visualizerInit() {
+    if (getURLParameter("visualizer") == "true") {
+      $('[data-source]').each(function () {
+        if (!$(this).hasClass('course-details_usp')) {
+          $(this).css('position', 'relative');
+        }
+
+        $(this).prepend('<div class="source-label">' + $(this).data('source') + '</div>');
+        $(this).addClass('element-outline');
+      });
+      $('[data-source]').hover(function () {
+        $(this).addClass('source-outline');
+        $('#source-indicator__source').text($(this).data('source'));
+        $('#source-indicator__field').text($(this).data('field'));
+        $('#source-indicator').show();
+      }, function () {
+        $(this).removeClass('source-outline');
+        $('#source-indicator__source').text('');
+        $('#source-indicator__field').text('');
+        $('#source-indicator').hide();
+      });
+      $(document).mousemove(function (e) {
+        var item = $('#source-indicator');
+        item.css({
+          left: e.pageX + 10,
+          top: e.pageY + 10
+        });
+      });
+    }
+  };
+
+  var countrySubmit = function countrySubmit() {
+    $('#countrySubmit').on("click", function (e) {
+      e.preventDefault();
+      var countryPagePath = document.getElementById('countryPicker').value;
+
+      if (countryPagePath == "") {
+        return false;
+      }
+
+      $('#form1').on('submit', function (e) {
+        e.preventDefault();
+      });
+      e.stopImmediatePropagation();
+
+      if (countryPagePath != "") {
+        if (window.location.hostname == "www.staffslondon.ac.uk") {
+          // SM 21/05/21 If the country selector is used from the London site, direct to the main site pages
+          window.location.href = window.location.protocol + "//www.staffs.ac.uk" + countryPagePath;
+        } else {
+          window.location.href = window.location.protocol + "//" + window.location.hostname + countryPagePath;
+        }
+      }
     });
   };
 
@@ -7023,10 +7703,19 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     searchInit();
     autocompleteInit();
     modal();
+    toggleVariantInit();
+    visualizerInit();
+    toggleSlide('[data-course-modules-trigger]', scrollToTop);
+    countrySubmit();
+    crmFormsInit();
+    leadGenInit();
+    newsAndEventsSearchInit();
   });
   $(window).on('DOMContentLoaded', function () {
     // event triggers once DOM is loaded but before stylesheets are applied
+    toggleVariantFromUrl();
     removeExistingSvgFills('.card--ksp');
+    removeExistingSvgFills('.iconBox__icon');
   });
   $(window).on('load', function () {
     // correct anything loaded on DOM load which might need adjusting (mostly once images have loaded)

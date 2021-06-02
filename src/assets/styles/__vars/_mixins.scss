@@ -85,7 +85,17 @@
   color: white;
 
   &:hover,
-  &:focus, {
+  &:focus {
+    color: white;
+  }
+}
+
+@mixin button--granite {
+  background-image: linear-gradient(to left, $granite--ldn 50%, black 50%);
+  color: white;
+
+  &:hover,
+  &:focus {
     color: white;
   }
 }
@@ -99,7 +109,7 @@
 
   &:hover,
   &:focus,
-  &:active, {
+  &:active {
     color: black;
   }
 }
@@ -113,8 +123,22 @@
 
   &:hover,
   &:focus,
-  &:active, {
+  &:active {
     color: white;
+  }
+}
+
+@mixin button--outline-white {
+  color: white;
+  border: 0.1em solid white;
+  padding: 0.6em 2em;
+  background-color: transparent;
+  background-image: linear-gradient(to left, rgba(white, 0) 50%, white 50%);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: black;
   }
 }
 

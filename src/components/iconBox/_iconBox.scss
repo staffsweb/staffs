@@ -44,14 +44,21 @@
 
   // --
 
-  &--facebook {
-    background: $blue--facebook;
-    color: white;
+  @each $name, $value in $socialmedia-prime-colours {
+    &--#{$name} {
+      background: #{$value};
+      color: white;
+    }
   }
 
-  &--twitter {
-    background: $blue--twitter;
-    color: white;
+  @each $name, $value in $icon-box-colors {
+    &--bg-#{$name} {
+      background: #{$value};
+    }
+  }
+
+  .iconBox__icon svg {
+    fill: white;
   }
 }
 
@@ -64,4 +71,12 @@ a.iconBox {
       text-decoration: underline;
     }
   }
+}
+
+.grid-3-cols {
+
+  & .iconBox__icon svg {
+    vertical-align: top;
+  }
+
 }

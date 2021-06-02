@@ -167,11 +167,15 @@
         
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"masthead  masthead--has-blurredBg"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"masthead__bg  masthead__bg--blurred"</span>&gt;</span>
+
         <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../img/masthead4.jpg"</span> /&gt;</span>
+
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"masthead__inner"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"masthead__bg"</span>&gt;</span>
+
             <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../img/masthead4.jpg"</span> /&gt;</span>
+
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"wrap"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breadcrumbs"</span>&gt;</span>
@@ -487,13 +491,13 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-b1b2347276de69ed9f24ba425602aaa3">_masthead.scss</option>
+                <option value="file-d675c3da705a3a6790a7d62989a585a9">_masthead.scss</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-b1b2347276de69ed9f24ba425602aaa3" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-d675c3da705a3a6790a7d62989a585a9" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -585,8 +589,13 @@
         <span class="hljs-attribute">background</span>: rgba(black, <span class="hljs-number">0.75</span>);
         <span class="hljs-keyword">@supports</span> (backdrop-filter: blur(<span class="hljs-number">1em</span>)) {
           <span class="hljs-attribute">background</span>: rgba(black, <span class="hljs-number">0.6</span>);
+          <span class="hljs-comment">/*min-height: 340px;*/</span>
         }
         backdrop-<span class="hljs-attribute">filter</span>: blur(<span class="hljs-number">1em</span>);
+
+        &amp; <span class="hljs-selector-class">.meta--inline</span> <span class="hljs-selector-tag">dd</span><span class="hljs-selector-pseudo">::before</span> {
+          <span class="hljs-attribute">display</span>: none;
+        }
       }
     }
   }
@@ -615,6 +624,29 @@
       <span class="hljs-attribute">min-height</span>: <span class="hljs-number">40vh</span>;
     }
   }
+
+  <span class="hljs-keyword">@media</span> (max-width: map_get(<span class="hljs-variable">$breakpoint-stages</span>, <span class="hljs-string">'mobile-wide'</span>)) {
+    &amp;--profile {
+      <span class="hljs-selector-class">.masthead__inner</span> {
+        <span class="hljs-attribute">padding</span>: <span class="hljs-variable">$spacing-6xl</span> <span class="hljs-number">0</span> <span class="hljs-variable">$spacing-xl</span>;
+        <span class="hljs-selector-tag">figure</span> {
+          <span class="hljs-attribute">margin</span>: <span class="hljs-number">2rem</span> <span class="hljs-number">0</span> <span class="hljs-number">2rem</span>;
+        }
+      }
+    }
+  }
+}
+
+<span class="hljs-selector-class">.card</span> {
+  &amp; <span class="hljs-selector-tag">a</span><span class="hljs-selector-class">.masthead__school-link</span> {
+    <span class="hljs-attribute">color</span>: white;
+    <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">1px</span> solid white<span class="hljs-meta">!important</span>;
+
+    &amp;<span class="hljs-selector-pseudo">:hover</span> {
+      <span class="hljs-attribute">border-bottom</span>: none<span class="hljs-meta">!important</span>;
+      <span class="hljs-attribute">text-decoration</span>: none;
+    }
+  }
 }</pre>
                             </code>
                             
@@ -627,11 +659,11 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/masthead/_masthead.scss</span>
+                    <span class="Meta-value">src\components\masthead\_masthead.scss</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2.5 KB</span>
+                    <span class="Meta-value">3.2 KB</span>
                 </li>
             </ul>
         </div>
@@ -703,7 +735,7 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src/components/masthead/masthead--course.twig</span>
+            <span class="Meta-value">src\components\masthead\masthead--course.twig</span>
         </li>
         
         <li class="Meta-item">
@@ -1112,7 +1144,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -1136,7 +1168,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -1160,7 +1192,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -1189,7 +1221,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -1213,7 +1245,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -1237,7 +1269,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -1261,7 +1293,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -1285,7 +1317,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -1309,7 +1341,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -1333,7 +1365,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -1414,6 +1446,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="accordion--item.html" data-pjax>
                 <span>Single Accordion Item</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="accordion--steps.html" data-pjax>
+                <span>Steps</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2073,6 +2129,54 @@
         </li>
         
     
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="button--outline-white.html" data-pjax>
+                <span>Style: Outline White (LDN)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="button--block.html" data-pjax>
+                <span>Style: Block-level Element</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
 
             </ul>
         </li>
@@ -2286,6 +2390,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="card--ksp-light.html" data-pjax>
                 <span>KSP (Light on Dark)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="card--ksp-ldn-variants.html" data-pjax>
+                <span>KSP (LDN)</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2669,7 +2797,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -2693,7 +2821,31 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="course-search--with-subject-areas.html" data-pjax>
+                <span>With Subject Areas</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -2909,7 +3061,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -2933,7 +3085,31 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="multipage.html" data-pjax>
+                <span>Multipage</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -2957,7 +3133,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -3159,6 +3335,30 @@
         
     
         
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="lead-generation.html" data-pjax>
+                <span>Lead Generation</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-list">
             <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-list-items">
                 Lists
@@ -3316,6 +3516,30 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="list--steps.html" data-pjax>
+                <span>Steps</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="list--unstyled.html" data-pjax>
                 <span>Unstyled</span>
                 
@@ -3339,6 +3563,30 @@
     
 
             </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="loading-spinner.html" data-pjax>
+                <span>Loading Spinner</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
         </li>
         
     
@@ -3991,6 +4239,30 @@
         
     
         
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="ratio.html" data-pjax>
+                <span>Ratio</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-section-header">
             <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-section-header-items">
                 Section Header
@@ -4105,6 +4377,30 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="side-navigation.html" data-pjax>
+                <span>Side Navigation</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="sitewide-message.html" data-pjax>
                 <span>Sitewide Message</span>
                 
@@ -4212,6 +4508,30 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="slab--ldn.html" data-pjax>
+                <span>London Variants</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="slab--examples.html" data-pjax>
                 <span>Examples</span>
                 
@@ -4261,7 +4581,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -4285,7 +4605,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -4309,7 +4629,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -4333,7 +4653,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -4357,7 +4677,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -4381,7 +4701,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -4410,7 +4730,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>

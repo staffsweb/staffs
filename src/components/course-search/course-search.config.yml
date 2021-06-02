@@ -2,6 +2,6 @@ status: ready
 
 variants:
   - name: "Undergraduate only"
-    status: wip
+    status: ready
   - name: "Postgraduate only"
-    status: wip
+    status: ready

@@ -11,6 +11,16 @@
   + .title {
     margin-top: -$spacing-md;
   }
+
+  &--course-location {
+    margin-top: $spacing-xs;
+  }
+}
+
+.slab, .mini-template-grid {
+  .title {
+    margin-top: 0;
+  }
 }
 
 .slab, .mini-template-grid {

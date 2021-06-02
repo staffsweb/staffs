@@ -57,12 +57,29 @@ main {
   //overflow-x: hidden; // this can be set to stop page horizontal scrollbar when using align-wide with 100vw, see https://caniuse.com/#feat=viewport-units (known issues) - however, it stops overflow of the 'tails' on titles
 }
 
-section {
+/*section {
   margin: $spacing-4xl 0;
 
   &:first-child {
     margin-top: 0;
   }
+}*/
+
+.page-section {
+  // CG: The default method for obtaining "vertical rhythm"
+  margin-bottom:  $spacing-4xl;
+
+  &--margin-lg {
+    margin-bottom:  $spacing-6xl;
+  }
+
+  &--margin-sm {
+    margin-bottom:  $spacing-md;
+  }
+}
+
+iframe {
+  border: none;
 }
 
 .page-body {

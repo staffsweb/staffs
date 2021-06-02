@@ -22,6 +22,7 @@ $icons: (
   'twitter-white': 'svg',
   'youtube': 'svg',
   'youtube-white': 'svg',
+  'form' : 'svg'
 );
 
 .icon {
@@ -56,7 +57,7 @@ $icons: (
 
   @each $name, $extension in $icons {
     &--#{$name} {
-      background-image: url('/site/images/icons/icon-#{$name}.#{$extension}');
+      background-image: url('#{$image-theme-directory}/icons/icon-#{$name}.#{$extension}');
     }
   }
 }

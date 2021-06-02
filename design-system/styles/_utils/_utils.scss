@@ -77,8 +77,8 @@
   overflow-scrolling: touch;
 }
 
-.js .js-hidden {
-  display: none;
+.js .js-hidden, .hidden {
+  display: none!important;
 }
 
 // CG: Hide only visually, but have it available for screen readers: http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
@@ -112,4 +112,91 @@
       text-decoration: underline;
     }
   }
+}
+
+.source-outline {
+  border: 2px solid #F00!important;
+  padding: 0 1rem;
+  color: #000;
+}
+#source-indicator {
+  background-color: #333;
+  padding: 5px 8px;
+  font-size: 18px;
+  border: 1px solid #FFF;
+  color: #FFF;
+  position:  absolute;
+  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+  z-index: 2000;
+}
+#source-indicator__source, #source-indicator__field { display: block; }
+#source-indicator__source { font-size: 14px; }
+.element-outline {
+  border: 2px dotted #F00;
+  min-height: 22px;
+}
+.source-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2px;
+  font-size: 12px;
+  color: #FFF;
+  background-color: $red;  
+  z-index: 200;
+  border: 1px solid #FFF;
+}
+
+.course-details_usp.element-outline .column {
+  width: 28%;
+}
+
+.unistats-embed {
+  width: 100%;
+  height: 160px;
+  border: 0;
+}
+
+.accreditation-logos {
+  margin-bottom: $spacing-2xl;
+
+  & > img {
+    display: inline-block;
+  }
+}
+
+.system-info {
+  text-align: right;
+  font-size: 90%;
+}
+
+.note {
+  &--validation {
+    color: $red;
+    font-weight: 500;
+  }
+}
+
+.pie-chart {
+  width: 200px; 
+
+  .pie { transform: rotate(-90deg); width: 200px; height: 200px; background: #F4F4F4; border-radius: 50%; margin-bottom: 2rem; }
+
+  .pie circle { fill: none; stroke: #F4F4F4; stroke-width: 99; -webkit-animation: rotate 1.5s ease-in; animation: rotate 1.5s ease-in; }
+
+  .pie .circle-1 { stroke: #D20052; }
+
+  .pie .circle-2 { stroke: #394851; }
+
+  .pie .circle-3 { stroke: #C3C1C1; }
+
+  .pie-chart_key { margin: 0.5rem 0; }
+
+  .pie-chart_key .key-color { display: inline-block; width: 17px; height: 17px; margin-right: 0.5rem; }
+
+  .pie-chart_key .key-color.key-1 { background: #D20052; }
+
+  .pie-chart_key .key-color.key-2 { background: #394851; }
+
+  .pie-chart_key .key-color.key-3 { background: #C3C1C1; }
 }

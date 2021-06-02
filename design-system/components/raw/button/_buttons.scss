@@ -25,6 +25,7 @@
 
   &--block {
     @include button--block;
+    line-height: 1.5;
   }
 
   &--pointy {
@@ -45,12 +46,20 @@
     @include button--slate;
   }
 
+  &--granite {
+    @include button--granite;
+  }
+
   &--outline {
     @include button--outline;
   }
 
   &--outline-slate {
     @include button--outline-slate;
+  }
+
+  &--outline-white {
+    @include button--outline-white;
   }
 
   &[disabled] {

@@ -1,3 +1,11 @@
+// CG: Allow switching of PG course tab in subject pages, but don't scroll to the anchor
+var anchorTarget = window.location.hash;
+
+if(anchorTarget == "#courses__postgraduate")
+{
+  window.location.hash = "";
+}
+
 /* global Waypoint, console */
 
 // @TODO: Learn to module bundle properly and manage dependencies with a proper
@@ -17,6 +25,11 @@
 //=include vendor/waypoints/lib/jquery.waypoints.js
 //@codekit-prepend silent './vendor/jquery-ui.js';
 //=include vendor/jquery-ui.js
+//=include specific-functionality/cookie-read-and-write.js
+//=include specific-functionality/optanon.js
+//=include specific-functionality/crm-forms.js
+//=include specific-functionality/lead-generation.js
+//=include specific-functionality/news-and-events-search.js
 
 // @TODO: at some point, it'd probably be nice if functions sat in
 // 'eachIndividualComponentName.js' in each component folder and were imported
@@ -378,13 +391,15 @@
       tabCount++;
       let links = $('.tabs__link', tabs);
       let sections = $('.tabs__section', tabs);
+
       let defaultTab = $('.tabs__link.is-selected', tabs).attr('href');
 
       sections.hide();
 
       if (defaultTab) {
         $(defaultTab).show();
-      } else {
+      }
+      else {
         $(links[0]).addClass('is-selected');
         $(sections[0]).show().addClass('is-expanded');
       }
@@ -403,9 +418,25 @@
                                                            // with tabs of
                                                            // sliders?
         Waypoint.refreshAll(); // height is liable to change, so we need to refresh these
-      })
+
+        var sliders = $(targetHref).find('.js-slider--generic');
+
+        if(sliders && sliders.length != 0) {
+          $(sliders).each(function () {
+            var sliderElm = this;
+            sliderReInit(sliderElm, $(targetHref).get(0));
+          });
+        }
+      });
 
       Waypoint.refreshAll(); // tabs' content may change the height of the page, thus these need to be recalculated
+
+      // CG: Check if we need to switch to a tab via a URL fragment
+
+      if (anchorTarget == "#courses__postgraduate") {
+        $('.tabs__link[href="#courses__postgraduate"]', tabs).trigger('click');
+        window.scrollTo(0,0);
+      }
     });
   };
 
@@ -465,9 +496,13 @@
       ]
     });
 
+    // CG: Calculate how many slides to show by default, so that they are always centred. Stop at 5
+    var accoladeSlidesToShow = $(".js-slider--accolades > div").length;
+    accoladeSlidesToShow = accoladeSlidesToShow > 5 ? 5 : accoladeSlidesToShow;
+
     $('.js-slider--accolades').slick({
-      slidesToShow: 5,
-      slidesToScroll: 5,
+      slidesToShow: accoladeSlidesToShow,
+      slidesToScroll: accoladeSlidesToShow,
       infinite: false,
       responsive: [
         {
@@ -501,7 +536,7 @@
       responsive: [{
         breakpoint: 99999,
         settings: 'unslick'
-      },
+        },
         {
           breakpoint: 600,
           settings: {
@@ -560,7 +595,7 @@
             }
           }
         ]
-      }).on('afterChange', function () {
+      }).on('afterChange', function (){
         Waypoint.refreshAll(); // height is liable to change, so we need to refresh these
       });
     });
@@ -573,7 +608,7 @@
         adaptiveHeight: true,
         asNavFor: '.js-slider--gallery__nav',
         waitForAnimate: false
-      }).on('afterChange', function () {
+      }).on('afterChange', function (){
         Waypoint.refreshAll(); // height is liable to change, so we need to refresh these
       });
     });
@@ -596,10 +631,28 @@
 
   };
 
-  let sliderReInit = function (sliderCssSelector) {
-    var slider = $(sliderCssSelector);
-    if (slider) {
-      slider.slick('reinit');
+  let sliderReInit = function (sliderElm, elmWithRefreshId) {
+
+    var isReset = false;
+    var hasAttribute = false;
+
+    if(!elmWithRefreshId.hasAttribute("data-slider-isrefreshed")) {
+      isReset = true;
+    }
+    else {
+      var isSliderRefreshed = parseInt(elmWithRefreshId.dataset.sliderIsrefreshed);
+      isReset = isSliderRefreshed === 0;
+      hasAttribute = true;
+    }
+    
+    if(isReset) {
+      var slider = $(sliderElm);
+      if(slider) {
+        slider.slick('reinit');
+        if(hasAttribute) {
+          elmWithRefreshId.setAttribute("data-slider-isrefreshed", 1);
+        }
+      }
     }
   }
 
@@ -615,7 +668,8 @@
       el.waypoint(function (direction) {
         if (direction === 'down') {
           el.addClass('is-waypoint-reached');
-        } else {
+        }
+        else {
           el.removeClass('is-waypoint-reached');
         }
       }, {
@@ -684,13 +738,22 @@
       }, 250);
     });
 
+    $('#apply-scroll-btn').on('click', function () {
+      let target = $($(this).attr('href'));
+
+      $('html, body').stop().animate({
+        scrollTop: (target.offset().top - window.innerHeight / 10)
+      }, 750);
+    });
+
     $('#js-page-nav').each(function () {
       let el = $(this);
 
       el.waypoint(function (direction) {
         if (direction === 'down') {
           el.addClass('is-waypoint-reached');
-        } else {
+        }
+        else {
           el.removeClass('is-waypoint-reached');
         }
       }, {
@@ -699,59 +762,59 @@
     });
   };
 
-  let autocompleteInit = function () {
+  let autocompleteInit = function() {
     $.widget("custom.courseautocomplete", $.ui.autocomplete, {
-      _create: function () {
+      _create: function() {
         this._super();
-        this.widget().menu("option", "items", "> :not(.ui-autocomplete-category)");
+        this.widget().menu( "option", "items", "> :not(.ui-autocomplete-category)" );
       },
-      _renderMenu: function (ul, items) {
+      _renderMenu: function( ul, items ) {
         var that = this,
           currentCategory = "";
-        $.each(items, function (index, item) {
+        $.each( items, function( index, item ) {
           var li;
-          if (item.cat != currentCategory) {
-            ul.append("<li class='course-search__category ui-autocomplete-category'>" + item.cat + "</li>");
+          if ( item.cat != currentCategory ) {
+            ul.append( "<li class='course-search__category ui-autocomplete-category'>" + item.cat + "</li>" );
             currentCategory = item.cat;
           }
-          li = that._renderItemData(ul, item);
-          if (item.cat) {
-            li.attr("aria-label", item.cat + " : " + item.disp);
+          li = that._renderItemData( ul, item );
+          if ( item.cat ) {
+            li.attr( "aria-label", item.cat + " : " + item.disp );
           }
         });
       },
-      _renderItemData: function (ul, item) {
-        var label = item.disp.replace(new RegExp('(' + $("#course-search__keywords").val() + ')', 'i'), '<strong>$1</strong>');
-        ul.data('ui-autocomplete-item', item);
-        return $("<li>")
-          .data('ui-autocomplete-item', item)
-          .append("<div>" + label + "</div>")
-          .addClass('ui-menu-item ui-menu-item__course')
-          .appendTo(ul);
-      }
+      _renderItemData: function( ul, item) {
+            var label = item.disp.replace(new RegExp('('+ $("#course-search__keywords").val() + ')', 'i'), '<strong>$1</strong>');
+            ul.data('ui-autocomplete-item', item);
+            return $("<li>")
+              .data('ui-autocomplete-item', item )
+              .append( "<div>" + label + "</div>" )
+              .addClass('ui-menu-item ui-menu-item__course')
+              .appendTo( ul );
+        }
     });
 
     $("#course-search__keywords").courseautocomplete({
-      source: function (request, response) {
+      source: function(request, response) {
         $.ajax({
-          url: "https://search.staffs.ac.uk/s/search.html",
-          dataType: "json",
-          data: {
-            meta_t_trunc: request.term.toLowerCase(), // CG: Accounts for mobile devices using sentence caps when doing autocorrect
-            collection: 'staffordshire-coursetitles',
-            profile: 'auto-completion',
-            form: 'qc',
-            meta_V_and: $("#course-search__level").find(":selected").val(),
-            sort: 'dmetaV' // CG: Sorts by level of study, with UG first
-          },
-          success: function (data) {
-            response(data);
-          }
+            url: "https://search.staffs.ac.uk/s/search.html",
+            dataType: "json",
+            data: {
+              meta_t_trunc : request.term.toLowerCase(), // CG: Accounts for mobile devices using sentence caps when doing autocorrect
+              collection : 'staffordshire-coursetitles',
+              profile : 'auto-completion',
+              form : 'qc',
+              meta_V_and: $("#course-search__level").find(":selected").val() != null ? $("#course-search__level").find(":selected").val() : $("#course-search__level").val(),
+              sort : 'dmetaV' // CG: Sorts by level of study, with UG first
+            },
+            success: function(data) {
+                response(data);
+            }
         });
       },
       minLength: 3,
       delay: 300,
-      select: function (event, ui) {
+      select: function(event, ui) {
         // CG: Redirect to the relevant course page
         window.location = ui.item.action;
         return false;
@@ -759,25 +822,25 @@
     });
 
     $("#global-search__keywords--courses").courseautocomplete({
-      source: function (request, response) {
+      source: function(request, response) {
         $.ajax({
-          url: "https://search.staffs.ac.uk/s/search.html",
-          dataType: "json",
-          data: {
-            meta_t_trunc: request.term.toLowerCase(), // CG: Accounts for mobile devices using sentence caps when doing autocorrect
-            collection: 'staffordshire-coursetitles',
-            profile: 'auto-completion',
-            form: 'qc',
-            sort: 'dmetaV' // CG: Sorts by level of study, with UG first
-          },
-          success: function (data) {
-            response(data);
-          }
+            url: "https://search.staffs.ac.uk/s/search.html",
+            dataType: "json",
+            data: {
+              meta_t_trunc : request.term.toLowerCase(), // CG: Accounts for mobile devices using sentence caps when doing autocorrect
+              collection : 'staffordshire-coursetitles',
+              profile : 'auto-completion',
+              form : 'qc',
+              sort : 'dmetaV' // CG: Sorts by level of study, with UG first
+            },
+            success: function(data) {
+                response(data);
+            }
         });
       },
       minLength: 3,
       delay: 300,
-      select: function (event, ui) {
+      select: function(event, ui) {
         // CG: Redirect to the relevant course page
         window.location = ui.item.action;
         return false;
@@ -785,23 +848,23 @@
     });
   };
 
-  let searchInit = function () {
+  let searchInit = function() {
     // CG: Show / hide the global search as appropriate
-    $("#btn-search--desktop, #global-search__close").on("click", function (e) {
+    $("#btn-search--desktop, #global-search__close").on("click", function(e) {
       $("#global-search").toggleClass("global-search--open");
     });
 
     $(document).on("keyup", function (e) {
-      if (e.keyCode == 27) {
+      if(e.keyCode == 27) {
         $("#global-search").removeClass("global-search--open");
       }
     });
 
     // CG: Show / hide the appropriate global search field
-    $("#global-search__options .global-search__scope").on("change", function (e) {
+    $("#global-search__options .global-search__scope").on("change", function(e) {
       var scope = $("#global-search__options .global-search__scope:checked").val();
-
-      if (scope == "courses") {
+      
+      if(scope == "courses") {
         // Show the course search field
         $("#global-search__keywords--courses").removeClass("visually-hidden");
         $("#global-search__keywords--whole-site").addClass("visually-hidden");
@@ -815,10 +878,10 @@
     /* CG: Build search URLs */
     function courseSearchUrl(query, collection = "staffordshire-coursetitles", level = null) {
 
-      if (level == "postgraduate") {
-        return "https://search.staffs.ac.uk/s/search.html?collection=" + collection + "&f.Level%7CV=postgraduate+(taught)&f.Level%7CV=postgraduate+(research)&query=" + query;
+      if(level == "postgraduate") {
+          return "https://search.staffs.ac.uk/s/search.html?collection=" + collection + "&f.Level%7CV=postgraduate+(taught)&f.Level%7CV=postgraduate+(research)&query=" + query;
       } else if (level == "undergraduate") {
-        return "https://search.staffs.ac.uk/s/search.html?collection=" + collection + "&f.Level%7CV=undergraduate&query=" + query;
+          return "https://search.staffs.ac.uk/s/search.html?collection=" + collection + "&f.Level%7CV=undergraduate&query=" + query;
       }
       return "https://search.staffs.ac.uk/s/search.html?collection=" + collection + "&query=" + query;
     }
@@ -832,14 +895,14 @@
       // CG: Detect ENTER being pressed
       var keycode = (e.keyCode ? e.keyCode : e.which);
       if (keycode == '13') {
-        $('#form1').on('submit', function (e) {
-          e.preventDefault();
-        });
-        e.stopImmediatePropagation();
+          $('#form1').on('submit', function (e) {
+              e.preventDefault();
+          });
+          e.stopImmediatePropagation();
 
-        window.location.href = siteSearchUrl($(this).val());
-      }
-      e.preventDefault();
+          window.location.href = siteSearchUrl($(this).val());
+        }
+        e.preventDefault();
     });
 
     $("#global-search__keywords--courses").keyup(function (e) {
@@ -847,18 +910,18 @@
       // CG: Detect ENTER being pressed
       var keycode = (e.keyCode ? e.keyCode : e.which);
       if (keycode == '13') {
-        $('#form1').on('submit', function (e) {
-          e.preventDefault();
-        });
-        e.stopImmediatePropagation();
+          $('#form1').on('submit', function (e) {
+              e.preventDefault();
+          });
+          e.stopImmediatePropagation();
 
-        window.location.href = courseSearchUrl($(this).val());
+          window.location.href = courseSearchUrl($(this).val());
 
-      }
-      e.preventDefault();
+        }
+        e.preventDefault();
     });
 
-    $("#course-search__submit").on("click", function (e) {
+    $("#course-search__submit").on("click", function(e) {
       $('#form1').on('submit', function (e) {
         e.preventDefault();
       });
@@ -881,7 +944,7 @@
       var keycode = (e.keyCode ? e.keyCode : e.which);
       if (keycode == '13') {
         $('#form1').on('submit', function (e) {
-          e.preventDefault();
+            e.preventDefault();
         });
         e.stopImmediatePropagation();
 
@@ -893,46 +956,49 @@
       e.preventDefault();
     });
 
-    $("#megaNav-course-search__submit").on("click", function (e) {
+    $("#megaNav-course-search__submit").on("click", function(e) {
       $('#form1').on('submit', function (e) {
         e.preventDefault();
       });
-
+  
       var searchTerm = $("#megaNav-course-search__keywords").val();
-
+  
       window.location.href = courseSearchUrl(searchTerm);
-
+  
       e.preventDefault();
-
+  
     });
-
+  
     $("#megaNav-course-search__keywords").keyup(function (e) {
-
+  
       var keycode = (e.keyCode ? e.keyCode : e.which);
       if (keycode == '13') {
         $('#form1').on('submit', function (e) {
-          e.preventDefault();
+            e.preventDefault();
         });
         e.stopImmediatePropagation();
-
+  
         var searchTerm = $(this).val();
-
+  
         window.location.href = courseSearchUrl(searchTerm);
       }
       e.preventDefault();
     });
   };
 
-  let removeExistingSvgFills = function (parentClass) {
-    var pathElms = document.querySelectorAll(parentClass + " svg path");
+  let removeExistingSvgFills = function(parentClass) {
+    var pathElms = document.querySelectorAll(parentClass + " svg path" + ", " + parentClass + " svg g");
 
     if (pathElms && pathElms !== undefined && pathElms.length !== 0) {
-      for (var x = 0; x < pathElms.length; x++) {
-        pathElms[x].style.removeProperty('fill');
-      }
+        for (var x = 0; x < pathElms.length; x++) {
+            pathElms[x].style.removeProperty('fill');
+            if(pathElms[x].getAttribute('fill') !== 'none') {
+              pathElms[x].removeAttribute('fill');
+            }
+        }
     }
   };
-
+  
   var modal = function modal() {
     var modalTriggers = document.querySelectorAll('[data-modal-trigger]');
 
@@ -942,42 +1008,215 @@
 
       var modalTrigger = trigger.dataset.modalTrigger;
       var modal = document.querySelector("[data-modal=\"".concat(modalTrigger, "\"]"));
+      
+      if(modal && modal != undefined){
 
-      trigger.setAttribute('data-modal-trigger', modalTrigger + "-" + count);
-      modal.setAttribute('data-modal', modalTrigger + "-" + count);
-      count++;
-
-      trigger.addEventListener('click', function (event) {
-        document.body.classList.add('modal__is-open');
-        var modalTrigger = trigger.dataset.modalTrigger;
-        var modal = document.querySelector("[data-modal=\"".concat(modalTrigger, "\"]"));
-
-        modal.classList.add('is-open');
-
-        var video = modal.querySelector("[data-video-src]");
-        var hasVideo = video && video != undefined;
-
-        if (hasVideo) {
-          video.setAttribute('src', video.dataset.videoSrc);
+        if(trigger.hasAttribute("data-modal-trigger-isunique")) {
+          var modalTriggerName = modalTrigger;
+        }
+        else{
+          var modalTriggerName = modalTrigger + "-" + count;
+          count++;
         }
 
-        modal.querySelector('[data-modal-close]').addEventListener('click', function () {
-          modal.classList.remove('is-open');
-          document.body.classList.remove('modal__is-open');
 
-          if (hasVideo) {
-            video.removeAttribute('src');
+        trigger.setAttribute('data-modal-trigger', modalTriggerName);
+        modal.setAttribute('data-modal', modalTriggerName);
+        trigger.addEventListener('click', function (event) {
+          document.body.classList.add('modal__is-open');
+          var modalTrigger = trigger.dataset.modalTrigger;
+          var modal = document.querySelector("[data-modal=\"".concat(modalTrigger, "\"]"));
+          modal.classList.add('is-open');
+          var video = modal.querySelector("[data-video-src]");
+          var hasVideo = video && video != undefined; // CG: Only display the video if the user has consented to the relevant cookies, e.g. the cookie string contains "C0003:1"
+
+          if (hasVideo)
+          {
+            var videoCookieCategory = getOptanonCategoryFromClass(video.className);
+
+            if(relevantCookiesAccepted(videoCookieCategory)) {
+              video.setAttribute('src', video.dataset.videoSrc);
+            } else {
+              var newDiv = document.createElement("p");
+              newDiv.style.color = '#FFF';
+              newDiv.innerHTML = "Sorry, this video requires the use of functional cookies which you have not consented to use. You can <a style='color: #FFF; text-decoration: underline;' href='/legal/data-protection/cookie-policy'>change your cookie settings</a> or <a style='color: #FFF; text-decoration: underline;' href='" + video.dataset.videoSrc + "'>watch the video on YouTube</a>.";
+              video.parentNode.replaceChild(newDiv, video);
+            }
           }
-
+  
+          modal.querySelector('[data-modal-close]').addEventListener('click', function () {
+            modal.classList.remove('is-open');
+            document.body.classList.remove('modal__is-open');
+            
+            if(hasVideo) {
+              video.removeAttribute('src');
+            }
+  
+          });
+          event.preventDefault();
+          sliderReInit(document.querySelector("[data-modal=\"".concat(modalTrigger, "\"] .modal-slider")), modal);
         });
+      }    
+    });
+  };
 
+  var toggleSlide = function toggleSlide(query, callback) {
+    var courseModulesTriggers = document.querySelectorAll(query);
+
+    courseModulesTriggers.forEach(function (trigger) {
+      trigger.addEventListener('click', function (event) {
         event.preventDefault();
-        var isSliderRefreshed = parseInt(modal.dataset.sliderIsrefreshed);
-        if (isSliderRefreshed === 0) {
-          sliderReInit("[data-modal=\"".concat(modalTrigger, "\"] .modal-slider"));
-          modal.setAttribute("data-slider-isrefreshed", 1);
+        var elmId = trigger.getAttribute('href').replace('#', '');
+        if(elmId && elmId != undefined) {
+
+          var targetElm = document.getElementById(elmId);
+          if(targetElm && targetElm != undefined) {
+            targetElm.classList.add('hidden');
+            var hiddenElm = document.getElementById(trigger.dataset.courseModulesTrigger);
+            if(hiddenElm && hiddenElm != undefined){
+              hiddenElm.classList.remove('hidden');
+              callback(hiddenElm)
+            }
+          }
         }
       });
+    });
+  };
+
+  let scrollToTop = function(elm, offset = 100) {
+    $('html, body').animate({
+      scrollTop: $(elm).offset().top - offset
+  }, 200);
+  }
+
+  var stopFlag = false;
+
+  function getURLParameter(name) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'), results = regex.exec(window.location.href);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+  };
+
+  var toggleVariantFromUrl = function toggleVariantFromUrl() {
+    // CG: Switch tabs on hash, but don't scroll to them
+    if(window.location.hash) {
+        $(".tab__item a[href='" + window.location.hash +"']").click();        
+    }
+
+    // CG: Switch to variant via URL
+    if (typeof mode == "undefined" && typeof award == "undefined") {
+        var mode = "";
+        var award = "";
+    }
+
+    mode = getURLParameter("m");
+    award = getURLParameter("a");
+
+    if (mode != "" && award != "") {
+
+        //stopFlag = true;
+
+        console.log('award (via URL parameter) = ' + award);
+        console.log('mode (via URL parameter) = ' + mode);
+
+        var matchingStudyOption = $('[data-award="' + award + '"] input[value=' + mode + ']');
+
+        // Do the switch over only if there's at lead one valid option
+        if(matchingStudyOption.length > 0) {    
+            // If there are, do the switchover
+            $('input[value=' + award + ']').trigger('change');
+            matchingStudyOption.trigger('change');
+        }
+    };
+  };
+
+  var toggleVariantInit = function toggleVariantInit() {
+    $('input[name=award-type]').on('change', function (e) {
+      if (stopFlag == false) {
+          var newId = $(this).val();
+          var activeAward = $('*[data-award="' + newId + '"]');
+          console.log("Award = " + $(this).val());
+          $('*[data-award]').not(activeAward.show()).hide();
+          $('*[data-award] input').prop('checked', false);
+          $(this).prop('checked', true);
+          var studyOptionElm = $('[data-award="' + newId + '"] input[name=study-option]').first();
+          studyOptionElm.trigger('change');
+      }
+      stopFlag = false;
+  });
+
+  $('input[name=study-option]').on('change', function () {
+      if (stopFlag == false) {        
+          var activeOption = $(this).val();
+          console.log("Mode of study = " + activeOption);
+          var activeMode = $('*[data-mode="' + activeOption + '"]');
+          $('*[data-mode]').not(activeMode.show()).hide();
+         //Refresh sliders         
+          $(".slick-slider").each(function() {
+              $(this).slick('reinit');          
+          });
+          // CG: Refresh the Unistats iframe, if necessary
+          $("[data-mode='" + activeOption + "'] #unistats-widget-frame").attr("src", $("[data-mode='" + activeOption + "'] #unistats-widget-frame").attr("src"));   
+          $(this).prop('checked', true);
+      }
+      stopFlag = false;
+  });
+  };
+
+  var visualizerInit = function visualizerInit() {
+    if(getURLParameter("visualizer") == "true") {	
+
+      $('[data-source]').each(function() {
+              if(!$(this).hasClass('course-details_usp')) {
+                  $(this).css('position','relative');
+              }
+        $(this).prepend('<div class="source-label">' + $(this).data('source') + '</div>');
+        $(this).addClass('element-outline');
+      });        
+  
+      $('[data-source]').hover(function() {
+        $(this).addClass('source-outline');
+        $('#source-indicator__source').text($(this).data('source'));
+        $('#source-indicator__field').text($(this).data('field'));
+        $('#source-indicator').show();
+      }, function() {
+        $(this).removeClass('source-outline');
+        $('#source-indicator__source').text('');
+        $('#source-indicator__field').text('');
+        $('#source-indicator').hide();
+      });	
+  
+      $(document).mousemove(function(e) {
+        var item = $('#source-indicator');
+  
+        item.css({
+          left: e.pageX + 10,
+          top: e.pageY + 10
+        });
+      });
+    }  
+  };
+
+  var countrySubmit = function countrySubmit() {
+      $('#countrySubmit').on("click", function (e) {
+        e.preventDefault();
+        var countryPagePath = document.getElementById('countryPicker').value;
+        if (countryPagePath == "") {
+            return false;
+        } 
+        $('#form1').on('submit', function (e) {
+            e.preventDefault();
+        });
+        e.stopImmediatePropagation();
+        if (countryPagePath != "") {
+          if (window.location.hostname == "www.staffslondon.ac.uk") { // SM 21/05/21 If the country selector is used from the London site, direct to the main site pages
+              window.location.href = window.location.protocol + "//www.staffs.ac.uk" + countryPagePath;
+          } else {
+              window.location.href = window.location.protocol + "//" + window.location.hostname + countryPagePath;
+          }
+        }
     });
   };
 
@@ -990,10 +1229,19 @@
     searchInit();
     autocompleteInit();
     modal();
+    toggleVariantInit();
+    visualizerInit();
+    toggleSlide('[data-course-modules-trigger]', scrollToTop);
+    countrySubmit();
+    crmFormsInit();
+    leadGenInit();
+    newsAndEventsSearchInit();
   });
   $(window).on('DOMContentLoaded', function () {
     // event triggers once DOM is loaded but before stylesheets are applied
+    toggleVariantFromUrl();
     removeExistingSvgFills('.card--ksp');
+    removeExistingSvgFills('.iconBox__icon');
   });
   $(window).on('load', function () {
     // correct anything loaded on DOM load which might need adjusting (mostly once images have loaded)

@@ -82,8 +82,13 @@
         background: rgba(black, 0.75);
         @supports (backdrop-filter: blur(1em)) {
           background: rgba(black, 0.6);
+          /*min-height: 340px;*/
         }
         backdrop-filter: blur(1em);
+
+        & .meta--inline dd::before {
+          display: none;
+        }
       }
     }
   }
@@ -110,6 +115,29 @@
   &--shallow {
     .masthead__inner {
       min-height: 40vh;
+    }
+  }
+
+  @media (max-width: map_get($breakpoint-stages, 'mobile-wide')) {
+    &--profile {
+      .masthead__inner {
+        padding: $spacing-6xl 0 $spacing-xl;
+        figure {
+          margin: 2rem 0 2rem;
+        }
+      }
+    }
+  }
+}
+
+.card {
+  & a.masthead__school-link {
+    color: white;
+    border-bottom: 1px solid white!important;
+
+    &:hover {
+      border-bottom: none!important;
+      text-decoration: none;
     }
   }
 }

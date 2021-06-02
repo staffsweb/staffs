@@ -19,3 +19,14 @@ variants:
     context:
       background: slate
       text: 'This is a slate slab'
+
+  - name: bg-img
+    label: "Background Image"
+    hidden: true
+    context:
+      background: img
+      text: 'This is a slab with background image'
+
+  - name: ldn
+    label: 'London Variants'
+    preview: '@preview--ldn'

@@ -198,13 +198,13 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-8c875ed073c65f4c89ad11baebaf3587">_lists.scss</option>
+                <option value="file-1113cde5c2061dbc09ef49c0dfd39ac2">_lists.scss</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-8c875ed073c65f4c89ad11baebaf3587" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-1113cde5c2061dbc09ef49c0dfd39ac2" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -306,68 +306,112 @@
   }
 }
 
+<span class="hljs-selector-class">.list--steps</span> {
+  <span class="hljs-variable">$number-accent-colors</span>: (
+    <span class="hljs-string">'red'</span>: <span class="hljs-variable">$red</span>,
+    <span class="hljs-string">'pink'</span>: <span class="hljs-variable">$pink</span>,
+    <span class="hljs-string">'maroon'</span>: <span class="hljs-variable">$maroon</span>,
+    <span class="hljs-string">'slate'</span>: <span class="hljs-variable">$slate</span>,
+    <span class="hljs-string">'blue-ldn'</span>: <span class="hljs-variable">$blue--deep-ldn</span>,
+  );
+
+  <span class="hljs-attribute">list-style</span>: none;
+  <span class="hljs-attribute">padding</span>-inline-start: <span class="hljs-variable">$spacing-3xl</span>;
+  <span class="hljs-attribute">counter-reset</span>: list--steps;
+  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-variable">$spacing-4xl</span>;
+
+  &gt; <span class="hljs-selector-tag">li</span> {
+    <span class="hljs-attribute">position</span>: relative;
+    <span class="hljs-attribute">border-left</span>: <span class="hljs-variable">$border-accent-width</span> solid <span class="hljs-variable">$neutral--primary</span>;
+    <span class="hljs-attribute">border-color</span>: var(--accent-color, #{<span class="hljs-variable">$neutral--primary</span>});
+    <span class="hljs-attribute">padding-left</span>: <span class="hljs-variable">$spacing-lg</span>;
+    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-variable">$spacing-2xl</span>;
+
+    &amp;<span class="hljs-selector-pseudo">::before</span> {
+      <span class="hljs-attribute">content</span>: counter(list--steps);
+      <span class="hljs-attribute">counter-increment</span>: list--steps;
+      <span class="hljs-attribute">display</span>: block;
+      <span class="hljs-attribute">float</span>: left;
+      <span class="hljs-attribute">clear</span>: left;
+      <span class="hljs-attribute">margin-left</span>: -#{<span class="hljs-variable">$spacing-3xl</span> + <span class="hljs-variable">$spacing-lg</span> + <span class="hljs-variable">$border-accent-width</span>/<span class="hljs-number">2</span>};
+      <span class="hljs-attribute">width</span>: <span class="hljs-variable">$spacing-3xl</span>;
+      <span class="hljs-attribute">padding</span>: <span class="hljs-variable">$spacing-2xs</span> <span class="hljs-number">0</span>;
+      <span class="hljs-attribute">background</span>: var(--accent-color, #{<span class="hljs-variable">$neutral--primary</span>});
+      <span class="hljs-attribute">color</span>: white;
+      <span class="hljs-keyword">@include</span> typescale(<span class="hljs-string">'3xl'</span>);
+      <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">500</span>;
+      <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.4</span>; <span class="hljs-comment">// matches .title</span>
+      <span class="hljs-attribute">text-align</span>: center;
+    }
+
+  }
+
+  &amp;__box {
+    <span class="hljs-attribute">background</span>: <span class="hljs-variable">$greyblue--superlight</span>;
+    <span class="hljs-attribute">padding</span>: calc(#{<span class="hljs-variable">$spacing-sm</span>} + <span class="hljs-number">2.5%</span>);
+    <span class="hljs-attribute">margin-left</span>: -<span class="hljs-variable">$spacing-lg</span>;
+  }
+
+  &amp;__title {
+  }
+
+  &amp;__cta {
+    <span class="hljs-selector-class">.button</span><span class="hljs-selector-pseudo">:only-child</span> {
+      <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
+    }
+  }
+
+  <span class="hljs-comment">//--  ACCENT THEMES</span>
+  <span class="hljs-keyword">@each</span> <span class="hljs-variable">$name</span>, <span class="hljs-variable">$value</span> in <span class="hljs-variable">$number-accent-colors</span> {
+    &amp;-accent-#{<span class="hljs-variable">$name</span>} {
+      --accent-<span class="hljs-attribute">color</span>: #{<span class="hljs-variable">$value</span>};
+    }
+  }
 
 
-<span class="hljs-comment">//.list-bordered-items {</span>
-<span class="hljs-comment">//  list-style: none;</span>
-<span class="hljs-comment">//  padding-left: 0;</span>
-<span class="hljs-comment">//</span>
-<span class="hljs-comment">//  li {</span>
-<span class="hljs-comment">//    padding: $spacing-sm 0;</span>
-<span class="hljs-comment">//    border-bottom: 1px solid $grey-light;</span>
-<span class="hljs-comment">//  }</span>
-<span class="hljs-comment">//}</span>
+  <span class="hljs-comment">//--</span>
 
-<span class="hljs-comment">//.list-icon-bullets {</span>
-<span class="hljs-comment">//  list-style: none;</span>
-<span class="hljs-comment">//  padding-left: 0;</span>
-<span class="hljs-comment">//</span>
-<span class="hljs-comment">//  li {</span>
-<span class="hljs-comment">//    @include clearfix;</span>
-<span class="hljs-comment">//    border-bottom: 1px solid $grey-light;</span>
-<span class="hljs-comment">//  }</span>
-<span class="hljs-comment">//</span>
-<span class="hljs-comment">//  a {</span>
-<span class="hljs-comment">//    @include typescale('md');</span>
-<span class="hljs-comment">//    display: block;</span>
-<span class="hljs-comment">//    text-decoration: none;</span>
-<span class="hljs-comment">//    text-decoration-color: black;</span>
-<span class="hljs-comment">//    padding: $spacing-md $spacing-md $spacing-md 3.5rem;</span>
-<span class="hljs-comment">//</span>
-<span class="hljs-comment">//    &amp;:after {</span>
-<span class="hljs-comment">//      bottom: 1.2rem;</span>
-<span class="hljs-comment">//    }</span>
-<span class="hljs-comment">//</span>
-<span class="hljs-comment">//    .icon {</span>
-<span class="hljs-comment">//      font-size: 2.5rem;</span>
-<span class="hljs-comment">//      float: left;</span>
-<span class="hljs-comment">//      margin-top: -0.75rem;</span>
-<span class="hljs-comment">//      margin-left: -3.5rem;</span>
-<span class="hljs-comment">//    }</span>
-<span class="hljs-comment">//</span>
-<span class="hljs-comment">//    &amp;:hover {</span>
-<span class="hljs-comment">//      text-decoration: underline;</span>
-<span class="hljs-comment">//      @include link-pointy--hover;</span>
-<span class="hljs-comment">//    }</span>
-<span class="hljs-comment">//  }</span>
-<span class="hljs-comment">//}</span>
-<span class="hljs-comment">//</span>
-<span class="hljs-comment">//.list-block {</span>
-<span class="hljs-comment">//  list-style: none;</span>
-<span class="hljs-comment">//  padding-left: 0;</span>
-<span class="hljs-comment">//  margin-bottom: $spacing-4xl;</span>
-<span class="hljs-comment">//</span>
-<span class="hljs-comment">//  &gt; li,</span>
-<span class="hljs-comment">//  .item {</span>
-<span class="hljs-comment">//    border-top: 1px solid $grey-light;</span>
-<span class="hljs-comment">//    padding-top: $spacing-xl;</span>
-<span class="hljs-comment">//    margin-bottom: $spacing-xl;</span>
-<span class="hljs-comment">//  }</span>
-<span class="hljs-comment">//</span>
-<span class="hljs-comment">//  .item__title {</span>
-<span class="hljs-comment">//    margin-top: 0;</span>
-<span class="hljs-comment">//  }</span>
-<span class="hljs-comment">//}</span></pre>
+  &amp;<span class="hljs-selector-class">.accordion</span> {
+    <span class="hljs-comment">// component fusion, like Jazz fusion; not sure if this is a wonderful or terrible idea (probably terrible)</span>
+
+    <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">0</span>;
+
+    &gt; <span class="hljs-selector-tag">li</span> {
+      <span class="hljs-attribute">border-color</span>: <span class="hljs-variable">$primary</span>;
+      <span class="hljs-attribute">border-color</span>: var(--accent-color, #{<span class="hljs-variable">$primary</span>});
+
+      &amp;<span class="hljs-selector-pseudo">::before</span> {
+        <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$primary</span>;
+        <span class="hljs-attribute">background-color</span>: var(--accent-color, #{<span class="hljs-variable">$primary</span>});
+      }
+    }
+
+    <span class="hljs-selector-class">.accordion__title</span> {
+      <span class="hljs-attribute">background</span>: <span class="hljs-variable">$greyblue--superlight</span>;
+    }
+
+    <span class="hljs-selector-class">.accordion__title</span>,
+    <span class="hljs-selector-class">.accordion__content</span> {
+      <span class="hljs-attribute">padding-left</span>: calc(#{<span class="hljs-variable">$spacing-sm</span>} + <span class="hljs-number">2.5%</span>);
+    }
+
+    <span class="hljs-selector-class">.accordion__item</span> {
+      <span class="hljs-attribute">border-top</span>: none;
+      <span class="hljs-attribute">margin-left</span>: -<span class="hljs-variable">$spacing-lg</span>;
+    }
+
+    <span class="hljs-selector-class">.accordion__toggle</span> {
+      <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">0</span>;
+
+      &amp;<span class="hljs-selector-pseudo">:before</span> {
+        <span class="hljs-attribute">float</span>: right;
+        <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-variable">$spacing-md</span>;
+      }
+    }
+  }
+
+}
+</pre>
                             </code>
                             
                         </div>
@@ -379,11 +423,11 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/list/_lists.scss</span>
+                    <span class="Meta-value">src\components\list\_lists.scss</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2.2 KB</span>
+                    <span class="Meta-value">3.5 KB</span>
                 </li>
             </ul>
         </div>
@@ -406,7 +450,7 @@
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Variants <em class="Meta-count">(7)</em>:</strong>
+            <strong class="Meta-key">Variants <em class="Meta-count">(8)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="list--default.html">
@@ -431,6 +475,10 @@
             
                 <a href="list--ordered.html">
                     <span>Ordered</span>
+                </a>, 
+            
+                <a href="list--steps.html">
+                    <span>Steps</span>
                 </a>, 
             
                 <a href="list--unstyled.html">
@@ -459,7 +507,7 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src/components/list/list--inline.twig</span>
+            <span class="Meta-value">src\components\list\list--inline.twig</span>
         </li>
         
         
@@ -850,7 +898,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -874,7 +922,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -898,7 +946,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -927,7 +975,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -951,7 +999,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -975,7 +1023,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -999,7 +1047,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -1023,7 +1071,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -1047,7 +1095,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -1071,7 +1119,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -1152,6 +1200,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="accordion--item.html" data-pjax>
                 <span>Single Accordion Item</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="accordion--steps.html" data-pjax>
+                <span>Steps</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1811,6 +1883,54 @@
         </li>
         
     
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="button--outline-white.html" data-pjax>
+                <span>Style: Outline White (LDN)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="button--block.html" data-pjax>
+                <span>Style: Block-level Element</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
 
             </ul>
         </li>
@@ -2024,6 +2144,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="card--ksp-light.html" data-pjax>
                 <span>KSP (Light on Dark)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="card--ksp-ldn-variants.html" data-pjax>
+                <span>KSP (LDN)</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2407,7 +2551,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -2431,7 +2575,31 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="course-search--with-subject-areas.html" data-pjax>
+                <span>With Subject Areas</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -2647,7 +2815,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -2671,7 +2839,31 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="multipage.html" data-pjax>
+                <span>Multipage</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -2695,7 +2887,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -2897,6 +3089,30 @@
         
     
         
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="lead-generation.html" data-pjax>
+                <span>Lead Generation</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-list">
             <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-list-items">
                 Lists
@@ -3054,6 +3270,30 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="list--steps.html" data-pjax>
+                <span>Steps</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="list--unstyled.html" data-pjax>
                 <span>Unstyled</span>
                 
@@ -3077,6 +3317,30 @@
     
 
             </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="loading-spinner.html" data-pjax>
+                <span>Loading Spinner</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
         </li>
         
     
@@ -3729,6 +3993,30 @@
         
     
         
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="ratio.html" data-pjax>
+                <span>Ratio</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-section-header">
             <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-section-header-items">
                 Section Header
@@ -3843,6 +4131,30 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="side-navigation.html" data-pjax>
+                <span>Side Navigation</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="sitewide-message.html" data-pjax>
                 <span>Sitewide Message</span>
                 
@@ -3950,6 +4262,30 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="slab--ldn.html" data-pjax>
+                <span>London Variants</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="slab--examples.html" data-pjax>
                 <span>Examples</span>
                 
@@ -3999,7 +4335,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -4023,7 +4359,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -4047,7 +4383,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -4071,7 +4407,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -4095,7 +4431,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -4119,7 +4455,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>
@@ -4148,7 +4484,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
 
 
 </div>

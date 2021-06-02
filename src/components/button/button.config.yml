@@ -13,13 +13,13 @@ variants:
     label: "Size: XS"
     context:
       classes: ['button--xs']
-      text: 'An teeny tiny button'
+      text: 'A teeny tiny button'
 
   - name: small
     label: "Size: Small"
     context:
       classes: ['button--sm']
-      text: 'Smol button'
+      text: 'Small button'
 
   - name: large
     label: "Size: Large"
@@ -32,7 +32,6 @@ variants:
     context:
       classes: ['button--xl']
       text: 'Huge button!'
-    notes: "<strong>Avoid:</strong> There's probably never any need for this, it really is probably too big for almost all applications"
 
   - name: pointy
     label: "Style: Pointy"
@@ -78,3 +77,16 @@ variants:
     context:
       classes: ['button--outline-slate']
       text: 'Slate Outline Style Button'
+
+  - name: outline-white
+    label: "Style: Outline White (LDN)"
+    context:
+      classes: ['button--outline-white']
+      text: 'Button with white outline'
+    preview: '@preview--ldn-blue'
+
+  - name: block
+    label: "Style: Block-level Element"
+    context:
+      classes: ['button--block']
+      text: "Block-level Element Button"
