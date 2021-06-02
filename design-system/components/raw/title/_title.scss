@@ -23,6 +23,12 @@
   }
 }
 
+.slab, .mini-template-grid {
+  .title {
+    margin-top: 0;
+  }
+}
+
 .title__highlight {
   position: relative;
   display: inline;
