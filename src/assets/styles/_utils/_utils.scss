@@ -199,4 +199,14 @@
   .pie-chart_key .key-color.key-2 { background: #394851; }
 
   .pie-chart_key .key-color.key-3 { background: #C3C1C1; }
+
+}
+
+.theme-ldn {
+  .pie .circle-1 { stroke: $magenta--ldn; }
+  .pie .circle-2 { stroke: $blue--deep-ldn; }
+  .pie .circle-3 { stroke: $blue--ldn; }
+  .pie-chart_key .key-color.key-1 { background: $magenta--ldn; }
+  .pie-chart_key .key-color.key-2 { background: $blue--deep-ldn; }
+  .pie-chart_key .key-color.key-3 { background: $blue--ldn; }
 }

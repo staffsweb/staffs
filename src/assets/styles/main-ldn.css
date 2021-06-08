@@ -2179,6 +2179,18 @@ a.tile:focus { outline-width: 3px; outline-color: #144196; z-index: 2; }
 
 .pie-chart .pie-chart_key .key-color.key-3 { background: #C3C1C1; }
 
+.theme-ldn .pie .circle-1 { stroke: #b90f82; }
+
+.theme-ldn .pie .circle-2 { stroke: #144196; }
+
+.theme-ldn .pie .circle-3 { stroke: #0082c8; }
+
+.theme-ldn .pie-chart_key .key-color.key-1 { background: #b90f82; }
+
+.theme-ldn .pie-chart_key .key-color.key-2 { background: #144196; }
+
+.theme-ldn .pie-chart_key .key-color.key-3 { background: #0082c8; }
+
 .theme-ldn .header-site__flexContainer { align-items: center; }
 
 .theme-ldn .header-site .site-logo { width: 35%; max-width: 12.5em; }
