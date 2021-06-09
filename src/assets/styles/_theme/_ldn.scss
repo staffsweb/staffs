@@ -52,4 +52,18 @@
       @include button--clipped;
     }
   }
+
+  .course-listing {
+    &__header {
+      display: flex;
+
+      @media (max-width: map_get($breakpoint-stages, 'mobile-wide')) {
+          justify-content: space-between;
+      }
+    }
+
+    &__icon img {
+      height: calc(100% - 1.5rem);
+    }
+  }
 }

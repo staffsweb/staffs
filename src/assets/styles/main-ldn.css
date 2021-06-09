@@ -2209,6 +2209,12 @@ a.tile:focus { outline-width: 3px; outline-color: #144196; z-index: 2; }
 
 .theme-ldn .multipage-form .button:not([class^="multipage-form__prev-btn"]) { border-radius: 0; -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0.75em 100%, 0 calc(100% - 0.75em)); clip-path: polygon(0 0, 100% 0, 100% 100%, 0.75em 100%, 0 calc(100% - 0.75em)); }
 
+.theme-ldn .course-listing__header { display: flex; }
+
+@media (max-width: 35rem) { .theme-ldn .course-listing__header { justify-content: space-between; } }
+
+.theme-ldn .course-listing__icon img { height: calc(100% - 1.5rem); }
+
 .masthead { background: linear-gradient(#144196, #0082c8); }
 
 .theme-ldn .megaNav__close { background: url("//www.staffs.ac.uk/site/images/icons/london/icon-x-primary.svg") no-repeat center center; background-size: 1rem; }
