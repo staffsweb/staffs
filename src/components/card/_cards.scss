@@ -77,6 +77,13 @@ $card__internal-spacing: $spacing-sm;
     }
   }
 
+  &__clearing-flag {
+    background-color: $red;
+    color: #FFF;
+    padding: 0.25rem 0.5rem;
+    font-weight: 400;
+  }
+
   //--  Child elements affected by accent colour
 
   .blockquote__title {

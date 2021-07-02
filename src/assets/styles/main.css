@@ -1506,6 +1506,8 @@ iframe { border: none; }
 
 .card__figure--video img { color: #CCC; }
 
+.card__clearing-flag { background-color: #d70a26; color: #FFF; padding: 0.25rem 0.5rem; font-weight: 400; }
+
 .card .blockquote__title { color: var(--accent-color); }
 
 .card .title__highlight { --background: var(--accent-color); }
