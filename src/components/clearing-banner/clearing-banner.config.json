@@ -1,3 +1,0 @@
-{
-    "notes" : "Because this component and the website's navigation menu both use absolute positioning, this component should always be used with its accompanying JavaScript. This will make sure that the Clearing banner is always correctly positioned below the website navigation. - CG"
-}
