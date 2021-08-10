@@ -6574,7 +6574,37 @@ function AjaxSearch(querystring, elementId, doAppend) {
   xhttp.send();
 }
 
-var newsAndEventsSearchInit = function newsAndEventsSearchInit() {}; // @TODO: at some point, it'd probably be nice if functions sat in
+var newsAndEventsSearchInit = function newsAndEventsSearchInit() {
+  $('.js-load-more').on('click', function (e) {
+    var $this = $(this);
+    var url = $this.data('src');
+    var target = $this.data('target');
+    var btnHtml = $this.html();
+    e.preventDefault(); // If the button is not disabled and it has a url
+
+    if (!$this.attr('disabled') && url && target) {
+      // Set the button to loading
+      $this.attr('disabled', true).addClass('loading').text('Loading...');
+      $.ajax({
+        type: 'GET',
+        url: url
+      }).success(function (data) {
+        var $target = $(target);
+        var $lastItem = $target.children('div:last-child'); // Add the data to the target
+
+        $target.append(data); // TODO: when in contensis check if this is the last page to load, if it is remove the button
+        // $this.remove();
+        // Set the load more button back to normal
+
+        $this.attr('disabled', false).removeClass('loading').html(btnHtml); // Focus on the first new element
+
+        $lastItem.next().find('a').focus();
+      }).error(function () {
+        $this.removeClass('loading').html('Sorry, no results found.');
+      });
+    }
+  });
+}; // @TODO: at some point, it'd probably be nice if functions sat in
 // 'eachIndividualComponentName.js' in each component folder and were imported
 // rather than being here, like their Sass files
 
