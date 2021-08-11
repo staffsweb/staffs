@@ -6624,6 +6624,11 @@ var newsAndEventsSearchInit = function newsAndEventsSearchInit() {
       });
     }
   });
+  $('#news_search').on('keydown', function (e) {
+    if (e.keyCode == 13) {
+      e.preventDefault();
+    }
+  });
 }; // @TODO: at some point, it'd probably be nice if functions sat in
 // 'eachIndividualComponentName.js' in each component folder and were imported
 // rather than being here, like their Sass files

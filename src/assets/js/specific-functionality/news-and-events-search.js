@@ -197,4 +197,11 @@ let newsAndEventsSearchInit = function() {
             });
         }
     });
+
+    $('#news_search').on('keydown', function (e) {
+        if(e.keyCode == 13)
+        {
+            e.preventDefault();
+        }
+    });
 };
