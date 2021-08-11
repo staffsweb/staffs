@@ -6498,6 +6498,26 @@ function Events(loadMore, redirectPage) {
   return false;
 }
 
+function UrlRedirect(path, year, month, cat, text) {
+  if (year > 0 && month == 0) {
+    path = path + year;
+  }
+
+  if (year > 0 && month > 0) {
+    path = path + year + "/" + month;
+  }
+
+  if (cat != "" && cat != "all" && text != "") {
+    path = path + "?q=" + text + "&category=" + cat;
+  } else if (cat == "" && text != "") {
+    path = path + "?q=" + text;
+  } else if (cat != "" && cat != "all" && text == "") {
+    path = path + "?category=" + cat;
+  }
+
+  return path;
+}
+
 function Search(contentTypeId, searchText, category, month, year, elementId) {
   pageIndex = defaultPageIndex;
   curEntryCount = 0;
