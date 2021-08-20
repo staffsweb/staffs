@@ -488,7 +488,7 @@ $border-accent-width: $spacing-2xs;
 @mixin figcaption {
   margin: 0;
   padding: $spacing-sm 0;
-  @include typescale('xs');
+  @include typescale('xl');
   background: #fff;
   color: $text-color;
   border-bottom: 1px solid $grey--light;
