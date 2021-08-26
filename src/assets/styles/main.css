@@ -1604,6 +1604,8 @@ a.card:hover .title__highlight, a.card:hover .card__title { text-decoration: und
 
 @media (min-width: 35rem) { .card--event .card__day { font-size: 2rem; } }
 
+.card--event .card__date-separator { display: block; font-weight: 500; font-size: 1.5rem; padding: 0.5rem 0; }
+
 @media (min-width: 70rem) { .card--event { margin-left: 6rem; }
   .card--event .card__date { left: -6rem; width: 6rem; }
   .card--event .card__day { font-size: 3rem; } }
