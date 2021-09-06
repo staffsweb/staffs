@@ -1746,6 +1746,8 @@ hr { position: relative; }
 
 .icon--globe { background-image: url("//www.staffs.ac.uk/site/images/icons/icon-globe.svg"); }
 
+.icon--person { background-image: url("//www.staffs.ac.uk/site/images/icons/icon-person.svg"); }
+
 .iconBox { display: flex; flex-wrap: wrap; align-items: flex-start; padding: calc(1rem + 2.5%) 0.5rem; margin: 0 0 1rem; background: #394851; color: white; text-decoration: none; }
 
 .iconBox__icon { flex: 1 1 3rem; padding: 0 calc(0.5rem + 1.25%); box-sizing: border-box; font-size: 2rem; text-align: center; }
