@@ -84,6 +84,11 @@ $card__internal-spacing: $spacing-sm;
     font-weight: 400;
   }
 
+  // CG: A card across multiple days will clash with the one below if there is no image, so add a minimum height if necessary
+  &--multiple-days {
+    min-height: 210px;
+  }
+
   //--  Child elements affected by accent colour
 
   .blockquote__title {
