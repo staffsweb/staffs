@@ -7683,9 +7683,7 @@ var newsAndEventsSearchInit = function newsAndEventsSearchInit() {
 
         $(".slick-slider").each(function () {
           $(this).slick('reinit');
-        }); // CG: Refresh the Unistats iframe, if necessary
-
-        $("[data-mode='" + activeOption + "'] #unistats-widget-frame").attr("src", $("[data-mode='" + activeOption + "'] #unistats-widget-frame").attr("src"));
+        });
         $(this).prop('checked', true);
       }
 
