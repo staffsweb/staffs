@@ -7187,6 +7187,30 @@ var newsAndEventsSearchInit = function newsAndEventsSearchInit() {
         arrows: false
       });
     });
+    $('.js-slider--logos').slick({
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      infinite: false,
+      responsive: [{
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      }, {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }, {
+        breakpoint: 360,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }]
+    });
     Waypoint.refreshAll(); // sliders' content may change the height of the page, thus these need to be recalculated
   };
 

@@ -1808,6 +1808,12 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .slider--gallery__nav .slick-current img { border-color: #144196; }
 
+.js-slider--logos .slick-slide { padding: 0 1rem; }
+
+.js-slider--logos .slick-track { display: flex; }
+
+.js-slider--logos .slick-track .slick-slide { display: flex; height: auto; align-items: center; justify-content: center; }
+
 .social-links .icon { width: 2rem; height: 2rem; }
 
 .social-links a { text-decoration: none; border-bottom: 0 !important; }
