@@ -1642,7 +1642,7 @@ a.card:hover .title__highlight, a.card:hover .card__title { text-decoration: und
 
 @media (min-width: 50rem) { .course-search__keywords[type="search"] { max-width: 60%; }
   .course-search__submit { max-width: 10%; }
-  .course-search select { max-width: 30%; }
+  .course-search select { max-width: 29%; }
   .course-search__subject-list { -moz-column-count: 3; -moz-column-gap: 1rem; -webkit-column-count: 3; -webkit-column-gap: 1rem; column-count: 3; column-gap: 1rem; } }
 
 @media (max-width: 50rem) { .course-search__keywords { margin-bottom: 0.75rem; }
