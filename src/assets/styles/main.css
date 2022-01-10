@@ -1360,6 +1360,10 @@ iframe { border: none; }
 
 @media (min-width: 40em) { .accordion__content { padding: 1.5rem 1.5rem; } }
 
+.accordion--transparent .accordion__item[open] .accordion__title { background: none; }
+
+.accordion--transparent .accordion__content { background: none; border-top: 0; }
+
 .banner { position: relative; display: flex; min-height: 35vmin; margin-bottom: 2rem; background: radial-gradient(45% 660% at 50% 50%, #f7f7f7 0%, #f0f0f0 100%); }
 
 .banner__bg { position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow: hidden; z-index: 0; }
