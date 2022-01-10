@@ -1750,6 +1750,24 @@ hr { position: relative; }
 
 .icon--person { background-image: url("//www.staffs.ac.uk/site/images/icons/icon-person.svg"); }
 
+.facility-icons { max-width: 12rem; font-weight: 500; }
+
+.facility-icons__item { float: left; position: relative; width: 30%; padding-bottom: 30%; margin: 1.66%; overflow: hidden; color: #FFF; margin-bottom: 1rem; }
+
+.facility-icons__item--red { background-color: #d70a26; }
+
+.facility-icons__item--pink { background-color: #d5035e; }
+
+.facility-icons__item--maroon { background-color: #970048; }
+
+.facility-icons__item--slate { background-color: #394851; }
+
+.facility-icons__content { position: absolute; height: 90%; width: 90%; padding: 5%; text-align: center; }
+
+.facility-icons__image { margin-bottom: 0; }
+
+.tile__icon { width: 43%; margin-top: 5%; }
+
 .iconBox { display: flex; flex-wrap: wrap; align-items: flex-start; padding: calc(1rem + 2.5%) 0.5rem; margin: 0 0 1rem; background: #394851; color: white; text-decoration: none; }
 
 .iconBox__icon { flex: 1 1 3rem; padding: 0 calc(0.5rem + 1.25%); box-sizing: border-box; font-size: 2rem; text-align: center; }
