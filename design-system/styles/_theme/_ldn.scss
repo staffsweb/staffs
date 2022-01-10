@@ -15,7 +15,10 @@
 
     .site-logo {
       width: 35%;
-      max-width: 12.5em;
+      //max-width: 12.5em;
+      @media (min-width: 70rem) {
+        max-width: 250px;
+      }
 
       img {
         margin: 0;
@@ -48,5 +51,23 @@
     & .button:not([class^="multipage-form__prev-btn"]) {
       @include button--clipped;
     }
+  }
+
+  .course-listing {
+    &__header {
+      display: flex;
+
+      @media (max-width: map_get($breakpoint-stages, 'mobile-wide')) {
+          justify-content: space-between;
+      }
+    }
+
+    &__icon img {
+      height: calc(100% - 1.5rem);
+    }
+  }
+
+  .card__clearing-flag {
+    background-color: $purple--deep-ldn;
   }
 }

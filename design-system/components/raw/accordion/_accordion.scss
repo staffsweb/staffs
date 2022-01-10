@@ -77,3 +77,15 @@
     padding: $spacing-lg $spacing-lg;
   }
 }
+
+.accordion--transparent {
+
+  & .accordion__item[open] .accordion__title {
+    background: none;
+  }
+
+  & .accordion__content {
+    background: none;
+    border-top: 0;
+  }
+}

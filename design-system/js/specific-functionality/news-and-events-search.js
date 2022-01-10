@@ -58,6 +58,25 @@ function Events(loadMore, redirectPage) {
     return false;
 }
 
+function UrlRedirect(path, year, month, cat, text) {
+    if (year > 0 && month == 0) {
+        path = path + year;
+    }
+    if (year > 0 && month > 0) {
+        path = path + year + "/" + month;
+    }
+    if (cat != "" && cat != "all" && text != "") {
+        path = path + "?q=" + text + "&category=" + cat;
+    }
+    else if (cat == "" && text != "") {
+        path = path + "?q=" + text;
+    }
+    else if (cat != "" && cat != "all" && text == "") {
+        path = path + "?category=" + cat;
+    }
+    return path;
+}
+
 function Search(contentTypeId, searchText, category, month, year, elementId) {
     pageIndex = defaultPageIndex;
     curEntryCount = 0;
@@ -141,5 +160,48 @@ function AjaxSearch(querystring, elementId, doAppend) {
 }
 
 let newsAndEventsSearchInit = function() {
+    $('.js-load-more').on('click', function (e) {
+        var $this = $(this);
+        var url = $this.data('src');
+        var target = $this.data('target');
+        var btnHtml = $this.html();
     
+        e.preventDefault();
+    
+        // If the button is not disabled and it has a url
+        if (!$this.attr('disabled') && url && target) {
+            // Set the button to loading
+            $this.attr('disabled', true).addClass('loading').text('Loading...');
+    
+            $.ajax({
+                type: 'GET',
+                url: url
+            }).success(function (data) {
+                var $target = $(target);
+                var $lastItem = $target.children('div:last-child');
+    
+                // Add the data to the target
+                $target.append(data);
+    
+                // TODO: when in contensis check if this is the last page to load, if it is remove the button
+                // $this.remove();
+    
+                // Set the load more button back to normal
+                $this.attr('disabled', false).removeClass('loading').html(btnHtml);
+    
+                // Focus on the first new element
+                $lastItem.next().find('a').focus();
+    
+            }).error(function () {
+                $this.removeClass('loading').html('Sorry, no results found.');
+            });
+        }
+    });
+
+    $('#news_search').on('keydown', function (e) {
+        if(e.keyCode == 13)
+        {
+            e.preventDefault();
+        }
+    });
 };
