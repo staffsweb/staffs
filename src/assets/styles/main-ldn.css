@@ -137,7 +137,7 @@ template { display: none; }
 
 html { position: relative; font-size: 90%; -webkit-text-decoration-skip: ink; text-decoration-skip-ink: auto; }
 
-@supports (font: -apple-system-body) { html { font: -apple-system-body; -webkit-text-size-adjust: 80%; -moz-text-size-adjust: 80%; -ms-text-size-adjust: 80%; text-size-adjust: 80%; } }
+@supports (font: -apple-system-body) { html { font: -apple-system-body; -webkit-text-size-adjust: 80%; -moz-text-size-adjust: 80%; text-size-adjust: 80%; } }
 
 @media (min-width: 47.5em) { html { font-size: 82.5%; } }
 
@@ -846,7 +846,7 @@ iframe { border: none; }
 
 .accordion__item[open] .accordion__title { font-weight: 500; background: #f0f1f2; }
 
-.accordion__item[open] .accordion__toggle:before { content: ''; transform: rotate(0deg); background: #41464b url("//www.staffs.ac.uk/site/images/icons/icon-minus-white.svg") no-repeat center center; background-size: 50%; }
+.accordion__item[open] .accordion__toggle:before { content: ''; -webkit-transform: rotate(0deg); transform: rotate(0deg); background: #41464b url("//www.staffs.ac.uk/site/images/icons/icon-minus-white.svg") no-repeat center center; background-size: 50%; }
 
 .accordion__title { display: block; margin: 0; padding: 1.5rem 0.75rem; font-weight: normal; line-height: 1.2; list-style: none; cursor: pointer; }
 
@@ -868,11 +868,11 @@ iframe { border: none; }
 
 .banner__bg { position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow: hidden; z-index: 0; }
 
-.banner__bg img { height: 100%; width: 100%; -o-object-position: center center; object-position: center center; -o-object-fit: cover; object-fit: cover; transform: scale(1.1); -webkit-filter: blur(0.5em); filter: blur(0.5em); }
+.banner__bg img { height: 100%; width: 100%; -o-object-position: center center; object-position: center center; -o-object-fit: cover; object-fit: cover; -webkit-transform: scale(1.1); transform: scale(1.1); -webkit-filter: blur(0.5em); filter: blur(0.5em); }
 
-@media (min-width: 45rem) { .banner__bg img { transform: none; -webkit-filter: none; filter: none; } }
+@media (min-width: 45rem) { .banner__bg img { -webkit-transform: none; transform: none; -webkit-filter: none; filter: none; } }
 
-@media (min-width: 45rem) { .banner__bg--blurred img { transform: scale(1.1); -webkit-filter: blur(0.5em); filter: blur(0.5em); } }
+@media (min-width: 45rem) { .banner__bg--blurred img { -webkit-transform: scale(1.1); transform: scale(1.1); -webkit-filter: blur(0.5em); filter: blur(0.5em); } }
 
 .banner__bg.video { padding-bottom: 50%; position: initial; }
 
@@ -954,7 +954,7 @@ iframe { border: none; }
 
 .button--block { display: block; width: 100%; text-align: center; line-height: 1.5; }
 
-.button--pointy:after { content: '\25B6\FE0E'; padding-left: 0.5em; transition: transform 200ms; }
+.button--pointy:after { content: '\25B6\FE0E'; padding-left: 0.5em; transition: -webkit-transform 200ms; transition: transform 200ms; transition: transform 200ms, -webkit-transform 200ms; }
 
 .button--clipped { border-radius: 0; -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0.75em 100%, 0 calc(100% - 0.75em)); clip-path: polygon(0 0, 100% 0, 100% 100%, 0.75em 100%, 0 calc(100% - 0.75em)); }
 
@@ -1006,7 +1006,7 @@ iframe { border: none; }
 
 .card__figure--video:hover { cursor: pointer; }
 
-.card__figure--video:after { content: ''; position: absolute; width: 4rem; height: 4rem; max-width: 50%; max-height: 50%; top: 50%; left: 50%; transform: translate(-50%, -50%); background: url("//www.staffs.ac.uk/site/images/icons/icon-play-circle-neutral-light.svg") no-repeat center center; background-size: contain; z-index: 1; pointer-events: none; }
+.card__figure--video:after { content: ''; position: absolute; width: 4rem; height: 4rem; max-width: 50%; max-height: 50%; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); background: url("//www.staffs.ac.uk/site/images/icons/icon-play-circle-neutral-light.svg") no-repeat center center; background-size: contain; z-index: 1; pointer-events: none; }
 
 .card__figure--video img { color: #CCC; }
 
@@ -1126,7 +1126,7 @@ a.card:hover .title__highlight, a.card:hover .card__title { text-decoration: und
 
 .feature-link__title { display: table; position: relative; margin-bottom: 0.5rem; padding-right: 1em; word-break: break-word; }
 
-.feature-link__title:after { content: ''; position: absolute; bottom: 0.05em; display: inline-block; width: 1em; height: 1em; margin-left: 0.25rem; background: url("//www.staffs.ac.uk/site/images/icons/icon-gt-primary.svg") center center no-repeat; background-size: 40%; vertical-align: text-bottom; transition: transform 75ms ease-out; }
+.feature-link__title:after { content: ''; position: absolute; bottom: 0.05em; display: inline-block; width: 1em; height: 1em; margin-left: 0.25rem; background: url("//www.staffs.ac.uk/site/images/icons/icon-gt-primary.svg") center center no-repeat; background-size: 40%; vertical-align: text-bottom; transition: -webkit-transform 75ms ease-out; transition: transform 75ms ease-out; transition: transform 75ms ease-out, -webkit-transform 75ms ease-out; }
 
 .feature-link__figure { margin-bottom: 1rem; }
 
@@ -1138,7 +1138,7 @@ a.card:hover .title__highlight, a.card:hover .card__title { text-decoration: und
 
 .feature-link p { color: #41464b; }
 
-a.feature-link:hover .feature-link__title:after { transform: translateX(0.1rem); }
+a.feature-link:hover .feature-link__title:after { -webkit-transform: translateX(0.1rem); transform: translateX(0.1rem); }
 
 a.feature-link:hover .feature-link__figure { opacity: 0.9; }
 
@@ -1342,35 +1342,35 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 @keyframes ldio-vck1watuie { 0% { opacity: 1; }
   100% { opacity: 0; } }
 
-.ldio-vck1watuie div { left: 94px; top: 48px; position: absolute; -webkit-animation: ldio-vck1watuie linear 1s infinite; animation: ldio-vck1watuie linear 1s infinite; background: #cccccc; width: 12px; height: 24px; border-radius: 4.8px / 4.8px; transform-origin: 6px 52px; }
+.ldio-vck1watuie div { left: 94px; top: 48px; position: absolute; -webkit-animation: ldio-vck1watuie linear 1s infinite; animation: ldio-vck1watuie linear 1s infinite; background: #cccccc; width: 12px; height: 24px; border-radius: 4.8px / 4.8px; -webkit-transform-origin: 6px 52px; transform-origin: 6px 52px; }
 
-.ldio-vck1watuie div:nth-child(1) { transform: rotate(0deg); -webkit-animation-delay: -0.9166666666666666s; animation-delay: -0.9166666666666666s; background: #cccccc; }
+.ldio-vck1watuie div:nth-child(1) { -webkit-transform: rotate(0deg); transform: rotate(0deg); -webkit-animation-delay: -0.9166666666666666s; animation-delay: -0.9166666666666666s; background: #cccccc; }
 
-.ldio-vck1watuie div:nth-child(2) { transform: rotate(30deg); -webkit-animation-delay: -0.8333333333333334s; animation-delay: -0.8333333333333334s; background: #cccccc; }
+.ldio-vck1watuie div:nth-child(2) { -webkit-transform: rotate(30deg); transform: rotate(30deg); -webkit-animation-delay: -0.8333333333333334s; animation-delay: -0.8333333333333334s; background: #cccccc; }
 
-.ldio-vck1watuie div:nth-child(3) { transform: rotate(60deg); -webkit-animation-delay: -0.75s; animation-delay: -0.75s; background: #cccccc; }
+.ldio-vck1watuie div:nth-child(3) { -webkit-transform: rotate(60deg); transform: rotate(60deg); -webkit-animation-delay: -0.75s; animation-delay: -0.75s; background: #cccccc; }
 
-.ldio-vck1watuie div:nth-child(4) { transform: rotate(90deg); -webkit-animation-delay: -0.6666666666666666s; animation-delay: -0.6666666666666666s; background: #cccccc; }
+.ldio-vck1watuie div:nth-child(4) { -webkit-transform: rotate(90deg); transform: rotate(90deg); -webkit-animation-delay: -0.6666666666666666s; animation-delay: -0.6666666666666666s; background: #cccccc; }
 
-.ldio-vck1watuie div:nth-child(5) { transform: rotate(120deg); -webkit-animation-delay: -0.5833333333333334s; animation-delay: -0.5833333333333334s; background: #cccccc; }
+.ldio-vck1watuie div:nth-child(5) { -webkit-transform: rotate(120deg); transform: rotate(120deg); -webkit-animation-delay: -0.5833333333333334s; animation-delay: -0.5833333333333334s; background: #cccccc; }
 
-.ldio-vck1watuie div:nth-child(6) { transform: rotate(150deg); -webkit-animation-delay: -0.5s; animation-delay: -0.5s; background: #cccccc; }
+.ldio-vck1watuie div:nth-child(6) { -webkit-transform: rotate(150deg); transform: rotate(150deg); -webkit-animation-delay: -0.5s; animation-delay: -0.5s; background: #cccccc; }
 
-.ldio-vck1watuie div:nth-child(7) { transform: rotate(180deg); -webkit-animation-delay: -0.4166666666666667s; animation-delay: -0.4166666666666667s; background: #cccccc; }
+.ldio-vck1watuie div:nth-child(7) { -webkit-transform: rotate(180deg); transform: rotate(180deg); -webkit-animation-delay: -0.4166666666666667s; animation-delay: -0.4166666666666667s; background: #cccccc; }
 
-.ldio-vck1watuie div:nth-child(8) { transform: rotate(210deg); -webkit-animation-delay: -0.3333333333333333s; animation-delay: -0.3333333333333333s; background: #cccccc; }
+.ldio-vck1watuie div:nth-child(8) { -webkit-transform: rotate(210deg); transform: rotate(210deg); -webkit-animation-delay: -0.3333333333333333s; animation-delay: -0.3333333333333333s; background: #cccccc; }
 
-.ldio-vck1watuie div:nth-child(9) { transform: rotate(240deg); -webkit-animation-delay: -0.25s; animation-delay: -0.25s; background: #cccccc; }
+.ldio-vck1watuie div:nth-child(9) { -webkit-transform: rotate(240deg); transform: rotate(240deg); -webkit-animation-delay: -0.25s; animation-delay: -0.25s; background: #cccccc; }
 
-.ldio-vck1watuie div:nth-child(10) { transform: rotate(270deg); -webkit-animation-delay: -0.16666666666666666s; animation-delay: -0.16666666666666666s; background: #cccccc; }
+.ldio-vck1watuie div:nth-child(10) { -webkit-transform: rotate(270deg); transform: rotate(270deg); -webkit-animation-delay: -0.16666666666666666s; animation-delay: -0.16666666666666666s; background: #cccccc; }
 
-.ldio-vck1watuie div:nth-child(11) { transform: rotate(300deg); -webkit-animation-delay: -0.08333333333333333s; animation-delay: -0.08333333333333333s; background: #cccccc; }
+.ldio-vck1watuie div:nth-child(11) { -webkit-transform: rotate(300deg); transform: rotate(300deg); -webkit-animation-delay: -0.08333333333333333s; animation-delay: -0.08333333333333333s; background: #cccccc; }
 
-.ldio-vck1watuie div:nth-child(12) { transform: rotate(330deg); -webkit-animation-delay: 0s; animation-delay: 0s; background: #cccccc; }
+.ldio-vck1watuie div:nth-child(12) { -webkit-transform: rotate(330deg); transform: rotate(330deg); -webkit-animation-delay: 0s; animation-delay: 0s; background: #cccccc; }
 
 .loadingio-spinner-spinner-rf63k31rut { width: 200px; height: 200px; display: inline-block; overflow: hidden; background: none; }
 
-.ldio-vck1watuie { width: 100%; height: 100%; position: relative; transform: translateZ(0) scale(1); -webkit-backface-visibility: hidden; backface-visibility: hidden; transform-origin: 0 0; /* see note above */ }
+.ldio-vck1watuie { width: 100%; height: 100%; position: relative; -webkit-transform: translateZ(0) scale(1); transform: translateZ(0) scale(1); -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transform-origin: 0 0; transform-origin: 0 0; /* see note above */ }
 
 .ldio-vck1watuie div { box-sizing: content-box; }
 
@@ -1393,7 +1393,7 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 .masthead__bg--blurred { overflow: hidden; }
 
-.masthead__bg--blurred img { transform: scale(1.1); -webkit-filter: blur(1em); filter: blur(1em); }
+.masthead__bg--blurred img { -webkit-transform: scale(1.1); transform: scale(1.1); -webkit-filter: blur(1em); filter: blur(1em); }
 
 @media (min-width: 60rem) { .masthead__bg--blurred { display: none; } }
 
@@ -1425,11 +1425,11 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 .card a.masthead__school-link:hover { border-bottom: none !important; text-decoration: none; }
 
-.megaNav { position: absolute; left: 0; right: 0; top: 0; background: white; font-size: 1.2em; z-index: 9; overflow: hidden; overflow-y: auto; box-sizing: border-box; overflow-scrolling: touch; transform: translateX(-150%); }
+.megaNav { position: absolute; left: 0; right: 0; top: 0; background: white; font-size: 1.2em; z-index: 9; overflow: hidden; overflow-y: auto; box-sizing: border-box; overflow-scrolling: touch; -webkit-transform: translateX(-150%); transform: translateX(-150%); }
 
-.megaNav.is-open { transition: transform 200ms ease-out; transform: translateX(0); }
+.megaNav.is-open { transition: -webkit-transform 200ms ease-out; transition: transform 200ms ease-out; transition: transform 200ms ease-out, -webkit-transform 200ms ease-out; -webkit-transform: translateX(0); transform: translateX(0); }
 
-@media (min-width: 70rem) { .megaNav { top: auto; width: 100%; transform: none; transition: none; font-size: 1em; position: static; overflow: visible; background: none; margin: 0 0 0 5%; } }
+@media (min-width: 70rem) { .megaNav { top: auto; width: 100%; -webkit-transform: none; transform: none; transition: none; font-size: 1em; position: static; overflow: visible; background: none; margin: 0 0 0 5%; } }
 
 @media (min-width: 80rem) { .megaNav { font-size: 1.1em; } }
 
@@ -1453,9 +1453,9 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
   .megaNav .has-simple-children .megaNav__secondLevel { background: white; }
   .megaNav .has-simple-children .megaNav__secondLevel-list { padding: 1rem; min-height: auto; width: auto; min-width: 17.5em; } }
 
-.megaNav .is-expanded > .megaNav__level { visibility: visible; height: auto; overflow: visible; min-height: 100%; transform: translateX(0); transition: transform 100ms, visibility 100ms; }
+.megaNav .is-expanded > .megaNav__level { visibility: visible; height: auto; overflow: visible; min-height: 100%; -webkit-transform: translateX(0); transform: translateX(0); transition: visibility 100ms, -webkit-transform 100ms; transition: transform 100ms, visibility 100ms; transition: transform 100ms, visibility 100ms, -webkit-transform 100ms; }
 
-@media (min-width: 70rem) { .megaNav .is-expanded > .megaNav__level { transition: none; transform: translateY(0); opacity: 1; min-height: none; } }
+@media (min-width: 70rem) { .megaNav .is-expanded > .megaNav__level { transition: none; -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; min-height: none; } }
 
 @media (min-width: 70rem) { .megaNav .is-expanded > .megaNav__secondLevel { display: flex; } }
 
@@ -1465,9 +1465,9 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 .megaNav__close { content: ''; border: 0; box-sizing: border-box; display: block; width: 4rem; height: 4rem; margin-top: 0.1em; background: url("//www.staffs.ac.uk/site/images/icons/icon-x-primary.svg") no-repeat center center; background-size: 1rem; cursor: pointer; }
 
-.megaNav__level { position: absolute; visibility: hidden; background: #e8ebed; top: 0; right: 0; left: 0; height: 0; min-height: 0; padding-bottom: 12rem; overflow: hidden; transform: translateX(100%); padding-left: 1.5rem; box-sizing: border-box; z-index: 1; transition: transform 100ms, visibility 100ms; }
+.megaNav__level { position: absolute; visibility: hidden; background: #e8ebed; top: 0; right: 0; left: 0; height: 0; min-height: 0; padding-bottom: 12rem; overflow: hidden; -webkit-transform: translateX(100%); transform: translateX(100%); padding-left: 1.5rem; box-sizing: border-box; z-index: 1; transition: visibility 100ms, -webkit-transform 100ms; transition: transform 100ms, visibility 100ms; transition: transform 100ms, visibility 100ms, -webkit-transform 100ms; }
 
-@media (min-width: 70rem) { .megaNav__level { min-height: auto; transform: translateY(-200%); padding: 0; opacity: 0; } }
+@media (min-width: 70rem) { .megaNav__level { min-height: auto; -webkit-transform: translateY(-200%); transform: translateY(-200%); padding: 0; opacity: 0; } }
 
 .megaNav__levelHeader { margin-left: -1.5rem; padding-left: 1.5rem; background: white; color: #41464b; font-weight: 500; border-bottom: 1px solid #bebfc1; }
 
@@ -1477,7 +1477,7 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 .megaNav__closeLevel:active { color: #144196; }
 
-.megaNav__closeLevel:before { content: ''; position: absolute; display: block; left: 0; top: 0.75em; width: 1em; height: 2em; background: url("//www.staffs.ac.uk/site/images/icons/icon-gt-primary.svg") no-repeat center center; background-size: 0.5em; transform: rotate(180deg); }
+.megaNav__closeLevel:before { content: ''; position: absolute; display: block; left: 0; top: 0.75em; width: 1em; height: 2em; background: url("//www.staffs.ac.uk/site/images/icons/icon-gt-primary.svg") no-repeat center center; background-size: 0.5em; -webkit-transform: rotate(180deg); transform: rotate(180deg); }
 
 .megaNav__levelMobileFooter .megaNav__closeLevel { text-align: left; }
 
@@ -1728,7 +1728,7 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .slick-list.dragging { cursor: pointer; cursor: hand; }
 
-.slick-slider .slick-track, .slick-slider .slick-list { transform: translate3d(0, 0, 0); }
+.slick-slider .slick-track, .slick-slider .slick-list { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
 
 .slick-track { position: relative; left: 0; top: 0; display: block; }
 
@@ -1756,7 +1756,7 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .slick-arrow.slick-hidden { display: none; }
 
-.slick-arrow { position: absolute; top: 50%; transform: translateY(-50%); font-size: 2.4rem; width: 1em; height: 1em; padding: 0; text-indent: -999em; background: transparent; color: transparent; border: 0; cursor: pointer; z-index: 2; overflow: hidden; }
+.slick-arrow { position: absolute; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); font-size: 2.4rem; width: 1em; height: 1em; padding: 0; text-indent: -999em; background: transparent; color: transparent; border: 0; cursor: pointer; z-index: 2; overflow: hidden; }
 
 .slick-arrow:hover { opacity: 0.8; }
 
@@ -1776,7 +1776,7 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 @media (min-width: 40rem) { .slick-prev { left: -5%; } }
 
-.slick-prev:before { transform: rotate(180deg); }
+.slick-prev:before { -webkit-transform: rotate(180deg); transform: rotate(180deg); }
 
 .slick-disabled { opacity: 0; visibility: hidden; }
 
@@ -1903,9 +1903,9 @@ a.tile:focus { outline-width: 3px; outline-color: #144196; z-index: 2; }
 
 .has-cta .tile { min-height: 30em; }
 
-.tile-group a.tile { transition: transform 200ms; }
+.tile-group a.tile { transition: -webkit-transform 200ms; transition: transform 200ms; transition: transform 200ms, -webkit-transform 200ms; }
 
-.tile-group a.tile:hover { transform: scale(1.025); z-index: 2; }
+.tile-group a.tile:hover { -webkit-transform: scale(1.025); transform: scale(1.025); z-index: 2; }
 
 .tile-group:hover a.tile .tile__figure img { -webkit-filter: grayscale(1); filter: grayscale(1); }
 
@@ -1928,14 +1928,18 @@ a.tile:focus { outline-width: 3px; outline-color: #144196; z-index: 2; }
     .feature-tiles .tile__content { margin-right: 25%; } } }
 
 @-webkit-keyframes tile__growIn { from { opacity: 0.75;
-    transform: scale(0.9); }
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9); }
   to { opacity: 1;
-    transform: scale(1); } }
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
 
 @keyframes tile__growIn { from { opacity: 0.75;
-    transform: scale(0.9); }
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9); }
   to { opacity: 1;
-    transform: scale(1); } }
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
 
 .feature-tiles__item.js-waypoint { -webkit-animation-name: tile__growIn; animation-name: tile__growIn; -webkit-animation-play-state: paused; animation-play-state: paused; -webkit-animation-iteration-count: 1; animation-iteration-count: 1; -webkit-animation-duration: 200ms; animation-duration: 200ms; }
 
@@ -1955,9 +1959,9 @@ a.tile:focus { outline-width: 3px; outline-color: #144196; z-index: 2; }
 
 .feature-tiles__item--accent-tef-gold { --accent-color: #dd9200; }
 
-.feature-tiles a.tile { transition: transform 200ms; }
+.feature-tiles a.tile { transition: -webkit-transform 200ms; transition: transform 200ms; transition: transform 200ms, -webkit-transform 200ms; }
 
-.feature-tiles a.tile:hover { transform: scale(1.025); z-index: 2; }
+.feature-tiles a.tile:hover { -webkit-transform: scale(1.025); transform: scale(1.025); z-index: 2; }
 
 .feature-tiles:hover a.tile .tile__figure img { -webkit-filter: grayscale(1); filter: grayscale(1); }
 
@@ -1977,13 +1981,13 @@ a.tile:focus { outline-width: 3px; outline-color: #144196; z-index: 2; }
 
 .title--has-tail { margin-top: 3rem; }
 
-.title--has-tail .title__highlight:before { position: absolute; content: ''; margin-top: 2px; top: 0; left: -0.5rem; display: block; width: 1000px; height: 2px; transform: rotate(225deg); transform-origin: top left; background: #144196; background: var(--background, #144196); transition: transform 500ms; }
+.title--has-tail .title__highlight:before { position: absolute; content: ''; margin-top: 2px; top: 0; left: -0.5rem; display: block; width: 1000px; height: 2px; -webkit-transform: rotate(225deg); transform: rotate(225deg); -webkit-transform-origin: top left; transform-origin: top left; background: #144196; background: var(--background, #144196); transition: -webkit-transform 500ms; transition: transform 500ms; transition: transform 500ms, -webkit-transform 500ms; }
 
-.title--has-tail.js-waypoint .title__highlight:before { transform: translate(-50vw, -50vw) rotate(225deg); }
+.title--has-tail.js-waypoint .title__highlight:before { -webkit-transform: translate(-50vw, -50vw) rotate(225deg); transform: translate(-50vw, -50vw) rotate(225deg); }
 
-.title--has-tail.is-waypoint-reached .title__highlight:before { transform: rotate(225deg); }
+.title--has-tail.is-waypoint-reached .title__highlight:before { -webkit-transform: rotate(225deg); transform: rotate(225deg); }
 
-.no-js .title--has-tail .title__highlight:before { transform: rotate(225deg); }
+.no-js .title--has-tail .title__highlight:before { -webkit-transform: rotate(225deg); transform: rotate(225deg); }
 
 .title--bg-white { --background: white; --color: black; }
 
@@ -2179,7 +2183,7 @@ a.tile:focus { outline-width: 3px; outline-color: #144196; z-index: 2; }
 
 .pie-chart { width: 200px; }
 
-.pie-chart .pie { transform: rotate(-90deg); width: 200px; height: 200px; background: #F4F4F4; border-radius: 50%; margin-bottom: 2rem; }
+.pie-chart .pie { -webkit-transform: rotate(-90deg); transform: rotate(-90deg); width: 200px; height: 200px; background: #F4F4F4; border-radius: 50%; margin-bottom: 2rem; }
 
 .pie-chart .pie circle { fill: none; stroke: #F4F4F4; stroke-width: 99; -webkit-animation: rotate 1.5s ease-in; animation: rotate 1.5s ease-in; }
 
@@ -2265,11 +2269,11 @@ a.tile:focus { outline-width: 3px; outline-color: #144196; z-index: 2; }
 
 .modal__content { margin-bottom: 2rem; line-height: 1.5; color: rgba(0, 0, 0, 0.8); }
 
-@-webkit-keyframes mmslideOut { from { transform: translateY(-10%); }
-  to { transform: translateY(0); } }
+@-webkit-keyframes mmslideOut { from { -webkit-transform: translateY(-10%); transform: translateY(-10%); }
+  to { -webkit-transform: translateY(0); transform: translateY(0); } }
 
-@keyframes mmslideOut { from { transform: translateY(-10%); }
-  to { transform: translateY(0); } }
+@keyframes mmslideOut { from { -webkit-transform: translateY(-10%); transform: translateY(-10%); }
+  to { -webkit-transform: translateY(0); transform: translateY(0); } }
 
 .modal-slide { display: none; }
 
