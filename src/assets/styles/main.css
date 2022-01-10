@@ -2368,6 +2368,10 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .js-slider--logos .slick-track .slick-slide { display: flex; height: auto; align-items: center; justify-content: center; }
 
+.js-slider--logos .logo { margin: 0 10%; }
+
+.js-slider--logos .logo--low-aspect-ratio { margin: 0 25%; }
+
 .social-links .icon { width: 2rem; height: 2rem; }
 
 .social-links a { text-decoration: none; border-bottom: 0 !important; }
