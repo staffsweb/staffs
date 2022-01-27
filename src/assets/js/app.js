@@ -1175,6 +1175,9 @@ if(anchorTarget == "#courses__postgraduate")
           $(this).prop('checked', true);
           var studyOptionElm = $('[data-award="' + newId + '"] input[name=study-option]').first();
           studyOptionElm.trigger('change');
+
+          // CG: Reset the  assessment tabs
+          $('a[href="#teachingOverview"]').trigger('click');
       }
       stopFlag = false;
   });
@@ -1191,6 +1194,9 @@ if(anchorTarget == "#courses__postgraduate")
           });
 
           $(this).prop('checked', true);
+
+          // CG: Reset the  assessment tabs
+          $('a[href="#teachingOverview"]').trigger('click');
       }
       stopFlag = false;
   });

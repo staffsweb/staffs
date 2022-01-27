@@ -7695,7 +7695,9 @@ var newsAndEventsSearchInit = function newsAndEventsSearchInit() {
         $('*[data-award] input').prop('checked', false);
         $(this).prop('checked', true);
         var studyOptionElm = $('[data-award="' + newId + '"] input[name=study-option]').first();
-        studyOptionElm.trigger('change');
+        studyOptionElm.trigger('change'); // CG: Reset the  assessment tabs
+
+        $('a[href="#teachingOverview"]').trigger('click');
       }
 
       stopFlag = false;
@@ -7710,7 +7712,9 @@ var newsAndEventsSearchInit = function newsAndEventsSearchInit() {
         $(".slick-slider").each(function () {
           $(this).slick('reinit');
         });
-        $(this).prop('checked', true);
+        $(this).prop('checked', true); // CG: Reset the  assessment tabs
+
+        $('a[href="#teachingOverview"]').trigger('click');
       }
 
       stopFlag = false;
