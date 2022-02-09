@@ -1314,13 +1314,13 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 .list--icon-bullets.list--links .icon { top: 0.2em; }
 
-.list--inline { padding: 0; }
+.list--inline-bulleted { padding: 0; }
 
-.list--inline li { display: inline; margin-right: 0.5rem; }
+.list--inline-bulleted li { display: inline; margin-right: 0.5rem; }
 
-.list--inline li:before { content: '•'; margin-right: 0.5rem; font-weight: bold; color: #144196; }
+.list--inline-bulleted li:before { content: '•'; margin-right: 0.5rem; font-weight: bold; color: #144196; }
 
-.list--inline li:first-child:before { display: none; }
+.list--inline-bulleted li:first-child:before { display: none; }
 
 .list--inline-floated { padding-left: 0; }
 
