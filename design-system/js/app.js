@@ -441,8 +441,11 @@ if(anchorTarget == "#courses__postgraduate")
   };
 
   let sliderInit = function () {
+    // CG: On tablet and larger, only show two slides if the page has side nav
+    var noOfSlides = $(".page-body__side-nav")[0] ? 2.1 : 3.1;
+  
     $('.js-slider--tiles').slick({
-      slidesToShow: 3.1,
+      slidesToShow: noOfSlides,
       slidesToScroll: 3,
       infinite: false,
       swipeToSlide: true,
@@ -1172,6 +1175,9 @@ if(anchorTarget == "#courses__postgraduate")
           $(this).prop('checked', true);
           var studyOptionElm = $('[data-award="' + newId + '"] input[name=study-option]').first();
           studyOptionElm.trigger('change');
+
+          // CG: Reset the  assessment tabs
+          $('a[href="#teachingOverview"]').trigger('click');
       }
       stopFlag = false;
   });
@@ -1188,6 +1194,9 @@ if(anchorTarget == "#courses__postgraduate")
           });
 
           $(this).prop('checked', true);
+
+          // CG: Reset the  assessment tabs
+          $('a[href="#teachingOverview"]').trigger('click');
       }
       stopFlag = false;
   });

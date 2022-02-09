@@ -1642,7 +1642,7 @@ a.card:hover .title__highlight, a.card:hover .card__title { text-decoration: und
 
 @media (min-width: 50rem) { .course-search__keywords[type="search"] { max-width: 60%; }
   .course-search__submit { max-width: 10%; }
-  .course-search select { max-width: 30%; }
+  .course-search select { max-width: 29%; }
   .course-search__subject-list { -moz-column-count: 3; -moz-column-gap: 1rem; -webkit-column-count: 3; -webkit-column-gap: 1rem; column-count: 3; column-gap: 1rem; } }
 
 @media (max-width: 50rem) { .course-search__keywords { margin-bottom: 0.75rem; }
@@ -1756,7 +1756,7 @@ hr { position: relative; }
 
 .facility-icons { max-width: 12rem; font-weight: 500; }
 
-.facility-icons__item { float: left; position: relative; width: 30%; padding-bottom: 30%; margin: 1.66%; overflow: hidden; color: #FFF; margin-bottom: 1rem; }
+.facility-icons__item { float: left; position: relative; width: 30%; padding-bottom: 30%; margin: 1.66%; overflow: hidden; color: #FFF; text-transform: uppercase; margin-bottom: 1rem; }
 
 .facility-icons__item--red { background-color: #d70a26; }
 
@@ -1842,13 +1842,17 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 .list--icon-bullets.list--links .icon { top: 0.2em; }
 
-.list--inline-bulleted { padding: 0; }
+.list--inline { padding: 0; }
 
-.list--inline-bulleted li { display: inline; margin-right: 0.5rem; }
+.list--inline li { display: inline; margin-right: 0.5rem; }
 
-.list--inline-bulleted li:before { content: '•'; margin-right: 0.5rem; font-weight: bold; color: #d70a26; }
+.list--inline li:before { content: '•'; margin-right: 0.5rem; font-weight: bold; color: #d70a26; }
 
-.list--inline-bulleted li:first-child:before { display: none; }
+.list--inline li:first-child:before { display: none; }
+
+.list--inline-floated { padding-left: 0; }
+
+.list--inline-floated li { float: left; margin-left: 1.5rem; }
 
 .list--steps { list-style: none; -webkit-padding-start: 3rem; padding-inline-start: 3rem; counter-reset: list--steps; margin-bottom: 4rem; }
 
