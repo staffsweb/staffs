@@ -1,5 +1,12 @@
 @import "__vars/_all";
 
+$icon-accent-colors: (
+  'red' : $red,
+  'pink' : $pink,
+  'maroon' : $maroon,
+  'slate' : $slate
+);
+
 @import "_vendor/normalize";
 @import "_vendor/jquery-ui";
 

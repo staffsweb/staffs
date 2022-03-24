@@ -1230,13 +1230,11 @@ hr { position: relative; }
 
 .facility-icons__item { float: left; position: relative; width: 30%; padding-bottom: 30%; margin: 1.66%; overflow: hidden; color: #FFF; text-transform: uppercase; margin-bottom: 1rem; }
 
-.facility-icons__item--red { background-color: #d70a26; }
+.facility-icons__item--blue-ldn { background-color: #0082c8; }
 
-.facility-icons__item--pink { background-color: #d5035e; }
+.facility-icons__item--blue-deep-ldn { background-color: #144196; }
 
-.facility-icons__item--maroon { background-color: #970048; }
-
-.facility-icons__item--slate { background-color: #394851; }
+.facility-icons__item--magenta-ldn { background-color: #b90f82; }
 
 .facility-icons__content { position: absolute; height: 90%; width: 90%; padding: 5%; text-align: center; }
 

@@ -80,18 +80,12 @@ $icons: (
       color: #FFF;
       text-transform: uppercase;
       margin-bottom: 1rem;
-  }
-  &__item--red {
-    background-color: $red;
-  }
-  &__item--pink {
-    background-color: $pink;
-  }
-  &__item--maroon {
-    background-color: $maroon;
-  }
-  &__item--slate{
-    background-color: $slate;
+
+      @each $name, $value in $icon-accent-colors {
+        &--#{$name} {
+          background-color: #{$value};
+        }
+      }
   }
   &__content {
       position: absolute;
