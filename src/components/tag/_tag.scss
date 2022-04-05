@@ -1,3 +1,10 @@
 .tag--narrow {
     padding: 0.35em 0.5em;
 }
+
+@each $name, $value in $tag-bg-colors {
+    .tag--#{$name} {
+        background-color: #{$value};
+        color: white;
+    }
+}
