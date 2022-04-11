@@ -2451,6 +2451,8 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .tag--narrow { padding: 0.35em 0.5em; }
 
+.tag--not-rounded { border-radius: 0; }
+
 .tag--red { background-color: #d70a26; color: white; }
 
 .tag--pink { background-color: #d5035e; color: white; }
