@@ -52,7 +52,7 @@
       display: block;
       padding: $row-padding-y 2em $row-padding-y 0;
       color: $neutral--primary;
-      border-bottom: 1px solid $border-color;
+      //border-bottom: 1px solid $border-color;
 
       @media (min-width: $megaNav-full-breakpoint) {
         padding: $spacing-sm $spacing-lg $spacing-sm;
@@ -77,7 +77,7 @@
         position: absolute;
         display: block;
         right: 0;
-        top: $row-padding-y;
+        top: 0.4em;
         width: 2em;
         height: 2em;
         background: url('#{$image-theme-directory-icon}/icon-gt-primary.svg') no-repeat center center;
@@ -126,7 +126,7 @@
         transition: none;
         transform: translateY(0);
         opacity: 1;
-        min-height: none;
+        min-height: unset;
       }
     }
 
@@ -180,11 +180,13 @@
     z-index: 1;
     transition: transform 100ms, visibility 100ms;
 
+
     @media (min-width: $megaNav-full-breakpoint) {
       min-height: auto;
       transform: translateY(-200%);
       padding: 0;
       opacity: 0;
+      background: transparent;
     }
   }
 
@@ -292,7 +294,6 @@
     padding: 0 0 $spacing-4xl $spacing-lg;
     margin-left: $spacing-4xl;
     border-left: 1px solid $border-color;
-    box-sizing: border-box;
     overflow: hidden;
     overflow-y: auto;
     overflow-scrolling: touch;
@@ -358,6 +359,7 @@
 
   &__secondLevel {
     //display: none;
+    //padding-top: $spacing-4xl;
 
     @media (min-width: $megaNav-full-breakpoint) {
       display: flex;
@@ -367,17 +369,42 @@
 
       &-item {
         &.is-expanded {
-          background: #fff;
+          //background: #fff;
+          box-shadow: -1px -1px 0 #d70a26, -1px 1px 0 #d70a26;
+          box-shadow: 0 -1px 0 #d70a26, 0 1px 0 #d70a26;
+
+          > a:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            display: block;
+            width: 1px;
+            background: #fff;
+            z-index: 100;
+          }
         }
       }
 
       &-list {
         position: relative;
         margin: 0;
-        padding: $spacing-md 0 $spacing-md $spacing-md;
+        padding: $spacing-5xl 0 $spacing-md $spacing-md;
         min-height: 60vh;
         width: 25%; // yeah I really don't like this either (pt.1), please do feel free to think of a better way of doing this.
         box-sizing: border-box;
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 5rem;
+          right: 0;
+          bottom: 1rem;
+          display: block;
+          width: 1px;
+          background: $red;
+        }
       }
     }
 
@@ -385,6 +412,7 @@
     &-link {
       position: relative;
       font-weight: 500;
+      line-height: 1.5;
     }
 
     &.has-children {
@@ -394,7 +422,7 @@
           position: absolute;
           display: block;
           right: 0;
-          top: $row-padding-y;
+          top: 0.4em;
           width: 2em;
           height: 2em;
           background: url('#{$image-theme-directory-icon}/icon-gt-primary.svg') no-repeat center center;
@@ -402,9 +430,11 @@
         }
       }
     }
+
   }
 
-  &__thirdLevel {
+
+  &__thirdLevel, &__fourthLevel {
     //display: none;
 
     @media (min-width: $megaNav-full-breakpoint) {
@@ -413,7 +443,7 @@
       right: -300%; // yeah I really don't like this either (pt.2), please do feel free to think of a better way of doing this.
       top: 0;
       bottom: 0;
-      background: white;
+      background: #fff;
       padding: $spacing-xl;
       max-height: 100%;
       overflow: auto !important; // sorry, this was lazy
@@ -422,24 +452,151 @@
       &-list {
         columns: 2;
         column-gap: $spacing-xl;
+        &:nth-child(2) {
+          //padding-top: $spacing-5xl;
+        }
       }
 
       &-item.has-children {
         > a {
           &:after {
-            display: none;
+            //display: none;
           }
         }
       }
 
-      .megaNav__thirdLevel-link {
+
+
+      .megaNav__thirdLevel-link, .megaNav__fourthLevel-link {
         // increase specificity to override > li > a' behaviour
         padding: 0;
         border: 0;
         margin: 0 0 $spacing-xs;
       }
     }
+
+    &-link {
+      line-height: 1.5;
+    }
+
+
+
   }
+
+  &__secondLevel-item-has-fourthLevel {
+
+      &.is-expanded {
+        //background: #f7f8f9;
+      }
+
+      .megaNav__thirdLevel {
+        //background: #f7f8f9;
+
+        @media (min-width: $megaNav-full-breakpoint) {
+          padding: 0;
+          font-size: 1em;
+
+          &:after {
+            content: '';
+            position: absolute;
+            top: 5rem;
+            right: 0;
+            bottom: 1rem;
+            display: block;
+            width: 1px;
+            background: $red;
+          }
+
+          //box-shadow: 0 1em 1em rgba(black, 0.15);
+
+          &-item {
+            &.is-expanded {
+              background: #fff;
+              > a {
+                //box-shadow: -1px -1px 0 #d70a26, -1px 1px 0 #d70a26;
+                box-shadow: 0 -1px 0 #d70a26, 0 1px 0 #d70a26;
+
+                &:before {
+                  content: '';
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  bottom: 0;
+                  display: block;
+                  width: 1px;
+                  background: #fff;
+                  z-index: 100;
+                }
+              }
+
+            }
+          }
+
+          &-list {
+            margin: 0;
+            padding: $spacing-5xl 0 $spacing-md $spacing-md;
+            min-height: 60vh;
+            box-sizing: border-box;
+            columns: unset;
+            width: 33.33%;
+            //box-shadow: -1px 0 0 #eee inset;
+            height: 100%;
+            position: relative;
+
+            &:after {
+              content: '';
+              position: absolute;
+              top: 5rem;
+              right: 0;
+              bottom: 1rem;
+              display: block;
+              width: 1px;
+              background: $red;
+            }
+          }
+        }
+
+
+        &-link {
+          position: relative;
+          font-weight: 500;
+          margin: 0;
+        }
+
+
+        .megaNav__thirdLevel-link {
+          @media (min-width: $megaNav-full-breakpoint) {
+            padding: 0.75rem 1.5rem 0.75rem;
+          }
+          //border-bottom: 1px solid #bebfc1;
+        }
+
+      }
+
+
+  }
+
+  &__thirdLevel {
+    //display: none;
+
+    @media (min-width: $megaNav-full-breakpoint) {
+      padding-top: 6.7rem;
+    }
+
+  }
+
+  &__fourthLevel {
+    //display: none;
+
+    @media (min-width: $megaNav-full-breakpoint) {
+      left: 100%;
+      right: 0;
+      width: 200%;
+      padding-top: 6.7rem;
+    }
+
+  }
+
 
   &__topLevel-item {
 
@@ -464,5 +621,26 @@
     //    background: black;
     //  }
     //}
+  }
+
+  .meganav-mobile-section-link {
+    margin-top: 2rem;
+    a {
+      font-weight: 500;
+      font-size: 1.5rem;
+    }
+    @media (min-width: $megaNav-full-breakpoint) {
+      display: none;
+    }
+  }
+}
+
+.has-simple-children {
+  .megaNav__secondLevel {
+    .megaNav__secondLevel-list {
+      &:after {
+        display: none;
+      }
+    }
   }
 }
