@@ -92,6 +92,16 @@
   }
 }
 
+.list--inline-floated {
+  padding-left: 0;
+
+  li {
+    float: left;
+    margin-left: 1.5rem;
+  }
+
+}
+
 .list--steps {
   $number-accent-colors: (
     'red': $red,

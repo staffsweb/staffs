@@ -1,10 +1,27 @@
 /** Calculate the luminance for a color. See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests */
 /** Calculate the contrast ratio between two colors. See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests */
 /** Determine whether to use dark or light text on top of given color. Returns black for dark text and white for light text. */
-/*@mixin align-wide { max-width: none; width: calc(100vw - 2.4rem); margin-left: calc(-50vw + 50% + 1.2rem); margin-right: calc(-50vw + 50% + 1.2rem); @media (min-width: $wrap-full-gutter-width) { width: calc(90vw); margin-left: calc(-45vw + 50%); margin-right: calc(-45vw + 50%); } @media (min-width: $wrap-width + 10rem) { width: $wrap-width; margin-left: calc(-43rem + 50%); margin-right: calc(-43rem + 50%); } }*/
+/*@mixin align-wide {
+  max-width: none;
+  width: calc(100vw - 2.4rem);
+  margin-left: calc(-50vw + 50% + 1.2rem);
+  margin-right: calc(-50vw + 50% + 1.2rem);
+
+  @media (min-width: $wrap-full-gutter-width) {
+    width: calc(90vw);
+    margin-left: calc(-45vw + 50%);
+    margin-right: calc(-45vw + 50%);
+  }
+
+  @media (min-width: $wrap-width + 10rem) {
+    width: $wrap-width;
+    margin-left: calc(-43rem + 50%);
+    margin-right: calc(-43rem + 50%);
+  }
+}*/
 html { position: relative; font-size: 90%; -webkit-text-decoration-skip: ink; text-decoration-skip-ink: auto; }
 
-@supports (font: -apple-system-body) { html { font: -apple-system-body; -webkit-text-size-adjust: 80%; -moz-text-size-adjust: 80%; -ms-text-size-adjust: 80%; text-size-adjust: 80%; } }
+@supports (font: -apple-system-body) { html { font: -apple-system-body; -webkit-text-size-adjust: 80%; -moz-text-size-adjust: 80%; text-size-adjust: 80%; } }
 
 @media (min-width: 47.5em) { html { font-size: 82.5%; } }
 
@@ -93,7 +110,7 @@ figure { position: relative; margin: 0 0 2rem; }
 
 figure img { width: 100%; }
 
-figcaption { margin: 0; padding: 0.75rem 0; font-size: 0.75rem; background: #fff; color: black; border-bottom: 1px solid #dddddd; }
+figcaption { margin: 0; padding: 0.75rem 0; background: #fff; color: black; border-bottom: 1px solid #dddddd; line-height: normal; }
 
 figcaption p:last-child { margin-bottom: 0; }
 
@@ -193,7 +210,7 @@ a.tag:hover { text-decoration: underline; color: black; }
 
 .button--block { display: block; width: 100%; text-align: center; line-height: 1.5; }
 
-.button--pointy:after { content: '\25B6\FE0E'; padding-left: 0.5em; transition: transform 200ms; }
+.button--pointy:after { content: '\25B6\FE0E'; padding-left: 0.5em; transition: -webkit-transform 200ms; transition: transform 200ms; transition: transform 200ms, -webkit-transform 200ms; }
 
 .button--clipped { border-radius: 0; -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0.75em 100%, 0 calc(100% - 0.75em)); clip-path: polygon(0 0, 100% 0, 100% 100%, 0.75em 100%, 0 calc(100% - 0.75em)); }
 
@@ -221,7 +238,7 @@ a.tag:hover { text-decoration: underline; color: black; }
 
 .button[disabled] { opacity: 0.75; border-color: #ccc; background: #ccc; background-position: 0% bottom; color: #aaa; cursor: not-allowed; }
 
-html { font-size: 100%; -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-size-adjust: 100%; }
+html { font-size: 100%; -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text-size-adjust: 100%; }
 
 .accordion .sys_placeholder-accordionRow { border: 2px solid #394851 !important; }
 

@@ -77,6 +77,18 @@ $card__internal-spacing: $spacing-sm;
     }
   }
 
+  &__clearing-flag {
+    background-color: $red;
+    color: #FFF;
+    padding: 0.25rem 0.5rem;
+    font-weight: 400;
+  }
+
+  // CG: A card across multiple days will clash with the one below if there is no image, so add a minimum height if necessary
+  &--multiple-days {
+    min-height: 210px;
+  }
+
   //--  Child elements affected by accent colour
 
   .blockquote__title {
@@ -290,6 +302,13 @@ a.card {
     @media (min-width: map_get($breakpoint-stages, 'mobile-wide')) {
       @include typescale('3xl');
     }
+  }
+
+  .card__date-separator {
+    display: block;
+    font-weight: 500;
+    @include typescale('xl');
+    padding: $spacing-xs 0;
   }
 
   @media (min-width: (map_get($breakpoint-stages, 'tablet-wide') + 5rem)) {

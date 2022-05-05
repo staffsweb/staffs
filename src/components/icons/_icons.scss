@@ -18,11 +18,15 @@ $icons: (
   'pinterest-white': 'svg',
   'snapchat': 'svg',
   'snapchat-white': 'svg',
+  'tiktok': 'svg',
+  'tiktok-white': 'svg',
   'twitter': 'svg',
   'twitter-white': 'svg',
   'youtube': 'svg',
   'youtube-white': 'svg',
-  'form' : 'svg'
+  'form' : 'svg',
+  'globe' : 'svg',
+  'person' : 'svg'
 );
 
 .icon {
@@ -61,3 +65,38 @@ $icons: (
     }
   }
 }
+
+.facility-icons {
+  max-width: 12rem;
+  font-weight: 500;
+    
+  &__item {
+      float: left;
+      position: relative;
+      width: 30%;
+      padding-bottom: 30%; // CG: = width for a 1:1 aspect ratio
+      margin: 1.66%;
+      overflow: hidden;
+      color: #FFF;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+
+      @each $name, $value in $icon-accent-colors {
+        &--#{$name} {
+          background-color: #{$value};
+        }
+      }
+  }
+  &__content {
+      position: absolute;
+      height: 90%; // CG: = 100% - 2 * 5% padding
+      width: 90%; // CG: = 100% - 2 * 5% padding
+      padding: 5%;
+      text-align: center;
+      
+  }
+  &__image {
+      margin-bottom: 0;
+  }
+}
+.tile__icon {  width: 43%; margin-top: 5%; }

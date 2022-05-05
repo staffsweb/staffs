@@ -1,5 +1,12 @@
 @import "__vars/_all";
 
+$icon-accent-colors: (
+  'red' : $red,
+  'pink' : $pink,
+  'maroon' : $maroon,
+  'slate' : $slate
+);
+
 @import "_vendor/normalize";
 @import "_vendor/jquery-ui";
 
@@ -45,6 +52,7 @@
 @import "../../components/social-links/social-links";
 @import "../../components/table/tables";
 @import "../../components/tabs/tabs";
+@import "../../components/tag/tag";
 @import "../../components/tile/tile";
 @import "../../components/tile/tile-group";
 @import "../../components/feature-tiles/feature-tiles"; // this is out of alpha order deliberately, so it comes after tile

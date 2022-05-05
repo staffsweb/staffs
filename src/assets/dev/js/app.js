@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 // CG: Allow switching of PG course tab in subject pages, but don't scroll to the anchor
 var anchorTarget = window.location.hash;
@@ -3917,9 +3917,9 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     };
   };
 
-  $.Widget = function ()
-  /* options, element */
-  {};
+  $.Widget = function
+    /* options, element */
+  () {};
 
   $.Widget._childConstructors = [];
   $.Widget.prototype = {
@@ -6498,6 +6498,26 @@ function Events(loadMore, redirectPage) {
   return false;
 }
 
+function UrlRedirect(path, year, month, cat, text) {
+  if (year > 0 && month == 0) {
+    path = path + year;
+  }
+
+  if (year > 0 && month > 0) {
+    path = path + year + "/" + month;
+  }
+
+  if (cat != "" && cat != "all" && text != "") {
+    path = path + "?q=" + text + "&category=" + cat;
+  } else if (cat == "" && text != "") {
+    path = path + "?q=" + text;
+  } else if (cat != "" && cat != "all" && text == "") {
+    path = path + "?category=" + cat;
+  }
+
+  return path;
+}
+
 function Search(contentTypeId, searchText, category, month, year, elementId) {
   pageIndex = defaultPageIndex;
   curEntryCount = 0;
@@ -6574,7 +6594,42 @@ function AjaxSearch(querystring, elementId, doAppend) {
   xhttp.send();
 }
 
-var newsAndEventsSearchInit = function newsAndEventsSearchInit() {}; // @TODO: at some point, it'd probably be nice if functions sat in
+var newsAndEventsSearchInit = function newsAndEventsSearchInit() {
+  $('.js-load-more').on('click', function (e) {
+    var $this = $(this);
+    var url = $this.data('src');
+    var target = $this.data('target');
+    var btnHtml = $this.html();
+    e.preventDefault(); // If the button is not disabled and it has a url
+
+    if (!$this.attr('disabled') && url && target) {
+      // Set the button to loading
+      $this.attr('disabled', true).addClass('loading').text('Loading...');
+      $.ajax({
+        type: 'GET',
+        url: url
+      }).success(function (data) {
+        var $target = $(target);
+        var $lastItem = $target.children('div:last-child'); // Add the data to the target
+
+        $target.append(data); // TODO: when in contensis check if this is the last page to load, if it is remove the button
+        // $this.remove();
+        // Set the load more button back to normal
+
+        $this.attr('disabled', false).removeClass('loading').html(btnHtml); // Focus on the first new element
+
+        $lastItem.next().find('a').focus();
+      }).error(function () {
+        $this.removeClass('loading').html('Sorry, no results found.');
+      });
+    }
+  });
+  $('#news_search').on('keydown', function (e) {
+    if (e.keyCode == 13) {
+      e.preventDefault();
+    }
+  });
+}; // @TODO: at some point, it'd probably be nice if functions sat in
 // 'eachIndividualComponentName.js' in each component folder and were imported
 // rather than being here, like their Sass files
 
@@ -6974,8 +7029,10 @@ var newsAndEventsSearchInit = function newsAndEventsSearchInit() {}; // @TODO: a
   };
 
   var sliderInit = function sliderInit() {
+    // CG: On tablet and larger, only show two slides if the page has side nav
+    var noOfSlides = $(".page-body__side-nav")[0] ? 2.1 : 3.1;
     $('.js-slider--tiles').slick({
-      slidesToShow: 3.1,
+      slidesToShow: noOfSlides,
       slidesToScroll: 3,
       infinite: false,
       swipeToSlide: true,
@@ -7132,6 +7189,30 @@ var newsAndEventsSearchInit = function newsAndEventsSearchInit() {}; // @TODO: a
         arrows: false
       });
     });
+    $('.js-slider--logos').slick({
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      infinite: false,
+      responsive: [{
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      }, {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }, {
+        breakpoint: 360,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }]
+    });
     Waypoint.refreshAll(); // sliders' content may change the height of the page, thus these need to be recalculated
   };
 
@@ -7162,7 +7243,7 @@ var newsAndEventsSearchInit = function newsAndEventsSearchInit() {}; // @TODO: a
 
   var waypointsInit = function waypointsInit() {
     // CG Apply the "highlight" and "tail" styles to the appropriate headings in the page body automatically, ready for the animation to be added
-    $("#page-body__content > h2, #page-body__content section h2, .mini-template-grid__column:first-child > h2, .slab > .wrap > h2").wrap("<div class='title  title--has-tail  js-waypoint'></div>").addClass("title__highlight");
+    $("#page-body__content > h2, #page-body__content section h2, .mini-template-grid__column:first-child > h2, .slab > .wrap > h2").not(".title__highlight--no-tail").wrap("<div class='title  title--has-tail  js-waypoint'></div>").addClass("title__highlight");
     $(".mini-template-grid__column:not(:first-child) > h2").wrap("<div class='title'></div>").addClass("title__highlight"); // Potential Refactor: in an ideal world, using Intersection Observer might be better for this
 
     $('.js-waypoint').each(function () {
@@ -7614,7 +7695,9 @@ var newsAndEventsSearchInit = function newsAndEventsSearchInit() {}; // @TODO: a
         $('*[data-award] input').prop('checked', false);
         $(this).prop('checked', true);
         var studyOptionElm = $('[data-award="' + newId + '"] input[name=study-option]').first();
-        studyOptionElm.trigger('change');
+        studyOptionElm.trigger('change'); // CG: Reset the  assessment tabs
+
+        $('a[href="#teachingOverview"]').trigger('click');
       }
 
       stopFlag = false;
@@ -7628,10 +7711,10 @@ var newsAndEventsSearchInit = function newsAndEventsSearchInit() {}; // @TODO: a
 
         $(".slick-slider").each(function () {
           $(this).slick('reinit');
-        }); // CG: Refresh the Unistats iframe, if necessary
+        });
+        $(this).prop('checked', true); // CG: Reset the  assessment tabs
 
-        $("[data-mode='" + activeOption + "'] #unistats-widget-frame").attr("src", $("[data-mode='" + activeOption + "'] #unistats-widget-frame").attr("src"));
-        $(this).prop('checked', true);
+        $('a[href="#teachingOverview"]').trigger('click');
       }
 
       stopFlag = false;

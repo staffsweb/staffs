@@ -441,8 +441,11 @@ if(anchorTarget == "#courses__postgraduate")
   };
 
   let sliderInit = function () {
+    // CG: On tablet and larger, only show two slides if the page has side nav
+    var noOfSlides = $(".page-body__side-nav")[0] ? 2.1 : 3.1;
+  
     $('.js-slider--tiles').slick({
-      slidesToShow: 3.1,
+      slidesToShow: noOfSlides,
       slidesToScroll: 3,
       infinite: false,
       swipeToSlide: true,
@@ -627,6 +630,35 @@ if(anchorTarget == "#courses__postgraduate")
       });
     });
 
+    $('.js-slider--logos').slick({
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      infinite: false,
+      responsive: [
+          {
+          breakpoint: 1000,
+          settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2
+          }
+          },
+          {
+          breakpoint: 600,
+          settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+          }
+          },
+          {
+          breakpoint: 360,
+          settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+          }
+          }
+      ]
+  });
+
     Waypoint.refreshAll(); // sliders' content may change the height of the page, thus these need to be recalculated
 
   };
@@ -658,7 +690,7 @@ if(anchorTarget == "#courses__postgraduate")
 
   let waypointsInit = function () {
     // CG Apply the "highlight" and "tail" styles to the appropriate headings in the page body automatically, ready for the animation to be added
-    $("#page-body__content > h2, #page-body__content section h2, .mini-template-grid__column:first-child > h2, .slab > .wrap > h2").wrap("<div class='title  title--has-tail  js-waypoint'></div>").addClass("title__highlight");
+    $("#page-body__content > h2, #page-body__content section h2, .mini-template-grid__column:first-child > h2, .slab > .wrap > h2").not(".title__highlight--no-tail").wrap("<div class='title  title--has-tail  js-waypoint'></div>").addClass("title__highlight");
     $(".mini-template-grid__column:not(:first-child) > h2").wrap("<div class='title'></div>").addClass("title__highlight");
 
     // Potential Refactor: in an ideal world, using Intersection Observer might be better for this
@@ -1143,6 +1175,9 @@ if(anchorTarget == "#courses__postgraduate")
           $(this).prop('checked', true);
           var studyOptionElm = $('[data-award="' + newId + '"] input[name=study-option]').first();
           studyOptionElm.trigger('change');
+
+          // CG: Reset the  assessment tabs
+          $('a[href="#teachingOverview"]').trigger('click');
       }
       stopFlag = false;
   });
@@ -1157,9 +1192,11 @@ if(anchorTarget == "#courses__postgraduate")
           $(".slick-slider").each(function() {
               $(this).slick('reinit');          
           });
-          // CG: Refresh the Unistats iframe, if necessary
-          $("[data-mode='" + activeOption + "'] #unistats-widget-frame").attr("src", $("[data-mode='" + activeOption + "'] #unistats-widget-frame").attr("src"));   
+
           $(this).prop('checked', true);
+
+          // CG: Reset the  assessment tabs
+          $('a[href="#teachingOverview"]').trigger('click');
       }
       stopFlag = false;
   });
