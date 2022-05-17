@@ -391,9 +391,10 @@
         position: relative;
         margin: 0;
         padding: $spacing-5xl 0 $spacing-md $spacing-md;
-        min-height: 60vh;
+        min-height: 70vh;
         width: 25%; // yeah I really don't like this either (pt.1), please do feel free to think of a better way of doing this.
         box-sizing: border-box;
+        background: #FFF;
 
         &:after {
           content: '';
