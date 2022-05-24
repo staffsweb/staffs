@@ -38,6 +38,11 @@
 
     img {
       transition: all 200ms;
+
+      @media (min-width: $megaNav-full-breakpoint) {
+        position: relative;
+        z-index: 100;
+      }
     }
   }
 
@@ -46,7 +51,7 @@
     .header-site {
       .site-logo {
         img {
-          height: 3.5em;
+          //height: 3.5em;
           //opacity: 0;
         }
       }
