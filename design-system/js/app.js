@@ -37,6 +37,18 @@ if(anchorTarget == "#courses__postgraduate")
 
 (function ($) {
 
+  function megaNavMobile() {
+    $('#megaNav li.has-children > a').each(function(){
+      var link = $(this);
+      var levelheader = $('+ .megaNav__level > .megaNav__levelHeader', this);
+      var newlink = link.clone();
+      newlink.insertAfter(levelheader).wrap('<h3 class="meganav-mobile-section-link"></h3>');
+    });
+  }
+
+
+
+
   let megaNavInit = function () {
 
     let megaNav = $('#megaNav');
@@ -96,6 +108,8 @@ if(anchorTarget == "#courses__postgraduate")
             expandChildren(item);
             let secondLevelItem = $('.megaNav__secondLevel-item.has-children', item).eq(0);
             expandChildren(secondLevelItem);
+            let thirdLevelItem = $('.megaNav__thirdLevel-item.has-children', item).eq(0);
+            expandChildren(thirdLevelItem);
           },
           out: function () {
             $(this).closest('.is-expanded').removeClass('is-expanded');
@@ -116,6 +130,20 @@ if(anchorTarget == "#courses__postgraduate")
             // $(this).closest('.is-expanded').removeClass('is-expanded');
           },
           selector: '.megaNav__secondLevel-item.has-children',
+          sensitivity: 75
+        });
+
+        $('#megaNav.is-largescreen').hoverIntent({
+          over: function () {
+            let item = $(this);
+            expandChildren(item);
+            let thirdLevelItem = $('.megaNav__thirdLevel-item.has-children', item).eq(0);
+            expandChildren(thirdLevelItem);
+          },
+          out: function () {
+            // $(this).closest('.is-expanded').removeClass('is-expanded');
+          },
+          selector: '.megaNav__thirdLevel-item.has-children',
           sensitivity: 75
         });
 
@@ -1258,6 +1286,7 @@ if(anchorTarget == "#courses__postgraduate")
   };
 
   $(document).ready(function () {
+    megaNavMobile();
     megaNavInit();
     tabsInit();
     sliderInit();

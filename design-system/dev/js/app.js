@@ -6635,6 +6635,15 @@ var newsAndEventsSearchInit = function newsAndEventsSearchInit() {
 
 
 (function ($) {
+  function megaNavMobile() {
+    $('#megaNav li.has-children > a').each(function () {
+      var link = $(this);
+      var levelheader = $('+ .megaNav__level > .megaNav__levelHeader', this);
+      var newlink = link.clone();
+      newlink.insertAfter(levelheader).wrap('<h3 class="meganav-mobile-section-link"></h3>');
+    });
+  }
+
   var megaNavInit = function megaNavInit() {
     var megaNav = $('#megaNav');
     var megaNavToggle = $('#toggle-megaNav');
@@ -6688,6 +6697,8 @@ var newsAndEventsSearchInit = function newsAndEventsSearchInit() {
             expandChildren(item);
             var secondLevelItem = $('.megaNav__secondLevel-item.has-children', item).eq(0);
             expandChildren(secondLevelItem);
+            var thirdLevelItem = $('.megaNav__thirdLevel-item.has-children', item).eq(0);
+            expandChildren(thirdLevelItem);
           },
           out: function out() {
             $(this).closest('.is-expanded').removeClass('is-expanded');
@@ -6706,6 +6717,18 @@ var newsAndEventsSearchInit = function newsAndEventsSearchInit() {
           out: function out() {// $(this).closest('.is-expanded').removeClass('is-expanded');
           },
           selector: '.megaNav__secondLevel-item.has-children',
+          sensitivity: 75
+        });
+        $('#megaNav.is-largescreen').hoverIntent({
+          over: function over() {
+            var item = $(this);
+            expandChildren(item);
+            var thirdLevelItem = $('.megaNav__thirdLevel-item.has-children', item).eq(0);
+            expandChildren(thirdLevelItem);
+          },
+          out: function out() {// $(this).closest('.is-expanded').removeClass('is-expanded');
+          },
+          selector: '.megaNav__thirdLevel-item.has-children',
           sensitivity: 75
         });
         $('#megaNav.is-largescreen').hoverIntent({
@@ -7778,6 +7801,7 @@ var newsAndEventsSearchInit = function newsAndEventsSearchInit() {
   };
 
   $(document).ready(function () {
+    megaNavMobile();
     megaNavInit();
     tabsInit();
     sliderInit();
