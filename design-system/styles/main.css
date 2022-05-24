@@ -2449,6 +2449,18 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .tabs__section { padding-top: 4rem; }
 
+.tag--narrow { padding: 0.35em 0.5em; }
+
+.tag--not-rounded { border-radius: 0; }
+
+.tag--red { background-color: #d70a26; color: white; }
+
+.tag--pink { background-color: #d5035e; color: white; }
+
+.tag--maroon { background-color: #970048; color: white; }
+
+.tag--slate { background-color: #394851; color: white; }
+
 .tile { position: relative; display: block; overflow: hidden; outline: 1px solid #dddddd; box-shadow: 0 0.1em 0.25em rgba(0, 0, 0, 0.15); min-height: 10em; }
 
 .tile__figure { position: relative; margin: 0; z-index: 0; }
