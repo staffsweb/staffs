@@ -2270,6 +2270,8 @@ a.tile:focus { outline-width: 3px; outline-color: #144196; z-index: 2; }
 
 .theme-ldn .pie-chart_key .key-color.key-3 { background: #0082c8; }
 
+p.optanon-category-C0003[src], img.optanon-category-C0003[data-src] { display: none; }
+
 .theme-ldn .header-site__flexContainer { align-items: center; }
 
 .theme-ldn .header-site .site-logo { width: 35%; }

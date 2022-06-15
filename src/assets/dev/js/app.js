@@ -7613,7 +7613,7 @@ var newsAndEventsSearchInit = function newsAndEventsSearchInit() {
             } else {
               var newDiv = document.createElement("p");
               newDiv.style.color = '#FFF';
-              newDiv.innerHTML = "Sorry, this video requires the use of functional cookies which you have not consented to use. You can <a style='color: #FFF; text-decoration: underline;' href='/legal/data-protection/cookie-policy'>change your cookie settings</a> or <a style='color: #FFF; text-decoration: underline;' href='" + video.dataset.videoSrc + "'>watch the video on YouTube</a>.";
+              newDiv.innerHTML = "Sorry, this video requires the use of functional cookies which you have not consented to use. <a style='color: #FFF; text-decoration: underline;' href='/legal/data-protection/cookie-policy'>Change your cookie settings</a> or <a style='color: #FFF; text-decoration: underline;' href='" + video.dataset.videoSrc + "'>watch the video on the provider's website</a>.";
               video.parentNode.replaceChild(newDiv, video);
             }
           }
