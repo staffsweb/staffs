@@ -1334,6 +1334,8 @@ iframe { border: none; }
 
 .footer-site__social-list .icon--linkedin { background-image: url("//www.staffs.ac.uk/site/images/icons/icon-linkedin-white.svg"); }
 
+.footer-site__social-list .icon--tiktok { background-image: url("//www.staffs.ac.uk/site/images/icons/icon-tiktok-white.svg"); }
+
 .footer-site__legal { margin: 0 0 0.25rem; font-size: 0.75rem; line-height: 0.8; }
 
 .accordion { clear: both; margin-bottom: 4rem; border-bottom: 1px solid #dddddd; }
@@ -1795,6 +1797,8 @@ hr { position: relative; }
 .iconBox--instagram { background: #3f729b; color: white; }
 
 .iconBox--youtube { background: #c4302b; color: white; }
+
+.iconBox--tiktok { background: #000000; color: white; }
 
 .iconBox--bg-red { background: #d70a26; }
 

@@ -28,6 +28,7 @@ $blue--facebook:                #3b5998;
 $blue--linkedIn:                #0e76a8;
 $blue--instagram:               #3f729b;
 $red--youtube:                  #c4302b;
+$grey--tiktok:                  #000000;
 
 // London Palette
 
@@ -142,5 +143,6 @@ $socialmedia-prime-colours: (
   'twitter'  : $blue--twitter,
   'linkedIn' : $blue--linkedIn,
   'instagram' : $blue--instagram,
-  'youtube' : $red--youtube
+  'youtube' : $red--youtube,
+  'tiktok' : $grey--tiktok
 );
