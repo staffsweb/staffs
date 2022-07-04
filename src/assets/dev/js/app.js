@@ -6220,6 +6220,11 @@ function isValidPhoneNo(no) {
   // CG: Validates a UK telephone no.
   var regex = /^\s*(([+]\s?\d[-\s]?\d|0)?\s?\d([-\s]?\d){9}|[(]\s?\d([-\s]?\d)+\s*[)]([-\s]?\d)+)\s*$/;
   return regex.test(no);
+}
+
+function isValidPostcode(postcode) {
+  var regex = /^[a-zA-Z]{1,2}\d[a-zA-Z\d]? ?\d[a-zA-Z]{2}$/;
+  return regex.test(postcode);
 } // CG: Validate a single field
 
 

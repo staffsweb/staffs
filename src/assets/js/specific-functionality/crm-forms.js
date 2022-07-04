@@ -53,6 +53,12 @@ function isValidPhoneNo(no) {
 	return regex.test(no);
 }
 
+function isValidPostcode(postcode)
+{
+	var regex = /^[a-zA-Z]{1,2}\d[a-zA-Z\d]? ?\d[a-zA-Z]{2}$/;
+	return regex.test(postcode);
+}
+
 // CG: Validate a single field
 function isValid($obj) {
 	var valueToCheck = "";
