@@ -6214,6 +6214,12 @@ function onlyUnique(value, index, self) {
 function isValidEmailAddress(address) {
   var regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return regex.test(address);
+}
+
+function isValidPhoneNo(no) {
+  // CG: Validates a UK telephone no.
+  var regex = /^\s*(([+]\s?\d[-\s]?\d|0)?\s?\d([-\s]?\d){9}|[(]\s?\d([-\s]?\d)+\s*[)]([-\s]?\d)+)\s*$/;
+  return regex.test(no);
 } // CG: Validate a single field
 
 
