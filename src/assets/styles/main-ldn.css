@@ -892,7 +892,7 @@ iframe { border: none; }
 
 .booking-link { --accent-color: #144196; margin-bottom: 2rem; color: #41464b; text-decoration: none; padding: 0 calc(0.75rem + 2.5%) 0; border-left: 0.25rem solid #144196; border-left: 0.25rem solid var(--accent-color); }
 
-.booking-link__title { display: table; position: relative; margin-bottom: 1.5rem; padding-right: 1em; word-break: break-word; }
+.booking-link__title { display: table; position: relative; margin-bottom: 1rem; padding-right: 1em; word-break: break-word; }
 
 .booking-link__content { padding: 0.5rem 0; }
 

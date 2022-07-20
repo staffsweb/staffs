@@ -1388,7 +1388,7 @@ iframe { border: none; }
 
 .booking-link { --accent-color: #d70a26; margin-bottom: 2rem; color: #394851; text-decoration: none; padding: 0 calc(0.75rem + 2.5%) 0; border-left: 0.25rem solid #d70a26; border-left: 0.25rem solid var(--accent-color); }
 
-.booking-link__title { display: table; position: relative; margin-bottom: 1.5rem; padding-right: 1em; word-break: break-word; }
+.booking-link__title { display: table; position: relative; margin-bottom: 1rem; padding-right: 1em; word-break: break-word; }
 
 .booking-link__content { padding: 0.5rem 0; }
 
@@ -1653,6 +1653,8 @@ a.card:hover .title__highlight, a.card:hover .card__title { text-decoration: und
 .course-search section { margin: 0; }
 
 .course-search h3:not([class]) { margin: 1.5rem 0 1rem; }
+
+.course-search.slab--bg-slate .accordion__title:focus-visible { outline-color: #ffd91b; }
 
 @media (min-width: 50rem) { .course-search__keywords[type="search"] { max-width: 60%; }
   .course-search__submit { max-width: 10%; }
