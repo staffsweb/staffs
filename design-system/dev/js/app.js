@@ -6214,6 +6214,17 @@ function onlyUnique(value, index, self) {
 function isValidEmailAddress(address) {
   var regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return regex.test(address);
+}
+
+function isValidPhoneNo(no) {
+  // CG: Validates a UK telephone no.
+  var regex = /^\s*(([+]\s?\d[-\s]?\d|0)?\s?\d([-\s]?\d){9}|[(]\s?\d([-\s]?\d)+\s*[)]([-\s]?\d)+)\s*$/;
+  return regex.test(no);
+}
+
+function isValidPostcode(postcode) {
+  var regex = /^[a-zA-Z]{1,2}\d[a-zA-Z\d]? ?\d[a-zA-Z]{2}$/;
+  return regex.test(postcode);
 } // CG: Validate a single field
 
 
@@ -7613,7 +7624,7 @@ var newsAndEventsSearchInit = function newsAndEventsSearchInit() {
             } else {
               var newDiv = document.createElement("p");
               newDiv.style.color = '#FFF';
-              newDiv.innerHTML = "Sorry, this video requires the use of functional cookies which you have not consented to use. You can <a style='color: #FFF; text-decoration: underline;' href='/legal/data-protection/cookie-policy'>change your cookie settings</a> or <a style='color: #FFF; text-decoration: underline;' href='" + video.dataset.videoSrc + "'>watch the video on YouTube</a>.";
+              newDiv.innerHTML = "Sorry, this video requires the use of functional cookies which you have not consented to use. <a style='color: #FFF; text-decoration: underline;' href='/legal/data-protection/cookie-policy'>Change your cookie settings</a> or <a style='color: #FFF; text-decoration: underline;' href='" + video.dataset.videoSrc + "'>watch the video on the provider's website</a>.";
               video.parentNode.replaceChild(newDiv, video);
             }
           }

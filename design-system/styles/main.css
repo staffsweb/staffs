@@ -1334,6 +1334,8 @@ iframe { border: none; }
 
 .footer-site__social-list .icon--linkedin { background-image: url("//www.staffs.ac.uk/site/images/icons/icon-linkedin-white.svg"); }
 
+.footer-site__social-list .icon--tiktok { background-image: url("//www.staffs.ac.uk/site/images/icons/icon-tiktok-white.svg"); }
+
 .footer-site__legal { margin: 0 0 0.25rem; font-size: 0.75rem; line-height: 0.8; }
 
 .accordion { clear: both; margin-bottom: 4rem; border-bottom: 1px solid #dddddd; }
@@ -1383,6 +1385,18 @@ iframe { border: none; }
 .banner__body--shallow { padding: calc(2rem + 2.5%) calc(0.75rem + 2.5%) calc(0.75rem + 2.5%); }
 
 .banner .wrap .banner__body { padding-left: 0; padding-right: 0; }
+
+.booking-link { --accent-color: #d70a26; margin-bottom: 2rem; color: #394851; text-decoration: none; padding: 0 calc(0.75rem + 2.5%) 0; border-left: 0.25rem solid #d70a26; border-left: 0.25rem solid var(--accent-color); }
+
+.booking-link__title { display: table; position: relative; margin-bottom: 1rem; padding-right: 1em; word-break: break-word; }
+
+.booking-link__content { padding: 0.5rem 0; }
+
+.booking-link__content > :first-child { margin-top: 0; }
+
+.booking-link__content > :last-child { margin-bottom: 0; }
+
+.booking-link p { color: #394851; }
 
 .box { position: relative; background: white; color: black; margin: 0 0 2rem; }
 
@@ -1640,6 +1654,8 @@ a.card:hover .title__highlight, a.card:hover .card__title { text-decoration: und
 
 .course-search h3:not([class]) { margin: 1.5rem 0 1rem; }
 
+.course-search.slab--bg-slate .accordion__title:focus-visible { outline-color: #ffd91b; }
+
 @media (min-width: 50rem) { .course-search__keywords[type="search"] { max-width: 60%; }
   .course-search__submit { max-width: 10%; }
   .course-search select { max-width: 29%; }
@@ -1795,6 +1811,8 @@ hr { position: relative; }
 .iconBox--instagram { background: #3f729b; color: white; }
 
 .iconBox--youtube { background: #c4302b; color: white; }
+
+.iconBox--tiktok { background: #000000; color: white; }
 
 .iconBox--bg-red { background: #d70a26; }
 
@@ -2843,6 +2861,8 @@ a.tile:focus { outline-width: 3px; outline-color: #d70a26; z-index: 2; }
 .theme-ldn .pie-chart_key .key-color.key-2 { background: #144196; }
 
 .theme-ldn .pie-chart_key .key-color.key-3 { background: #0082c8; }
+
+p.optanon-category-C0003[src], img.optanon-category-C0003[data-src] { display: none; }
 
 .modal__overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #000000; display: flex; justify-content: center; align-items: center; z-index: 9998; }
 

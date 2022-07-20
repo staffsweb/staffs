@@ -838,6 +838,8 @@ iframe { border: none; }
 
 .footer-site__social-list .icon--linkedin { background-image: url("//www.staffs.ac.uk/site/images/icons/icon-linkedin-white.svg"); }
 
+.footer-site__social-list .icon--tiktok { background-image: url("//www.staffs.ac.uk/site/images/icons/icon-tiktok-white.svg"); }
+
 .footer-site__legal { margin: 0 0 0.25rem; font-size: 0.75rem; line-height: 0.8; }
 
 .accordion { clear: both; margin-bottom: 4rem; border-bottom: 1px solid #dddddd; }
@@ -887,6 +889,18 @@ iframe { border: none; }
 .banner__body--shallow { padding: calc(2rem + 2.5%) calc(0.75rem + 2.5%) calc(0.75rem + 2.5%); }
 
 .banner .wrap .banner__body { padding-left: 0; padding-right: 0; }
+
+.booking-link { --accent-color: #144196; margin-bottom: 2rem; color: #41464b; text-decoration: none; padding: 0 calc(0.75rem + 2.5%) 0; border-left: 0.25rem solid #144196; border-left: 0.25rem solid var(--accent-color); }
+
+.booking-link__title { display: table; position: relative; margin-bottom: 1rem; padding-right: 1em; word-break: break-word; }
+
+.booking-link__content { padding: 0.5rem 0; }
+
+.booking-link__content > :first-child { margin-top: 0; }
+
+.booking-link__content > :last-child { margin-bottom: 0; }
+
+.booking-link p { color: #41464b; }
 
 .box { position: relative; background: white; color: black; margin: 0 0 2rem; }
 
@@ -1265,6 +1279,8 @@ hr { position: relative; }
 .iconBox--instagram { background: #3f729b; color: white; }
 
 .iconBox--youtube { background: #c4302b; color: white; }
+
+.iconBox--tiktok { background: #000000; color: white; }
 
 .iconBox--bg-blue-ldn { background: #0082c8; }
 
@@ -2269,6 +2285,8 @@ a.tile:focus { outline-width: 3px; outline-color: #144196; z-index: 2; }
 .theme-ldn .pie-chart_key .key-color.key-2 { background: #144196; }
 
 .theme-ldn .pie-chart_key .key-color.key-3 { background: #0082c8; }
+
+p.optanon-category-C0003[src], img.optanon-category-C0003[data-src] { display: none; }
 
 .theme-ldn .header-site__flexContainer { align-items: center; }
 

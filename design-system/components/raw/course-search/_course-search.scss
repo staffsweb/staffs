@@ -26,6 +26,9 @@
     & h3:not([class]) {
         margin: $spacing-lg 0 $spacing-md;
     }
+    &.slab--bg-slate .accordion__title:focus-visible {
+        outline-color: $tertiary;
+    }
 }
 @media (min-width: $third-breakpoint) {
     .course-search {
