@@ -85,6 +85,10 @@
 
   body.modal__is-open {
     overflow: hidden;
+
+    .header-site, .footer-site, #accolade-slider {
+      z-index: -1;
+    }
   }
   
   .modal-slide[aria-hidden="true"] .modal__container {

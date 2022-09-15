@@ -2366,6 +2366,8 @@ p.optanon-category-C0003[src], img.optanon-category-C0003[data-src] { display: n
 
 body.modal__is-open { overflow: hidden; }
 
+body.modal__is-open .header-site, body.modal__is-open .footer-site, body.modal__is-open #accolade-slider { z-index: -1; }
+
 .modal-slide[aria-hidden="true"] .modal__container { -webkit-animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1); animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1); }
 
 .modal-slide .modal__container, .modal-slide .modal__overlay { will-change: transform; }
