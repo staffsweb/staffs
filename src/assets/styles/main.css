@@ -1636,6 +1636,14 @@ a.card:hover .title__highlight, a.card:hover .card__title { text-decoration: und
 
 @media (max-width: 35rem) { .card__video.card__figure iframe { padding-bottom: 50%; position: absolute; } }
 
+.card--virtual-tour { min-height: 20rem; position: relative; overflow: hidden; flex-direction: row; background-color: #f1f1f1; background-size: cover; background-position: center center; }
+
+.card--virtual-tour .card__content { margin-top: 2.5rem; max-width: 25rem; z-index: 1; }
+
+.card--virtual-tour .card__content p:first-of-type { background-color: #FFF; padding: 2rem; margin: -2.5rem 0; }
+
+.card--virtual-tour .card__content > :last-child { margin-top: 1rem; }
+
 .grid-2-cols\@tablet .card__video.card__figure { padding-bottom: 50%; position: relative; height: 0; }
 
 .grid-2-cols\@tablet .card__video.card__figure iframe { position: absolute; }
