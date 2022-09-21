@@ -349,6 +349,7 @@ a.card {
     background-color: $offwhite;
     background-size: cover;
     background-position: center center;
+    border-left: none;
 
     .card__content {
       margin-top: $spacing-2xl;
@@ -363,6 +364,10 @@ a.card {
 
       > :last-child {
         margin-top: $spacing-md;
+      }
+
+      > .title {
+        margin-left: $spacing-xs;
       }
     }
 }
