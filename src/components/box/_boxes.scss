@@ -102,3 +102,8 @@
     left: 0;
   }
 }
+
+// CG: Avoid "share this story" box clashing with long quotes in news stories
+.box--share {
+  clear: right;
+}
