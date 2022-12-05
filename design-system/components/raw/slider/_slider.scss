@@ -99,13 +99,12 @@
   }
 
   &__item-title {
-    margin-bottom: $spacing-lg;
-    min-height: 2.4em; // 2 * line-height @1.2
+    margin-bottom: $spacing-xs;
+    border-bottom: 1px solid #FFF;
+    padding-bottom: $spacing-xs;
   }
 
   &__item-description {
-    min-height: 2.8em; // 2 * line-height @1.4
-    margin-bottom: $spacing-xl;
     @include typescale('sm');
     @include line-height('normal');
   }
@@ -114,6 +113,16 @@
     margin: auto;
     width: auto;
     max-height: 2em;
+  }
+
+  &__item-figure {
+    margin-left: auto!important;
+    margin-right: auto!important;
+    margin: 0 0 1rem 0;
+
+    & svg {
+      max-height: 100px;
+    }
   }
   
   a {

@@ -228,6 +228,8 @@ a.tag:hover { text-decoration: underline; color: black; }
 
 .button--outline:hover, .button--outline:focus, .button--outline:active { color: black; }
 
+.slab--bg-slate .button--outline { color: white; }
+
 .button--outline-slate { color: black; border: 0.2em solid #394851; padding: 0.6em 2em; background-color: transparent; background-image: linear-gradient(to left, rgba(255, 255, 255, 0) 50%, #394851 50%); }
 
 .button--outline-slate:hover, .button--outline-slate:focus, .button--outline-slate:active { color: white; }

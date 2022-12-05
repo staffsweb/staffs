@@ -714,6 +714,37 @@ a.card {
   }
 }
 
+.card--virtual-tour {
+    min-height: 20rem;
+    position: relative;
+    overflow: hidden;
+    flex-direction:  row;
+    background-color: $offwhite;
+    background-size: cover;
+    background-position: center center;
+    border-left: none;
+
+    .card__content {
+      margin-top: $spacing-2xl;
+      max-width: 25rem;
+      z-index: 1;
+
+      p:first-of-type {
+        background-color: #FFF;
+        padding: $spacing-xl;
+        margin: -$spacing-2xl 0;
+      }
+
+      &gt; :last-child {
+        margin-top: $spacing-md;
+      }
+
+      &gt; .title {
+        margin-left: $spacing-xs;
+      }
+    }
+}
+
 .grid-2-cols\@tablet {
   &amp;  .card__video {
     &amp;.card__figure {
@@ -741,7 +772,7 @@ a.card {
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">6.9 KB</span>
+                    <span class="Meta-value">7.5 KB</span>
                 </li>
             </ul>
         </div>
@@ -4126,6 +4157,32 @@ a.card {
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="./card--result.html" data-role="tree-link" data-pjax data-handle="card">
                 <span>Result</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29cc29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./card--virtual-tour.html" data-role="tree-link" data-pjax data-handle="card">
+                <span>Virtual Tour</span>
                 
 
 <div class="Status Status--unlabelled">

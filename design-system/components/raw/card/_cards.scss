@@ -341,6 +341,37 @@ a.card {
   }
 }
 
+.card--virtual-tour {
+    min-height: 20rem;
+    position: relative;
+    overflow: hidden;
+    flex-direction:  row;
+    background-color: $offwhite;
+    background-size: cover;
+    background-position: center center;
+    border-left: none;
+
+    .card__content {
+      margin-top: $spacing-2xl;
+      max-width: 25rem;
+      z-index: 1;
+
+      p:first-of-type {
+        background-color: #FFF;
+        padding: $spacing-xl;
+        margin: -$spacing-2xl 0;
+      }
+
+      > :last-child {
+        margin-top: $spacing-md;
+      }
+
+      > .title {
+        margin-left: $spacing-xs;
+      }
+    }
+}
+
 .grid-2-cols\@tablet {
   &  .card__video {
     &.card__figure {
