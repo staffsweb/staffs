@@ -37,3 +37,6 @@ variants:
   - name: testimonial-ldn
     label: "Testimonial (LDN)"
     preview: '@preview--ldn'
+
+  - name: with-logo
+    label: "With logo"
