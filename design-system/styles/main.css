@@ -1676,6 +1676,14 @@ a.card:hover .title__highlight, a.card:hover .card__title { text-decoration: und
   .card--event .card__date { left: -6rem; width: 6rem; }
   .card--event .card__day { font-size: 3rem; } }
 
+.card--with-logo { border: 0; }
+
+.card--with-logo .card__content { max-width: 80%; background-color: #f1f1f1; padding: 2rem 2rem 2.5rem 2rem; }
+
+.card--with-logo a:hover, .card--with-logo a:hover .card__content p { text-decoration: none; }
+
+.card--with-logo img { float: right; margin-top: -2rem; max-height: 100px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); background: #FFF; }
+
 @media (max-width: 35rem) { .card__video.card__figure { padding-bottom: 50%; position: relative; height: 0; } }
 
 .card__video.card__figure iframe { width: 100%; height: 100%; }
@@ -1964,13 +1972,15 @@ a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
 
 .list--steps.accordion .accordion__toggle:before { float: right; margin: 0 0 0 1rem; }
 
-.lead-gen { position: fixed; bottom: 0; left: 0; z-index: 9997; right: 0; color: #FFF; background-size: cover; background-color: #333; text-align: center; padding: 1.5rem; }
+.lead-gen { position: fixed; bottom: 0; left: 0; z-index: 9997; right: 0; color: #FFF; background-size: cover; background-color: #333; text-align: center; }
+
+.lead-gen__bg { background: rgba(0, 0, 0, 0.7); padding: 1.5rem; }
 
 .lead-gen__no { color: #FFF; }
 
 .lead-gen__no:hover { color: inherit; text-decoration: none; }
 
-.lead-gen--prospectus { background: url(//www.staffs.ac.uk/courses/images/lead-generation/lead-gen-prospectus-bg.jpg) top center no-repeat; }
+.lead-gen--prospectus { background: url(//www.staffs.ac.uk/image-library/cta-image-banners/lead-gen-banner-bg.jpg) top center no-repeat; }
 
 /* CG: Loading spinner for forms */
 @-webkit-keyframes ldio-vck1watuie { 0% { opacity: 1; }

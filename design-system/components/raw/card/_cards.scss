@@ -325,6 +325,29 @@ a.card {
   }
 }
 
+.card--with-logo {
+  border: 0;
+
+  & .card__content {
+    max-width: 80%;
+    background-color: $offwhite;
+    padding: $spacing-xl $spacing-xl $spacing-2xl $spacing-xl;
+  }
+
+  & a:hover,& a:hover .card__content p {
+    text-decoration: none;
+  }
+
+  & img {
+    float: right;
+    margin-top: -$spacing-xl;
+    max-height: 100px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    background: #FFF;
+  }
+
+}
+
 .card__video.card__figure {
   @media (max-width: map_get($breakpoint-stages, 'mobile-wide')) {
     padding-bottom: 50%;
