@@ -2937,7 +2937,8 @@ a.tile:focus { outline-width: 3px; outline-color: #d70a26; z-index: 2; }
 p.optanon-category-C0003[src], img.optanon-category-C0003[data-src] { display: none; }
 
 /* CG: Utility classes for showing / hiding content at specific breakpoints */
-@media (max-width: 35rem) { .visible-mobile-down { display: block !important; } }
+@media (max-width: 35rem) { .visible-mobile-down { display: block !important; }
+  .hidden-mobile-down { display: none !important; } }
 
 @media (min-width: 35rem) { .visible-mobile-down { display: none !important; } }
 
