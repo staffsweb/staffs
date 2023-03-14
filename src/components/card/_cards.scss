@@ -374,6 +374,11 @@ a.card {
     background-position: center center;
     border-left: none;
 
+    @media (max-width: map_get($breakpoint-stages, 'mobile-wide')) {
+      background-image: none!important;
+      background-color: $offwhite!important;
+    }
+
     .card__content {
       margin-top: $spacing-2xl;
       max-width: 25rem;
