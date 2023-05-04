@@ -32,7 +32,7 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI
 
 
 // Give it a name
-fractal.set('project.title', 'Staffordshire University Components');
+fractal.set('project.title', 'Staffordshire University Pattern Library');
 
 // Setup Twig Adapter
 fractal.components.engine(twigAdapter);

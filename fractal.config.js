@@ -37,7 +37,7 @@ const mandelbrot = require('@frctl/mandelbrot');
 
 
 // Give it a name
-fractal.set('project.title', 'Staffordshire University Components');
+fractal.set('project.title', 'Staffordshire University Pattern Library');
 
 // Setup Twig Adapter
 fractal.components.engine(twigAdapter);
