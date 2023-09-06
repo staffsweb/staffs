@@ -2326,7 +2326,9 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .ratio--16x9 { padding-bottom: 56.25%; /* CG: 16:9 as a percentage (9 / 16 = 0.5625 or 56.25%) */ }
 
-.ratio--4x3 { padding-bottom: 75%; /* CG: 16:9 as a percentage (3 / 4 = 0.75 or 75%) */ }
+.ratio--9x16 { padding-bottom: 178%; /* CG: 9:16 as a percentage (16 / 9 = 1.78 or 178%) */ }
+
+.ratio--4x3 { padding-bottom: 75%; /* CG: 4:3 as a percentage (3 / 4 = 0.75 or 75%) */ }
 
 .ratio-a4-portrait { padding-bottom: 141.4%; }
 
