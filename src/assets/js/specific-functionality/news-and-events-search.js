@@ -12,8 +12,7 @@ var url;
 function News(loadMore, redirectPage) {
     url = "/news/";
     var searchText = document.getElementById('news_search').value;
-    //category = document.getElementById('news_category').value; // SM: Commenting out as not using category for the moment and causing load more button to fail
-    category = "";
+    category = document.getElementById('news_category') !== null ? document.getElementById('news_category').value : "";
     month = document.getElementById('news_month').value;
     year = document.getElementById('news_year').value;
     if (loadMore) {
