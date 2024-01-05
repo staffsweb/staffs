@@ -1360,9 +1360,15 @@ hr { position: relative; }
 
 .iconBox .iconBox__icon svg { fill: white; }
 
+.iconBox--bg-offwhite { color: inherit; }
+
 a.iconBox:hover { color: white; }
 
 a.iconBox:hover .iconBox__title { color: white; text-decoration: underline; }
+
+a.iconBox:hover.iconBox--bg-offwhite { color: inherit; }
+
+a.iconBox:hover.iconBox--bg-offwhite .iconBox__title { color: inherit; }
 
 .grid-3-cols .iconBox__icon svg { vertical-align: top; }
 

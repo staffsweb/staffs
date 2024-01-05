@@ -60,6 +60,10 @@
   .iconBox__icon svg {
     fill: white;
   }
+
+  &--bg-offwhite {
+    color: inherit;
+  }
 }
 
 a.iconBox {
@@ -69,6 +73,15 @@ a.iconBox {
     .iconBox__title {
       color: white;
       text-decoration: underline;
+    }
+
+    &.iconBox--bg-offwhite
+    {
+      color: inherit;
+
+      .iconBox__title {
+        color: inherit;
+      }
     }
   }
 }
