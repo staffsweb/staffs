@@ -69,7 +69,7 @@
       fill: currentColor;
     }
 
-    & a {
+    & a:not(.button) {
       color: inherit;
     }
   }

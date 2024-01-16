@@ -1858,7 +1858,7 @@ cite, .cite { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-style: 
 
 .slab--bg-granite svg *, .slab--bg-slate svg * { fill: currentColor; }
 
-.slab--bg-granite a, .slab--bg-slate a { color: inherit; }
+.slab--bg-granite a:not(.button), .slab--bg-slate a:not(.button) { color: inherit; }
 
 /* Slider */
 .slick-slider { position: relative; display: block; box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
