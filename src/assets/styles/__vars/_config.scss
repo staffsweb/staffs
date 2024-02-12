@@ -14,6 +14,7 @@ $snapchat-icon : '#{$image-theme-directory-icon}/icon-snapchat-white.svg';
 $instagram-icon : '#{$image-theme-directory-icon}/icon-instagram-white.svg';
 $linkedin-icon : '#{$image-theme-directory-icon}/icon-linkedin-white.svg';
 $tiktok-icon : '#{$image-theme-directory-icon}/icon-tiktok-white.svg';
+$x-icon : '#{$image-theme-directory-icon}/icon-x-white.svg';
 
 $social-media-icons: (
   'facebook': $facebook-icon,
@@ -23,5 +24,6 @@ $social-media-icons: (
   'snapchat': $snapchat-icon,
   'instagram': $instagram-icon,
   'linkedin': $linkedin-icon,
-  'tiktok': $tiktok-icon
+  'tiktok': $tiktok-icon,
+  'x' : $x-icon
 );

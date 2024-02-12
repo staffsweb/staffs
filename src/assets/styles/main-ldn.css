@@ -882,6 +882,8 @@ iframe { border: none; }
 
 .footer-site__social-list .icon--tiktok { background-image: url("//www.staffs.ac.uk/site/images/icons/icon-tiktok-white.svg"); }
 
+.footer-site__social-list .icon--x { background-image: url("//www.staffs.ac.uk/site/images/icons/icon-x-white.svg"); }
+
 .footer-site__legal { margin: 0 0 0.25rem; font-size: 0.75rem; line-height: 0.8; }
 
 .accordion { clear: both; margin-bottom: 4rem; border-bottom: 1px solid #dddddd; }
@@ -1306,6 +1308,10 @@ hr { position: relative; }
 
 .icon--person { background-image: url("//www.staffs.ac.uk/site/images/icons/icon-person.svg"); }
 
+.icon--x { background-image: url("//www.staffs.ac.uk/site/images/icons/icon-x.svg"); }
+
+.icon--x-white { background-image: url("//www.staffs.ac.uk/site/images/icons/icon-x-white.svg"); }
+
 .facility-icons { max-width: 12rem; font-weight: 500; }
 
 .facility-icons__item { float: left; position: relative; width: 30%; padding-bottom: 30%; margin: 1.66%; overflow: hidden; color: #FFF; text-transform: uppercase; margin-bottom: 1rem; }
@@ -1347,6 +1353,8 @@ hr { position: relative; }
 .iconBox--youtube { background: #c4302b; color: white; }
 
 .iconBox--tiktok { background: #000000; color: white; }
+
+.iconBox--x { background: #000000; color: white; }
 
 .iconBox--bg-blue-ldn { background: #0082c8; }
 
