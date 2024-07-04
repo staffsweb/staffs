@@ -1225,6 +1225,15 @@ if(anchorTarget == "#courses__postgraduate")
 
           // CG: Reset the  assessment tabs
           $('a[href="#teachingOverview"]').trigger('click');
+
+          // CG: Alter the Clearing button link to reflect the chosen variant
+          const regex = /course=.*?#/gm;
+          var clearingButtonUrl = $('#offer-calculator-link').attr('href');
+          if(clearingButtonUrl != null)
+          {
+            const result = clearingButtonUrl.replace(regex, 'course=' + $(this).attr('data-clearing-display-name') + '#');
+            $('#offer-calculator-link').attr('href', result);
+          }
       }
       stopFlag = false;
   });
